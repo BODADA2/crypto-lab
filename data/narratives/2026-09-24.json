@@ -1,16 +1,17 @@
 {
-  "computedAt": "2026-09-24T20:28:32.561Z",
+  "computedAt": "2026-09-24T20:41:05.184Z",
   "terms": [
     {
       "term": "claude",
-      "count24h": 13,
+      "count24h": 15,
       "baselinePerDay": 0,
       "count7d": 0,
-      "growth": 14,
+      "growth": 16,
       "sources": {
-        "github": 13
+        "github": 13,
+        "token": 2
       },
-      "docs24h": 4
+      "docs24h": 5
     },
     {
       "term": "yellowstone",
@@ -25,25 +26,36 @@
     },
     {
       "term": "bitcoin",
-      "count24h": 18,
+      "count24h": 19,
       "baselinePerDay": 0.7142857142857143,
       "count7d": 5,
-      "growth": 11.083333333333332,
+      "growth": 11.666666666666666,
       "sources": {
-        "github": 18
+        "github": 19
       },
-      "docs24h": 10
+      "docs24h": 11
     },
     {
       "term": "android",
-      "count24h": 9,
+      "count24h": 10,
       "baselinePerDay": 0,
       "count7d": 0,
-      "growth": 10,
+      "growth": 11,
       "sources": {
-        "github": 9
+        "github": 10
       },
-      "docs24h": 8
+      "docs24h": 9
+    },
+    {
+      "term": "defi",
+      "count24h": 18,
+      "baselinePerDay": 0.8571428571428571,
+      "count7d": 6,
+      "growth": 10.23076923076923,
+      "sources": {
+        "github": 18
+      },
+      "docs24h": 15
     },
     {
       "term": "llm",
@@ -57,15 +69,26 @@
       "docs24h": 5
     },
     {
-      "term": "defi",
-      "count24h": 16,
-      "baselinePerDay": 0.8571428571428571,
-      "count7d": 6,
-      "growth": 9.153846153846153,
+      "term": "open",
+      "count24h": 12,
+      "baselinePerDay": 0.42857142857142855,
+      "count7d": 3,
+      "growth": 9.1,
       "sources": {
-        "github": 16
+        "github": 12
       },
-      "docs24h": 13
+      "docs24h": 11
+    },
+    {
+      "term": "source",
+      "count24h": 12,
+      "baselinePerDay": 0.42857142857142855,
+      "count7d": 3,
+      "growth": 9.1,
+      "sources": {
+        "github": 12
+      },
+      "docs24h": 11
     },
     {
       "term": "grpc",
@@ -79,37 +102,15 @@
       "docs24h": 2
     },
     {
-      "term": "open",
-      "count24h": 11,
-      "baselinePerDay": 0.42857142857142855,
-      "count7d": 3,
-      "growth": 8.4,
-      "sources": {
-        "github": 11
-      },
-      "docs24h": 10
-    },
-    {
-      "term": "source",
-      "count24h": 11,
-      "baselinePerDay": 0.42857142857142855,
-      "count7d": 3,
-      "growth": 8.4,
-      "sources": {
-        "github": 11
-      },
-      "docs24h": 10
-    },
-    {
       "term": "ios",
-      "count24h": 7,
+      "count24h": 8,
       "baselinePerDay": 0,
       "count7d": 0,
-      "growth": 8,
+      "growth": 9,
       "sources": {
-        "github": 7
+        "github": 8
       },
-      "docs24h": 7
+      "docs24h": 8
     }
   ]
 }
