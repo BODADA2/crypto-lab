@@ -1,0 +1,24 @@
+{
+  "name": "crypto-lab",
+  "version": "1.0.0",
+  "description": "Crypto Lab \u2014 recherche, signaux, risque, ex\u00e9cution encadr\u00e9e, apprentissage",
+  "main": "index.js",
+  "scripts": {
+    "test": "vitest run",
+    "typecheck": "tsc --noEmit -p tsconfig.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^26.6.2",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2",
+    "vitest": "^5.0.1"
+  },
+  "dependencies": {
+    "@solana/web3.js": "^1.99.0",
+    "bs58": "^6.0.0"
+  },
+  "type": "module"
+}

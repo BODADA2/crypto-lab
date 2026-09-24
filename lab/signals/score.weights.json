@@ -1,0 +1,24 @@
+{
+  "version": 1,
+  "updatedAt": "2026-09-24",
+  "comment": "Poids du score 0-100 (lab/signals/score.ts). Chaque variable est normalisée 0..1 par la méthode décrite dans `method` (le code fait foi : normalizers dans score.ts). score = 100 × Σ(normalized × weight) / Σ(weight). Une variable absente vaut 0 ET figure dans missing[]. Les poids sont des importances relatives, pas des vérités : ils seront révisés uniquement à partir des métriques par stratégie (n ≥ 30), jamais à la main sur une impression. Le score n'est pas une mesure de chance de succès : c'est un classement explicable.",
+  "variables": {
+    "novelty": { "weight": 5, "label": "nouveauté", "method": "âge du token en heures ; 1 à ≤ 1 h, 0 à ≥ 72 h, linéaire entre les deux" },
+    "velocity": { "weight": 6, "label": "vitesse", "method": "z-score du volume 5 min vs historique ; 0 à z ≤ 0, 1 à z ≥ 5, linéaire" },
+    "realVolume": { "weight": 7, "label": "volume réel", "method": "volume 1 h (USD) × (1 − part de wash trading) ; log10(1 + v) / 6, borné 0..1 (1 M$ = 1)" },
+    "liquidity": { "weight": 7, "label": "liquidité", "method": "liquidité du pool (USD) ; 0 à ≤ 20 k$, 1 à ≥ 1 M$, log-linéaire" },
+    "orderFlow": { "weight": 5, "label": "order flow (si dispo)", "method": "part des achats dans le volume 1 h (0..1) ; (part − 0,5) × 2, borné 0..1" },
+    "walletQuality": { "weight": 7, "label": "qualité des wallets", "method": "part des premiers acheteurs qui sont des wallets suivis à historique gagnant (0..1), telle quelle" },
+    "concentration": { "weight": 6, "label": "concentration (inversée)", "method": "1 − top10Pct / 50, borné 0..1 (top 10 à 50 % ou plus = 0)" },
+    "humanTraction": { "weight": 6, "label": "traction humaine", "method": "mentions humaines 24 h (Reddit, forums) ; log10(1 + n) / 3, borné (1 000 mentions = 1)" },
+    "onchainTraction": { "weight": 6, "label": "traction on-chain", "method": "croissance des holders sur 1 h en % ; 0 à ≤ 0 %, 1 à ≥ 50 %, linéaire" },
+    "devActivity": { "weight": 4, "label": "activité dev", "method": "commits publics sur 7 j ; n / 20, borné 0..1" },
+    "narrative": { "weight": 6, "label": "narratif", "method": "accélération du terme : taux 24 h / taux 7 j ; (ratio − 1) / 4, borné (×5 = 1)" },
+    "manipulationRisk": { "weight": 7, "label": "risque de manipulation (inversé)", "method": "1 − max(part wash trading, part bots, boost payé ? 0,5 : 0), borné 0..1" },
+    "rugRisk": { "weight": 8, "label": "risque de rug (inversé)", "method": "0 si mint ou freeze authority présente ou extension risquée ; sinon part de LP verrouillée/brûlée (0..1)" },
+    "narrativeDistance": { "weight": 5, "label": "distance depuis le début de la narrative", "method": "heures depuis le premier signal du narratif ; 1 à ≤ 6 h, 0 à ≥ 72 h, linéaire" },
+    "momentum": { "weight": 5, "label": "momentum", "method": "variation de prix 1 h en % ; 0 à ≤ 0 %, 1 à ≥ 50 %, linéaire (le pump trop avancé est traité par le red team, pas ici)" },
+    "asymmetry": { "weight": 5, "label": "asymétrie", "method": "ratio objectif / stop (ex. +40 % / −25 % = 1,6) ; (ratio − 1) / 3, borné (4:1 = 1)" },
+    "strategyTrackRecord": { "weight": 5, "label": "performance historique de la stratégie", "method": "espérance nette par trade (fraction) de la stratégie émettrice, n ≥ 30 obligatoire (sinon absente) ; espérance / 0,2, borné 0..1" }
+  }
+}

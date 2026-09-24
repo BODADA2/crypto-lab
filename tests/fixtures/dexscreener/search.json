@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0.0",
+  "pairs": [
+    {
+      "chainId": "solana",
+      "dexId": "raydium",
+      "url": "https://dexscreener.com/solana/8bneghowfysvcuffx7qztdmzuh8r5zfvyp3sywn1xth6",
+      "pairAddress": "8BnEgHoWFysVcuFFX7QztDmzuH8r5ZFvyP3sYwn1XTh6",
+      "baseToken": { "address": "DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263", "name": "Bonk", "symbol": "Bonk" },
+      "quoteToken": { "address": "So11111111111111111111111111111111111111112", "name": "Wrapped SOL", "symbol": "SOL" },
+      "priceNative": "0.0000001523",
+      "priceUsd": "0.00001828",
+      "txns": {
+        "m5": { "buys": 120, "sells": 98 },
+        "h1": { "buys": 1400, "sells": 1300 },
+        "h6": { "buys": 8000, "sells": 7600 },
+        "h24": { "buys": 30000, "sells": 28000 }
+      },
+      "volume": { "h24": 25000000, "h6": 6000000, "h1": 1000000, "m5": 80000 },
+      "priceChange": { "m5": 0.1, "h1": 0.5, "h6": -2.1, "h24": 4.4 },
+      "liquidity": { "usd": 12000000, "base": 300000000000, "quote": 50000 },
+      "fdv": 1400000000,
+      "marketCap": 1400000000,
+      "pairCreatedAt": 1672531200000
+    },
+    {
+      "chainId": "bsc",
+      "dexId": "pancakeswap",
+      "url": "https://dexscreener.com/bsc/0xabc",
+      "pairAddress": "0xabc",
+      "baseToken": { "address": "0xdef", "name": "Bonk BSC", "symbol": "BONK" },
+      "quoteToken": { "address": "0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c", "name": "Wrapped BNB", "symbol": "WBNB" },
+      "priceUsd": "0.000001",
+      "volume": { "h24": 1000, "h6": 100, "h1": 10, "m5": 0 },
+      "liquidity": { "usd": 500 }
+    }
+  ]
+}

@@ -1,0 +1,71 @@
+# Brief quotidien à 6 h heure de l'Est (America/New_York, DST inclus).
+# GitHub évalue le cron en UTC : on planifie 10:00 et 11:00 UTC, et une étape vérifie que l'heure locale est bien 06 h
+# (10:00 UTC = 6 h EDT ; 11:00 UTC = 6 h EST). L'autre exécution s'arrête immédiatement.
+name: brief
+
+on:
+  schedule:
+    - cron: "0 10 * * *"
+    - cron: "0 11 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: data-plane
+  cancel-in-progress: false
+
+env:
+  DATA_DIR: data
+
+jobs:
+  brief:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Est-ce 6 h heure de l'Est ?
+        id: gate
+        run: |
+          H=$(TZ=America/New_York date +%H)
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "$H" = "06" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "Heure locale $H h : pas 6 h, on saute."
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/checkout@v4
+        if: steps.gate.outputs.run == 'true'
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-node@v4
+        if: steps.gate.outputs.run == 'true'
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+        if: steps.gate.outputs.run == 'true'
+      - name: Early-buyer overlap (optionnel, exige HELIUS_API_KEY)
+        if: steps.gate.outputs.run == 'true'
+        env:
+          HELIUS_API_KEY: ${{ secrets.HELIUS_API_KEY }}
+        run: npx tsx lab/signals/run-earlybuyers.ts --tokens 20 --k 3 --n 50
+      - name: Backtest du signal volume sur data/history (informatif, n'échoue jamais)
+        if: steps.gate.outputs.run == 'true'
+        run: npx tsx lab/backtest/example.ts data/history || true
+      - name: Générer le brief
+        if: steps.gate.outputs.run == 'true'
+        run: npx tsx lab/brief/generate.ts .
+      - name: Commit briefs/ + data/
+        if: steps.gate.outputs.run == 'true'
+        run: |
+          git config user.name "crypto-lab-bot"
+          git config user.email "crypto-lab-bot@users.noreply.github.com"
+          git add briefs/ data/
+          if git diff --cached --quiet; then
+            echo "Rien à committer"
+          else
+            git commit -m "brief: $(TZ=America/New_York date +%Y-%m-%d)"
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+            git push
+          fi

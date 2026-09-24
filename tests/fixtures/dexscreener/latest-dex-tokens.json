@@ -1,0 +1,132 @@
+{
+  "schemaVersion": "1.0.0",
+  "pairs": [
+    {
+      "chainId": "solana",
+      "dexId": "raydium",
+      "url": "https://dexscreener.com/solana/frhb8l7y9qq41qzxyltc2nw8an1rjfllxdw2usqd3uxu",
+      "pairAddress": "FRhB8L7Y9Qq41qZXYLtC2nw8An1RJfLLxDw2usQd3uXu",
+      "labels": ["CLMM"],
+      "baseToken": {
+        "address": "7GCihgDB8fe6KNjn2MYtkzZcRjQy3t9GHdC8uHYmW2hr",
+        "name": "Popcat",
+        "symbol": "POPCAT"
+      },
+      "quoteToken": {
+        "address": "So11111111111111111111111111111111111111112",
+        "name": "Wrapped SOL",
+        "symbol": "SOL"
+      },
+      "priceNative": "0.002310",
+      "priceUsd": "0.2772",
+      "txns": {
+        "m5": { "buys": 42, "sells": 31 },
+        "h1": { "buys": 512, "sells": 430 },
+        "h6": { "buys": 2900, "sells": 2610 },
+        "h24": { "buys": 11020, "sells": 10344 }
+      },
+      "volume": { "h24": 4123456.78, "h6": 980123.4, "h1": 210456.1, "m5": 18234.5 },
+      "priceChange": { "m5": 0.41, "h1": -1.2, "h6": 3.8, "h24": 12.6 },
+      "liquidity": { "usd": 3123456.12, "base": 5600000, "quote": 13000 },
+      "fdv": 271800000,
+      "marketCap": 271800000,
+      "pairCreatedAt": 1702291200000,
+      "info": {
+        "imageUrl": "https://dd.dexscreener.com/ds-data/tokens/solana/7GCihgDB8fe6KNjn2MYtkzZcRjQy3t9GHdC8uHYmW2hr.png",
+        "websites": [{ "label": "Website", "url": "https://popcatsolana.xyz" }],
+        "socials": [{ "type": "twitter", "url": "https://x.com/Popcatsolana" }]
+      },
+      "boosts": { "active": 130 }
+    },
+    {
+      "chainId": "solana",
+      "dexId": "orca",
+      "url": "https://dexscreener.com/solana/2b6hxdp9f8j5fqkcvf1k5m9v3ns9hfsyz6c7v8xz4jtc",
+      "pairAddress": "2b6HXdp9F8J5fqKcVF1K5m9v3ns9HfSYZ6c7V8XZ4jTc",
+      "baseToken": {
+        "address": "7GCihgDB8fe6KNjn2MYtkzZcRjQy3t9GHdC8uHYmW2hr",
+        "name": "Popcat",
+        "symbol": "POPCAT"
+      },
+      "quoteToken": {
+        "address": "EPjFWdd5AufqSSqeM2qN1xzybapC8G4wEGGkZwyTDt1v",
+        "name": "USD Coin",
+        "symbol": "USDC"
+      },
+      "priceNative": "0.2768",
+      "priceUsd": "0.2768",
+      "txns": {
+        "m5": { "buys": 8, "sells": 5 },
+        "h1": { "buys": 60, "sells": 55 },
+        "h6": { "buys": 300, "sells": 280 },
+        "h24": { "buys": 1200, "sells": 1150 }
+      },
+      "volume": { "h24": 512000.5, "h6": 100000, "h1": 20000, "m5": 1765.5 },
+      "priceChange": { "m5": 0.3, "h1": -1.1, "h6": 3.5, "h24": 12.1 },
+      "liquidity": { "usd": 410000, "base": 700000, "quote": 210000 },
+      "fdv": 271400000,
+      "marketCap": 271400000,
+      "pairCreatedAt": 1705000000000
+    },
+    {
+      "chainId": "solana",
+      "dexId": "pumpswap",
+      "url": "https://dexscreener.com/solana/9gxtm3qmvwpkz4jcd5xnxf8rlz1jxp9jz2j2t6vzb2fq",
+      "pairAddress": "9GxTm3QMvWPkz4jCd5xnXf8RLz1jXp9Jz2J2t6vZb2Fq",
+      "baseToken": {
+        "address": "AgentZk3xdkPQuMgHRjZgV1oTuE9DDfcFcayP1fvpump",
+        "name": "AGENTS",
+        "symbol": "AGENTS"
+      },
+      "quoteToken": {
+        "address": "So11111111111111111111111111111111111111112",
+        "name": "Wrapped SOL",
+        "symbol": "SOL"
+      },
+      "priceNative": "0.00000041",
+      "priceUsd": "0.0000492",
+      "txns": {
+        "m5": { "buys": 210, "sells": 64 },
+        "h1": { "buys": 1830, "sells": 1210 },
+        "h6": { "buys": 5400, "sells": 4300 },
+        "h24": { "buys": 5400, "sells": 4300 }
+      },
+      "volume": { "h24": 1560000, "h6": 1560000, "h1": 620000, "m5": 91000 },
+      "priceChange": { "m5": 9.8, "h1": 44.2, "h6": 310, "h24": 310 },
+      "liquidity": { "usd": 86000, "base": 870000000, "quote": 360 },
+      "fdv": 49200,
+      "marketCap": 49200,
+      "pairCreatedAt": 1790244000000,
+      "boosts": { "active": 530 }
+    },
+    {
+      "chainId": "solana",
+      "dexId": "raydium",
+      "url": "https://dexscreener.com/solana/rustpair111111111111111111111111111111111111",
+      "pairAddress": "RustPair1111111111111111111111111111111111111",
+      "baseToken": {
+        "address": "RuGZk3xdkPQuMgHRjZgV1oTuE9DDfcFcayP1fvSpump",
+        "name": "Rug Sample",
+        "symbol": "RUG"
+      },
+      "quoteToken": {
+        "address": "So11111111111111111111111111111111111111112",
+        "name": "Wrapped SOL",
+        "symbol": "SOL"
+      },
+      "priceUsd": "0.0000010",
+      "txns": {
+        "m5": { "buys": 0, "sells": 3 },
+        "h1": { "buys": 2, "sells": 40 },
+        "h6": { "buys": 90, "sells": 300 },
+        "h24": { "buys": 90, "sells": 300 }
+      },
+      "volume": { "h24": 12000, "h6": 12000, "h1": 900, "m5": 40 },
+      "priceChange": { "m5": -2, "h1": -60, "h6": -95, "h24": -95 },
+      "liquidity": { "usd": 1500, "base": 500000000, "quote": 6 },
+      "fdv": 1000,
+      "marketCap": 1000,
+      "pairCreatedAt": 1790200000000
+    }
+  ]
+}

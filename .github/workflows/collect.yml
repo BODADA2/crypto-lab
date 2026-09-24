@@ -1,0 +1,83 @@
+# Plan données — collecte toutes les 15 minutes (DexScreener + Reddit + GitHub) et flux PumpPortal (job séparé, 5 min max).
+# Aucun secret de trading ici. Les secrets sont optionnels : le cycle tourne sans eux (GITHUB_TOKEN est fourni par Actions).
+name: collect
+
+on:
+  schedule:
+    - cron: "*/15 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: data-plane
+  cancel-in-progress: false
+
+env:
+  DATA_DIR: data
+
+jobs:
+  collect:
+    name: DexScreener + Reddit + GitHub
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Cycle de collecte
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # Optionnel : active l'enrichissement on-chain (autorités, top10, extensions Token-2022), ≈ 4 crédits/token.
+          HELIUS_API_KEY: ${{ secrets.HELIUS_API_KEY }}
+        run: npx tsx lab/collect/run.ts
+      - name: Commit data/ si changement
+        run: |
+          git config user.name "crypto-lab-bot"
+          git config user.email "crypto-lab-bot@users.noreply.github.com"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "Aucun changement dans data/"
+          else
+            git commit -m "data: collecte $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+            git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+            git push
+          fi
+
+  pumpportal:
+    name: PumpPortal (créations + migrations, 5 min max)
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    needs: collect
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+          ref: ${{ github.ref_name }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Écoute WebSocket (bornée à 300 s)
+        env:
+          PUMPPORTAL_API_KEY: ${{ secrets.PUMPPORTAL_API_KEY }}
+        run: timeout 330 npx tsx lab/collect/run.ts pump 300
+      - name: Commit data/ si changement
+        run: |
+          git config user.name "crypto-lab-bot"
+          git config user.email "crypto-lab-bot@users.noreply.github.com"
+          git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+          git add data/
+          if git diff --cached --quiet; then
+            echo "Aucun changement dans data/"
+          else
+            git commit -m "data: pumpportal $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+            git push
+          fi
