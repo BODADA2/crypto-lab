@@ -1,5 +1,5 @@
 {
-  "computedAt": "2026-09-24T21:34:41.979Z",
+  "computedAt": "2026-09-24T21:47:24.953Z",
   "terms": [
     {
       "term": "yellowstone",
@@ -13,18 +13,29 @@
       "docs24h": 6
     },
     {
-      "term": "bitcoin",
-      "count24h": 29,
-      "baselinePerDay": 0.7142857142857143,
-      "count7d": 5,
-      "growth": 17.5,
+      "term": "android",
+      "count24h": 18,
+      "baselinePerDay": 0,
+      "count7d": 0,
+      "growth": 19,
       "sources": {
-        "github": 29
+        "github": 18
       },
-      "docs24h": 18
+      "docs24h": 17
     },
     {
-      "term": "android",
+      "term": "bitcoin",
+      "count24h": 31,
+      "baselinePerDay": 0.7142857142857143,
+      "count7d": 5,
+      "growth": 18.666666666666664,
+      "sources": {
+        "github": 31
+      },
+      "docs24h": 20
+    },
+    {
+      "term": "firedancer",
       "count24h": 16,
       "baselinePerDay": 0,
       "count7d": 0,
@@ -32,7 +43,7 @@
       "sources": {
         "github": 16
       },
-      "docs24h": 15
+      "docs24h": 8
     },
     {
       "term": "grpc",
@@ -44,6 +55,17 @@
         "github": 16
       },
       "docs24h": 4
+    },
+    {
+      "term": "ios",
+      "count24h": 16,
+      "baselinePerDay": 0,
+      "count7d": 0,
+      "growth": 17,
+      "sources": {
+        "github": 16
+      },
+      "docs24h": 16
     },
     {
       "term": "claude",
@@ -58,60 +80,37 @@
       "docs24h": 5
     },
     {
-      "term": "firedancer",
-      "count24h": 14,
-      "baselinePerDay": 0,
-      "count7d": 0,
-      "growth": 15,
-      "sources": {
-        "github": 14
-      },
-      "docs24h": 7
-    },
-    {
-      "term": "ios",
-      "count24h": 14,
-      "baselinePerDay": 0,
-      "count7d": 0,
-      "growth": 15,
-      "sources": {
-        "github": 14
-      },
-      "docs24h": 14
-    },
-    {
       "term": "open",
-      "count24h": 19,
+      "count24h": 21,
       "baselinePerDay": 0.42857142857142855,
       "count7d": 3,
-      "growth": 14,
+      "growth": 15.4,
       "sources": {
-        "github": 19
+        "github": 21
       },
-      "docs24h": 18
+      "docs24h": 20
     },
     {
       "term": "source",
-      "count24h": 19,
+      "count24h": 21,
       "baselinePerDay": 0.42857142857142855,
       "count7d": 3,
-      "growth": 14,
+      "growth": 15.4,
       "sources": {
-        "github": 19
+        "github": 21
       },
-      "docs24h": 18
+      "docs24h": 20
     },
     {
-      "term": "monero",
-      "count24h": 13,
+      "term": "llm",
+      "count24h": 14,
       "baselinePerDay": 0,
       "count7d": 0,
-      "growth": 14,
+      "growth": 15,
       "sources": {
-        "github": 12,
-        "token": 1
+        "github": 14
       },
-      "docs24h": 5
+      "docs24h": 9
     }
   ]
 }
