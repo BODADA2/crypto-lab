@@ -1,5 +1,5 @@
 {
-  "computedAt": "2026-09-24T20:41:05.184Z",
+  "computedAt": "2026-09-24T20:51:40.576Z",
   "terms": [
     {
       "term": "claude",
@@ -25,6 +25,17 @@
       "docs24h": 4
     },
     {
+      "term": "android",
+      "count24h": 11,
+      "baselinePerDay": 0,
+      "count7d": 0,
+      "growth": 12,
+      "sources": {
+        "github": 11
+      },
+      "docs24h": 10
+    },
+    {
       "term": "bitcoin",
       "count24h": 19,
       "baselinePerDay": 0.7142857142857143,
@@ -36,7 +47,7 @@
       "docs24h": 11
     },
     {
-      "term": "android",
+      "term": "llm",
       "count24h": 10,
       "baselinePerDay": 0,
       "count7d": 0,
@@ -44,21 +55,21 @@
       "sources": {
         "github": 10
       },
-      "docs24h": 9
+      "docs24h": 6
     },
     {
       "term": "defi",
-      "count24h": 18,
+      "count24h": 19,
       "baselinePerDay": 0.8571428571428571,
       "count7d": 6,
-      "growth": 10.23076923076923,
+      "growth": 10.769230769230768,
       "sources": {
-        "github": 18
+        "github": 19
       },
-      "docs24h": 15
+      "docs24h": 16
     },
     {
-      "term": "llm",
+      "term": "ios",
       "count24h": 9,
       "baselinePerDay": 0,
       "count7d": 0,
@@ -66,7 +77,18 @@
       "sources": {
         "github": 9
       },
-      "docs24h": 5
+      "docs24h": 9
+    },
+    {
+      "term": "validator",
+      "count24h": 10,
+      "baselinePerDay": 0.14285714285714285,
+      "count7d": 1,
+      "growth": 9.625,
+      "sources": {
+        "github": 10
+      },
+      "docs24h": 8
     },
     {
       "term": "open",
@@ -80,7 +102,7 @@
       "docs24h": 11
     },
     {
-      "term": "source",
+      "term": "security",
       "count24h": 12,
       "baselinePerDay": 0.42857142857142855,
       "count7d": 3,
@@ -88,29 +110,7 @@
       "sources": {
         "github": 12
       },
-      "docs24h": 11
-    },
-    {
-      "term": "grpc",
-      "count24h": 8,
-      "baselinePerDay": 0,
-      "count7d": 0,
-      "growth": 9,
-      "sources": {
-        "github": 8
-      },
-      "docs24h": 2
-    },
-    {
-      "term": "ios",
-      "count24h": 8,
-      "baselinePerDay": 0,
-      "count7d": 0,
-      "growth": 9,
-      "sources": {
-        "github": 8
-      },
-      "docs24h": 8
+      "docs24h": 7
     }
   ]
 }
