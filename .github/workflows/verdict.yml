@@ -41,6 +41,9 @@ jobs:
       - name: Calcul du verdict
         if: steps.gate.outputs.run == 'true'
         run: npx tsx lab/backtest/preregistered.ts data
+      - name: Calcul du verdict Robinhood Chain (hypothèse 2)
+        if: steps.gate.outputs.run == 'true'
+        run: npx tsx lab/backtest/preregistered-rh.ts data-rh
       - name: Commit reports/
         if: steps.gate.outputs.run == 'true'
         run: |

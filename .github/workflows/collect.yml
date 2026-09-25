@@ -1,4 +1,4 @@
-# Plan données — collecte toutes les 15 minutes (DexScreener + Reddit + GitHub) et flux PumpPortal (job séparé, 10 min max).
+# Plan données — collecte toutes les 15 minutes (DexScreener Solana + Robinhood Chain, Reddit, GitHub) et flux PumpPortal (job séparé, 10 min max).
 # Aucun secret de trading ici. Les secrets sont optionnels : le cycle tourne sans eux (GITHUB_TOKEN est fourni par Actions).
 name: collect
 
@@ -37,11 +37,17 @@ jobs:
           # Optionnel : active l'enrichissement on-chain (autorités, top10, extensions Token-2022), ≈ 4 crédits/token.
           HELIUS_API_KEY: ${{ secrets.HELIUS_API_KEY }}
         run: npx tsx lab/collect/run.ts
+      - name: Cycle Robinhood Chain (hypothèse 2, données séparées dans data-rh/)
+        env:
+          DATA_DIR: data-rh
+          CHAIN: robinhood
+        run: npx tsx lab/collect/run.ts || echo "cycle Robinhood en échec, la collecte Solana continue"
       - name: Commit data/ si changement
         run: |
           git config user.name "crypto-lab-bot"
           git config user.email "crypto-lab-bot@users.noreply.github.com"
           git add data/
+          if [ -d data-rh ]; then git add data-rh/; fi
           if git diff --cached --quiet; then
             echo "Aucun changement dans data/"
           else
