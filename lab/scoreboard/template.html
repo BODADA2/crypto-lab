@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Honest Calls</title>
+<meta name="description" content="Le vrai score des canaux de calls crypto sur Telegram, perdants compris.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;700;800&family=Public+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  color-scheme:light;
+  --bg:#F6F6F3; --surface:#FFFFFF; --ink:#121417; --muted:#5C636B; --line:#DDDFE0;
+  --accent:#C2410C; --accent-soft:#FCE9DE;
+  --good:#15803D; --bad:#B91C1C; --idle:#8B9197; --row:#FAFAF8;
+  --display:"Archivo", "Arial Narrow", system-ui, sans-serif;
+  --body:"Public Sans", "Segoe UI", system-ui, sans-serif;
+  --mono:"JetBrains Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#121417; --surface:#1A1E23; --ink:#ECEDEE; --muted:#9AA2AA; --line:#2A3037;
+    --accent:#FB923C; --accent-soft:#3A2416; --good:#4ADE80; --bad:#F87171; --idle:#6B737B; --row:#1E2329;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#121417; --surface:#1A1E23; --ink:#ECEDEE; --muted:#9AA2AA; --line:#2A3037;
+  --accent:#FB923C; --accent-soft:#3A2416; --good:#4ADE80; --bad:#F87171; --idle:#6B737B; --row:#1E2329;
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15px;line-height:1.5}
+.wrap{max-width:1040px;margin:0 auto;padding-inline:16px;padding-block:28px 56px;display:flex;flex-direction:column;gap:28px}
+.top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;flex-wrap:wrap}
+.brand{display:flex;flex-direction:column;gap:8px;max-width:640px}
+.mark{font-family:var(--display);font-weight:800;font-size:clamp(34px,7vw,56px);line-height:.95;letter-spacing:-.01em;margin:0}
+.mark span{color:var(--accent)}
+.tag{font-size:17px;color:var(--muted);margin:0;text-wrap:balance}
+.lang{display:flex;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.lang button{font:500 13px var(--body);background:var(--surface);color:var(--muted);border:0;padding:6px 12px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+.rules{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+@media (max-width:720px){.rules{grid-template-columns:1fr}}
+.rule{border-top:3px solid var(--accent);padding-top:10px;display:flex;flex-direction:column;gap:4px}
+.rule b{font-family:var(--display);font-size:17px}
+.rule p{margin:0;color:var(--muted);font-size:14px}
+h2{font-family:var(--display);font-size:24px;margin:0 0 4px;color:var(--ink)}
+.sub{color:var(--muted);font-size:14px;margin:0 0 12px}
+.tablebox{overflow-x:auto;border:1px solid var(--line);border-radius:12px;background:var(--surface)}
+table{border-collapse:collapse;width:100%;min-width:720px;font-variant-numeric:tabular-nums}
+th,td{padding:10px 12px;text-align:right;white-space:nowrap;border-bottom:1px solid var(--line)}
+th{font:600 12px var(--body);letter-spacing:.04em;text-transform:uppercase;color:var(--muted);background:var(--row)}
+th:first-child,td:first-child,th:nth-child(2),td:nth-child(2){text-align:left}
+tr:last-child td{border-bottom:0}
+td.num{font-family:var(--mono);font-size:14px}
+.rank{font-family:var(--display);font-weight:800;font-size:18px;color:var(--accent);width:44px}
+.ch a{color:var(--ink);font-weight:600;text-decoration:none}
+.ch a:hover{text-decoration:underline}
+.pill{font:500 11px var(--body);padding:2px 7px;border-radius:999px;background:var(--row);color:var(--idle);border:1px solid var(--line);margin-left:6px}
+.up{color:var(--good)} .down{color:var(--bad)} .flat{color:var(--muted)}
+tr.watching td{color:var(--muted)}
+.chain{font:500 11px var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--muted);border:1px solid var(--line);border-radius:4px;padding:1px 5px}
+.empty{color:var(--muted);padding:16px}
+.method{display:flex;flex-direction:column;gap:8px;font-size:14px;color:var(--muted);max-width:72ch}
+.method p{margin:0}
+.warn{background:var(--accent-soft);color:var(--ink);border-radius:10px;padding:12px 14px;font-size:14px}
+footer{font-size:12px;color:var(--muted);display:flex;flex-wrap:wrap;gap:6px 16px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="top">
+    <div class="brand">
+      <h1 class="mark">Honest<span>Calls</span></h1>
+      <p class="tag" data-i18n="tag"></p>
+    </div>
+    <div class="lang" role="group" aria-label="Langue / Language">
+      <button id="fr" type="button" aria-pressed="true">FR</button>
+      <button id="en" type="button" aria-pressed="false">EN</button>
+    </div>
+  </div>
+
+  <section class="rules">
+    <div class="rule"><b data-i18n="r1t"></b><p data-i18n="r1"></p></div>
+    <div class="rule"><b data-i18n="r2t"></b><p data-i18n="r2"></p></div>
+    <div class="rule"><b data-i18n="r3t"></b><p data-i18n="r3"></p></div>
+  </section>
+
+  <section>
+    <h2 data-i18n="rankT"></h2>
+    <p class="sub" id="updated"></p>
+    <div class="tablebox"><table>
+      <thead><tr>
+        <th>#</th><th data-i18n="hCh"></th><th data-i18n="hJudged"></th><th data-i18n="hX2"></th><th data-i18n="hHalf"></th><th data-i18n="hMed"></th><th data-i18n="hCopy"></th>
+      </tr></thead>
+      <tbody id="rank"></tbody>
+    </table></div>
+  </section>
+
+  <section>
+    <h2 data-i18n="recentT"></h2>
+    <p class="sub" data-i18n="recentS"></p>
+    <div class="tablebox"><table>
+      <thead><tr>
+        <th data-i18n="hToken"></th><th data-i18n="hCh"></th><th data-i18n="hWhen"></th><th data-i18n="hLiq"></th><th data-i18n="hPeak"></th><th data-i18n="hNow"></th>
+      </tr></thead>
+      <tbody id="recent"></tbody>
+    </table></div>
+  </section>
+
+  <section class="method">
+    <h2 data-i18n="methT"></h2>
+    <p data-i18n="m1"></p>
+    <p data-i18n="m2"></p>
+    <p data-i18n="m3"></p>
+    <p class="warn" data-i18n="nfa"></p>
+  </section>
+
+  <footer><span data-i18n="src"></span><span id="gen"></span></footer>
+</div>
+
+<script>
+const BOARD = /*__BOARD__*/null;
+const T = {
+  fr: {
+    tag: "Le vrai score des canaux de calls crypto sur Telegram. Perdants compris.",
+    r1t: "Tous les calls comptent", r1: "Les canaux ne republient que leurs gagnants. Ici, chaque call est suivi, même ceux qui s'effondrent.",
+    r2t: "Le prix d'un vrai abonné", r2: "Départ = premier prix observé après la publication, pas le prix d'avant le call.",
+    r3t: "24 heures, même règle pour tous", r3: "Résultat mesuré 24 h après. Un token qui disparaît compte −100 %.",
+    rankT: "Classement", hCh: "Canal", hJudged: "Calls notés", hX2: "×2 touché", hHalf: "Moitié perdue", hMed: "Médiane à 24 h", hCopy: "Copieur moyen",
+    watching: "en observation", updated: (d) => "Mis à jour le " + d + ". Classé à partir de 10 calls notés.",
+    recentT: "Derniers calls", recentS: "Depuis le prix de départ. Les calls de moins de 24 h sont encore en cours.",
+    hToken: "Token", hWhen: "Publié", hLiq: "Liquidité au départ", hPeak: "Plus haut (24 h)", hNow: "À 24 h / maintenant",
+    live: "en cours", gone: "disparu", none: "Pas encore de données.",
+    methT: "Méthode",
+    m1: "Les messages sont lus sur l'aperçu public des canaux (t.me/s). Un call = un message qui contient une adresse de contrat ; seule la première annonce d'un token par un canal compte. Seuls les calls vus moins de 30 minutes après leur publication sont notés.",
+    m2: "Les prix viennent de DexScreener, relevés toutes les 15 minutes pendant 48 h (7 jours pour certains canaux). « Copieur moyen » = acheter au prix de départ, revendre 24 h après, 1,3 % de frais aller-retour. Chaînes suivies : Solana et Robinhood Chain.",
+    m3: "Code et données ouverts : github.com/BODADA2/crypto-lab. Rien n'est retiré après coup.",
+    nfa: "Ce site mesure le passé. Ce n'est pas un conseil financier. La plupart des memecoins perdent presque toute leur valeur.",
+    src: "Sources : aperçus publics Telegram, DexScreener.", gen: (d) => "Généré le " + d,
+  },
+  en: {
+    tag: "The real track record of crypto call channels on Telegram. Losers included.",
+    r1t: "Every call counts", r1: "Channels only repost their winners. Here every call is tracked, including the ones that crash.",
+    r2t: "A real subscriber's price", r2: "Start = first price observed after the post, not the price before the call.",
+    r3t: "24 hours, same rule for all", r3: "Result measured 24 h later. A token that disappears counts as −100%.",
+    rankT: "Ranking", hCh: "Channel", hJudged: "Calls scored", hX2: "Hit 2×", hHalf: "Lost half", hMed: "Median at 24 h", hCopy: "Average copier",
+    watching: "watching", updated: (d) => "Updated " + d + ". Ranked from 10 scored calls.",
+    recentT: "Latest calls", recentS: "From the starting price. Calls under 24 h old are still running.",
+    hToken: "Token", hWhen: "Posted", hLiq: "Starting liquidity", hPeak: "Peak (24 h)", hNow: "At 24 h / now",
+    live: "running", gone: "vanished", none: "No data yet.",
+    methT: "Method",
+    m1: "Messages are read from each channel's public preview (t.me/s). A call is a message containing a contract address; only a channel's first post about a token counts. Only calls seen within 30 minutes of posting are scored.",
+    m2: "Prices come from DexScreener, sampled every 15 minutes for 48 h (7 days for some channels). \"Average copier\" = buy at the starting price, sell 24 h later, 1.3% round-trip fees. Chains tracked: Solana and Robinhood Chain.",
+    m3: "Open code and data: github.com/BODADA2/crypto-lab. Nothing is removed after the fact.",
+    nfa: "This site measures the past. It is not financial advice. Most memecoins lose almost all their value.",
+    src: "Sources: public Telegram previews, DexScreener.", gen: (d) => "Generated " + d,
+  },
+};
+let lang = "fr";
+try { if (localStorage.getItem("hc-lang") === "en") lang = "en"; } catch (e) {}
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const pct = (x) => x == null ? "–" : (x > 0 ? "+" : "") + (x * 100).toFixed(0) + " %";
+const share = (x) => x == null ? "–" : (x * 100).toFixed(0) + " %";
+const cls = (x) => x == null ? "flat" : x > 0.001 ? "up" : x < -0.001 ? "down" : "flat";
+const money = (x) => x == null ? "–" : "$" + (x >= 1000 ? Math.round(x / 1000) + "k" : Math.round(x));
+const when = (iso) => { const d = new Date(iso); return d.toLocaleString(lang === "fr" ? "fr-CA" : "en-CA", { month: "short", day: "numeric", hour: "2-digit", minute: "2-digit" }); };
+
+function render() {
+  const t = T[lang];
+  document.documentElement.lang = lang;
+  document.querySelectorAll("[data-i18n]").forEach((el) => { const v = t[el.dataset.i18n]; if (typeof v === "string") el.textContent = v; });
+  $("fr").setAttribute("aria-pressed", String(lang === "fr"));
+  $("en").setAttribute("aria-pressed", String(lang === "en"));
+  const b = BOARD || { channels: [], recent: [] };
+  $("updated").textContent = b.dataEnd ? t.updated(when(b.dataEnd)) : t.none;
+  $("gen").textContent = b.generatedAt ? t.gen(when(b.generatedAt)) : "";
+  let r = 0;
+  $("rank").innerHTML = b.channels.length ? b.channels.map((c) => {
+    const rank = c.ranked ? String(++r) : "";
+    return `<tr class="${c.ranked ? "" : "watching"}">
+      <td class="rank">${rank}</td>
+      <td class="ch"><a href="https://t.me/${esc(c.channel)}" rel="noopener" target="_blank">@${esc(c.channel)}</a>${c.ranked ? "" : `<span class="pill">${esc(t.watching)}</span>`}</td>
+      <td class="num">${c.judged}</td>
+      <td class="num">${share(c.hitX2)}</td>
+      <td class="num">${share(c.halved)}</td>
+      <td class="num ${cls(c.median24)}">${pct(c.median24)}</td>
+      <td class="num ${cls(c.copier)}">${pct(c.copier)}</td>
+    </tr>`;
+  }).join("") : `<tr><td colspan="7" class="empty">${esc(t.none)}</td></tr>`;
+  $("recent").innerHTML = b.recent.length ? b.recent.map((c) => {
+    const tail = c.status === "early" ? ` <span class="pill">${esc(t.live)}</span>` : c.vanished ? ` <span class="pill">${esc(t.gone)}</span>` : "";
+    return `<tr>
+      <td><b>${esc(c.symbol ? "$" + c.symbol : c.address.slice(0, 6) + "…")}</b> <span class="chain">${esc(c.chain === "robinhood" ? "RBH" : "SOL")}</span></td>
+      <td class="ch"><a href="https://t.me/${esc(c.channel)}" rel="noopener" target="_blank">@${esc(c.channel)}</a></td>
+      <td class="num">${esc(when(c.postedAt))}</td>
+      <td class="num">${money(c.liq0)}</td>
+      <td class="num">${c.maxX ? "×" + c.maxX.toFixed(2) : "–"}</td>
+      <td class="num ${cls(c.ret)}">${pct(c.ret)}${tail}</td>
+    </tr>`;
+  }).join("") : `<tr><td colspan="6" class="empty">${esc(t.none)}</td></tr>`;
+}
+function $(id) { return document.getElementById(id); }
+function setLang(l) { lang = l; try { localStorage.setItem("hc-lang", l); } catch (e) {} render(); }
+$("fr").addEventListener("click", () => setLang("fr"));
+$("en").addEventListener("click", () => setLang("en"));
+render();
+</script>
+</body>
+</html>
