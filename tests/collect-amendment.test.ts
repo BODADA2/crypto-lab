@@ -28,3 +28,17 @@ describe("amendement 1 — liste des tokens observés", async () => {
     expect(loadRecentMigrations(dir, now)).toEqual(["B", "A"]);
   });
 });
+
+describe("hypothèse 2 — Robinhood Chain", async () => {
+  const { snapshotsFromPairs } = await import("../lab/collect/dexscreener.ts");
+  const pair = (chainId: string, address: string, liq: number) =>
+    ({ chainId, dexId: "uniswap", pairAddress: `P-${chainId}-${liq}`, baseToken: { address, symbol: "CAT", name: "Cat" }, priceUsd: "1", liquidity: { usd: liq }, volume: { m5: 1, h1: 2, h6: 3, h24: 4 }, txns: {}, pairCreatedAt: 1_780_000_000_000 }) as never;
+
+  it("ne garde que la chaîne demandée et étiquette le snapshot", () => {
+    const pairs = [pair("robinhood", "0xAbC", 60_000), pair("solana", "SoLMint", 50_000), pair("robinhood", "0xAbC", 8_000)];
+    const rh = snapshotsFromPairs(pairs, "2026-09-26T00:00:00Z", "robinhood");
+    expect(rh.map((s) => [s.mint, s.chain, s.liquidityUsd])).toEqual([["0xAbC", "robinhood", 60_000]]);
+    const sol = snapshotsFromPairs(pairs, "2026-09-26T00:00:00Z");
+    expect(sol.map((s) => [s.mint, s.chain])).toEqual([["SoLMint", "solana"]]);
+  });
+});
