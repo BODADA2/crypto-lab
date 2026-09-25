@@ -1,7 +1,7 @@
 /**
  * Cycle de collecte (GitHub Actions toutes les 15 min, ou à la main) :
  *   npx tsx lab/collect/run.ts            → DexScreener + Reddit + GitHub → data/
- *   npx tsx lab/collect/run.ts pump 300   → PumpPortal pendant 300 s max → data/scans/pump-<date>.jsonl
+ *   npx tsx lab/collect/run.ts pump 600   → PumpPortal pendant 600 s max → data/scans/pump-<date>.jsonl
  *
  * Écrit :
  *   data/scans/<ISO>.json          (ScanResult complet)
@@ -37,7 +37,7 @@ export interface RunOptions {
   now?: () => number;
   /** Clients pré-construits (tests). */
   clients?: { dex?: DexScreenerClient; reddit?: RedditClient; github?: GithubClient };
-  /** Nombre max de mints DexScreener interrogés par cycle (2 requêtes de 30). */
+  /** Nombre max de mints DexScreener interrogés par cycle (défaut 300 = 10 requêtes de 30). */
   maxMints?: number;
   /** Nombre max de lignes conservées par fichier d'historique (défaut 2 016 = 7 j à 5 min). */
   historyMaxLines?: number;
@@ -99,12 +99,17 @@ export async function runCollect(opts: RunOptions): Promise<{ scan: ScanResult; 
   } catch (e) {
     errors.push({ source: "dexscreener:boosts", message: (e as Error).message });
   }
-  // Tokens déjà suivis (historique existant) : on continue à les observer pour allonger les séries.
-  const tracked = existsSync(join(data, "tokens")) ? readTrackedMints(join(data, "tokens")) : [];
-  const mints = Array.from(new Set([...scan.boosts.map((b) => b.tokenAddress), ...scan.profiles.map((p) => p.tokenAddress), ...tracked])).slice(
-    0,
-    opts.maxMints ?? 60,
-  );
+  // Tokens à observer (amendement 1, 25/09/2026) : nouveaux (boosts/profils), migrés récemment (PumpPortal), puis
+  // tokens déjà suivis encore vivants, du plus liquide au moins liquide. Avant : plafond de 60 qui laissait
+  // tomber les tokens suivis (séries interrompues) et ignorait les migrations.
+  const tracked = existsSync(join(data, "tokens")) ? readTrackedTokens(join(data, "tokens")) : [];
+  const mints = selectMintsToPoll({
+    fresh: [...scan.boosts.map((b) => b.tokenAddress), ...scan.profiles.map((p) => p.tokenAddress)],
+    migrated: loadRecentMigrations(join(data, "scans"), now()),
+    tracked,
+    now: now(),
+    cap: opts.maxMints ?? 300,
+  });
   try {
     if (mints.length) scan.tokens = await dex.getSnapshots(mints);
   } catch (e) {
@@ -217,14 +222,80 @@ export async function runCollect(opts: RunOptions): Promise<{ scan: ScanResult; 
   return { scan, scanPath, volumeSignals: signals.length, narratives: terms.length, mintInfos: mintInfos.size, rpcCalls };
 }
 
-function readTrackedMints(tokensDir: string): string[] {
+export interface TrackedToken {
+  mint: string;
+  liquidityUsd: number;
+  /** Epoch ms du dernier snapshot connu. */
+  lastSeen: number;
+}
+
+/** Liquidité sous laquelle un token suivi est considéré mort (plus observé). */
+export const DEAD_LIQUIDITY_USD = 5_000;
+/** Au-delà, un token suivi n'est plus observé (borne la taille de la liste). */
+export const TRACK_MAX_AGE_MS = 7 * 24 * 3_600_000;
+/** Fenêtre des migrations PumpPortal ajoutées à la liste d'observation. */
+export const MIGRATION_WINDOW_MS = 48 * 3_600_000;
+
+/**
+ * Liste des mints à interroger ce cycle, sans doublon, plafonnée : nouveaux d'abord, puis migrés récents, puis suivis
+ * vivants (liquidité ≥ 5 k$, vus depuis ≤ 7 j) du plus liquide au moins liquide. Fonction pure (testée).
+ */
+export function selectMintsToPoll(p: { fresh: string[]; migrated: string[]; tracked: TrackedToken[]; now: number; cap: number }): string[] {
+  const alive = p.tracked
+    .filter((t) => t.liquidityUsd >= DEAD_LIQUIDITY_USD && p.now - t.lastSeen <= TRACK_MAX_AGE_MS)
+    .sort((a, b) => b.liquidityUsd - a.liquidityUsd)
+    .map((t) => t.mint);
+  const dead = new Set(p.tracked.filter((t) => t.liquidityUsd < DEAD_LIQUIDITY_USD).map((t) => t.mint));
+  const migrated = p.migrated.filter((m) => !dead.has(m));
+  return Array.from(new Set([...p.fresh, ...migrated, ...alive])).slice(0, p.cap);
+}
+
+/** Dernier snapshot de chaque token suivi (data/tokens/<mint>.json). */
+function readTrackedTokens(tokensDir: string): TrackedToken[] {
+  const out: TrackedToken[] = [];
+  let files: string[] = [];
   try {
-    return readdirSync(tokensDir)
-      .filter((f) => f.endsWith(".json"))
-      .map((f) => f.replace(/\.json$/, ""));
+    files = readdirSync(tokensDir).filter((f) => f.endsWith(".json"));
   } catch {
-    return [];
+    return out;
   }
+  for (const f of files) {
+    try {
+      const s = JSON.parse(readFileSync(join(tokensDir, f), "utf8")) as { mint?: string; liquidityUsd?: number; fetchedAt?: string };
+      const lastSeen = s.fetchedAt ? Date.parse(s.fetchedAt) : NaN;
+      out.push({ mint: s.mint ?? f.replace(/\.json$/, ""), liquidityUsd: Number(s.liquidityUsd) || 0, lastSeen: Number.isFinite(lastSeen) ? lastSeen : 0 });
+    } catch {
+      /* fichier illisible : ignoré */
+    }
+  }
+  return out;
+}
+
+/** Mints migrés (PumpPortal, kind = "migrate") depuis moins de 48 h, lus dans les fichiers pump-<date>.jsonl récents. */
+export function loadRecentMigrations(scansDir: string, nowMs: number, windowMs = MIGRATION_WINDOW_MS): string[] {
+  if (!existsSync(scansDir)) return [];
+  const since = nowMs - windowMs;
+  const days = new Set<string>();
+  for (let t = since; t <= nowMs + 86_400_000; t += 86_400_000) days.add(new Date(t).toISOString().slice(0, 10));
+  const seen = new Map<string, number>();
+  for (const day of days) {
+    const f = join(scansDir, `pump-${day}.jsonl`);
+    if (!existsSync(f)) continue;
+    for (const line of readFileSync(f, "utf8").split("\n")) {
+      if (!line.trim()) continue;
+      try {
+        const ev = JSON.parse(line) as { kind?: string; mint?: string; receivedAt?: string };
+        const ts = ev.receivedAt ? Date.parse(ev.receivedAt) : NaN;
+        if (ev.kind === "migrate" && ev.mint && ts >= since && ts <= nowMs) seen.set(ev.mint, Math.max(seen.get(ev.mint) ?? 0, ts));
+      } catch {
+        /* ligne corrompue ignorée */
+      }
+    }
+  }
+  // Les plus récentes d'abord.
+  return Array.from(seen.entries())
+    .sort((a, b) => b[1] - a[1])
+    .map(([m]) => m);
 }
 
 function loadArchivedDocs(dir: string, sinceMs: number): NarrativeDoc[] {
@@ -255,7 +326,7 @@ function dedupeDocs(docs: NarrativeDoc[]): NarrativeDoc[] {
   return out;
 }
 
-/** Job PumpPortal borné dans le temps (job GitHub Actions séparé, 5 min max). */
+/** Job PumpPortal borné dans le temps (job GitHub Actions séparé, 10 min max). */
 export async function runPump(opts: { dataDir: string; durationMs: number; apiKey?: string; now?: () => number }): Promise<{ events: number; file: string }> {
   const now = opts.now ?? (() => Date.now());
   const outDir = join(opts.dataDir, "scans");
@@ -278,7 +349,8 @@ if (isMain) {
   const mode = process.argv[2] ?? "collect";
   if (mode === "pump") {
     const seconds = Number(process.argv[3] ?? 300);
-    const res = await runPump({ dataDir, durationMs: Math.min(seconds, 300) * 1000, apiKey: process.env.PUMPPORTAL_API_KEY });
+    // Plafond relevé à 600 s (amendement 1) : dépôt public = minutes Actions illimitées.
+    const res = await runPump({ dataDir, durationMs: Math.min(seconds, 600) * 1000, apiKey: process.env.PUMPPORTAL_API_KEY });
     console.log(`PumpPortal : ${res.events} événements → ${res.file}`);
   } else {
     const apiKey = process.env.HELIUS_API_KEY;
