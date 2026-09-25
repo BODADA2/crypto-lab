@@ -3,54 +3,61 @@
   "chain": "solana",
   "symbol": "SNDK",
   "name": "Sandisk - Backpack Securities",
-  "createdAt": "2026-06-25T04:12:22.000Z",
-  "pairCreatedAt": 1782360742000,
-  "pairAddress": "A3BwxWwJ5m7p58eVRKZoLTSXu5FFSMmPJZoYMqkNn5Q2",
-  "dexId": "meteora",
-  "url": "https://dexscreener.com/solana/a3bwxwwj5m7p58evrkzoltsxu5ffsmmpjzoymqknn5q2",
-  "priceUsd": 1772.72,
-  "liquidityUsd": 11646.69,
-  "fdvUsd": 1239110,
-  "marketCapUsd": 1239110,
+  "createdAt": "2026-06-24T13:30:12.000Z",
+  "pairCreatedAt": 1782307812000,
+  "pairAddress": "4vRC6Qne8HPUN98mJr88vRkRD9N4cadyrGtPwVU3CV86",
+  "dexId": "raydium",
+  "url": "https://dexscreener.com/solana/4vrc6qne8hpun98mjr88vrkrd9n4cadyrgtpwvu3cv86",
+  "priceUsd": 1773.076,
+  "liquidityUsd": 137733.87,
+  "fdvUsd": 1239354,
+  "marketCapUsd": 1239354,
   "volume": {
-    "m5": 10.15,
-    "h1": 3704.52,
-    "h6": 35562.17,
-    "h24": 76524.96
+    "m5": 795.7,
+    "h1": 18976.24,
+    "h6": 283535.29,
+    "h24": 939102.82
   },
-  "volume5m": 10.15,
-  "volume1h": 3704.52,
-  "volume24h": 76524.96,
+  "volume5m": 795.7,
+  "volume1h": 18976.24,
+  "volume24h": 939102.82,
   "priceChange": {
-    "m5": 0.27,
-    "h1": -0.68,
-    "h6": -0.08,
-    "h24": 0.88
+    "m5": -0.08,
+    "h1": -0.16,
+    "h6": 1.56,
+    "h24": 1.44
   },
   "txns": {
     "m5": {
       "buys": 3,
-      "sells": 1
+      "sells": 15
     },
     "h1": {
-      "buys": 22,
-      "sells": 26
+      "buys": 86,
+      "sells": 123
     },
     "h6": {
-      "buys": 185,
-      "sells": 192
+      "buys": 1204,
+      "sells": 1316
     },
     "h24": {
-      "buys": 526,
-      "sells": 527
+      "buys": 4057,
+      "sells": 4200
     }
   },
   "holders": null,
-  "top10Pct": 100,
-  "mintAuthority": "UNKNOWN",
-  "freezeAuthority": "UNKNOWN",
+  "top10Pct": 70.46,
+  "mintAuthority": "umtnrdLnVDfqXgm9iTnU1jFphfEgYMTJRSgryahGWky",
+  "freezeAuthority": "2cVYpagTt7ZGc3mmTXBa7fAznUtx5DUu6aCq8uVDaf4a",
   "boostsActive": 0,
-  "pairCount": 1,
+  "pairCount": 2,
   "source": "dexscreener",
-  "fetchedAt": "2026-09-25T20:03:07.561Z"
+  "fetchedAt": "2026-09-25T20:22:22.439Z",
+  "decimals": 6,
+  "riskyExtensions": [
+    "PermanentDelegate",
+    "DefaultAccountState",
+    "Pausable",
+    "TransferHook"
+  ]
 }
