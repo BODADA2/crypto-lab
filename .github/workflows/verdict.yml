@@ -1,0 +1,51 @@
+# Verdict pré-enregistré des stratégies memecoins (docs/preregistration-memecoins.md).
+# Tourne une fois, le 17 octobre 2026 à 13:00 UTC (≈ 10 h au Nouveau-Brunswick), ou à la main.
+name: verdict
+
+on:
+  schedule:
+    - cron: "0 13 17 10 *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: data-plane
+  cancel-in-progress: false
+
+jobs:
+  verdict:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Seulement en 2026 (le cron annuel ne doit pas se relancer seul)
+        id: gate
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "$(date -u +%Y)" = "2026" ]; then
+            echo "run=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "run=false" >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/checkout@v4
+        if: steps.gate.outputs.run == 'true'
+        with:
+          fetch-depth: 1
+      - uses: actions/setup-node@v4
+        if: steps.gate.outputs.run == 'true'
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+        if: steps.gate.outputs.run == 'true'
+      - name: Calcul du verdict
+        if: steps.gate.outputs.run == 'true'
+        run: npx tsx lab/backtest/preregistered.ts data
+      - name: Commit reports/
+        if: steps.gate.outputs.run == 'true'
+        run: |
+          git config user.name "crypto-lab-bot"
+          git config user.email "crypto-lab-bot@users.noreply.github.com"
+          git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
+          git add reports/
+          if git diff --cached --quiet; then echo "Rien à committer"; else git commit -m "verdict: stratégies memecoins pré-enregistrées" && git push; fi
