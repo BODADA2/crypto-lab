@@ -3,7 +3,7 @@
   "program": "token-2022",
   "mintAuthority": null,
   "freezeAuthority": null,
-  "supplyRaw": "999960079045280",
+  "supplyRaw": "999959836750070",
   "decimals": 6,
   "isInitialized": true,
   "extensions": [
@@ -11,13 +11,13 @@
     "TransferFeeConfig",
     "TokenMetadata"
   ],
-  "top10Pct": 41.64,
+  "top10Pct": 39.91,
   "topAccounts": [
     {
       "address": "AA4nXjAvCNgZsVnrojesj4NDVtm8wk2dCK6ctsnEkaUc",
       "owner": "GpMZbSM2GgvTKHJirzeGfMFoaZ8UR2X7F4v8vHTvxFbL",
-      "amountRaw": "214299014229319",
-      "pct": 21.43,
+      "amountRaw": "201869930910599",
+      "pct": 20.18,
       "excluded": false
     },
     {
@@ -39,13 +39,6 @@
       "owner": "VJSDW6S74YXR4rRR9P4xwhMvLZJQMhrUb8XMFirUsy1",
       "amountRaw": "26015437725285",
       "pct": 2.6,
-      "excluded": false
-    },
-    {
-      "address": "29SNzkdBgKfajCJBs7fn2hcpk6GMDb2FYFw2oRnREvxn",
-      "owner": "JBEVQRsH2KoaQMbYeWJ9KSja61RcKYQUmGKL6SDHnXfV",
-      "amountRaw": "20889977181132",
-      "pct": 2.08,
       "excluded": false
     },
     {
@@ -133,6 +126,20 @@
       "excluded": false
     },
     {
+      "address": "7tcGy8xGwjBkcFGNbB7qRN7F45ek7JjX3ySvZTse9CUy",
+      "owner": "7NPLMWgrFWEADvHu4BwzgpAKcyD42TWdgJAHWW2iYTJS",
+      "amountRaw": "13103696504959",
+      "pct": 1.31,
+      "excluded": false
+    },
+    {
+      "address": "4G9hxAhgLU6gQZiv4hDC1N379zguuwpefFbK2vuZix9z",
+      "owner": "DA6H9ScLyyfgXLSVfoCjbYqvHooK6ZLhZENbcF21JQ9n",
+      "amountRaw": "12263027145354",
+      "pct": 1.22,
+      "excluded": false
+    },
+    {
       "address": "4tgtL7k64uYFt4AB8owmHBu7Yy3Famm15Vnabsmq4vMD",
       "owner": "2tVnqzRozPkkB8ar6UwaKK48nm1MNK616QN33ooA1i8A",
       "amountRaw": "12212791214265",
@@ -145,13 +152,6 @@
       "amountRaw": "11780484887572",
       "pct": 1.17,
       "excluded": false
-    },
-    {
-      "address": "7tcGy8xGwjBkcFGNbB7qRN7F45ek7JjX3ySvZTse9CUy",
-      "owner": "7NPLMWgrFWEADvHu4BwzgpAKcyD42TWdgJAHWW2iYTJS",
-      "amountRaw": "11621694844498",
-      "pct": 1.16,
-      "excluded": false
     }
   ],
   "excludedCount": 0,
@@ -159,6 +159,6 @@
   "riskyExtensions": [
     "TransferFeeConfig"
   ],
-  "fetchedAt": "2026-09-25T12:04:46.228Z",
+  "fetchedAt": "2026-09-25T13:25:48.092Z",
   "rpcCalls": 4
 }
