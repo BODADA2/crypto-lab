@@ -119,15 +119,15 @@ export function addressKey(address: string): string {
 }
 
 /**
- * Nouveaux calls : première apparition de chaque adresse, par ordre de publication, en ignorant les adresses et messages
- * déjà connus. Fonction pure (testée).
+ * Nouveaux calls : première apparition de chaque adresse DANS CHAQUE CANAL, par ordre de publication, en ignorant les
+ * adresses et messages déjà connus (deux canaux qui annoncent le même token ont chacun leur call). Fonction pure (testée).
  */
 export function mergeNewCalls(known: Call[], found: Call[]): Call[] {
-  const seenAddr = new Set(known.map((c) => addressKey(c.address)));
+  const seenAddr = new Set(known.map((c) => `${c.channel}|${addressKey(c.address)}`));
   const seenPost = new Set(known.map((c) => `${c.channel}/${c.postId}`));
   const out: Call[] = [];
   for (const c of [...found].sort((a, b) => a.postId - b.postId)) {
-    const k = addressKey(c.address);
+    const k = `${c.channel}|${addressKey(c.address)}`;
     if (seenAddr.has(k) || seenPost.has(`${c.channel}/${c.postId}`)) continue;
     seenAddr.add(k);
     seenPost.add(`${c.channel}/${c.postId}`);
