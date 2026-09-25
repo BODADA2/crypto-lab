@@ -1,30 +1,41 @@
 {
-  "computedAt": "2026-09-25T01:22:10.136Z",
+  "computedAt": "2026-09-25T01:34:06.605Z",
   "terms": [
     {
       "term": "android",
-      "count24h": 39,
+      "count24h": 40,
       "baselinePerDay": 0,
       "count7d": 0,
-      "growth": 40,
+      "growth": 41,
       "sources": {
-        "github": 39
+        "github": 40
+      },
+      "docs24h": 38
+    },
+    {
+      "term": "ios",
+      "count24h": 37,
+      "baselinePerDay": 0,
+      "count7d": 0,
+      "growth": 38,
+      "sources": {
+        "github": 37
       },
       "docs24h": 37
     },
     {
-      "term": "ios",
-      "count24h": 36,
+      "term": "firedancer",
+      "count24h": 34,
       "baselinePerDay": 0,
       "count7d": 0,
-      "growth": 37,
+      "growth": 35,
       "sources": {
-        "github": 36
+        "github": 34
       },
-      "docs24h": 36
+      "docs24h": 17
     },
     {
-      "term": "firedancer",
+      "term": "llvm",
       "count24h": 32,
       "baselinePerDay": 0,
       "count7d": 0,
@@ -35,7 +46,7 @@
       "docs24h": 16
     },
     {
-      "term": "llvm",
+      "term": "llm",
       "count24h": 30,
       "baselinePerDay": 0,
       "count7d": 0,
@@ -43,43 +54,43 @@
       "sources": {
         "github": 30
       },
-      "docs24h": 15
-    },
-    {
-      "term": "llm",
-      "count24h": 29,
-      "baselinePerDay": 0,
-      "count7d": 0,
-      "growth": 30,
-      "sources": {
-        "github": 29
-      },
-      "docs24h": 21
+      "docs24h": 22
     },
     {
       "term": "bitcoin",
-      "count24h": 49,
+      "count24h": 50,
       "baselinePerDay": 0.7142857142857143,
       "count7d": 5,
-      "growth": 29.166666666666664,
+      "growth": 29.749999999999996,
       "sources": {
-        "github": 49
+        "github": 50
+      },
+      "docs24h": 38
+    },
+    {
+      "term": "open",
+      "count24h": 38,
+      "baselinePerDay": 0.42857142857142855,
+      "count7d": 3,
+      "growth": 27.3,
+      "sources": {
+        "github": 38
       },
       "docs24h": 37
     },
     {
-      "term": "open",
-      "count24h": 37,
-      "baselinePerDay": 0.42857142857142855,
-      "count7d": 3,
-      "growth": 26.599999999999998,
+      "term": "macos",
+      "count24h": 25,
+      "baselinePerDay": 0,
+      "count7d": 0,
+      "growth": 26,
       "sources": {
-        "github": 37
+        "github": 25
       },
-      "docs24h": 36
+      "docs24h": 25
     },
     {
-      "term": "macos",
+      "term": "linux",
       "count24h": 24,
       "baselinePerDay": 0,
       "count7d": 0,
@@ -87,7 +98,7 @@
       "sources": {
         "github": 24
       },
-      "docs24h": 24
+      "docs24h": 22
     },
     {
       "term": "yellowstone",
@@ -99,17 +110,6 @@
         "github": 24
       },
       "docs24h": 8
-    },
-    {
-      "term": "linux",
-      "count24h": 23,
-      "baselinePerDay": 0,
-      "count7d": 0,
-      "growth": 24,
-      "sources": {
-        "github": 23
-      },
-      "docs24h": 21
     }
   ]
 }
