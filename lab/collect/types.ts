@@ -38,7 +38,7 @@ export function makeSnapshot(seed: SnapshotSeed): TokenSnapshot {
   const pairCreatedAt = seed.pairCreatedAt ?? null;
   const snap: TokenSnapshot = {
     mint: seed.mint,
-    chain: "solana",
+    chain: seed.chain ?? "solana",
     symbol: seed.symbol ?? "",
     name: seed.name ?? "",
     createdAt: seed.createdAt ?? derivedCreatedAt(pairCreatedAt, seed.fetchedAt),
@@ -112,6 +112,7 @@ export function normalizeSnapshot(raw: unknown): TokenSnapshot | null {
   const snap = makeSnapshot({
     mint: r.mint,
     fetchedAt: r.fetchedAt,
+    chain: r.chain === "robinhood" ? "robinhood" : "solana",
     symbol: typeof r.symbol === "string" ? r.symbol : "",
     name: typeof r.name === "string" ? r.name : "",
     createdAt,

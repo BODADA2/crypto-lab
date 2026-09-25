@@ -85,7 +85,7 @@ export interface DexScreenerClient {
   getTokenPairs(mint: string, chainId?: string): Promise<DexPair[]>;
   search(query: string): Promise<DexPair[]>;
   /** Snapshots normalisés (une entrée par mint, paire la plus liquide). */
-  getSnapshots(mints: string[]): Promise<TokenSnapshot[]>;
+  getSnapshots(mints: string[], chainId?: string): Promise<TokenSnapshot[]>;
   /** Nombre de requêtes réellement envoyées (hors cache). */
   readonly requestCount: number;
 }
@@ -158,10 +158,12 @@ export function createDexScreenerClient(opts: DexScreenerClientOptions): DexScre
       const resp = await getJson<DexPairsResponse>(`/latest/dex/search?q=${encodeURIComponent(query)}`, pairTtl);
       return pairsOf(resp);
     },
-    async getSnapshots(mints) {
+    async getSnapshots(mints, chainId = "solana") {
       const pairs = await this.getPairsByTokens(mints);
       const fetchedAt = new Date(now()).toISOString();
-      return snapshotsFromPairs(pairs, fetchedAt).filter((s) => mints.includes(s.mint));
+      // Adresses EVM : comparaison insensible à la casse (checksum vs minuscules selon l'endpoint).
+      const wanted = new Set(mints.map((m) => (chainId === "solana" ? m : m.toLowerCase())));
+      return snapshotsFromPairs(pairs, fetchedAt, chainId).filter((s) => wanted.has(chainId === "solana" ? s.mint : s.mint.toLowerCase()));
     },
   };
 }
@@ -210,7 +212,7 @@ export function pairToSnapshot(pair: DexPair, fetchedAt: string, pairCount = 1):
   const pairCreatedAt = numOrNull(pair.pairCreatedAt);
   return syncVolumeViews({
     mint: pair.baseToken.address,
-    chain: "solana",
+    chain: pair.chainId === "robinhood" ? "robinhood" : "solana",
     symbol: pair.baseToken.symbol ?? "",
     name: pair.baseToken.name ?? "",
     createdAt: derivedCreatedAt(pairCreatedAt, fetchedAt),
@@ -243,10 +245,10 @@ export function pairToSnapshot(pair: DexPair, fetchedAt: string, pairCount = 1):
  * Regroupe les paires par mint (baseToken) et garde la plus liquide ;
  * les volumes sont agrégés sur toutes les paires du token (chaîne solana uniquement).
  */
-export function snapshotsFromPairs(pairs: DexPair[], fetchedAt: string): TokenSnapshot[] {
+export function snapshotsFromPairs(pairs: DexPair[], fetchedAt: string, chainId = "solana"): TokenSnapshot[] {
   const byMint = new Map<string, DexPair[]>();
   for (const p of pairs) {
-    if (p.chainId !== "solana") continue;
+    if (p.chainId !== chainId) continue;
     if (!p.baseToken?.address) continue;
     const list = byMint.get(p.baseToken.address) ?? [];
     list.push(p);

@@ -51,6 +51,8 @@ export interface RunOptions {
   mintInfoTtlMs?: number;
   /** Nombre max d'enrichissements par cycle (défaut 20 → ≤ 80 crédits/cycle). */
   maxMintInfoPerCycle?: number;
+  /** Chaîne DexScreener (défaut "solana"). Hors Solana : pas de Reddit/GitHub (déjà collectés par le cycle Solana), pas d'enrichissement Helius. */
+  chain?: "solana" | "robinhood";
 }
 
 /** Pré-filtre : n'enrichir que les tokens que le Risk Engine pourrait accepter. */
@@ -74,6 +76,7 @@ export async function runCollect(opts: RunOptions): Promise<{ scan: ScanResult; 
   const reddit = opts.clients?.reddit ?? createRedditClient({ fetch: fetchImpl });
   const github = opts.clients?.github ?? createGithubClient({ fetch: fetchImpl, now, token: opts.githubToken ?? process.env.GITHUB_TOKEN });
 
+  const chain = opts.chain ?? "solana";
   const startedAt = new Date(now()).toISOString();
   const errors: ScanResult["errors"] = [];
   const scan: ScanResult = {
@@ -90,12 +93,12 @@ export async function runCollect(opts: RunOptions): Promise<{ scan: ScanResult; 
 
   // 1) DexScreener : profils + boosts → mints → snapshots.
   try {
-    scan.profiles = await dex.getLatestProfiles("solana");
+    scan.profiles = await dex.getLatestProfiles(chain);
   } catch (e) {
     errors.push({ source: "dexscreener:profiles", message: (e as Error).message });
   }
   try {
-    scan.boosts = await dex.getTopBoosts("solana");
+    scan.boosts = await dex.getTopBoosts(chain);
   } catch (e) {
     errors.push({ source: "dexscreener:boosts", message: (e as Error).message });
   }
@@ -111,23 +114,24 @@ export async function runCollect(opts: RunOptions): Promise<{ scan: ScanResult; 
     cap: opts.maxMints ?? 300,
   });
   try {
-    if (mints.length) scan.tokens = await dex.getSnapshots(mints);
+    if (mints.length) scan.tokens = await dex.getSnapshots(mints, chain);
   } catch (e) {
     errors.push({ source: "dexscreener:tokens", message: (e as Error).message });
   }
   scan.requests.dexscreener = dex.requestCount;
 
-  // 2) Reddit.
-  const r = await reddit.collect();
-  scan.reddit = r.posts;
-  errors.push(...r.errors);
-  scan.requests.reddit = reddit.requestCount;
+  // 2) Reddit + 3) GitHub (cycle Solana seulement : ces sources ne dépendent pas de la chaîne).
+  if (chain === "solana") {
+    const r = await reddit.collect();
+    scan.reddit = r.posts;
+    errors.push(...r.errors);
+    scan.requests.reddit = reddit.requestCount;
 
-  // 3) GitHub.
-  const g = await github.collect();
-  scan.github = g.repos;
-  errors.push(...g.errors);
-  scan.requests.github = github.requestCount;
+    const g = await github.collect();
+    scan.github = g.repos;
+    errors.push(...g.errors);
+    scan.requests.github = github.requestCount;
+  }
 
   scan.finishedAt = new Date(now()).toISOString();
   const stamp = scan.finishedAt.replace(/[:.]/g, "-");
@@ -155,7 +159,7 @@ export async function runCollect(opts: RunOptions): Promise<{ scan: ScanResult; 
       mintInfos.set(snap.mint, cached);
       continue;
     }
-    if (!opts.rpc || enriched >= maxEnrich) {
+    if (!opts.rpc || chain !== "solana" || enriched >= maxEnrich) {
       if (cached) mintInfos.set(snap.mint, cached); // périmé mais mieux que rien : on garde en signalant fetchedAt
       continue;
     }
@@ -353,9 +357,10 @@ if (isMain) {
     const res = await runPump({ dataDir, durationMs: Math.min(seconds, 600) * 1000, apiKey: process.env.PUMPPORTAL_API_KEY });
     console.log(`PumpPortal : ${res.events} événements → ${res.file}`);
   } else {
+    const chain = process.env.CHAIN === "robinhood" ? "robinhood" : "solana";
     const apiKey = process.env.HELIUS_API_KEY;
-    const rpc = apiKey ? createHeliusClient({ fetch: globalThis.fetch, apiKey }).rpc : undefined;
-    const res = await runCollect({ dataDir, rpc });
+    const rpc = apiKey && chain === "solana" ? createHeliusClient({ fetch: globalThis.fetch, apiKey }).rpc : undefined;
+    const res = await runCollect({ dataDir, rpc, chain });
     console.log(
       `Scan ${res.scanPath} : ${res.scan.tokens.length} tokens, ${res.mintInfos} enrichis on-chain (${res.rpcCalls} appels RPC), ${res.scan.reddit.length} posts, ${res.scan.github.length} dépôts, ${res.scan.errors.length} erreurs, ${res.volumeSignals} signaux, ${res.narratives} termes.`,
     );
