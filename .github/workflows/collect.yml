@@ -1,4 +1,4 @@
-# Plan données — collecte toutes les 15 minutes (DexScreener + Reddit + GitHub) et flux PumpPortal (job séparé, 5 min max).
+# Plan données — collecte toutes les 15 minutes (DexScreener + Reddit + GitHub) et flux PumpPortal (job séparé, 10 min max).
 # Aucun secret de trading ici. Les secrets sont optionnels : le cycle tourne sans eux (GITHUB_TOKEN est fourni par Actions).
 name: collect
 
@@ -51,9 +51,9 @@ jobs:
           fi
 
   pumpportal:
-    name: PumpPortal (créations + migrations, 5 min max)
+    name: PumpPortal (créations + migrations, 10 min max)
     runs-on: ubuntu-latest
-    timeout-minutes: 8
+    timeout-minutes: 13
     needs: collect
     steps:
       - uses: actions/checkout@v4
@@ -65,10 +65,10 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - name: Écoute WebSocket (bornée à 300 s)
+      - name: Écoute WebSocket (bornée à 600 s)
         env:
           PUMPPORTAL_API_KEY: ${{ secrets.PUMPPORTAL_API_KEY }}
-        run: timeout 330 npx tsx lab/collect/run.ts pump 300
+        run: timeout 630 npx tsx lab/collect/run.ts pump 600
       - name: Commit data/ si changement
         run: |
           git config user.name "crypto-lab-bot"
