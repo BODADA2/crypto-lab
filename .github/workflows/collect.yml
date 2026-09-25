@@ -42,12 +42,18 @@ jobs:
           DATA_DIR: data-rh
           CHAIN: robinhood
         run: npx tsx lab/collect/run.ts || echo "cycle Robinhood en échec, la collecte Solana continue"
+      - name: Calls Telegram MadApes (hypothèses 3–4, données séparées dans data-calls/)
+        env:
+          DATA_DIR: data-calls
+          CALL_CHANNELS: mad_apes_gambles
+        run: npx tsx lab/collect/calls.ts || echo "collecte des calls en échec, le reste continue"
       - name: Commit data/ si changement
         run: |
           git config user.name "crypto-lab-bot"
           git config user.email "crypto-lab-bot@users.noreply.github.com"
           git add data/
           if [ -d data-rh ]; then git add data-rh/; fi
+          if [ -d data-calls ]; then git add data-calls/; fi
           if git diff --cached --quiet; then
             echo "Aucun changement dans data/"
           else
