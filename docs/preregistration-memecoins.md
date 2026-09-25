@@ -61,3 +61,19 @@ liquidité). Deux défauts de collecte auraient rendu le test inutile ou biaisé
 
 Stratégies, paramètres, frais, périodes, critères et décisions : **inchangés.** Les données de la période A antérieures à
 cet amendement restent incluses telles quelles.
+
+## Hypothèse 2 — S1 sur Robinhood Chain (ajoutée le 25 septembre 2026, avant toute donnée)
+
+Demande d'Hervé : tester le trading de memecoins **basé sur le volume** sur Robinhood Chain (L2 lancée le 1er juillet
+2026, où les memecoins dominent le volume DEX). Aucune donnée Robinhood n'existait dans le lab au moment de cet ajout.
+
+- **Stratégie :** S1 exactement comme ci-dessus (s1-volume@1.0.0, paramètres par défaut, +50 % / −25 % / ~6 h).
+- **Données :** `data-rh/` (DexScreener `chainId = robinhood`, mêmes endpoints et même rythme de 15 min que Solana,
+  même règle de suivi que l'amendement 1). Séparées de `data/` : le test Solana n'est pas touché.
+- **Frais :** mêmes 1,3 % aller-retour + glissement plafonné à 3 % par côté (prudent : le gaz L2 est faible, mais
+  beaucoup de pools Uniswap prennent 1 %).
+- **Périodes, critères, anti-biais, décisions :** identiques (A jusqu'au 5 octobre, B du 6 au 16 octobre, ≥ 30 trades,
+  gains ÷ pertes ≥ 1,3, espérance > 0, token disparu = −100 %). La période A sera courte (collecte à partir du
+  26 septembre) : un NON CONCLUANT est possible et sera accepté tel quel.
+- **Verdict :** `lab/backtest/preregistered-rh.ts` (réutilise `preregistered.ts` sans le modifier), le 17 octobre 2026,
+  dans `reports/verdict-memecoins-robinhood-2026-10-17.md`.
