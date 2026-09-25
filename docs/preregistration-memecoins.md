@@ -77,3 +77,27 @@ Demande d'Hervé : tester le trading de memecoins **basé sur le volume** sur Ro
   26 septembre) : un NON CONCLUANT est possible et sera accepté tel quel.
 - **Verdict :** `lab/backtest/preregistered-rh.ts` (réutilise `preregistered.ts` sans le modifier), le 17 octobre 2026,
   dans `reports/verdict-memecoins-robinhood-2026-10-17.md`.
+
+## Hypothèses 3 et 4 — calls Telegram « Gambles MadApes » (ajoutées le 25 septembre 2026, avant toute donnée)
+
+Demande d'Hervé : s'inspirer du canal Telegram public **Gambles 🎲 MadApes** (@mad_apes_gambles, ~100 000 abonnés) et
+« mixer » avec nos signaux de volume. Observation du 25 septembre (lecture seule) : environ un message sur cinq est un
+call (nom, chaîne SOL / RBH / autre, adresse du contrat) ; les autres sont des « updates » qui ne citent que les gagnants
+(×3, ×10, ×13…). Les perdants n'étant jamais mentionnés, le vrai taux de réussite est inconnu : c'est ce qu'on mesure.
+Aucun prix de ces calls n'avait été regardé au moment de cet ajout.
+
+- **Collecte :** `lab/collect/calls.ts`, toutes les 15 min, dans `data-calls/` (séparé : les hypothèses 1–2 ne sont pas
+  touchées). Lecture de l'aperçu web public `t.me/s/mad_apes_gambles` (aucun compte, aucun message envoyé). Un call =
+  un message contenant une adresse de contrat ; seule la **première apparition** de chaque adresse vue par le collecteur
+  compte. Chaînes testées : Solana et Robinhood Chain ; les autres (ARC…) sont comptées mais pas testées. Chaque call est
+  suivi 7 jours sur DexScreener, même mort.
+- **H3 — copier les calls.** Achat à l'observation qui suit la première observation postérieure au call (≈ 15 à 30 min
+  de retard : ce qu'un abonné peut réellement faire). Sorties de S3 : **+80 % / −30 % / ~24 h**.
+- **H4 — call + volume (le « mix »).** Dans les **2 h** après le call, première observation où le volume 5 min
+  ≥ **5 % de la liquidité** et les achats 5 min ≥ les ventes 5 min (seuils de S1, déjà figés), puis achat à
+  l'observation suivante. Sorties de S1 : **+50 % / −25 % / ~6 h**. Aucun paramètre nouveau n'est inventé.
+- **Frais, taille, liquidité minimale 20 000 $, « disparu = −100 % », périodes A/B, critères, décisions :** identiques
+  aux hypothèses 1–2.
+- **Tableau descriptif (hors verdict) :** part des calls ayant touché ×2 dans les 24 h et part valant moins de la
+  moitié 24 h après — pour comparer aux « ×13 » affichés par le canal.
+- **Verdict :** `lab/backtest/preregistered-calls.ts`, le 17 octobre 2026, dans `reports/verdict-calls-2026-10-17.md`.
