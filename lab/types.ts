@@ -49,10 +49,14 @@ export type SnapshotSource = "dexscreener" | "fixture" | "manual" | "local-verif
  * `lab/collect/types.ts` fournit `makeSnapshot()` (construction avec ces défauts) et `normalizeSnapshot()`
  * (lecture tolérante d'anciens fichiers).
  */
+/** Chaînes collectées. */
+export type Chain = "solana" | "robinhood";
+
 export interface TokenSnapshot {
   /** Adresse du mint (base58). */
   mint: string;
-  chain: "solana";
+  /** Chaîne du token (DexScreener chainId). Défaut "solana" ; "robinhood" = Robinhood Chain (L2 EVM, juillet 2026). */
+  chain: Chain;
   symbol: string;
   name: string;
   /** Date de création de la paire principale (ISO 8601) ; = `fetchedAt` si `pairCreatedAt` est inconnu (conservateur). */
