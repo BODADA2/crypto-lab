@@ -1,8 +1,19 @@
 {
-  "computedAt": "2026-09-25T07:51:07.182Z",
+  "computedAt": "2026-09-25T08:03:34.582Z",
   "terms": [
     {
       "term": "llvm",
+      "count24h": 80,
+      "baselinePerDay": 0,
+      "count7d": 0,
+      "growth": 81,
+      "sources": {
+        "github": 80
+      },
+      "docs24h": 40
+    },
+    {
+      "term": "ios",
       "count24h": 78,
       "baselinePerDay": 0,
       "count7d": 0,
@@ -10,76 +21,65 @@
       "sources": {
         "github": 78
       },
-      "docs24h": 39
-    },
-    {
-      "term": "ios",
-      "count24h": 76,
-      "baselinePerDay": 0,
-      "count7d": 0,
-      "growth": 77,
-      "sources": {
-        "github": 76
-      },
-      "docs24h": 76
+      "docs24h": 78
     },
     {
       "term": "android",
-      "count24h": 80,
+      "count24h": 82,
       "baselinePerDay": 0.2857142857142857,
       "count7d": 2,
-      "growth": 63.00000000000001,
+      "growth": 64.55555555555556,
       "sources": {
-        "github": 80
+        "github": 82
       },
-      "docs24h": 79
+      "docs24h": 81
     },
     {
       "term": "bitcoin",
-      "count24h": 101,
+      "count24h": 103,
       "baselinePerDay": 0.7142857142857143,
       "count7d": 5,
-      "growth": 59.49999999999999,
+      "growth": 60.666666666666664,
       "sources": {
-        "github": 101
+        "github": 103
       },
-      "docs24h": 72
-    },
-    {
-      "term": "llm",
-      "count24h": 55,
-      "baselinePerDay": 0,
-      "count7d": 0,
-      "growth": 56,
-      "sources": {
-        "github": 55
-      },
-      "docs24h": 46
+      "docs24h": 74
     },
     {
       "term": "compiler",
-      "count24h": 60,
+      "count24h": 61,
       "baselinePerDay": 0.14285714285714285,
       "count7d": 1,
-      "growth": 53.375,
+      "growth": 54.25,
       "sources": {
-        "github": 60
+        "github": 61
       },
-      "docs24h": 39
+      "docs24h": 40
     },
     {
       "term": "developer",
-      "count24h": 59,
+      "count24h": 61,
       "baselinePerDay": 0.14285714285714285,
       "count7d": 1,
-      "growth": 52.5,
+      "growth": 54.25,
       "sources": {
-        "github": 59
+        "github": 61
       },
-      "docs24h": 30
+      "docs24h": 31
     },
     {
       "term": "macos",
+      "count24h": 51,
+      "baselinePerDay": 0,
+      "count7d": 0,
+      "growth": 52,
+      "sources": {
+        "github": 51
+      },
+      "docs24h": 51
+    },
+    {
+      "term": "linux",
       "count24h": 50,
       "baselinePerDay": 0,
       "count7d": 0,
@@ -87,21 +87,10 @@
       "sources": {
         "github": 50
       },
-      "docs24h": 50
+      "docs24h": 48
     },
     {
-      "term": "linux",
-      "count24h": 49,
-      "baselinePerDay": 0,
-      "count7d": 0,
-      "growth": 50,
-      "sources": {
-        "github": 49
-      },
-      "docs24h": 47
-    },
-    {
-      "term": "open",
+      "term": "cryptocurrency",
       "count24h": 68,
       "baselinePerDay": 0.42857142857142855,
       "count7d": 3,
@@ -109,7 +98,18 @@
       "sources": {
         "github": 68
       },
-      "docs24h": 67
+      "docs24h": 61
+    },
+    {
+      "term": "platform",
+      "count24h": 61,
+      "baselinePerDay": 0.2857142857142857,
+      "count7d": 2,
+      "growth": 48.22222222222223,
+      "sources": {
+        "github": 61
+      },
+      "docs24h": 31
     }
   ]
 }
