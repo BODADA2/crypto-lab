@@ -1,6 +1,17 @@
 {
-  "computedAt": "2026-09-25T09:24:58.583Z",
+  "computedAt": "2026-09-25T09:37:49.131Z",
   "terms": [
+    {
+      "term": "ios",
+      "count24h": 86,
+      "baselinePerDay": 0,
+      "count7d": 0,
+      "growth": 87,
+      "sources": {
+        "github": 86
+      },
+      "docs24h": 86
+    },
     {
       "term": "llvm",
       "count24h": 86,
@@ -13,26 +24,26 @@
       "docs24h": 43
     },
     {
-      "term": "ios",
-      "count24h": 84,
-      "baselinePerDay": 0,
-      "count7d": 0,
-      "growth": 85,
-      "sources": {
-        "github": 84
-      },
-      "docs24h": 84
-    },
-    {
       "term": "android",
-      "count24h": 88,
+      "count24h": 89,
       "baselinePerDay": 0.2857142857142857,
       "count7d": 2,
-      "growth": 69.22222222222223,
+      "growth": 70,
       "sources": {
-        "github": 88
+        "github": 89
       },
-      "docs24h": 87
+      "docs24h": 88
+    },
+    {
+      "term": "bitcoin",
+      "count24h": 117,
+      "baselinePerDay": 0.8571428571428571,
+      "count7d": 6,
+      "growth": 63.53846153846153,
+      "sources": {
+        "github": 117
+      },
+      "docs24h": 84
     },
     {
       "term": "developer",
@@ -44,17 +55,6 @@
         "github": 69
       },
       "docs24h": 35
-    },
-    {
-      "term": "bitcoin",
-      "count24h": 112,
-      "baselinePerDay": 0.8571428571428571,
-      "count7d": 6,
-      "growth": 60.84615384615385,
-      "sources": {
-        "github": 112
-      },
-      "docs24h": 82
     },
     {
       "term": "compiler",
@@ -102,14 +102,14 @@
     },
     {
       "term": "cryptocurrency",
-      "count24h": 73,
+      "count24h": 76,
       "baselinePerDay": 0.42857142857142855,
       "count7d": 3,
-      "growth": 51.8,
+      "growth": 53.9,
       "sources": {
-        "github": 73
+        "github": 76
       },
-      "docs24h": 66
+      "docs24h": 68
     }
   ]
 }
