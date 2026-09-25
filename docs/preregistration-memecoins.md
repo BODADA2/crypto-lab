@@ -44,3 +44,20 @@ sur 7 ans de MNQ, et l'ORB ne survit pas aux frais selon Fetna 2026).
   d'Hervé, dans les limites du Risk Engine (wallet séparé, plafonds, kill switch).
 - **REJETÉE** → abandonnée. Aucun nouveau réglage sur ces mêmes données.
 - **NON CONCLUANT** → la collecte continue ; aucun argent réel ; un nouveau pré-enregistrement sera nécessaire.
+
+## Amendement 1 — 25 septembre 2026 (collecte seulement, règles de test inchangées)
+
+Fait **avant tout résultat de gain ou de perte**. Seuls des comptages de données ont été regardés (277 tokens suivis,
+240 migrations vues, dont 21 seulement suivies en prix ; ~20 % des tokens échantillonnés au-dessus de 20 000 $ de
+liquidité). Deux défauts de collecte auraient rendu le test inutile ou biaisé :
+
+1. **Tokens suivis abandonnés.** La collecte n'interrogeait que 60 tokens par cycle : les tokens suivis au-delà du
+   60e cessaient d'être observés, et la règle « token disparu = −100 % » les aurait comptés comme des pertes totales
+   alors qu'ils existaient toujours. Correction : jusqu'à 300 tokens par cycle, dans cet ordre : nouveaux, migrés depuis
+   moins de 48 h, puis suivis encore vivants (liquidité ≥ 5 000 $, vus depuis ≤ 7 jours), du plus liquide au moins liquide.
+2. **Migrations sans prix.** S3 ne peut trader que des tokens migrés dont on a la série de prix ; ils n'étaient pas
+   ajoutés à la liste observée. Correction : chaque migration vue est observée pendant 48 h au moins. L'écoute PumpPortal
+   passe de 5 à 10 minutes par cycle (dépôt public : minutes GitHub Actions illimitées).
+
+Stratégies, paramètres, frais, périodes, critères et décisions : **inchangés.** Les données de la période A antérieures à
+cet amendement restent incluses telles quelles.
