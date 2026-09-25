@@ -1,5 +1,5 @@
 {
-  "computedAt": "2026-09-25T22:03:42.241Z",
+  "computedAt": "2026-09-25T22:23:14.908Z",
   "terms": [
     {
       "term": "binary",
@@ -26,9 +26,9 @@
     {
       "term": "llvm",
       "count24h": 160,
-      "baselinePerDay": 1.4285714285714286,
-      "count7d": 10,
-      "growth": 66.29411764705881,
+      "baselinePerDay": 1.7142857142857142,
+      "count7d": 12,
+      "growth": 59.315789473684205,
       "sources": {
         "github": 160
       },
@@ -47,43 +47,32 @@
     },
     {
       "term": "platform",
-      "count24h": 68,
+      "count24h": 69,
       "baselinePerDay": 0.42857142857142855,
       "count7d": 3,
-      "growth": 48.3,
+      "growth": 49,
       "sources": {
-        "github": 68
+        "github": 69
       },
-      "docs24h": 34
-    },
-    {
-      "term": "compiler",
-      "count24h": 122,
-      "baselinePerDay": 1.5714285714285714,
-      "count7d": 11,
-      "growth": 47.833333333333336,
-      "sources": {
-        "github": 122
-      },
-      "docs24h": 80
+      "docs24h": 35
     },
     {
       "term": "windows",
-      "count24h": 81,
-      "baselinePerDay": 0.7142857142857143,
-      "count7d": 5,
-      "growth": 47.83333333333333,
+      "count24h": 83,
+      "baselinePerDay": 0.8571428571428571,
+      "count7d": 6,
+      "growth": 45.230769230769226,
       "sources": {
-        "github": 81
+        "github": 83
       },
-      "docs24h": 81
+      "docs24h": 82
     },
     {
       "term": "friendly",
       "count24h": 80,
-      "baselinePerDay": 0.7142857142857143,
-      "count7d": 5,
-      "growth": 47.25,
+      "baselinePerDay": 0.8571428571428571,
+      "count7d": 6,
+      "growth": 43.61538461538461,
       "sources": {
         "github": 80
       },
@@ -92,24 +81,36 @@
     {
       "term": "wip",
       "count24h": 80,
-      "baselinePerDay": 0.7142857142857143,
-      "count7d": 5,
-      "growth": 47.25,
+      "baselinePerDay": 0.8571428571428571,
+      "count7d": 6,
+      "growth": 43.61538461538461,
       "sources": {
         "github": 80
       },
       "docs24h": 80
     },
     {
-      "term": "plugin",
-      "count24h": 82,
-      "baselinePerDay": 0.8571428571428571,
-      "count7d": 6,
-      "growth": 44.69230769230769,
+      "term": "internet",
+      "count24h": 55,
+      "baselinePerDay": 0.2857142857142857,
+      "count7d": 2,
+      "growth": 43.55555555555556,
       "sources": {
-        "github": 82
+        "github": 54,
+        "token": 1
       },
-      "docs24h": 82
+      "docs24h": 28
+    },
+    {
+      "term": "compiler",
+      "count24h": 122,
+      "baselinePerDay": 1.8571428571428572,
+      "count7d": 13,
+      "growth": 43.05,
+      "sources": {
+        "github": 122
+      },
+      "docs24h": 80
     }
   ]
 }
