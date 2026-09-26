@@ -1,5 +1,5 @@
 {
-  "computedAt": "2026-09-26T05:03:45.846Z",
+  "computedAt": "2026-09-26T05:22:28.031Z",
   "terms": [
     {
       "term": "internet",
@@ -48,14 +48,25 @@
     },
     {
       "term": "browser",
-      "count24h": 34,
+      "count24h": 35,
       "baselinePerDay": 0.42857142857142855,
       "count7d": 3,
-      "growth": 24.5,
+      "growth": 25.2,
       "sources": {
-        "github": 34
+        "github": 35
       },
-      "docs24h": 34
+      "docs24h": 35
+    },
+    {
+      "term": "acc",
+      "count24h": 24,
+      "baselinePerDay": 0,
+      "count7d": 0,
+      "growth": 25,
+      "sources": {
+        "token": 24
+      },
+      "docs24h": 17
     },
     {
       "term": "icp",
@@ -92,26 +103,15 @@
     },
     {
       "term": "claude",
-      "count24h": 88,
+      "count24h": 89,
       "baselinePerDay": 2.7142857142857144,
       "count7d": 19,
-      "growth": 23.96153846153846,
+      "growth": 24.23076923076923,
       "sources": {
-        "github": 86,
+        "github": 87,
         "token": 2
       },
-      "docs24h": 14
-    },
-    {
-      "term": "acc",
-      "count24h": 22,
-      "baselinePerDay": 0,
-      "count7d": 0,
-      "growth": 23,
-      "sources": {
-        "token": 22
-      },
-      "docs24h": 16
+      "docs24h": 15
     }
   ]
 }
