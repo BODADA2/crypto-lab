@@ -3,7 +3,7 @@
   "program": "token-2022",
   "mintAuthority": null,
   "freezeAuthority": null,
-  "supplyRaw": "998405372809669",
+  "supplyRaw": "998391564693421",
   "decimals": 6,
   "isInitialized": true,
   "extensions": [
@@ -11,15 +11,8 @@
     "TransferFeeConfig",
     "TokenMetadata"
   ],
-  "top10Pct": 14.7,
+  "top10Pct": 14.59,
   "topAccounts": [
-    {
-      "address": "DcpYAKLzwFV8G1Q9V5sTn5m4MLqdaB3yJ4Qm87QgXNd8",
-      "owner": "GpMZbSM2GgvTKHJirzeGfMFoaZ8UR2X7F4v8vHTvxFbL",
-      "amountRaw": "17287897299504",
-      "pct": 1.73,
-      "excluded": false
-    },
     {
       "address": "4f9AEdECCjJeuwjm37wMPNGANCk8ioAMJ3L3oQoQwBvt",
       "owner": "AGdtsMmphhymH5wYW3dWKSkAxpLYRrNDCTFAfuq8ii9v",
@@ -30,8 +23,8 @@
     {
       "address": "8ou3QLBLB6rfRjcioWWaEpRd922wpRoCdgP5VbLs78E7",
       "owner": "5RZPhPW9qGEd3hRGibgYaF5Yk2jBzXR1VZMKSP71C3Lb",
-      "amountRaw": "16769678947575",
-      "pct": 1.67,
+      "amountRaw": "16799454864296",
+      "pct": 1.68,
       "excluded": false
     },
     {
@@ -39,6 +32,13 @@
       "owner": "GyfRNiLmjz6WbtNLHG5632N9hu59xnsEbU43yyty2yfs",
       "amountRaw": "16211408813097",
       "pct": 1.62,
+      "excluded": false
+    },
+    {
+      "address": "DcpYAKLzwFV8G1Q9V5sTn5m4MLqdaB3yJ4Qm87QgXNd8",
+      "owner": "GpMZbSM2GgvTKHJirzeGfMFoaZ8UR2X7F4v8vHTvxFbL",
+      "amountRaw": "16083228456450",
+      "pct": 1.61,
       "excluded": false
     },
     {
@@ -72,8 +72,8 @@
     {
       "address": "99YZpWGYajdy5prm1ZUjw1NyQxQTxJ1Nq4ugTeV9LoAB",
       "owner": "3nsE96JdiFJXDj4UkDcMrCge1wrWejERPHvrehLkvQ1B",
-      "amountRaw": "11475626870002",
-      "pct": 1.14,
+      "amountRaw": "11547960874381",
+      "pct": 1.15,
       "excluded": false
     },
     {
@@ -159,6 +159,6 @@
   "riskyExtensions": [
     "TransferFeeConfig"
   ],
-  "fetchedAt": "2026-09-26T19:20:43.439Z",
+  "fetchedAt": "2026-09-26T20:22:24.068Z",
   "rpcCalls": 4
 }
