@@ -1,5 +1,5 @@
 {
-  "computedAt": "2026-09-26T10:35:48.616Z",
+  "computedAt": "2026-09-26T10:48:44.771Z",
   "terms": [
     {
       "term": "acc",
@@ -14,37 +14,49 @@
     },
     {
       "term": "per",
-      "count24h": 30,
+      "count24h": 33,
       "baselinePerDay": 0,
       "count7d": 0,
-      "growth": 31,
+      "growth": 34,
       "sources": {
-        "github": 30
+        "github": 33
       },
-      "docs24h": 10
+      "docs24h": 11
     },
     {
       "term": "agentic",
-      "count24h": 30,
+      "count24h": 33,
       "baselinePerDay": 0.2857142857142857,
       "count7d": 2,
-      "growth": 24.111111111111114,
+      "growth": 26.444444444444446,
       "sources": {
-        "github": 30
+        "github": 33
       },
-      "docs24h": 10
+      "docs24h": 11
     },
     {
       "term": "paid",
-      "count24h": 23,
+      "count24h": 24,
       "baselinePerDay": 0,
       "count7d": 0,
-      "growth": 24,
+      "growth": 25,
       "sources": {
-        "github": 10,
+        "github": 11,
         "token": 13
       },
-      "docs24h": 21
+      "docs24h": 22
+    },
+    {
+      "term": "pay",
+      "count24h": 26,
+      "baselinePerDay": 0.14285714285714285,
+      "count7d": 1,
+      "growth": 23.625,
+      "sources": {
+        "github": 22,
+        "token": 4
+      },
+      "docs24h": 14
     },
     {
       "term": "accelerationism",
@@ -58,14 +70,13 @@
       "docs24h": 22
     },
     {
-      "term": "call",
-      "count24h": 21,
+      "term": "agent402",
+      "count24h": 22,
       "baselinePerDay": 0,
       "count7d": 0,
-      "growth": 22,
+      "growth": 23,
       "sources": {
-        "github": 20,
-        "token": 1
+        "github": 22
       },
       "docs24h": 11
     },
@@ -81,39 +92,26 @@
       "docs24h": 21
     },
     {
-      "term": "pay",
-      "count24h": 24,
-      "baselinePerDay": 0.14285714285714285,
-      "count7d": 1,
-      "growth": 21.875,
-      "sources": {
-        "github": 20,
-        "token": 4
-      },
-      "docs24h": 13
-    },
-    {
-      "term": "agent402",
-      "count24h": 20,
-      "baselinePerDay": 0,
-      "count7d": 0,
+      "term": "self",
+      "count24h": 32,
+      "baselinePerDay": 0.5714285714285714,
+      "count7d": 4,
       "growth": 21,
       "sources": {
-        "github": 20
+        "github": 32
       },
-      "docs24h": 10
+      "docs24h": 16
     },
     {
-      "term": "claude",
-      "count24h": 88,
-      "baselinePerDay": 3.4285714285714284,
-      "count7d": 24,
-      "growth": 20.096774193548384,
+      "term": "call",
+      "count24h": 22,
+      "baselinePerDay": 0.14285714285714285,
+      "count7d": 1,
+      "growth": 20.125,
       "sources": {
-        "github": 84,
-        "token": 4
+        "github": 22
       },
-      "docs24h": 14
+      "docs24h": 11
     }
   ]
 }

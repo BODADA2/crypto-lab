@@ -9,48 +9,52 @@
   "dexId": "meteora",
   "url": "https://dexscreener.com/solana/2zwxt3niyjyudmdmdvar9ajne42rkwydzzbh6timukqy",
   "priceUsd": 1049.075,
-  "liquidityUsd": 609857.61,
+  "liquidityUsd": 609857.62,
   "fdvUsd": 718617,
   "marketCapUsd": 718617,
   "volume": {
-    "m5": 313.8,
-    "h1": 10360.72,
-    "h6": 62750.27,
-    "h24": 693327.96
+    "m5": 393.95,
+    "h1": 11370.62,
+    "h6": 63348.75,
+    "h24": 687966.88
   },
-  "volume5m": 313.8,
-  "volume1h": 10360.72,
-  "volume24h": 693327.96,
+  "volume5m": 393.95,
+  "volume1h": 11370.62,
+  "volume24h": 687966.88,
   "priceChange": {
     "m5": 0,
     "h1": 0.22,
-    "h6": 0.22,
-    "h24": 1.02
+    "h6": 0,
+    "h24": 0.8
   },
   "txns": {
     "m5": {
-      "buys": 4,
-      "sells": 30
+      "buys": 9,
+      "sells": 15
     },
     "h1": {
-      "buys": 53,
-      "sells": 159
+      "buys": 55,
+      "sells": 158
     },
     "h6": {
-      "buys": 464,
-      "sells": 1024
+      "buys": 468,
+      "sells": 1022
     },
     "h24": {
-      "buys": 4089,
-      "sells": 8844
+      "buys": 4086,
+      "sells": 8816
     }
   },
   "holders": null,
-  "top10Pct": 100,
-  "mintAuthority": "UNKNOWN",
-  "freezeAuthority": "UNKNOWN",
+  "top10Pct": 42.42,
+  "mintAuthority": "EXvTtxurWBUNNCtLojaN8ZBJFNJPZFSH3szoih9hh7YW",
+  "freezeAuthority": "7n2PNcDXVDMK2m8dyV9cVPNY7p4jM4ZMHv7TzfibEt8o",
   "boostsActive": 0,
   "pairCount": 1,
   "source": "dexscreener",
-  "fetchedAt": "2026-09-26T10:35:34.313Z"
+  "fetchedAt": "2026-09-26T10:48:35.042Z",
+  "decimals": 9,
+  "riskyExtensions": [
+    "TransferFeeConfig"
+  ]
 }
