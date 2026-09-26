@@ -1,5 +1,5 @@
 {
-  "computedAt": "2026-09-26T02:03:40.779Z",
+  "computedAt": "2026-09-26T02:23:18.311Z",
   "terms": [
     {
       "term": "internet",
@@ -26,14 +26,14 @@
     },
     {
       "term": "hosted",
-      "count24h": 37,
+      "count24h": 39,
       "baselinePerDay": 0.2857142857142857,
       "count7d": 2,
-      "growth": 29.555555555555557,
+      "growth": 31.111111111111114,
       "sources": {
-        "github": 37
+        "github": 39
       },
-      "docs24h": 35
+      "docs24h": 36
     },
     {
       "term": "browser",
@@ -92,17 +92,6 @@
       "docs24h": 14
     },
     {
-      "term": "llvm",
-      "count24h": 138,
-      "baselinePerDay": 5.142857142857143,
-      "count7d": 36,
-      "growth": 22.627906976744185,
-      "sources": {
-        "github": 138
-      },
-      "docs24h": 69
-    },
-    {
       "term": "erc20",
       "count24h": 27,
       "baselinePerDay": 0.2857142857142857,
@@ -112,6 +101,18 @@
         "github": 27
       },
       "docs24h": 27
+    },
+    {
+      "term": "metamask",
+      "count24h": 20,
+      "baselinePerDay": 0,
+      "count7d": 0,
+      "growth": 21,
+      "sources": {
+        "github": 19,
+        "token": 1
+      },
+      "docs24h": 4
     }
   ]
 }
