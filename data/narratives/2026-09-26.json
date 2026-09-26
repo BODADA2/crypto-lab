@@ -1,50 +1,28 @@
 {
-  "computedAt": "2026-09-26T08:50:04.504Z",
+  "computedAt": "2026-09-26T09:03:31.245Z",
   "terms": [
     {
       "term": "acc",
-      "count24h": 39,
+      "count24h": 40,
       "baselinePerDay": 0,
       "count7d": 0,
-      "growth": 40,
+      "growth": 41,
       "sources": {
-        "token": 39
+        "token": 40
       },
-      "docs24h": 28
+      "docs24h": 29
     },
     {
       "term": "internet",
-      "count24h": 53,
-      "baselinePerDay": 0.5714285714285714,
-      "count7d": 4,
-      "growth": 34.36363636363637,
+      "count24h": 51,
+      "baselinePerDay": 0.8571428571428571,
+      "count7d": 6,
+      "growth": 28,
       "sources": {
-        "github": 52,
+        "github": 50,
         "token": 1
       },
-      "docs24h": 27
-    },
-    {
-      "term": "computer",
-      "count24h": 52,
-      "baselinePerDay": 0.5714285714285714,
-      "count7d": 4,
-      "growth": 33.72727272727273,
-      "sources": {
-        "github": 52
-      },
       "docs24h": 26
-    },
-    {
-      "term": "hosted",
-      "count24h": 43,
-      "baselinePerDay": 0.42857142857142855,
-      "count7d": 3,
-      "growth": 30.8,
-      "sources": {
-        "github": 43
-      },
-      "docs24h": 40
     },
     {
       "term": "per",
@@ -56,6 +34,28 @@
         "github": 27
       },
       "docs24h": 9
+    },
+    {
+      "term": "computer",
+      "count24h": 50,
+      "baselinePerDay": 0.8571428571428571,
+      "count7d": 6,
+      "growth": 27.46153846153846,
+      "sources": {
+        "github": 50
+      },
+      "docs24h": 25
+    },
+    {
+      "term": "hosted",
+      "count24h": 42,
+      "baselinePerDay": 0.5714285714285714,
+      "count7d": 4,
+      "growth": 27.363636363636363,
+      "sources": {
+        "github": 42
+      },
+      "docs24h": 39
     },
     {
       "term": "paid",
@@ -81,37 +81,39 @@
       "docs24h": 9
     },
     {
-      "term": "icp",
-      "count24h": 26,
-      "baselinePerDay": 0.2857142857142857,
-      "count7d": 2,
-      "growth": 21.000000000000004,
+      "term": "effective",
+      "count24h": 20,
+      "baselinePerDay": 0,
+      "count7d": 0,
+      "growth": 21,
       "sources": {
-        "github": 26
+        "token": 20
       },
-      "docs24h": 26
+      "docs24h": 20
     },
     {
-      "term": "oisy",
-      "count24h": 26,
-      "baselinePerDay": 0.2857142857142857,
-      "count7d": 2,
-      "growth": 21.000000000000004,
+      "term": "claude",
+      "count24h": 88,
+      "baselinePerDay": 3.4285714285714284,
+      "count7d": 24,
+      "growth": 20.096774193548384,
       "sources": {
-        "github": 26
+        "github": 84,
+        "token": 4
       },
-      "docs24h": 26
+      "docs24h": 14
     },
     {
-      "term": "walletconnect",
-      "count24h": 26,
-      "baselinePerDay": 0.2857142857142857,
-      "count7d": 2,
-      "growth": 21.000000000000004,
+      "term": "call",
+      "count24h": 19,
+      "baselinePerDay": 0,
+      "count7d": 0,
+      "growth": 20,
       "sources": {
-        "github": 26
+        "github": 18,
+        "token": 1
       },
-      "docs24h": 26
+      "docs24h": 10
     }
   ]
 }
