@@ -13,32 +13,32 @@
   "fdvUsd": 26370,
   "marketCapUsd": 26370,
   "volume": {
-    "m5": 157.72,
-    "h1": 177.54,
-    "h6": 3590.38,
+    "m5": 0,
+    "h1": 167.27,
+    "h6": 3261.53,
     "h24": 132908.94
   },
-  "volume5m": 157.72,
-  "volume1h": 177.54,
+  "volume5m": 0,
+  "volume1h": 167.27,
   "volume24h": 132908.94,
   "priceChange": {
-    "m5": -3.66,
-    "h1": -3.76,
-    "h6": 41.59,
+    "m5": 0,
+    "h1": -3.81,
+    "h6": 29.13,
     "h24": -34.87
   },
   "txns": {
     "m5": {
       "buys": 0,
-      "sells": 2
+      "sells": 0
     },
     "h1": {
-      "buys": 2,
-      "sells": 5
+      "buys": 0,
+      "sells": 4
     },
     "h6": {
-      "buys": 29,
-      "sells": 42
+      "buys": 21,
+      "sells": 40
     },
     "h24": {
       "buys": 587,
@@ -46,15 +46,11 @@
     }
   },
   "holders": null,
-  "top10Pct": 51.88,
-  "mintAuthority": null,
-  "freezeAuthority": null,
+  "top10Pct": 100,
+  "mintAuthority": "UNKNOWN",
+  "freezeAuthority": "UNKNOWN",
   "boostsActive": 0,
   "pairCount": 1,
   "source": "dexscreener",
-  "fetchedAt": "2026-09-26T19:33:37.820Z",
-  "decimals": 6,
-  "riskyExtensions": [
-    "TransferFeeConfig"
-  ]
+  "fetchedAt": "2026-09-26T19:47:18.181Z"
 }
