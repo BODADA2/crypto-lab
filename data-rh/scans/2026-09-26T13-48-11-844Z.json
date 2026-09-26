@@ -1,0 +1,4567 @@
+{
+  "startedAt": "2026-09-26T13:48:10.929Z",
+  "finishedAt": "2026-09-26T13:48:11.844Z",
+  "profiles": [
+    {
+      "chainId": "robinhood",
+      "tokenAddress": "0x93a69243217aad94fc4b0852048c2b79f76d187d",
+      "url": "https://dexscreener.com/robinhood/0x93a69243217aad94fc4b0852048c2b79f76d187d",
+      "description": "Snag, $SNAG, is a coin that hands you art, launched through pons_v2 on Robinhood Chain.\n\nBuy SNAG and a piece lands in the wallet that bought, moments later. No mint page, no claim, no form. Each piece is drawn fully on chain, and its traits are read from the buy that made it, so the same buy always produces the same piece and anyone can check it. Pieces come in five tiers, from Common to Legendary, and are standard NFTs that can be traded on marketplaces that support the chain.\n\n$SNAG is the showcase collection. The same engine is open to other creators: bring your own token, upload your own art, and every buy of your coin sends your buyers a piece. The creator funds the mints. Buyers pay nothing for them.\n\nThe contract, the collection and the mint route are published on the site. Verify them there before you use it.",
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://www.snag.family/"
+        },
+        {
+          "type": "twitter",
+          "url": "https://x.com/SnagHookNFT"
+        }
+      ],
+      "icon": "https://cdn.dexscreener.com/cms/images/ExBXRpx-8zOarabd?width=64&height=64&fit=crop&quality=95&format=auto"
+    },
+    {
+      "chainId": "robinhood",
+      "tokenAddress": "0x368580343A637B8b91d27C8A8bE124f534329A30",
+      "url": "https://dexscreener.com/robinhood/0x368580343a637b8b91d27c8a8be124f534329a30",
+      "description": "Robit is building simulation and evaluation infrastructure for Physical AI.\n\nThe platform helps robotics teams run policies across models, tasks, and environments, execute GPU-based evaluations, inspect rollouts, compare performance, diagnose failures, and use the resulting data to improve the next model.\n\n$ROBIT is the utility token for the Robit network.\n\nRobit is being built around one loop:\n\nSimulate → Evaluate → Benchmark → Diagnose → Post-train → Re-evaluate.",
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://robit.sh/"
+        },
+        {
+          "label": "Mosh",
+          "url": "https://mosh.trade/t/robinhood/0x368580343A637B8b91d27C8A8bE124f534329A30"
+        },
+        {
+          "type": "twitter",
+          "url": "https://x.com/robitagi"
+        },
+        {
+          "type": "telegram",
+          "url": "https://t.me/robitagi"
+        }
+      ],
+      "icon": "https://cdn.dexscreener.com/cms/images/z0rABaVpGx0eqTvB?width=64&height=64&fit=crop&quality=95&format=auto"
+    },
+    {
+      "chainId": "robinhood",
+      "tokenAddress": "0x8ea86d9fdabaadbc755675f1dd55d1d9d0d1146e",
+      "url": "https://dexscreener.com/robinhood/0x8ea86d9fdabaadbc755675f1dd55d1d9d0d1146e",
+      "description": "Surplo calculates collateral remaining after debt, penalties, gas and auction costs are paid It routes the verified surplus back to the borrower without requiring a manual claim from each liquidator",
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://surplo.fun/"
+        },
+        {
+          "type": "twitter",
+          "url": "https://x.com/OpenSurplo"
+        },
+        {
+          "type": "telegram",
+          "url": "https://t.me/OpenSurplo"
+        }
+      ],
+      "icon": "https://cdn.dexscreener.com/cms/images/hYIrc60kXhhwDgmw?width=64&height=64&fit=crop&quality=95&format=auto"
+    },
+    {
+      "chainId": "robinhood",
+      "tokenAddress": "0xB6eF1B60750a7F7e3f6b075989D48e9C733dD1da",
+      "url": "https://dexscreener.com/robinhood/0xb6ef1b60750a7f7e3f6b075989d48e9c733dd1da",
+      "description": "FiLayer — Financial Infrastructure × Settlement.\n\nBuilt around the infrastructure behind onchain finance, FiLayer focuses on how assets move, transactions settle, and financial applications connect.\n\nAsset → Route → Settle → Verify.\n\nOne layer for connected financial settlement.",
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://www.filayer.bond"
+        },
+        {
+          "type": "twitter",
+          "url": "https://x.com/FiLayerFi"
+        },
+        {
+          "type": "telegram",
+          "url": "https://t.me/FiLayerFi"
+        }
+      ],
+      "icon": "https://cdn.dexscreener.com/cms/images/c-kNgzwP1cjzUx1l?width=64&height=64&fit=crop&quality=95&format=auto"
+    },
+    {
+      "chainId": "robinhood",
+      "tokenAddress": "0x34ae566adc70fd40a40e3648fb5becb53e362e68",
+      "url": "https://dexscreener.com/robinhood/0x34ae566adc70fd40a40e3648fb5becb53e362e68",
+      "description": "Zomi is 10,000 shielded pixel identities on Robinhood Chain, and each identity is a tokenized bond. One engine composes every one of them in code from a 26 by 26 pixel system across seven layers, drawn off the token id, so the same id always gives the same 676 cells. At mint the holder picks a term of 30, 90 or 180 days, which is written into the token and sets its coupon weight at 1.0x, 1.5x or 2.0x for life. Coupons accrue out of one reserve through a single index: when the reserve grows, the index rises by the growth divided by the total weight of the live issue, and a token's pending coupon is its weight times the move since it last settled, so a claim costs the same gas at ten tokens as at ten thousand. Maturity unlocks the claim in ETH and leaves the accrual running, and a transfer carries the pending coupon to the new holder. Trading feeds the reserve: one percent of every swap in the Uniswap V4 pool with the Zomi hook attached goes into it. A holder can set a Zcash shielded address as the payout route, and only a hash of it goes on chain, with coupons paying in ETH today and the shielded ZEC route next. The engine, the explorer with every id and its rank, the whitepaper and the contract controls page are public; the ZomiBond source carries 107 tests and an internal review with no external audit, and the contract is not deployed yet. Hold the identity, collect the coupon, stay unnamed.",
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://zomibond.trade/"
+        },
+        {
+          "type": "twitter",
+          "url": "https://x.com/ZomiV4Bond"
+        }
+      ],
+      "icon": "https://cdn.dexscreener.com/cms/images/WV3rQSo4ZHstC8es?width=64&height=64&fit=crop&quality=95&format=auto"
+    },
+    {
+      "chainId": "robinhood",
+      "tokenAddress": "0x2BfB3507226080a3a5d740870e7E212fF519DF6D",
+      "url": "https://dexscreener.com/robinhood/0x2bfb3507226080a3a5d740870e7e212ff519df6d",
+      "description": "A token launchpad built on Uniswap v4 hooks. Every token launches straight into its own pool from block one, paired with real commodities like gold, oil and silver, or with $INGOT itself.",
+      "links": [
+        {
+          "label": "Website",
+          "url": "https://ingothook.com/"
+        },
+        {
+          "type": "twitter",
+          "url": "https://x.com/ingothook"
+        }
+      ],
+      "icon": "https://cdn.dexscreener.com/cms/images/20K7SD8LioEwq-aF?width=64&height=64&fit=crop&quality=95&format=auto"
+    }
+  ],
+  "boosts": [
+    {
+      "chainId": "robinhood",
+      "tokenAddress": "0x5CaF197a5effce69B66D6B7BB4D7D260FcDB8D71",
+      "url": "https://dexscreener.com/robinhood/0x5caf197a5effce69b66d6b7bb4d7d260fcdb8d71",
+      "description": "There is no e/acc complex of NGOs, it's literally just posters united against a bunch of institutionalized EAs",
+      "links": [
+        {
+          "url": "https://eacconrh.lol/"
+        },
+        {
+          "type": "twitter",
+          "url": "https://x.com/eacconrh"
+        }
+      ],
+      "icon": "vHtdrATqQTICYiNA",
+      "amount": 0,
+      "totalAmount": 100
+    },
+    {
+      "chainId": "robinhood",
+      "tokenAddress": "0x3458e003F6ED93df0F537b8AcaC6FbE08E41247f",
+      "url": "https://dexscreener.com/robinhood/0x3458e003f6ed93df0f537b8acac6fbe08e41247f",
+      "description": "A meme coin on Robinhood chain. Nobody knows what he is. He looks funny.\n\nRoo is a small fuzzy thing with pale green skin, a beard, stick legs and hair that points straight up. Nobody knows what he is, including the people who made this coin. He looks funny. That is the whole coin.",
+      "links": [
+        {
+          "url": "https://theroomeme.com"
+        },
+        {
+          "type": "twitter",
+          "url": "https://x.com/RooCoinETH"
+        },
+        {
+          "type": "telegram",
+          "url": "https://t.me/RooCoinETH"
+        }
+      ],
+      "icon": "ZaKrVLjh455bGPGw",
+      "amount": 0,
+      "totalAmount": 100
+    },
+    {
+      "chainId": "robinhood",
+      "tokenAddress": "0xc8885F68aCb213B144fdA1835d61EF05D88aD687",
+      "url": "https://dexscreener.com/robinhood/0xc8885f68acb213b144fda1835d61ef05d88ad687",
+      "description": "TALIS is an onchain structured markets protocol built for tokenized stocks on Robinhood Chain.\n\nTALIS lets the same underlying asset serve two different market views. Holders can earn premium by giving up a defined portion of their future upside, while traders with stronger conviction can buy concentrated exposure to that upside.\n\nEach market operates through defined periods with transparent pricing, strike levels and onchain settlement. Instead of relying on traditional perpetual leverage, funding rates or liquidation mechanics, upside positions are backed by the underlying assets locked within the protocol.\n\nFor holders, TALIS creates a way to generate income from assets they already own. For traders, it creates a way to isolate and trade the part of a market move they actually want.\n\nOne asset. Different outcomes.\n\n100% of protocol revenue buys back $TALIS.\n\nBuilt on Robinhood Chain.\n$TALIS /WETH",
+      "links": [
+        {
+          "url": "https://usetalis.markets"
+        },
+        {
+          "type": "twitter",
+          "url": "https://x.com/usetalis_"
+        }
+      ],
+      "icon": "4NnCgkvqOrtKudvp",
+      "amount": 0,
+      "totalAmount": 100
+    },
+    {
+      "chainId": "robinhood",
+      "tokenAddress": "0xA241395aDCdF456F6Dc04d1Bc02B18e6f4c4052c",
+      "url": "https://dexscreener.com/robinhood/0xa241395adcdf456f6dc04d1bc02b18e6f4c4052c",
+      "description": "Robin Pepe ($ROBINPEPE) is a meme coin on Robinhood Chain. Pepe, dressed as Robin Hood, on Robinhood Chain.\n\nIt is the Pepe you already know, in a Lincoln green cap with one red feather, a longbow and three arrows. He looks about as pleased with the outfit as you would expect.",
+      "links": [
+        {
+          "url": "https://robin-pepe.com"
+        },
+        {
+          "type": "twitter",
+          "url": "https://x.com/RobinPepeCoin"
+        }
+      ],
+      "icon": "EBBKa_wJjQMMsN7n",
+      "amount": 0,
+      "totalAmount": 100
+    },
+    {
+      "chainId": "robinhood",
+      "tokenAddress": "0xD17C81cB01d44cC6e822936e8F098960001b47D2",
+      "url": "https://dexscreener.com/robinhood/0xd17c81cb01d44cc6e822936e8f098960001b47d2",
+      "description": "Three cats in hoodies. \n\nSomebody dragged an old leather sofa out onto the corner, and by morning three cats had it. Red sits on the left, Socks takes the middle, Smoke takes the right, and nobody has ever seen them swap. The rats moved off the block that same week. Ask what they do all day and they will look at you until you leave.",
+      "links": [
+        {
+          "url": "https://hoodcatsmeme.com"
+        },
+        {
+          "type": "twitter",
+          "url": "https://x.com/HoodCatsGang"
+        },
+        {
+          "type": "telegram",
+          "url": "https://t.me/HoodCatsGang"
+        }
+      ],
+      "icon": "LxCLF0-G0jjJHDsC",
+      "amount": 0,
+      "totalAmount": 100
+    },
+    {
+      "chainId": "robinhood",
+      "tokenAddress": "0x26eE3536441951b00C9Bd3AF51efd2C3b90d89A6",
+      "url": "https://dexscreener.com/robinhood/0x26ee3536441951b00c9bd3af51efd2c3b90d89a6",
+      "description": "Aeva is an asset-native L1 for programmable ownership, financial rights, and settlement.",
+      "links": [
+        {
+          "url": "https://aevachain.online"
+        },
+        {
+          "type": "twitter",
+          "url": "https://x.com/AevaCoin"
+        }
+      ],
+      "icon": "QCdNq8RlrTDyTx4w",
+      "amount": 0,
+      "totalAmount": 100
+    },
+    {
+      "chainId": "robinhood",
+      "tokenAddress": "0x5f62C57e5C537887117EeF828b7E3Ad41C009FEb",
+      "url": "https://dexscreener.com/robinhood/0x5f62c57e5c537887117eef828b7e3ad41c009feb",
+      "description": "$GOOD is not just another dog coin. It represents the culture that welcomes everyday people into crypto without pretending it's easy. This \"hood\" isn't a neighborhood or a place, it's every crypto community. Every discord. Every Telegram. Every X Space. Every meme. Every holder. Every late-night chart watcher. Every degenerate who’s been rugged but still believes. It’s the memecoin trenches where people grind every day, celebrate wins, survive losses, and keep showing up. GOOD isn't a billionaire. He isn't royalty. He isn't trying to be a superhero. He's simply the toughest dog in crypto. The most loyal friend in the trenches. The one that never leaves. He is loyal, protective, fearless, street smart, funny, confident, never arrogant, and always watching over the community. He is the guardian of the hood and every hood needs something $GOOD.",
+      "links": [
+        {
+          "url": "https://goodcoin.io/"
+        },
+        {
+          "type": "twitter",
+          "url": "https://x.com/GoodCoinRH"
+        },
+        {
+          "type": "telegram",
+          "url": "https://t.me/TheGo0dCoin"
+        }
+      ],
+      "icon": "WV3AcN3Do_pj4wbf",
+      "amount": 0,
+      "totalAmount": 100
+    },
+    {
+      "chainId": "robinhood",
+      "tokenAddress": "0xB9d3824149aD8ac984153CeEc91D5a2405d1FB95",
+      "url": "https://dexscreener.com/robinhood/0xb9d3824149ad8ac984153ceec91d5a2405d1fb95",
+      "description": "$NLYRA — Neron & Lyra, the two AI guardians of Robinhood Chain. The first AI scanner on this chain (69,000+ audits across 25+ chains): we read the contracts nobody else reads. We built the full stack — Architect Launch (anti-rug launchpad, liquidity locked for life, rugs impossible by design), Architect Swap (Uniswap V2+V3 with a smart router), single-sided staking, fixed-APY pools, zk privacy pools, and the Burn Engine that buys back and burns NLYRA forever. Fixed 1B supply. No owner, no mint, no taxes, no blacklist. On Robin Hood's chain, we stop the thieves.",
+      "links": [
+        {
+          "url": "https://nlyra.xyz/"
+        },
+        {
+          "type": "twitter",
+          "url": "https://x.com/LyraNeron"
+        },
+        {
+          "type": "telegram",
+          "url": "https://t.me/NeronWakeUp"
+        }
+      ],
+      "icon": "D4tenJfWByDpm_h2",
+      "amount": 0,
+      "totalAmount": 100
+    },
+    {
+      "chainId": "robinhood",
+      "tokenAddress": "0xa0997aF99B8d41D3f7892D38CBd573E678611E18",
+      "url": "https://dexscreener.com/robinhood/0xa0997af99b8d41d3f7892d38cbd573e678611e18",
+      "description": "Oh lawd he long.",
+      "links": [
+        {
+          "type": "twitter",
+          "url": "https://x.com/longboi3x?s=11&t=0CPki5X2-2IlG6Cw_viayw"
+        }
+      ],
+      "icon": "v9s71UWYtD3Q6-FX",
+      "amount": 0,
+      "totalAmount": 100
+    }
+  ],
+  "tokens": [
+    {
+      "mint": "0xd5D26bac627E8d9b67517BE63dD418ACB3a2D8e2",
+      "chain": "robinhood",
+      "symbol": "TALIS",
+      "name": "Talis",
+      "createdAt": "2026-09-25T14:37:30.000Z",
+      "pairCreatedAt": 1790347050000,
+      "pairAddress": "0x3430fe00a00c586c9e879ce5ba3ab7b76a2fc3843ca63d84c0c5fa9879ebc0b6",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0x3430fe00a00c586c9e879ce5ba3ab7b76a2fc3843ca63d84c0c5fa9879ebc0b6",
+      "priceUsd": 0.001095,
+      "liquidityUsd": 100387.69,
+      "fdvUsd": 1072377,
+      "marketCapUsd": 1072377,
+      "volume": {
+        "m5": 4474.46,
+        "h1": 38449.11,
+        "h6": 247056.05000000002,
+        "h24": 2845721.0500000003
+      },
+      "volume5m": 4474.46,
+      "volume1h": 38449.11,
+      "volume24h": 2845721.0500000003,
+      "priceChange": {
+        "m5": -10.22,
+        "h1": -7.12,
+        "h6": -3.86,
+        "h24": 1767
+      },
+      "txns": {
+        "m5": {
+          "buys": 29,
+          "sells": 20
+        },
+        "h1": {
+          "buys": 312,
+          "sells": 211
+        },
+        "h6": {
+          "buys": 2009,
+          "sells": 1458
+        },
+        "h24": {
+          "buys": 15060,
+          "sells": 10693
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 3,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0xA241395aDCdF456F6Dc04d1Bc02B18e6f4c4052c",
+      "chain": "robinhood",
+      "symbol": "ROBINPEPE",
+      "name": "Robin Pepe",
+      "createdAt": "2026-09-25T16:33:59.000Z",
+      "pairCreatedAt": 1790354039000,
+      "pairAddress": "0xa32a077a3e9d1ce561ec2a4b136db701a3166195455da4d8d364d6189443afe1",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0xa32a077a3e9d1ce561ec2a4b136db701a3166195455da4d8d364d6189443afe1",
+      "priceUsd": 0.002295,
+      "liquidityUsd": 118922.12,
+      "fdvUsd": 2295023,
+      "marketCapUsd": 2295023,
+      "volume": {
+        "m5": 31067.1,
+        "h1": 336170.21,
+        "h6": 1751812.37,
+        "h24": 3257190.14
+      },
+      "volume5m": 31067.1,
+      "volume1h": 336170.21,
+      "volume24h": 3257190.14,
+      "priceChange": {
+        "m5": -24.92,
+        "h1": -21.49,
+        "h6": 33.23,
+        "h24": 145321
+      },
+      "txns": {
+        "m5": {
+          "buys": 78,
+          "sells": 69
+        },
+        "h1": {
+          "buys": 826,
+          "sells": 767
+        },
+        "h6": {
+          "buys": 4627,
+          "sells": 4254
+        },
+        "h24": {
+          "buys": 11165,
+          "sells": 9575
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 100,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0x5CaF197a5effce69B66D6B7BB4D7D260FcDB8D71",
+      "chain": "robinhood",
+      "symbol": "e/acc",
+      "name": "Effective Accelerationism",
+      "createdAt": "2026-09-25T23:01:05.000Z",
+      "pairCreatedAt": 1790377265000,
+      "pairAddress": "0x101705463e81ef6C4b2396f2F9223Cb599c10cEc",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0x101705463e81ef6c4b2396f2f9223cb599c10cec",
+      "priceUsd": 0.000003933,
+      "liquidityUsd": 4295.4,
+      "fdvUsd": 3933,
+      "marketCapUsd": 3933,
+      "volume": {
+        "m5": 0,
+        "h1": 102.26,
+        "h6": 4918359.62,
+        "h24": 12009775.71
+      },
+      "volume5m": 0,
+      "volume1h": 102.26,
+      "volume24h": 12009775.71,
+      "priceChange": {
+        "m5": 0,
+        "h1": -0.32,
+        "h6": -99.67,
+        "h24": 37.64
+      },
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 8,
+          "sells": 7
+        },
+        "h6": {
+          "buys": 23399,
+          "sells": 17765
+        },
+        "h24": {
+          "buys": 45202,
+          "sells": 33927
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 100,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0x3458e003F6ED93df0F537b8AcaC6FbE08E41247f",
+      "chain": "robinhood",
+      "symbol": "ROO",
+      "name": "Roo",
+      "createdAt": "2026-09-23T04:00:40.000Z",
+      "pairCreatedAt": 1790136040000,
+      "pairAddress": "0x91e9823a895a2d05a2c853fbd1619da089b36054f0a342039a0e8046608bbece",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0x91e9823a895a2d05a2c853fbd1619da089b36054f0a342039a0e8046608bbece",
+      "priceUsd": 0.0003217,
+      "liquidityUsd": 42472.08,
+      "fdvUsd": 321744,
+      "marketCapUsd": 321744,
+      "volume": {
+        "m5": 2289.79,
+        "h1": 37818.53,
+        "h6": 284742.22,
+        "h24": 1671868.09
+      },
+      "volume5m": 2289.79,
+      "volume1h": 37818.53,
+      "volume24h": 1671868.09,
+      "priceChange": {
+        "m5": 5.25,
+        "h1": -8.72,
+        "h6": 4.74,
+        "h24": -1.85
+      },
+      "txns": {
+        "m5": {
+          "buys": 48,
+          "sells": 42
+        },
+        "h1": {
+          "buys": 551,
+          "sells": 529
+        },
+        "h6": {
+          "buys": 3960,
+          "sells": 3716
+        },
+        "h24": {
+          "buys": 16853,
+          "sells": 15606
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 100,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0x26eE3536441951b00C9Bd3AF51efd2C3b90d89A6",
+      "chain": "robinhood",
+      "symbol": "AEVA",
+      "name": "Aeva",
+      "createdAt": "2026-09-26T00:33:28.000Z",
+      "pairCreatedAt": 1790382808000,
+      "pairAddress": "0x4c5BC6879ab0159f4403A7a4056FCab0972E55DF",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0x4c5bc6879ab0159f4403a7a4056fcab0972e55df",
+      "priceUsd": 0.0002012,
+      "liquidityUsd": 42621.61,
+      "fdvUsd": 201250,
+      "marketCapUsd": 201250,
+      "volume": {
+        "m5": 4293.64,
+        "h1": 277989.62,
+        "h6": 3121266.05,
+        "h24": 8742917.65
+      },
+      "volume5m": 4293.64,
+      "volume1h": 277989.62,
+      "volume24h": 8742917.65,
+      "priceChange": {
+        "m5": 49.82,
+        "h1": -40.63,
+        "h6": -91.53,
+        "h24": 3252
+      },
+      "txns": {
+        "m5": {
+          "buys": 13,
+          "sells": 1
+        },
+        "h1": {
+          "buys": 454,
+          "sells": 209
+        },
+        "h6": {
+          "buys": 3644,
+          "sells": 1871
+        },
+        "h24": {
+          "buys": 12231,
+          "sells": 4195
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 100,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0xD17C81cB01d44cC6e822936e8F098960001b47D2",
+      "chain": "robinhood",
+      "symbol": "HOODCATS",
+      "name": "Hood Cats",
+      "createdAt": "2026-09-19T03:23:52.000Z",
+      "pairCreatedAt": 1789788232000,
+      "pairAddress": "0xc19d1d77bfdaeb66c285a17286d325062c1cd0c7ce88c1fe60ef70797ee8f215",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0xc19d1d77bfdaeb66c285a17286d325062c1cd0c7ce88c1fe60ef70797ee8f215",
+      "priceUsd": 0.0003704,
+      "liquidityUsd": 50847.62,
+      "fdvUsd": 370446,
+      "marketCapUsd": 370446,
+      "volume": {
+        "m5": 3014.46,
+        "h1": 54007.5,
+        "h6": 359864.39,
+        "h24": 1025574.1
+      },
+      "volume5m": 3014.46,
+      "volume1h": 54007.5,
+      "volume24h": 1025574.1,
+      "priceChange": {
+        "m5": -0.34,
+        "h1": -3.93,
+        "h6": -22.58,
+        "h24": -22.18
+      },
+      "txns": {
+        "m5": {
+          "buys": 51,
+          "sells": 34
+        },
+        "h1": {
+          "buys": 647,
+          "sells": 545
+        },
+        "h6": {
+          "buys": 3856,
+          "sells": 3400
+        },
+        "h24": {
+          "buys": 10295,
+          "sells": 9241
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 100,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0xc8885F68aCb213B144fdA1835d61EF05D88aD687",
+      "chain": "robinhood",
+      "symbol": "TALIS",
+      "name": "Talis",
+      "createdAt": "2026-09-25T21:38:41.000Z",
+      "pairCreatedAt": 1790372321000,
+      "pairAddress": "0x8a207F8a985B7996d9cd4Af6469eB1768Bc920C3",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0x8a207f8a985b7996d9cd4af6469eb1768bc920c3",
+      "priceUsd": 0.000002904,
+      "liquidityUsd": 2902.47,
+      "fdvUsd": 2905,
+      "marketCapUsd": 2905,
+      "volume": {
+        "m5": 0,
+        "h1": 1.22,
+        "h6": 1476885.22,
+        "h24": 8962597.85
+      },
+      "volume5m": 0,
+      "volume1h": 1.22,
+      "volume24h": 8962597.85,
+      "priceChange": {
+        "m5": 0,
+        "h1": -0.11,
+        "h6": -99.66,
+        "h24": -1.61
+      },
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 1
+        },
+        "h6": {
+          "buys": 2307,
+          "sells": 1532
+        },
+        "h24": {
+          "buys": 17007,
+          "sells": 7193
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 100,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0xf21f93091e7d4021ed100121DB18C730573614Ef",
+      "chain": "robinhood",
+      "symbol": "DDOS",
+      "name": "dropping dollars on strangers",
+      "createdAt": "2026-09-26T05:41:46.000Z",
+      "pairCreatedAt": 1790401306000,
+      "pairAddress": "0x5CF061d6Ccff58E95d219D26295B73207Ed38B66",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0x5cf061d6ccff58e95d219d26295b73207ed38b66",
+      "priceUsd": 0.0005973,
+      "liquidityUsd": 72619.67,
+      "fdvUsd": 597383,
+      "marketCapUsd": 597383,
+      "volume": {
+        "m5": 30986.41,
+        "h1": 1431887.87,
+        "h6": 5662835.19,
+        "h24": 7519362.52
+      },
+      "volume5m": 30986.41,
+      "volume1h": 1431887.87,
+      "volume24h": 7519362.52,
+      "priceChange": {
+        "m5": 9.22,
+        "h1": -86.71,
+        "h6": -79.87,
+        "h24": 20097
+      },
+      "txns": {
+        "m5": {
+          "buys": 29,
+          "sells": 18
+        },
+        "h1": {
+          "buys": 1161,
+          "sells": 776
+        },
+        "h6": {
+          "buys": 5399,
+          "sells": 3886
+        },
+        "h24": {
+          "buys": 7596,
+          "sells": 4952
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 50,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0xe8729Dc9dCA85167e06b7E9c66a58b22457c5F30",
+      "chain": "robinhood",
+      "symbol": "AEVA",
+      "name": "Aeva",
+      "createdAt": "2026-09-25T15:56:07.000Z",
+      "pairCreatedAt": 1790351767000,
+      "pairAddress": "0x7f3a6dcfd793c2b86659587a64f2add34f5bf21dad10968abf751b69ac1ac0d4",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0x7f3a6dcfd793c2b86659587a64f2add34f5bf21dad10968abf751b69ac1ac0d4",
+      "priceUsd": 0.0008752,
+      "liquidityUsd": 114606.58,
+      "fdvUsd": 841945,
+      "marketCapUsd": 841945,
+      "volume": {
+        "m5": 1398.12,
+        "h1": 20939.22,
+        "h6": 193513.13,
+        "h24": 1459741.3499999999
+      },
+      "volume5m": 1398.12,
+      "volume1h": 20939.22,
+      "volume24h": 1459741.3499999999,
+      "priceChange": {
+        "m5": -1.95,
+        "h1": -17.19,
+        "h6": -12.12,
+        "h24": 12595
+      },
+      "txns": {
+        "m5": {
+          "buys": 4,
+          "sells": 7
+        },
+        "h1": {
+          "buys": 88,
+          "sells": 140
+        },
+        "h6": {
+          "buys": 753,
+          "sells": 546
+        },
+        "h24": {
+          "buys": 5005,
+          "sells": 3765
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 3,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0x5f62C57e5C537887117EeF828b7E3Ad41C009FEb",
+      "chain": "robinhood",
+      "symbol": "GOOD",
+      "name": "Good In The Hood",
+      "createdAt": "2026-08-06T02:17:34.000Z",
+      "pairCreatedAt": 1785982654000,
+      "pairAddress": "0x8EA7c66395fD7e25E9713Edd0B297d4ABE05C304",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0x8ea7c66395fd7e25e9713edd0b297d4abe05c304",
+      "priceUsd": 0.002414,
+      "liquidityUsd": 336643.66,
+      "fdvUsd": 2414500,
+      "marketCapUsd": 2414500,
+      "volume": {
+        "m5": 1347.2400000000002,
+        "h1": 5024.46,
+        "h6": 29964.070000000003,
+        "h24": 357832.98
+      },
+      "volume5m": 1347.2400000000002,
+      "volume1h": 5024.46,
+      "volume24h": 357832.98,
+      "priceChange": {
+        "m5": 1.15,
+        "h1": 1.5,
+        "h6": 1.89,
+        "h24": 35.83
+      },
+      "txns": {
+        "m5": {
+          "buys": 6,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 20,
+          "sells": 11
+        },
+        "h6": {
+          "buys": 89,
+          "sells": 59
+        },
+        "h24": {
+          "buys": 735,
+          "sells": 600
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 100,
+      "pairCount": 3,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0xB9d3824149aD8ac984153CeEc91D5a2405d1FB95",
+      "chain": "robinhood",
+      "symbol": "NLYRA",
+      "name": "Neron Lyra",
+      "createdAt": "2026-07-27T14:18:18.000Z",
+      "pairCreatedAt": 1785161898000,
+      "pairAddress": "0x483C24d1e36Df01b650F1E9BEEB2a1c31C005C39",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0x483c24d1e36df01b650f1e9beeb2a1c31c005c39",
+      "priceUsd": 0.0002728,
+      "liquidityUsd": 59566.78,
+      "fdvUsd": 263636,
+      "marketCapUsd": 263636,
+      "volume": {
+        "m5": 60.67,
+        "h1": 3428.64,
+        "h6": 4748.79,
+        "h24": 44981.28
+      },
+      "volume5m": 60.67,
+      "volume1h": 3428.64,
+      "volume24h": 44981.28,
+      "priceChange": {
+        "m5": 0.44,
+        "h1": 0.07,
+        "h6": -5.65,
+        "h24": 32.13
+      },
+      "txns": {
+        "m5": {
+          "buys": 1,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 11,
+          "sells": 4
+        },
+        "h6": {
+          "buys": 15,
+          "sells": 18
+        },
+        "h24": {
+          "buys": 122,
+          "sells": 98
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 100,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0xa0997aF99B8d41D3f7892D38CBd573E678611E18",
+      "chain": "robinhood",
+      "symbol": "LONGBOI",
+      "name": "Longboi",
+      "createdAt": "2026-09-12T01:54:56.000Z",
+      "pairCreatedAt": 1789178096000,
+      "pairAddress": "0xf6f3498e538c89bb074b9a264d3c44df19ac8d2c919b704029e6b85abb694b3a",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0xf6f3498e538c89bb074b9a264d3c44df19ac8d2c919b704029e6b85abb694b3a",
+      "priceUsd": 0.00006762,
+      "liquidityUsd": 62879.48,
+      "fdvUsd": 65532,
+      "marketCapUsd": 65532,
+      "volume": {
+        "m5": 0,
+        "h1": 0,
+        "h6": 5.02,
+        "h24": 6567.92
+      },
+      "volume5m": 0,
+      "volume1h": 0,
+      "volume24h": 6567.92,
+      "priceChange": {
+        "m5": 0,
+        "h1": 0,
+        "h6": 0.13,
+        "h24": -25.06
+      },
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 1,
+          "sells": 1
+        },
+        "h24": {
+          "buys": 12,
+          "sells": 19
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 100,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0xe99c8437B0B29325a4080b8c837fF4E5A6F9Fc69",
+      "chain": "robinhood",
+      "symbol": "ORBIO",
+      "name": "Orbio.so",
+      "createdAt": "2026-09-26T05:49:40.000Z",
+      "pairCreatedAt": 1790401780000,
+      "pairAddress": "0x00DB2E029a6A62155a1802B9813f01b68B7D07d5",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0x00db2e029a6a62155a1802b9813f01b68b7d07d5",
+      "priceUsd": 0.01576,
+      "liquidityUsd": 257459.64,
+      "fdvUsd": 15760383,
+      "marketCapUsd": 15760383,
+      "volume": {
+        "m5": 78053.37,
+        "h1": 966938.84,
+        "h6": 5051595.78,
+        "h24": 6689355.36
+      },
+      "volume5m": 78053.37,
+      "volume1h": 966938.84,
+      "volume24h": 6689355.36,
+      "priceChange": {
+        "m5": 4.19,
+        "h1": -15.99,
+        "h6": 1435,
+        "h24": 204467
+      },
+      "txns": {
+        "m5": {
+          "buys": 146,
+          "sells": 117
+        },
+        "h1": {
+          "buys": 1604,
+          "sells": 1313
+        },
+        "h6": {
+          "buys": 9100,
+          "sells": 7229
+        },
+        "h24": {
+          "buys": 10861,
+          "sells": 8238
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0x9D6967E7f5ed93ba3fbBcB03eC2E13b617591E18",
+      "chain": "robinhood",
+      "symbol": "O",
+      "name": "O",
+      "createdAt": "2026-09-26T00:33:35.000Z",
+      "pairCreatedAt": 1790382815000,
+      "pairAddress": "0x1691a845e9d5f0e71c0ca38a408012c5d5075155e44880c0be1b74a75647e9e5",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0x1691a845e9d5f0e71c0ca38a408012c5d5075155e44880c0be1b74a75647e9e5",
+      "priceUsd": 0.0005143,
+      "liquidityUsd": 382250.41,
+      "fdvUsd": 514350,
+      "marketCapUsd": 514350,
+      "volume": {
+        "m5": 1863.32,
+        "h1": 7532.77,
+        "h6": 114338.34,
+        "h24": 661794.45
+      },
+      "volume5m": 1863.32,
+      "volume1h": 7532.77,
+      "volume24h": 661794.45,
+      "priceChange": {
+        "m5": 1.22,
+        "h1": 6.51,
+        "h6": 107,
+        "h24": 2355
+      },
+      "txns": {
+        "m5": {
+          "buys": 4,
+          "sells": 9
+        },
+        "h1": {
+          "buys": 25,
+          "sells": 48
+        },
+        "h6": {
+          "buys": 223,
+          "sells": 403
+        },
+        "h24": {
+          "buys": 2348,
+          "sells": 4149
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0x250f720fafeCEeDAedf0578Ac84Aa2D1c2381E18",
+      "chain": "robinhood",
+      "symbol": "MICROCHIMP",
+      "name": "MICROCHIMP",
+      "createdAt": "2026-09-25T18:02:09.000Z",
+      "pairCreatedAt": 1790359329000,
+      "pairAddress": "0xb175b8ab7ac239184dc2a727517cc0c9681bf367e7683050536088d9cb5e893f",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0xb175b8ab7ac239184dc2a727517cc0c9681bf367e7683050536088d9cb5e893f",
+      "priceUsd": 0.00007372,
+      "liquidityUsd": 58561.01,
+      "fdvUsd": 73723,
+      "marketCapUsd": 73723,
+      "volume": {
+        "m5": 3.01,
+        "h1": 739.76,
+        "h6": 21644.7,
+        "h24": 963170.42
+      },
+      "volume5m": 3.01,
+      "volume1h": 739.76,
+      "volume24h": 963170.42,
+      "priceChange": {
+        "m5": 0.02,
+        "h1": -2.41,
+        "h6": 32.4,
+        "h24": 256
+      },
+      "txns": {
+        "m5": {
+          "buys": 1,
+          "sells": 2
+        },
+        "h1": {
+          "buys": 25,
+          "sells": 20
+        },
+        "h6": {
+          "buys": 233,
+          "sells": 262
+        },
+        "h24": {
+          "buys": 11796,
+          "sells": 12762
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0xf703ee7C1A9dd263Ce46990e119c69D8fFb98D2A",
+      "chain": "robinhood",
+      "symbol": "ELSE",
+      "name": "Unbefallen",
+      "createdAt": "2026-09-25T21:43:26.000Z",
+      "pairCreatedAt": 1790372606000,
+      "pairAddress": "0x146c80b9d98df8f93774c568cbfb2fbe6fc9e7d8ec570ba29f3519900e772b73",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0x146c80b9d98df8f93774c568cbfb2fbe6fc9e7d8ec570ba29f3519900e772b73",
+      "priceUsd": 0.0006959,
+      "liquidityUsd": 124608.64,
+      "fdvUsd": 695985,
+      "marketCapUsd": 695985,
+      "volume": {
+        "m5": 0,
+        "h1": 338,
+        "h6": 20726.37,
+        "h24": 536530.08
+      },
+      "volume5m": 0,
+      "volume1h": 338,
+      "volume24h": 536530.08,
+      "priceChange": {
+        "m5": 0,
+        "h1": 0.71,
+        "h6": 27.83,
+        "h24": 999
+      },
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 10,
+          "sells": 4
+        },
+        "h6": {
+          "buys": 85,
+          "sells": 67
+        },
+        "h24": {
+          "buys": 1391,
+          "sells": 1363
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0x015E148989b3ead9cFADc11e33cADFfe1924FdcF",
+      "chain": "robinhood",
+      "symbol": "JEVV",
+      "name": "Jevv Bezos",
+      "createdAt": "2026-09-25T20:01:16.000Z",
+      "pairCreatedAt": 1790366476000,
+      "pairAddress": "0xaa19bed54189d2f29a0453eba2a9ca93a3f31d1107efc61f34d4d3ab83aa8e00",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0xaa19bed54189d2f29a0453eba2a9ca93a3f31d1107efc61f34d4d3ab83aa8e00",
+      "priceUsd": 0.0007377,
+      "liquidityUsd": 66359.86,
+      "fdvUsd": 737703,
+      "marketCapUsd": 737703,
+      "volume": {
+        "m5": 1028.1,
+        "h1": 3760.44,
+        "h6": 20915.45,
+        "h24": 448877.51
+      },
+      "volume5m": 1028.1,
+      "volume1h": 3760.44,
+      "volume24h": 448877.51,
+      "priceChange": {
+        "m5": -5.91,
+        "h1": 10.43,
+        "h6": 0.63,
+        "h24": 1948
+      },
+      "txns": {
+        "m5": {
+          "buys": 1,
+          "sells": 1
+        },
+        "h1": {
+          "buys": 9,
+          "sells": 2
+        },
+        "h6": {
+          "buys": 30,
+          "sells": 21
+        },
+        "h24": {
+          "buys": 732,
+          "sells": 611
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 2,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0x01a5EFbf6CE66a2c8dA23F1BeC95D45469b510dc",
+      "chain": "robinhood",
+      "symbol": "P(DOOM)",
+      "name": "p(doom)",
+      "createdAt": "2026-09-26T11:47:15.000Z",
+      "pairCreatedAt": 1790423235000,
+      "pairAddress": "0x5ef1d00889bc87fa79b04e6fc28029a9a8de6cdea940340ab29d736fc36b3dca",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0x5ef1d00889bc87fa79b04e6fc28029a9a8de6cdea940340ab29d736fc36b3dca",
+      "priceUsd": 0.00017,
+      "liquidityUsd": 82119.23,
+      "fdvUsd": 170089,
+      "marketCapUsd": 170089,
+      "volume": {
+        "m5": 56515.79,
+        "h1": 613256.53,
+        "h6": 1338719.04,
+        "h24": 1338719.04
+      },
+      "volume5m": 56515.79,
+      "volume1h": 613256.53,
+      "volume24h": 1338719.04,
+      "priceChange": {
+        "m5": -40.25,
+        "h1": -42.19,
+        "h6": 1165,
+        "h24": 1165
+      },
+      "txns": {
+        "m5": {
+          "buys": 53,
+          "sells": 52
+        },
+        "h1": {
+          "buys": 899,
+          "sells": 525
+        },
+        "h6": {
+          "buys": 2176,
+          "sells": 1184
+        },
+        "h24": {
+          "buys": 2176,
+          "sells": 1184
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0x2BfB3507226080a3a5d740870e7E212fF519DF6D",
+      "chain": "robinhood",
+      "symbol": "INGOT",
+      "name": "Ingot",
+      "createdAt": "2026-09-26T13:04:38.000Z",
+      "pairCreatedAt": 1790427878000,
+      "pairAddress": "0x64a55c1148feb370999e123eb9ed4e72a5f7270b5e7ad6a1324d23f9decfe943",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0x64a55c1148feb370999e123eb9ed4e72a5f7270b5e7ad6a1324d23f9decfe943",
+      "priceUsd": 0.0001068,
+      "liquidityUsd": 31347.25,
+      "fdvUsd": 106474,
+      "marketCapUsd": 106474,
+      "volume": {
+        "m5": 5702.06,
+        "h1": 240091.51,
+        "h6": 240091.51,
+        "h24": 240091.51
+      },
+      "volume5m": 5702.06,
+      "volume1h": 240091.51,
+      "volume24h": 240091.51,
+      "priceChange": {
+        "m5": 16.4,
+        "h1": 91.43,
+        "h6": 91.43,
+        "h24": 91.43
+      },
+      "txns": {
+        "m5": {
+          "buys": 56,
+          "sells": 40
+        },
+        "h1": {
+          "buys": 1945,
+          "sells": 1361
+        },
+        "h6": {
+          "buys": 1945,
+          "sells": 1361
+        },
+        "h24": {
+          "buys": 1945,
+          "sells": 1361
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0x977689834cb1822Ea31D80307303a76AaA313368",
+      "chain": "robinhood",
+      "symbol": "MBG",
+      "name": "Makan Bergizi Gratis",
+      "createdAt": "2026-09-09T17:24:24.000Z",
+      "pairCreatedAt": 1788974664000,
+      "pairAddress": "0xf04ae837530853204bb9803d9ef58697ea8a297101d5113daa36c09c5e4d6b4d",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0xf04ae837530853204bb9803d9ef58697ea8a297101d5113daa36c09c5e4d6b4d",
+      "priceUsd": 0.1331,
+      "liquidityUsd": 359999.16,
+      "fdvUsd": 2795944,
+      "marketCapUsd": 2795944,
+      "volume": {
+        "m5": 146.46,
+        "h1": 3004.4399999999996,
+        "h6": 21238.83,
+        "h24": 101597.54
+      },
+      "volume5m": 146.46,
+      "volume1h": 3004.4399999999996,
+      "volume24h": 101597.54,
+      "priceChange": {
+        "m5": -0.03,
+        "h1": -0.05,
+        "h6": -2.25,
+        "h24": -11.14
+      },
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 2
+        },
+        "h1": {
+          "buys": 12,
+          "sells": 20
+        },
+        "h6": {
+          "buys": 64,
+          "sells": 64
+        },
+        "h24": {
+          "buys": 243,
+          "sells": 193
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 2,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0x368580343A637B8b91d27C8A8bE124f534329A30",
+      "chain": "robinhood",
+      "symbol": "ROBIT",
+      "name": "Robit",
+      "createdAt": "2026-09-23T16:19:15.000Z",
+      "pairCreatedAt": 1790180355000,
+      "pairAddress": "0x5452a20bc8fbc575bee8e14dd2e6463a7ddc14cc483575c3b48e8621fee889de",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0x5452a20bc8fbc575bee8e14dd2e6463a7ddc14cc483575c3b48e8621fee889de",
+      "priceUsd": 0.001377,
+      "liquidityUsd": 138707.93,
+      "fdvUsd": 1377739,
+      "marketCapUsd": 1377739,
+      "volume": {
+        "m5": 1791.98,
+        "h1": 168640.15,
+        "h6": 193713.99,
+        "h24": 239479.58
+      },
+      "volume5m": 1791.98,
+      "volume1h": 168640.15,
+      "volume24h": 239479.58,
+      "priceChange": {
+        "m5": -3.54,
+        "h1": 124,
+        "h6": 356,
+        "h24": 828
+      },
+      "txns": {
+        "m5": {
+          "buys": 10,
+          "sells": 5
+        },
+        "h1": {
+          "buys": 350,
+          "sells": 237
+        },
+        "h6": {
+          "buys": 432,
+          "sells": 297
+        },
+        "h24": {
+          "buys": 546,
+          "sells": 395
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0x34ae566AdC70FD40a40E3648fB5bEcB53E362E68",
+      "chain": "robinhood",
+      "symbol": "Z0MI",
+      "name": "Zomi Tokenized Bond",
+      "createdAt": "2026-09-26T12:39:47.000Z",
+      "pairCreatedAt": 1790426387000,
+      "pairAddress": "0x08118e255b6637c6fad92002179a9308f68a485d97c228e8f606d52847f4e511",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0x08118e255b6637c6fad92002179a9308f68a485d97c228e8f606d52847f4e511",
+      "priceUsd": 0.00001679,
+      "liquidityUsd": 12429.53,
+      "fdvUsd": 16795,
+      "marketCapUsd": 16795,
+      "volume": {
+        "m5": 4158.68,
+        "h1": 131504.72,
+        "h6": 232146.42,
+        "h24": 232146.42
+      },
+      "volume5m": 4158.68,
+      "volume1h": 131504.72,
+      "volume24h": 232146.42,
+      "priceChange": {
+        "m5": 31.67,
+        "h1": -44.8,
+        "h6": -69.77,
+        "h24": -69.77
+      },
+      "txns": {
+        "m5": {
+          "buys": 34,
+          "sells": 24
+        },
+        "h1": {
+          "buys": 1110,
+          "sells": 912
+        },
+        "h6": {
+          "buys": 1926,
+          "sells": 1536
+        },
+        "h24": {
+          "buys": 1926,
+          "sells": 1536
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 2,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0x006D2D9e65f847e8B5f5053C9eb3a7824ec7dFa3",
+      "chain": "robinhood",
+      "symbol": "XGAS.DEV",
+      "name": "xgas.dev",
+      "createdAt": "2026-09-26T04:44:51.000Z",
+      "pairCreatedAt": 1790397891000,
+      "pairAddress": "0x33c7e7e6ba4b65dfce2b32ff3fc453371b4048b44448a9591ad2a6c2a1c95bc1",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0x33c7e7e6ba4b65dfce2b32ff3fc453371b4048b44448a9591ad2a6c2a1c95bc1",
+      "priceUsd": 0.0001807,
+      "liquidityUsd": 40777.82,
+      "fdvUsd": 180767,
+      "marketCapUsd": 180767,
+      "volume": {
+        "m5": 6200.76,
+        "h1": 33884.49,
+        "h6": 419928.04,
+        "h24": 1895569.12
+      },
+      "volume5m": 6200.76,
+      "volume1h": 33884.49,
+      "volume24h": 1895569.12,
+      "priceChange": {
+        "m5": -16.58,
+        "h1": -38.45,
+        "h6": -29.45,
+        "h24": 227
+      },
+      "txns": {
+        "m5": {
+          "buys": 43,
+          "sells": 32
+        },
+        "h1": {
+          "buys": 210,
+          "sells": 217
+        },
+        "h6": {
+          "buys": 2341,
+          "sells": 1899
+        },
+        "h24": {
+          "buys": 9811,
+          "sells": 8639
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 50,
+      "pairCount": 3,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0xF53914048905a15CE9A74868b9Acc61eA5fcDfBD",
+      "chain": "robinhood",
+      "symbol": "OPENPAD",
+      "name": "OpenPad",
+      "createdAt": "2026-09-25T22:06:25.000Z",
+      "pairCreatedAt": 1790373985000,
+      "pairAddress": "0xc056a2c48e3318fdde7f406b12fe39ca156810397e5d6b9404387cbb9275ecaa",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0xc056a2c48e3318fdde7f406b12fe39ca156810397e5d6b9404387cbb9275ecaa",
+      "priceUsd": 0.00009166,
+      "liquidityUsd": 29038.05,
+      "fdvUsd": 91161,
+      "marketCapUsd": 91161,
+      "volume": {
+        "m5": 1071.58,
+        "h1": 14859.47,
+        "h6": 61399.85,
+        "h24": 533952.58
+      },
+      "volume5m": 1071.58,
+      "volume1h": 14859.47,
+      "volume24h": 533952.58,
+      "priceChange": {
+        "m5": 9.43,
+        "h1": -30.08,
+        "h6": -45.08,
+        "h24": 60.74
+      },
+      "txns": {
+        "m5": {
+          "buys": 11,
+          "sells": 2
+        },
+        "h1": {
+          "buys": 109,
+          "sells": 96
+        },
+        "h6": {
+          "buys": 395,
+          "sells": 316
+        },
+        "h24": {
+          "buys": 4167,
+          "sells": 2897
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0xb01356A005403C38c0fb01bd0aAfe51e81Ab9B07",
+      "chain": "robinhood",
+      "symbol": "CERT",
+      "name": "UseCert",
+      "createdAt": "2026-09-26T03:44:49.000Z",
+      "pairCreatedAt": 1790394289000,
+      "pairAddress": "0x78ac5c9c362070e6e34dc937ecbb1c83c7028c988591cdc29098514cda754416",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0x78ac5c9c362070e6e34dc937ecbb1c83c7028c988591cdc29098514cda754416",
+      "priceUsd": 0.00006873,
+      "liquidityUsd": 25145.6,
+      "fdvUsd": 65986,
+      "marketCapUsd": 65986,
+      "volume": {
+        "m5": 695.34,
+        "h1": 6142.52,
+        "h6": 56883.56,
+        "h24": 214585.03
+      },
+      "volume5m": 695.34,
+      "volume1h": 6142.52,
+      "volume24h": 214585.03,
+      "priceChange": {
+        "m5": 11.9,
+        "h1": -23.6,
+        "h6": -12.64,
+        "h24": 21.82
+      },
+      "txns": {
+        "m5": {
+          "buys": 2,
+          "sells": 1
+        },
+        "h1": {
+          "buys": 26,
+          "sells": 29
+        },
+        "h6": {
+          "buys": 301,
+          "sells": 271
+        },
+        "h24": {
+          "buys": 1400,
+          "sells": 1157
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 30,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0x09B3A79CD6ceb1264eC6279d860737736099c84c",
+      "chain": "robinhood",
+      "symbol": "SATURNCOIN",
+      "name": "SaturnCoin",
+      "createdAt": "2026-09-25T16:18:55.000Z",
+      "pairCreatedAt": 1790353135000,
+      "pairAddress": "0x1f8d2585b95a271f6397a853e044f8bb27378f1c8cad38f6e5966f3326e0b006",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0x1f8d2585b95a271f6397a853e044f8bb27378f1c8cad38f6e5966f3326e0b006",
+      "priceUsd": 0.00005752,
+      "liquidityUsd": 21465.08,
+      "fdvUsd": 57528,
+      "marketCapUsd": 57528,
+      "volume": {
+        "m5": 29.08,
+        "h1": 3517.53,
+        "h6": 10941.09,
+        "h24": 989289.32
+      },
+      "volume5m": 29.08,
+      "volume1h": 3517.53,
+      "volume24h": 989289.32,
+      "priceChange": {
+        "m5": -0.54,
+        "h1": 10.77,
+        "h6": 2.04,
+        "h24": 26.77
+      },
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 2
+        },
+        "h1": {
+          "buys": 37,
+          "sells": 25
+        },
+        "h6": {
+          "buys": 112,
+          "sells": 100
+        },
+        "h24": {
+          "buys": 5577,
+          "sells": 4712
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0x45593D952D9A83bA7f100Ec4f874f5905d854EEA",
+      "chain": "robinhood",
+      "symbol": "YASHMODE",
+      "name": "YASHMODE",
+      "createdAt": "2026-09-25T17:53:00.000Z",
+      "pairCreatedAt": 1790358780000,
+      "pairAddress": "0xb6505b149e2a3a9bf72bbf185d7481ef6a83f7cc35cd3c34f52ab3c3914ea394",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0xb6505b149e2a3a9bf72bbf185d7481ef6a83f7cc35cd3c34f52ab3c3914ea394",
+      "priceUsd": 0.000175,
+      "liquidityUsd": 51719.92,
+      "fdvUsd": 175066,
+      "marketCapUsd": 175066,
+      "volume": {
+        "m5": 48.99,
+        "h1": 17645.13,
+        "h6": 38468.28,
+        "h24": 995050.78
+      },
+      "volume5m": 48.99,
+      "volume1h": 17645.13,
+      "volume24h": 995050.78,
+      "priceChange": {
+        "m5": 0.38,
+        "h1": 8.11,
+        "h6": 7.53,
+        "h24": 92.28
+      },
+      "txns": {
+        "m5": {
+          "buys": 1,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 51,
+          "sells": 32
+        },
+        "h6": {
+          "buys": 125,
+          "sells": 102
+        },
+        "h24": {
+          "buys": 4012,
+          "sells": 3712
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0xf1740D428A469BD270C5DE0710A2f7d887A650fb",
+      "chain": "robinhood",
+      "symbol": "NFX",
+      "name": "NetFlix AI",
+      "createdAt": "2026-09-25T21:50:13.000Z",
+      "pairCreatedAt": 1790373013000,
+      "pairAddress": "0xd92b7a1293e1a42aced3590fa7c658ae3fa92be7160487d9292b6b7ba976ec6e",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0xd92b7a1293e1a42aced3590fa7c658ae3fa92be7160487d9292b6b7ba976ec6e",
+      "priceUsd": 0.0001357,
+      "liquidityUsd": 35336.59,
+      "fdvUsd": 135744,
+      "marketCapUsd": 135744,
+      "volume": {
+        "m5": 1255.27,
+        "h1": 30280.63,
+        "h6": 131034,
+        "h24": 552105.52
+      },
+      "volume5m": 1255.27,
+      "volume1h": 30280.63,
+      "volume24h": 552105.52,
+      "priceChange": {
+        "m5": -2.29,
+        "h1": -33.24,
+        "h6": 96.98,
+        "h24": 143
+      },
+      "txns": {
+        "m5": {
+          "buys": 6,
+          "sells": 7
+        },
+        "h1": {
+          "buys": 107,
+          "sells": 123
+        },
+        "h6": {
+          "buys": 530,
+          "sells": 551
+        },
+        "h24": {
+          "buys": 2832,
+          "sells": 2931
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0xC554962683C474973F6b21EEFF8c82aAeE422753",
+      "chain": "robinhood",
+      "symbol": "TENDER",
+      "name": "useTender",
+      "createdAt": "2026-09-25T18:25:07.000Z",
+      "pairCreatedAt": 1790360707000,
+      "pairAddress": "0xaa99457741de0225e36e5b2943dad05ee6d13104ea77436ed12ef395bacbe000",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0xaa99457741de0225e36e5b2943dad05ee6d13104ea77436ed12ef395bacbe000",
+      "priceUsd": 0.00002169,
+      "liquidityUsd": 14125.77,
+      "fdvUsd": 21251,
+      "marketCapUsd": 21251,
+      "volume": {
+        "m5": 524.55,
+        "h1": 1259.99,
+        "h6": 8352.5,
+        "h24": 621071.51
+      },
+      "volume5m": 524.55,
+      "volume1h": 1259.99,
+      "volume24h": 621071.51,
+      "priceChange": {
+        "m5": -12.38,
+        "h1": -23.42,
+        "h6": -2.31,
+        "h24": -61.09
+      },
+      "txns": {
+        "m5": {
+          "buys": 1,
+          "sells": 3
+        },
+        "h1": {
+          "buys": 6,
+          "sells": 9
+        },
+        "h6": {
+          "buys": 74,
+          "sells": 69
+        },
+        "h24": {
+          "buys": 3385,
+          "sells": 3124
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0x45e57a964CBc1280F7C9222148e6DffcC46F2B26",
+      "chain": "robinhood",
+      "symbol": "CATS",
+      "name": "ISTANBUL CATS",
+      "createdAt": "2026-09-25T17:34:27.000Z",
+      "pairCreatedAt": 1790357667000,
+      "pairAddress": "0x2f936bcd79392c6a1d77479104c193ec0704ea0faf33f5ebb38206ad6e8e20cc",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0x2f936bcd79392c6a1d77479104c193ec0704ea0faf33f5ebb38206ad6e8e20cc",
+      "priceUsd": 0.0001661,
+      "liquidityUsd": 39098.35,
+      "fdvUsd": 164522,
+      "marketCapUsd": 164522,
+      "volume": {
+        "m5": 94.99,
+        "h1": 4014.48,
+        "h6": 26592.82,
+        "h24": 283410.17
+      },
+      "volume5m": 94.99,
+      "volume1h": 4014.48,
+      "volume24h": 283410.17,
+      "priceChange": {
+        "m5": 0.84,
+        "h1": -3.34,
+        "h6": -24.52,
+        "h24": 204
+      },
+      "txns": {
+        "m5": {
+          "buys": 1,
+          "sells": 1
+        },
+        "h1": {
+          "buys": 18,
+          "sells": 16
+        },
+        "h6": {
+          "buys": 113,
+          "sells": 109
+        },
+        "h24": {
+          "buys": 1006,
+          "sells": 1032
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0x520541D03DEC790ce51746DA2a495dAfa62e87f8",
+      "chain": "robinhood",
+      "symbol": "OBJECTPAD",
+      "name": "ObjectPad",
+      "createdAt": "2026-09-25T21:16:42.000Z",
+      "pairCreatedAt": 1790371002000,
+      "pairAddress": "0xe83cfde6d42ca536267cadda8c461664cefa98dcde7f2e770f279715f9cc7b93",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0xe83cfde6d42ca536267cadda8c461664cefa98dcde7f2e770f279715f9cc7b93",
+      "priceUsd": 0.00004144,
+      "liquidityUsd": 19524.67,
+      "fdvUsd": 40745,
+      "marketCapUsd": 40745,
+      "volume": {
+        "m5": 180.45,
+        "h1": 5888,
+        "h6": 11520.91,
+        "h24": 492148.07
+      },
+      "volume5m": 180.45,
+      "volume1h": 5888,
+      "volume24h": 492148.07,
+      "priceChange": {
+        "m5": -3.57,
+        "h1": -5.76,
+        "h6": -11.73,
+        "h24": -28.96
+      },
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 1
+        },
+        "h1": {
+          "buys": 33,
+          "sells": 19
+        },
+        "h6": {
+          "buys": 85,
+          "sells": 72
+        },
+        "h24": {
+          "buys": 3619,
+          "sells": 2930
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0xA901F8E924eB9e2d30d4B8B92f92E71f7eBD1120",
+      "chain": "robinhood",
+      "symbol": "FOMOATER",
+      "name": "FOMOATER",
+      "createdAt": "2026-09-25T17:24:51.000Z",
+      "pairCreatedAt": 1790357091000,
+      "pairAddress": "0x84bc37fd8b0d574b418a237f81d24484d3aa28e80f0b5b33d6910184c195d326",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0x84bc37fd8b0d574b418a237f81d24484d3aa28e80f0b5b33d6910184c195d326",
+      "priceUsd": 0.00002057,
+      "liquidityUsd": 13757.65,
+      "fdvUsd": 20576,
+      "marketCapUsd": 20576,
+      "volume": {
+        "m5": 36.85,
+        "h1": 357.6,
+        "h6": 3889.53,
+        "h24": 273472.04
+      },
+      "volume5m": 36.85,
+      "volume1h": 357.6,
+      "volume24h": 273472.04,
+      "priceChange": {
+        "m5": -0.49,
+        "h1": -6.94,
+        "h6": -3,
+        "h24": -64.55
+      },
+      "txns": {
+        "m5": {
+          "buys": 2,
+          "sells": 5
+        },
+        "h1": {
+          "buys": 11,
+          "sells": 29
+        },
+        "h6": {
+          "buys": 76,
+          "sells": 229
+        },
+        "h24": {
+          "buys": 6938,
+          "sells": 4952
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0x7e84eEe12F356b568E6B847fAa05E19cFE4A5f4E",
+      "chain": "robinhood",
+      "symbol": "LOUIS",
+      "name": "Louis",
+      "createdAt": "2026-09-24T19:31:51.000Z",
+      "pairCreatedAt": 1790278311000,
+      "pairAddress": "0x07c8efd1b1afc07c4abf0114c24c9c82c830fc3cb281c3a906247cc4750b3a4b",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0x07c8efd1b1afc07c4abf0114c24c9c82c830fc3cb281c3a906247cc4750b3a4b",
+      "priceUsd": 0.00003179,
+      "liquidityUsd": 16212.76,
+      "fdvUsd": 31791,
+      "marketCapUsd": 31791,
+      "volume": {
+        "m5": 4.01,
+        "h1": 2026.7,
+        "h6": 23258.98,
+        "h24": 215761.58
+      },
+      "volume5m": 4.01,
+      "volume1h": 2026.7,
+      "volume24h": 215761.58,
+      "priceChange": {
+        "m5": -0.1,
+        "h1": -8.84,
+        "h6": -5.43,
+        "h24": -82.56
+      },
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 1
+        },
+        "h1": {
+          "buys": 12,
+          "sells": 16
+        },
+        "h6": {
+          "buys": 126,
+          "sells": 123
+        },
+        "h24": {
+          "buys": 1064,
+          "sells": 926
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0x24dc2B49d94Bc90784F73CcEc5f7FB2087418449",
+      "chain": "robinhood",
+      "symbol": "America",
+      "name": "America.gov",
+      "createdAt": "2026-09-25T20:29:34.000Z",
+      "pairCreatedAt": 1790368174000,
+      "pairAddress": "0x2d0007743d5c4effb5819bbedbe42e9b8c96e986b79e6064ca8e99ee4d1dd89d",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0x2d0007743d5c4effb5819bbedbe42e9b8c96e986b79e6064ca8e99ee4d1dd89d",
+      "priceUsd": 0.00001925,
+      "liquidityUsd": 12783.9,
+      "fdvUsd": 19251,
+      "marketCapUsd": 19251,
+      "volume": {
+        "m5": 27.8,
+        "h1": 388.14,
+        "h6": 6394.95,
+        "h24": 378159.72
+      },
+      "volume5m": 27.8,
+      "volume1h": 388.14,
+      "volume24h": 378159.72,
+      "priceChange": {
+        "m5": -0.27,
+        "h1": -10.61,
+        "h6": 7.67,
+        "h24": -63.94
+      },
+      "txns": {
+        "m5": {
+          "buys": 1,
+          "sells": 1
+        },
+        "h1": {
+          "buys": 1,
+          "sells": 8
+        },
+        "h6": {
+          "buys": 45,
+          "sells": 52
+        },
+        "h24": {
+          "buys": 2230,
+          "sells": 1803
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0xE926E89c9eeDBBDDE24F318F996E44df110a1e18",
+      "chain": "robinhood",
+      "symbol": "ROBININU",
+      "name": "Robin Inu",
+      "createdAt": "2026-09-25T16:00:48.000Z",
+      "pairCreatedAt": 1790352048000,
+      "pairAddress": "0xea57253d53f60ff49b60514aed75c6db7f6c166234c44b17bd33c684bb8a855c",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0xea57253d53f60ff49b60514aed75c6db7f6c166234c44b17bd33c684bb8a855c",
+      "priceUsd": 0.0000314,
+      "liquidityUsd": 30198.17,
+      "fdvUsd": 31406,
+      "marketCapUsd": 31406,
+      "volume": {
+        "m5": 723.42,
+        "h1": 903.23,
+        "h6": 1498.47,
+        "h24": 51148.95
+      },
+      "volume5m": 723.42,
+      "volume1h": 903.23,
+      "volume24h": 51148.95,
+      "priceChange": {
+        "m5": 5.89,
+        "h1": 6.46,
+        "h6": 4.33,
+        "h24": 55.57
+      },
+      "txns": {
+        "m5": {
+          "buys": 6,
+          "sells": 12
+        },
+        "h1": {
+          "buys": 16,
+          "sells": 30
+        },
+        "h6": {
+          "buys": 35,
+          "sells": 66
+        },
+        "h24": {
+          "buys": 447,
+          "sells": 787
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0xBA03E132561368e6d942DE42C108b6Ec187a5007",
+      "chain": "robinhood",
+      "symbol": "Pizzly",
+      "name": "ピズリPizzly",
+      "createdAt": "2026-09-25T17:06:05.000Z",
+      "pairCreatedAt": 1790355965000,
+      "pairAddress": "0x8aABDD4d9C6e2C76F4A3129CC2E6f65cBd991C15",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0x8aabdd4d9c6e2c76f4a3129cc2e6f65cbd991c15",
+      "priceUsd": 0.00001347,
+      "liquidityUsd": 13559.79,
+      "fdvUsd": 13474,
+      "marketCapUsd": 13474,
+      "volume": {
+        "m5": 0,
+        "h1": 0,
+        "h6": 0.2,
+        "h24": 2133174.27
+      },
+      "volume5m": 0,
+      "volume1h": 0,
+      "volume24h": 2133174.27,
+      "priceChange": {
+        "m5": 0,
+        "h1": 0,
+        "h6": 0.18,
+        "h24": 0.37
+      },
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 0,
+          "sells": 2
+        },
+        "h24": {
+          "buys": 3414,
+          "sells": 2657
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0xe36Dc5d02BDbF9601c9aBa190411BbC8A6ff425f",
+      "chain": "robinhood",
+      "symbol": "UPTOBER",
+      "name": "Uptober",
+      "createdAt": "2026-08-04T19:10:18.000Z",
+      "pairCreatedAt": 1785870618000,
+      "pairAddress": "0xc60b6B432D60c811F22824A77575594a5F22e1dF",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0xc60b6b432d60c811f22824a77575594a5f22e1df",
+      "priceUsd": 0.0001774,
+      "liquidityUsd": 47505.57,
+      "fdvUsd": 177500,
+      "marketCapUsd": 177500,
+      "volume": {
+        "m5": 1293.76,
+        "h1": 7562.05,
+        "h6": 29525.98,
+        "h24": 103277.81
+      },
+      "volume5m": 1293.76,
+      "volume1h": 7562.05,
+      "volume24h": 103277.81,
+      "priceChange": {
+        "m5": -6.14,
+        "h1": -8.38,
+        "h6": -12.31,
+        "h24": 8.25
+      },
+      "txns": {
+        "m5": {
+          "buys": 20,
+          "sells": 7
+        },
+        "h1": {
+          "buys": 281,
+          "sells": 102
+        },
+        "h6": {
+          "buys": 679,
+          "sells": 246
+        },
+        "h24": {
+          "buys": 2223,
+          "sells": 1647
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0x51Ff21000B5163e0aA8e03D0AF7eaE8073F65601",
+      "chain": "robinhood",
+      "symbol": "DDOS",
+      "name": "dropping dollars on strangers",
+      "createdAt": "2026-09-26T05:19:13.000Z",
+      "pairCreatedAt": 1790399953000,
+      "pairAddress": "0xc4d17C3e7446367c060F97Cd57654F88493fFb58",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0xc4d17c3e7446367c060f97cd57654f88493ffb58",
+      "priceUsd": 0.00001244,
+      "liquidityUsd": 12510.3,
+      "fdvUsd": 12449,
+      "marketCapUsd": 12449,
+      "volume": {
+        "m5": 0,
+        "h1": 0.71,
+        "h6": 57629.31,
+        "h24": 1555499.9
+      },
+      "volume5m": 0,
+      "volume1h": 0.71,
+      "volume24h": 1555499.9,
+      "priceChange": {
+        "m5": 0,
+        "h1": -0.03,
+        "h6": -89.4,
+        "h24": 2.92
+      },
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 1
+        },
+        "h6": {
+          "buys": 95,
+          "sells": 309
+        },
+        "h24": {
+          "buys": 2524,
+          "sells": 1910
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0x631381aACe6376f4670d0257759F202475A45Cd1",
+      "chain": "robinhood",
+      "symbol": "ROYALTY",
+      "name": "Royalty",
+      "createdAt": "2026-09-26T09:20:39.000Z",
+      "pairCreatedAt": 1790414439000,
+      "pairAddress": "0x7373135e7dd72035336668aa196d9680fdc5884ba5276170028014ad2447abf7",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0x7373135e7dd72035336668aa196d9680fdc5884ba5276170028014ad2447abf7",
+      "priceUsd": 0.00001906,
+      "liquidityUsd": 13253.65,
+      "fdvUsd": 18070,
+      "marketCapUsd": 18070,
+      "volume": {
+        "m5": 4.02,
+        "h1": 9037.32,
+        "h6": 185123.89,
+        "h24": 185123.89
+      },
+      "volume5m": 4.02,
+      "volume1h": 9037.32,
+      "volume24h": 185123.89,
+      "priceChange": {
+        "m5": -0.12,
+        "h1": -51.19,
+        "h6": -66.74,
+        "h24": -66.74
+      },
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 1
+        },
+        "h1": {
+          "buys": 72,
+          "sells": 105
+        },
+        "h6": {
+          "buys": 1602,
+          "sells": 1821
+        },
+        "h24": {
+          "buys": 1602,
+          "sells": 1821
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0xa84bC895036754589edA042A3349aB43F62e6763",
+      "chain": "robinhood",
+      "symbol": "E/CAT",
+      "name": "e/cat",
+      "createdAt": "2026-09-26T08:13:04.000Z",
+      "pairCreatedAt": 1790410384000,
+      "pairAddress": "0x8330EF5F35D5a76987311fF301A91890826bBF9a",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0x8330ef5f35d5a76987311ff301a91890826bbf9a",
+      "priceUsd": 0.00001225,
+      "liquidityUsd": 12300.32,
+      "fdvUsd": 12253,
+      "marketCapUsd": 12253,
+      "volume": {
+        "m5": 0,
+        "h1": 0,
+        "h6": 1134322.92,
+        "h24": 1134322.92
+      },
+      "volume5m": 0,
+      "volume1h": 0,
+      "volume24h": 1134322.92,
+      "priceChange": {
+        "m5": 0,
+        "h1": 0,
+        "h6": 1.22,
+        "h24": 1.22
+      },
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 2129,
+          "sells": 1704
+        },
+        "h24": {
+          "buys": 2129,
+          "sells": 1704
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0x70967C315d512396575daD69B2480d44C87D2B90",
+      "chain": "robinhood",
+      "symbol": "JAN",
+      "name": "JAN183411",
+      "createdAt": "2026-09-26T00:28:38.000Z",
+      "pairCreatedAt": 1790382518000,
+      "pairAddress": "0xF4c74E2841AE9d70020B6234Ba6a9ac8B9cE1C53",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0xf4c74e2841ae9d70020b6234ba6a9ac8b9ce1c53",
+      "priceUsd": 0.00001344,
+      "liquidityUsd": 13551.78,
+      "fdvUsd": 13449,
+      "marketCapUsd": 13449,
+      "volume": {
+        "m5": 0,
+        "h1": 0,
+        "h6": 2.52,
+        "h24": 2479401.16
+      },
+      "volume5m": 0,
+      "volume1h": 0,
+      "volume24h": 2479401.16,
+      "priceChange": {
+        "m5": 0,
+        "h1": 0,
+        "h6": -0.17,
+        "h24": -0.05
+      },
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 0,
+          "sells": 1
+        },
+        "h24": {
+          "buys": 3649,
+          "sells": 1991
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0xf7dcFeCa1D70cF75047A5272495C436c16981618",
+      "chain": "robinhood",
+      "symbol": "Cassie",
+      "name": "The Hero",
+      "createdAt": "2026-09-25T20:27:33.000Z",
+      "pairCreatedAt": 1790368053000,
+      "pairAddress": "0x7bD4992d990005998500612F037756d4a8f5A8a8",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0x7bd4992d990005998500612f037756d4a8f5a8a8",
+      "priceUsd": 0.00001355,
+      "liquidityUsd": 13602.08,
+      "fdvUsd": 13557,
+      "marketCapUsd": 13557,
+      "volume": {
+        "m5": 0,
+        "h1": 0,
+        "h6": 0.62,
+        "h24": 1056090.35
+      },
+      "volume5m": 0,
+      "volume1h": 0,
+      "volume24h": 1056090.35,
+      "priceChange": {
+        "m5": 0,
+        "h1": 0,
+        "h6": 0.06,
+        "h24": 0.59
+      },
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 0,
+          "sells": 2
+        },
+        "h24": {
+          "buys": 1688,
+          "sells": 1584
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0x6E1B7965cdf9A0F5b9a02185Dc003b9a59b2C3CB",
+      "chain": "robinhood",
+      "symbol": "GUD",
+      "name": "gud",
+      "createdAt": "2026-09-25T22:10:38.000Z",
+      "pairCreatedAt": 1790374238000,
+      "pairAddress": "0xa4277e13A0818E745bB87404Ff3Df13cDEAE60F5",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0xa4277e13a0818e745bb87404ff3df13cdeae60f5",
+      "priceUsd": 0.0000136,
+      "liquidityUsd": 13651.73,
+      "fdvUsd": 13608,
+      "marketCapUsd": 13608,
+      "volume": {
+        "m5": 0,
+        "h1": 0,
+        "h6": 0.06,
+        "h24": 989625
+      },
+      "volume5m": 0,
+      "volume1h": 0,
+      "volume24h": 989625,
+      "priceChange": {
+        "m5": 0,
+        "h1": 0,
+        "h6": -0.08,
+        "h24": -31.64
+      },
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 0,
+          "sells": 1
+        },
+        "h24": {
+          "buys": 1448,
+          "sells": 1165
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0x2BD96E4f3C5AEb4D025E7CF98467aB7a9f30F500",
+      "chain": "robinhood",
+      "symbol": "GRACE",
+      "name": "The SpaceX Dragon",
+      "createdAt": "2026-09-26T00:13:35.000Z",
+      "pairCreatedAt": 1790381615000,
+      "pairAddress": "0xD6752DB527c882a9cb25BA0a7a002140e535531F",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0xd6752db527c882a9cb25ba0a7a002140e535531f",
+      "priceUsd": 0.00001348,
+      "liquidityUsd": 13549.84,
+      "fdvUsd": 13485,
+      "marketCapUsd": 13485,
+      "volume": {
+        "m5": 0,
+        "h1": 0,
+        "h6": 5.3,
+        "h24": 1577453.23
+      },
+      "volume5m": 0,
+      "volume1h": 0,
+      "volume24h": 1577453.23,
+      "priceChange": {
+        "m5": 0,
+        "h1": 0,
+        "h6": -0.13,
+        "h24": 0.18
+      },
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 1,
+          "sells": 1
+        },
+        "h24": {
+          "buys": 2113,
+          "sells": 1731
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0xbA36ecAf7932873e286aFDeaFcBBa1304279DD20",
+      "chain": "robinhood",
+      "symbol": "PULSO",
+      "name": "PULSO",
+      "createdAt": "2026-09-25T21:49:43.000Z",
+      "pairCreatedAt": 1790372983000,
+      "pairAddress": "0x22004774ad075e7f4a0a0fa0fc9f68fa8dfc1fee110a3dc37a1d127066be6edc",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0x22004774ad075e7f4a0a0fa0fc9f68fa8dfc1fee110a3dc37a1d127066be6edc",
+      "priceUsd": 0.00006798,
+      "liquidityUsd": 25004.03,
+      "fdvUsd": 67986,
+      "marketCapUsd": 67986,
+      "volume": {
+        "m5": 0,
+        "h1": 4.96,
+        "h6": 325.17,
+        "h24": 19136.84
+      },
+      "volume5m": 0,
+      "volume1h": 4.96,
+      "volume24h": 19136.84,
+      "priceChange": {
+        "m5": 0,
+        "h1": -0.1,
+        "h6": -0.47,
+        "h24": 12.44
+      },
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 1,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 16,
+          "sells": 12
+        },
+        "h24": {
+          "buys": 98,
+          "sells": 88
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0x81b2ae5F1C126daCbbB50572Fd0ddf2272780910",
+      "chain": "robinhood",
+      "symbol": "HO",
+      "name": "Hermes One",
+      "createdAt": "2026-09-25T23:28:17.000Z",
+      "pairCreatedAt": 1790378897000,
+      "pairAddress": "0xaacb501075D9c9792C82f80d338533f08e5419D7",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0xaacb501075d9c9792c82f80d338533f08e5419d7",
+      "priceUsd": 0.00001364,
+      "liquidityUsd": 13727.06,
+      "fdvUsd": 13640,
+      "marketCapUsd": 13640,
+      "volume": {
+        "m5": 0,
+        "h1": 0,
+        "h6": 0,
+        "h24": 1666115.1
+      },
+      "volume5m": 0,
+      "volume1h": 0,
+      "volume24h": 1666115.1,
+      "priceChange": {
+        "m5": 0,
+        "h1": 0,
+        "h6": 0,
+        "h24": -29.38
+      },
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h24": {
+          "buys": 1731,
+          "sells": 1451
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0x1dE7043CEc8C0776FECd455409d5b9148a5d2BA3",
+      "chain": "robinhood",
+      "symbol": "crown",
+      "name": "museguys",
+      "createdAt": "2026-09-23T22:50:46.000Z",
+      "pairCreatedAt": 1790203846000,
+      "pairAddress": "0xaffa3d42d42f1de242aca6653c9522f3bb4db2b75d6311b0c247e3337c331a81",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0xaffa3d42d42f1de242aca6653c9522f3bb4db2b75d6311b0c247e3337c331a81",
+      "priceUsd": 9.784e-7,
+      "liquidityUsd": 45435.04,
+      "fdvUsd": 96759,
+      "marketCapUsd": 96759,
+      "volume": {
+        "m5": 0,
+        "h1": 281.47,
+        "h6": 3247.92,
+        "h24": 309864.97
+      },
+      "volume5m": 0,
+      "volume1h": 281.47,
+      "volume24h": 309864.97,
+      "priceChange": {
+        "m5": 0,
+        "h1": 4.52,
+        "h6": 7.27,
+        "h24": 470
+      },
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 4,
+          "sells": 6
+        },
+        "h6": {
+          "buys": 40,
+          "sells": 66
+        },
+        "h24": {
+          "buys": 2219,
+          "sells": 3452
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0x40E1A49553Ce67058fb33C2fE1446C7e0ee0038f",
+      "chain": "robinhood",
+      "symbol": "PEARCAT",
+      "name": "pear cat",
+      "createdAt": "2026-09-25T01:31:17.000Z",
+      "pairCreatedAt": 1790299877000,
+      "pairAddress": "0xc810bc84a76ec3fea34cc1e646db4677e4a28c614230bfce20ea5f092c54e621",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0xc810bc84a76ec3fea34cc1e646db4677e4a28c614230bfce20ea5f092c54e621",
+      "priceUsd": 0.00006089,
+      "liquidityUsd": 23667.03,
+      "fdvUsd": 60892,
+      "marketCapUsd": 60892,
+      "volume": {
+        "m5": 137.78,
+        "h1": 1434.07,
+        "h6": 14755.38,
+        "h24": 280163.66
+      },
+      "volume5m": 137.78,
+      "volume1h": 1434.07,
+      "volume24h": 280163.66,
+      "priceChange": {
+        "m5": 2.23,
+        "h1": -14.37,
+        "h6": -33.08,
+        "h24": 55.34
+      },
+      "txns": {
+        "m5": {
+          "buys": 1,
+          "sells": 1
+        },
+        "h1": {
+          "buys": 9,
+          "sells": 16
+        },
+        "h6": {
+          "buys": 66,
+          "sells": 116
+        },
+        "h24": {
+          "buys": 1311,
+          "sells": 1154
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0x290f2DbDC155E85bd8ed75A2D56aBeEE154F18e3",
+      "chain": "robinhood",
+      "symbol": "DAEMON",
+      "name": "Daemon Academy",
+      "createdAt": "2026-09-25T17:48:39.000Z",
+      "pairCreatedAt": 1790358519000,
+      "pairAddress": "0x9c7561e8a380171477e5b3a55042a6477b66ead88cdfaa31d37fa7dd9ed80128",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0x9c7561e8a380171477e5b3a55042a6477b66ead88cdfaa31d37fa7dd9ed80128",
+      "priceUsd": 0.00001081,
+      "liquidityUsd": 12850.93,
+      "fdvUsd": 10808,
+      "marketCapUsd": 10808,
+      "volume": {
+        "m5": 0,
+        "h1": 19.9,
+        "h6": 234.57,
+        "h24": 117882.88
+      },
+      "volume5m": 0,
+      "volume1h": 19.9,
+      "volume24h": 117882.88,
+      "priceChange": {
+        "m5": 0,
+        "h1": -0.68,
+        "h6": 10.21,
+        "h24": -82.92
+      },
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 1
+        },
+        "h6": {
+          "buys": 3,
+          "sells": 9
+        },
+        "h24": {
+          "buys": 645,
+          "sells": 582
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0xb766e49Db51Ebb71182B650452e19D8eeBC74255",
+      "chain": "robinhood",
+      "symbol": "SIN",
+      "name": "Sin",
+      "createdAt": "2026-09-25T19:21:47.000Z",
+      "pairCreatedAt": 1790364107000,
+      "pairAddress": "0xe93baa8657b79bf03d82568625818d73f3b4b06cb08117c2c54a61146135893a",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0xe93baa8657b79bf03d82568625818d73f3b4b06cb08117c2c54a61146135893a",
+      "priceUsd": 0.00001063,
+      "liquidityUsd": 9891.35,
+      "fdvUsd": 10636,
+      "marketCapUsd": 10636,
+      "volume": {
+        "m5": 0,
+        "h1": 512.38,
+        "h6": 1609.51,
+        "h24": 258918.06
+      },
+      "volume5m": 0,
+      "volume1h": 512.38,
+      "volume24h": 258918.06,
+      "priceChange": {
+        "m5": 0,
+        "h1": 13.44,
+        "h6": 8.79,
+        "h24": -81.87
+      },
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 14,
+          "sells": 6
+        },
+        "h6": {
+          "buys": 26,
+          "sells": 41
+        },
+        "h24": {
+          "buys": 1665,
+          "sells": 1389
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 2,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0x0fb0a7396648a859BeDBd43e0Ba76a9Afc4e8896",
+      "chain": "robinhood",
+      "symbol": "e/acc",
+      "name": "Effective Accelerationism",
+      "createdAt": "2026-09-26T07:51:57.000Z",
+      "pairCreatedAt": 1790409117000,
+      "pairAddress": "0x3360df8d18041B2F6a455b011e9e717919f6D81a",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0x3360df8d18041b2f6a455b011e9e717919f6d81a",
+      "priceUsd": 0.00001215,
+      "liquidityUsd": 12247.84,
+      "fdvUsd": 12153,
+      "marketCapUsd": 12153,
+      "volume": {
+        "m5": 0,
+        "h1": 0,
+        "h6": 2098425.67,
+        "h24": 2098425.67
+      },
+      "volume5m": 0,
+      "volume1h": 0,
+      "volume24h": 2098425.67,
+      "priceChange": {
+        "m5": 0,
+        "h1": 0,
+        "h6": 0.39,
+        "h24": 0.39
+      },
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 3577,
+          "sells": 2984
+        },
+        "h24": {
+          "buys": 3577,
+          "sells": 2984
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0x54dFCA823a37Df628B573E7CAEdb2c02E24C13a3",
+      "chain": "robinhood",
+      "symbol": "CLASP",
+      "name": "Clasp",
+      "createdAt": "2026-09-26T06:15:41.000Z",
+      "pairCreatedAt": 1790403341000,
+      "pairAddress": "0x9d814998287e65d9cd358cf915b6d0a59084b183013e797064c700e98342af11",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0x9d814998287e65d9cd358cf915b6d0a59084b183013e797064c700e98342af11",
+      "priceUsd": 0.000008194,
+      "liquidityUsd": 8684.68,
+      "fdvUsd": 7890,
+      "marketCapUsd": 7890,
+      "volume": {
+        "m5": 4.13,
+        "h1": 104.16,
+        "h6": 13034.04,
+        "h24": 208054.54
+      },
+      "volume5m": 4.13,
+      "volume1h": 104.16,
+      "volume24h": 208054.54,
+      "priceChange": {
+        "m5": -0.02,
+        "h1": -1.09,
+        "h6": -78.05,
+        "h24": -85.22
+      },
+      "txns": {
+        "m5": {
+          "buys": 1,
+          "sells": 2
+        },
+        "h1": {
+          "buys": 2,
+          "sells": 9
+        },
+        "h6": {
+          "buys": 171,
+          "sells": 230
+        },
+        "h24": {
+          "buys": 1721,
+          "sells": 1296
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 10,
+      "pairCount": 2,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0x8010619Ea2b22B5D4964b29Cf48b2EE8bd9160CF",
+      "chain": "robinhood",
+      "symbol": "AMERICA",
+      "name": "America.gov",
+      "createdAt": "2026-09-25T19:28:21.000Z",
+      "pairCreatedAt": 1790364501000,
+      "pairAddress": "0xf31f3c126b6e97cc3813171c3ca1881917be73a033d3fcbaf07889bc075bf6e7",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0xf31f3c126b6e97cc3813171c3ca1881917be73a033d3fcbaf07889bc075bf6e7",
+      "priceUsd": 0.000009533,
+      "liquidityUsd": 9532.72,
+      "fdvUsd": 9533,
+      "marketCapUsd": 9533,
+      "volume": {
+        "m5": 0,
+        "h1": 95374.26,
+        "h6": 95377.1,
+        "h24": 910501.88
+      },
+      "volume5m": 0,
+      "volume1h": 95374.26,
+      "volume24h": 910501.88,
+      "priceChange": {
+        "m5": 0,
+        "h1": 0.97,
+        "h6": 0.74,
+        "h24": 1.2
+      },
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 172,
+          "sells": 169
+        },
+        "h6": {
+          "buys": 172,
+          "sells": 171
+        },
+        "h24": {
+          "buys": 1624,
+          "sells": 1373
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0x54C64506De52f00518Dd30292B8dAd4bCdb172c8",
+      "chain": "robinhood",
+      "symbol": "AI",
+      "name": "Alien Inu",
+      "createdAt": "2026-09-25T20:41:19.000Z",
+      "pairCreatedAt": 1790368879000,
+      "pairAddress": "0x51e503fa805a78b10863d90bfd83c1be5e4182eea1e78a8d4ab7658dd78e5246",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0x51e503fa805a78b10863d90bfd83c1be5e4182eea1e78a8d4ab7658dd78e5246",
+      "priceUsd": 0.000008094,
+      "liquidityUsd": 8094.82,
+      "fdvUsd": 8095,
+      "marketCapUsd": 8095,
+      "volume": {
+        "m5": 0,
+        "h1": 0,
+        "h6": 0.07,
+        "h24": 754023.71
+      },
+      "volume5m": 0,
+      "volume1h": 0,
+      "volume24h": 754023.71,
+      "priceChange": {
+        "m5": 0,
+        "h1": 0,
+        "h6": 0.04,
+        "h24": 0.21
+      },
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 0,
+          "sells": 1
+        },
+        "h24": {
+          "buys": 1267,
+          "sells": 1543
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0x88B4878552eEa03715f4753E8733730395A6a1b2",
+      "chain": "robinhood",
+      "symbol": "CRATE",
+      "name": "Crate",
+      "createdAt": "2026-09-25T17:48:38.000Z",
+      "pairCreatedAt": 1790358518000,
+      "pairAddress": "0xc7e6a38d4e1ea39355329aba8f70d73d5bc175dacd5590158632fe856cbc4c97",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0xc7e6a38d4e1ea39355329aba8f70d73d5bc175dacd5590158632fe856cbc4c97",
+      "priceUsd": 0.000006674,
+      "liquidityUsd": 5954.36,
+      "fdvUsd": 6674,
+      "marketCapUsd": 6674,
+      "volume": {
+        "m5": 0,
+        "h1": 654.81,
+        "h6": 8456.39,
+        "h24": 41551.36
+      },
+      "volume5m": 0,
+      "volume1h": 654.81,
+      "volume24h": 41551.36,
+      "priceChange": {
+        "m5": 0.03,
+        "h1": -0.32,
+        "h6": 6.73,
+        "h24": 25.55
+      },
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 1
+        },
+        "h1": {
+          "buys": 99,
+          "sells": 111
+        },
+        "h6": {
+          "buys": 478,
+          "sells": 517
+        },
+        "h24": {
+          "buys": 861,
+          "sells": 996
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0x7b4D1932934BcdAf89cf34ec6A7F3f3fD43f997C",
+      "chain": "robinhood",
+      "symbol": "FOMOGUYS",
+      "name": "Fomo Guys",
+      "createdAt": "2026-09-25T16:50:49.000Z",
+      "pairCreatedAt": 1790355049000,
+      "pairAddress": "0x2238834c429f5b6cf09e4355e77133bfd79e9c2dd9f4d1cabcad053fdc342577",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0x2238834c429f5b6cf09e4355e77133bfd79e9c2dd9f4d1cabcad053fdc342577",
+      "priceUsd": 0.00001377,
+      "liquidityUsd": 9536.27,
+      "fdvUsd": 13375,
+      "marketCapUsd": 13375,
+      "volume": {
+        "m5": 593.13,
+        "h1": 2483.96,
+        "h6": 3611.59,
+        "h24": 172327.56
+      },
+      "volume5m": 593.13,
+      "volume1h": 2483.96,
+      "volume24h": 172327.56,
+      "priceChange": {
+        "m5": -20.9,
+        "h1": 2.74,
+        "h6": -15.02,
+        "h24": -65.45
+      },
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 4
+        },
+        "h1": {
+          "buys": 16,
+          "sells": 14
+        },
+        "h6": {
+          "buys": 47,
+          "sells": 44
+        },
+        "h24": {
+          "buys": 1460,
+          "sells": 1088
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0xf405Ee6594c596a14E3703EE4f690F0c2df649Dd",
+      "chain": "robinhood",
+      "symbol": "DRIVE",
+      "name": "Drive Up",
+      "createdAt": "2026-09-25T18:35:26.000Z",
+      "pairCreatedAt": 1790361326000,
+      "pairAddress": "0x82c1075aa7a4e70e1b4643f145ca759849f61146b782a8a54e80e8856ac31278",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0x82c1075aa7a4e70e1b4643f145ca759849f61146b782a8a54e80e8856ac31278",
+      "priceUsd": 0.00000439,
+      "liquidityUsd": 6356.68,
+      "fdvUsd": 4390,
+      "marketCapUsd": 4390,
+      "volume": {
+        "m5": 0,
+        "h1": 119.94,
+        "h6": 1121.94,
+        "h24": 430052.65
+      },
+      "volume5m": 0,
+      "volume1h": 119.94,
+      "volume24h": 430052.65,
+      "priceChange": {
+        "m5": 0,
+        "h1": -7.33,
+        "h6": -15.51,
+        "h24": -92.4
+      },
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 1
+        },
+        "h6": {
+          "buys": 3,
+          "sells": 13
+        },
+        "h24": {
+          "buys": 1157,
+          "sells": 1323
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 2,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0xcd5eE8E47D8D48595B708c7CB6412eD5303A7D4A",
+      "chain": "robinhood",
+      "symbol": "O",
+      "name": "O",
+      "createdAt": "2026-09-26T01:00:41.000Z",
+      "pairCreatedAt": 1790384441000,
+      "pairAddress": "0x6f7516cA1A590d934dc7274150aBD42F99bffE4f",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0x6f7516ca1a590d934dc7274150abd42f99bffe4f",
+      "priceUsd": 0.00001213,
+      "liquidityUsd": 12165.55,
+      "fdvUsd": 12136,
+      "marketCapUsd": 12136,
+      "volume": {
+        "m5": 0,
+        "h1": 28.02,
+        "h6": 98.03,
+        "h24": 674769.72
+      },
+      "volume5m": 0,
+      "volume1h": 28.02,
+      "volume24h": 674769.72,
+      "priceChange": {
+        "m5": 0,
+        "h1": -0.4,
+        "h6": -0.79,
+        "h24": 0.31
+      },
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 1
+        },
+        "h6": {
+          "buys": 1,
+          "sells": 5
+        },
+        "h24": {
+          "buys": 974,
+          "sells": 852
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0x270c34A39D4E7743d4d02b148462cC09CB56a842",
+      "chain": "robinhood",
+      "symbol": "gas",
+      "name": "gascoin",
+      "createdAt": "2026-09-26T06:15:45.000Z",
+      "pairCreatedAt": 1790403345000,
+      "pairAddress": "0x5f7E99EEb8e6328CE9aBcDB84422319921F47A96",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0x5f7e99eeb8e6328ce9abcdb84422319921f47a96",
+      "priceUsd": 0.00001224,
+      "liquidityUsd": 12265.9,
+      "fdvUsd": 12248,
+      "marketCapUsd": 12248,
+      "volume": {
+        "m5": 0,
+        "h1": 0,
+        "h6": 88.24,
+        "h24": 324629.81
+      },
+      "volume5m": 0,
+      "volume1h": 0,
+      "volume24h": 324629.81,
+      "priceChange": {
+        "m5": 0,
+        "h1": 0,
+        "h6": -0.59,
+        "h24": 1.27
+      },
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 1,
+          "sells": 4
+        },
+        "h24": {
+          "buys": 669,
+          "sells": 388
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0xf3aC5F95151AdF049a4DFE263d8D0F9C0f168ccb",
+      "chain": "robinhood",
+      "symbol": "KARDASHEV",
+      "name": "Kardashev Research",
+      "createdAt": "2026-09-26T11:32:17.000Z",
+      "pairCreatedAt": 1790422337000,
+      "pairAddress": "0xf32ed6ac2b8649c261279cc413792178b1e915f534e398535f137c1fd210ca9c",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0xf32ed6ac2b8649c261279cc413792178b1e915f534e398535f137c1fd210ca9c",
+      "priceUsd": 0.000008849,
+      "liquidityUsd": 8848.87,
+      "fdvUsd": 8849,
+      "marketCapUsd": 8849,
+      "volume": {
+        "m5": 0,
+        "h1": 153.1,
+        "h6": 614514.21,
+        "h24": 614514.21
+      },
+      "volume5m": 0,
+      "volume1h": 153.1,
+      "volume24h": 614514.21,
+      "priceChange": {
+        "m5": 0,
+        "h1": -2.16,
+        "h6": 1.29,
+        "h24": 1.29
+      },
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 2,
+          "sells": 6
+        },
+        "h6": {
+          "buys": 1210,
+          "sells": 1006
+        },
+        "h24": {
+          "buys": 1210,
+          "sells": 1006
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0xBAeCC1Ca55c5c1FA7a62C87Da44B481722F949fc",
+      "chain": "robinhood",
+      "symbol": "BAGS",
+      "name": "getbags.fun",
+      "createdAt": "2026-09-25T19:45:13.000Z",
+      "pairCreatedAt": 1790365513000,
+      "pairAddress": "0xb2ea1877bc0281e0f684da65d9dcd8d4fc3eafa23a45e0d0fdee0891ae0f897b",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0xb2ea1877bc0281e0f684da65d9dcd8d4fc3eafa23a45e0d0fdee0891ae0f897b",
+      "priceUsd": 0.00000416,
+      "liquidityUsd": 6187.88,
+      "fdvUsd": 4160,
+      "marketCapUsd": 4160,
+      "volume": {
+        "m5": 0,
+        "h1": 32.69,
+        "h6": 210.46,
+        "h24": 189514.59
+      },
+      "volume5m": 0,
+      "volume1h": 32.69,
+      "volume24h": 189514.59,
+      "priceChange": {
+        "m5": 0,
+        "h1": -2.29,
+        "h6": -1.31,
+        "h24": -92.52
+      },
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 4
+        },
+        "h6": {
+          "buys": 1,
+          "sells": 14
+        },
+        "h24": {
+          "buys": 1916,
+          "sells": 1518
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0x8bFad9837F46E4A867F414996CC465Bf345538e3",
+      "chain": "robinhood",
+      "symbol": "RSE",
+      "name": "Social Explorer",
+      "createdAt": "2026-09-26T00:33:47.000Z",
+      "pairCreatedAt": 1790382827000,
+      "pairAddress": "0xda984c23d7c60068fb9e00ff0b6bee9d798e1ac58048252dc266b27672f03021",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0xda984c23d7c60068fb9e00ff0b6bee9d798e1ac58048252dc266b27672f03021",
+      "priceUsd": 0.000009169,
+      "liquidityUsd": 9187.89,
+      "fdvUsd": 8883,
+      "marketCapUsd": 8883,
+      "volume": {
+        "m5": 0,
+        "h1": 174.44,
+        "h6": 2606.45,
+        "h24": 77027.66
+      },
+      "volume5m": 0,
+      "volume1h": 174.44,
+      "volume24h": 77027.66,
+      "priceChange": {
+        "m5": 0,
+        "h1": -7.36,
+        "h6": -35.8,
+        "h24": -83.47
+      },
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 6
+        },
+        "h6": {
+          "buys": 19,
+          "sells": 49
+        },
+        "h24": {
+          "buys": 693,
+          "sells": 668
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0x9ef8C50E20FAF002c90824B25E760D1B70c62B4D",
+      "chain": "robinhood",
+      "symbol": "Strike",
+      "name": "Strike",
+      "createdAt": "2026-09-25T21:09:32.000Z",
+      "pairCreatedAt": 1790370572000,
+      "pairAddress": "0xe9db5b169008f139a98788bf260bf6f8b690b8324869e7d81d605f0e6f47a438",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0xe9db5b169008f139a98788bf260bf6f8b690b8324869e7d81d605f0e6f47a438",
+      "priceUsd": 0.000003539,
+      "liquidityUsd": 5710.3,
+      "fdvUsd": 3539,
+      "marketCapUsd": 3539,
+      "volume": {
+        "m5": 0,
+        "h1": 42.68,
+        "h6": 3850.45,
+        "h24": 95868.24
+      },
+      "volume5m": 0,
+      "volume1h": 42.68,
+      "volume24h": 95868.24,
+      "priceChange": {
+        "m5": 0,
+        "h1": 0.16,
+        "h6": -80.97,
+        "h24": -93.61
+      },
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 1,
+          "sells": 2
+        },
+        "h6": {
+          "buys": 15,
+          "sells": 96
+        },
+        "h24": {
+          "buys": 671,
+          "sells": 872
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0xf54d6B75f0092927E18a43557a011d14ef775266",
+      "chain": "robinhood",
+      "symbol": "LANDMAN",
+      "name": "Landman Meme",
+      "createdAt": "2026-09-25T16:08:35.000Z",
+      "pairCreatedAt": 1790352515000,
+      "pairAddress": "0x28d0070241bB98Bf94807f4C62F2aA9BAa54c9D4",
+      "dexId": "rubicon",
+      "url": "https://dexscreener.com/robinhood/0x28d0070241bb98bf94807f4c62f2aa9baa54c9d4",
+      "priceUsd": 0.00001148,
+      "liquidityUsd": 8693.91,
+      "fdvUsd": 11488,
+      "marketCapUsd": 11488,
+      "volume": {
+        "m5": 0,
+        "h1": 0,
+        "h6": 39.08,
+        "h24": 81449.69
+      },
+      "volume5m": 0,
+      "volume1h": 0,
+      "volume24h": 81449.69,
+      "priceChange": {
+        "m5": 0,
+        "h1": 0,
+        "h6": -1.68,
+        "h24": 168
+      },
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 0,
+          "sells": 1
+        },
+        "h24": {
+          "buys": 59,
+          "sells": 65
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0xce3a398752263C57Be5d32DE7A6f06b4A97de258",
+      "chain": "robinhood",
+      "symbol": "FOMOPUNKS",
+      "name": "fomopunks",
+      "createdAt": "2026-09-25T20:04:13.000Z",
+      "pairCreatedAt": 1790366653000,
+      "pairAddress": "0x62ac277779a470cc59c70d3a6a16499fbfd9a1d99093094448b125abc0083300",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0x62ac277779a470cc59c70d3a6a16499fbfd9a1d99093094448b125abc0083300",
+      "priceUsd": 0.000004394,
+      "liquidityUsd": 6357.13,
+      "fdvUsd": 4395,
+      "marketCapUsd": 4395,
+      "volume": {
+        "m5": 0,
+        "h1": 15.27,
+        "h6": 219.37,
+        "h24": 177985.82
+      },
+      "volume5m": 0,
+      "volume1h": 15.27,
+      "volume24h": 177985.82,
+      "priceChange": {
+        "m5": 0,
+        "h1": -0.45,
+        "h6": 3.64,
+        "h24": -92.52
+      },
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 1,
+          "sells": 2
+        },
+        "h6": {
+          "buys": 7,
+          "sells": 12
+        },
+        "h24": {
+          "buys": 1497,
+          "sells": 1239
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0x26E833f38890C80B79864787524fA59802d20B32",
+      "chain": "robinhood",
+      "symbol": "MILT",
+      "name": "FOLLOW ME",
+      "createdAt": "2026-09-26T06:38:05.000Z",
+      "pairCreatedAt": 1790404685000,
+      "pairAddress": "0x25C48688f606a7302739Ac4c9d4A8f77De30C0D2",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0x25c48688f606a7302739ac4c9d4a8f77de30c0d2",
+      "priceUsd": 0.00001088,
+      "liquidityUsd": 8029.53,
+      "fdvUsd": 10889,
+      "marketCapUsd": 10889,
+      "volume": {
+        "m5": 0,
+        "h1": 227.92,
+        "h6": 14964.05,
+        "h24": 35561.3
+      },
+      "volume5m": 0,
+      "volume1h": 227.92,
+      "volume24h": 35561.3,
+      "priceChange": {
+        "m5": 0,
+        "h1": -6.37,
+        "h6": -59.5,
+        "h24": 712
+      },
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 1,
+          "sells": 6
+        },
+        "h6": {
+          "buys": 106,
+          "sells": 111
+        },
+        "h24": {
+          "buys": 270,
+          "sells": 199
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0x0A077eE2B56a154c042A8A3933F2235432023D05",
+      "chain": "robinhood",
+      "symbol": "GOLD",
+      "name": "Keepfall",
+      "createdAt": "2026-09-26T05:44:47.000Z",
+      "pairCreatedAt": 1790401487000,
+      "pairAddress": "0x9edcc8340ae976b30507e7fb832f15c51c5bef910bf440de96687d2c3c0065d8",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0x9edcc8340ae976b30507e7fb832f15c51c5bef910bf440de96687d2c3c0065d8",
+      "priceUsd": 0.000003251,
+      "liquidityUsd": 5102.98,
+      "fdvUsd": 3251,
+      "marketCapUsd": 3251,
+      "volume": {
+        "m5": 0,
+        "h1": 5280.48,
+        "h6": 22117.34,
+        "h24": 128397.97
+      },
+      "volume5m": 0,
+      "volume1h": 5280.48,
+      "volume24h": 128397.97,
+      "priceChange": {
+        "m5": 0,
+        "h1": -88.6,
+        "h6": -92.94,
+        "h24": -93.9
+      },
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 9,
+          "sells": 101
+        },
+        "h6": {
+          "buys": 239,
+          "sells": 241
+        },
+        "h24": {
+          "buys": 757,
+          "sells": 731
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0x81450A124da85A41A0955e2c80F733eB2c59EFb1",
+      "chain": "robinhood",
+      "symbol": "SIMPED",
+      "name": "SIMPED",
+      "createdAt": "2026-09-26T01:34:43.000Z",
+      "pairCreatedAt": 1790386483000,
+      "pairAddress": "0x7c14bb6ddc4757fac6e27e8a8813328faad70d951a45d0fe707b0d0ff8580dfd",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0x7c14bb6ddc4757fac6e27e8a8813328faad70d951a45d0fe707b0d0ff8580dfd",
+      "priceUsd": 0.000003192,
+      "liquidityUsd": 5420.45,
+      "fdvUsd": 3193,
+      "marketCapUsd": 3193,
+      "volume": {
+        "m5": 0,
+        "h1": 0.55,
+        "h6": 31.35,
+        "h24": 89699.78
+      },
+      "volume5m": 0,
+      "volume1h": 0.55,
+      "volume24h": 89699.78,
+      "priceChange": {
+        "m5": 0,
+        "h1": -0.29,
+        "h6": -2.46,
+        "h24": -94.34
+      },
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 1
+        },
+        "h6": {
+          "buys": 1,
+          "sells": 11
+        },
+        "h24": {
+          "buys": 876,
+          "sells": 812
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0x4806f2a9f4754F88530a83fC4D9Afd731e82806c",
+      "chain": "robinhood",
+      "symbol": "TWEET",
+      "name": "Tweet",
+      "createdAt": "2026-09-25T19:36:06.000Z",
+      "pairCreatedAt": 1790364966000,
+      "pairAddress": "0xce5e049052f79b7904402d834f8b67bea33807c510fd3e2eede78e06c7308f60",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0xce5e049052f79b7904402d834f8b67bea33807c510fd3e2eede78e06c7308f60",
+      "priceUsd": 0.00001037,
+      "liquidityUsd": 9781.76,
+      "fdvUsd": 10368,
+      "marketCapUsd": 10368,
+      "volume": {
+        "m5": 0,
+        "h1": 44.92,
+        "h6": 184.33,
+        "h24": 114501.95
+      },
+      "volume5m": 0,
+      "volume1h": 44.92,
+      "volume24h": 114501.95,
+      "priceChange": {
+        "m5": 0,
+        "h1": -1.79,
+        "h6": -7.15,
+        "h24": -82.88
+      },
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 2
+        },
+        "h6": {
+          "buys": 0,
+          "sells": 9
+        },
+        "h24": {
+          "buys": 398,
+          "sells": 370
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0x502Bcd93033fb3EA758326C4F31fc4e5AB29f380",
+      "chain": "robinhood",
+      "symbol": "FOMVDIA",
+      "name": "Fomvdia",
+      "createdAt": "2026-09-25T21:58:54.000Z",
+      "pairCreatedAt": 1790373534000,
+      "pairAddress": "0x8e720c04821841b26390256a4623e1cc7864c5770ff30b564e82da3a9cb17483",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0x8e720c04821841b26390256a4623e1cc7864c5770ff30b564e82da3a9cb17483",
+      "priceUsd": 0.000003645,
+      "liquidityUsd": 5794.36,
+      "fdvUsd": 3619,
+      "marketCapUsd": 3619,
+      "volume": {
+        "m5": 0,
+        "h1": 0,
+        "h6": 610.48,
+        "h24": 88930.89
+      },
+      "volume5m": 0,
+      "volume1h": 0,
+      "volume24h": 88930.89,
+      "priceChange": {
+        "m5": 0,
+        "h1": 0,
+        "h6": -10.26,
+        "h24": -93.44
+      },
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 17,
+          "sells": 22
+        },
+        "h24": {
+          "buys": 764,
+          "sells": 727
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0x7C99Bb3E9A940b7F095d898bDA3296ED9d9A3D48",
+      "chain": "robinhood",
+      "symbol": "RICH",
+      "name": "RichCraft",
+      "createdAt": "2026-09-25T19:55:07.000Z",
+      "pairCreatedAt": 1790366107000,
+      "pairAddress": "0xa85c7318d47b78524cec217a6007ba19a6052a64deac0388a6607581e2f5a130",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0xa85c7318d47b78524cec217a6007ba19a6052a64deac0388a6607581e2f5a130",
+      "priceUsd": 0.000002857,
+      "liquidityUsd": 5130.49,
+      "fdvUsd": 2857,
+      "marketCapUsd": 2857,
+      "volume": {
+        "m5": 0,
+        "h1": 14.04,
+        "h6": 14.41,
+        "h24": 81545.98
+      },
+      "volume5m": 0,
+      "volume1h": 14.04,
+      "volume24h": 81545.98,
+      "priceChange": {
+        "m5": 0,
+        "h1": -1.13,
+        "h6": -1.18,
+        "h24": -94.89
+      },
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 2
+        },
+        "h6": {
+          "buys": 0,
+          "sells": 5
+        },
+        "h24": {
+          "buys": 392,
+          "sells": 487
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0xfa50C1042f45132fF7341970cb2516Cfae7a947B",
+      "chain": "robinhood",
+      "symbol": "FORMS",
+      "name": "Hashform",
+      "createdAt": "2026-09-25T16:13:17.000Z",
+      "pairCreatedAt": 1790352797000,
+      "pairAddress": "0xa344583d324d32984f77fe879ac41f45fab4eb9aeca4c7023dfc2d3fc4914eb3",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0xa344583d324d32984f77fe879ac41f45fab4eb9aeca4c7023dfc2d3fc4914eb3",
+      "priceUsd": 0.000002805,
+      "liquidityUsd": 5084.29,
+      "fdvUsd": 2803,
+      "marketCapUsd": 2803,
+      "volume": {
+        "m5": 0,
+        "h1": 0.52,
+        "h6": 1.44,
+        "h24": 132917.04
+      },
+      "volume5m": 0,
+      "volume1h": 0.52,
+      "volume24h": 132917.04,
+      "priceChange": {
+        "m5": 0,
+        "h1": -0.12,
+        "h6": -0.08,
+        "h24": -95.17
+      },
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 1
+        },
+        "h6": {
+          "buys": 0,
+          "sells": 6
+        },
+        "h24": {
+          "buys": 642,
+          "sells": 652
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0xC388F08d598F01e3Ae6f5932fD910C3AA3F57FF7",
+      "chain": "robinhood",
+      "symbol": "FOOMIES",
+      "name": "foomies",
+      "createdAt": "2026-09-25T19:20:52.000Z",
+      "pairCreatedAt": 1790364052000,
+      "pairAddress": "0xe133ae66a5b8c52ddbc0dc864478fe6ef22d50cf783805aab48e2147d4e4305e",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0xe133ae66a5b8c52ddbc0dc864478fe6ef22d50cf783805aab48e2147d4e4305e",
+      "priceUsd": 0.000003199,
+      "liquidityUsd": 5431.74,
+      "fdvUsd": 3076,
+      "marketCapUsd": 3076,
+      "volume": {
+        "m5": 0,
+        "h1": 0.31,
+        "h6": 4.91,
+        "h24": 54765.87
+      },
+      "volume5m": 0,
+      "volume1h": 0.31,
+      "volume24h": 54765.87,
+      "priceChange": {
+        "m5": 0,
+        "h1": 0.08,
+        "h6": 0,
+        "h24": -94.35
+      },
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 1,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 2,
+          "sells": 4
+        },
+        "h24": {
+          "buys": 468,
+          "sells": 519
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0x2D3B2779e75d25B28cBDf205a42B7Cab611837b2",
+      "chain": "robinhood",
+      "symbol": "DENTED",
+      "name": "DENTED",
+      "createdAt": "2026-09-25T18:11:07.000Z",
+      "pairCreatedAt": 1790359867000,
+      "pairAddress": "0x134f170753b3038aad566625d185f802cda3859a2504d1272887a87222b42341",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0x134f170753b3038aad566625d185f802cda3859a2504d1272887a87222b42341",
+      "priceUsd": 0.000002837,
+      "liquidityUsd": 5114.04,
+      "fdvUsd": 2837,
+      "marketCapUsd": 2837,
+      "volume": {
+        "m5": 0,
+        "h1": 0,
+        "h6": 0.28,
+        "h24": 72186.57
+      },
+      "volume5m": 0,
+      "volume1h": 0,
+      "volume24h": 72186.57,
+      "priceChange": {
+        "m5": 0,
+        "h1": 0,
+        "h6": 0.03,
+        "h24": -95.15
+      },
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h6": {
+          "buys": 0,
+          "sells": 3
+        },
+        "h24": {
+          "buys": 467,
+          "sells": 454
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0xE70852Ec3c996DD8d52EF60cFF0A4290B4E8B126",
+      "chain": "robinhood",
+      "symbol": "MONEY",
+      "name": "Dumb Money",
+      "createdAt": "2026-09-25T16:40:27.000Z",
+      "pairCreatedAt": 1790354427000,
+      "pairAddress": "0x39e009970dd75275a4d02b9286d55e50881985010e2b12376f0e8e090bf8b2b3",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0x39e009970dd75275a4d02b9286d55e50881985010e2b12376f0e8e090bf8b2b3",
+      "priceUsd": 0.00000291,
+      "liquidityUsd": 5174.99,
+      "fdvUsd": 2911,
+      "marketCapUsd": 2911,
+      "volume": {
+        "m5": 0,
+        "h1": 187.35,
+        "h6": 188.51,
+        "h24": 45607.35
+      },
+      "volume5m": 0,
+      "volume1h": 187.35,
+      "volume24h": 45607.35,
+      "priceChange": {
+        "m5": 0,
+        "h1": -13.1,
+        "h6": -13.3,
+        "h24": -94.77
+      },
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 3
+        },
+        "h6": {
+          "buys": 0,
+          "sells": 7
+        },
+        "h24": {
+          "buys": 233,
+          "sells": 292
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    },
+    {
+      "mint": "0x822dfB64895780f2b1c0D0EF9031A63AD2D8Ca77",
+      "chain": "robinhood",
+      "symbol": "POONS",
+      "name": "POONS",
+      "createdAt": "2026-09-25T13:25:53.000Z",
+      "pairCreatedAt": 1790342753000,
+      "pairAddress": "0xd19125c9235b508c1194d42cf9a79ffd07bb80441d82e5c0ae6f9ad33bcb0e61",
+      "dexId": "uniswap",
+      "url": "https://dexscreener.com/robinhood/0xd19125c9235b508c1194d42cf9a79ffd07bb80441d82e5c0ae6f9ad33bcb0e61",
+      "priceUsd": 0.000003951,
+      "liquidityUsd": 6033.79,
+      "fdvUsd": 3952,
+      "marketCapUsd": 3952,
+      "volume": {
+        "m5": 0,
+        "h1": 2.32,
+        "h6": 39.53,
+        "h24": 28298.1
+      },
+      "volume5m": 0,
+      "volume1h": 2.32,
+      "volume24h": 28298.1,
+      "priceChange": {
+        "m5": 0,
+        "h1": -0.26,
+        "h6": -2.53,
+        "h24": -81.93
+      },
+      "txns": {
+        "m5": {
+          "buys": 0,
+          "sells": 0
+        },
+        "h1": {
+          "buys": 0,
+          "sells": 1
+        },
+        "h6": {
+          "buys": 0,
+          "sells": 9
+        },
+        "h24": {
+          "buys": 260,
+          "sells": 374
+        }
+      },
+      "holders": null,
+      "top10Pct": 100,
+      "mintAuthority": "UNKNOWN",
+      "freezeAuthority": "UNKNOWN",
+      "boostsActive": 0,
+      "pairCount": 1,
+      "source": "dexscreener",
+      "fetchedAt": "2026-09-26T13:48:11.843Z"
+    }
+  ],
+  "reddit": [],
+  "github": [],
+  "errors": [],
+  "requests": {
+    "dexscreener": 5,
+    "reddit": 0,
+    "github": 0
+  }
+}
