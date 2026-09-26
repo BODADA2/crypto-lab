@@ -1,5 +1,5 @@
 {
-  "computedAt": "2026-09-26T00:45:15.959Z",
+  "computedAt": "2026-09-26T00:56:31.955Z",
   "terms": [
     {
       "term": "internet",
@@ -58,17 +58,6 @@
       "docs24h": 35
     },
     {
-      "term": "llvm",
-      "count24h": 148,
-      "baselinePerDay": 3.7142857142857144,
-      "count7d": 26,
-      "growth": 31.606060606060606,
-      "sources": {
-        "github": 148
-      },
-      "docs24h": 74
-    },
-    {
       "term": "platform",
       "count24h": 70,
       "baselinePerDay": 1.2857142857142858,
@@ -80,15 +69,15 @@
       "docs24h": 36
     },
     {
-      "term": "windows",
-      "count24h": 79,
-      "baselinePerDay": 1.8571428571428572,
-      "count7d": 13,
-      "growth": 28,
+      "term": "llvm",
+      "count24h": 146,
+      "baselinePerDay": 4,
+      "count7d": 28,
+      "growth": 29.4,
       "sources": {
-        "github": 79
+        "github": 146
       },
-      "docs24h": 77
+      "docs24h": 73
     },
     {
       "term": "analysis",
@@ -111,6 +100,18 @@
         "github": 34
       },
       "docs24h": 32
+    },
+    {
+      "term": "claude",
+      "count24h": 90,
+      "baselinePerDay": 2.4285714285714284,
+      "count7d": 17,
+      "growth": 26.541666666666668,
+      "sources": {
+        "github": 88,
+        "token": 2
+      },
+      "docs24h": 15
     }
   ]
 }
