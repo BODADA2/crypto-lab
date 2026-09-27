@@ -3,7 +3,7 @@
   "program": "token-2022",
   "mintAuthority": null,
   "freezeAuthority": null,
-  "supplyRaw": "998303126243487",
+  "supplyRaw": "998295788605764",
   "decimals": 6,
   "isInitialized": true,
   "extensions": [
@@ -11,15 +11,8 @@
     "TransferFeeConfig",
     "TokenMetadata"
   ],
-  "top10Pct": 14.77,
+  "top10Pct": 14.59,
   "topAccounts": [
-    {
-      "address": "DcpYAKLzwFV8G1Q9V5sTn5m4MLqdaB3yJ4Qm87QgXNd8",
-      "owner": "GpMZbSM2GgvTKHJirzeGfMFoaZ8UR2X7F4v8vHTvxFbL",
-      "amountRaw": "18025666203308",
-      "pct": 1.8,
-      "excluded": false
-    },
     {
       "address": "4f9AEdECCjJeuwjm37wMPNGANCk8ioAMJ3L3oQoQwBvt",
       "owner": "AGdtsMmphhymH5wYW3dWKSkAxpLYRrNDCTFAfuq8ii9v",
@@ -32,6 +25,13 @@
       "owner": "5RZPhPW9qGEd3hRGibgYaF5Yk2jBzXR1VZMKSP71C3Lb",
       "amountRaw": "17020800567938",
       "pct": 1.7,
+      "excluded": false
+    },
+    {
+      "address": "DcpYAKLzwFV8G1Q9V5sTn5m4MLqdaB3yJ4Qm87QgXNd8",
+      "owner": "GpMZbSM2GgvTKHJirzeGfMFoaZ8UR2X7F4v8vHTvxFbL",
+      "amountRaw": "16238940202207",
+      "pct": 1.62,
       "excluded": false
     },
     {
@@ -140,17 +140,17 @@
       "excluded": false
     },
     {
-      "address": "4MKVKkJoFTNg3SCyor7hbcomCHBD6caFTvTA2Dhf3Xoa",
-      "owner": "6VAN619AsUhnsoAjnZTfYo8Whrrn92dfLFYK1rDxfZtn",
-      "amountRaw": "7511326279260",
+      "address": "Ey5qCTSXrXPAc1586bjncTxtpYYz5bG51YuYDea19jJa",
+      "owner": "3n6HeoVNxqrZJ4sprbvGTiZ3JjQ4d4Lcgt1iR8WmLUa6",
+      "amountRaw": "7535376642518",
       "pct": 0.75,
       "excluded": false
     },
     {
-      "address": "7giffqhUWPoopf9jhe4Zojfzd33fxmcSyuncjExdwH8P",
-      "owner": "9YEDqSn6wHvDj5MVgEJ94adikjKNzK9qXG7eAXVgkwuL",
-      "amountRaw": "7429573600794",
-      "pct": 0.74,
+      "address": "4MKVKkJoFTNg3SCyor7hbcomCHBD6caFTvTA2Dhf3Xoa",
+      "owner": "6VAN619AsUhnsoAjnZTfYo8Whrrn92dfLFYK1rDxfZtn",
+      "amountRaw": "7511326279260",
+      "pct": 0.75,
       "excluded": false
     }
   ],
@@ -159,6 +159,6 @@
   "riskyExtensions": [
     "TransferFeeConfig"
   ],
-  "fetchedAt": "2026-09-27T07:07:52.873Z",
+  "fetchedAt": "2026-09-27T08:24:08.989Z",
   "rpcCalls": 4
 }
