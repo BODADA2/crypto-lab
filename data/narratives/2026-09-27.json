@@ -1,5 +1,5 @@
 {
-  "computedAt": "2026-09-27T15:03:40.626Z",
+  "computedAt": "2026-09-27T15:23:04.211Z",
   "terms": [
     {
       "term": "relay",
@@ -15,12 +15,23 @@
     },
     {
       "term": "polkadot",
-      "count24h": 23,
+      "count24h": 25,
       "baselinePerDay": 0,
       "count7d": 0,
-      "growth": 24,
+      "growth": 26,
       "sources": {
-        "github": 23
+        "github": 25
+      },
+      "docs24h": 13
+    },
+    {
+      "term": "pools",
+      "count24h": 24,
+      "baselinePerDay": 0.14285714285714285,
+      "count7d": 1,
+      "growth": 21.875,
+      "sources": {
+        "github": 24
       },
       "docs24h": 12
     },
@@ -34,17 +45,6 @@
         "github": 23
       },
       "docs24h": 14
-    },
-    {
-      "term": "pools",
-      "count24h": 22,
-      "baselinePerDay": 0.14285714285714285,
-      "count7d": 1,
-      "growth": 20.125,
-      "sources": {
-        "github": 22
-      },
-      "docs24h": 11
     },
     {
       "term": "dlmm",
@@ -69,6 +69,17 @@
       "docs24h": 19
     },
     {
+      "term": "bittensor",
+      "count24h": 18,
+      "baselinePerDay": 0,
+      "count7d": 0,
+      "growth": 19,
+      "sources": {
+        "github": 18
+      },
+      "docs24h": 12
+    },
+    {
       "term": "persistent",
       "count24h": 18,
       "baselinePerDay": 0,
@@ -91,26 +102,15 @@
       "docs24h": 8
     },
     {
-      "term": "bittensor",
-      "count24h": 16,
-      "baselinePerDay": 0,
-      "count7d": 0,
-      "growth": 17,
+      "term": "stake",
+      "count24h": 24,
+      "baselinePerDay": 0.8571428571428571,
+      "count7d": 6,
+      "growth": 13.461538461538462,
       "sources": {
-        "github": 16
+        "github": 24
       },
-      "docs24h": 11
-    },
-    {
-      "term": "automation",
-      "count24h": 18,
-      "baselinePerDay": 0.42857142857142855,
-      "count7d": 3,
-      "growth": 13.299999999999999,
-      "sources": {
-        "github": 18
-      },
-      "docs24h": 9
+      "docs24h": 12
     }
   ]
 }
