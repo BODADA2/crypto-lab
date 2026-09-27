@@ -3,7 +3,7 @@
   "program": "token-2022",
   "mintAuthority": "7pt9tkctJPK7PPNQJ77GKg8ZffSF6QxoMiCFYHxrtaCj",
   "freezeAuthority": "JDq14BWvqCRFNu1krb12bcRpbGtJZ1FLEakMw6FdxJNs",
-  "supplyRaw": "7237728775904",
+  "supplyRaw": "7237727171944",
   "decimals": 8,
   "isInitialized": true,
   "extensions": [
@@ -68,18 +68,18 @@
       "excluded": false
     },
     {
+      "address": "BMS7RrFtXNByMZoAAyViq4LhhUDDZBLfyY3Ni1W9iptc",
+      "owner": "3L7KbPVaAQA4UTecaGQYsm6UCq5F3sZM9zAYkxqYt63j",
+      "amountRaw": "53483789376",
+      "pct": 0.73,
+      "excluded": true
+    },
+    {
       "address": "2afWFmhTyL8KWq9AAzJjz8pxS3aqP4mGJbtfSbvEBWe7",
       "owner": "9A9dUreQvTNoqNrqQC2DN1onfZWBtCBsTiuA6oGXZwc6",
       "amountRaw": "48230051153",
       "pct": 0.66,
       "excluded": false
-    },
-    {
-      "address": "BMS7RrFtXNByMZoAAyViq4LhhUDDZBLfyY3Ni1W9iptc",
-      "owner": "3L7KbPVaAQA4UTecaGQYsm6UCq5F3sZM9zAYkxqYt63j",
-      "amountRaw": "45719528320",
-      "pct": 0.63,
-      "excluded": true
     },
     {
       "address": "5UNDCAD63ZY7EXbcTN9jcc9CYzBisRaX42tdR7w8eZBp",
@@ -124,13 +124,6 @@
       "excluded": false
     },
     {
-      "address": "6zqwRmBPFf7XymuYtEwwbbtoTW1YiqVLm4XMi9TDyGJG",
-      "owner": "44P5Ct5JkPz76Rs2K6juC65zXMpFRDrHatxcASJ4Dyra",
-      "amountRaw": "14445816416",
-      "pct": 0.19,
-      "excluded": false
-    },
-    {
       "address": "Ftf6WZt9vUCJu6FPGnU1BW2H4qqX3c1u9boGHEM5tpxm",
       "owner": "Ay1vrqfSSmn5JYz7viZcKmki751bEh7v5V4WPp67nMFi",
       "amountRaw": "12322875673",
@@ -157,6 +150,13 @@
       "amountRaw": "11936598060",
       "pct": 0.16,
       "excluded": false
+    },
+    {
+      "address": "HdiHaKTjgwSNh6UJccB5y41d873wzNyVpYAhg7XTPQK3",
+      "owner": "GuKkXiShHoQ5oQe2yjkgtvDkmBZqM7nzC1y6ZMjf7hw8",
+      "amountRaw": "11586949030",
+      "pct": 0.16,
+      "excluded": false
     }
   ],
   "excludedCount": 1,
@@ -167,6 +167,6 @@
     "Pausable",
     "TransferHook"
   ],
-  "fetchedAt": "2026-09-27T04:37:43.528Z",
+  "fetchedAt": "2026-09-27T05:49:25.353Z",
   "rpcCalls": 4
 }
