@@ -1,5 +1,5 @@
 {
-  "computedAt": "2026-09-27T11:35:49.116Z",
+  "computedAt": "2026-09-27T11:49:07.227Z",
   "terms": [
     {
       "term": "relay",
@@ -80,6 +80,17 @@
       "docs24h": 9
     },
     {
+      "term": "meteora",
+      "count24h": 27,
+      "baselinePerDay": 1.1428571428571428,
+      "count7d": 8,
+      "growth": 13.066666666666666,
+      "sources": {
+        "github": 27
+      },
+      "docs24h": 14
+    },
+    {
       "term": "ground",
       "count24h": 12,
       "baselinePerDay": 0,
@@ -100,17 +111,6 @@
         "token": 12
       },
       "docs24h": 6
-    },
-    {
-      "term": "task",
-      "count24h": 12,
-      "baselinePerDay": 0,
-      "count7d": 0,
-      "growth": 13,
-      "sources": {
-        "github": 12
-      },
-      "docs24h": 12
     }
   ]
 }
