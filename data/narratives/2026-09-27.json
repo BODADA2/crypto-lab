@@ -1,5 +1,5 @@
 {
-  "computedAt": "2026-09-27T07:07:53.637Z",
+  "computedAt": "2026-09-27T07:23:13.040Z",
   "terms": [
     {
       "term": "coding",
@@ -24,17 +24,6 @@
       "docs24h": 9
     },
     {
-      "term": "automation",
-      "count24h": 20,
-      "baselinePerDay": 0.14285714285714285,
-      "count7d": 1,
-      "growth": 18.375,
-      "sources": {
-        "github": 20
-      },
-      "docs24h": 10
-    },
-    {
       "term": "$DELREY",
       "count24h": 16,
       "baselinePerDay": 0,
@@ -57,6 +46,17 @@
       "docs24h": 42
     },
     {
+      "term": "automation",
+      "count24h": 18,
+      "baselinePerDay": 0.42857142857142855,
+      "count7d": 3,
+      "growth": 13.299999999999999,
+      "sources": {
+        "github": 18
+      },
+      "docs24h": 9
+    },
+    {
       "term": "nietzschean",
       "count24h": 12,
       "baselinePerDay": 0,
@@ -68,15 +68,26 @@
       "docs24h": 6
     },
     {
-      "term": "acc",
-      "count24h": 61,
-      "baselinePerDay": 4,
-      "count7d": 28,
-      "growth": 12.4,
+      "term": "relay",
+      "count24h": 12,
+      "baselinePerDay": 0,
+      "count7d": 0,
+      "growth": 13,
       "sources": {
-        "token": 61
+        "github": 12
       },
-      "docs24h": 53
+      "docs24h": 6
+    },
+    {
+      "term": "acc",
+      "count24h": 60,
+      "baselinePerDay": 4.142857142857143,
+      "count7d": 29,
+      "growth": 11.86111111111111,
+      "sources": {
+        "token": 60
+      },
+      "docs24h": 52
     },
     {
       "term": "debt",
@@ -90,26 +101,15 @@
       "docs24h": 12
     },
     {
-      "term": "kardashev",
-      "count24h": 10,
-      "baselinePerDay": 0,
-      "count7d": 0,
-      "growth": 11,
+      "term": "pools",
+      "count24h": 12,
+      "baselinePerDay": 0.14285714285714285,
+      "count7d": 1,
+      "growth": 11.375,
       "sources": {
-        "token": 10
+        "github": 12
       },
       "docs24h": 6
-    },
-    {
-      "term": "relay",
-      "count24h": 10,
-      "baselinePerDay": 0,
-      "count7d": 0,
-      "growth": 11,
-      "sources": {
-        "github": 10
-      },
-      "docs24h": 5
     }
   ]
 }
