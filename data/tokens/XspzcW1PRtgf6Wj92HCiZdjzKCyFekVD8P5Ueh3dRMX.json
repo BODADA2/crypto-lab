@@ -8,49 +8,56 @@
   "pairAddress": "CLu4kFM4nb67xrdN7vJnMxXXir8Z5hA4HJUzPFccXjsL",
   "dexId": "raydium",
   "url": "https://dexscreener.com/solana/clu4kfm4nb67xrdn7vjnmxxxir8z5ha4hjuzpfccxjsl",
-  "priceUsd": 520.59,
-  "liquidityUsd": 450834.43,
-  "fdvUsd": 520591,
-  "marketCapUsd": 7823302,
+  "priceUsd": 520.72,
+  "liquidityUsd": 430918.19,
+  "fdvUsd": 520727,
+  "marketCapUsd": 7825349,
   "volume": {
-    "m5": 393.46999999999997,
-    "h1": 9759.55,
-    "h6": 85925.64,
-    "h24": 1902004.8599999999
+    "m5": 2904.28,
+    "h1": 11497.310000000001,
+    "h6": 87733.33,
+    "h24": 1904100.47
   },
-  "volume5m": 393.46999999999997,
-  "volume1h": 9759.55,
-  "volume24h": 1902004.8599999999,
+  "volume5m": 2904.28,
+  "volume1h": 11497.310000000001,
+  "volume24h": 1904100.47,
   "priceChange": {
-    "m5": 0,
-    "h1": 0.02,
-    "h6": 0.03,
-    "h24": 0.07
+    "m5": 0.02,
+    "h1": 0.04,
+    "h6": 0.05,
+    "h24": 0.09
   },
   "txns": {
     "m5": {
-      "buys": 7,
-      "sells": 0
+      "buys": 27,
+      "sells": 13
     },
     "h1": {
-      "buys": 73,
-      "sells": 70
+      "buys": 100,
+      "sells": 87
     },
     "h6": {
-      "buys": 460,
-      "sells": 694
+      "buys": 495,
+      "sells": 700
     },
     "h24": {
-      "buys": 13294,
-      "sells": 14599
+      "buys": 13316,
+      "sells": 14615
     }
   },
   "holders": null,
-  "top10Pct": 100,
-  "mintAuthority": "UNKNOWN",
-  "freezeAuthority": "UNKNOWN",
+  "top10Pct": 96.46,
+  "mintAuthority": "7pt9tkctJPK7PPNQJ77GKg8ZffSF6QxoMiCFYHxrtaCj",
+  "freezeAuthority": "JDq14BWvqCRFNu1krb12bcRpbGtJZ1FLEakMw6FdxJNs",
   "boostsActive": 0,
   "pairCount": 2,
   "source": "dexscreener",
-  "fetchedAt": "2026-09-27T10:03:39.735Z"
+  "fetchedAt": "2026-09-27T10:22:39.664Z",
+  "decimals": 8,
+  "riskyExtensions": [
+    "PermanentDelegate",
+    "DefaultAccountState",
+    "Pausable",
+    "TransferHook"
+  ]
 }
