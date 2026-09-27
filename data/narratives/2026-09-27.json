@@ -1,5 +1,5 @@
 {
-  "computedAt": "2026-09-27T02:24:16.027Z",
+  "computedAt": "2026-09-27T02:37:17.877Z",
   "terms": [
     {
       "term": "acc",
@@ -13,6 +13,17 @@
       "docs24h": 59
     },
     {
+      "term": "automation",
+      "count24h": 21,
+      "baselinePerDay": 0,
+      "count7d": 0,
+      "growth": 22,
+      "sources": {
+        "github": 21
+      },
+      "docs24h": 11
+    },
+    {
       "term": "accelerationism",
       "count24h": 41,
       "baselinePerDay": 1,
@@ -24,48 +35,37 @@
       "docs24h": 41
     },
     {
-      "term": "automation",
-      "count24h": 19,
-      "baselinePerDay": 0,
-      "count7d": 0,
-      "growth": 20,
-      "sources": {
-        "github": 19
-      },
-      "docs24h": 10
-    },
-    {
-      "term": "mcp",
-      "count24h": 63,
-      "baselinePerDay": 2.5714285714285716,
-      "count7d": 18,
-      "growth": 17.919999999999998,
-      "sources": {
-        "github": 63
-      },
-      "docs24h": 26
-    },
-    {
       "term": "coding",
-      "count24h": 19,
+      "count24h": 21,
       "baselinePerDay": 0.14285714285714285,
       "count7d": 1,
-      "growth": 17.5,
+      "growth": 19.25,
       "sources": {
-        "github": 19
+        "github": 21
       },
-      "docs24h": 11
+      "docs24h": 12
     },
     {
       "term": "persistent",
-      "count24h": 16,
+      "count24h": 18,
       "baselinePerDay": 0,
       "count7d": 0,
-      "growth": 17,
+      "growth": 19,
       "sources": {
-        "github": 16
+        "github": 18
       },
-      "docs24h": 8
+      "docs24h": 9
+    },
+    {
+      "term": "mcp",
+      "count24h": 65,
+      "baselinePerDay": 2.857142857142857,
+      "count7d": 20,
+      "growth": 17.11111111111111,
+      "sources": {
+        "github": 65
+      },
+      "docs24h": 26
     },
     {
       "term": "relief",
@@ -80,18 +80,6 @@
       "docs24h": 14
     },
     {
-      "term": "paid",
-      "count24h": 35,
-      "baselinePerDay": 1.4285714285714286,
-      "count7d": 10,
-      "growth": 14.823529411764705,
-      "sources": {
-        "github": 15,
-        "token": 20
-      },
-      "docs24h": 33
-    },
-    {
       "term": "pwa",
       "count24h": 13,
       "baselinePerDay": 0,
@@ -103,15 +91,27 @@
       "docs24h": 13
     },
     {
-      "term": "tools",
-      "count24h": 36,
-      "baselinePerDay": 1.7142857142857142,
-      "count7d": 12,
-      "growth": 13.631578947368421,
+      "term": "paid",
+      "count24h": 34,
+      "baselinePerDay": 1.5714285714285714,
+      "count7d": 11,
+      "growth": 13.611111111111112,
       "sources": {
-        "github": 36
+        "github": 14,
+        "token": 20
       },
-      "docs24h": 24
+      "docs24h": 32
+    },
+    {
+      "term": "aetherwave",
+      "count24h": 12,
+      "baselinePerDay": 0,
+      "count7d": 0,
+      "growth": 13,
+      "sources": {
+        "github": 12
+      },
+      "docs24h": 12
     }
   ]
 }
