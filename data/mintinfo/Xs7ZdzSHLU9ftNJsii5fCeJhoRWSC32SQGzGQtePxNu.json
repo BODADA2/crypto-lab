@@ -3,7 +3,7 @@
   "program": "token-2022",
   "mintAuthority": "7pt9tkctJPK7PPNQJ77GKg8ZffSF6QxoMiCFYHxrtaCj",
   "freezeAuthority": "JDq14BWvqCRFNu1krb12bcRpbGtJZ1FLEakMw6FdxJNs",
-  "supplyRaw": "13617796234891",
+  "supplyRaw": "13617796234889",
   "decimals": 8,
   "isInitialized": true,
   "extensions": [
@@ -16,7 +16,7 @@
     "TransferHook",
     "TokenMetadata"
   ],
-  "top10Pct": 85.93,
+  "top10Pct": 85.24,
   "topAccounts": [
     {
       "address": "BQoUyP6fJVqFVrh2fRnFzbGwfnZycfMgBU9ArPGbU1nc",
@@ -84,9 +84,9 @@
     {
       "address": "8iYt6azJsp6z6zz3scVomSgiJ25MogcFLTLperGnobFB",
       "owner": "w7SGmPeXoMCsjvXqgsAmUn56uypyDsjAtsxeVkaiqxa",
-      "amountRaw": "273091383105",
+      "amountRaw": "273141381501",
       "pct": 2,
-      "excluded": false
+      "excluded": true
     },
     {
       "address": "HihgbqdH8m7BMxqgbezHfr9kFghrLaTTwnwfQfdxsaip",
@@ -126,9 +126,9 @@
     {
       "address": "CETZjBSujdHZtWKbP1QyAjSVi9SWKXfRh5ErMfT7EJVr",
       "owner": "9NJ7rtJzEnfwvoM6HyB2v6YHcsfS6ZY9DFGprphVX6W",
-      "amountRaw": "57478120789",
+      "amountRaw": "57486323680",
       "pct": 0.42,
-      "excluded": true
+      "excluded": false
     },
     {
       "address": "Diaghh441z83TbTRWZiiZ8ZugXV6zxRdGxYtqg19P7hf",
@@ -147,7 +147,7 @@
     {
       "address": "3882jroT5Fmwwm7yN5dCS13UQ8BQVCsoTxLRsBUXNWLh",
       "owner": "MfDuWeqSHEqTFVYZ7LoexgAK9dxk7cy4DFJWjWMGVWa",
-      "amountRaw": "46652914343",
+      "amountRaw": "47059286708",
       "pct": 0.34,
       "excluded": false
     },
@@ -167,6 +167,6 @@
     "Pausable",
     "TransferHook"
   ],
-  "fetchedAt": "2026-09-27T14:49:05.499Z",
+  "fetchedAt": "2026-09-27T16:37:02.991Z",
   "rpcCalls": 4
 }
