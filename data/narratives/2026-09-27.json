@@ -1,5 +1,5 @@
 {
-  "computedAt": "2026-09-27T13:05:58.551Z",
+  "computedAt": "2026-09-27T13:22:19.803Z",
   "terms": [
     {
       "term": "relay",
@@ -25,6 +25,17 @@
       "docs24h": 14
     },
     {
+      "term": "polkadot",
+      "count24h": 19,
+      "baselinePerDay": 0,
+      "count7d": 0,
+      "growth": 20,
+      "sources": {
+        "github": 19
+      },
+      "docs24h": 10
+    },
+    {
       "term": "persistent",
       "count24h": 18,
       "baselinePerDay": 0,
@@ -36,15 +47,37 @@
       "docs24h": 9
     },
     {
-      "term": "polkadot",
-      "count24h": 17,
-      "baselinePerDay": 0,
-      "count7d": 0,
-      "growth": 18,
+      "term": "pools",
+      "count24h": 20,
+      "baselinePerDay": 0.14285714285714285,
+      "count7d": 1,
+      "growth": 18.375,
       "sources": {
-        "github": 17
+        "github": 20
       },
-      "docs24h": 9
+      "docs24h": 10
+    },
+    {
+      "term": "dlmm",
+      "count24h": 32,
+      "baselinePerDay": 0.8571428571428571,
+      "count7d": 6,
+      "growth": 17.76923076923077,
+      "sources": {
+        "github": 32
+      },
+      "docs24h": 16
+    },
+    {
+      "term": "meteora",
+      "count24h": 36,
+      "baselinePerDay": 1.1428571428571428,
+      "count7d": 8,
+      "growth": 17.266666666666666,
+      "sources": {
+        "github": 36
+      },
+      "docs24h": 17
     },
     {
       "term": "$DELREY",
@@ -58,39 +91,6 @@
       "docs24h": 8
     },
     {
-      "term": "pools",
-      "count24h": 18,
-      "baselinePerDay": 0.14285714285714285,
-      "count7d": 1,
-      "growth": 16.625,
-      "sources": {
-        "github": 18
-      },
-      "docs24h": 9
-    },
-    {
-      "term": "dlmm",
-      "count24h": 29,
-      "baselinePerDay": 0.8571428571428571,
-      "count7d": 6,
-      "growth": 16.153846153846153,
-      "sources": {
-        "github": 29
-      },
-      "docs24h": 15
-    },
-    {
-      "term": "meteora",
-      "count24h": 33,
-      "baselinePerDay": 1.1428571428571428,
-      "count7d": 8,
-      "growth": 15.866666666666667,
-      "sources": {
-        "github": 33
-      },
-      "docs24h": 16
-    },
-    {
       "term": "automation",
       "count24h": 18,
       "baselinePerDay": 0.42857142857142855,
@@ -102,7 +102,7 @@
       "docs24h": 9
     },
     {
-      "term": "ground",
+      "term": "bittensor",
       "count24h": 12,
       "baselinePerDay": 0,
       "count7d": 0,
@@ -110,7 +110,7 @@
       "sources": {
         "github": 12
       },
-      "docs24h": 12
+      "docs24h": 9
     }
   ]
 }
