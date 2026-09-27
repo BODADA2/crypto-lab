@@ -3,7 +3,7 @@
   "program": "token-2022",
   "mintAuthority": "HcSDK8nSoSft3VMP2d8ASnXnzDJnnY4Ak2xkhBtHgQ4H",
   "freezeAuthority": "2cVYpagTt7ZGc3mmTXBa7fAznUtx5DUu6aCq8uVDaf4a",
-  "supplyRaw": "60600787040",
+  "supplyRaw": "60600720945",
   "decimals": 6,
   "isInitialized": true,
   "extensions": [
@@ -16,13 +16,20 @@
     "ScaledUiAmount",
     "TokenMetadata"
   ],
-  "top10Pct": 59.2,
+  "top10Pct": 59.28,
   "topAccounts": [
     {
       "address": "E9SzYQndRiKapMz35N1CbENXrsGmwcL79SixARjj4dXX",
       "owner": "EnaatNfHKJHifA6VsiZBm1dKKwY8z2aaqW8BhDYwvYJm",
       "amountRaw": "14392306424",
       "pct": 23.74,
+      "excluded": false
+    },
+    {
+      "address": "9j7MQLc8vuKqL9zucFU4kaZSN18fNQyforvwNSTJYt5o",
+      "owner": "9j7MQLc8vuKqL9zucFU4kaZSN18fNQyforvwNSTJYt5o",
+      "amountRaw": "4276458939",
+      "pct": 7.05,
       "excluded": false
     },
     {
@@ -33,17 +40,10 @@
       "excluded": false
     },
     {
-      "address": "9j7MQLc8vuKqL9zucFU4kaZSN18fNQyforvwNSTJYt5o",
-      "owner": "9j7MQLc8vuKqL9zucFU4kaZSN18fNQyforvwNSTJYt5o",
-      "amountRaw": "4097314298",
-      "pct": 6.76,
-      "excluded": false
-    },
-    {
       "address": "915QRM7f1MTwUcrJL2iGZjxNioP7EirW6qBT7QjcJRBj",
       "owner": "GpMZbSM2GgvTKHJirzeGfMFoaZ8UR2X7F4v8vHTvxFbL",
-      "amountRaw": "2605165463",
-      "pct": 4.29,
+      "amountRaw": "2507311366",
+      "pct": 4.13,
       "excluded": false
     },
     {
@@ -63,15 +63,15 @@
     {
       "address": "H7pxU9PB3yBTqfC8aABQip9uwYNj5RD6n2cXaPaQS8Fa",
       "owner": "GtmPDVPVepVJjENBNharAsBRLwifdD9PktYVj5f1VCWe",
-      "amountRaw": "1866530267",
-      "pct": 3.08,
+      "amountRaw": "1833184338",
+      "pct": 3.02,
       "excluded": false
     },
     {
       "address": "9Xqp6eT8QEzo7ogw2tmQBnWLkfxMW8b2RwE73yHk5kfZ",
       "owner": "cPK91ascbHz3pXHVqLbhBbbQs3ztMvu1681w5EfoGyP",
-      "amountRaw": "1579841350",
-      "pct": 2.6,
+      "amountRaw": "1564828598",
+      "pct": 2.58,
       "excluded": true
     },
     {
@@ -167,6 +167,6 @@
     "Pausable",
     "TransferHook"
   ],
-  "fetchedAt": "2026-09-27T12:04:55.659Z",
+  "fetchedAt": "2026-09-27T13:05:56.984Z",
   "rpcCalls": 4
 }
