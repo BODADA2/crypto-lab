@@ -3,7 +3,7 @@
   "program": "token-2022",
   "mintAuthority": "7pt9tkctJPK7PPNQJ77GKg8ZffSF6QxoMiCFYHxrtaCj",
   "freezeAuthority": "JDq14BWvqCRFNu1krb12bcRpbGtJZ1FLEakMw6FdxJNs",
-  "supplyRaw": "10497030732368",
+  "supplyRaw": "10497030687341",
   "decimals": 8,
   "isInitialized": true,
   "extensions": [
@@ -98,7 +98,7 @@
     {
       "address": "Djw4PRPBZ9BzYjCBokJRkiVH7QoMujjYvLqgx2CACTX",
       "owner": "D6bRhQUcR9B7bPbbqgxpE17MjyUjBtr8hHQCcJoHrrv1",
-      "amountRaw": "31254894618",
+      "amountRaw": "30608551721",
       "pct": 0.29,
       "excluded": false
     },
@@ -110,6 +110,13 @@
       "excluded": false
     },
     {
+      "address": "AtP8LYj8MBdHWXAdFVWmc3QC91wgBs1F4d2mxFGptepC",
+      "owner": "CLu4kFM4nb67xrdN7vJnMxXXir8Z5hA4HJUzPFccXjsL",
+      "amountRaw": "20350059126",
+      "pct": 0.19,
+      "excluded": true
+    },
+    {
       "address": "CkF63YaaJCFznxVPkH9kFmufftKFipbfm6UWGerdVwPL",
       "owner": "GQEwLMrpyr9x99CnHFAnQhHrwm7a36Qc1FYEw9Cdp6kG",
       "amountRaw": "19954184269",
@@ -117,17 +124,10 @@
       "excluded": false
     },
     {
-      "address": "AtP8LYj8MBdHWXAdFVWmc3QC91wgBs1F4d2mxFGptepC",
-      "owner": "CLu4kFM4nb67xrdN7vJnMxXXir8Z5hA4HJUzPFccXjsL",
-      "amountRaw": "19815016984",
-      "pct": 0.18,
-      "excluded": true
-    },
-    {
       "address": "842CWmPNtreNi5iDs4hJDgtBb9xPRCCwwsN4gCBitEbt",
       "owner": "MfDuWeqSHEqTFVYZ7LoexgAK9dxk7cy4DFJWjWMGVWa",
-      "amountRaw": "10580742634",
-      "pct": 0.1,
+      "amountRaw": "10387843498",
+      "pct": 0.09,
       "excluded": false
     },
     {
@@ -140,8 +140,8 @@
     {
       "address": "4wyaCnxC8DJFzwwNQ5euyCY17BkP4MAcrqvNYJfxNVuw",
       "owner": "GpMZbSM2GgvTKHJirzeGfMFoaZ8UR2X7F4v8vHTvxFbL",
-      "amountRaw": "8248679536",
-      "pct": 0.07,
+      "amountRaw": "8510297109",
+      "pct": 0.08,
       "excluded": false
     },
     {
@@ -167,6 +167,6 @@
     "Pausable",
     "TransferHook"
   ],
-  "fetchedAt": "2026-09-27T05:35:44.857Z",
+  "fetchedAt": "2026-09-27T06:43:41.154Z",
   "rpcCalls": 4
 }
