@@ -1,5 +1,5 @@
 {
-  "computedAt": "2026-09-27T12:28:00.572Z",
+  "computedAt": "2026-09-27T12:42:58.447Z",
   "terms": [
     {
       "term": "relay",
@@ -47,6 +47,17 @@
       "docs24h": 8
     },
     {
+      "term": "pools",
+      "count24h": 18,
+      "baselinePerDay": 0.14285714285714285,
+      "count7d": 1,
+      "growth": 16.625,
+      "sources": {
+        "github": 18
+      },
+      "docs24h": 9
+    },
+    {
       "term": "polkadot",
       "count24h": 15,
       "baselinePerDay": 0,
@@ -54,17 +65,6 @@
       "growth": 16,
       "sources": {
         "github": 15
-      },
-      "docs24h": 8
-    },
-    {
-      "term": "pools",
-      "count24h": 16,
-      "baselinePerDay": 0.14285714285714285,
-      "count7d": 1,
-      "growth": 14.875,
-      "sources": {
-        "github": 16
       },
       "docs24h": 8
     },
@@ -102,15 +102,15 @@
       "docs24h": 12
     },
     {
-      "term": "nietzschean",
+      "term": "task",
       "count24h": 12,
       "baselinePerDay": 0,
       "count7d": 0,
       "growth": 13,
       "sources": {
-        "token": 12
+        "github": 12
       },
-      "docs24h": 6
+      "docs24h": 12
     }
   ]
 }
