@@ -1,5 +1,5 @@
 {
-  "computedAt": "2026-09-27T07:23:13.040Z",
+  "computedAt": "2026-09-27T07:36:07.222Z",
   "terms": [
     {
       "term": "coding",
@@ -35,15 +35,26 @@
       "docs24h": 8
     },
     {
-      "term": "accelerationism",
-      "count24h": 42,
-      "baselinePerDay": 1.7142857142857142,
-      "count7d": 12,
-      "growth": 15.842105263157894,
+      "term": "relay",
+      "count24h": 14,
+      "baselinePerDay": 0,
+      "count7d": 0,
+      "growth": 15,
       "sources": {
-        "token": 42
+        "github": 14
       },
-      "docs24h": 42
+      "docs24h": 7
+    },
+    {
+      "term": "accelerationism",
+      "count24h": 40,
+      "baselinePerDay": 2,
+      "count7d": 14,
+      "growth": 13.666666666666666,
+      "sources": {
+        "token": 40
+      },
+      "docs24h": 40
     },
     {
       "term": "automation",
@@ -68,28 +79,6 @@
       "docs24h": 6
     },
     {
-      "term": "relay",
-      "count24h": 12,
-      "baselinePerDay": 0,
-      "count7d": 0,
-      "growth": 13,
-      "sources": {
-        "github": 12
-      },
-      "docs24h": 6
-    },
-    {
-      "term": "acc",
-      "count24h": 60,
-      "baselinePerDay": 4.142857142857143,
-      "count7d": 29,
-      "growth": 11.86111111111111,
-      "sources": {
-        "token": 60
-      },
-      "docs24h": 52
-    },
-    {
       "term": "debt",
       "count24h": 17,
       "baselinePerDay": 0.5714285714285714,
@@ -110,6 +99,17 @@
         "github": 12
       },
       "docs24h": 6
+    },
+    {
+      "term": "acc",
+      "count24h": 57,
+      "baselinePerDay": 4.571428571428571,
+      "count7d": 32,
+      "growth": 10.41025641025641,
+      "sources": {
+        "token": 57
+      },
+      "docs24h": 49
     }
   ]
 }
