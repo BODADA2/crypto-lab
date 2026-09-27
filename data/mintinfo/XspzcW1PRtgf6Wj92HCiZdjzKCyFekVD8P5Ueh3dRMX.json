@@ -3,7 +3,7 @@
   "program": "token-2022",
   "mintAuthority": "7pt9tkctJPK7PPNQJ77GKg8ZffSF6QxoMiCFYHxrtaCj",
   "freezeAuthority": "JDq14BWvqCRFNu1krb12bcRpbGtJZ1FLEakMw6FdxJNs",
-  "supplyRaw": "10497032471789",
+  "supplyRaw": "10497032220717",
   "decimals": 8,
   "isInitialized": true,
   "extensions": [
@@ -16,7 +16,7 @@
     "TransferHook",
     "TokenMetadata"
   ],
-  "top10Pct": 96.46,
+  "top10Pct": 96.49,
   "topAccounts": [
     {
       "address": "HuHg8nxsGTFYTWhaQkfdtH6hm6tMbjGd7fqjHrZ3dBPg",
@@ -82,6 +82,13 @@
       "excluded": false
     },
     {
+      "address": "FMHWg3yaYw69mtiPi6rhnLVwiG93MPtUcCBjKbctkRTh",
+      "owner": "C68a6RCGLiPskbPYtAcsCjhG8tfTWYcoB4JjCrXFdqyo",
+      "amountRaw": "39037813746",
+      "pct": 0.37,
+      "excluded": false
+    },
+    {
       "address": "hQ6T7jD8dQovDhM28CKeN39nk5jEVnxSHnKmPA1mxxX",
       "owner": "J2f6waBNipqqn2k6d9uw3bwpbapGr2pLKZd9mDczCgfz",
       "amountRaw": "36638576840",
@@ -89,17 +96,10 @@
       "excluded": false
     },
     {
-      "address": "FMHWg3yaYw69mtiPi6rhnLVwiG93MPtUcCBjKbctkRTh",
-      "owner": "C68a6RCGLiPskbPYtAcsCjhG8tfTWYcoB4JjCrXFdqyo",
-      "amountRaw": "35715211721",
-      "pct": 0.34,
-      "excluded": false
-    },
-    {
       "address": "Djw4PRPBZ9BzYjCBokJRkiVH7QoMujjYvLqgx2CACTX",
       "owner": "D6bRhQUcR9B7bPbbqgxpE17MjyUjBtr8hHQCcJoHrrv1",
-      "amountRaw": "34664886532",
-      "pct": 0.33,
+      "amountRaw": "31054237002",
+      "pct": 0.29,
       "excluded": false
     },
     {
@@ -112,7 +112,7 @@
     {
       "address": "AtP8LYj8MBdHWXAdFVWmc3QC91wgBs1F4d2mxFGptepC",
       "owner": "CLu4kFM4nb67xrdN7vJnMxXXir8Z5hA4HJUzPFccXjsL",
-      "amountRaw": "20515748993",
+      "amountRaw": "20894433718",
       "pct": 0.19,
       "excluded": true
     },
@@ -140,8 +140,8 @@
     {
       "address": "4wyaCnxC8DJFzwwNQ5euyCY17BkP4MAcrqvNYJfxNVuw",
       "owner": "GpMZbSM2GgvTKHJirzeGfMFoaZ8UR2X7F4v8vHTvxFbL",
-      "amountRaw": "8361339372",
-      "pct": 0.07,
+      "amountRaw": "8626924163",
+      "pct": 0.08,
       "excluded": false
     },
     {
@@ -167,6 +167,6 @@
     "Pausable",
     "TransferHook"
   ],
-  "fetchedAt": "2026-09-27T02:03:34.009Z",
+  "fetchedAt": "2026-09-27T03:03:45.159Z",
   "rpcCalls": 4
 }
