@@ -3,61 +3,54 @@
   "chain": "solana",
   "symbol": "QQQx",
   "name": "Nasdaq xStock",
-  "createdAt": "2025-07-01T13:03:29.000Z",
-  "pairCreatedAt": 1751375009000,
+  "createdAt": "2025-07-02T09:15:49.000Z",
+  "pairCreatedAt": 1751447749000,
   "pairAddress": "GMjGLWzvK75LPetrgAmdeXnvxc4fUuQPwJxeQqTDU1aG",
   "dexId": "raydium",
   "url": "https://dexscreener.com/solana/gmjglwzvk75lpetrgamdexnvxc4fuuqpwjxeqqtdu1ag",
-  "priceUsd": 742.88,
-  "liquidityUsd": 2268128.12,
-  "fdvUsd": 742889,
-  "marketCapUsd": 742889,
+  "priceUsd": 741.67,
+  "liquidityUsd": 2267897.63,
+  "fdvUsd": 741674,
+  "marketCapUsd": 741674,
   "volume": {
-    "m5": 88.03999999999999,
-    "h1": 10925.01,
-    "h6": 70057.32000000002,
-    "h24": 625408.0499999999
+    "m5": 1730.24,
+    "h1": 27679.170000000002,
+    "h6": 85418.01,
+    "h24": 633368.84
   },
-  "volume5m": 88.03999999999999,
-  "volume1h": 10925.01,
-  "volume24h": 625408.0499999999,
+  "volume5m": 1730.24,
+  "volume1h": 27679.170000000002,
+  "volume24h": 633368.84,
   "priceChange": {
     "m5": 0,
-    "h1": 0.04,
-    "h6": 0.26,
-    "h24": -0.56
+    "h1": -0.13,
+    "h6": 0.1,
+    "h24": -0.72
   },
   "txns": {
     "m5": {
-      "buys": 8,
-      "sells": 8
+      "buys": 7,
+      "sells": 42
     },
     "h1": {
-      "buys": 129,
-      "sells": 126
+      "buys": 141,
+      "sells": 214
     },
     "h6": {
-      "buys": 636,
-      "sells": 715
+      "buys": 578,
+      "sells": 706
     },
     "h24": {
-      "buys": 7088,
-      "sells": 7069
+      "buys": 5939,
+      "sells": 5800
     }
   },
   "holders": null,
-  "top10Pct": 85.31,
-  "mintAuthority": "7pt9tkctJPK7PPNQJ77GKg8ZffSF6QxoMiCFYHxrtaCj",
-  "freezeAuthority": "JDq14BWvqCRFNu1krb12bcRpbGtJZ1FLEakMw6FdxJNs",
+  "top10Pct": 100,
+  "mintAuthority": "UNKNOWN",
+  "freezeAuthority": "UNKNOWN",
   "boostsActive": 0,
-  "pairCount": 11,
+  "pairCount": 7,
   "source": "dexscreener",
-  "fetchedAt": "2026-09-28T13:27:00.909Z",
-  "decimals": 8,
-  "riskyExtensions": [
-    "PermanentDelegate",
-    "DefaultAccountState",
-    "Pausable",
-    "TransferHook"
-  ]
+  "fetchedAt": "2026-09-28T13:42:04.527Z"
 }
