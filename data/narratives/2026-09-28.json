@@ -1,5 +1,5 @@
 {
-  "computedAt": "2026-09-28T14:29:06.369Z",
+  "computedAt": "2026-09-28T14:44:52.680Z",
   "terms": [
     {
       "term": "spark",
@@ -14,37 +14,37 @@
     },
     {
       "term": "accounting",
+      "count24h": 15,
+      "baselinePerDay": 0,
+      "count7d": 0,
+      "growth": 16,
+      "sources": {
+        "github": 15
+      },
+      "docs24h": 14
+    },
+    {
+      "term": "ing",
       "count24h": 14,
       "baselinePerDay": 0,
       "count7d": 0,
       "growth": 15,
       "sources": {
-        "github": 14
+        "github": 13,
+        "token": 1
       },
-      "docs24h": 13
+      "docs24h": 14
     },
     {
-      "term": "ing",
+      "term": "earnings",
       "count24h": 13,
       "baselinePerDay": 0,
       "count7d": 0,
       "growth": 14,
       "sources": {
-        "github": 12,
-        "token": 1
+        "github": 13
       },
       "docs24h": 13
-    },
-    {
-      "term": "earnings",
-      "count24h": 12,
-      "baselinePerDay": 0,
-      "count7d": 0,
-      "growth": 13,
-      "sources": {
-        "github": 12
-      },
-      "docs24h": 12
     },
     {
       "term": "leverage",
@@ -59,6 +59,17 @@
       "docs24h": 10
     },
     {
+      "term": "nextjs",
+      "count24h": 18,
+      "baselinePerDay": 0.5714285714285714,
+      "count7d": 4,
+      "growth": 12.090909090909092,
+      "sources": {
+        "github": 18
+      },
+      "docs24h": 18
+    },
+    {
       "term": "multihedge",
       "count24h": 28,
       "baselinePerDay": 1.4285714285714286,
@@ -68,28 +79,6 @@
         "github": 28
       },
       "docs24h": 14
-    },
-    {
-      "term": "nextjs",
-      "count24h": 17,
-      "baselinePerDay": 0.5714285714285714,
-      "count7d": 4,
-      "growth": 11.454545454545455,
-      "sources": {
-        "github": 17
-      },
-      "docs24h": 17
-    },
-    {
-      "term": "mpc",
-      "count24h": 31,
-      "baselinePerDay": 2,
-      "count7d": 14,
-      "growth": 10.666666666666666,
-      "sources": {
-        "github": 31
-      },
-      "docs24h": 15
     },
     {
       "term": "gill",
@@ -112,6 +101,17 @@
         "github": 32
       },
       "docs24h": 16
+    },
+    {
+      "term": "transparent",
+      "count24h": 13,
+      "baselinePerDay": 0.42857142857142855,
+      "count7d": 3,
+      "growth": 9.799999999999999,
+      "sources": {
+        "github": 13
+      },
+      "docs24h": 13
     }
   ]
 }
