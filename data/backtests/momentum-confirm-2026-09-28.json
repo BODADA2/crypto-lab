@@ -1,0 +1,71 @@
+{
+  "hurdle": 0.08,
+  "falsificateur": "net médian test <= 0 → abandon",
+  "SANS signal (baseline)": {
+    "train": {
+      "n": 52,
+      "net_median": -0.5859495060373215,
+      "net_mean": -0.2980764115020475,
+      "wins": 9,
+      "gross_median": -0.5499451152579582,
+      "mfe_median": 0,
+      "mae_median": -0.5499451152579582,
+      "entry_delay_min_median": 29.829966666666667,
+      "exit_reasons": {
+        "SL-50%": 30,
+        "TP+100%": 8,
+        "time-stop 48h": 2,
+        "fin": 12
+      }
+    },
+    "test": {
+      "n": 182,
+      "net_median": -0.17601518026565466,
+      "net_mean": -0.24614042954419943,
+      "wins": 21,
+      "gross_median": -0.10436432637571158,
+      "mfe_median": 0,
+      "mae_median": -0.20146349058072544,
+      "entry_delay_min_median": 28.1034,
+      "exit_reasons": {
+        "fin": 84,
+        "SL-50%": 81,
+        "TP+100%": 17
+      }
+    }
+  },
+  "AVEC signal (imb>0.2)": {
+    "train": {
+      "n": 18,
+      "net_median": -0.5628817480719794,
+      "net_mean": -0.14682404577982777,
+      "wins": 6,
+      "gross_median": -0.5248714652956299,
+      "mfe_median": 0.09909465020576147,
+      "mae_median": -0.5248714652956299,
+      "entry_delay_min_median": 33.815216666666664,
+      "exit_reasons": {
+        "SL-50%": 11,
+        "TP+100%": 5,
+        "time-stop 48h": 1,
+        "fin": 1
+      }
+    },
+    "test": {
+      "n": 43,
+      "net_median": -0.7577705223880596,
+      "net_mean": -0.3202825050701489,
+      "wins": 8,
+      "gross_median": -0.7367070895522387,
+      "mfe_median": 0,
+      "mae_median": -0.7367070895522387,
+      "entry_delay_min_median": 26.45455,
+      "exit_reasons": {
+        "fin": 9,
+        "SL-50%": 27,
+        "TP+100%": 7
+      }
+    }
+  },
+  "verdict": "ABANDON"
+}

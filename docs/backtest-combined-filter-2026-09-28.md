@@ -1,5 +1,14 @@
 # Backtest walk-forward — filtre combiné « manuel + skin in the game » (2026-09-28)
 
+> ⚠️ **CORRECTION (2026-09-28, nuit) — RÉSULTATS INVALIDÉS.** Un audit postérieur a trouvé
+> que 607 creates « late-discovery » (état de courbe figé `85.005359057`, 100 % migrés,
+> `devBuy` fictif) gonflaient le taux mesuré. Sur données genuine : filtre ≥1,3 SOL →
+> **1,54 % / 1,66 % (train/test) vs base 1,27 % / 1,42 % — aucun edge.** H-DEVBUY comme signal
+> create-time est sans preuve. Voir `docs/audit-late-discovery-2026-09-28.md` (audit complet),
+> `docs/second-filter-2026-09-28.md` (second filtre : abandon), `docs/unbiased-tracking-spec-2026-09-28.md`
+> (spec suivi non biaisé). Le protocole ci-dessous reste valide ; les chiffres des §2–§5 sont
+> remplacés par l'audit.
+
 **Nature :** backtest walk-forward sur données réelles, protocole du labo (n≥30, médianes,
 pas de lookahead). Aucun seuil du moteur modifié, aucune transaction réelle.
 Script : `lab/backtest/run-combined-filter.ts` · données : `data/backtests/combined-filter-2026-09-28.json`.

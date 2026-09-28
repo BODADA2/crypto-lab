@@ -1,5 +1,12 @@
 # Edge check — Tier 1 sur données réelles (2026-09-28)
 
+> ⚠️ **CORRECTION (2026-09-28, nuit) — H-DEVBUY et l'amplitude de H-TOOL affectés par l'artefact
+> « late-discovery »** (607 creates au tuple figé `85.005359057`, 100 % migrés — voir
+> `docs/audit-late-discovery-2026-09-28.md`). Sur données genuine : H-DEVBUY ≈ 1,5–2,0 % vs base
+> 1,4 % (pas d'edge, monotonicité en seuil disparue) ; H-TOOL résiduel faible (uxento.io 0,45 %,
+> j7tracker 0,87 % vs ipfs.io 1,31 %, lift d'exclusion nul). H-CALLTRACK (falsifié), H-CURVE et
+> H-POSTMIG : inchangés par l'audit. Les §H-DEVBUY et §H-TOOL ci-dessous sont supersedés.
+
 **Nature :** mesure descriptive, PAS un backtest validé. Aucune donnée fabriquée,
 aucun seuil modifié, aucune écriture dans le paper engine (cycle 2 en cours en parallèle).
 
