@@ -1,0 +1,1738 @@
+{
+  "ruleVersion": "AVOID-S2D-v1",
+  "frozenDate": "2026-09-28",
+  "protocol": {
+    "universe": "discovery uniquement (hash mint < 50) ; holdout JAMAIS lu ; calibration non utilisée",
+    "excluded": [
+      "SKHYhSjuRWHgikq8eRKbtBbpABgJSkd7ytQV14i9EQ3 (glitch décimal)"
+    ],
+    "t0": "findT0 : premier snapshot liquidityUsd >= 20000 et priceUsd > 0",
+    "antiGlitch": "aberrantMask (>=100x ou <=1/100 des deux voisins) appliqué à Y et au drawdown",
+    "dataBias": "BORNE OPTIMISTE : data/history/ biaisée vers les tokens chauds",
+    "thresholds": "percentiles intra-discovery (interpolation linéaire type 7), 3 points de sensibilité",
+    "oos": "NON MESURÉ — holdout gelé ; re-test requis sur collecte propre 30 j (data/track-unbiased/)",
+    "noStrategy": "AUCUNE stratégie construite : valeur d'évitement uniquement, pas de P&L de trading",
+    "readOnly": "data/ en lecture seule ; data/earlybuyers/ non touché"
+  },
+  "thresholdsByPoint": {
+    "bas": {
+      "F_FRENZY": 529.7999999999996,
+      "F_TURNOVER": 2.854087778834,
+      "F_LIQT0": 30908.489999999998
+    },
+    "principal": {
+      "F_FRENZY": 699,
+      "F_TURNOVER": 3.8090859585512047,
+      "F_LIQT0": 27947.975
+    },
+    "haut": {
+      "F_FRENZY": 950.4000000000001,
+      "F_TURNOVER": 6.745798013841261,
+      "F_LIQT0": 25679.048
+    }
+  },
+  "nDiscoveryRows": 503,
+  "filters": [
+    {
+      "id": "F_FRENZY",
+      "variable": "sellsM5",
+      "side": "high",
+      "points": [
+        70,
+        75,
+        80
+      ],
+      "hypothesis": "H-PRED-FLOW-01 — frénésie d'activité à t0 ⇒ Y@1h négatif (ρ=−0,220 OOS)",
+      "horizon": "1h"
+    },
+    {
+      "id": "F_TURNOVER",
+      "variable": "turnoverM5",
+      "side": "high",
+      "points": [
+        85,
+        90,
+        95
+      ],
+      "hypothesis": "H-PRED-LIQ-01 — turnover élevé à t0 ⇒ Y@6h négatif (sp=−0,410 OOS)",
+      "horizon": "6h"
+    },
+    {
+      "id": "F_LIQT0",
+      "variable": "liqT0",
+      "side": "low",
+      "points": [
+        30,
+        25,
+        20
+      ],
+      "hypothesis": "H-S1-E1 — liquidité basse à t0 ⇒ mauvaise survie (HR=0,691/doublement)",
+      "horizon": "survie"
+    }
+  ],
+  "metrics": [
+    {
+      "scope": "F_FRENZY",
+      "horizon": "1h",
+      "point": "bas",
+      "thresholds": {
+        "F_FRENZY": 529.7999999999996
+      },
+      "nAll": 327,
+      "nFlag": 87,
+      "nKeep": 240,
+      "pctAvoided": 0.26605504587155965,
+      "medianYAll": -0.0066564260112645934,
+      "medianYKeep": 0.004618740564112267,
+      "medianYFlag": -0.7187388987566607,
+      "lossAvoidedMed": 0.01127516657537686,
+      "meanYAll": 0.02915737765386509,
+      "meanYKeep": -0.004119313354221472,
+      "lossAvoidedMean": -0.03327669100808656,
+      "p10All": -0.9907785087719299,
+      "p10Keep": -0.9759001956947162,
+      "tailLossAvoided": 0.014878313077213656,
+      "ddMedAll": -0.9527077977720652,
+      "ddMedKeep": -0.8846530727124609,
+      "ddAvoided": 0.0680547250596043,
+      "nWinners": 156,
+      "fpWinners": 26,
+      "fpWinnersPct": 0.16666666666666666,
+      "nRunners": 35,
+      "fpRunners": 18,
+      "fpRunnersPct": 0.5142857142857142,
+      "mwU": 7815,
+      "mwP": 0.000510250023175729,
+      "ciLo": 0.003339608650261061,
+      "ciHi": 0.1761967178841799,
+      "cohortStability": [
+        {
+          "name": "pumpswap",
+          "n": 270,
+          "lossAvoidedMed": 0.05232149576932327
+        },
+        {
+          "name": "autre",
+          "n": 15,
+          "lossAvoidedMed": 0
+        },
+        {
+          "name": "raydium",
+          "n": 42,
+          "lossAvoidedMed": 0
+        }
+      ],
+      "timeStability": [
+        {
+          "name": "2e moitié",
+          "n": 163,
+          "lossAvoidedMed": 0.06265686140380489
+        },
+        {
+          "name": "1re moitié",
+          "n": 164,
+          "lossAvoidedMed": 0.007729951300294857
+        }
+      ]
+    },
+    {
+      "scope": "F_FRENZY",
+      "horizon": "1h",
+      "point": "principal",
+      "thresholds": {
+        "F_FRENZY": 699
+      },
+      "nAll": 327,
+      "nFlag": 69,
+      "nKeep": 258,
+      "pctAvoided": 0.21100917431192662,
+      "medianYAll": -0.0066564260112645934,
+      "medianYKeep": 0.0027880507327641135,
+      "medianYFlag": -0.8118859719761636,
+      "lossAvoidedMed": 0.009444476744028707,
+      "meanYAll": 0.02915737765386509,
+      "meanYKeep": 0.030413645588918174,
+      "lossAvoidedMean": 0.0012562679350530855,
+      "p10All": -0.9907785087719299,
+      "p10Keep": -0.981687675070028,
+      "tailLossAvoided": 0.00909083370190189,
+      "ddMedAll": -0.9527077977720652,
+      "ddMedKeep": -0.8912358231919174,
+      "ddAvoided": 0.06147197458014775,
+      "nWinners": 156,
+      "fpWinners": 20,
+      "fpWinnersPct": 0.1282051282051282,
+      "nRunners": 35,
+      "fpRunners": 15,
+      "fpRunnersPct": 0.42857142857142855,
+      "mwU": 6508,
+      "mwP": 0.0006008986633474489,
+      "ciLo": 0.0025018563444620945,
+      "ciHi": 0.16480341577335506,
+      "cohortStability": [
+        {
+          "name": "pumpswap",
+          "n": 270,
+          "lossAvoidedMed": 0.051911810409745185
+        },
+        {
+          "name": "autre",
+          "n": 15,
+          "lossAvoidedMed": 0
+        },
+        {
+          "name": "raydium",
+          "n": 42,
+          "lossAvoidedMed": -0.0029722074703487644
+        }
+      ],
+      "timeStability": [
+        {
+          "name": "2e moitié",
+          "n": 163,
+          "lossAvoidedMed": 0.05007368932348932
+        },
+        {
+          "name": "1re moitié",
+          "n": 164,
+          "lossAvoidedMed": 0.0073312263080526074
+        }
+      ]
+    },
+    {
+      "scope": "F_FRENZY",
+      "horizon": "1h",
+      "point": "haut",
+      "thresholds": {
+        "F_FRENZY": 950.4000000000001
+      },
+      "nAll": 327,
+      "nFlag": 56,
+      "nKeep": 271,
+      "pctAvoided": 0.1712538226299694,
+      "medianYAll": -0.0066564260112645934,
+      "medianYKeep": 0.001163692785104642,
+      "medianYFlag": -0.901128650326492,
+      "lossAvoidedMed": 0.007820118796369235,
+      "meanYAll": 0.02915737765386509,
+      "meanYKeep": 0.04045246385705898,
+      "lossAvoidedMean": 0.011295086203193892,
+      "p10All": -0.9907785087719299,
+      "p10Keep": -0.9787493940862821,
+      "tailLossAvoided": 0.012029114685647713,
+      "ddMedAll": -0.9527077977720652,
+      "ddMedKeep": -0.9127556772427122,
+      "ddAvoided": 0.03995212052935293,
+      "nWinners": 156,
+      "fpWinners": 17,
+      "fpWinnersPct": 0.10897435897435898,
+      "nRunners": 35,
+      "fpRunners": 12,
+      "fpRunnersPct": 0.34285714285714286,
+      "mwU": 5481,
+      "mwP": 0.001067181533390027,
+      "ciLo": 0.0011683946808063173,
+      "ciHi": 0.1531935745253617,
+      "cohortStability": [
+        {
+          "name": "pumpswap",
+          "n": 270,
+          "lossAvoidedMed": 0.04534206606533481
+        },
+        {
+          "name": "autre",
+          "n": 15,
+          "lossAvoidedMed": 0
+        },
+        {
+          "name": "raydium",
+          "n": 42,
+          "lossAvoidedMed": -0.0028696343158810533
+        }
+      ],
+      "timeStability": [
+        {
+          "name": "2e moitié",
+          "n": 163,
+          "lossAvoidedMed": 0.046740009866330534
+        },
+        {
+          "name": "1re moitié",
+          "n": 164,
+          "lossAvoidedMed": 0.007156369120871586
+        }
+      ]
+    },
+    {
+      "scope": "F_FRENZY",
+      "horizon": "6h",
+      "point": "bas",
+      "thresholds": {
+        "F_FRENZY": 529.7999999999996
+      },
+      "nAll": 177,
+      "nFlag": 35,
+      "nKeep": 142,
+      "pctAvoided": 0.1977401129943503,
+      "medianYAll": -0.02031394275161591,
+      "medianYKeep": 0.0005492610770116979,
+      "medianYFlag": -0.8946484784889821,
+      "lossAvoidedMed": 0.020863203828627608,
+      "meanYAll": -0.0832459141986784,
+      "meanYKeep": -0.021480604168062366,
+      "lossAvoidedMean": 0.06176531003061603,
+      "p10All": -0.9722664015904573,
+      "p10Keep": -0.9657203337068858,
+      "tailLossAvoided": 0.0065460678835714825,
+      "ddMedAll": -0.822380106571936,
+      "ddMedKeep": -0.6367490882363515,
+      "ddAvoided": 0.1856310183355846,
+      "nWinners": 75,
+      "fpWinners": 4,
+      "fpWinnersPct": 0.05333333333333334,
+      "nRunners": 8,
+      "fpRunners": 3,
+      "fpRunnersPct": 0.375,
+      "mwU": 1157,
+      "mwP": 9.951558013199246e-7,
+      "ciLo": 0.00645835805786632,
+      "ciHi": 0.24318297441777537,
+      "cohortStability": [
+        {
+          "name": "pumpswap",
+          "n": 134,
+          "lossAvoidedMed": 0.20757867253124057
+        },
+        {
+          "name": "autre",
+          "n": 11,
+          "lossAvoidedMed": 0
+        },
+        {
+          "name": "raydium",
+          "n": 32,
+          "lossAvoidedMed": -0.0016022647071033402
+        }
+      ],
+      "timeStability": [
+        {
+          "name": "1re moitié",
+          "n": 89,
+          "lossAvoidedMed": 0.006473702039546891
+        },
+        {
+          "name": "2e moitié",
+          "n": 88,
+          "lossAvoidedMed": 0.2840181305560407
+        }
+      ]
+    },
+    {
+      "scope": "F_FRENZY",
+      "horizon": "6h",
+      "point": "principal",
+      "thresholds": {
+        "F_FRENZY": 699
+      },
+      "nAll": 177,
+      "nFlag": 26,
+      "nKeep": 151,
+      "pctAvoided": 0.14689265536723164,
+      "medianYAll": -0.02031394275161591,
+      "medianYKeep": -0.0024608142085272844,
+      "medianYFlag": -0.9245953339982167,
+      "lossAvoidedMed": 0.017853128543088626,
+      "meanYAll": -0.0832459141986784,
+      "meanYKeep": -0.03273762447056624,
+      "lossAvoidedMean": 0.05050828972811216,
+      "p10All": -0.9722664015904573,
+      "p10Keep": -0.9556701030927836,
+      "tailLossAvoided": 0.016596298497673745,
+      "ddMedAll": -0.822380106571936,
+      "ddMedKeep": -0.6590781337830242,
+      "ddAvoided": 0.1633019727889119,
+      "nWinners": 75,
+      "fpWinners": 3,
+      "fpWinnersPct": 0.04,
+      "nRunners": 8,
+      "fpRunners": 2,
+      "fpRunnersPct": 0.25,
+      "mwU": 913,
+      "mwP": 0.000013431115240880587,
+      "ciLo": 0.0028588550315327144,
+      "ciHi": 0.22731140654176885,
+      "cohortStability": [
+        {
+          "name": "pumpswap",
+          "n": 134,
+          "lossAvoidedMed": 0.17228357901595076
+        },
+        {
+          "name": "autre",
+          "n": 11,
+          "lossAvoidedMed": 0
+        },
+        {
+          "name": "raydium",
+          "n": 32,
+          "lossAvoidedMed": -0.0016022647071033402
+        }
+      ],
+      "timeStability": [
+        {
+          "name": "1re moitié",
+          "n": 89,
+          "lossAvoidedMed": 0.002923463860134534
+        },
+        {
+          "name": "2e moitié",
+          "n": 88,
+          "lossAvoidedMed": 0.24032860898960434
+        }
+      ]
+    },
+    {
+      "scope": "F_FRENZY",
+      "horizon": "6h",
+      "point": "haut",
+      "thresholds": {
+        "F_FRENZY": 950.4000000000001
+      },
+      "nAll": 177,
+      "nFlag": 20,
+      "nKeep": 157,
+      "pctAvoided": 0.11299435028248588,
+      "medianYAll": -0.02031394275161591,
+      "medianYKeep": -0.0037504261847937093,
+      "medianYFlag": -0.9312345386432979,
+      "lossAvoidedMed": 0.0165635165668222,
+      "meanYAll": -0.0832459141986784,
+      "meanYKeep": -0.05339478465331399,
+      "lossAvoidedMean": 0.02985112954536441,
+      "p10All": -0.9722664015904573,
+      "p10Keep": -0.9657203337068858,
+      "tailLossAvoided": 0.0065460678835714825,
+      "ddMedAll": -0.822380106571936,
+      "ddMedKeep": -0.7132671606319028,
+      "ddAvoided": 0.10911294594003329,
+      "nWinners": 75,
+      "fpWinners": 2,
+      "fpWinnersPct": 0.02666666666666667,
+      "nRunners": 8,
+      "fpRunners": 2,
+      "fpRunnersPct": 0.25,
+      "mwU": 722,
+      "mwP": 0.00008442312441681032,
+      "ciLo": 0.0019252593315070565,
+      "ciHi": 0.21552479730226404,
+      "cohortStability": [
+        {
+          "name": "pumpswap",
+          "n": 134,
+          "lossAvoidedMed": 0.1411213488507957
+        },
+        {
+          "name": "autre",
+          "n": 11,
+          "lossAvoidedMed": 0
+        },
+        {
+          "name": "raydium",
+          "n": 32,
+          "lossAvoidedMed": -0.0016022647071033402
+        }
+      ],
+      "timeStability": [
+        {
+          "name": "1re moitié",
+          "n": 89,
+          "lossAvoidedMed": 0.002923463860134534
+        },
+        {
+          "name": "2e moitié",
+          "n": 88,
+          "lossAvoidedMed": 0.23761269677721492
+        }
+      ]
+    },
+    {
+      "scope": "F_TURNOVER",
+      "horizon": "1h",
+      "point": "bas",
+      "thresholds": {
+        "F_TURNOVER": 2.854087778834
+      },
+      "nAll": 327,
+      "nFlag": 47,
+      "nKeep": 280,
+      "pctAvoided": 0.1437308868501529,
+      "medianYAll": -0.0066564260112645934,
+      "medianYKeep": 0.0012264531824105473,
+      "medianYFlag": -0.7185316624154374,
+      "lossAvoidedMed": 0.00788287919367514,
+      "meanYAll": 0.02915737765386509,
+      "meanYKeep": 0.010408740091423258,
+      "lossAvoidedMean": -0.01874863756244183,
+      "p10All": -0.9907785087719299,
+      "p10Keep": -0.9918302945301543,
+      "tailLossAvoided": -0.0010517857582243995,
+      "ddMedAll": -0.9527077977720652,
+      "ddMedKeep": -0.9553292694716771,
+      "ddAvoided": -0.0026214716996119103,
+      "nWinners": 156,
+      "fpWinners": 12,
+      "fpWinnersPct": 0.07692307692307693,
+      "nRunners": 35,
+      "fpRunners": 7,
+      "fpRunnersPct": 0.2,
+      "mwU": 5248,
+      "mwP": 0.026300878906541314,
+      "ciLo": 0.0013803651732290367,
+      "ciHi": 0.1570682950588559,
+      "cohortStability": [
+        {
+          "name": "pumpswap",
+          "n": 270,
+          "lossAvoidedMed": 0.045942718290270135
+        },
+        {
+          "name": "autre",
+          "n": 15,
+          "lossAvoidedMed": 0
+        },
+        {
+          "name": "raydium",
+          "n": 42,
+          "lossAvoidedMed": 0
+        }
+      ],
+      "timeStability": [
+        {
+          "name": "2e moitié",
+          "n": 163,
+          "lossAvoidedMed": 0.046740009866330534
+        },
+        {
+          "name": "1re moitié",
+          "n": 164,
+          "lossAvoidedMed": 0.007219129518177492
+        }
+      ]
+    },
+    {
+      "scope": "F_TURNOVER",
+      "horizon": "1h",
+      "point": "principal",
+      "thresholds": {
+        "F_TURNOVER": 3.8090859585512047
+      },
+      "nAll": 327,
+      "nFlag": 28,
+      "nKeep": 299,
+      "pctAvoided": 0.0856269113149847,
+      "medianYAll": -0.0066564260112645934,
+      "medianYKeep": 0.00045739046701975816,
+      "medianYFlag": -0.901128650326492,
+      "lossAvoidedMed": 0.007113816478284352,
+      "meanYAll": 0.02915737765386509,
+      "meanYKeep": 0.06842806581016041,
+      "lossAvoidedMean": 0.03927068815629532,
+      "p10All": -0.9907785087719299,
+      "p10Keep": -0.9914178515007899,
+      "tailLossAvoided": -0.0006393427288600151,
+      "ddMedAll": -0.9527077977720652,
+      "ddMedKeep": -0.9485219164118247,
+      "ddAvoided": 0.004185881360240451,
+      "nWinners": 156,
+      "fpWinners": 4,
+      "fpWinnersPct": 0.02564102564102564,
+      "nRunners": 35,
+      "fpRunners": 3,
+      "fpRunnersPct": 0.08571428571428572,
+      "mwU": 2585,
+      "mwP": 0.0008145201659066625,
+      "ciLo": 0.0013686988536160127,
+      "ciHi": 0.14666067791031784,
+      "cohortStability": [
+        {
+          "name": "pumpswap",
+          "n": 270,
+          "lossAvoidedMed": 0.04534206606533481
+        },
+        {
+          "name": "autre",
+          "n": 15,
+          "lossAvoidedMed": 0
+        },
+        {
+          "name": "raydium",
+          "n": 42,
+          "lossAvoidedMed": -0.0028696343158810533
+        }
+      ],
+      "timeStability": [
+        {
+          "name": "2e moitié",
+          "n": 163,
+          "lossAvoidedMed": 0.04614037372810531
+        },
+        {
+          "name": "1re moitié",
+          "n": 164,
+          "lossAvoidedMed": 0.007156369120871586
+        }
+      ]
+    },
+    {
+      "scope": "F_TURNOVER",
+      "horizon": "1h",
+      "point": "haut",
+      "thresholds": {
+        "F_TURNOVER": 6.745798013841261
+      },
+      "nAll": 327,
+      "nFlag": 11,
+      "nKeep": 316,
+      "pctAvoided": 0.03363914373088685,
+      "medianYAll": -0.0066564260112645934,
+      "medianYKeep": -0.0017395689452731622,
+      "medianYFlag": -0.9673283160865475,
+      "lossAvoidedMed": 0.004916857065991431,
+      "meanYAll": 0.02915737765386509,
+      "meanYKeep": 0.05201665555730292,
+      "lossAvoidedMean": 0.022859277903437832,
+      "p10All": -0.9907785087719299,
+      "p10Keep": -0.989811320754717,
+      "tailLossAvoided": 0.00096718801721285,
+      "ddMedAll": -0.9527077977720652,
+      "ddMedKeep": -0.944977426930038,
+      "ddAvoided": 0.007730370842027212,
+      "nWinners": 156,
+      "fpWinners": 1,
+      "fpWinnersPct": 0.00641025641025641,
+      "nRunners": 35,
+      "fpRunners": 1,
+      "fpRunnersPct": 0.02857142857142857,
+      "mwU": 783,
+      "mwP": 0.0019361438992677726,
+      "ciLo": 0.00003179108531270458,
+      "ciHi": 0.10774577572964661,
+      "cohortStability": [
+        {
+          "name": "pumpswap",
+          "n": 270,
+          "lossAvoidedMed": 0.03064629717459405
+        },
+        {
+          "name": "autre",
+          "n": 15,
+          "lossAvoidedMed": 0
+        },
+        {
+          "name": "raydium",
+          "n": 42,
+          "lossAvoidedMed": 0
+        }
+      ],
+      "timeStability": [
+        {
+          "name": "2e moitié",
+          "n": 163,
+          "lossAvoidedMed": 0.04516688758066789
+        },
+        {
+          "name": "1re moitié",
+          "n": 164,
+          "lossAvoidedMed": 0.003566509866557599
+        }
+      ]
+    },
+    {
+      "scope": "F_TURNOVER",
+      "horizon": "6h",
+      "point": "bas",
+      "thresholds": {
+        "F_TURNOVER": 2.854087778834
+      },
+      "nAll": 177,
+      "nFlag": 28,
+      "nKeep": 149,
+      "pctAvoided": 0.15819209039548024,
+      "medianYAll": -0.02031394275161591,
+      "medianYKeep": -0.0024608142085272844,
+      "medianYFlag": -0.776815879321226,
+      "lossAvoidedMed": 0.017853128543088626,
+      "meanYAll": -0.0832459141986784,
+      "meanYKeep": -0.07915270483366131,
+      "lossAvoidedMean": 0.004093209365017086,
+      "p10All": -0.9722664015904573,
+      "p10Keep": -0.981290082028337,
+      "tailLossAvoided": -0.00902368043787971,
+      "ddMedAll": -0.822380106571936,
+      "ddMedKeep": -0.6590781337830242,
+      "ddAvoided": 0.1633019727889119,
+      "nWinners": 75,
+      "fpWinners": 5,
+      "fpWinnersPct": 0.06666666666666667,
+      "nRunners": 8,
+      "fpRunners": 3,
+      "fpRunnersPct": 0.375,
+      "mwU": 1415,
+      "mwP": 0.006948215555076631,
+      "ciLo": 0.002294895472294778,
+      "ciHi": 0.2246819414639336,
+      "cohortStability": [
+        {
+          "name": "pumpswap",
+          "n": 134,
+          "lossAvoidedMed": 0.16705914345545364
+        },
+        {
+          "name": "autre",
+          "n": 11,
+          "lossAvoidedMed": 0
+        },
+        {
+          "name": "raydium",
+          "n": 32,
+          "lossAvoidedMed": 0
+        }
+      ],
+      "timeStability": [
+        {
+          "name": "1re moitié",
+          "n": 89,
+          "lossAvoidedMed": 0.002923463860134534
+        },
+        {
+          "name": "2e moitié",
+          "n": 88,
+          "lossAvoidedMed": 0.23940880157823258
+        }
+      ]
+    },
+    {
+      "scope": "F_TURNOVER",
+      "horizon": "6h",
+      "point": "principal",
+      "thresholds": {
+        "F_TURNOVER": 3.8090859585512047
+      },
+      "nAll": 177,
+      "nFlag": 14,
+      "nKeep": 163,
+      "pctAvoided": 0.07909604519774012,
+      "medianYAll": -0.02031394275161591,
+      "medianYKeep": -0.007421400620698959,
+      "medianYFlag": -0.9052235198200307,
+      "lossAvoidedMed": 0.01289254213091695,
+      "meanYAll": -0.0832459141986784,
+      "meanYKeep": -0.045554164008726326,
+      "lossAvoidedMean": 0.03769175018995207,
+      "p10All": -0.9722664015904573,
+      "p10Keep": -0.976259493670886,
+      "tailLossAvoided": -0.003993092080428751,
+      "ddMedAll": -0.822380106571936,
+      "ddMedKeep": -0.7805170821791321,
+      "ddAvoided": 0.04186302439280398,
+      "nWinners": 75,
+      "fpWinners": 2,
+      "fpWinnersPct": 0.02666666666666667,
+      "nRunners": 8,
+      "fpRunners": 1,
+      "fpRunnersPct": 0.125,
+      "mwU": 653,
+      "mwP": 0.007927642752986408,
+      "ciLo": 0.00026033670843478296,
+      "ciHi": 0.19730538812203735,
+      "cohortStability": [
+        {
+          "name": "pumpswap",
+          "n": 134,
+          "lossAvoidedMed": 0.11626595006711332
+        },
+        {
+          "name": "autre",
+          "n": 11,
+          "lossAvoidedMed": 0
+        },
+        {
+          "name": "raydium",
+          "n": 32,
+          "lossAvoidedMed": 0
+        }
+      ],
+      "timeStability": [
+        {
+          "name": "1re moitié",
+          "n": 89,
+          "lossAvoidedMed": 0.0005206734168695659
+        },
+        {
+          "name": "2e moitié",
+          "n": 88,
+          "lossAvoidedMed": 0.20955232099681148
+        }
+      ]
+    },
+    {
+      "scope": "F_TURNOVER",
+      "horizon": "6h",
+      "point": "haut",
+      "thresholds": {
+        "F_TURNOVER": 6.745798013841261
+      },
+      "nAll": 177,
+      "nFlag": 4,
+      "nKeep": 173,
+      "pctAvoided": 0.022598870056497175,
+      "medianYAll": -0.02031394275161591,
+      "medianYKeep": -0.013185137361414134,
+      "medianYFlag": -0.9271328572178754,
+      "lossAvoidedMed": 0.007128805390201776,
+      "meanYAll": -0.0832459141986784,
+      "meanYKeep": -0.06500186702747426,
+      "lossAvoidedMean": 0.018244047171204134,
+      "p10All": -0.9722664015904573,
+      "p10Keep": -0.9722664015904573,
+      "tailLossAvoided": 0,
+      "ddMedAll": -0.822380106571936,
+      "ddMedKeep": -0.8099898751265608,
+      "ddAvoided": 0.01239023144537521,
+      "nWinners": 75,
+      "fpWinners": 0,
+      "fpWinnersPct": 0,
+      "nRunners": 8,
+      "fpRunners": 0,
+      "fpRunnersPct": 0,
+      "mwU": null,
+      "mwP": null,
+      "ciLo": 0,
+      "ciHi": 0.11217085806518468,
+      "cohortStability": [
+        {
+          "name": "pumpswap",
+          "n": 134,
+          "lossAvoidedMed": 0.07208345978406433
+        },
+        {
+          "name": "autre",
+          "n": 11,
+          "lossAvoidedMed": 0
+        },
+        {
+          "name": "raydium",
+          "n": 32,
+          "lossAvoidedMed": 0
+        }
+      ],
+      "timeStability": [
+        {
+          "name": "1re moitié",
+          "n": 89,
+          "lossAvoidedMed": 0.00026033670843478296
+        },
+        {
+          "name": "2e moitié",
+          "n": 88,
+          "lossAvoidedMed": 0.014600977497251477
+        }
+      ]
+    },
+    {
+      "scope": "F_LIQT0",
+      "horizon": "1h",
+      "point": "bas",
+      "thresholds": {
+        "F_LIQT0": 30908.489999999998
+      },
+      "nAll": 327,
+      "nFlag": 88,
+      "nKeep": 239,
+      "pctAvoided": 0.2691131498470948,
+      "medianYAll": -0.0066564260112645934,
+      "medianYKeep": 0.009496284062757931,
+      "medianYFlag": -0.4295648079208311,
+      "lossAvoidedMed": 0.016152710074022525,
+      "meanYAll": 0.02915737765386509,
+      "meanYKeep": 0.07057069463731501,
+      "lossAvoidedMean": 0.041413316983449924,
+      "p10All": -0.9907785087719299,
+      "p10Keep": -0.9950853658536586,
+      "tailLossAvoided": -0.004306857081728732,
+      "ddMedAll": -0.9527077977720652,
+      "ddMedKeep": -0.9857876712328767,
+      "ddAvoided": -0.03307987346081154,
+      "nWinners": 156,
+      "fpWinners": 24,
+      "fpWinnersPct": 0.15384615384615385,
+      "nRunners": 35,
+      "fpRunners": 8,
+      "fpRunnersPct": 0.22857142857142856,
+      "mwU": 9265,
+      "mwP": 0.09881834365632569,
+      "ciLo": 0.004906801742821432,
+      "ciHi": 0.17477230392027038,
+      "cohortStability": [
+        {
+          "name": "pumpswap",
+          "n": 270,
+          "lossAvoidedMed": 0.054357667862866055
+        },
+        {
+          "name": "autre",
+          "n": 15,
+          "lossAvoidedMed": -0.0018823582207475043
+        },
+        {
+          "name": "raydium",
+          "n": 42,
+          "lossAvoidedMed": 0.006109963040091371
+        }
+      ],
+      "timeStability": [
+        {
+          "name": "2e moitié",
+          "n": 163,
+          "lossAvoidedMed": 0.057338636552888955
+        },
+        {
+          "name": "1re moitié",
+          "n": 164,
+          "lossAvoidedMed": 0.01542620000121897
+        }
+      ]
+    },
+    {
+      "scope": "F_LIQT0",
+      "horizon": "1h",
+      "point": "principal",
+      "thresholds": {
+        "F_LIQT0": 27947.975
+      },
+      "nAll": 327,
+      "nFlag": 74,
+      "nKeep": 253,
+      "pctAvoided": 0.22629969418960244,
+      "medianYAll": -0.0066564260112645934,
+      "medianYKeep": 0.005446411204045987,
+      "medianYFlag": -0.39888810363102817,
+      "lossAvoidedMed": 0.01210283721531058,
+      "meanYAll": 0.02915737765386509,
+      "meanYKeep": 0.050733800852922555,
+      "lossAvoidedMean": 0.021576423199057466,
+      "p10All": -0.9907785087719299,
+      "p10Keep": -0.9945876915592313,
+      "tailLossAvoided": -0.0038091827873014683,
+      "ddMedAll": -0.9527077977720652,
+      "ddMedKeep": -0.981687675070028,
+      "ddAvoided": -0.02897987729796281,
+      "nWinners": 156,
+      "fpWinners": 19,
+      "fpWinnersPct": 0.12179487179487179,
+      "nRunners": 35,
+      "fpRunners": 6,
+      "fpRunnersPct": 0.17142857142857143,
+      "mwU": 8367,
+      "mwP": 0.16446329254116443,
+      "ciLo": 0.0037647164414950085,
+      "ciHi": 0.17266961902717182,
+      "cohortStability": [
+        {
+          "name": "pumpswap",
+          "n": 270,
+          "lossAvoidedMed": 0.052023920305311944
+        },
+        {
+          "name": "autre",
+          "n": 15,
+          "lossAvoidedMed": 0
+        },
+        {
+          "name": "raydium",
+          "n": 42,
+          "lossAvoidedMed": 0.006109963040091371
+        }
+      ],
+      "timeStability": [
+        {
+          "name": "2e moitié",
+          "n": 163,
+          "lossAvoidedMed": 0.05557414088595414
+        },
+        {
+          "name": "1re moitié",
+          "n": 164,
+          "lossAvoidedMed": 0.010341792096210112
+        }
+      ]
+    },
+    {
+      "scope": "F_LIQT0",
+      "horizon": "1h",
+      "point": "haut",
+      "thresholds": {
+        "F_LIQT0": 25679.048
+      },
+      "nAll": 327,
+      "nFlag": 55,
+      "nKeep": 272,
+      "pctAvoided": 0.16819571865443425,
+      "medianYAll": -0.0066564260112645934,
+      "medianYKeep": 0.0027880507327641135,
+      "medianYFlag": -0.37809705321800324,
+      "lossAvoidedMed": 0.009444476744028707,
+      "meanYAll": 0.02915737765386509,
+      "meanYKeep": 0.0878924964228291,
+      "lossAvoidedMean": 0.05873511876896402,
+      "p10All": -0.9907785087719299,
+      "p10Keep": -0.9941362660944206,
+      "tailLossAvoided": -0.003357757322490773,
+      "ddMedAll": -0.9527077977720652,
+      "ddMedKeep": -0.9756100978473581,
+      "ddAvoided": -0.022902300075292925,
+      "nWinners": 156,
+      "fpWinners": 13,
+      "fpWinnersPct": 0.08333333333333333,
+      "nRunners": 35,
+      "fpRunners": 2,
+      "fpRunnersPct": 0.05714285714285714,
+      "mwU": 6681,
+      "mwP": 0.21119833252539055,
+      "ciLo": 0.002502118330603098,
+      "ciHi": 0.16387464512499939,
+      "cohortStability": [
+        {
+          "name": "pumpswap",
+          "n": 270,
+          "lossAvoidedMed": 0.045942718290270135
+        },
+        {
+          "name": "autre",
+          "n": 15,
+          "lossAvoidedMed": 0.0003987249922422498
+        },
+        {
+          "name": "raydium",
+          "n": 42,
+          "lossAvoidedMed": 0.006109963040091371
+        }
+      ],
+      "timeStability": [
+        {
+          "name": "2e moitié",
+          "n": 163,
+          "lossAvoidedMed": 0.04831223146320707
+        },
+        {
+          "name": "1re moitié",
+          "n": 164,
+          "lossAvoidedMed": 0.008717966671225152
+        }
+      ]
+    },
+    {
+      "scope": "F_LIQT0",
+      "horizon": "6h",
+      "point": "bas",
+      "thresholds": {
+        "F_LIQT0": 30908.489999999998
+      },
+      "nAll": 177,
+      "nFlag": 47,
+      "nKeep": 130,
+      "pctAvoided": 0.2655367231638418,
+      "medianYAll": -0.02031394275161591,
+      "medianYKeep": -0.0006062477075676198,
+      "medianYFlag": -0.6227491531467284,
+      "lossAvoidedMed": 0.01970769504404829,
+      "meanYAll": -0.0832459141986784,
+      "meanYKeep": -0.004610090432885101,
+      "lossAvoidedMean": 0.0786358237657933,
+      "p10All": -0.9722664015904573,
+      "p10Keep": -0.9856392694063927,
+      "tailLossAvoided": -0.013372867815935385,
+      "ddMedAll": -0.822380106571936,
+      "ddMedKeep": -0.807614549292054,
+      "ddAvoided": 0.014765557279882047,
+      "nWinners": 75,
+      "fpWinners": 11,
+      "fpWinnersPct": 0.14666666666666667,
+      "nRunners": 8,
+      "fpRunners": 2,
+      "fpRunnersPct": 0.25,
+      "mwU": 2240,
+      "mwP": 0.006751909548272206,
+      "ciLo": 0.004035266150066663,
+      "ciHi": 0.2467627874709024,
+      "cohortStability": [
+        {
+          "name": "pumpswap",
+          "n": 134,
+          "lossAvoidedMed": 0.2019605869790661
+        },
+        {
+          "name": "autre",
+          "n": 11,
+          "lossAvoidedMed": -0.0013430829235003827
+        },
+        {
+          "name": "raydium",
+          "n": 32,
+          "lossAvoidedMed": 0.04348782538298657
+        }
+      ],
+      "timeStability": [
+        {
+          "name": "1re moitié",
+          "n": 89,
+          "lossAvoidedMed": 0.04998872288126177
+        },
+        {
+          "name": "2e moitié",
+          "n": 88,
+          "lossAvoidedMed": 0.23623893586140388
+        }
+      ]
+    },
+    {
+      "scope": "F_LIQT0",
+      "horizon": "6h",
+      "point": "principal",
+      "thresholds": {
+        "F_LIQT0": 27947.975
+      },
+      "nAll": 177,
+      "nFlag": 43,
+      "nKeep": 134,
+      "pctAvoided": 0.24293785310734464,
+      "medianYAll": -0.02031394275161591,
+      "medianYKeep": -0.0014944176780901652,
+      "medianYFlag": -0.6227491531467284,
+      "lossAvoidedMed": 0.018819525073525745,
+      "meanYAll": -0.0832459141986784,
+      "meanYKeep": -0.020299204315050976,
+      "lossAvoidedMean": 0.06294670988362742,
+      "p10All": -0.9722664015904573,
+      "p10Keep": -0.9856392694063927,
+      "tailLossAvoided": -0.013372867815935385,
+      "ddMedAll": -0.822380106571936,
+      "ddMedKeep": -0.807614549292054,
+      "ddAvoided": 0.014765557279882047,
+      "nWinners": 75,
+      "fpWinners": 11,
+      "fpWinnersPct": 0.14666666666666667,
+      "nRunners": 8,
+      "fpRunners": 2,
+      "fpRunnersPct": 0.25,
+      "mwU": 2203,
+      "mwP": 0.020295820031192235,
+      "ciLo": 0.002294895472294778,
+      "ciHi": 0.24239835289014222,
+      "cohortStability": [
+        {
+          "name": "pumpswap",
+          "n": 134,
+          "lossAvoidedMed": 0.19399560835312007
+        },
+        {
+          "name": "autre",
+          "n": 11,
+          "lossAvoidedMed": -0.0013430829235003827
+        },
+        {
+          "name": "raydium",
+          "n": 32,
+          "lossAvoidedMed": 0.039722114637721906
+        }
+      ],
+      "timeStability": [
+        {
+          "name": "1re moitié",
+          "n": 89,
+          "lossAvoidedMed": 0.04657244347704814
+        },
+        {
+          "name": "2e moitié",
+          "n": 88,
+          "lossAvoidedMed": 0.20955232099681148
+        }
+      ]
+    },
+    {
+      "scope": "F_LIQT0",
+      "horizon": "6h",
+      "point": "haut",
+      "thresholds": {
+        "F_LIQT0": 25679.048
+      },
+      "nAll": 177,
+      "nFlag": 31,
+      "nKeep": 146,
+      "pctAvoided": 0.1751412429378531,
+      "medianYAll": -0.02031394275161591,
+      "medianYKeep": -0.003183122959481366,
+      "medianYFlag": -0.5734829329962073,
+      "lossAvoidedMed": 0.017130819792134544,
+      "meanYAll": -0.0832459141986784,
+      "meanYKeep": -0.030893844411510402,
+      "lossAvoidedMean": 0.052352069787168,
+      "p10All": -0.9722664015904573,
+      "p10Keep": -0.9819050991501417,
+      "tailLossAvoided": -0.009638697559684384,
+      "ddMedAll": -0.822380106571936,
+      "ddMedKeep": -0.8811268391187017,
+      "ddAvoided": -0.058746732546765656,
+      "nWinners": 75,
+      "fpWinners": 8,
+      "fpWinnersPct": 0.10666666666666667,
+      "nRunners": 8,
+      "fpRunners": 1,
+      "fpRunnersPct": 0.125,
+      "mwU": 1844,
+      "mwP": 0.10544044222616522,
+      "ciLo": 0.0009198074113717647,
+      "ciHi": 0.2246819414639336,
+      "cohortStability": [
+        {
+          "name": "pumpswap",
+          "n": 134,
+          "lossAvoidedMed": 0.1514780283728761
+        },
+        {
+          "name": "autre",
+          "n": 11,
+          "lossAvoidedMed": -0.0006715414617501914
+        },
+        {
+          "name": "raydium",
+          "n": 32,
+          "lossAvoidedMed": 0.018779334299780293
+        }
+      ],
+      "timeStability": [
+        {
+          "name": "1re moitié",
+          "n": 89,
+          "lossAvoidedMed": 0.010704603376966548
+        },
+        {
+          "name": "2e moitié",
+          "n": 88,
+          "lossAvoidedMed": 0.18103493763382345
+        }
+      ]
+    },
+    {
+      "scope": "COMBINED",
+      "horizon": "1h",
+      "point": "bas",
+      "thresholds": {
+        "F_FRENZY": 529.7999999999996,
+        "F_TURNOVER": 2.854087778834,
+        "F_LIQT0": 30908.489999999998
+      },
+      "nAll": 327,
+      "nFlag": 158,
+      "nKeep": 169,
+      "pctAvoided": 0.4831804281345566,
+      "medianYAll": -0.0066564260112645934,
+      "medianYKeep": 0.02682403433476388,
+      "medianYFlag": -0.56888718136702,
+      "lossAvoidedMed": 0.03348046034602847,
+      "meanYAll": 0.02915737765386509,
+      "meanYKeep": 0.06367305902286033,
+      "lossAvoidedMean": 0.034515681368995244,
+      "p10All": -0.9907785087719299,
+      "p10Keep": -0.9864957716701903,
+      "tailLossAvoided": 0.004282737101739542,
+      "ddMedAll": -0.9527077977720652,
+      "ddMedKeep": -0.9697217928902627,
+      "ddAvoided": -0.017013995118197567,
+      "nWinners": 156,
+      "fpWinners": 47,
+      "fpWinnersPct": 0.30128205128205127,
+      "nRunners": 35,
+      "fpRunners": 25,
+      "fpRunnersPct": 0.7142857142857143,
+      "mwU": 9868,
+      "mwP": 0.00004553971444787308,
+      "ciLo": 0.019508300999870443,
+      "ciHi": 0.20141824937348174,
+      "cohortStability": [
+        {
+          "name": "pumpswap",
+          "n": 270,
+          "lossAvoidedMed": 0.08457488597054802
+        },
+        {
+          "name": "autre",
+          "n": 15,
+          "lossAvoidedMed": -0.0018823582207475043
+        },
+        {
+          "name": "raydium",
+          "n": 42,
+          "lossAvoidedMed": 0.005808425821052787
+        }
+      ],
+      "timeStability": [
+        {
+          "name": "2e moitié",
+          "n": 163,
+          "lossAvoidedMed": 0.09219414754944488
+        },
+        {
+          "name": "1re moitié",
+          "n": 164,
+          "lossAvoidedMed": 0.029141211252400656
+        }
+      ]
+    },
+    {
+      "scope": "COMBINED",
+      "horizon": "1h",
+      "point": "principal",
+      "thresholds": {
+        "F_FRENZY": 699,
+        "F_TURNOVER": 3.8090859585512047,
+        "F_LIQT0": 27947.975
+      },
+      "nAll": 327,
+      "nFlag": 138,
+      "nKeep": 189,
+      "pctAvoided": 0.42201834862385323,
+      "medianYAll": -0.0066564260112645934,
+      "medianYKeep": 0.02671192443919712,
+      "medianYFlag": -0.5535937681811403,
+      "lossAvoidedMed": 0.033368350450461715,
+      "meanYAll": 0.02915737765386509,
+      "meanYKeep": 0.05563786279382235,
+      "lossAvoidedMean": 0.026480485139957263,
+      "p10All": -0.9907785087719299,
+      "p10Keep": -0.98717,
+      "tailLossAvoided": 0.0036085087719298636,
+      "ddMedAll": -0.9527077977720652,
+      "ddMedKeep": -0.9697217928902627,
+      "ddAvoided": -0.017013995118197567,
+      "nWinners": 156,
+      "fpWinners": 38,
+      "fpWinnersPct": 0.24358974358974358,
+      "nRunners": 35,
+      "fpRunners": 21,
+      "fpRunnersPct": 0.6,
+      "mwU": 9670,
+      "mwP": 0.00006525471333751476,
+      "ciLo": 0.018634782589932675,
+      "ciHi": 0.19718806837118097,
+      "cohortStability": [
+        {
+          "name": "pumpswap",
+          "n": 270,
+          "lossAvoidedMed": 0.0838455933466063
+        },
+        {
+          "name": "autre",
+          "n": 15,
+          "lossAvoidedMed": 0
+        },
+        {
+          "name": "raydium",
+          "n": 42,
+          "lossAvoidedMed": 0.005506888602014204
+        }
+      ],
+      "timeStability": [
+        {
+          "name": "2e moitié",
+          "n": 163,
+          "lossAvoidedMed": 0.08692006959851406
+        },
+        {
+          "name": "1re moitié",
+          "n": 164,
+          "lossAvoidedMed": 0.029141211252400656
+        }
+      ]
+    },
+    {
+      "scope": "COMBINED",
+      "horizon": "1h",
+      "point": "haut",
+      "thresholds": {
+        "F_FRENZY": 950.4000000000001,
+        "F_TURNOVER": 6.745798013841261,
+        "F_LIQT0": 25679.048
+      },
+      "nAll": 327,
+      "nFlag": 107,
+      "nKeep": 220,
+      "pctAvoided": 0.327217125382263,
+      "medianYAll": -0.0066564260112645934,
+      "medianYKeep": 0.019479556528493758,
+      "medianYFlag": -0.5100854295206454,
+      "lossAvoidedMed": 0.02613598253975835,
+      "meanYAll": 0.02915737765386509,
+      "meanYKeep": 0.10848059401411488,
+      "lossAvoidedMean": 0.07932321636024979,
+      "p10All": -0.9907785087719299,
+      "p10Keep": -0.9861797752808988,
+      "tailLossAvoided": 0.004598733491031015,
+      "ddMedAll": -0.9527077977720652,
+      "ddMedKeep": -0.963963673542434,
+      "ddAvoided": -0.011255875770368795,
+      "nWinners": 156,
+      "fpWinners": 29,
+      "fpWinnersPct": 0.1858974358974359,
+      "nRunners": 35,
+      "fpRunners": 14,
+      "fpRunnersPct": 0.4,
+      "mwU": 8981,
+      "mwP": 0.0005060582699891736,
+      "ciLo": 0.009822146429769751,
+      "ciHi": 0.1824543257195942,
+      "cohortStability": [
+        {
+          "name": "pumpswap",
+          "n": 270,
+          "lossAvoidedMed": 0.06644261508755839
+        },
+        {
+          "name": "autre",
+          "n": 15,
+          "lossAvoidedMed": 0.0003987249922422498
+        },
+        {
+          "name": "raydium",
+          "n": 42,
+          "lossAvoidedMed": 0.005808425821052787
+        }
+      ],
+      "timeStability": [
+        {
+          "name": "2e moitié",
+          "n": 163,
+          "lossAvoidedMed": 0.06960256721314695
+        },
+        {
+          "name": "1re moitié",
+          "n": 164,
+          "lossAvoidedMed": 0.024951190294770442
+        }
+      ]
+    },
+    {
+      "scope": "COMBINED",
+      "horizon": "6h",
+      "point": "bas",
+      "thresholds": {
+        "F_FRENZY": 529.7999999999996,
+        "F_TURNOVER": 2.854087778834,
+        "F_LIQT0": 30908.489999999998
+      },
+      "nAll": 177,
+      "nFlag": 69,
+      "nKeep": 108,
+      "pctAvoided": 0.3898305084745763,
+      "medianYAll": -0.02031394275161591,
+      "medianYKeep": 0.07823875865318963,
+      "medianYFlag": -0.7234504272345043,
+      "lossAvoidedMed": 0.09855270140480554,
+      "meanYAll": -0.0832459141986784,
+      "meanYKeep": 0.06939854560296277,
+      "lossAvoidedMean": 0.15264445980164115,
+      "p10All": -0.9722664015904573,
+      "p10Keep": -0.976259493670886,
+      "tailLossAvoided": -0.003993092080428751,
+      "ddMedAll": -0.822380106571936,
+      "ddMedKeep": -0.41065727287580717,
+      "ddAvoided": 0.4117228336961289,
+      "nWinners": 75,
+      "fpWinners": 13,
+      "fpWinnersPct": 0.17333333333333334,
+      "nRunners": 8,
+      "fpRunners": 4,
+      "fpRunnersPct": 0.5,
+      "mwU": 1922,
+      "mwP": 5.7276649201298824e-8,
+      "ciLo": 0.02125934630731724,
+      "ciHi": 0.3252888860742481,
+      "cohortStability": [
+        {
+          "name": "pumpswap",
+          "n": 134,
+          "lossAvoidedMed": 0.2933115091417709
+        },
+        {
+          "name": "autre",
+          "n": 11,
+          "lossAvoidedMed": -0.0013430829235003827
+        },
+        {
+          "name": "raydium",
+          "n": 32,
+          "lossAvoidedMed": 0.039722114637721906
+        }
+      ],
+      "timeStability": [
+        {
+          "name": "1re moitié",
+          "n": 89,
+          "lossAvoidedMed": 0.06396053044809502
+        },
+        {
+          "name": "2e moitié",
+          "n": 88,
+          "lossAvoidedMed": 0.3351829966977758
+        }
+      ]
+    },
+    {
+      "scope": "COMBINED",
+      "horizon": "6h",
+      "point": "principal",
+      "thresholds": {
+        "F_FRENZY": 699,
+        "F_TURNOVER": 3.8090859585512047,
+        "F_LIQT0": 27947.975
+      },
+      "nAll": 177,
+      "nFlag": 64,
+      "nKeep": 113,
+      "pctAvoided": 0.3615819209039548,
+      "medianYAll": -0.02031394275161591,
+      "medianYKeep": 0.04415483368994377,
+      "medianYFlag": -0.7313756546495944,
+      "lossAvoidedMed": 0.06446877644155968,
+      "meanYAll": -0.0832459141986784,
+      "meanYKeep": 0.04128526215572249,
+      "lossAvoidedMean": 0.12453117635440089,
+      "p10All": -0.9722664015904573,
+      "p10Keep": -0.976259493670886,
+      "tailLossAvoided": -0.003993092080428751,
+      "ddMedAll": -0.822380106571936,
+      "ddMedKeep": -0.5763679086941926,
+      "ddAvoided": 0.24601219787774342,
+      "nWinners": 75,
+      "fpWinners": 13,
+      "fpWinnersPct": 0.17333333333333334,
+      "nRunners": 8,
+      "fpRunners": 4,
+      "fpRunnersPct": 0.5,
+      "mwU": 1999,
+      "mwP": 7.884001305136223e-7,
+      "ciLo": 0.01146145794070752,
+      "ciHi": 0.3054619645447486,
+      "cohortStability": [
+        {
+          "name": "pumpswap",
+          "n": 134,
+          "lossAvoidedMed": 0.25476229215179963
+        },
+        {
+          "name": "autre",
+          "n": 11,
+          "lossAvoidedMed": -0.0013430829235003827
+        },
+        {
+          "name": "raydium",
+          "n": 32,
+          "lossAvoidedMed": 0.035956403892457245
+        }
+      ],
+      "timeStability": [
+        {
+          "name": "1re moitié",
+          "n": 89,
+          "lossAvoidedMed": 0.04998872288126177
+        },
+        {
+          "name": "2e moitié",
+          "n": 88,
+          "lossAvoidedMed": 0.30867081526970114
+        }
+      ]
+    },
+    {
+      "scope": "COMBINED",
+      "horizon": "6h",
+      "point": "haut",
+      "thresholds": {
+        "F_FRENZY": 950.4000000000001,
+        "F_TURNOVER": 6.745798013841261,
+        "F_LIQT0": 25679.048
+      },
+      "nAll": 177,
+      "nFlag": 48,
+      "nKeep": 129,
+      "pctAvoided": 0.2711864406779661,
+      "medianYAll": -0.02031394275161591,
+      "medianYKeep": 0.0014194464158976405,
+      "medianYFlag": -0.6899606360414263,
+      "lossAvoidedMed": 0.02173338916751355,
+      "meanYAll": -0.0832459141986784,
+      "meanYKeep": -0.00353015211706248,
+      "lossAvoidedMean": 0.07971576208161592,
+      "p10All": -0.9722664015904573,
+      "p10Keep": -0.976259493670886,
+      "tailLossAvoided": -0.003993092080428751,
+      "ddMedAll": -0.822380106571936,
+      "ddMedKeep": -0.7805170821791321,
+      "ddAvoided": 0.04186302439280398,
+      "nWinners": 75,
+      "fpWinners": 10,
+      "fpWinnersPct": 0.13333333333333333,
+      "nRunners": 8,
+      "fpRunners": 3,
+      "fpRunnersPct": 0.375,
+      "mwU": 1961,
+      "mwP": 0.00017921041421309347,
+      "ciLo": 0.005378349073567046,
+      "ciHi": 0.24561148865801796,
+      "cohortStability": [
+        {
+          "name": "pumpswap",
+          "n": 134,
+          "lossAvoidedMed": 0.22708679912598134
+        },
+        {
+          "name": "autre",
+          "n": 11,
+          "lossAvoidedMed": -0.0006715414617501914
+        },
+        {
+          "name": "raydium",
+          "n": 32,
+          "lossAvoidedMed": 0.0016022647071033402
+        }
+      ],
+      "timeStability": [
+        {
+          "name": "1re moitié",
+          "n": 89,
+          "lossAvoidedMed": 0.027984476148025794
+        },
+        {
+          "name": "2e moitié",
+          "n": 88,
+          "lossAvoidedMed": 0.24032860898960434
+        }
+      ]
+    }
+  ],
+  "verdicts": [
+    {
+      "scope": "F_FRENZY",
+      "horizon": "1h",
+      "hypothesis": "H-PRED-FLOW-01 — frénésie (sellsM5) à t0 ⇒ Y@1h négatif : éviter les tokens en frénésie réduit les pertes.",
+      "n": 327,
+      "effectLossAvoidedMed": 0.009444476744028707,
+      "pValue": 0.0006008986633474489,
+      "ci": [
+        0.0025018563444620945,
+        0.16480341577335506
+      ],
+      "verdict": "NEAR_MISS",
+      "note": "Effet significatif mais concentré — condition : pumpswap (n=270). Temps : 2e moitié=5.0 pts / 1re moitié=0.7 pts."
+    },
+    {
+      "scope": "F_FRENZY",
+      "horizon": "6h",
+      "hypothesis": "H-PRED-FLOW-01 — frénésie (sellsM5) à t0 ⇒ Y@1h négatif : éviter les tokens en frénésie réduit les pertes.",
+      "n": 177,
+      "effectLossAvoidedMed": 0.017853128543088626,
+      "pValue": 0.000013431115240880587,
+      "ci": [
+        0.0028588550315327144,
+        0.22731140654176885
+      ],
+      "verdict": "NEAR_MISS",
+      "note": "Effet significatif mais concentré — condition : pumpswap (n=134). Temps : 1re moitié=0.3 pts / 2e moitié=24.0 pts."
+    },
+    {
+      "scope": "F_TURNOVER",
+      "horizon": "1h",
+      "hypothesis": "H-PRED-LIQ-01 — turnoverM5 élevé à t0 ⇒ Y@6h négatif : éviter le churn extrême réduit les pertes.",
+      "n": 327,
+      "effectLossAvoidedMed": 0.007113816478284352,
+      "pValue": 0.0008145201659066625,
+      "ci": [
+        0.0013686988536160127,
+        0.14666067791031784
+      ],
+      "verdict": "NEAR_MISS",
+      "note": "Effet significatif mais concentré — condition : pumpswap (n=270). Temps : 2e moitié=4.6 pts / 1re moitié=0.7 pts."
+    },
+    {
+      "scope": "F_TURNOVER",
+      "horizon": "6h",
+      "hypothesis": "H-PRED-LIQ-01 — turnoverM5 élevé à t0 ⇒ Y@6h négatif : éviter le churn extrême réduit les pertes.",
+      "n": 177,
+      "effectLossAvoidedMed": 0.01289254213091695,
+      "pValue": 0.007927642752986408,
+      "ci": [
+        0.00026033670843478296,
+        0.19730538812203735
+      ],
+      "verdict": "NEAR_MISS",
+      "note": "Effet significatif mais concentré — condition : pumpswap (n=134). Temps : 1re moitié=0.1 pts / 2e moitié=21.0 pts."
+    },
+    {
+      "scope": "F_LIQT0",
+      "horizon": "1h",
+      "hypothesis": "H-S1-E1 — liqT0 basse ⇒ mauvaise survie : éviter la liquidité faible réduit pertes et drawdown.",
+      "n": 327,
+      "effectLossAvoidedMed": 0.01210283721531058,
+      "pValue": 0.16446329254116443,
+      "ci": [
+        0.0037647164414950085,
+        0.17266961902717182
+      ],
+      "verdict": "NULL",
+      "note": "Pas de séparation significative flagged vs kept (p=0.1645)."
+    },
+    {
+      "scope": "F_LIQT0",
+      "horizon": "6h",
+      "hypothesis": "H-S1-E1 — liqT0 basse ⇒ mauvaise survie : éviter la liquidité faible réduit pertes et drawdown.",
+      "n": 177,
+      "effectLossAvoidedMed": 0.018819525073525745,
+      "pValue": 0.020295820031192235,
+      "ci": [
+        0.002294895472294778,
+        0.24239835289014222
+      ],
+      "verdict": "RISK_ONLY",
+      "note": "Sépare les perdants (p=0.0203), direction stable cohortes+temps. Filtre d'exclusion, PAS un edge long."
+    },
+    {
+      "scope": "COMBINED",
+      "horizon": "1h",
+      "hypothesis": "Règle combinée AVOID-S2D-v1 (OU logique des 3 filtres) : valeur d'évitement globale.",
+      "n": 327,
+      "effectLossAvoidedMed": 0.033368350450461715,
+      "pValue": 0.00006525471333751476,
+      "ci": [
+        0.018634782589932675,
+        0.19718806837118097
+      ],
+      "verdict": "RISK_ONLY",
+      "note": "Sépare les perdants (p=0.0001), direction stable cohortes+temps. Filtre d'exclusion, PAS un edge long."
+    },
+    {
+      "scope": "COMBINED",
+      "horizon": "6h",
+      "hypothesis": "Règle combinée AVOID-S2D-v1 (OU logique des 3 filtres) : valeur d'évitement globale.",
+      "n": 177,
+      "effectLossAvoidedMed": 0.06446877644155968,
+      "pValue": 7.884001305136223e-7,
+      "ci": [
+        0.01146145794070752,
+        0.3054619645447486
+      ],
+      "verdict": "RISK_ONLY",
+      "note": "Sépare les perdants (p=0.0000), direction stable cohortes+temps. Filtre d'exclusion, PAS un edge long."
+    }
+  ],
+  "generatedAt": "2026-09-28T14:01:21.690Z"
+}

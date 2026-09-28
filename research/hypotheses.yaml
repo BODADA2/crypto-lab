@@ -1,0 +1,2644 @@
+meta:
+  family_scheme: A-R Master R&D 2026-09-28
+  families:
+    A: Avoidance/No-trade
+    B: Early Flow
+    C: Capital Velocity
+    D: Organicity
+    E: Actors/Entity
+    F: Creator History
+    G: Regime
+    H: Transitions
+    I: Post-graduation
+    J: Microstructure
+    K: Divergence
+    L: Wait
+    M: Sequences
+    N: Change point
+    O: Anomaly engine
+    P: Survival
+    Q: Graduation
+    R: Danger
+    S: SOL-PERP (Branch B — event-driven microstructure)
+    T: Token/narrative characteristics (meme-ability)
+    U: Chart structure & technical patterns (coded rules, no subjectivity)
+    V: Behavioral (sizing, discipline, exit plans)
+  statuses:
+  - OPEN
+  - TESTING
+  - PROMISING
+  - RISK_ONLY
+  - 'NULL'
+  - UNSTABLE
+  - NEAR_MISS
+  - KILLED
+  - VALIDATED
+hypotheses:
+- id: H-NARR v2
+  title: Un catalyst narratif (dimension « catalyst » du score) prédit la migration
+  date_created: 2026-09-28
+  family: G
+  motivation: 'Interviews traders (Deku/Cupsey) : le narratif serait le moteur des
+    launches qui graduent.'
+  features:
+  - catalyst_score
+  label: migration_12h
+  expected_direction: positif
+  discovery_result: lift ×1,03 (buckets catalyst fort/faible/aucun) ; MFE médian ×1,20
+    vs ×1,15 — ne prédit rien
+  calibration_result: n/a
+  holdout_result: n/a
+  status: KILLED
+  next_action: aucune — verdict gelé (NO ACTION)
+  falsifier: lift ≤ 1,3 sur walk-forward
+  family_legacy: J
+- id: H-EXIT
+  title: Sortie en 3 paliers (+40/+100/trailing) bat la sortie unique à +40 %
+  date_created: 2026-09-28
+  family: R
+  motivation: 'Deku : sorties par paliers 10–20 % vs sortie unique.'
+  features:
+  - exit_ladder
+  label: pnl_net
+  expected_direction: positif
+  discovery_result: espérances proches (65,9 vs 70,0), win rates 44,3 % vs 25,5 %,
+    moyennes dominées par ticks aberrants, médianes négatives ; n=752/variante
+  calibration_result: n/a
+  holdout_result: n/a
+  status: KILLED
+  next_action: aucune — famille momentum/scalp officiellement ABANDONNÉE (H-DECOMP,
+    règle d'arrêt)
+  falsifier: espérance ≤ baseline sur entrées identiques
+  family_legacy: G
+- id: H-CHASE
+  title: Rejeter les entrées « verticales » (chase ≥ +50 % sur 3 barres) améliore
+    le scalp
+  date_created: 2026-09-28
+  family: R
+  motivation: 'TikTok @sixpathsss : pas d''achat sur chart parabolique.'
+  features:
+  - chase_3bar
+  label: pnl_net
+  expected_direction: positif
+  discovery_result: 'A n=445, B n=387 ; médiane −1,0 % vs −1,3 % (bruit), win rate
+    47,4 % vs 45,5 %. Twist : entrées verticales (n=154) MFE médian ×1,25 vs ×1,20
+    — le momentum persiste à court terme'
+  calibration_result: n/a
+  holdout_result: n/a
+  status: KILLED
+  next_action: aucune — verdict gelé (NO ACTION)
+  falsifier: médiane B ≤ médiane A
+  family_legacy: G
+- id: H-DEVBUY
+  title: devBuy (mise initiale du dev) prédit la migration, monotone en seuil
+  date_created: 2026-09-28
+  family: F
+  motivation: 'Deku : registre de devs dont les launches graduent.'
+  features:
+  - devBuy_sol
+  label: migration_12h
+  expected_direction: positif
+  discovery_result: 'FALSIFIÉE — le 10,73 % (n=3 114, seuil 1,3 SOL) était l''artefact
+    late-discovery (607 creates tardifs à tuple figé 100 % migrés). Sur genuine :
+    1,66 % IC[1,19–2,13] vs base 1,42 %, monotonicité plate (1,51→1,54→1,50) ; quartiles
+    n=41 619'
+  calibration_result: n/a
+  holdout_result: n/a
+  status: KILLED
+  next_action: 'aucune — verdict gelé. Leçon : le walk-forward ne protège pas d''un
+    biais présent dans toute la fenêtre.'
+  falsifier: taux genuine ≤ base après exclusion late-discovery
+  family_legacy: E
+- id: H-FILTRE-COMBINE
+  title: (ipfs.io ET devBuy ≥ 1,3 SOL) → ~10 % migration, tradable
+  date_created: 2026-09-28
+  family: F
+  motivation: Combiner les deux filtres create-time les plus forts.
+  features:
+  - uri_domain
+  - devBuy_sol
+  label: migration_12h
+  expected_direction: positif
+  discovery_result: ABANDONNÉ — artefact (607 late-discovery à 100 % migrés) ; genuine
+    1,54 %/1,66 % ; breakeven impossible (gagnants ×4,5 < ×5,2–×10 requis) ; walk-forward
+    train 24–25 / test 26–27, n test=36 196
+  calibration_result: n/a
+  holdout_result: n/a
+  status: KILLED
+  next_action: aucune — verdict gelé
+  falsifier: taux test genuine < hurdle 8 %
+  family_legacy: E
+- id: H-TOOL
+  title: Le domaine d'URI (outil de déploiement) prédit la migration
+  date_created: 2026-09-28
+  family: F
+  motivation: Proxy de l'outillage/sérieux du déploiement.
+  features:
+  - uri_domain
+  label: migration_12h
+  expected_direction: positif
+  discovery_result: 'Résiduel faible, NON ACTIONNABLE — sur genuine : uxento 0,45
+    %, j7 0,87 % vs ipfs.io 1,31 % ; lift d''exclusion 1,09× (nul) ; ipfs.io n=27
+    478'
+  calibration_result: n/a
+  holdout_result: n/a
+  status: KILLED
+  next_action: aucune — verdict gelé
+  falsifier: lift d'exclusion ≤ 1,1
+  family_legacy: E
+- id: H-CURVE v1
+  title: La progression sur la courbe (buckets 0–25/50/75/100 %) prédit migration/MFE
+  date_created: 2026-09-28
+  family: C
+  motivation: 'Leçon de l''échec H-CHASE : la position sur la bonding curve contiendrait
+    de l''info.'
+  features:
+  - curve_progress
+  label: migration / MFE
+  expected_direction: positif
+  discovery_result: NON CONCLUANT — biais de sélection massif (46,4 % de migrés suivis
+    vs 2,37 % de base) ; n=2 727
+  calibration_result: n/a
+  holdout_result: n/a
+  status: KILLED
+  next_action: aucune — tuée par le biais de sélection (données inutilisables pour
+    cette question)
+  falsifier: aucun bucket ne se distingue sur univers non biaisé
+  family_legacy: B
+- id: H-CURVE v2
+  title: marketCapSol au create prédit la migration
+  date_created: 2026-09-28
+  family: C
+  motivation: Ce que le moteur voit au create.
+  features:
+  - mcapSol_create
+  label: migration_12h
+  expected_direction: positif
+  discovery_result: 'REDONDANT — mcapSol@create ≈ 30 + devBuy : même mécanisme que
+    H-DEVBUY, pas un edge indépendant ; n=41 619'
+  calibration_result: n/a
+  holdout_result: n/a
+  status: KILLED
+  next_action: aucune — verdict gelé
+  falsifier: aucun edge indépendant de devBuy
+  family_legacy: B
+- id: H-POSTMIG
+  title: Pattern systématique du prix dans ±60 min autour du migrate
+  date_created: 2026-09-28
+  family: I
+  motivation: Exploiter la transition post-migration.
+  features:
+  - price_norm_t-60_t+60
+  label: prix_normalise
+  expected_direction: n/a
+  discovery_result: DONNÉES INSUFFISANTES — côté pré-migration trop clairsemé pour
+    statuer ; n=58 migrés (13–21 snaps/tranche 10 min)
+  calibration_result: n/a
+  holdout_result: n/a
+  status: 'NULL'
+  next_action: retester après 30 j de collecte propre si n≥30 des deux côtés
+  falsifier: courbe moyenne+médiane plate sur données propres
+  family_legacy: I
+- id: H-CALLTRACK
+  title: Les channels d'appels ont un taux de migration mesurable (alpha vs exit liquidity)
+  date_created: 2026-09-28
+  family: G
+  motivation: Les calls précèdent-ils les graduations (alpha) ou les suivent-ils (exit
+    liquidity) ?
+  features:
+  - call_latency
+  - call_migrated
+  label: migration
+  expected_direction: positif
+  discovery_result: 'FALSIFIÉE (timing) — 27,5 % brut mais 10/11 avaient DÉJÀ migré
+    avant le call : indicateur retardé, pas prédicteur ; 40 calls SOL uniques, 11
+    migrés'
+  calibration_result: n/a
+  holdout_result: n/a
+  status: KILLED
+  next_action: aucune — verdict gelé
+  falsifier: latence seenAt−postedAt ≥ 0 pour la majorité des calls pré-migration
+  family_legacy: J
+- id: H-SECOND-FILTRE
+  title: Parmi les migrés, l'imbalance acheteuse m5 > +0,2 au 1er snapshot post-migration
+    sépare les gagnants (≥×2)
+  date_created: 2026-09-28
+  family: I
+  motivation: Momentum de confirmation post-migration.
+  features:
+  - imbalance_m5_postmig
+  label: gain_x2
+  expected_direction: positif
+  discovery_result: 'ABANDONNÉ — signal réel (25,3 % vs 3,2 %, IC disjoints, carac.
+    n=558 dont 45 gagnants) mais INEXÉCUTABLE : net médian test −75,78 % (test n=43),
+    entrée médiane ~30 min après migration (achète le top), MFE médian 0 %'
+  calibration_result: n/a
+  holdout_result: n/a
+  status: KILLED
+  next_action: aucune — verdict gelé
+  falsifier: net médian test < 0 après exécution réaliste
+  family_legacy: I
+- id: S1-VOLUME
+  title: Signal volume anormal → achat observation suivante, TP+50/SL−25/~6h
+  date_created: 2026-09-25
+  family: C
+  motivation: Batterie pré-enregistrée (figée avant tout résultat).
+  features:
+  - volume_anormal
+  label: pnl_net
+  expected_direction: positif
+  discovery_result: n/a
+  calibration_result: n/a
+  holdout_result: n/a
+  status: TESTING
+  next_action: verdict attendu 2026-10-17 (≥30 trades, G/P ≥ 1,3, espérance > 0 après
+    frais) — preregistered.ts
+  falsifier: critères non atteints sur A et B
+  family_legacy: B
+- id: S3-POSTMIG
+  title: Achat migrés, TP+80/SL−30/~24h
+  date_created: 2026-09-25
+  family: I
+  motivation: Batterie pré-enregistrée.
+  features:
+  - migrated_entry
+  label: pnl_net
+  expected_direction: positif
+  discovery_result: n/a
+  calibration_result: n/a
+  holdout_result: n/a
+  status: TESTING
+  next_action: verdict attendu 2026-10-17 — preregistered.ts
+  falsifier: critères non atteints sur A et B
+  family_legacy: I
+- id: S1-ROBINHOOD
+  title: S1 sur chainId=robinhood
+  date_created: 2026-09-25
+  family: G
+  motivation: Batterie pré-enregistrée ; test de robustesse par chaîne (indicateur
+    de régime par chaîne).
+  features:
+  - volume_anormal
+  - chainId
+  label: pnl_net
+  expected_direction: positif
+  discovery_result: n/a
+  calibration_result: n/a
+  holdout_result: n/a
+  status: TESTING
+  next_action: verdict attendu 2026-10-17 — preregistered-rh.ts (data-rh/)
+  falsifier: critères non atteints sur A et B
+  family_legacy: J
+- id: H3-CALLS
+  title: Achat après 1er call MadApes, sorties S3
+  date_created: 2026-09-25
+  family: G
+  motivation: Batterie pré-enregistrée ; H-CALLTRACK a falsifié le timing des calls
+    — test indépendant sur protocole gelé.
+  features:
+  - first_call
+  label: pnl_net
+  expected_direction: positif
+  discovery_result: n/a
+  calibration_result: n/a
+  holdout_result: n/a
+  status: TESTING
+  next_action: verdict attendu 2026-10-17 — preregistered-calls.ts
+  falsifier: critères non atteints
+  family_legacy: J
+- id: H4-CALL-VOL
+  title: Call puis volume 5 min ≥ 5 % liquidité + buys ≥ sells sous 2h, sorties S1
+  date_created: 2026-09-25
+  family: G
+  motivation: Batterie pré-enregistrée.
+  features:
+  - first_call
+  - vol5min_liq
+  - buys_sells
+  label: pnl_net
+  expected_direction: positif
+  discovery_result: n/a
+  calibration_result: n/a
+  holdout_result: n/a
+  status: TESTING
+  next_action: verdict attendu 2026-10-17 — preregistered-calls.ts
+  falsifier: critères non atteints
+  family_legacy: J
+- id: H5-SNIPE
+  title: 'Sniping : parfait (prix post-création→+5 min) / réaliste (+1 min→+5 min),
+    coûts 5 %'
+  date_created: 2026-09-25
+  family: B
+  motivation: Batterie pré-enregistrée ; borne supérieure de ce qu'un sniper peut
+    capturer.
+  features:
+  - snipe_entry
+  label: pnl_net
+  expected_direction: positif
+  discovery_result: n/a
+  calibration_result: n/a
+  holdout_result: n/a
+  status: TESTING
+  next_action: verdict attendu 2026-10-17 — RETENUE seulement si H5a ET H5b passent
+    sur A ET B ; preregistered-snipe.ts (data-snipe/)
+  falsifier: H5a ou H5b échoue sur A ou B
+  family_legacy: A
+- id: H-BUNDLE
+  title: Ventes groupées des early wallets = filtre d'exclusion (Cupsey)
+  date_created: 2026-09-28
+  family: D
+  motivation: 'Cupsey : les clusters de wallets early qui vendent ensemble annoncent
+    le dump (cas « fred » : cluster 29,74 %). Re-vérification BubbleMaps en continu.'
+  features:
+  - top5_share
+  - gini
+  - same_slot_max
+  - coordinatedSetFrac
+  label: dump_post_t0
+  expected_direction: negatif
+  discovery_result: n/a
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: test T-BUNDLE gated dans l'addendum pré-enregistré ; spec de collecte
+    rédigée (docs/insider-economics-2026-09-28.md §2, Helius ~210 crédits/token)
+  falsifier: clusters de vente non associés à des Y futurs plus faibles sur n≥30
+  family_legacy: C
+- id: H-BLOCK
+  title: Blocklist de devs (TikTok @hellojrus) — bannissement dur vs pénalité
+  date_created: 2026-09-28
+  family: F
+  motivation: 'Face négative de H-DEV : exclure les devs à historique de rugs.'
+  features:
+  - dev_blocklist
+  label: rug_avoided
+  expected_direction: negatif
+  discovery_result: n/a
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: 'IMPLÉMENTÉE, NON VALIDÉE — trancher : mesurer rugs évités vs runners
+    filtrés par erreur, n≥30'
+  falsifier: runners filtrés par erreur ≥ rugs évités
+  family_legacy: E
+- id: H-FRESH
+  title: Vitesse d'entrée mesurée via timestamp de première observation
+  date_created: 2026-09-28
+  family: C
+  motivation: 'Deku : entrer tôt.'
+  features:
+  - first_obs_latency
+  label: pnl_net
+  expected_direction: positif
+  discovery_result: MESURÉE, CONFONDUE — mesure la latence du scan, pas la naissance
+    du token
+  calibration_result: n/a
+  holdout_result: n/a
+  status: KILLED
+  next_action: aucune — proxy invalide, ne pas utiliser
+  falsifier: n/a — confondu
+  family_legacy: B
+- id: H-FEEFLOW
+  title: Mapping bénéficiaires de creator fees
+  date_created: 2026-09-28
+  family: F
+  motivation: 'Suivre l''argent du créateur : les fees révèlent les relances post-graduation.'
+  features:
+  - creator_fee_flow
+  label: relance_post_graduation
+  expected_direction: positif
+  discovery_result: n/a
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: 'spec de collecte rédigée (docs/insider-economics-2026-09-28.md §3)
+    ; test T-FEEFLOW gated. Ne pas approximer : le proxy « relance post-graduation
+    » est CONFOUNDU (2 wallets = 71 % des paires)'
+  falsifier: bénéficiaires fees non associés à des relances mesurables
+  family_legacy: E
+- id: H-EXTRACT
+  title: Trades par wallet + estimation fees
+  date_created: 2026-09-28
+  family: E
+  motivation: Économie réelle des wallets actifs.
+  features:
+  - wallet_trades
+  - fee_estimate
+  label: pnl_wallet
+  expected_direction: n/a
+  discovery_result: n/a
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: données partiellement payantes via PumpPortal — évaluer le coût avant
+    collecte
+  falsifier: n/a — collecte à décider
+  family_legacy: D
+- id: H-SNIPER
+  title: Early buyers systématiques (vs 1 seul fichier aujourd'hui)
+  date_created: 2026-09-28
+  family: B
+  motivation: Généraliser la collecte early buyers à tout l'univers.
+  features:
+  - early_buyer_set
+  label: n/a
+  expected_direction: n/a
+  discovery_result: n/a
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: backfill data/earlybuyers/ en cours (agent dédié) → n≥30 en discovery
+    avant tout test (règle de séquençage d'Hervé)
+  falsifier: n/a — infrastructure
+  family_legacy: A
+- id: H-DEV
+  title: Registre de devs dont les launches graduent (face positive)
+  date_created: 2026-09-28
+  family: F
+  motivation: 'Deku : certains devs graduent de façon répétée.'
+  features:
+  - dev_launch_history
+  - dev_grad_rate
+  label: migration
+  expected_direction: positif
+  discovery_result: NON CONCLUANTE (signal exploratoire) — 65 941 creates genuine,
+    21 660 wallets, base 1,41 %. Répétition seule FALSIFIÉE (≥3 creates → 1,11 % <
+    1,38 %). Taux passé persiste faiblement (ρ≈0,29 p<10⁻⁶ ; hot-devs ×1,9 sur H2).
+    Reste prioritaire — wallets≠humains (rotation)
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: PRIORITAIRE — test T-SERIAL-HOT dans l’addendum ; exiger clustering
+    wallet→entité (Liu 2025)
+  falsifier: taux hot-devs ≤ base sur univers disjoint
+  family_legacy: E
+- id: H-CONC
+  title: Concentration anormale (deep-edges E6)
+  date_created: 2026-09-28
+  family: D
+  motivation: Proposée dans docs/deep-edges-2026-09-28.md.
+  features:
+  - concentration_metrics
+  label: Y_futur
+  expected_direction: negatif
+  discovery_result: n/a
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: candidate à la batterie pré-enregistrée ; exiger concentration par
+    entité (Liu 2025)
+  falsifier: aucune métrique de concentration stable OOS
+  family_legacy: C
+- id: H-TIME
+  title: Timing anormal (deep-edges E7)
+  date_created: 2026-09-28
+  family: C
+  motivation: Proposée dans docs/deep-edges-2026-09-28.md.
+  features:
+  - timing_metrics
+  label: Y_futur
+  expected_direction: n/a
+  discovery_result: n/a
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: candidate à la batterie pré-enregistrée
+  falsifier: aucune métrique de timing stable OOS
+  family_legacy: B
+- id: H-LIQMIRAGE
+  title: Liquidité mirage (deep-edges E8)
+  date_created: 2026-09-28
+  family: C
+  motivation: Proposée dans docs/deep-edges-2026-09-28.md.
+  features:
+  - liq_depth_vs_displayed
+  label: Y_futur
+  expected_direction: negatif
+  discovery_result: n/a
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: candidate à la batterie pré-enregistrée
+  falsifier: liquidité affichée = liquidité réelle sur n≥30
+  family_legacy: B
+- id: H-HALFLIFE
+  title: Demi-vie du token (deep-edges E9)
+  date_created: 2026-09-28
+  family: P
+  motivation: Proposée dans docs/deep-edges-2026-09-28.md.
+  features:
+  - halflife
+  label: survie
+  expected_direction: n/a
+  discovery_result: n/a
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: candidate à la batterie pré-enregistrée ; définitions de mort multiples
+    (labels.ts)
+  falsifier: demi-vie non prédictible depuis t0
+  family_legacy: F
+- id: H-SERIAL
+  title: Deployer sériel (deep-edges E10)
+  date_created: 2026-09-28
+  family: F
+  motivation: Proposée dans docs/deep-edges-2026-09-28.md.
+  features:
+  - deployer_serial
+  label: migration
+  expected_direction: n/a
+  discovery_result: n/a
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: candidate à la batterie pré-enregistrée ; deployer link actuellement
+    non parsé (CreateEvent) — prévoir extension
+  falsifier: taux deployers sériels ≤ base
+  family_legacy: E
+- id: H-MAGNET
+  title: Effet aimant / régime (deep-edges E11)
+  date_created: 2026-09-28
+  family: G
+  motivation: Proposée dans docs/deep-edges-2026-09-28.md.
+  features:
+  - regime_indicator
+  label: migration
+  expected_direction: positif
+  discovery_result: n/a
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: candidate à la batterie pré-enregistrée
+  falsifier: aucun régime stable sur holdout temporel
+  family_legacy: J
+- id: H-COPYCAT
+  title: Copycats / imitation (deep-edges E12)
+  date_created: 2026-09-28
+  family: D
+  motivation: Proposée dans docs/deep-edges-2026-09-28.md.
+  features:
+  - copycat_signal
+  label: Y_futur
+  expected_direction: negatif
+  discovery_result: n/a
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: candidate à la batterie pré-enregistrée
+  falsifier: copycats non distinguables des originaux OOS
+  family_legacy: C
+- id: H-MULTI
+  title: Launchpad PAID (fees versées sur X Money) — surveillance
+  date_created: 2026-09-28
+  family: G
+  motivation: 'Brez : catalyst semi-prévisible (interaction Beff Jezos sur X) autour
+    du nouveau launchpad PAID.'
+  features:
+  - launchpad_paid
+  label: n/a
+  expected_direction: n/a
+  discovery_result: n/a
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: SURVEILLANCE — pas de modélisation sans données
+  falsifier: n/a — surveillance
+  family_legacy: J
+- id: H-CONV
+  title: Conviction/tenue avec thèse écrite (Brez)
+  date_created: 2026-09-28
+  family: P
+  motivation: 'Brez : la tenue avec thèse écrite distingue les gros trades.'
+  features:
+  - thesis_written
+  label: pnl_net
+  expected_direction: n/a
+  discovery_result: n/a
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: PISTE — pas d'opérationnalisation à ce stade
+  falsifier: n/a — non opérée
+  family_legacy: F
+- id: H-SESS
+  title: Sessions paper à heures fixes + journal anti-tilt
+  date_created: 2026-09-28
+  family: P
+  motivation: 'Deku : discipline anti-tilt.'
+  features:
+  - session_discipline
+  label: discipline
+  expected_direction: n/a
+  discovery_result: n/a
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: PROTOCOLE — métrique de discipline, pas un signal de marché
+  falsifier: n/a — protocole
+  family_legacy: F
+- id: H-HEDGE-1
+  title: Sortie d'urgence −8 %/6b améliore le scalp H-EXIT
+  date_created: 2026-09-28
+  family: R
+  motivation: Couper les pertes tôt.
+  features:
+  - emergency_exit
+  label: pnl_net
+  expected_direction: positif
+  discovery_result: NO ACTION — Δ médiane −1,29 % IC[−3,68 ; −0,18] (DÉGRADATION significative),
+    3,5 % des gagnants coupés
+  calibration_result: n/a
+  holdout_result: n/a
+  status: KILLED
+  next_action: aucune — verdict gelé
+  falsifier: Δ médiane ≥ 0 sur holdout
+  family_legacy: G
+- id: H-HEDGE-2
+  title: Time-stop 3 barres > 6 barres
+  date_created: 2026-09-28
+  family: R
+  motivation: Limiter l'exposition temporelle.
+  features:
+  - time_stop
+  label: pnl_net
+  expected_direction: positif
+  discovery_result: NON CONCLUANT — Δ esp. +0,33 % IC[−0,58 ; +1,33]
+  calibration_result: n/a
+  holdout_result: n/a
+  status: 'NULL'
+  next_action: retester éventuellement sur holdout propre
+  falsifier: Δ espérance ≤ 0 sur holdout
+  family_legacy: G
+- id: H-HEDGE-3
+  title: Entrées verticales à demi-taille > plein
+  date_created: 2026-09-28
+  family: R
+  motivation: Réduire la taille sur les entrées risquées plutôt que les rejeter.
+  features:
+  - half_size_vertical
+  label: pnl_net
+  expected_direction: positif
+  discovery_result: PISTE FAIBLE — Δ esp. +1,59 % IC[+0,11 ; +3,10], mais espérance
+    reste négative (−4,56 %) ; 1 signal marginal sur 4 tests = bruit possible
+  calibration_result: n/a
+  holdout_result: n/a
+  status: 'NULL'
+  next_action: retester sur holdout propre avant toute conclusion
+  falsifier: Δ espérance ≤ 0 sur holdout
+  family_legacy: G
+- id: H-HEDGE-4
+  title: Portfolio 50/50 scalp+runner > scalp seul
+  date_created: 2026-09-28
+  family: R
+  motivation: Diversifier les sorties.
+  features:
+  - portfolio_50_50
+  label: pnl_net
+  expected_direction: positif
+  discovery_result: FALSIFIÉ (découverte) — esp. −11,98 %, DD 116 ×mise, pire que
+    V1 seule
+  calibration_result: n/a
+  holdout_result: n/a
+  status: KILLED
+  next_action: aucune — verdict gelé
+  falsifier: paire à espérances positives ET corrélation de pertes < 0,3
+  family_legacy: G
+- id: H-HEDGE-5
+  title: Sauter les entrées les jours de « frénésie »
+  date_created: 2026-09-28
+  family: R
+  motivation: Éviter les régimes de frénésie.
+  features:
+  - frenzy_regime
+  label: pnl_net
+  expected_direction: positif
+  discovery_result: INTESTABLE — 0 jour de frénésie sur 5 jours de scans
+  calibration_result: n/a
+  holdout_result: n/a
+  status: 'NULL'
+  next_action: retester quand n≥30 jours de frénésie observés
+  falsifier: médiane frénésie ≥ autres régimes quand n≥30
+  family_legacy: G
+- id: H-HEDGE-6
+  title: Entrées liq ≥ Q3 → médiane > 0
+  date_created: 2026-09-28
+  family: R
+  motivation: La liquidité élevée protégerait.
+  features:
+  - liq_quartile
+  label: pnl_net
+  expected_direction: positif
+  discovery_result: PISTE — médianes +9,27 % / +3,10 % en liq-Q3/Q4 (V1), win 56–61
+    % ; seuils snooped (quartiles calculés sur ces mêmes données) → à re-dériver sur
+    données propres
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: re-dériver le seuil sur données propres, puis tester sur holdout 30
+    j (n≥30)
+  falsifier: médiane ≤ 0 sur holdout 30 j
+  family_legacy: G
+- id: H-REF-MOM
+  title: Stratégie de référence « regime-filtered momentum » bat les variantes H-EXIT
+    au score composite
+  date_created: 2026-09-28
+  family: C
+  motivation: Construire une référence honnête (score S = (E_w − λ_DD·DD − λ_σ·σ)
+    × P_oos, veto PF_w ≥ 1 ET médiane ≥ 0) pour comparer toutes les stratégies.
+  features:
+  - chase_entry
+  - regime_filter
+  label: score_composite
+  expected_direction: positif
+  discovery_result: 'RÉFÉRENCE NON ACTIONNABLE — esp. wins. −9,79 % IC[−17,32 ; −2,11],
+    médiane −23,24 %, n=238. Le filtre de régime n''a RIEN exclu (0 jour famine/frénésie
+    sur 5 j) : composante « regime » intestable ici ; momentum pur sous-performe le
+    chase mixte (V3 : −6,15 %)'
+  calibration_result: n/a
+  holdout_result: n/a
+  status: KILLED
+  next_action: aucune — référence conservée comme borne, verdict gelé
+  falsifier: esp. ≥ 0 ET médiane ≥ 0 sur holdout 30 j, n≥30
+  family_legacy: B
+- id: H-HEDGE-EXPOSURE
+  title: Le meilleur hedge est un disjoncteur d'exposition (fenêtre K=30, suspension
+    si WR<35 % ET médiane<0)
+  date_created: 2026-09-28
+  family: R
+  motivation: 'Principe d''Hervé : le meilleur hedge n''est pas une position opposée
+    mais un mécanisme qui détecte tôt quand réduire/supprimer l''exposition.'
+  features:
+  - exposure_circuit_breaker
+  label: score_composite
+  expected_direction: positif
+  discovery_result: 'PISTE (réducteur de risque, pas edge) — V1+halt (paramètres pré-engagés)
+    : E_w −4,89→−2,47 %, DD 59→30 ×mise, S −0,0986→−0,0508, 152 gagnants ratés vs
+    212 pertes évitées ; délai de détection médian 38 trades, 4/7 épisodes DD non
+    détectés. Sur V10, halt DÉTÉRIORE E_w (−9,79→−16,02 %) : a coupé l''exposition
+    du trade outlier (+4 939 704 %)'
+  calibration_result: n/a
+  holdout_result: n/a
+  status: RISK_ONLY
+  next_action: mécanisme réducteur de risque documenté ; ne crée PAS d'espérance —
+    aucune architecture de portfolio justifiée
+  falsifier: ΔE_w ≤ 0 sur holdout, OU délai médian > durée médiane des épisodes DD
+  family_legacy: G
+- id: H-DECOMP
+  title: L'espérance négative de H-REF-MOM vient d'un edge brut détruit par les coûts
+  date_created: 2026-09-28
+  family: C
+  motivation: Déterminer si le problème est l'exécution (coûts) ou l'absence d'edge.
+  features:
+  - cost_decomposition
+  label: pnl_brut_vs_net
+  expected_direction: positif
+  discovery_result: 'FALSIFIÉE — NO EVIDENCE OF EDGE : brutRéel −8,92 % (significativement
+    négatif), brutIdéal +2,70 % IC[−4,52 ; +12,34] non significatif, médiane −14,21
+    %. Hiérarchie : drift (−8,92 pts) ≫ frais (1,18) > slippage (0,29). RÈGLE D''ARRÊT
+    DÉCLENCHÉE : arrêter l''optimisation de la famille momentum/scalp'
+  calibration_result: n/a
+  holdout_result: n/a
+  status: KILLED
+  next_action: aucune — verdict gelé ; la famille momentum/scalp est abandonnée
+  falsifier: brutIdéal significativement > 0 sur holdout 30 j
+  family_legacy: B
+- id: H-GLITCH
+  title: Le trade +4 939 704 % est un vrai moonshot capturable
+  date_created: 2026-09-28
+  family: R
+  motivation: Forensique de l'outlier dominant les moyennes.
+  features:
+  - outlier_forensics
+  label: n/a
+  expected_direction: n/a
+  discovery_result: FALSIFIÉE — mint SKHYhSjuRWHgikq8eRKbtBbpABgJSkd7ytQV14i9EQ3,
+    prix 192 $ → 0,0038 $ → 192 $ (glitch décimal DexScreener), INCAPTURABLE. 1/242
+    trades, +20 412 pts à la moyenne brute. Les 31 autres « outliers » (MAE ≤ −90
+    %) sont de vraies morts. → filtre anti-tick-aberrant (≥100× vs voisins) ajouté
+    au pipeline
+  calibration_result: n/a
+  holdout_result: n/a
+  status: KILLED
+  next_action: aucune — forensique close
+  falsifier: n/a — forensique
+  family_legacy: G
+- id: H-STOPGAP
+  title: Le stop-loss −20 % protège à −20 %
+  date_created: 2026-09-28
+  family: R
+  motivation: Vérifier l'efficacité réelle du stop.
+  features:
+  - stop_loss
+  label: pnl_realise
+  expected_direction: n/a
+  discovery_result: FALSIFIÉE — réalisé médian −37,1 % (gap −17,1 pts) ; 12,9 % des
+    trades meurent à ≥ −90 % en une barre. La sortie d'urgence n'existe pas à cette
+    granularité
+  calibration_result: n/a
+  holdout_result: n/a
+  status: KILLED
+  next_action: aucune — verdict gelé
+  falsifier: n/a — forensique
+  family_legacy: G
+- id: H-PRED-FLOW-01
+  title: Frénésie d'activité à t0 ⇒ Y@1h négatif
+  date_created: 2026-09-28
+  family: C
+  motivation: La frénésie à t0 (achats précipités) précéderait l'épuisement.
+  features:
+  - buysM5
+  - sellsM5
+  - netM5
+  - accelBuys
+  - volM5
+  label: Y_1h
+  expected_direction: negatif
+  discovery_result: SURVIT (DÉCOUVERTE) — holdout ρ=−0,220, p=0,0029, IC[−0,37 ; −0,06],
+    n=182
+  calibration_result: n/a
+  holdout_result: ρ=−0,220 (données biaisées — re-tester sur collecte propre)
+  status: RISK_ONLY
+  next_action: re-tester sur collecte propre 30 j (data/track-unbiased/) — filtre
+    d'exclusion, pas edge long
+  falsifier: ρ ≥ 0 au holdout propre
+  family_legacy: B
+- id: H-PRED-FLOW-02
+  title: Divergence prix/dominance ⇒ Y@6h négatif
+  date_created: 2026-09-28
+  family: C
+  motivation: Le prix qui monte sans le flux acheteur = divergence baissière.
+  features:
+  - divPriceDominance
+  - divPriceAccel
+  label: Y_6h
+  expected_direction: negatif
+  discovery_result: Observation non calibrée (ρ=−0,291) — à tester proprement
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: tester proprement sur données propres avec protocole verrouillé
+  falsifier: ρ ≥ 0 sur holdout propre
+  family_legacy: B
+- id: H-PRED-LIQ-01
+  title: Turnover élevé à t0 ⇒ Y futurs négatifs
+  date_created: 2026-09-28
+  family: C
+  motivation: Un turnover extrême = churn, pas de la demande saine.
+  features:
+  - turnoverM5
+  - turnoverH1
+  label: Y_6h
+  expected_direction: negatif
+  discovery_result: CONFIRMÉE directionnellement (DÉCOUVERTE) — holdout 6h sp=−0,410
+    (n=97), top décile médiane −83,7 %. Filtre d'exclusion, pas edge long
+  calibration_result: n/a
+  holdout_result: sp=−0,410 (données biaisées — re-tester sur collecte propre)
+  status: RISK_ONLY
+  next_action: re-tester sur collecte propre 30 j
+  falsifier: sp ≥ 0 au holdout propre
+  family_legacy: B
+- id: H-PRED-LIQ-02
+  title: Profondeur élevée évite les catastrophes
+  date_created: 2026-09-28
+  family: C
+  motivation: La profondeur absorberait les ventes.
+  features:
+  - liqPerVolH1
+  - liqT0
+  label: Y_6h
+  expected_direction: positif
+  discovery_result: 'PARTIELLE : 6h tient (+0,271), 1h infirmée (+0,008)'
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: retester sur données propres, horizons multiples
+  falsifier: sp ≤ 0 @6h au holdout propre
+  family_legacy: B
+- id: H-PRED-LIQ-03
+  title: mcLiq élevé ⇒ meilleurs Y
+  date_created: 2026-09-28
+  family: C
+  motivation: Valorisation relative à la liquidité.
+  features:
+  - mcLiq
+  label: Y_6h
+  expected_direction: positif
+  discovery_result: 'MIXTE : direction 6h (+0,222), amplitude effondrée'
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: retester sur données propres
+  falsifier: sp ≤ 0 au holdout propre
+  family_legacy: B
+- id: H-PRED-LIQ-04
+  title: Croissance pré-t0 vs stagnation
+  date_created: 2026-09-28
+  family: C
+  motivation: La dynamique de liquidité avant t0.
+  features:
+  - preGrowthRel
+  - liqSlopePre
+  - liqCVPre
+  - addsPre
+  - removesPre
+  label: Y_futur
+  expected_direction: n/a
+  discovery_result: INTESTABLE (n=34) — retester après 30 j
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: retester après 30 j de collecte propre (n≥30)
+  falsifier: n/a — données insuffisantes
+  family_legacy: B
+- id: H-PRED-LIQ-05
+  title: 4 signaux liquidité indépendants
+  date_created: 2026-09-28
+  family: C
+  motivation: Indépendance des dimensions liquidité.
+  features:
+  - liqT0
+  - turnoverH1
+  - liqPerVolH1
+  - mcLiq
+  label: Y_futur
+  expected_direction: n/a
+  discovery_result: 'FALSIFIÉE : corrélations 0,37–0,79 → UNE SEULE dimension'
+  calibration_result: n/a
+  holdout_result: n/a
+  status: KILLED
+  next_action: aucune — ne pas traiter les 4 signaux comme indépendants
+  falsifier: n/a — falsifiée
+  family_legacy: B
+- id: H-PRED-TEMP-LEVEL
+  title: Niveau prix/liq à t0 ⇒ Y@6h (le calme relatif prédit des pertes moindres)
+  date_created: 2026-09-28
+  family: C
+  motivation: Un niveau élevé/sain à t0 = pertes moindres.
+  features:
+  - priceAtT0
+  - liqAtT0
+  label: Y_6h
+  expected_direction: positif
+  discovery_result: 'PROMU avec réserves (DÉCOUVERTE) : ρ 0,39→0,31→0,28, n=97 ; p
+    limite vs Bonferroni, biais de survie'
+  calibration_result: n/a
+  holdout_result: n/a
+  status: RISK_ONLY
+  next_action: 're-tester sur collecte propre ; RÉSERVES : ne pas promouvoir sans
+    réplication (même phénomène que FLOW-01/LIQ-01 : la frénésie prédit les pertes)'
+  falsifier: ρ ≤ 0 au holdout propre
+  family_legacy: B
+- id: H-PRED-TEMP-AGE
+  title: Jeunesse ⇒ Y
+  date_created: 2026-09-28
+  family: P
+  motivation: Les tokens jeunes performeraient mieux.
+  features:
+  - agePairMs
+  - ageTokenMs
+  label: Y_futur
+  expected_direction: positif
+  discovery_result: FALSIFIÉE directionnellement puis NO SIGNAL
+  calibration_result: n/a
+  holdout_result: n/a
+  status: KILLED
+  next_action: aucune — verdict gelé
+  falsifier: n/a — falsifiée
+  family_legacy: F
+- id: H-PRED-TEMP-GROWTH
+  title: Croissance pré-t0 ⇒ Y
+  date_created: 2026-09-28
+  family: C
+  motivation: La forme de la courbe avant t0.
+  features:
+  - growthPreT0PerH
+  label: Y_futur
+  expected_direction: positif
+  discovery_result: NON CONCLUANTE (n < 30 ; 87 % t0 au 1er snapshot) — re-tester
+  calibration_result: n/a
+  holdout_result: n/a
+  status: TESTING
+  next_action: re-tester après 30 j de collecte propre (n≥30)
+  falsifier: sp ≤ 0 sur holdout propre
+  family_legacy: B
+- id: H-PRED-TEMP-ACCEL
+  title: Accélération pré-t0 ⇒ Y
+  date_created: 2026-09-28
+  family: C
+  motivation: L'accélération avant t0.
+  features:
+  - accelPerH2
+  - accelSign
+  label: Y_futur
+  expected_direction: positif
+  discovery_result: NON CONCLUANTE (n < 30 ; 87 % t0 au 1er snapshot) — re-tester
+  calibration_result: n/a
+  holdout_result: n/a
+  status: TESTING
+  next_action: re-tester après 30 j de collecte propre (n≥30)
+  falsifier: sp ≤ 0 sur holdout propre
+  family_legacy: B
+- id: H-PRED-TEMP-ACTIVITY
+  title: Activité pré-t0 ⇒ Y
+  date_created: 2026-09-28
+  family: C
+  motivation: L'activité avant t0.
+  features:
+  - interSnapMeanMs
+  label: Y_futur
+  expected_direction: positif
+  discovery_result: NON CONCLUANTE (n < 30 ; 87 % t0 au 1er snapshot) — re-tester
+  calibration_result: n/a
+  holdout_result: n/a
+  status: TESTING
+  next_action: re-tester après 30 j de collecte propre (n≥30)
+  falsifier: sp ≤ 0 sur holdout propre
+  family_legacy: B
+- id: H-PRED-TEMP-SESSION
+  title: Heure de t0 ⇒ Y@1h
+  date_created: 2026-09-28
+  family: G
+  motivation: Effet session (heures d'activité).
+  features:
+  - hourUTC
+  label: Y_1h
+  expected_direction: n/a
+  discovery_result: PISTE FRAGILE
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: retester sur données propres avec correction comparaisons multiples
+  falsifier: aucune heure stable OOS
+  family_legacy: J
+- id: H-PRED-DIST-01
+  title: Concentration (top10) ⇒ Y
+  date_created: 2026-09-28
+  family: D
+  motivation: La concentration des holders à t0.
+  features:
+  - top10Pct
+  label: Y_futur
+  expected_direction: negatif
+  discovery_result: INMESURABLE (top10Pct=100 partout) — NO DATA
+  calibration_result: n/a
+  holdout_result: n/a
+  status: 'NULL'
+  next_action: données holders à t0 (Helius) avant tout test
+  falsifier: n/a — pas de données
+  family_legacy: C
+- id: H-PRED-DIST-02
+  title: Δ top10 ⇒ Y
+  date_created: 2026-09-28
+  family: D
+  motivation: L'évolution de la concentration.
+  features:
+  - delta_top10
+  label: Y_futur
+  expected_direction: n/a
+  discovery_result: INMESURABLE — NO DATA
+  calibration_result: n/a
+  holdout_result: n/a
+  status: 'NULL'
+  next_action: données holders à t0
+  falsifier: n/a — pas de données
+  family_legacy: C
+- id: H-PRED-DIST-03
+  title: Holders ⇒ Y
+  date_created: 2026-09-28
+  family: D
+  motivation: Le nombre de holders à t0.
+  features:
+  - holder_count
+  label: Y_futur
+  expected_direction: positif
+  discovery_result: INMESURABLE (holders null) — NO DATA
+  calibration_result: n/a
+  holdout_result: n/a
+  status: 'NULL'
+  next_action: données holders à t0 (Helius)
+  falsifier: n/a — pas de données
+  family_legacy: C
+- id: H-PRED-DIST-04
+  title: Métriques early buyers (distribution) ⇒ Y
+  date_created: 2026-09-28
+  family: B
+  motivation: Distribution des premiers acheteurs.
+  features:
+  - nBuyers
+  - giniAmt
+  - top1Share
+  - top5Share
+  label: Y_futur
+  expected_direction: n/a
+  discovery_result: BLOQUÉE (n=10 < 30 ; contamination temporelle X après t0) — en
+    attente backfill
+  calibration_result: n/a
+  holdout_result: n/a
+  status: TESTING
+  next_action: n≥30 en discovery (backfill en cours), X strictement antérieur à t0
+  falsifier: n/a — bloquée
+  family_legacy: A
+- id: H-PRED-DIST-05
+  title: Clusters early buyers ⇒ Y
+  date_created: 2026-09-28
+  family: B
+  motivation: Coordination des premiers acheteurs.
+  features:
+  - coordinatedSetFrac
+  - sameSlotMax
+  label: Y_futur
+  expected_direction: negatif
+  discovery_result: BLOQUÉE (n=10 < 30 ; contamination temporelle X après t0) — en
+    attente backfill
+  calibration_result: n/a
+  holdout_result: n/a
+  status: TESTING
+  next_action: n≥30 en discovery (backfill en cours), X strictement antérieur à t0
+  falsifier: n/a — bloquée
+  family_legacy: A
+- id: H-PRED-DIST-06
+  title: Métriques early buyers (timing) ⇒ Y
+  date_created: 2026-09-28
+  family: B
+  motivation: Timing d'arrivée des premiers acheteurs.
+  features:
+  - arrivalSpanSec
+  - medianInterArrivalSec
+  label: Y_futur
+  expected_direction: n/a
+  discovery_result: BLOQUÉE (n=10 < 30 ; contamination temporelle X après t0) — en
+    attente backfill
+  calibration_result: n/a
+  holdout_result: n/a
+  status: TESTING
+  next_action: n≥30 en discovery (backfill en cours), X strictement antérieur à t0
+  falsifier: n/a — bloquée
+  family_legacy: A
+- id: H-PRED-WAL-01
+  title: Nombre d'acheteurs précoces ⇒ Y / survie
+  date_created: 2026-09-28
+  family: B
+  motivation: Beaucoup d'acheteurs indépendants tôt = demande distribuée, potentiellement
+    plus résiliente.
+  features:
+  - nBuyers
+  label: Y_1h / Y_6h / Y_24h / survie
+  expected_direction: positif
+  discovery_result: n/a
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: NON TESTABLE (n=1 en discovery) — backfill data/earlybuyers/ → n≥30
+    en discovery avant lecture (question ouverte n°1)
+  falsifier: sp ≤ 0 sur holdout n≥30
+  family_legacy: A
+- id: H-PRED-WAL-02
+  title: Concentration top-5 ⇒ Y / survie
+  date_created: 2026-09-28
+  family: B
+  motivation: Concentration extrême = quelques wallets peuvent vider le marché. Lien
+    direct avec H-BUNDLE.
+  features:
+  - top5Share
+  label: Y_1h / Y_6h / Y_24h / survie
+  expected_direction: negatif
+  discovery_result: n/a
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: NON TESTABLE (n=1) — n≥30 en discovery ; exiger concentration par entité
+    (Liu 2025) avant conclusion
+  falsifier: sp ≥ 0 sur holdout n≥30
+  family_legacy: A
+- id: H-PRED-WAL-03
+  title: Inégalité des montants (Gini) ⇒ Y / survie
+  date_created: 2026-09-28
+  family: B
+  motivation: Le Gini capte l'inégalité sur toute la distribution, là où le top-5
+    ne voit que la tête.
+  features:
+  - giniAmt
+  label: Y_1h / Y_6h / Y_24h / survie
+  expected_direction: negatif
+  discovery_result: n/a
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: NON TESTABLE (n=1) — n≥30 en discovery
+  falsifier: sp ≥ 0 sur holdout n≥30
+  family_legacy: A
+- id: H-PRED-WAL-04
+  title: Coordination temporelle (même slot) ⇒ Y / survie
+  date_created: 2026-09-28
+  family: B
+  motivation: 'Arrivée groupée dans le même slot = snipe coordonné / bundle (cf. H-BUNDLE,
+    cas « fred » : cluster 29,74 %). Un bundle précoce peut dumper dès la migration.'
+  features:
+  - sameSlotMax
+  label: Y_1h / Y_6h / Y_24h / survie
+  expected_direction: negatif
+  discovery_result: n/a
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: NON TESTABLE (n=1) — n≥30 en discovery
+  falsifier: sp ≥ 0 sur holdout n≥30
+  family_legacy: A
+- id: H-PRED-WAL-05
+  title: Vitesse d'arrivée des wallets ⇒ Y / survie
+  date_created: 2026-09-28
+  family: B
+  motivation: Arrivée fulgurante (span ≈ 0 s) = bots/snipers pré-positionnés ; arrivée
+    étalée = découverte organique.
+  features:
+  - arrivalSpanSec
+  - medianInterArrivalSec
+  label: Y_1h / Y_6h / Y_24h / survie
+  expected_direction: n/a
+  discovery_result: n/a
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: NON TESTABLE (n=1) — n≥30 en discovery
+  falsifier: aucune relation stable OOS
+  family_legacy: A
+- id: H-PRED-WAL-06
+  title: Poids du top-1 ⇒ Y / survie
+  date_created: 2026-09-28
+  family: B
+  motivation: Un seul wallet dominant = risque de vente unique massive (version «
+    whale individuelle » de la concentration).
+  features:
+  - top1Share
+  label: Y_1h / Y_6h / Y_24h / survie
+  expected_direction: negatif
+  discovery_result: n/a
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: NON TESTABLE (n=1) — n≥30 en discovery
+  falsifier: sp ≥ 0 sur holdout n≥30
+  family_legacy: A
+- id: H-PRED-WAL-07
+  title: Rétention à +5 min post-migration ⇒ Y / survie
+  date_created: 2026-09-28
+  family: B
+  motivation: Des early buyers qui conservent après la migration signalent une conviction
+    ; une vente immédiate massive = extraction de valeur précoce.
+  features:
+  - sellersOver50
+  - medianSoldFrac
+  label: Y_futur / survie
+  expected_direction: positif
+  discovery_result: 'NON MESURABLE — features sellersOver50/medianSoldFrac DÉPRÉCIÉES
+    (fuite post-migration : mesurées à +5 min après t0, non observables à la décision
+    ; interdites en Phase 2). Données quasi absentes (walletsCovered=0, échecs Helius
+    −32015)'
+  calibration_result: n/a
+  holdout_result: n/a
+  status: KILLED
+  next_action: ne pas ressusciter les features dépréciées ; en suspens jusqu’à une
+    définition point-in-time (≤ t0)
+  falsifier: n/a — features dépréciées
+  family_legacy: A
+- id: H-PRED-WAL-08
+  title: Wallets récurrents inter-tokens ⇒ Y / survie
+  date_created: 2026-09-28
+  family: B
+  motivation: Des wallets qui reviennent sur les launches = snipers professionnels
+    / insiders ; leur présence précoce pourrait signaler (ou fabriquer) la qualité.
+    Face positive de H-BLOCK.
+  features:
+  - overlapFrac
+  label: Y_futur / survie
+  expected_direction: positif
+  discovery_result: NON TESTABLE — overlapFrac dégénéré à 0 sur 11 fichiers (dataset
+    trop petit) ; ne deviendra informatif qu'à l'échelle de centaines de tokens
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: n≥30 en discovery ; overlapFrac calculé sur discovery+calibration uniquement,
+    observations ≤ t0ms (JAMAIS holdout)
+  falsifier: sp ≤ 0 sur holdout n≥30
+  family_legacy: A
+- id: H-PRED-WAL-09
+  title: Historique dev wallet (one-shot vs répété) ⇒ Y / survie
+  date_created: 2026-09-28
+  family: B
+  motivation: La réputation on-chain du créateur pourrait prédire la tenue du token.
+  features:
+  - devHistory
+  label: Y_futur / survie
+  expected_direction: positif
+  discovery_result: NON MESURABLE — aucun artefact mint → dev wallet disponible (events
+    PumpPortal traderPublicKey absents de data/scans/). Interface prête (devHistory
+    null documenté)
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: à brancher quand le registre dev existera (cf. H-E-DEVBH-01)
+  falsifier: survie répétés ≤ one-shots sur n≥30
+  family_legacy: A
+- id: H-B-VELACC-01
+  title: Accélération du turnover (turnoverM5/turnoverH1 ≥ P90) à t0 ⇒ Y@1h négatif
+  date_created: 2026-09-28
+  family: C
+  motivation: 'Distinguer le NIVEAU de turnover (H-PRED-LIQ-01, RISK_ONLY) de son
+    ACCÉLÉRATION : une frénésie qui s''emballe = épuisement imminent.'
+  features:
+  - turnoverM5
+  - turnoverH1
+  label: Y_1h
+  expected_direction: negatif
+  discovery_result: n/a
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: verrouiller le seuil P90 sur discovery, mesurer sur calibration, UNE
+    SEULE mesure holdout (data/track-unbiased/)
+  falsifier: sp ≥ 0 sur holdout propre n≥30
+  family_legacy: B
+- id: H-C-HHIENT-01
+  title: HHI par entité (hhiEntity) > médiane ⇒ Y@6h négatif
+  date_created: 2026-09-28
+  family: D
+  motivation: 'Liu et al. 2025 : clusteriser les wallets en entités AVANT tout calcul
+    de concentration. La concentration par entité devrait dominer la concentration
+    par wallet brut.'
+  features:
+  - hhiEntity
+  - entityCount
+  label: Y_6h
+  expected_direction: negatif
+  discovery_result: n/a
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: dépend de clusters.ts (clustering traçable) ; comparer hhiEntity vs
+    hhiWallet sur mêmes données
+  falsifier: sp ≥ 0 sur holdout propre n≥30, ou hhiWallet ≥ hhiEntity en pouvoir prédictif
+  family_legacy: C
+- id: H-C-COORD-01
+  title: coordinatedSetFrac ≥ 0,3 ⇒ drawdown DDMax24h médian plus profond
+  date_created: 2026-09-28
+  family: D
+  motivation: 'MELT (Hu et al.) : 36,5 % de la supply tenue par comptes coordonnés
+    en moyenne. Les sets coordonnés larges = risque de dump coordonné.'
+  features:
+  - coordinatedSetFrac
+  label: DDMax24h
+  expected_direction: positif
+  discovery_result: n/a
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: verrouiller le seuil 0,3 sur discovery ; comparer DD médian des deux
+    groupes
+  falsifier: différence de DD médian ≤ 0 sur holdout propre n≥30
+  family_legacy: C
+- id: H-E-SERIAL-01
+  title: Dev « hot » (top quartile taux de graduation passé, ≥5 launches) ⇒ taux de
+    graduation du prochain launch > base
+  date_created: 2026-09-28
+  family: F
+  motivation: 'H-DEV : le taux passé persiste faiblement (ρ≈0,29 ; hot-devs ×1,9 sur
+    H2). Tester la version conditionnée et falsifiable.'
+  features:
+  - dev_grad_rate
+  - dev_launch_count
+  label: migration_7j
+  expected_direction: positif
+  discovery_result: n/a
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: 'univers disjoint ; CAVEAT : wallets≠humains (rotation) — exiger clustering
+    avant conclusion'
+  falsifier: taux hot-devs ≤ base sur univers disjoint
+  family_legacy: E
+- id: H-E-DEVBH-01
+  title: DevHistory répété avec graduation antérieure vs one-shot ⇒ survie 24h supérieure
+  date_created: 2026-09-28
+  family: F
+  motivation: Relève H-PRED-WAL-09 (devHistory actuellement null) avec un registre
+    dev à construire.
+  features:
+  - devHistory
+  label: survie_24h
+  expected_direction: positif
+  discovery_result: n/a
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: construire le registre dev (mint → dev wallet) avant tout test
+  falsifier: survie répétés ≤ one-shots sur n≥30
+  family_legacy: E
+- id: H-G-SNIPE-01
+  title: sniperShare ≥ 0,5 (fenêtre first_block) ⇒ Y@1h négatif
+  date_created: 2026-09-28
+  family: R
+  motivation: 'Luo et al. 2026 : sniper bots dans les 1–5 premiers blocs. Une domination
+    sniper = extraction précoce, pas de la demande.'
+  features:
+  - sniperShare
+  label: Y_1h
+  expected_direction: negatif
+  discovery_result: n/a
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: dépend de windows.ts (fenêtre first_block séparée) ; verrouiller le
+    seuil sur discovery
+  falsifier: sp ≥ 0 sur holdout propre n≥30
+  family_legacy: G
+- id: H-G-FRESH-01
+  title: newWalletFrac ≥ 0,8 ⇒ Y@6h négatif
+  date_created: 2026-09-28
+  family: R
+  motivation: Une marée de wallets neufs (< 7 j) = sybils/farming d'airdrop ou bots
+    jetables, pas une base d'acheteurs.
+  features:
+  - newWalletFrac
+  label: Y_6h
+  expected_direction: negatif
+  discovery_result: n/a
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: verrouiller le seuil sur discovery ; UNE SEULE mesure holdout
+  falsifier: sp ≥ 0 sur holdout propre n≥30
+  family_legacy: G
+- id: H-H-GRAD-01
+  title: Modèle graduation (SOL verrouillé + composition traders, template Marino
+    et al.) ⇒ AUROC > 0,55 sur holdout temporel
+  date_created: 2026-09-28
+  family: Q
+  motivation: 'Marino et al. (arXiv:2602.14860, fév. 2026) : template de réplication
+    — graduation conditionnelle à SOL verrouillé + variables de composition des traders.
+    Leçon Kamat 2026 : AUROC 0,86 in-sample → 0,46 sur holdout temporel (labels collecteur
+    off-chain ≠ événements plateforme).'
+  features:
+  - sol_locked
+  - trader_composition
+  label: graduation_7j
+  expected_direction: positif
+  discovery_result: n/a
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: split TEMPOREL obligatoire (pas de split aléatoire) ; labels = événements
+    plateforme, pas collecteur
+  falsifier: AUROC ≤ 0,55 sur holdout temporel
+  family_legacy: H
+- id: H-I-POSTMIG-HOLD-01
+  title: Croissance nette des holders 1h post-migration > 0 ⇒ survie 24h supérieure
+  date_created: 2026-09-28
+  family: I
+  motivation: Après la migration, la base de holders qui grandit (vs qui fuit) distingue
+    les tokens qui tiennent.
+  features:
+  - holder_growth_1h_postmig
+  label: survie_24h
+  expected_direction: positif
+  discovery_result: n/a
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: données holders post-migration requises ; définition point-in-time
+    stricte (fenêtre 1h FIXE après l'événement migrate)
+  falsifier: survie groupe croissance ≤ groupe décroissance sur n≥30
+  family_legacy: I
+- id: H-J-REGIME-01
+  title: Régime de volume par chaîne « chaud » ⇒ taux de graduation global > régime
+    « froid »
+  date_created: 2026-09-28
+  family: G
+  motivation: L'indicateur de régime de volume par chaîne est implémenté. Si le régime
+    prédit le taux de base global, c'est un filtre d'univers (pas un edge de token).
+  features:
+  - chain_volume_regime
+  label: taux_graduation_global
+  expected_direction: positif
+  discovery_result: n/a
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: définir le régime SANS regarder les graduations (éviter le snooping)
+    ; comparer les taux sur univers disjoint
+  falsifier: taux régime chaud ≤ régime froid sur holdout temporel
+  family_legacy: J
+- id: H-S1-E1
+  title: Niveau de liquidité à t0 ⇒ survie 24h (Cox PH)
+  date_created: '2026-09-28'
+  family: P
+  motivation: 'E1 sprint 1 : doubler la liq à t0 réduit le risque instantané de ~31
+    % (HR=0,691, p≈3e-21, n=452).'
+  features:
+  - liqT0
+  label: survival_50_24h
+  expected_direction: positif
+  discovery_result: 'PROMISING — HR=0,691/doublement IC[0,640;0,746] ; S(24h)=0,137
+    ; stable cohortes (pumpswap/raydium) et temps. Anomalie : décile D1 non-monotone.'
+  calibration_result: n/a
+  holdout_result: non mesuré — holdout gelé
+  status: PROMISING
+  next_action: re-tester sur data/track-unbiased/ après 30 j ; creuser anomalie D1
+  falsifier: HR ≥ 1 sur holdout propre
+  family_legacy: F
+- id: H-S1-E2
+  title: Le régime de marché module le signal frénésie→Y@1h
+  date_created: '2026-09-28'
+  family: G
+  motivation: 'E2 sprint 1 : le signal frénésie Phase 1 est-il stable à travers les
+    terciles de régime ?'
+  features:
+  - launch_rate
+  - graduation_rate
+  - median_turnover_t0
+  label: Y@1h
+  expected_direction: interaction
+  discovery_result: NULL — ρ=−0,24/−0,17/−0,37 (même direction) ; interactions Fisher
+    z NS (0,27/0,62/0,17). 5 jours seulement, régime ex-post.
+  calibration_result: n/a
+  holdout_result: non mesuré — holdout gelé
+  status: 'NULL'
+  next_action: re-tester en régime trailing (temps réel) sur données propres si besoin
+  falsifier: interaction significative sur holdout
+  family_legacy: J
+- id: H-S1-E3
+  title: Le danger (DD50 binaire) est plus prédictible que le rendement
+  date_created: '2026-09-28'
+  family: R
+  motivation: 'E3 sprint 1 : |ρ(danger)| > |ρ(rendement)| ?'
+  features:
+  - turnoverM5
+  - liqT0
+  label: P_DD50_24h
+  expected_direction: positif
+  discovery_result: 'KILLED — diff=−0,34/−0,30/−0,40 (danger MOINS prédictible) ;
+    le binaire jette la magnitude. Leçon : préférer ddMax24h continu.'
+  calibration_result: n/a
+  holdout_result: n/a
+  status: KILLED
+  next_action: aucune — hypothèse tuée ; utiliser ddMax24h continu en famille G
+  falsifier: n/a — tuée
+  family_legacy: G
+- id: H-S1-E4
+  title: Les 5 WINDOW_DEFS early buyers sont matériellement distinctes
+  date_created: '2026-09-28'
+  family: B
+  motivation: 'E4 sprint 1 : Jaccard entre définitions sur 61 mints.'
+  features:
+  - window_defs
+  label: Jaccard inter-fenêtres
+  expected_direction: Jaccard<0,9
+  discovery_result: PROMISING — first_block/first_5_slots distinctes (snipers ≈3 wallets)
+    ; first_60s/first_300s quasi-redondantes (Jaccard 0,92/0,98) → À DÉPRÉCIER. 14/61
+    sets pré-t0 vides.
+  calibration_result: n/a
+  holdout_result: n/a
+  status: PROMISING
+  next_action: déprécier first_60s/first_300s des analyses Phase 2 ; surveiller qualité
+    on-chain du backfill
+  falsifier: Jaccard > 0,9 sur backfill complet
+  family_legacy: A
+- id: H-S2C-E1
+  title: Les mints partageant un early buyer récurrent ont des outcomes corrélés
+  date_created: '2026-09-28'
+  family: E
+  motivation: 'Sprint 2C : si les mêmes acteurs reviennent, leurs mints partagent
+    peut-être un destin.'
+  features:
+  - shared_recurrent_buyer
+  label: y1h / survival_50_24h
+  expected_direction: outcomes plus proches dans les paires partagées
+  discovery_result: NULL — 258 paires, mean|Δy1h| p_perm=0,787 ; même survival p_perm=0,589
+  calibration_result: n/a
+  holdout_result: n/a
+  status: 'NULL'
+  next_action: aucune — ne pas poursuivre cette piste
+  falsifier: p_perm < 0,05 sur backfill complet
+  family_legacy: E
+- id: H-S2C-E2
+  title: La qualité historique d'un wallet (taux de survie des mints passés où il
+    était early buyer, as-of-t0) prédit l'outcome
+  date_created: '2026-09-28'
+  family: E
+  motivation: 'Sprint 2C : version point-in-time stricte du "smart money", wallet-level
+    et entity-level (WALLET ≠ ENTITY).'
+  features:
+  - mean_wallet_quality
+  - mean_entity_quality
+  label: y1h
+  expected_direction: positif
+  discovery_result: NULL sous-puissant — n=12 mints, ρ=0,217 p=0,242 (wallet) ; ρ=0,00
+    (entité) ; signe instable early/late
+  calibration_result: n/a
+  holdout_result: n/a
+  status: 'NULL'
+  next_action: re-tester quand le backfill atteindra n≥30 mints avec historique
+  falsifier: ρ>0,3 p<0,05 sur n≥30
+  family_legacy: E
+- id: H-S2C-F1
+  title: L'historique du creator (as-of-t0) prédit l'outcome ; interaction CREATOR
+    × EARLY_FLOW
+  date_created: '2026-09-28'
+  family: F
+  motivation: 'Sprint 2C : les deployers récidivistes ont-ils un track record prédictif
+    ?'
+  features:
+  - creator_launch_count
+  - creator_past_survival
+  - creator_age
+  label: y1h / survival_50_24h
+  expected_direction: positif
+  discovery_result: DATA ISSUE — 0/35 339 token records avec champ creator ; mintAuthority=UNKNOWN
+    à 100 % (2 926 séries)
+  calibration_result: n/a
+  holdout_result: n/a
+  status: DATA ISSUE
+  next_action: dériver le deployer depuis la tx de création on-chain (échantillon
+    n=30, coût Helius d'abord) si la famille F est priorisée
+  falsifier: n/a
+  family_legacy: F
+- id: H-S2D-COMBINED
+  title: 'Règle d''évitement combinée (frénésie+turnover+liqT0) : valeur économique'
+  date_created: '2026-09-28'
+  family: A
+  family_legacy: n/a
+  motivation: 'Sprint 2D : AVOID-S2D-v1 pré-enregistrée (sellsM5≥P75 OU turnoverM5≥P90
+    OU liqT0<P25).'
+  features:
+  - sellsM5
+  - turnoverM5
+  - liqT0
+  label: Y@1h/Y@6h (proxy rendement)
+  expected_direction: perte médiane évitée > 0
+  discovery_result: 'RISK_ONLY — +3,34 pts @1h (p=0,0001), +6,45 pts @6h (p<0,0001)
+    ; coût : 24,4 % gagnants filtrés @1h, 50-60 % runners sacrifiés. Achète de la
+    sécurité médiane en tuant l''asymétrie positive.'
+  calibration_result: n/a
+  holdout_result: non mesuré — holdout gelé
+  status: RISK_ONLY
+  next_action: re-tester sur collecte propre 30 j ; ne jamais en faire un signal long
+  falsifier: perte médiane évitée ≤ 0 sur holdout
+- id: H-S2D-FRENZY
+  title: 'Filtre frénésie : valeur d''évitement conditionnelle à la venue'
+  date_created: '2026-09-28'
+  family: A
+  motivation: 'Sprint 2D : F_FRENZY seul.'
+  features:
+  - sellsM5
+  label: Y@1h/Y@6h
+  expected_direction: perte évitée > 0
+  discovery_result: 'NEAR_MISS — +0,94 pt @1h (p=0,0006), +1,79 pt @6h ; CONDITION
+    : pumpswap uniquement (raydium ≈ 0, n=32-42, sous-puissant). Coût : 43 % des runners
+    @1h.'
+  calibration_result: n/a
+  holdout_result: non mesuré — holdout gelé
+  status: NEAR_MISS
+  next_action: re-tester la condition venue sur données propres ; chercher la cause
+    (microstructure pumpswap ?)
+  falsifier: effet nul sur pumpswap à n≥30
+- id: H-S2D-TURNOVER
+  title: 'Filtre turnover : le moins cher des filtres'
+  date_created: '2026-09-28'
+  family: A
+  motivation: 'Sprint 2D : F_TURNOVER seul.'
+  features:
+  - turnoverM5
+  label: Y@1h/Y@6h
+  expected_direction: perte évitée > 0
+  discovery_result: 'NEAR_MISS — +0,71 pt @1h (p=0,0008), +1,29 pt @6h ; CONDITION
+    pumpswap ; coût minimal : 2,6 % gagnants perdus @1h.'
+  calibration_result: n/a
+  holdout_result: non mesuré — holdout gelé
+  status: NEAR_MISS
+  next_action: re-tester condition venue ; candidat filtre principal si confirmé
+  falsifier: effet nul sur pumpswap à n≥30
+- id: H-S2D-LIQT0
+  title: 'Filtre liqT0 basse : effet ambigu'
+  date_created: '2026-09-28'
+  family: A
+  motivation: 'Sprint 2D : F_LIQT0 seul.'
+  features:
+  - liqT0
+  label: Y@1h/Y@6h
+  expected_direction: perte évitée > 0
+  discovery_result: NULL @1h (p=0,16) / RISK_ONLY @6h (+1,88 pt p=0,0203 MAIS P10
+    se dégrade −1,34 pt — le filtre empire la queue).
+  calibration_result: n/a
+  holdout_result: non mesuré — holdout gelé
+  status: RISK_ONLY
+  next_action: ne pas utiliser seul ; dégradation P10 à comprendre (cf M-001)
+  falsifier: P10 dégradé sur holdout
+- id: H-S2A-K1
+  title: Mismatch prix/liquidité pré-t0 ⇒ outcome
+  date_created: '2026-09-28'
+  family: K
+  motivation: 'Sprint 2A : incohérence sur le leg pré-t0→t0.'
+  features:
+  - mismatchPre
+  label: Y@1h
+  expected_direction: négatif
+  discovery_result: NULL — 0 incohérent sur 36 (le leg pré-t0 est toujours cohérent,
+    mécanique).
+  calibration_result: n/a
+  holdout_result: n/a
+  status: 'NULL'
+  next_action: aucune
+  falsifier: n/a
+- id: H-S2A-K2
+  title: Mismatch prix/liquidité post-t0 ⇒ Y@1h
+  date_created: '2026-09-28'
+  family: K
+  motivation: 'Sprint 2A : incohérence t0→1er tick post-t0.'
+  features:
+  - mismatchPost
+  label: Y@1h
+  expected_direction: négatif
+  discovery_result: UNSTABLE — Δ=−0,304 IC[−0,620;−0,011] mais n=11 incohérents. Direction
+    suggestive, puissance insuffisante.
+  calibration_result: n/a
+  holdout_result: non mesuré — holdout gelé
+  status: UNSTABLE
+  next_action: re-tester à n≥30 sur données propres
+  falsifier: Δ ≥ 0 à n≥30
+- id: H-S2A-K3
+  title: Anomalie ratio mcap/liq ⇒ Y@6h
+  date_created: '2026-09-28'
+  family: K
+  motivation: 'Sprint 2A : |z| du ratio mcap/liq.'
+  features:
+  - z_mcap_liq
+  label: Y@6h
+  expected_direction: positif
+  discovery_result: 'KILLED — proxy confondu : ρ=0,90 avec liqT0 ; signe inversé par
+    strate liq (−0,36/+0,35) ; dex other −0,84. C''est l''effet liquidité E1 redécouvert.'
+  calibration_result: n/a
+  holdout_result: n/a
+  status: KILLED
+  next_action: aucune — ne pas re-tester sans contrôle liqT0
+  falsifier: n/a — tuée
+- id: H-S2A-K4
+  title: Friction (turnover sans mouvement prix) ⇒ Y@6h/ddMax
+  date_created: '2026-09-28'
+  family: K
+  motivation: Sprint 2A.
+  features:
+  - friction
+  label: Y@6h / ddMax24h
+  expected_direction: négatif
+  discovery_result: NULL — redondant avec 1/liqT0 (ρ=−0,65), directions contradictoires,
+    signe inversé sur raydium.
+  calibration_result: n/a
+  holdout_result: n/a
+  status: 'NULL'
+  next_action: aucune
+  falsifier: n/a
+- id: H-S2A-K5
+  title: Volume par trade élevé ⇒ dd50
+  date_created: '2026-09-28'
+  family: K
+  motivation: 'Sprint 2A : gros trades vs danger.'
+  features:
+  - vol_per_trade
+  label: P_DD50_24h
+  expected_direction: positif
+  discovery_result: NEAR_MISS — r=−0,20, D10−D1 IC[−0,43;−0,04] ; faible, strate-dépendant
+    ; re-test avec contrôle liqT0 requis.
+  calibration_result: n/a
+  holdout_result: non mesuré — holdout gelé
+  status: NEAR_MISS
+  next_action: re-tester avec contrôle liqT0 sur données propres
+  falsifier: effet nul après contrôle liqT0
+- id: H-S2A-O
+  title: ANOMALY_SCORE (distance au régime) ⇒ Y@6h/dd50
+  date_created: '2026-09-28'
+  family: O
+  motivation: 'Sprint 2A : anomalie bilatérale vs outcomes.'
+  features:
+  - anomaly_score
+  label: Y@6h / dd50
+  expected_direction: bilatéral
+  discovery_result: 'NULL comme anomalie — autopsie : z_liq ∈ [−1,2;+7,0] = effet
+    de niveau unilatéral ; log-liqT0 brut donne déjà r=0,409 vs 0,510 pour |z| ; aggravant
+    : ρ(|z_liq|, couverture Y@6h)=0,294 (biais de sélection des labels, cf M-007).'
+  calibration_result: n/a
+  holdout_result: n/a
+  status: 'NULL'
+  next_action: aucune en l'état ; voir GUT-H-S2A-RANK
+  falsifier: n/a
+- id: GUT-H-S2A-RANK
+  title: '[GUT] Le rang de liquidité intra-jour bat le niveau brut'
+  date_created: '2026-09-28'
+  family: O
+  motivation: 'GUT_HYPOTHESIS issue de l''autopsie S2A-O : |z| bat le log-liqT0 brut
+    de 0,10 — le rang relatif intra-jour contient-il plus d''info que le niveau absolu
+    ?'
+  features:
+  - rank_liq_intraday
+  label: Y@6h
+  expected_direction: '|r_rank| > |r_niveau|'
+  discovery_result: non testé — intuition, pas une preuve
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: tester sur données propres (contrôle biais de couverture M-007)
+  falsifier: '|r_rank| ≤ |r_niveau| sur holdout'
+- id: H-S2B-L1
+  title: Attendre Δ révèle de l'info qui bat le coût du délai
+  date_created: '2026-09-28'
+  family: L
+  motivation: 'Sprint 2B : INFORMATION_GAIN vs ENTRY_DELAY_COST.'
+  features:
+  - dirPrice_Δ
+  - deltaLiq_Δ
+  label: Y@1h
+  expected_direction: gain > coût
+  discovery_result: 'NEAR_MISS — coût médian ≈ 0 partout ; aucun gain robuste. Kills
+    adversariaux : signal "survie" = artefact prix d''entrée (cf H-S2B-L-SURV) ; momentum
+    120min = effet de composition (cf H-S2B-L-MOM120). Reste : reversal D10 (pumps
+    ~+200 %/2h → Y@1h −0,26, stable deux moitiés, n=20).'
+  calibration_result: n/a
+  holdout_result: non mesuré — holdout gelé
+  status: NEAR_MISS
+  next_action: re-tester reversal D10 sur données propres (cf GUT-H-S2B-REV)
+  falsifier: reversal D10 nul à n≥30
+- id: H-S2B-L-SURV
+  title: Up-move précoce ⇒ moindre risque de −50 % (info)
+  date_created: '2026-09-28'
+  family: L
+  motivation: 'Sprint 2B : test adversarial du "signal survie".'
+  features:
+  - dirPrice_Δ
+  label: survival_50_24h
+  expected_direction: positif
+  discovery_result: 'KILLED comme information — disparaît vs référence t0 fixe : pur
+    artefact du prix d''entrée gonflé.'
+  calibration_result: n/a
+  holdout_result: n/a
+  status: KILLED
+  next_action: 'aucune — leçon : toujours comparer à référence t0 fixe'
+  falsifier: n/a — tuée
+- id: H-S2B-L-MOM120
+  title: Momentum directionnel 120min ⇒ Y@1h
+  date_created: '2026-09-28'
+  family: L
+  motivation: 'Sprint 2B : ρ=+0,256 p=0,0002 full-sample.'
+  features:
+  - dirPrice_120min
+  label: Y@1h
+  expected_direction: positif
+  discovery_result: 'UNSTABLE — effet de composition (M-006) : nul dans chaque moitié
+    temporelle (early +0,067 / late +0,350, D1-D9 plat) ; la pente n''existe que dans
+    l''agrégat.'
+  calibration_result: n/a
+  holdout_result: n/a
+  status: UNSTABLE
+  next_action: re-tester avec interaction régime×dirPrice pré-enregistrée
+  falsifier: pente monotone intra-période à n≥30
+- id: H-S2B-N1
+  title: Rupture de moyenne précoce ⇒ distribution future (Y@6h)
+  date_created: '2026-09-28'
+  family: N
+  motivation: 'Sprint 2B : CHANGE_POINT_EVENT (CUSUM).'
+  features:
+  - changepoint_event
+  label: Y@6h
+  expected_direction: négatif
+  discovery_result: 'PROMISING (RISK FILTER) — event → Y@6h −0,42 IC[−0,58;−0,28]
+    p≈0,0005, stable 3 seuils × 2 fenêtres × 2 dex × 2 périodes. MAIS horse race :
+    amplitude simple (ρ=−0,37) et volatilité réalisée (ρ=−0,47) expliquent l''essentiel
+    — proxy de volatilité, pas signal de rupture spécifique. Convergence : l''agitation
+    précoce prédit les pertes (même phénomène que frénésie/turnover).'
+  calibration_result: n/a
+  holdout_result: non mesuré — holdout gelé
+  status: PROMISING
+  next_action: préférer la feature simple (amplitude 2h) au détecteur ; re-tester
+    sur données propres
+  falsifier: effet nul après contrôle volatilité sur holdout
+- id: GUT-H-S2B-REV
+  title: '[GUT] Reversal après pump extrême (~+200 %/2h) ⇒ Y@1h négatif'
+  date_created: '2026-09-28'
+  family: L
+  motivation: 'GUT_HYPOTHESIS : reversal D10 stable dans les deux moitiés (n=20),
+    cohérent avec H-PRED-FLOW-01 et le twist H-CHASE.'
+  features:
+  - pump_2h_D10
+  label: Y@1h
+  expected_direction: négatif
+  discovery_result: non testé formellement — intuition issue de S2B-L
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: tester déciles pump_2h → Y@1h sur données propres
+  falsifier: Y@1h moyen D10 ≥ 0 à n≥30
+- id: H-FLIP-01
+  title: Cascade de liquidations long (E1) → reversal par absorption plutôt que continuation
+  date_created: 2026-09-28
+  family: S
+  motivation: 'Hypothèse centrale Branch B : la dislocation créée par une cascade
+    de liquidations se résorbe (mean-revert) plus souvent qu''elle n''accélère. À
+    distinguer, jamais présumer.'
+  features:
+  - liq_cascade_down_E1
+  - taker_imbalance_5m
+  - absorption_E12
+  label: Y@1h
+  expected_direction: positif (reversal après E1)
+  status: KILLED
+  next_action: tester la continuation comme hypothèse alternative (cf. H-FLIP-04/H-FLIP-07)
+    — pas de re-test de H-FLIP-01 sur discovery
+  falsifier: médiane Y@1h ≤ 0 sur discovery à n≥30 (→ tester continuation comme H
+    alternative)
+  discovery_result:
+    experiment: EXP-2026-09-28-flip-s1-flip01
+    results: research/results/res-flip-s1-flip01.json
+    n_E1: 49
+    p_reversal_4h: 0.8163
+    ci95_reversal_4h:
+    - 0.6864
+    - 0.9002
+    vs_baseline_bigdown_diff_pt: -4.11
+    vs_baseline_bigdown_p: 0.4378
+    vs_baseline_all_diff_pt: -13.25
+    median_yRev1h_bp: -32.09
+    ci95_median_yRev1h_bp:
+    - -59.05
+    - -12.93
+    median_net1h_20bp_cost_bp: -52.09
+    p_net_pos: 0.2041
+    halves_D1_D2:
+    - 0.8077
+    - 0.8261
+    halves_p: 0.8682
+    verdict: KILLED — falsifier déclenché (médiane Y@1h signée < 0, IC95 strictement
+      négatif) ; reversal indiscernable des big-down appariées ; NET médian négatif
+    leakage_status: OK — détecteurs/labels ≤ discovery ; feature_timestamp ≤ t_event
+      ; holdout jamais lu
+- id: H-FLIP-02
+  title: Funding extrême positif + expansion OI → rendement forward négatif (longs
+    surchargés)
+  date_created: 2026-09-28
+  family: S
+  motivation: Un funding ≥ P99 payé par les longs + OI qui gonfle = positionnement
+    crowded ; le squeeze se fait contre les longs.
+  features:
+  - funding_extreme_pos_E3
+  - oi_expansion_E5
+  - deriv_regime
+  label: Y@6h
+  expected_direction: négatif
+  status: OPEN
+  next_action: descriptifs E3/E5, puis Y@6h conditionnel au régime LONG_CROWDED
+  falsifier: médiane Y@6h ≥ 0 sur discovery à n≥30
+- id: H-FLIP-03
+  title: Divergence prix↑/OI↓ (E8) → continuation haussière (moteur spot, shorts qui
+    couvrent)
+  date_created: 2026-09-28
+  family: S
+  motivation: Prix qui monte pendant que l'OI baisse = shorts qui couvrent ou achat
+    spot sans levier ; moins de carburant pour un reversal.
+  features:
+  - div_px_up_oi_down_E8
+  label: Y@1h
+  expected_direction: positif (continuation)
+  status: OPEN
+  next_action: descriptifs E8 puis comparaison Y@1h E8 vs E10 (convergence)
+  falsifier: médiane Y@1h ≤ 0 sur discovery à n≥30
+- id: H-FLIP-04
+  title: Divergence prix↓/OI↑ (E9) → continuation baissière (shorts agressifs qui
+    s'ajoutent)
+  date_created: 2026-09-28
+  family: S
+  motivation: Prix qui baisse pendant que l'OI monte = nouveaux shorts, pas des longs
+    qui capitulent ; pression vendeuse entretenue.
+  features:
+  - div_px_down_oi_up_E9
+  label: Y@1h
+  expected_direction: négatif (continuation)
+  status: OPEN
+  next_action: descriptifs E9 puis Y@1h, asymétrie long/short vs H-FLIP-03
+  falsifier: médiane Y@1h ≥ 0 sur discovery à n≥30
+- id: H-FLIP-05
+  title: Choc de basis (E7, |premium| ≥ P99) → mean-reversion du premium sous 4h
+  date_created: 2026-09-28
+  family: S
+  motivation: Le premium index est borné par l'arbitrage spot/perp ; un choc extrême
+    devrait se résorber. Proxy du basis, pas basis réel (cf. spec §4).
+  features:
+  - basis_shock_E7
+  - premium_index_1h
+  label: premium_reversion_4h
+  expected_direction: mean-revert (premium → 0)
+  status: OPEN
+  next_action: descriptifs E7 (fréquence, amplitude) puis demi-vie du choc
+  falsifier: < 50 % des chocs résorbés à mi-amplitude sous 4h à n≥30
+- id: H-FLIP-06
+  title: Cascade long + absorption rapide (E1→E12 ≤ 15 min) → reversal plus fort que
+    sans absorption
+  date_created: 2026-09-28
+  family: S
+  motivation: L'absorption (contre-flux acheteur immédiat) sépare les cascades qui
+    trouvent un plancher de celles qui accélèrent (FAILURE).
+  features:
+  - liq_cascade_down_E1
+  - absorption_E12
+  - absorption_delay_min
+  label: Y@1h
+  expected_direction: positif, et > cascade sans absorption
+  status: TESTING
+  next_action: re-tester quand n_absorbé ≥ 30 (fenêtre plus longue ou calibration
+    — sans re-tuner la définition E12 sur discovery)
+  falsifier: pas de différence significative (IC95) entre les deux groupes à n≥30/groupe
+  discovery_result:
+    experiment: EXP-2026-09-28-flip-s1-flip06
+    results: research/results/res-flip-s1-flip06.json
+    n_absorbed: 7
+    n_notAbsorbed: 42
+    p_reversal_4h_absorbed: 0.8571
+    p_reversal_4h_notAbsorbed: 0.8095
+    diff_pt: 4.76
+    ci95_diff_pt:
+    - -23.75
+    - 33.28
+    p_value: 0.7632
+    verdict: INCONNU — n_absorbé=7 < 30, test formel impossible ; direction observée
+      cohérente mais non significative ; médianes Y@1h signées négatives des deux
+      côtés
+    leakage_status: OK — idem H-FLIP-01
+- id: H-FLIP-07
+  title: Short squeeze (E2) → continuation haussière 1h, avec asymétrie vs cascades
+    long
+  date_created: 2026-09-28
+  family: S
+  motivation: Miroir de H-FLIP-01 côté short ; l'asymétrie structurelle long/short
+    (les marchés montent en escalier, chutent en ascenseur) doit être mesurée, pas
+    supposée.
+  features:
+  - liq_cascade_up_E2
+  label: Y@1h
+  expected_direction: positif (continuation) — à confronter à reversal
+  status: OPEN
+  next_action: descriptifs E2 puis comparaison E1 vs E2 (fréquence, amplitude, Y@1h)
+  falsifier: distribution Y@1h post-E2 indiscernable de post-E1 (même forme inversée)
+    à n≥30
+- id: H-FLIP-08
+  title: Attendre 1s–60s après détection (E1/E2) améliore le NET (gain d'info > coût
+    du délai)
+  date_created: 2026-09-28
+  family: S
+  motivation: 'Fenêtre OBSERVATION de l''architecture : entrer immédiatement capte
+    le pire du slippage ; attendre confirme/invalide mais coûte le retard. Arbitrage
+    à mesurer en NET, pas en brut.'
+  features:
+  - detection_delay_s
+  - liq_cascade_E1_E2
+  label: pnl_net (GROSS − FEES − SLIPPAGE − FUNDING − LATENCY − MARKET_IMPACT)
+  expected_direction: délai optimal > 0s et < 60s
+  status: OPEN
+  next_action: d'abord H-FLIP-01/06/07 (il faut un signal avant d'optimiser le délai)
+  falsifier: NET(délai) ≤ NET(0s) pour tout délai 1–60s sur discovery
+- id: H-FLIP-09
+  title: Le régime dérivés modère l'effet des événements (interaction régime × événement)
+  date_created: 2026-09-28
+  family: S
+  motivation: Une cascade en régime LONG_CROWDED n'a pas le même sens qu'en régime
+    BALANCED ; le régime est un conditionnement, jamais un signal seul.
+  features:
+  - deriv_regime
+  - event_id_E1_E12
+  label: Y@1h
+  expected_direction: interaction significative (sens/amplitude varie par régime)
+  status: OPEN
+  next_action: après H-FLIP-01..07 — tableau Y@1h par (événement × régime)
+  falsifier: aucune interaction (effet homogène entre régimes, IC95) à n≥30/cellule
+- id: H-FLIP-10
+  title: 'Lead-lag inter-venues : la dislocation apparaît d''abord sur une venue (HL
+    vs Binance)'
+  date_created: 2026-09-28
+  family: S
+  motivation: 'Si une venue mène systématiquement les cascades, le retard de l''autre
+    est une information (et un proxy de liquidation meilleur que E1/E2 seuls). Données
+    : HL candleSnapshot 5m (~17j) vs Binance klines.'
+  features:
+  - cross_venue_lag_5m
+  - liq_cascade_E1_E2
+  label: leader_venue (binaire par événement)
+  expected_direction: une venue mène > 60 % des cascades
+  status: 'NULL'
+  next_action: si une source de bougies HL 5m profondes est trouvée, tester HL↔Binance
+    ; sinon, le lead-lag inter-venues n'est pas une piste edge
+  falsifier: pas de leader stable (50/50 ± IC95) à n≥30 cascades communes
+  discovery_result:
+    experiment: EXP-2026-09-28-flip-s1-flip10
+    results: research/results/res-flip-s1-flip10.json
+    venueHL: 'NON TESTABLE — DATA ISSUE (HL candleSnapshot 5m : 4 865 bougies du 2026-09-11
+      au 2026-09-27, hors discovery ; startTime ancien ignoré)'
+    proxy: Binance perp 1m vs spot 1m
+    n_measured: 113
+    median_lag_s: 0
+    iqr_lag_s:
+    - 0
+    - 0
+    perp_leads: 8
+    spot_leads: 3
+    tied: 102
+    sign_test_decisive_p: 0.1317
+    verdict: NULL — pas de leader systématique (médiane 0 s, 90 % synchrones à 1 min)
+      ; volet HL↔Binance non testable (DATA ISSUE), pas réfuté
+    leakage_status: OK — fenêtres ±30 min causales ; holdout jamais lu
+- id: H-FLIP-11
+  title: Collapse d'OI (E6) sans cascade prix → forward positif (deleverage sain =
+    shakeout)
+  date_created: 2026-09-28
+  family: S
+  motivation: Un deleverage sans panique prix purge le positionnement sans casser
+    la structure ; configuration RISK_ONLY potentielle (filtre d'exclusion des shorts).
+  features:
+  - oi_collapse_E6
+  - no_cascade_flag
+  label: Y@6h
+  expected_direction: positif
+  status: OPEN
+  next_action: descriptifs E6 puis Y@6h E6 avec vs sans E1/E2 concomitant
+  falsifier: médiane Y@6h ≤ 0 sur discovery à n≥30
+- id: H-FLIP-12
+  title: Convergence prix↑/OI↑ (E10) + funding extrême → forward négatif (blow-off
+    top)
+  date_created: 2026-09-28
+  family: S
+  motivation: Prix et OI qui montent ensemble avec funding extrême = longs qui s'empilent
+    au sommet ; configuration classique de retournement.
+  features:
+  - conv_px_up_oi_up_E10
+  - funding_extreme_pos_E3
+  label: Y@6h
+  expected_direction: négatif
+  status: OPEN
+  next_action: descriptifs E10∩E3 (rare ?) puis Y@6h
+  falsifier: médiane Y@6h ≥ 0 sur discovery à n≥30, ou co-occurrence trop rare (<
+    30 sur discovery)
+- id: H-MEME
+  title: 'Meme-ability : les memes "personnage" PFP-able ont des ceilings supérieurs
+    aux memes "phrase"'
+  date_created: '2026-09-28'
+  family: T
+  motivation: 'Vidéo insentos vs Rowdy (25/08/2026) : claim ''un meme personnage (animal/cartoon,
+    PFP-able) a un ceiling bien plus haut qu''un meme phrase'' (Chill Guy ~300M vs
+    ''army'' bloqué à 50K). DIMENSION DIFFÉRENTE de H-NARR v2 (morte) : meme-ability
+    ≠ catalyst. Les deux traders finissent EN PERTE sur le défi filmé — traiter comme
+    récit, extraire le filtre.'
+  features:
+  - meme_class (character/phrase)
+  - pfp_able
+  label: ceiling / MFE / taux de graduation
+  expected_direction: character > phrase
+  discovery_result: non testé
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: classifier character-vs-phrase (texte + image), comparer distributions
+    à n≥30
+  falsifier: ceiling/MFE/graduation des memes personnage ≤ ceux des memes phrase à
+    n≥30
+  data_required:
+  - classification meme (texte + image)
+  - ceiling réalisé par token
+- id: H-WAIT-CONFIRM
+  title: 'Entrer sur catalyst CONFIRMÉ plutôt qu''anticipé : INFORMATION_GAIN > ENTRY_DELAY_COST'
+  date_created: '2026-09-28'
+  family: L
+  motivation: 'Vidéo insentos vs Rowdy : ''acheter la réaction, pas l''anticipation''
+    (XCAT : pari Elon → −25 $ ; position : entrer après la réaction avec 50 % du wallet).
+    Recoupe famille L (WAIT). EN TENSION avec H-CHASE (nos entrées ''verticales''
+    ont un meilleur MFE médian x1,25 vs x1,20) — à trancher par backtest dédié, pas
+    par débat.'
+  features:
+  - catalyst_confirmed (bool)
+  - entry_delay
+  label: Y@1h / net return
+  expected_direction: confirmé > anticipé
+  discovery_result: 'non testé | Renfort Megga (2026-09-28) : entrée TARDIVE (~100K)
+    sur catalyst public confirmé (tweet Dogecoin officiel), aucune anticipation —
+    le cas d''école. Confiance faible sur les chiffres.'
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: backtest anticipation vs confirmation à n≥30 ; mesurer INFORMATION_GAIN
+    vs ENTRY_DELAY_COST
+  falsifier: entrées confirmées ≤ entrées anticipées sur rendement net à n≥30
+  data_required:
+  - détection catalyst (timestamp)
+  - prix entrée anticipée vs confirmée
+- id: H-OVERHEAD
+  title: 'Overhead supply : les tokens avec des mois de holders sous l''eau sous-performent
+    le ''nouveau et brillant'''
+  date_created: '2026-09-28'
+  family: E
+  motivation: 'Vidéo insentos vs Rowdy : ''ne pas acheter les tokens avec des mois
+    de holders sous l''eau qui attendent de sortir'' (Triple T à 12M) ; ''toujours
+    parier sur le nouveau et brillant''.'
+  features:
+  - pct_holders_underwater
+  - holder_tenure_dist
+  - token_age
+  label: Y futur / MFE
+  expected_direction: overhead élevé → sous-performance
+  discovery_result: non testé — DONNÉES MANQUANTES
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: chercher un proxy (âge token + durée du drawdown depuis le prix) ;
+    tester si proxy disponible
+  falsifier: tokens à overhead élevé ≥ tokens frais sur Y futur à n≥30
+  data_required:
+  - 'DUR : distribution d''âge des holders (holders null partout — INDISPONIBLE)'
+  - 'DUR : cost basis / % sous l''eau par holder — INDISPONIBLE'
+  - 'PROXY POSSIBLE : âge du token + durée sous l''eau depuis la série prix (mesurable)'
+- id: H-PRO-REAL
+  title: '[MÉTA] Les résultats long-terme affichés par les pros sont réels malgré
+    la session filmée en perte'
+  date_created: '2026-09-28'
+  family: E
+  motivation: 'Directive d''Hervé : prendre la piste ''pro'' au sérieux (posture GUT
+    : assumer l''anomalie réelle). Si les résultats affichés sont réels, l''écart
+    avec nos backtests négatifs vient de features NON MODÉLISÉES : chart reading,
+    timing discrétionnaire, sizing par conviction, sélection narrative, discipline
+    no-trade. La session filmée en perte est compatible avec ''forcing trades sous
+    pression caméra'' — n=1 ne falsifie rien dans AUCUN sens.'
+  features:
+  - chart_reading
+  - discretionary_timing
+  - conviction_sizing
+  - narrative_selection
+  - no_trade_discipline
+  label: écart pro vs nos backtests
+  expected_direction: écart expliqué par features manquantes
+  discovery_result: non testée — méta-hypothèse
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: opérationnaliser chaque feature candidate en hypothèse testable (H-TA,
+    H-CHART, H-PRO-STUDY)
+  falsifier: toutes les features candidates testées à n≥30 sans effet → l'écart reste
+    inexpliqué
+  note: 'Ne rouvre AUCUN verdict gelé : c''est un programme de recherche, pas une
+    réhabilitation du momentum/scalp.'
+- id: H-TA
+  title: 'Analyse technique opérationnalisée : structure HH/HL, S/R quantifiés, volume
+    profile, patterns chandeliers codés'
+  date_created: '2026-09-28'
+  family: U
+  motivation: 'Directive d''Hervé : nos backtests momentum étaient des règles rigides
+    sans lecture de chart — on n''a jamais testé le vrai jeu des pros. Chaque pattern
+    DOIT être une règle codée AVANT le test (zéro subjectivité).'
+  features:
+  - HH_HL_structure
+  - support_resistance_levels
+  - volume_profile
+  - candlestick_patterns_coded
+  label: Y futur / distribution post-pattern
+  expected_direction: patterns structurels > règles momentum naïves
+  discovery_result: 'non testé | Source Cented/rasmr (51 min, 2026-09-28) : ZÉRO mention
+    de charts ou de TA — l''edge décrit = intuition narrative + vitesse + temps d''écran.
+    L''hypothèse reste OPEN mais n''est pas nourrie par cette source. | PREMIÈRE source
+    pro qui nourrit vraiment H-TA (Megga, 2026-09-28) : il lit le chart (supports
+    testés, 4-5 breakouts ratés → bearish → sortie). Contraste avec Cented (zéro mention
+    en 51 min). Statut OPEN inchangé — ce n''est plus ''aucune donnée pro''. | 3e
+    point de données CONTRE l''edge chartiste (Orangie Web3, 2026-09-28) : zéro TA
+    en 23 min de ''cours complet'', après Cented (51 min) et Rowdy (42 min). Seul
+    Megga décrit une vraie lecture de chart — noté séparément sur H-TA/H-CHART. Statut
+    OPEN inchangé ; confiance FAIBLE sur les chiffres (intention commerciale dominante).'
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: coder 3-5 patterns par règles précises, backtest n≥30, OOS, après coûts
+  falsifier: aucun pattern codé ne bat le hasard / ne survit aux coûts à n≥30 OOS
+  note: 'Famille U (nouvelle), PAS un rebranding du momentum/scalp abandonné : structure
+    et contexte, pas signal de vitesse.'
+- id: H-CHART
+  title: 'Lecture de chart comme SÉQUENCE : contexte multi-timeframe, position dans
+    le mouvement'
+  date_created: '2026-09-28'
+  family: M
+  motivation: 'Directive d''Hervé : le chart reading des pros n''est pas un indicateur
+    isolé mais une lecture séquentielle (où en est-on dans le mouvement ? quel contexte
+    multi-timeframe ?). Familles M (Sequences) × L (Wait).'
+  features:
+  - mtf_context
+  - position_in_move
+  - sequence_state
+  label: Y futur
+  expected_direction: séquence > indicateur isolé
+  discovery_result: 'non testé | Source Cented/rasmr (51 min, 2026-09-28) : ZÉRO mention
+    de charts ou de TA — l''edge décrit = intuition narrative + vitesse + temps d''écran.
+    L''hypothèse reste OPEN mais n''est pas nourrie par cette source. | PREMIÈRE source
+    pro qui nourrit vraiment H-CHART (Megga, 2026-09-28) : lecture séquentielle du
+    chart (contexte, position dans le mouvement). Contraste avec Cented (zéro mention).
+    Statut OPEN inchangé. | 3e point de données CONTRE l''edge chartiste (Orangie
+    Web3, 2026-09-28) : zéro TA en 23 min de ''cours complet'', après Cented (51 min)
+    et Rowdy (42 min). Seul Megga décrit une vraie lecture de chart — noté séparément
+    sur H-TA/H-CHART. Statut OPEN inchangé ; confiance FAIBLE sur les chiffres (intention
+    commerciale dominante).'
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: state machines de lecture (cf famille M), test vs indicateurs isolés
+  falsifier: les séquences ne battent pas les indicateurs isolés à n≥30 OOS
+  note: 'Croise famille L (Wait) : le "où en est-on" inclut la décision d''attendre.'
+- id: H-PRO-STUDY
+  title: Étudier le comportement on-chain des wallets gagnants POUR COMPRENDRE, jamais
+    pour copier
+  date_created: '2026-09-28'
+  family: E
+  motivation: 'Directive d''Hervé : timing d''entrée, sizing, durée de holding, et
+    surtout CE QU''ILS ÉVITENT (filtres négatifs) des wallets durablement gagnants.
+    LIGNE DURE : observer = recherche autorisée ; répliquer leurs trades = copy-trading
+    INTERDIT. Charte : research/pro-study-charter.md.'
+  features:
+  - entry_timing_dist
+  - sizing_dist
+  - holding_duration
+  - avoidance_filters
+  label: comportemental (pas de signal)
+  expected_direction: n/a — étude descriptive d'abord
+  discovery_result: 'non testé | Renfort Megga (2026-09-28) : les wallets comme CONFLUENCE
+    (confirmation), jamais comme déclencheur d''entrée.'
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: identifier wallets durablement gagnants (as-of-t0), décrire distributions
+    ; AUCUNE réplication
+  falsifier: n/a — étude observationnelle
+  data_required:
+  - historique wallets gagnants (as-of-t0)
+  - définition "durablement gagnant" pré-enregistrée
+  red_line: OBSERVER = recherche autorisée (agrégats, distributions, filtres). RÉPLIQUER
+    = copy-trading INTERDIT (contraintes absolues §56).
+- id: H-BLOCKZERO
+  title: 'Block 0 : la part de supply captée au block 0 par des wallets liés au dev
+    prédit négativement l''espérance des acheteurs suivants'
+  date_created: '2026-09-28'
+  family: D
+  motivation: 'Vidéo rasmr/Cented (51 min) : les BLOCK ZEROS — dev + 2-3 wallets au
+    block 0 capturent toute la supply sans risque, l''acheteur est ''slammed'' 10/10.
+    Forme extrême de H-BUNDLE — même famille d''investigation (D). Mesurable on-chain
+    (analyse des premiers blocs).'
+  features:
+  - block0_dev_linked_share
+  - block0_wallet_count
+  label: Y acheteurs suivants / espérance
+  expected_direction: négatif
+  discovery_result: non testé
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: analyser les premiers blocs on-chain (wallets liés au dev), n≥30
+  falsifier: part block-0 élevée sans sous-performance des acheteurs suivants à n≥30
+- id: H-DEVSUPPLY
+  title: Taux d'extraction du dev (SOL extrait / liquidité) quantifie le drift structurel
+  date_created: '2026-09-28'
+  family: E
+  motivation: 'Vidéo rasmr/Cented : sur Twitter play, ~30 % de dev extrayant ~200
+    SOL à 100-130k, liquidité jamais réinjectée. PRIORITÉ HAUTE : candidat direct
+    pour expliquer la SOURCE ÉCONOMIQUE de notre espérance négative mesurée (−8,92
+    % brut réaliste).'
+  features:
+  - dev_extraction_rate
+  - dev_sol_extracted
+  - liquidity_reinjected
+  label: drift / espérance
+  expected_direction: extraction élevée → drift négatif
+  discovery_result: non testé
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: quantifier extraction dev on-chain (deltas SOL wallets dev) ; corréler
+    au drift mesuré
+  falsifier: aucune relation extraction-drift à n≥30
+  data_required:
+  - 'deltas SOL wallets dev (à capturer — cf. leçon clusters : non capturés dans le
+    cache actuel)'
+- id: H-VAMP
+  title: Un concurrent 'légèrement meilleur' sur la même narrative tue le premier
+    token 10/10 — à détecter comme TRANSITION
+  date_created: '2026-09-28'
+  family: H
+  motivation: 'Vidéo rasmr/Cented : le vamp concurrentiel comme mécanisme de mort.
+    À détecter comme TRANSITION (famille H), pas comme signal d''achat.'
+  features:
+  - competing_launch_same_narrative
+  - vamp_event
+  label: survie / drawdown du premier token
+  expected_direction: vamp → mort du premier
+  discovery_result: non testé
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: détecter paires (token, concurrent même narrative, Δt) ; mesurer distribution
+    post-vamp
+  falsifier: les tokens "vampés" ne sous-performent pas leurs contrôles à n≥30
+- id: H-SMALLWINS
+  title: 'Les gros PnL viennent de milliers de micro-gains : distribution ultra-fragmentée
+    → modèle de sizing/coûts différent'
+  date_created: '2026-09-28'
+  family: J
+  motivation: 'Vidéo rasmr/Cented : $9-10M revendiqués avec aucun trade > ~$200k ;
+    journée type 100 wins / 145 losses. Implication : les frais fixes par trade dominent
+    le modèle économique — à intégrer au critère NET_RETURN.'
+  features:
+  - pnl_fragmentation
+  - trades_per_day
+  - fee_per_trade
+  label: net return après frais
+  expected_direction: frais fixes >> sur distribution fragmentée
+  discovery_result: non testé
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: modéliser l'impact des frais fixes sur distribution fragmentée (simulation)
+    ; intégrer au §86 Branch B / §24
+  falsifier: n/a — implication de modélisation, pas prédiction
+- id: H-VOLUME
+  title: Volume global / revenus pump.fun comme variable de régime (ceilings et espérance
+    conditionnels)
+  date_created: '2026-09-28'
+  family: G
+  motivation: 'Vidéo rasmr/Cented : revenus pump.fun ~$1M/jour vérifiables sur 7 jours.
+    Variable de régime (famille G) : ceilings et espérance conditionnels au régime
+    de volume.'
+  features:
+  - global_volume
+  - pumpfun_revenue_7d
+  label: ceiling / espérance par régime
+  expected_direction: régime haut volume → ceilings et espérance supérieurs
+  discovery_result: 'non testé | Renfort Megga (2026-09-28) : rotation de chaînes
+    (Robinhood) comme régime d''attention — alimenter la variable de régime.'
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: construire la série régime volume ; tester interactions régime×signaux
+    existants
+  falsifier: aucune différence de ceiling/espérance entre régimes à n≥30
+- id: H-NARR-CREATE
+  title: Les trenchers CRÉENT les tokens sur les narratives (rapid launch, J7) au
+    lieu de les découvrir
+  date_created: '2026-09-28'
+  family: E
+  motivation: 'Vidéo rasmr/Cented : la ''découverte'' est en partie manufacturée —
+    le premier entrant n''est pas le dev mais le créateur-narratif. Implication :
+    nos features ''early buyer'' capturent peut-être des manufacturiers, pas des découvreurs.'
+  features:
+  - creator_is_narrative_originator
+  label: biais des features early-buyer
+  expected_direction: n/a — biais de mesure
+  discovery_result: non testé
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: identifier les créateurs-narratifs (wallets qui créent de façon répétée
+    sur narratives émergentes) ; tester si leur présence biaise les features famille
+    B
+  falsifier: n/a — question de validité de mesure
+- id: H-AGENTMODE
+  title: Les modes agent/cashback des launchpads créent des flywheels mécaniques (edge
+    mécanique ou piège)
+  date_created: '2026-09-28'
+  family: J
+  motivation: 'Vidéo rasmr/Cented : ex. buy programmé de 30 SOL à 100k créant un flywheel
+    mécanique. Edge mécanique potentiel OU piège — à mesurer, pas à supposer.'
+  features:
+  - agent_mode_active
+  - programmed_buy_flow
+  label: Y post-activation
+  expected_direction: à déterminer (les deux directions possibles)
+  discovery_result: non testé
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: recenser les launchpads à agent mode ; mesurer la distribution post-activation
+  falsifier: aucun écart de distribution vs contrôles à n≥30
+- id: H-ATTN
+  title: L'edge = allocation de l'attention, pas l'information privée
+  date_created: '2026-09-28'
+  family: G
+  motivation: 'Vidéo Megga (fiche research-2026-09-28-megga.md) : le trade gagnant
+    ($22k) venait d''un catalyst PUBLIC (tweet du compte officiel Dogecoin) que ''tout
+    le monde regardait'' (rotation vers Robinhood ce jour-là). Confiance FAIBLE sur
+    les chiffres (vidéo vend un cours à $100) — récit plausible et granuleux, pas
+    une preuve.'
+  features:
+  - collective_attention
+  - catalyst_publicity
+  label: distribution post-catalyst
+  expected_direction: forte attention collective → distribution différente des catalysts
+    obscurs
+  discovery_result: non testé
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: mesurer attention collective (volume social / trending) ; comparer
+    catalysts publics à forte attention vs obscurs, n≥30
+  falsifier: aucune différence de distribution entre catalysts à forte et faible attention
+    à n≥30
+- id: H-TARGET
+  title: Price targets chiffrés définis EX-ANTE (1M/2M/3M) comme discipline anti-vente-prématurée
+  date_created: '2026-09-28'
+  family: V
+  motivation: 'Vidéo Megga : targets chiffrés avant l''entrée comme discipline. COMPORTEMENTAL,
+    pas du chart. Question : un plan de sortie chiffré ex-ante améliore-t-il la capture
+    du mouvement vs sortie discrétionnaire ?'
+  features:
+  - exit_plan_exante
+  label: capture du mouvement
+  expected_direction: plan ex-ante > discrétionnaire
+  discovery_result: non testé
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: 'tester en paper : cohortes avec/sans plan chiffré (protocole comportemental,
+    pas de backtest prix)'
+  falsifier: aucune différence de capture à n≥30 en paper
+- id: H-CLIPVOL
+  title: Sortie par micro-clips de 2,5-5 % 'dans le volume' (dans les wicks, pas après)
+  date_created: '2026-09-28'
+  family: J
+  motivation: 'Vidéo Megga : sortie par clips dans le volume. Raffinement de H-EXIT
+    (backtest non concluant) : la granularité de sortie change-t-elle le résultat
+    ? Tester tailles de clips × timing.'
+  features:
+  - clip_size
+  - clip_timing
+  label: résultat net de sortie
+  expected_direction: clips fins dans le volume > sortie unique / après le volume
+  discovery_result: non testé
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: backtest tailles de clips × timing à n≥30, après coûts (frais fixes
+    — cf. H-SMALLWINS)
+  falsifier: aucune différence entre granularités à n≥30 après coûts
+  note: Raffinement de H-EXIT (NON CONCLUANTE) — pas une réouverture, une granularité
+    différente.
+- id: H-ROTATION
+  title: Spikes d'attention → ventes mesurables sur coins établis (rotation de liquidité)
+    → points d'entrée
+  date_created: '2026-09-28'
+  family: H
+  motivation: 'Vidéo Orangie Web3 ''Beginners Guide To Memecoin Trading in 2026''
+    (fiche research-2026-09-28-orangie-guide.md). Familles H (Transition) × G (Régime).
+    Priorité discrétionnaire : second ordre face à H-DEVSUPPLY/H-BLOCKZERO.'
+  features:
+  - attention_spike
+  - established_coin_sell_pressure
+  label: perf 1h/6h/24h post-spike
+  expected_direction: spike → sell pressure → entry setup
+  discovery_result: non testé
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: mesurer attention spike → sell pressure → perf 1h/6h/24h, n≥30
+  falsifier: aucune relation spike → sell pressure mesurable à n≥30
+- id: H-FIRST-THESIS
+  title: Être le premier à poster une thèse publique est récompensé ($61 → $5 800
+    sur Jimothy cité)
+  date_created: '2026-09-28'
+  family: B
+  motivation: 'Vidéo Orangie Web3 : proxy de détection précoce d''attention. Recoupe
+    H-FRESH et H-NARR-CREATE sans doublon (noter les liens). Priorité discrétionnaire
+    : second ordre.'
+  features:
+  - first_public_thesis
+  label: reward early attention
+  expected_direction: première thèse publique → récompensé
+  discovery_result: non testé
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: identifier premières thèses publiques par narrative ; mesurer outcomes,
+    n≥30
+  falsifier: aucun avantage aux premières thèses à n≥30
+  links:
+  - H-FRESH
+  - H-NARR-CREATE
+- id: H-LEADERBOARD
+  title: Leaderboards PnL publics comme source comportementale — étudier les patterns
+    des top traders, jamais copier
+  date_created: '2026-09-28'
+  family: E
+  motivation: 'Vidéo Orangie Web3 : piste données rattachée à H-PRO-STUDY. La source
+    elle-même prêche ''don''t copy'' — aligné avec notre ligne dure (charte pro-study).'
+  features:
+  - leaderboard_top_trader_patterns
+  label: comportemental (agrégé)
+  expected_direction: n/a — étude descriptive
+  discovery_result: non testé
+  calibration_result: n/a
+  holdout_result: n/a
+  status: OPEN
+  next_action: étudier patterns agrégés des top traders leaderboards ; AUCUNE réplication
+    (charte pro-study)
+  falsifier: n/a — étude observationnelle
+  red_line: OBSERVER = autorisé. RÉPLIQUER = copy-trading INTERDIT.

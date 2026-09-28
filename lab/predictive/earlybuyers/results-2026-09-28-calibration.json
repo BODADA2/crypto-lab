@@ -1,0 +1,204 @@
+{
+  "program": "earlybuyers-phase2",
+  "question": "La composition des early buyers à t0 contient-elle une information statistiquement stable sur la distribution future du token ?",
+  "phase": "calibration",
+  "generatedAt": "2026-09-28T12:45:54.377Z",
+  "durationMs": 60,
+  "biasNote": "data/history/ et data/scans/ biaisées vers les tokens chauds → toute mesure = borne OPTIMISTE. data/track-unbiased/ JAMAIS lue (holdout gelé).",
+  "strategyBuilt": false,
+  "counts": {
+    "filesListed": 18,
+    "mintsProcessed": 14,
+    "holdoutSkippedUnread": 4,
+    "offPhaseSkipped": 0,
+    "snapshotsValid": 1,
+    "snapshotsExcluded": 13,
+    "dataErrorNeutralized": 0,
+    "labeledRows": 0
+  },
+  "exclusions": [
+    {
+      "mint": "2nkmqh65eHHj61P2FpvpAoHsMBvxAmSvM9LaRrgopump",
+      "universe": "calibration",
+      "reason": "set pré-t0 = 0 buyers (< 5)"
+    },
+    {
+      "mint": "4n9TeARscBupFtVpB5LXabiNq4e2M9ZeyqCVzSoVpump",
+      "universe": "discovery",
+      "reason": "pas de série data/history"
+    },
+    {
+      "mint": "4s5wbWTYqFEH3r6rgh5eoaK5LjT8FHY62YmY9JDppump",
+      "universe": "discovery",
+      "reason": "pas de t0 (priceUsd>0 & liquidityUsd>=20000)"
+    },
+    {
+      "mint": "5QK1qDJ3AzH5jQRD4jMpj6GGF1mXsfXy6igcpmsVpump",
+      "universe": "calibration",
+      "reason": "pas de t0 (priceUsd>0 & liquidityUsd>=20000)"
+    },
+    {
+      "mint": "7gsek2Y7vCBkzgqBTHg8ynZUvRta7LgbhAKZWQLCpump",
+      "universe": "calibration",
+      "reason": "pas de t0 (priceUsd>0 & liquidityUsd>=20000)"
+    },
+    {
+      "mint": "7uc4AhWYG49S2J1NMQy2McRsGm7ooNJ7rX721qDfpump",
+      "universe": "discovery",
+      "reason": "pas de série data/history"
+    },
+    {
+      "mint": "9pKKVy9Vo9BdbQ1UNfQCxUJMH92RTurDGWoPX5tnpump",
+      "universe": "calibration",
+      "reason": "set pré-t0 = 0 buyers (< 5)"
+    },
+    {
+      "mint": "FkByyaAxppKB5224tQ397Gg4PWtihQMA3rCdS4Xipump",
+      "universe": "calibration",
+      "reason": "set pré-t0 = 0 buyers (< 5)"
+    },
+    {
+      "mint": "Gr2MUB71R2KX4zURK3iuhFrUDkUfHpZECRpGp2Zzpump",
+      "universe": "discovery",
+      "reason": "pas de série data/history"
+    },
+    {
+      "mint": "JeGwGLFxo4qv6yT3eogEJ7uLvnnZmRK95vipG3Ppump",
+      "universe": "discovery",
+      "reason": "pas de t0 (priceUsd>0 & liquidityUsd>=20000)"
+    },
+    {
+      "mint": "KEaQzxajeqAsiVYzGwNoLyvE887yLqffU1jLJDLpump",
+      "universe": "calibration",
+      "reason": "set pré-t0 = 0 buyers (< 5)"
+    },
+    {
+      "mint": "ieTA9nTM7epNr8TCg3sxXYy4r95P1TpiRUZWbYtpump",
+      "universe": "discovery",
+      "reason": "pas de série data/history"
+    },
+    {
+      "mint": "pzCi3SmPiHa3uZ2QYewJRQsCvzeKkifAA1dTSWMpump",
+      "universe": "discovery",
+      "reason": "set pré-t0 = 0 buyers (< 5)"
+    }
+  ],
+  "audit": {
+    "pass": true,
+    "checked": 15,
+    "violations": []
+  },
+  "stats": {
+    "nTests": 0,
+    "nConclusive": 0,
+    "significantPairs": [],
+    "topPairsByAbsSpearman": []
+  },
+  "models": {
+    "logistic": {
+      "model": "logistic",
+      "nTrain": 0,
+      "nFeatures": 15,
+      "trainAcc": null,
+      "trainAUC": null,
+      "baselineAcc": null,
+      "oobAcc": null,
+      "converged": false,
+      "note": "pas de données d'entraînement",
+      "suspect": false
+    },
+    "randomForest": {
+      "model": "random_forest",
+      "nTrain": 0,
+      "nFeatures": 15,
+      "trainAcc": null,
+      "trainAUC": null,
+      "baselineAcc": null,
+      "oobAcc": null,
+      "converged": false,
+      "note": "données insuffisantes (n<4)",
+      "suspect": false
+    },
+    "label": "survival_50_24h",
+    "nModelRows": 0
+  },
+  "compare": {
+    "rule": {
+      "feature": "giniAmt",
+      "threshold": 0.9149251920295572,
+      "direction": "exclude_high",
+      "origin": "top tercile giniAmt — seuil = quantile 2/3 calculé sur discovery (gelé, aucun paramètre touché au holdout)"
+    },
+    "returnKey": "y6h",
+    "groups": [
+      {
+        "name": "ALL",
+        "n": 0,
+        "mean": null,
+        "median": null,
+        "ci95": null,
+        "p10": null,
+        "p25": null,
+        "p75": null,
+        "p90": null,
+        "freqLeMinus30": null,
+        "freqLeMinus50": null,
+        "freqLeMinus80": null,
+        "survivalRate50": null,
+        "medianFirstHalfT0": null,
+        "medianSecondHalfT0": null
+      },
+      {
+        "name": "EXCLUS",
+        "n": 0,
+        "mean": null,
+        "median": null,
+        "ci95": null,
+        "p10": null,
+        "p25": null,
+        "p75": null,
+        "p90": null,
+        "freqLeMinus30": null,
+        "freqLeMinus50": null,
+        "freqLeMinus80": null,
+        "survivalRate50": null,
+        "medianFirstHalfT0": null,
+        "medianSecondHalfT0": null
+      },
+      {
+        "name": "RETENUS",
+        "n": 0,
+        "mean": null,
+        "median": null,
+        "ci95": null,
+        "p10": null,
+        "p25": null,
+        "p75": null,
+        "p90": null,
+        "freqLeMinus30": null,
+        "freqLeMinus50": null,
+        "freqLeMinus80": null,
+        "survivalRate50": null,
+        "medianFirstHalfT0": null,
+        "medianSecondHalfT0": null
+      }
+    ],
+    "descriptiveOnly": false,
+    "note": "Règle gelée sur discovery, appliquée à discovery+calibration (pas de re-calibrage)."
+  },
+  "secondaryWithValidExtremeEvents": {
+    "note": "Analyse secondaire : DATA_ERROR_MINTS ré-inclus (glitch connu) pour mesurer l'effet de l'outlier — jamais la mesure principale.",
+    "dataErrorMints": [
+      "SKHYhSjuRWHgikq8eRKbtBbpABgJSkd7ytQV14i9EQ3"
+    ],
+    "nTests": 0,
+    "topConclusivePairs": []
+  },
+  "verdict": "NON_CONCLUSIF",
+  "verdictReason": "n=0 lignes avec labels < 30 : aucune interprétation (le backfill continue en parallèle)",
+  "honesty": {
+    "minNConclusive": 30,
+    "noSmartMoneyLabeling": true,
+    "phase1ContaminationFixed": "sellersOver50/medianSoldFrac (ventes post-migration) INTERDITS en Phase 2 ; overlapFrac construit uniquement sur discovery+calibration, observations <= t0ms"
+  }
+}

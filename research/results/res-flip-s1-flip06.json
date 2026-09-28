@@ -1,0 +1,142 @@
+{
+ "manifest": {
+  "generatedAt": "2026-09-28T14:57:52.978Z",
+  "venue": "Binance SOLUSDT perp (data.vision) + Hyperliquid (funding, candles 5m)",
+  "period": "2026-03-28 \u2192 2026-09-27",
+  "splits": {
+   "discovery": "< 2026-07-16T09:35:59.400Z (60% les plus anciens)",
+   "calibration": "20% suivants \u2014 non utilis\u00e9s ce sprint",
+   "holdout": "\u2265 2026-08-22T04:47:59.200Z \u2014 GEL\u00c9, JAMAIS LU"
+  },
+  "warmup": "7j (percentiles causaux)",
+  "config5m": {
+   "pctWindow": 2016,
+   "cascadeRetP": 1,
+   "imbP": 10,
+   "volP": 90,
+   "debounceMin": 30,
+   "reversionTol": 0.003,
+   "reversionCapMin": 240,
+   "absorptionWindowMin": 15,
+   "fundAbsFloor": 0
+  },
+  "nMin": 30,
+  "costs": {
+   "feeBpPerLeg": 5,
+   "slippageBpPerLeg": 5,
+   "note": "slippage ESTIM\u00c9 (pas de carnet historique)"
+  },
+  "leakageGuard": "assert MAX_FORWARD_T < HOLDOUT_START \u2014 v\u00e9rifi\u00e9 \u00e0 l'ex\u00e9cution"
+ },
+ "hypothesis": "H-FLIP-06",
+ "result": {
+  "hypothesis": "Cascade long + absorption rapide (E1\u2192E12 \u226415min) \u2192 reversal plus fort que sans absorption",
+  "groups": {
+   "E1_absorbed_n": 7,
+   "E1_notAbsorbed_n": 42,
+   "nMinPerGroup": 30,
+   "absorbedSufficient": false
+  },
+  "reversal4h_byAbsorption": {
+   "absorbed": {
+    "n": 7,
+    "p": 85.71,
+    "ci": [
+     48.69,
+     97.43
+    ]
+   },
+   "notAbsorbed": {
+    "n": 42,
+    "p": 80.95,
+    "ci": [
+     66.7,
+     90.02
+    ]
+   },
+   "diffPt": 4.76,
+   "pValue": 0.7632,
+   "ciDiffPt": [
+    -23.75,
+    33.28
+   ],
+   "medianYRev_absorbedBp": -10.73,
+   "medianYRev_notAbsorbedBp": -23.82,
+   "ciMedian_absorbedBp": [
+    -77.5,
+    3.16
+   ],
+   "ciMedian_notAbsorbedBp": [
+    -73.17,
+    18.85
+   ]
+  },
+  "reversal1h_byAbsorption": {
+   "absorbed": {
+    "n": 7,
+    "p": 85.71,
+    "ci": [
+     48.69,
+     97.43
+    ]
+   },
+   "notAbsorbed": {
+    "n": 42,
+    "p": 71.43,
+    "ci": [
+     56.43,
+     82.83
+    ]
+   },
+   "diffPt": 14.29,
+   "pValue": 0.428,
+   "ciDiffPt": [
+    -15.02,
+    43.59
+   ],
+   "medianYRev_absorbedBp": -19.17,
+   "medianYRev_notAbsorbedBp": -33.66,
+   "ciMedian_absorbedBp": [
+    -93.41,
+    9.47
+   ],
+   "ciMedian_notAbsorbedBp": [
+    -59.45,
+    -3.63
+   ]
+  },
+  "net1hHold_cost20bp": {
+   "absorbed": {
+    "n": 7,
+    "medianGrossBp": -19.17,
+    "medianNetBp": -39.17,
+    "meanNetBp": -49.94,
+    "pNetPos": 0.1429,
+    "ciNetPos": [
+     0.0257,
+     0.5131
+    ],
+    "maxAbsGrossBp": 96.63
+   },
+   "notAbsorbed": {
+    "n": 42,
+    "medianGrossBp": -33.66,
+    "medianNetBp": -53.66,
+    "meanNetBp": -66.43,
+    "pNetPos": 0.2143,
+    "ciNetPos": [
+     0.1171,
+     0.3594
+    ],
+    "maxAbsGrossBp": 310.64
+   }
+  },
+  "E2_mirror_exploratory": {
+   "absorbed_n": 8,
+   "notAbsorbed_n": 56,
+   "diffPt": 12.5,
+   "pValue": 0.435
+  },
+  "leakageStatus": "PASS \u2014 groupe absorb\u00e9 : tEvent = cl\u00f4ture barre E12 (post-\u00e9v\u00e9nement connu alors) ; groupe non absorb\u00e9 : tEvent = cl\u00f4ture cascade + 15 min (absence d'absorption connue \u00e0 fermeture fen\u00eatre) ; labels > tEvent uniquement"
+ }
+}

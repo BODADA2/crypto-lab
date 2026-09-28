@@ -1,0 +1,102 @@
+{
+ "manifest": {
+  "generatedAt": "2026-09-28T14:57:52.978Z",
+  "venue": "Binance SOLUSDT perp (data.vision) + Hyperliquid (funding, candles 5m)",
+  "period": "2026-03-28 \u2192 2026-09-27",
+  "splits": {
+   "discovery": "< 2026-07-16T09:35:59.400Z (60% les plus anciens)",
+   "calibration": "20% suivants \u2014 non utilis\u00e9s ce sprint",
+   "holdout": "\u2265 2026-08-22T04:47:59.200Z \u2014 GEL\u00c9, JAMAIS LU"
+  },
+  "warmup": "7j (percentiles causaux)",
+  "config5m": {
+   "pctWindow": 2016,
+   "cascadeRetP": 1,
+   "imbP": 10,
+   "volP": 90,
+   "debounceMin": 30,
+   "reversionTol": 0.003,
+   "reversionCapMin": 240,
+   "absorptionWindowMin": 15,
+   "fundAbsFloor": 0
+  },
+  "nMin": 30,
+  "costs": {
+   "feeBpPerLeg": 5,
+   "slippageBpPerLeg": 5,
+   "note": "slippage ESTIM\u00c9 (pas de carnet historique)"
+  },
+  "leakageGuard": "assert MAX_FORWARD_T < HOLDOUT_START \u2014 v\u00e9rifi\u00e9 \u00e0 l'ex\u00e9cution"
+ },
+ "hypothesis": "H-FLIP-10",
+ "result": {
+  "hypothesis": "Lead-lag inter-marches : la dislocation apparait d'abord sur un marche",
+  "venueHL": {
+   "status": "NON TESTABLE \u2014 DATA ISSUE",
+   "detail": "HL candleSnapshot 5m limite aux ~5000 dernieres bougies (~17j) ; startTime ancien ignore, endTime ancien -> []. Aucune couverture du discovery (60% les plus anciens). Teste le 2026-09-28."
+  },
+  "proxy": {
+   "ref": "Binance SOLUSDT PERP 1m (data.vision)",
+   "other": "Binance SOLUSDT SPOT 1m (data.vision)",
+   "resolution": "1m -> lag quantifie par pas de 60 s ; |lag| <= 60 s = indiscernable (tied)",
+   "window": "+/-30 min autour de la barre de cascade",
+   "note": "lag > 0 = le PERP creuse en premier ; lag < 0 = le SPOT creuse en premier"
+  },
+  "n": {
+   "cascadesDiscovery": 113,
+   "measured": 113,
+   "null": 0
+  },
+  "leadLag": {
+   "medianLagS": 0,
+   "iqrLagS": [
+    0,
+    0
+   ],
+   "perpLeads": 8,
+   "spotLeads": 3,
+   "tied": 102,
+   "leaderShare": 0.7273,
+   "decisiveN": 11,
+   "signTestDecisive": {
+    "n": 11,
+    "pValue": 0.1317
+   }
+  },
+  "byType": {
+   "E1": {
+    "n": 49,
+    "medianLagS": 0,
+    "perpLeads": 4,
+    "spotLeads": 1,
+    "tied": 44
+   },
+   "E2": {
+    "n": 64,
+    "medianLagS": 0,
+    "perpLeads": 4,
+    "spotLeads": 2,
+    "tied": 58
+   }
+  },
+  "trueCascadeVsSpot": {
+   "proxy": "vraie cascade ~= cascade + dOI 1h <= P10 causal (+/-1h) ; spot-like ~= sans collapse OI \u2014 PROXY, pas des prints de liquidation",
+   "trueCascade": {
+    "n": 36,
+    "medianLagS": 0,
+    "perpLeads": 3,
+    "spotLeads": 2,
+    "tied": 31
+   },
+   "spotLike": {
+    "n": 77,
+    "medianLagS": 0,
+    "perpLeads": 5,
+    "spotLeads": 1,
+    "tied": 71
+   }
+  },
+  "leakageStatus": "PASS \u2014 creux cherches sur klines 1m alignees autour de t_cascade (mesure, pas feature de decision) ; aucune donnee holdout",
+  "dataIssue": "prints de liquidation historiques : AUCUNE source publique -> E1/E2 restent des proxies (spec section 4)"
+ }
+}

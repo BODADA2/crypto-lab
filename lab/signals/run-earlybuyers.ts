@@ -14,11 +14,13 @@
 /**
  * Job « early-buyer bundle » (quotidien, optionnel : auth via le skill helius).
  *   npx tsx lab/signals/run-earlybuyers.ts [--tokens 50] [--k 3] [--n 50]
- *     [--max-credits 15000] [--monthly-cap 400000] [--no-sells]
+ *     [--max-credits 15000] [--monthly-cap 400000] [--no-sells] [--max-pages 60] [--require-history-t0]
  *
- * 1) Lit les migrations dans data/scans/pump-*.jsonl (les plus récentes d'abord, dédoublonnées).
+ * 1) Lit les migrations dans data/scans/pump-*.jsonl (les plus récentes d'abord, dédoublonnées),
+ *    filtrées sur les mints ayant un t0 valide dans data/history/ si --require-history-t0.
  * 2) Pour chaque token migré (max --tokens), récupère ses N premiers acheteurs via Helius
- *    (cache dans data/earlybuyers/<mint>.json pour ne jamais repayer un token déjà lu).
+ *    (cache dans data/earlybuyers/<mint>.json pour ne jamais repayer un token déjà lu ;
+ *    getTransaction tolérant -32015 : versions 0/1/2 puis transaction ignorée et comptée dans skippedTx).
  * 3) Calcule les métriques de bundling H-BUNDLE (top5_share, gini, same_slot_max) et,
  *    sauf --no-sells, les ventes coordonnées post-migration (coordinated_sells) pour les
  *    tokens dont la fenêtre de 5 min post-migration est écoulée.
@@ -52,6 +54,28 @@ import {
 /** Borne haute de crédits par token : ~210 (acheteurs) + ~410 (ventes : 10 wallets × 41). */
 export const EST_CREDITS_PER_TOKEN = 650;
 
+/**
+ * t0 d'un token depuis son historique DexScreener : `fetchedAt` (ms) du premier snapshot
+ * avec priceUsd > 0 et liquidityUsd >= 20000. `null` si aucun snapshot valide.
+ */
+export function findHistoryT0(dataDir: string, mint: string): number | null {
+  const p = join(dataDir, "history", `${mint}.jsonl`);
+  if (!existsSync(p)) return null;
+  for (const line of readFileSync(p, "utf8").split("\n")) {
+    if (!line.trim()) continue;
+    try {
+      const d = JSON.parse(line) as { priceUsd?: number; liquidityUsd?: number; fetchedAt?: string };
+      if ((d.priceUsd ?? 0) > 0 && (d.liquidityUsd ?? 0) >= 20000 && d.fetchedAt) {
+        const ms = Date.parse(d.fetchedAt);
+        if (!Number.isNaN(ms)) return ms;
+      }
+    } catch {
+      /* ligne ignorée */
+    }
+  }
+  return null;
+}
+
 export interface EarlyBuyersJobOptions {
   dataDir: string;
   helius: HeliusClient;
@@ -71,6 +95,14 @@ export interface EarlyBuyersJobOptions {
   sellsTxLimit?: number;
   /** Sauter l'analyse overlap (défaut false). */
   skipOverlap?: boolean;
+  /** Pages de signatures remontées par getEarlyBuyers (défaut 10 ; 60 recommandé anti-troncature, 1 crédit/page). */
+  maxPages?: number;
+  /**
+   * Pré-filtre : ne backfiller que les mints ayant data/history/<mint>.jsonl avec un t0 valide
+   * (findHistoryT0). Les mints sans série ou sans t0 sont ignorés AVANT tout appel payant.
+   * Défaut false.
+   */
+  requireHistoryT0?: boolean;
 }
 
 export interface CachedEarlyBuyers extends EarlyBuyersResult {
@@ -151,7 +183,14 @@ export async function runEarlyBuyersJob(o: EarlyBuyersJobOptions): Promise<Early
     return report;
   }
 
-  const migrations = readMigrations(scansDir).slice(0, o.maxTokens ?? 20);
+  let migrations = readMigrations(scansDir);
+  if (o.requireHistoryT0) {
+    const before = migrations.length;
+    migrations = migrations.filter((m) => findHistoryT0(o.dataDir, m.mint) !== null);
+    const dropped = before - migrations.length;
+    if (dropped > 0) console.log(`[earlybuyers] pré-filtre t0 : ${dropped} mints sans historique/t0 ignorés avant tout appel payant.`);
+  }
+  migrations = migrations.slice(0, o.maxTokens ?? 20);
   const sets: EarlyBuyerSet[] = [];
   const before = o.helius.credits;
 
@@ -180,7 +219,7 @@ export async function runEarlyBuyersJob(o: EarlyBuyersJobOptions): Promise<Early
         break;
       }
       try {
-        const fresh = await o.helius.getEarlyBuyers(m.mint, o.topN ?? 50, { maxTransactions: 200 });
+        const fresh = await o.helius.getEarlyBuyers(m.mint, o.topN ?? 50, { maxTransactions: 200, maxPages: o.maxPages ?? 10 });
         report.fetched += 1;
         res = { ...fresh, fetchedAt: new Date(now()).toISOString(), migratedAt: m.receivedAt ?? null };
       } catch (e) {
@@ -281,6 +320,8 @@ if (isMain) {
         sellsWallets: arg("sells-wallets", 10),
         sellsTxLimit: arg("sells-tx", 40),
         skipOverlap: flag("skip-overlap"),
+        maxPages: arg("max-pages", 10),
+        requireHistoryT0: flag("require-history-t0"),
       });
     });
   } catch (e) {

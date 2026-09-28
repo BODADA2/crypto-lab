@@ -1,0 +1,144 @@
+{
+  "experiment": "E1",
+  "hypothesis_id": "H-S1-E1",
+  "universe": "discovery",
+  "n": 452,
+  "leakage_status": "PASS",
+  "leakage_detail": "Features (liqT0, dexId, t0day) mesurées à t0 (≤ t0ms). Labels de survie calculés sur ticks post-t0 avec aberrantMask (même règle que labels.ts, mint SKHY exclu). Censure au min(24h, dernier tick) — standard. AUCUNE lecture du holdout.",
+  "data_bias": "data/history/ biaisée vers les tokens chauds : toute mesure = borne OPTIMISTE.",
+  "global": {
+    "n": 452,
+    "nEvents": 349,
+    "s24h": 0.13704135147691768,
+    "medianSurvH": 1.4681875,
+    "hrPerDoubling": 0.6910169637507697,
+    "pWald": 0,
+    "ciHr": [
+      0.6400890651403415,
+      0.7459968779292273
+    ],
+    "converged": true
+  },
+  "deciles_log2liqT0": [
+    {
+      "decile": 1,
+      "n": 46,
+      "s24h": 0.22819150453400966
+    },
+    {
+      "decile": 2,
+      "n": 45,
+      "s24h": 0.039625128600823074
+    },
+    {
+      "decile": 3,
+      "n": 45,
+      "s24h": 0.03538051282051282
+    },
+    {
+      "decile": 4,
+      "n": 45,
+      "s24h": 0
+    },
+    {
+      "decile": 5,
+      "n": 46,
+      "s24h": 0.06999042236325562
+    },
+    {
+      "decile": 6,
+      "n": 45,
+      "s24h": 0.029224349482796123
+    },
+    {
+      "decile": 7,
+      "n": 45,
+      "s24h": 0.04444444444444446
+    },
+    {
+      "decile": 8,
+      "n": 45,
+      "s24h": 0.10864197530864197
+    },
+    {
+      "decile": 9,
+      "n": 45,
+      "s24h": 0.23668059256402849
+    },
+    {
+      "decile": 10,
+      "n": 45,
+      "s24h": 0.5842015137885602
+    }
+  ],
+  "cohort_stability": {
+    "pumpswap": {
+      "n": 389,
+      "nEvents": 325,
+      "s24h": 0.07127090437547655,
+      "medianSurvH": 1.2379413888888888,
+      "hrPerDoubling": 0.7152214086167727,
+      "pWald": 8.43769498715119e-15,
+      "ciHr": [
+        0.6571929670726058,
+        0.7783736116689852
+      ],
+      "converged": true
+    },
+    "raydium": {
+      "n": 47,
+      "nEvents": 23,
+      "s24h": 0.45030687397708674,
+      "medianSurvH": 16.4820875,
+      "hrPerDoubling": 0.5229764599954894,
+      "pWald": 0.00030592500679871293,
+      "ciHr": [
+        0.3678309365513308,
+        0.7435600177453974
+      ],
+      "converged": true
+    },
+    "other": {
+      "n": 16,
+      "nEvents": 0,
+      "s24h": null,
+      "medianSurvH": null,
+      "hrPerDoubling": null,
+      "pWald": null,
+      "ciHr": null,
+      "converged": false
+    }
+  },
+  "time_stability": {
+    "split_day": "2026-09-26",
+    "halves": {
+      "first_half": {
+        "n": 244,
+        "nEvents": 180,
+        "s24h": 0.1708871341538687,
+        "medianSurvH": 1.5114677777777779,
+        "hrPerDoubling": 0.6964322604305352,
+        "pWald": 9.426903702092204e-12,
+        "ciHr": [
+          0.6276192526483113,
+          0.7727900177086606
+        ],
+        "converged": true
+      },
+      "second_half": {
+        "n": 208,
+        "nEvents": 169,
+        "s24h": 0.09671712301653664,
+        "medianSurvH": 1.4652558333333334,
+        "hrPerDoubling": 0.6712318431881236,
+        "pWald": 2.913047580932471e-11,
+        "ciHr": [
+          0.5968407773114218,
+          0.7548951151416301
+        ],
+        "converged": true
+      }
+    }
+  },
+  "median_log2liqT0": 15.59288003900301
+}

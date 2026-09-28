@@ -1,0 +1,70 @@
+[earlybuyers:sells] ieTA9nTM7epNr8TCg3sxXYy4r95P1TpiRUZWbYtpump: Helius RPC -32015: Transaction version (1) is not supported by the requesting client. Please try the request again with the following configuration parameter: "maxSupportedTransactionVersion": 1
+[earlybuyers] 8zeFZ2777XA2q3MGpRiscEH4QhsU5SpKsJ49JCctpump: Helius RPC -32015: Transaction version (1) is not supported by the requesting client. Please try the request again with the following configuration parameter: "maxSupportedTransactionVersion": 1
+[earlybuyers] DscVxHHnMywHMFGrcvQ9MMLsWcEn1EkANqWgTQdKpump: Helius RPC -32015: Transaction version (1) is not supported by the requesting client. Please try the request again with the following configuration parameter: "maxSupportedTransactionVersion": 1
+[earlybuyers] 4Pxo5WrBPc4HzWj6ZYaqb5omKMyTyzmNZmaKtqb9pump: Helius RPC -32015: Transaction version (1) is not supported by the requesting client. Please try the request again with the following configuration parameter: "maxSupportedTransactionVersion": 1
+[earlybuyers] 4QufEWk2Rvy14RmwX9dmgafFWWpAmGiqi9es5MX1pump: Helius RPC -32015: Transaction version (1) is not supported by the requesting client. Please try the request again with the following configuration parameter: "maxSupportedTransactionVersion": 1
+[earlybuyers] JVNThAXvkB1f7PLb3Fq7KjsJYCLTCvZYXMmrSQKpump: Helius RPC -32015: Transaction version (1) is not supported by the requesting client. Please try the request again with the following configuration parameter: "maxSupportedTransactionVersion": 1
+[earlybuyers] 4wPM7EoagWoiqvBabQ4xNF6DJFLqnsXmXyncEcXhpump: Helius RPC -32015: Transaction version (1) is not supported by the requesting client. Please try the request again with the following configuration parameter: "maxSupportedTransactionVersion": 1
+[earlybuyers] MRLbBf4NB8pmTxigq3HYKY5ZoTPYMAmvihs5gM8pump: Helius RPC -32015: Transaction version (1) is not supported by the requesting client. Please try the request again with the following configuration parameter: "maxSupportedTransactionVersion": 1
+[earlybuyers] 27UZ4XYVf4FA324qAxquuG7oDsobo2bTYWNjTmYppump: Helius RPC -32015: Transaction version (1) is not supported by the requesting client. Please try the request again with the following configuration parameter: "maxSupportedTransactionVersion": 1
+[earlybuyers] 76fFhcA142kf9gdg11ahYTmEiZnPXokxJkcF1axupump: Helius RPC -32015: Transaction version (1) is not supported by the requesting client. Please try the request again with the following configuration parameter: "maxSupportedTransactionVersion": 1
+[earlybuyers] A6W4kpc1JTDVo3fVyuKbbPpZjaknuFTBXeBoQ3zapump: Helius RPC -32015: Transaction version (1) is not supported by the requesting client. Please try the request again with the following configuration parameter: "maxSupportedTransactionVersion": 1
+[earlybuyers] DrLQ9DE4nRaVQvF33Ahvu36tL6pnUNT9xfkwJEkGpump: Helius RPC -32015: Transaction version (1) is not supported by the requesting client. Please try the request again with the following configuration parameter: "maxSupportedTransactionVersion": 1
+[earlybuyers] DVRmvLxfStEQh8f2fRcGWdEunwTXpJb4wcpmhWrLpump: Helius RPC -32015: Transaction version (1) is not supported by the requesting client. Please try the request again with the following configuration parameter: "maxSupportedTransactionVersion": 1
+EXIT:0
+
+=== RUN 2 — 2026-09-28T12:41:57Z — npx tsx lab/signals/run-earlybuyers.ts --tokens 100 --no-sells --max-credits 25000 --skip-overlap (client tolerant -32015: versions 0/1/2, skip compté) ===
+[earlybuyers] FxChPUbJp9BhcphBFG8s225A821pbdfFyjNyRbyMpump: Helius HTTP 429 (getSignaturesForAddress)
+[earlybuyers] zVbJ3eRjhRbvKWAxP8xrXZAeAcSqk3vtTjCzzVAAphi: Helius HTTP 429 (getSignaturesForAddress)
+[earlybuyers] 59ghWWYRg8wrWLkTPkt2G1CE3WUpxZZ1G5PPdZdwpump: Helius HTTP 429 (getSignaturesForAddress)
+[earlybuyers] 8zeFZ2777XA2q3MGpRiscEH4QhsU5SpKsJ49JCctpump: Helius HTTP 429 (getSignaturesForAddress)
+[earlybuyers] DscVxHHnMywHMFGrcvQ9MMLsWcEn1EkANqWgTQdKpump: Helius HTTP 429 (getSignaturesForAddress)
+[earlybuyers] 4Pxo5WrBPc4HzWj6ZYaqb5omKMyTyzmNZmaKtqb9pump: Helius HTTP 429 (getSignaturesForAddress)
+[earlybuyers] 4QufEWk2Rvy14RmwX9dmgafFWWpAmGiqi9es5MX1pump: fetch failed
+
+=== RUN 3 — 2026-09-28T12:49:10Z — npx tsx lab/signals/run-earlybuyers.ts --tokens 100 --no-sells --max-credits 25000 --skip-overlap --max-pages 60 --require-history-t0 (8 fichiers inutilisables supprimés du cache, pré-filtre t0 actif) ===
+[earlybuyers] pré-filtre t0 : 1503 mints sans historique/t0 ignorés avant tout appel payant.
+[earlybuyers] 76fFhcA142kf9gdg11ahYTmEiZnPXokxJkcF1axupump: Helius HTTP 429 (getTransaction)
+[earlybuyers] 9pKKVy9Vo9BdbQ1UNfQCxUJMH92RTurDGWoPX5tnpump: Helius HTTP 429 (getSignaturesForAddress)
+[earlybuyers] QjxrVh6LyyjsTP1GDxajaC595sV4pwjFMe8LaqBpump: Helius HTTP 429 (getSignaturesForAddress)
+[earlybuyers] 8JGziVgRZKyrsjWZ2FbsLiF1YnZufmvuyNuLnrauiPzC: Helius HTTP 429 (getSignaturesForAddress)
+[earlybuyers] CHyPGNd9d7enSG9MiFfbLaYN7PcP8Z7V4Jp2RH73pump: Helius HTTP 429 (getSignaturesForAddress)
+[earlybuyers] pzCi3SmPiHa3uZ2QYewJRQsCvzeKkifAA1dTSWMpump: Helius HTTP 429 (getSignaturesForAddress)
+[earlybuyers] cJ4gL7BEd9z1naX9C4p4FAgxKWheZTnYLMgxeWgpump: Helius HTTP 429 (getSignaturesForAddress)
+[earlybuyers] CBVxspGhpr97HGYr1CbNYKDnT36Dxw3mMz1FfsvApump: Helius HTTP 429 (getSignaturesForAddress)
+[earlybuyers] BcmZNp6r6MuUCqoEGwB3nvziWPxy7kWfMjzUvVfNpump: Helius HTTP 429 (getSignaturesForAddress)
+[earlybuyers] oPAiAikWTaFj9RYoRFD35ccfwhnMcB3ThgBZRHSkjTZ: Helius HTTP 429 (getSignaturesForAddress)
+[earlybuyers] FkByyaAxppKB5224tQ397Gg4PWtihQMA3rCdS4Xipump: Helius HTTP 429 (getSignaturesForAddress)
+[earlybuyers] KEaQzxajeqAsiVYzGwNoLyvE887yLqffU1jLJDLpump: Helius HTTP 429 (getSignaturesForAddress)
+[earlybuyers] 41VLzqcRWzuH5JKsTy2kR6PQczkhYAh9an5v66eZpump: Helius HTTP 429 (getSignaturesForAddress)
+[earlybuyers] bX45zZDw77r6To2jRzMaxVJp94J2iMzYuWEKZVBpump: Helius HTTP 429 (getSignaturesForAddress)
+[earlybuyers] ESZRZeap4twxBoXHiNeyEtUBQyGuUgVxNRH7RA1Fpump: Helius HTTP 429 (getSignaturesForAddress)
+[earlybuyers] eATcxSiZrx3nmw46cUEjtB9HFEk17YafAJfzssBpump: Helius HTTP 429 (getSignaturesForAddress)
+[earlybuyers] 3Pjh1SpTHQ4TmEf9pA6X7MZmcBDynKoLFA9pA2uFpump: Helius HTTP 429 (getSignaturesForAddress)
+[earlybuyers] 37iXxQ7eEwFAgKS9cpqHAuLbkRSxuE6X3jXWNc7Kpump: Helius HTTP 429 (getSignaturesForAddress)
+[earlybuyers] AD8x2FUKinVYcWfRGNj75LuwkXLZG8DapcGjSympump: Helius HTTP 429 (getSignaturesForAddress)
+[earlybuyers] ELP7DpZvv41KzWewe513ZPBwTESsuxgzCJzh9zXn8WGd: Helius HTTP 429 (getSignaturesForAddress)
+[earlybuyers] Cq8qMTPkwfNMUFonqEWe6BLmL7E4TVtZKyHp9VNopump: Helius HTTP 429 (getSignaturesForAddress)
+
+=== RUN 3b — 2026-09-28T12:58:05Z — npx tsx lab/signals/run-earlybuyers.ts --tokens 100 --no-sells --max-credits 25000 --skip-overlap --max-pages 60 --require-history-t0 (client final: retry versions 0/1/2 + backoff 429 1s/2s/4s) ===
+[earlybuyers] pré-filtre t0 : 1503 mints sans historique/t0 ignorés avant tout appel payant.
+[earlybuyers] cJ4gL7BEd9z1naX9C4p4FAgxKWheZTnYLMgxeWgpump: terminated
+[earlybuyers] KEaQzxajeqAsiVYzGwNoLyvE887yLqffU1jLJDLpump: terminated
+[earlybuyers] ULsUPvATJPoWF7cTrntNbuFCgRzFi4fwiK8GqLRpump: fetch failed
+[earlybuyers] TTwA29nT5v7Vti9xdvYrhMnHxo7mXNbx8aLcFLjpump: terminated
+
+=== RUN 4 — 2026-09-28T13:32:23Z — npx tsx lab/signals/run-earlybuyers.ts --tokens 200 --no-sells --max-credits 25000 --skip-overlap --max-pages 60 --require-history-t0 (client final + AbortSignal.timeout 30s ; RUN 3b tué après blocage sur connexion pendue) ===
+[earlybuyers] pré-filtre t0 : 1503 mints sans historique/t0 ignorés avant tout appel payant.
+[earlybuyers] A2Kz4oAJvg9yuQR9znDicg8QvFDgrxaHp68ih3HCpump: terminated
+[earlybuyers] C2VoDG2butN5wCyCduNiFc2RQzRVJtcg4d3gqmthpump: fetch failed
+[earlybuyers] 4Gkq4Eg4J2Ktv586YkyMuKBxj2PHoSekFZt6sgX2pump: terminated
+[earlybuyers] 2Qs5EdubTimcGrVBzPiKS3AmwR283wib3nwN4NsGpump: terminated
+[earlybuyers] 4sWNB8zGWHkh6UnmwiEtzNxL4XrN7uK9tosbESbJFfVs: terminated
+[earlybuyers] FJGWEmtCEtvyviC8w86twWNiTcXwn7YiAoHmJgxWpump: terminated
+[earlybuyers] 3EpcGjzix1rVuThHgqaphCmRpeuCGjQwhboivhhppump: terminated
+[earlybuyers] 7xh7jnprUU66Knu7mDi8DzrsLoytxGxQqd3hnh9Lpump: terminated
+[earlybuyers] 5wHgFMQ45nPU7qK51Y9ATFjMVB3yegB3tLm5UD3rsEcS: fetch failed
+[earlybuyers] FMAEcAuqCDMLxtwbLzbUffyA1kY18mZuyiUBiinhpump: fetch failed
+[earlybuyers] XspzcW1PRtgf6Wj92HCiZdjzKCyFekVD8P5Ueh3dRMX: terminated
+early-buyers : 180 tokens (125 récupérés), 0 wallets récurrents, 125 métriques calculées, 0 ventes analysées, 24382 crédits Helius. ARRÊT PRÉCOCE : plafond crédits : token suivant non engagé (borne haute).
+EXIT:0

@@ -1,0 +1,1939 @@
+{
+ "manifest": {
+  "source": "data.binance.vision futures/um daily",
+  "symbol": "SOLUSDT",
+  "start": "2026-08-29",
+  "end": "2026-09-27",
+  "fetchedAt": "2026-09-28T14:37:16.762Z",
+  "days": [
+   "2026-08-29",
+   "2026-08-30",
+   "2026-08-31",
+   "2026-09-01",
+   "2026-09-02",
+   "2026-09-03",
+   "2026-09-04",
+   "2026-09-05",
+   "2026-09-06",
+   "2026-09-07",
+   "2026-09-08",
+   "2026-09-09",
+   "2026-09-10",
+   "2026-09-11",
+   "2026-09-12",
+   "2026-09-13",
+   "2026-09-14",
+   "2026-09-15",
+   "2026-09-16",
+   "2026-09-17",
+   "2026-09-18",
+   "2026-09-19",
+   "2026-09-20",
+   "2026-09-21",
+   "2026-09-22",
+   "2026-09-23",
+   "2026-09-24",
+   "2026-09-25",
+   "2026-09-26",
+   "2026-09-27"
+  ],
+  "missingDays": [],
+  "venue": "Binance SOLUSDT perp (data.vision) + Hyperliquid funding",
+  "generatedAt": "2026-09-28T14:37:33.708Z",
+  "config5m": {
+   "pctWindow": 2016,
+   "cascadeRetP": 1,
+   "imbP": 10,
+   "volP": 90,
+   "debounceMin": 30,
+   "reversionTol": 0.003,
+   "reversionCapMin": 240,
+   "absorptionWindowMin": 15,
+   "fundAbsFloor": 0
+  },
+  "config1h": {
+   "pctWindow": 168,
+   "cascadeRetP": 1,
+   "imbP": 10,
+   "volP": 90,
+   "debounceMin": 30,
+   "reversionTol": 0.003,
+   "reversionCapMin": 240,
+   "absorptionWindowMin": 15,
+   "fundAbsFloor": 0.0001
+  },
+  "nBars5m": 8640,
+  "nHours": 720,
+  "daysSpan": 30,
+  "note": "DESCRIPTIF UNIQUEMENT — seuils = guesses initiaux, aucun test prédictif"
+ },
+ "stats": [
+  {
+   "type": "E1",
+   "n": 18,
+   "perDay": 0.6000138892103984,
+   "amplitudePct": {
+    "p10": 0.6373662934593087,
+    "p50": 1.22847704841458,
+    "p90": 2.2555180131108417
+   },
+   "durationMin": {
+    "p50": 22.5,
+    "p90": 74.5,
+    "revertedPct": 66.66666666666666
+   }
+  },
+  {
+   "type": "E2",
+   "n": 29,
+   "perDay": 0.9666890437278641,
+   "amplitudePct": {
+    "p10": 0.4884165147797501,
+    "p50": 0.8716572499633196,
+    "p90": 2.2138505140161118
+   },
+   "durationMin": {
+    "p50": 17.5,
+    "p90": 78.99999999999999,
+    "revertedPct": 82.75862068965517
+   }
+  },
+  {
+   "type": "E3",
+   "n": 0,
+   "perDay": 0,
+   "amplitudePct": null,
+   "durationMin": null
+  },
+  {
+   "type": "E4",
+   "n": 0,
+   "perDay": 0,
+   "amplitudePct": null,
+   "durationMin": null
+  },
+  {
+   "type": "E5",
+   "n": 11,
+   "perDay": 0.3666751545174657,
+   "amplitudePct": null,
+   "durationMin": null
+  },
+  {
+   "type": "E6",
+   "n": 3,
+   "perDay": 0.10000231486839974,
+   "amplitudePct": null,
+   "durationMin": null
+  },
+  {
+   "type": "E7",
+   "n": 12,
+   "perDay": 0.40000925947359894,
+   "amplitudePct": null,
+   "durationMin": null
+  },
+  {
+   "type": "E8",
+   "n": 14,
+   "perDay": 0.4666774693858654,
+   "amplitudePct": null,
+   "durationMin": null
+  },
+  {
+   "type": "E9",
+   "n": 8,
+   "perDay": 0.26667283964906596,
+   "amplitudePct": null,
+   "durationMin": null
+  },
+  {
+   "type": "E10",
+   "n": 22,
+   "perDay": 0.7333503090349314,
+   "amplitudePct": null,
+   "durationMin": null
+  },
+  {
+   "type": "E11",
+   "n": 17,
+   "perDay": 0.5666797842542651,
+   "amplitudePct": null,
+   "durationMin": null
+  },
+  {
+   "type": "E12",
+   "n": 13,
+   "perDay": 0.4333433644297322,
+   "amplitudePct": null,
+   "durationMin": null
+  }
+ ],
+ "absorptionRate": {
+  "E1_absorbed": 0.1111111111111111,
+  "E2_absorbed": 0.3793103448275862,
+  "nE1": 18,
+  "nE2": 29,
+  "nE12": 13
+ },
+ "events": [
+  {
+   "type": "E2",
+   "t": 1787961900000,
+   "price": 104.45,
+   "amplitude": 0.0031631945857603107,
+   "durationMin": 0,
+   "meta": {
+    "retRank": 100,
+    "imbRank": 100,
+    "volRank": 100,
+    "ret5m": 0.0027803095423157495,
+    "buyRatio": 0.6307753187672337
+   }
+  },
+  {
+   "type": "E2",
+   "t": 1787998500000,
+   "price": 103.49,
+   "amplitude": 0.0031925727305593603,
+   "durationMin": 0,
+   "meta": {
+    "retRank": 100,
+    "imbRank": 91.12903225806451,
+    "volRank": 94.35483870967742,
+    "ret5m": 0.00280613663261925,
+    "buyRatio": 0.6532408208756738
+   }
+  },
+  {
+   "type": "E12",
+   "t": 1787998800000,
+   "price": 103.39,
+   "amplitude": 0,
+   "durationMin": 5,
+   "meta": {
+    "afterEvent": "E2",
+    "afterT": 1787998500000,
+    "buyRatio": 0.21348623661675822,
+    "thr": 0.31264805240875015
+   }
+  },
+  {
+   "type": "E7",
+   "t": 1788012000000,
+   "price": null,
+   "amplitude": -0.00080117,
+   "durationMin": null,
+   "meta": {
+    "premRank": 100
+   }
+  },
+  {
+   "type": "E2",
+   "t": 1788013800000,
+   "price": 104.55,
+   "amplitude": 0.002969493058053004,
+   "durationMin": 0,
+   "meta": {
+    "retRank": 99.42857142857143,
+    "imbRank": 92.57142857142857,
+    "volRank": 96.57142857142857,
+    "ret5m": 0.002969493058053004,
+    "buyRatio": 0.6961411353044529
+   }
+  },
+  {
+   "type": "E5",
+   "t": 1788069600000,
+   "price": null,
+   "amplitude": 0.003729465015995137,
+   "durationMin": null,
+   "meta": {
+    "oiRank": 100
+   }
+  },
+  {
+   "type": "E10",
+   "t": 1788069600000,
+   "price": null,
+   "amplitude": 0.0034223818935342175,
+   "durationMin": null,
+   "meta": {
+    "retRank": 93.54838709677419,
+    "oiRank": 100
+   }
+  },
+  {
+   "type": "E9",
+   "t": 1788073200000,
+   "price": null,
+   "amplitude": -0.005615051631362601,
+   "durationMin": null,
+   "meta": {
+    "retRank": 3.125,
+    "oiRank": 93.54838709677419
+   }
+  },
+  {
+   "type": "E8",
+   "t": 1788091200000,
+   "price": null,
+   "amplitude": 0.00937995412981541,
+   "durationMin": null,
+   "meta": {
+    "retRank": 97.2972972972973,
+    "oiRank": 2.7777777777777777
+   }
+  },
+  {
+   "type": "E2",
+   "t": 1788091500000,
+   "price": 105.71,
+   "amplitude": 0.0053070632521070365,
+   "durationMin": 10,
+   "meta": {
+    "retRank": 100,
+    "imbRank": 91.47465437788019,
+    "volRank": 99.76958525345621,
+    "ret5m": 0.00445603960847962,
+    "buyRatio": 0.6764153760077475
+   }
+  },
+  {
+   "type": "E1",
+   "t": 1788092100000,
+   "price": 105.33,
+   "amplitude": -0.005026804344254928,
+   "durationMin": 25,
+   "meta": {
+    "retRank": 0.45871559633027525,
+    "imbRank": 7.339449541284404,
+    "volRank": 99.77064220183486,
+    "ret5m": -0.0035066140277414397,
+    "buyRatio": 0.28597273343897767
+   }
+  },
+  {
+   "type": "E12",
+   "t": 1788092100000,
+   "price": 105.33,
+   "amplitude": 0,
+   "durationMin": 10,
+   "meta": {
+    "afterEvent": "E2",
+    "afterT": 1788091500000,
+    "buyRatio": 0.28597273343897767,
+    "thr": 0.3080042629191546
+   }
+  },
+  {
+   "type": "E5",
+   "t": 1788094800000,
+   "price": null,
+   "amplitude": 0.012914968619785805,
+   "durationMin": null,
+   "meta": {
+    "oiRank": 100
+   }
+  },
+  {
+   "type": "E10",
+   "t": 1788094800000,
+   "price": null,
+   "amplitude": 0.009573043544410442,
+   "durationMin": null,
+   "meta": {
+    "retRank": 97.36842105263158,
+    "oiRank": 100
+   }
+  },
+  {
+   "type": "E1",
+   "t": 1788099300000,
+   "price": 106.7,
+   "amplitude": -0.004117542781698456,
+   "durationMin": 5,
+   "meta": {
+    "retRank": 0.43478260869565216,
+    "imbRank": 7.391304347826087,
+    "volRank": 90.21739130434783,
+    "ret5m": -0.0035550603444440896,
+    "buyRatio": 0.28731330723060017
+   }
+  },
+  {
+   "type": "E11",
+   "t": 1788109200000,
+   "price": null,
+   "amplitude": -0.00469132029480131,
+   "durationMin": null,
+   "meta": {
+    "retRank": 4.761904761904762,
+    "oiRank": 7.317073170731707
+   }
+  },
+  {
+   "type": "E11",
+   "t": 1788120000000,
+   "price": null,
+   "amplitude": -0.009978700049896195,
+   "durationMin": null,
+   "meta": {
+    "retRank": 2.2222222222222223,
+    "oiRank": 2.272727272727273
+   }
+  },
+  {
+   "type": "E11",
+   "t": 1788130800000,
+   "price": null,
+   "amplitude": -0.019958799120208048,
+   "durationMin": null,
+   "meta": {
+    "retRank": 2.083333333333333,
+    "oiRank": 6.382978723404255
+   }
+  },
+  {
+   "type": "E2",
+   "t": 1788135300000,
+   "price": 102.07,
+   "amplitude": 0.008716572499633196,
+   "durationMin": 45,
+   "meta": {
+    "retRank": 99.13793103448276,
+    "imbRank": 95.34482758620689,
+    "volRank": 95.86206896551724,
+    "ret5m": 0.004024940396650442,
+    "buyRatio": 0.7019546159373208
+   }
+  },
+  {
+   "type": "E7",
+   "t": 1788152400000,
+   "price": null,
+   "amplitude": -0.00125406,
+   "durationMin": null,
+   "meta": {
+    "premRank": 100
+   }
+  },
+  {
+   "type": "E8",
+   "t": 1788152400000,
+   "price": null,
+   "amplitude": 0.011667370942538616,
+   "durationMin": null,
+   "meta": {
+    "retRank": 98.14814814814815,
+    "oiRank": 3.7735849056603774
+   }
+  },
+  {
+   "type": "E2",
+   "t": 1788153300000,
+   "price": 102.26,
+   "amplitude": 0.017652967313927084,
+   "durationMin": null,
+   "meta": {
+    "retRank": 99.84375,
+    "imbRank": 97.96875,
+    "volRank": 93.4375,
+    "ret5m": 0.0061798225021781165,
+    "buyRatio": 0.7378499981918779
+   }
+  },
+  {
+   "type": "E10",
+   "t": 1788170400000,
+   "price": null,
+   "amplitude": 0.005807217249203244,
+   "durationMin": null,
+   "meta": {
+    "retRank": 93.22033898305084,
+    "oiRank": 93.10344827586206
+   }
+  },
+  {
+   "type": "E2",
+   "t": 1788173400000,
+   "price": 103.84,
+   "amplitude": 0.007523183631225926,
+   "durationMin": 10,
+   "meta": {
+    "retRank": 99.57567185289957,
+    "imbRank": 94.34229137199435,
+    "volRank": 99.43422913719944,
+    "ret5m": 0.005310686937237812,
+    "buyRatio": 0.6852003005984506
+   }
+  },
+  {
+   "type": "E8",
+   "t": 1788195600000,
+   "price": null,
+   "amplitude": 0.007850779358763684,
+   "durationMin": null,
+   "meta": {
+    "retRank": 92.42424242424242,
+    "oiRank": 7.6923076923076925
+   }
+  },
+  {
+   "type": "E2",
+   "t": 1788201300000,
+   "price": 104.45,
+   "amplitude": 0.010533469029606038,
+   "durationMin": 40,
+   "meta": {
+    "retRank": 99.625,
+    "imbRank": 96.375,
+    "volRank": 97.875,
+    "ret5m": 0.005472101208027165,
+    "buyRatio": 0.706395323573502
+   }
+  },
+  {
+   "type": "E8",
+   "t": 1788238800000,
+   "price": null,
+   "amplitude": 0.0065447779332527,
+   "durationMin": null,
+   "meta": {
+    "retRank": 91.02564102564102,
+    "oiRank": 7.792207792207792
+   }
+  },
+  {
+   "type": "E5",
+   "t": 1788246000000,
+   "price": null,
+   "amplitude": 0.015360088614446044,
+   "durationMin": null,
+   "meta": {
+    "oiRank": 100
+   }
+  },
+  {
+   "type": "E9",
+   "t": 1788249600000,
+   "price": null,
+   "amplitude": -0.010335505421079598,
+   "durationMin": null,
+   "meta": {
+    "retRank": 2.4691358024691357,
+    "oiRank": 97.5
+   }
+  },
+  {
+   "type": "E2",
+   "t": 1788318600000,
+   "price": 100.49,
+   "amplitude": 0.00697769976224256,
+   "durationMin": 30,
+   "meta": {
+    "retRank": 99.49622166246851,
+    "imbRank": 91.60369437447523,
+    "volRank": 93.03106633081444,
+    "ret5m": 0.0051880790817778995,
+    "buyRatio": 0.6622339273300011
+   }
+  },
+  {
+   "type": "E7",
+   "t": 1788321600000,
+   "price": null,
+   "amplitude": -0.00080355,
+   "durationMin": null,
+   "meta": {
+    "premRank": 99.00990099009901
+   }
+  },
+  {
+   "type": "E2",
+   "t": 1788379200000,
+   "price": 99.81,
+   "amplitude": 0.006019279811249852,
+   "durationMin": 10,
+   "meta": {
+    "retRank": 99.06676238334529,
+    "imbRank": 96.41062455132807,
+    "volRank": 90.8829863603733,
+    "ret5m": 0.004317492524320581,
+    "buyRatio": 0.7041721274002708
+   }
+  },
+  {
+   "type": "E12",
+   "t": 1788379800000,
+   "price": 99.6,
+   "amplitude": 0,
+   "durationMin": 10,
+   "meta": {
+    "afterEvent": "E2",
+    "afterT": 1788379200000,
+    "buyRatio": 0.270347386958363,
+    "thr": 0.333374912879848
+   }
+  },
+  {
+   "type": "E7",
+   "t": 1788397200000,
+   "price": null,
+   "amplitude": -0.00080871,
+   "durationMin": null,
+   "meta": {
+    "premRank": 99.18032786885246
+   }
+  },
+  {
+   "type": "E2",
+   "t": 1788402600000,
+   "price": 101.08,
+   "amplitude": 0.007540466326454185,
+   "durationMin": 5,
+   "meta": {
+    "retRank": 99.8640380693406,
+    "imbRank": 96.73691366417403,
+    "volRank": 98.77634262406526,
+    "ret5m": 0.006650478628648542,
+    "buyRatio": 0.7084073364205343
+   }
+  },
+  {
+   "type": "E10",
+   "t": 1788444000000,
+   "price": null,
+   "amplitude": 0.03249716099800057,
+   "durationMin": null,
+   "meta": {
+    "retRank": 100,
+    "oiRank": 98.50746268656717
+   }
+  },
+  {
+   "type": "E2",
+   "t": 1788445200000,
+   "price": 102.41,
+   "amplitude": 0.0367394161596827,
+   "durationMin": null,
+   "meta": {
+    "retRank": 99.69001859888407,
+    "imbRank": 96.90018598884068,
+    "volRank": 99.13205207687538,
+    "ret5m": 0.005876032968241808,
+    "buyRatio": 0.709486309452639
+   }
+  },
+  {
+   "type": "E1",
+   "t": 1788474300000,
+   "price": 104.24,
+   "amplitude": -0.015861904300466544,
+   "durationMin": null,
+   "meta": {
+    "retRank": 0.5263157894736842,
+    "imbRank": 5.087719298245614,
+    "volRank": 96.72514619883042,
+    "ret5m": -0.005834824531339226,
+    "buyRatio": 0.2899520744543599
+   }
+  },
+  {
+   "type": "E7",
+   "t": 1788490800000,
+   "price": null,
+   "amplitude": -0.00082528,
+   "durationMin": null,
+   "meta": {
+    "premRank": 99.32432432432432
+   }
+  },
+  {
+   "type": "E11",
+   "t": 1788523200000,
+   "price": null,
+   "amplitude": -0.02422650956355555,
+   "durationMin": null,
+   "meta": {
+    "retRank": 0.6369426751592357,
+    "oiRank": 1.282051282051282
+   }
+  },
+  {
+   "type": "E9",
+   "t": 1788530400000,
+   "price": null,
+   "amplitude": -0.008599865189791613,
+   "durationMin": null,
+   "meta": {
+    "retRank": 6.289308176100629,
+    "oiRank": 96.83544303797468
+   }
+  },
+  {
+   "type": "E8",
+   "t": 1788534000000,
+   "price": null,
+   "amplitude": 0.0065307970098985755,
+   "durationMin": null,
+   "meta": {
+    "retRank": 90.625,
+    "oiRank": 8.176100628930817
+   }
+  },
+  {
+   "type": "E10",
+   "t": 1788609600000,
+   "price": null,
+   "amplitude": 0.008662276170042258,
+   "durationMin": null,
+   "meta": {
+    "retRank": 94.64285714285714,
+    "oiRank": 94.04761904761905
+   }
+  },
+  {
+   "type": "E10",
+   "t": 1788656400000,
+   "price": null,
+   "amplitude": 0.007238365821728269,
+   "durationMin": null,
+   "meta": {
+    "retRank": 91.07142857142857,
+    "oiRank": 93.45238095238095
+   }
+  },
+  {
+   "type": "E5",
+   "t": 1788663600000,
+   "price": null,
+   "amplitude": 0.015044760806407487,
+   "durationMin": null,
+   "meta": {
+    "oiRank": 99.40476190476191
+   }
+  },
+  {
+   "type": "E10",
+   "t": 1788663600000,
+   "price": null,
+   "amplitude": 0.015220994010355388,
+   "durationMin": null,
+   "meta": {
+    "retRank": 98.80952380952381,
+    "oiRank": 99.40476190476191
+   }
+  },
+  {
+   "type": "E2",
+   "t": 1788672900000,
+   "price": 106.65,
+   "amplitude": 0.007047245515402922,
+   "durationMin": 25,
+   "meta": {
+    "retRank": 99.50396825396825,
+    "imbRank": 96.42857142857143,
+    "volRank": 94.79166666666666,
+    "ret5m": 0.005641763906668094,
+    "buyRatio": 0.7047264685971383
+   }
+  },
+  {
+   "type": "E5",
+   "t": 1788685200000,
+   "price": null,
+   "amplitude": 0.02250138172814986,
+   "durationMin": null,
+   "meta": {
+    "oiRank": 100
+   }
+  },
+  {
+   "type": "E10",
+   "t": 1788685200000,
+   "price": null,
+   "amplitude": 0.012382595948186555,
+   "durationMin": null,
+   "meta": {
+    "retRank": 98.21428571428571,
+    "oiRank": 100
+   }
+  },
+  {
+   "type": "E2",
+   "t": 1788686700000,
+   "price": 106.94,
+   "amplitude": 0.009553317950625919,
+   "durationMin": 10,
+   "meta": {
+    "retRank": 99.60317460317461,
+    "imbRank": 90.92261904761905,
+    "volRank": 98.26388888888889,
+    "ret5m": 0.006379008497788339,
+    "buyRatio": 0.6577861090812037
+   }
+  },
+  {
+   "type": "E12",
+   "t": 1788687600000,
+   "price": 106.3,
+   "amplitude": 0,
+   "durationMin": 15,
+   "meta": {
+    "afterEvent": "E2",
+    "afterT": 1788686700000,
+    "buyRatio": 0.33416813617995955,
+    "thr": 0.3389672698874595
+   }
+  },
+  {
+   "type": "E11",
+   "t": 1788703200000,
+   "price": null,
+   "amplitude": -0.012788138543344808,
+   "durationMin": null,
+   "meta": {
+    "retRank": 1.7857142857142856,
+    "oiRank": 7.738095238095238
+   }
+  },
+  {
+   "type": "E1",
+   "t": 1788749400000,
+   "price": 106.23,
+   "amplitude": -0.020338401474565358,
+   "durationMin": null,
+   "meta": {
+    "retRank": 0.496031746031746,
+    "imbRank": 1.3392857142857142,
+    "volRank": 93.79960317460318,
+    "ret5m": -0.005257734391531844,
+    "buyRatio": 0.2457126898550023
+   }
+  },
+  {
+   "type": "E6",
+   "t": 1788764400000,
+   "price": null,
+   "amplitude": -0.015857224327266883,
+   "durationMin": null,
+   "meta": {
+    "oiRank": 0.5952380952380952
+   }
+  },
+  {
+   "type": "E10",
+   "t": 1788782400000,
+   "price": null,
+   "amplitude": 0.007598820758625673,
+   "durationMin": null,
+   "meta": {
+    "retRank": 92.26190476190477,
+    "oiRank": 90.47619047619048
+   }
+  },
+  {
+   "type": "E11",
+   "t": 1788793200000,
+   "price": null,
+   "amplitude": -0.013089696039403449,
+   "durationMin": null,
+   "meta": {
+    "retRank": 1.1904761904761905,
+    "oiRank": 8.928571428571429
+   }
+  },
+  {
+   "type": "E2",
+   "t": 1788885300000,
+   "price": 104.66,
+   "amplitude": 0.008048333182828415,
+   "durationMin": 5,
+   "meta": {
+    "retRank": 99.70238095238095,
+    "imbRank": 93.05555555555556,
+    "volRank": 95.3373015873016,
+    "ret5m": 0.0068069866400398485,
+    "buyRatio": 0.6693000043681204
+   }
+  },
+  {
+   "type": "E1",
+   "t": 1788893100000,
+   "price": 103.32,
+   "amplitude": -0.012763661962566904,
+   "durationMin": null,
+   "meta": {
+    "retRank": 0.1488095238095238,
+    "imbRank": 3.422619047619048,
+    "volRank": 96.03174603174604,
+    "ret5m": -0.007328865976610121,
+    "buyRatio": 0.28370949982650606
+   }
+  },
+  {
+   "type": "E2",
+   "t": 1788963900000,
+   "price": 104.05,
+   "amplitude": 0.006938449344920854,
+   "durationMin": 15,
+   "meta": {
+    "retRank": 99.55357142857143,
+    "imbRank": 98.4126984126984,
+    "volRank": 92.1626984126984,
+    "ret5m": 0.006169883642759725,
+    "buyRatio": 0.7377973210541316
+   }
+  },
+  {
+   "type": "E12",
+   "t": 1788964800000,
+   "price": 103.46,
+   "amplitude": 0,
+   "durationMin": 15,
+   "meta": {
+    "afterEvent": "E2",
+    "afterT": 1788963900000,
+    "buyRatio": 0.26350138671602197,
+    "thr": 0.33545250679115624
+   }
+  },
+  {
+   "type": "E1",
+   "t": 1788983400000,
+   "price": 102.28,
+   "amplitude": -0.010655558074984344,
+   "durationMin": 45,
+   "meta": {
+    "retRank": 0.496031746031746,
+    "imbRank": 6.001984126984127,
+    "volRank": 98.80952380952381,
+    "ret5m": -0.005460231974702924,
+    "buyRatio": 0.30756952241549185
+   }
+  },
+  {
+   "type": "E7",
+   "t": 1788991200000,
+   "price": null,
+   "amplitude": -0.00084608,
+   "durationMin": null,
+   "meta": {
+    "premRank": 100
+   }
+  },
+  {
+   "type": "E1",
+   "t": 1788991500000,
+   "price": 100.95,
+   "amplitude": -0.017610269104962686,
+   "durationMin": 105,
+   "meta": {
+    "retRank": 0.0992063492063492,
+    "imbRank": 9.474206349206348,
+    "volRank": 99.90079365079364,
+    "ret5m": -0.010053307617287819,
+    "buyRatio": 0.32968537745574367
+   }
+  },
+  {
+   "type": "E2",
+   "t": 1788994800000,
+   "price": 101.29,
+   "amplitude": 0.009484362737009928,
+   "durationMin": 100,
+   "meta": {
+    "retRank": 99.35515873015873,
+    "imbRank": 90.72420634920636,
+    "volRank": 91.91468253968253,
+    "ret5m": 0.005444749381201467,
+    "buyRatio": 0.6534584916423819
+   }
+  },
+  {
+   "type": "E11",
+   "t": 1789023600000,
+   "price": null,
+   "amplitude": -0.006399234242030667,
+   "durationMin": null,
+   "meta": {
+    "retRank": 8.333333333333332,
+    "oiRank": 9.523809523809524
+   }
+  },
+  {
+   "type": "E10",
+   "t": 1789045200000,
+   "price": null,
+   "amplitude": 0.008058873070323333,
+   "durationMin": null,
+   "meta": {
+    "retRank": 95.83333333333334,
+    "oiRank": 97.61904761904762
+   }
+  },
+  {
+   "type": "E8",
+   "t": 1789128000000,
+   "price": null,
+   "amplitude": 0.021587508295334474,
+   "durationMin": null,
+   "meta": {
+    "retRank": 100,
+    "oiRank": 1.1904761904761905
+   }
+  },
+  {
+   "type": "E6",
+   "t": 1789131600000,
+   "price": null,
+   "amplitude": -0.021560764016021805,
+   "durationMin": null,
+   "meta": {
+    "oiRank": 0.5952380952380952
+   }
+  },
+  {
+   "type": "E8",
+   "t": 1789131600000,
+   "price": null,
+   "amplitude": 0.031102637876230004,
+   "durationMin": null,
+   "meta": {
+    "retRank": 100,
+    "oiRank": 0.5952380952380952
+   }
+  },
+  {
+   "type": "E11",
+   "t": 1789135200000,
+   "price": null,
+   "amplitude": -0.015188218523607093,
+   "durationMin": null,
+   "meta": {
+    "retRank": 1.1904761904761905,
+    "oiRank": 4.761904761904762
+   }
+  },
+  {
+   "type": "E11",
+   "t": 1789138800000,
+   "price": null,
+   "amplitude": -0.016505086824019362,
+   "durationMin": null,
+   "meta": {
+    "retRank": 1.1904761904761905,
+    "oiRank": 2.380952380952381
+   }
+  },
+  {
+   "type": "E1",
+   "t": 1789141800000,
+   "price": 101.6,
+   "amplitude": -0.027727663663042197,
+   "durationMin": null,
+   "meta": {
+    "retRank": 0.0496031746031746,
+    "imbRank": 7.936507936507936,
+    "volRank": 99.45436507936508,
+    "ret5m": -0.014849823486550508,
+    "buyRatio": 0.32019025246126276
+   }
+  },
+  {
+   "type": "E10",
+   "t": 1789142400000,
+   "price": null,
+   "amplitude": 0.0073583849311871785,
+   "durationMin": null,
+   "meta": {
+    "retRank": 92.85714285714286,
+    "oiRank": 98.21428571428571
+   }
+  },
+  {
+   "type": "E7",
+   "t": 1789153200000,
+   "price": null,
+   "amplitude": -0.00080395,
+   "durationMin": null,
+   "meta": {
+    "premRank": 99.40476190476191
+   }
+  },
+  {
+   "type": "E8",
+   "t": 1789308000000,
+   "price": null,
+   "amplitude": 0.005880317935823437,
+   "durationMin": null,
+   "meta": {
+    "retRank": 92.26190476190477,
+    "oiRank": 8.928571428571429
+   }
+  },
+  {
+   "type": "E2",
+   "t": 1789351500000,
+   "price": 100.37,
+   "amplitude": 0.013713819217415562,
+   "durationMin": null,
+   "meta": {
+    "retRank": 99.0079365079365,
+    "imbRank": 97.47023809523809,
+    "volRank": 91.36904761904762,
+    "ret5m": 0.004293351909650112,
+    "buyRatio": 0.7246529557596285
+   }
+  },
+  {
+   "type": "E12",
+   "t": 1789352100000,
+   "price": 100.45,
+   "amplitude": 0,
+   "durationMin": 10,
+   "meta": {
+    "afterEvent": "E2",
+    "afterT": 1789351500000,
+    "buyRatio": 0.18977643765194377,
+    "thr": 0.32987674553703905
+   }
+  },
+  {
+   "type": "E2",
+   "t": 1789402500000,
+   "price": 102.52,
+   "amplitude": 0.022333193485601952,
+   "durationMin": null,
+   "meta": {
+    "retRank": 99.8015873015873,
+    "imbRank": 92.85714285714286,
+    "volRank": 98.4623015873016,
+    "ret5m": 0.0066549472467191655,
+    "buyRatio": 0.6706431253695372
+   }
+  },
+  {
+   "type": "E12",
+   "t": 1789403100000,
+   "price": 102.39,
+   "amplitude": 0,
+   "durationMin": 10,
+   "meta": {
+    "afterEvent": "E2",
+    "afterT": 1789402500000,
+    "buyRatio": 0.3061699078065078,
+    "thr": 0.32966865167318815
+   }
+  },
+  {
+   "type": "E8",
+   "t": 1789416000000,
+   "price": null,
+   "amplitude": 0.007046701295790672,
+   "durationMin": null,
+   "meta": {
+    "retRank": 94.04761904761905,
+    "oiRank": 6.547619047619048
+   }
+  },
+  {
+   "type": "E5",
+   "t": 1789480800000,
+   "price": null,
+   "amplitude": 0.01729111373176151,
+   "durationMin": null,
+   "meta": {
+    "oiRank": 100
+   }
+  },
+  {
+   "type": "E9",
+   "t": 1789480800000,
+   "price": null,
+   "amplitude": -0.017157898468519915,
+   "durationMin": null,
+   "meta": {
+    "retRank": 1.1904761904761905,
+    "oiRank": 100
+   }
+  },
+  {
+   "type": "E10",
+   "t": 1789484400000,
+   "price": null,
+   "amplitude": 0.0051481464330944155,
+   "durationMin": null,
+   "meta": {
+    "retRank": 90.47619047619048,
+    "oiRank": 98.21428571428571
+   }
+  },
+  {
+   "type": "E2",
+   "t": 1789494300000,
+   "price": 100.45,
+   "amplitude": 0.009580911611758048,
+   "durationMin": 20,
+   "meta": {
+    "retRank": 99.85119047619048,
+    "imbRank": 98.36309523809523,
+    "volRank": 95.03968253968253,
+    "ret5m": 0.007293832605586415,
+    "buyRatio": 0.7395618199900912
+   }
+  },
+  {
+   "type": "E12",
+   "t": 1789494900000,
+   "price": 100.17,
+   "amplitude": 0,
+   "durationMin": 10,
+   "meta": {
+    "afterEvent": "E2",
+    "afterT": 1789494300000,
+    "buyRatio": 0.31612691521861885,
+    "thr": 0.3272183569753899
+   }
+  },
+  {
+   "type": "E5",
+   "t": 1789495200000,
+   "price": null,
+   "amplitude": 0.010284098204246916,
+   "durationMin": null,
+   "meta": {
+    "oiRank": 99.40476190476191
+   }
+  },
+  {
+   "type": "E9",
+   "t": 1789495200000,
+   "price": null,
+   "amplitude": -0.020677523233384242,
+   "durationMin": null,
+   "meta": {
+    "retRank": 1.1904761904761905,
+    "oiRank": 99.40476190476191
+   }
+  },
+  {
+   "type": "E9",
+   "t": 1789506000000,
+   "price": null,
+   "amplitude": -0.009181474722262424,
+   "durationMin": null,
+   "meta": {
+    "retRank": 5.357142857142857,
+    "oiRank": 91.07142857142857
+   }
+  },
+  {
+   "type": "E8",
+   "t": 1789524000000,
+   "price": null,
+   "amplitude": 0.007748372873871418,
+   "durationMin": null,
+   "meta": {
+    "retRank": 95.23809523809523,
+    "oiRank": 5.357142857142857
+   }
+  },
+  {
+   "type": "E5",
+   "t": 1789581600000,
+   "price": null,
+   "amplitude": 0.01487938085687901,
+   "durationMin": null,
+   "meta": {
+    "oiRank": 99.40476190476191
+   }
+  },
+  {
+   "type": "E10",
+   "t": 1789581600000,
+   "price": null,
+   "amplitude": 0.008214441918732494,
+   "durationMin": null,
+   "meta": {
+    "retRank": 97.02380952380952,
+    "oiRank": 99.40476190476191
+   }
+  },
+  {
+   "type": "E9",
+   "t": 1789596000000,
+   "price": null,
+   "amplitude": -0.009296690546543467,
+   "durationMin": null,
+   "meta": {
+    "retRank": 4.166666666666666,
+    "oiRank": 92.85714285714286
+   }
+  },
+  {
+   "type": "E2",
+   "t": 1789654200000,
+   "price": 101.4,
+   "amplitude": 0.011461443519006818,
+   "durationMin": 50,
+   "meta": {
+    "retRank": 99.75198412698413,
+    "imbRank": 91.6170634920635,
+    "volRank": 98.90873015873017,
+    "ret5m": 0.00762266721184104,
+    "buyRatio": 0.6583649823368942
+   }
+  },
+  {
+   "type": "E10",
+   "t": 1789693200000,
+   "price": null,
+   "amplitude": 0.01069738843331541,
+   "durationMin": null,
+   "meta": {
+    "retRank": 97.61904761904762,
+    "oiRank": 98.21428571428571
+   }
+  },
+  {
+   "type": "E8",
+   "t": 1789700400000,
+   "price": null,
+   "amplitude": 0.01794722043278444,
+   "durationMin": null,
+   "meta": {
+    "retRank": 98.80952380952381,
+    "oiRank": 2.380952380952381
+   }
+  },
+  {
+   "type": "E2",
+   "t": 1789701000000,
+   "price": 103.67,
+   "amplitude": 0.02984154103990317,
+   "durationMin": null,
+   "meta": {
+    "retRank": 99.55357142857143,
+    "imbRank": 93.25396825396825,
+    "volRank": 97.81746031746032,
+    "ret5m": 0.006483789105385021,
+    "buyRatio": 0.6709618686335675
+   }
+  },
+  {
+   "type": "E2",
+   "t": 1789704900000,
+   "price": 105.43,
+   "amplitude": 0.007991670351735302,
+   "durationMin": 5,
+   "meta": {
+    "retRank": 99.60317460317461,
+    "imbRank": 90.02976190476191,
+    "volRank": 97.47023809523809,
+    "ret5m": 0.007043623257594688,
+    "buyRatio": 0.6475437397319244
+   }
+  },
+  {
+   "type": "E1",
+   "t": 1789718700000,
+   "price": 105.39,
+   "amplitude": -0.008717129294728048,
+   "durationMin": 10,
+   "meta": {
+    "retRank": 0.744047619047619,
+    "imbRank": 1.7857142857142856,
+    "volRank": 98.71031746031747,
+    "ret5m": -0.005771339166221769,
+    "buyRatio": 0.24563443508828664
+   }
+  },
+  {
+   "type": "E10",
+   "t": 1789736400000,
+   "price": null,
+   "amplitude": 0.025856669864343703,
+   "durationMin": null,
+   "meta": {
+    "retRank": 100,
+    "oiRank": 92.26190476190477
+   }
+  },
+  {
+   "type": "E5",
+   "t": 1789743600000,
+   "price": null,
+   "amplitude": 0.018028646210247024,
+   "durationMin": null,
+   "meta": {
+    "oiRank": 100
+   }
+  },
+  {
+   "type": "E6",
+   "t": 1789747200000,
+   "price": null,
+   "amplitude": -0.017567973997064,
+   "durationMin": null,
+   "meta": {
+    "oiRank": 0.5952380952380952
+   }
+  },
+  {
+   "type": "E10",
+   "t": 1789750800000,
+   "price": null,
+   "amplitude": 0.008024294126177335,
+   "durationMin": null,
+   "meta": {
+    "retRank": 94.04761904761905,
+    "oiRank": 97.02380952380952
+   }
+  },
+  {
+   "type": "E11",
+   "t": 1789761600000,
+   "price": null,
+   "amplitude": -0.005972788946308616,
+   "durationMin": null,
+   "meta": {
+    "retRank": 5.952380952380952,
+    "oiRank": 2.380952380952381
+   }
+  },
+  {
+   "type": "E8",
+   "t": 1789776000000,
+   "price": null,
+   "amplitude": 0.00803997792954722,
+   "durationMin": null,
+   "meta": {
+    "retRank": 94.04761904761905,
+    "oiRank": 4.166666666666666
+   }
+  },
+  {
+   "type": "E1",
+   "t": 1789797300000,
+   "price": 111.93,
+   "amplitude": -0.011805879005724695,
+   "durationMin": 75,
+   "meta": {
+    "retRank": 0.7936507936507936,
+    "imbRank": 8.18452380952381,
+    "volRank": 97.51984126984127,
+    "ret5m": -0.004812843514754152,
+    "buyRatio": 0.3198411010970785
+   }
+  },
+  {
+   "type": "E11",
+   "t": 1789837200000,
+   "price": null,
+   "amplitude": -0.0052836732422438665,
+   "durationMin": null,
+   "meta": {
+    "retRank": 7.738095238095238,
+    "oiRank": 6.547619047619048
+   }
+  },
+  {
+   "type": "E1",
+   "t": 1789872000000,
+   "price": 108.25,
+   "amplitude": -0.018369464697710603,
+   "durationMin": 70,
+   "meta": {
+    "retRank": 0.1984126984126984,
+    "imbRank": 3.670634920634921,
+    "volRank": 99.05753968253968,
+    "ret5m": -0.009927464563794217,
+    "buyRatio": 0.27791997935310775
+   }
+  },
+  {
+   "type": "E10",
+   "t": 1789873200000,
+   "price": null,
+   "amplitude": 0.011452974547597432,
+   "durationMin": null,
+   "meta": {
+    "retRank": 96.42857142857143,
+    "oiRank": 93.45238095238095
+   }
+  },
+  {
+   "type": "E8",
+   "t": 1789920000000,
+   "price": null,
+   "amplitude": 0.013880233801793568,
+   "durationMin": null,
+   "meta": {
+    "retRank": 97.61904761904762,
+    "oiRank": 4.166666666666666
+   }
+  },
+  {
+   "type": "E11",
+   "t": 1789952400000,
+   "price": null,
+   "amplitude": -0.012186530746104445,
+   "durationMin": null,
+   "meta": {
+    "retRank": 2.380952380952381,
+    "oiRank": 3.571428571428571
+   }
+  },
+  {
+   "type": "E10",
+   "t": 1789977600000,
+   "price": null,
+   "amplitude": 0.02824027562733003,
+   "durationMin": null,
+   "meta": {
+    "retRank": 100,
+    "oiRank": 97.61904761904762
+   }
+  },
+  {
+   "type": "E11",
+   "t": 1790085600000,
+   "price": null,
+   "amplitude": -0.009286541711969453,
+   "durationMin": null,
+   "meta": {
+    "retRank": 2.976190476190476,
+    "oiRank": 4.761904761904762
+   }
+  },
+  {
+   "type": "E2",
+   "t": 1790118300000,
+   "price": 119.14,
+   "amplitude": 0.006815626535060039,
+   "durationMin": 15,
+   "meta": {
+    "retRank": 99.30555555555556,
+    "imbRank": 99.30555555555556,
+    "volRank": 96.18055555555556,
+    "ret5m": 0.00589276896715092,
+    "buyRatio": 0.7363237109542239
+   }
+  },
+  {
+   "type": "E1",
+   "t": 1790153100000,
+   "price": 117.16,
+   "amplitude": -0.00826274985076636,
+   "durationMin": 35,
+   "meta": {
+    "retRank": 0.496031746031746,
+    "imbRank": 5.902777777777778,
+    "volRank": 91.56746031746032,
+    "ret5m": -0.0061266359099612176,
+    "buyRatio": 0.32642919195994635
+   }
+  },
+  {
+   "type": "E11",
+   "t": 1790172000000,
+   "price": null,
+   "amplitude": -0.014236036981224758,
+   "durationMin": null,
+   "meta": {
+    "retRank": 1.1904761904761905,
+    "oiRank": 1.7857142857142856
+   }
+  },
+  {
+   "type": "E1",
+   "t": 1790172300000,
+   "price": 115.68,
+   "amplitude": -0.032618222650969676,
+   "durationMin": null,
+   "meta": {
+    "retRank": 0.1488095238095238,
+    "imbRank": 9.5734126984127,
+    "volRank": 98.90873015873017,
+    "ret5m": -0.007406803304473588,
+    "buyRatio": 0.3556890484104194
+   }
+  },
+  {
+   "type": "E2",
+   "t": 1790179500000,
+   "price": 115.02,
+   "amplitude": 0.009768087436207048,
+   "durationMin": 30,
+   "meta": {
+    "retRank": 99.8015873015873,
+    "imbRank": 95.2876984126984,
+    "volRank": 98.75992063492063,
+    "ret5m": 0.008030769417578253,
+    "buyRatio": 0.6653230477061778
+   }
+  },
+  {
+   "type": "E7",
+   "t": 1790226000000,
+   "price": null,
+   "amplitude": -0.00086077,
+   "durationMin": null,
+   "meta": {
+    "premRank": 100
+   }
+  },
+  {
+   "type": "E1",
+   "t": 1790239500000,
+   "price": 113.31,
+   "amplitude": -0.006950888044738012,
+   "durationMin": 5,
+   "meta": {
+    "retRank": 0.496031746031746,
+    "imbRank": 9.027777777777777,
+    "volRank": 98.01587301587301,
+    "ret5m": -0.006509523337921816,
+    "buyRatio": 0.3544087063217958
+   }
+  },
+  {
+   "type": "E12",
+   "t": 1790240100000,
+   "price": 114.08,
+   "amplitude": 0,
+   "durationMin": 10,
+   "meta": {
+    "afterEvent": "E1",
+    "afterT": 1790239500000,
+    "buyRatio": 0.6324222952989234,
+    "thr": 0.6288775204849701
+   }
+  },
+  {
+   "type": "E9",
+   "t": 1790240400000,
+   "price": null,
+   "amplitude": -0.008715994782750107,
+   "durationMin": null,
+   "meta": {
+    "retRank": 5.357142857142857,
+    "oiRank": 91.66666666666666
+   }
+  },
+  {
+   "type": "E2",
+   "t": 1790259900000,
+   "price": 116.26,
+   "amplitude": 0.008540792977329296,
+   "durationMin": 50,
+   "meta": {
+    "retRank": 99.8015873015873,
+    "imbRank": 91.12103174603175,
+    "volRank": 98.56150793650794,
+    "ret5m": 0.0072514129903840764,
+    "buyRatio": 0.632942835129723
+   }
+  },
+  {
+   "type": "E12",
+   "t": 1790260500000,
+   "price": 115.88,
+   "amplitude": 0,
+   "durationMin": 10,
+   "meta": {
+    "afterEvent": "E2",
+    "afterT": 1790259900000,
+    "buyRatio": 0.35612066375125,
+    "thr": 0.36348395750495177
+   }
+  },
+  {
+   "type": "E7",
+   "t": 1790265600000,
+   "price": null,
+   "amplitude": -0.0006814,
+   "durationMin": null,
+   "meta": {
+    "premRank": 99.40476190476191
+   }
+  },
+  {
+   "type": "E5",
+   "t": 1790334000000,
+   "price": null,
+   "amplitude": 0.017575638228564117,
+   "durationMin": null,
+   "meta": {
+    "oiRank": 99.40476190476191
+   }
+  },
+  {
+   "type": "E10",
+   "t": 1790334000000,
+   "price": null,
+   "amplitude": 0.013670297072435791,
+   "durationMin": null,
+   "meta": {
+    "retRank": 96.42857142857143,
+    "oiRank": 99.40476190476191
+   }
+  },
+  {
+   "type": "E2",
+   "t": 1790334300000,
+   "price": 122.17,
+   "amplitude": 0.022089833053800908,
+   "durationMin": 65,
+   "meta": {
+    "retRank": 100,
+    "imbRank": 93.35317460317461,
+    "volRank": 99.95039682539682,
+    "ret5m": 0.02176247401986027,
+    "buyRatio": 0.6433171658030411
+   }
+  },
+  {
+   "type": "E1",
+   "t": 1790335200000,
+   "price": 120.56,
+   "amplitude": -0.00877561720895764,
+   "durationMin": 5,
+   "meta": {
+    "retRank": 0.6448412698412698,
+    "imbRank": 6.944444444444445,
+    "volRank": 96.13095238095238,
+    "ret5m": -0.006284128502140246,
+    "buyRatio": 0.34708147800208844
+   }
+  },
+  {
+   "type": "E12",
+   "t": 1790335200000,
+   "price": 120.56,
+   "amplitude": 0,
+   "durationMin": 15,
+   "meta": {
+    "afterEvent": "E2",
+    "afterT": 1790334300000,
+    "buyRatio": 0.34708147800208844,
+    "thr": 0.3694164968744267
+   }
+  },
+  {
+   "type": "E1",
+   "t": 1790338200000,
+   "price": 119.89,
+   "amplitude": -0.0179703109896144,
+   "durationMin": 20,
+   "meta": {
+    "retRank": 0.496031746031746,
+    "imbRank": 2.083333333333333,
+    "volRank": 97.47023809523809,
+    "ret5m": -0.006899158740031227,
+    "buyRatio": 0.2995248137976057
+   }
+  },
+  {
+   "type": "E2",
+   "t": 1790338800000,
+   "price": 119.98,
+   "amplitude": 0.01901007722497336,
+   "durationMin": 85,
+   "meta": {
+    "retRank": 99.85119047619048,
+    "imbRank": 94.34523809523809,
+    "volRank": 97.17261904761905,
+    "ret5m": 0.009883655296402455,
+    "buyRatio": 0.6543728186265861
+   }
+  },
+  {
+   "type": "E12",
+   "t": 1790338800000,
+   "price": 119.98,
+   "amplitude": 0,
+   "durationMin": 10,
+   "meta": {
+    "afterEvent": "E1",
+    "afterT": 1790338200000,
+    "buyRatio": 0.6543728186265861,
+    "thr": 0.6277302031206835
+   }
+  },
+  {
+   "type": "E11",
+   "t": 1790341200000,
+   "price": null,
+   "amplitude": -0.01032740085798794,
+   "durationMin": null,
+   "meta": {
+    "retRank": 3.571428571428571,
+    "oiRank": 1.7857142857142856
+   }
+  },
+  {
+   "type": "E2",
+   "t": 1790344200000,
+   "price": 119.78,
+   "amplitude": 0.021216320582282542,
+   "durationMin": 105,
+   "meta": {
+    "retRank": 99.70238095238095,
+    "imbRank": 95.38690476190477,
+    "volRank": 91.22023809523809,
+    "ret5m": 0.007205728706419509,
+    "buyRatio": 0.6645827114221827
+   }
+  },
+  {
+   "type": "E1",
+   "t": 1790344800000,
+   "price": 118.36,
+   "amplitude": -0.01102751189272941,
+   "durationMin": 5,
+   "meta": {
+    "retRank": 0.248015873015873,
+    "imbRank": 8.382936507936508,
+    "volRank": 97.8670634920635,
+    "ret5m": -0.009167046239809629,
+    "buyRatio": 0.3570024059458362
+   }
+  },
+  {
+   "type": "E12",
+   "t": 1790344800000,
+   "price": 118.36,
+   "amplitude": 0,
+   "durationMin": 10,
+   "meta": {
+    "afterEvent": "E2",
+    "afterT": 1790344200000,
+    "buyRatio": 0.3570024059458362,
+    "thr": 0.37027947363454616
+   }
+  },
+  {
+   "type": "E7",
+   "t": 1790344800000,
+   "price": null,
+   "amplitude": -0.00068536,
+   "durationMin": null,
+   "meta": {
+    "premRank": 99.40476190476191
+   }
+  },
+  {
+   "type": "E10",
+   "t": 1790344800000,
+   "price": null,
+   "amplitude": 0.007672458619824873,
+   "durationMin": null,
+   "meta": {
+    "retRank": 90.47619047619048,
+    "oiRank": 97.02380952380952
+   }
+  },
+  {
+   "type": "E5",
+   "t": 1790352000000,
+   "price": null,
+   "amplitude": 0.020035529745658476,
+   "durationMin": null,
+   "meta": {
+    "oiRank": 100
+   }
+  },
+  {
+   "type": "E10",
+   "t": 1790359200000,
+   "price": null,
+   "amplitude": 0.007824443822678287,
+   "durationMin": null,
+   "meta": {
+    "retRank": 91.07142857142857,
+    "oiRank": 92.85714285714286
+   }
+  },
+  {
+   "type": "E11",
+   "t": 1790452800000,
+   "price": null,
+   "amplitude": -0.006629126033189571,
+   "durationMin": null,
+   "meta": {
+    "retRank": 7.738095238095238,
+    "oiRank": 6.547619047619048
+   }
+  },
+  {
+   "type": "E7",
+   "t": 1790492400000,
+   "price": null,
+   "amplitude": -0.00137019,
+   "durationMin": null,
+   "meta": {
+    "premRank": 100
+   }
+  },
+  {
+   "type": "E10",
+   "t": 1790492400000,
+   "price": null,
+   "amplitude": 0.022822736465738985,
+   "durationMin": null,
+   "meta": {
+    "retRank": 99.40476190476191,
+    "oiRank": 97.61904761904762
+   }
+  },
+  {
+   "type": "E11",
+   "t": 1790517600000,
+   "price": null,
+   "amplitude": -0.01217683496755995,
+   "durationMin": null,
+   "meta": {
+    "retRank": 1.7857142857142856,
+    "oiRank": 1.7857142857142856
+   }
+  },
+  {
+   "type": "E8",
+   "t": 1790532000000,
+   "price": null,
+   "amplitude": 0.009950330853168092,
+   "durationMin": null,
+   "meta": {
+    "retRank": 94.64285714285714,
+    "oiRank": 7.738095238095238
+   }
+  },
+  {
+   "type": "E7",
+   "t": 1790535600000,
+   "price": null,
+   "amplitude": -0.00086492,
+   "durationMin": null,
+   "meta": {
+    "premRank": 99.40476190476191
+   }
+  },
+  {
+   "type": "E1",
+   "t": 1790546400000,
+   "price": 122.03,
+   "amplitude": -0.015595818034866165,
+   "durationMin": null,
+   "meta": {
+    "retRank": 0.744047619047619,
+    "imbRank": 8.531746031746032,
+    "volRank": 97.42063492063492,
+    "ret5m": -0.0061272198556020984,
+    "buyRatio": 0.3526535672596369
+   }
+  }
+ ]
+}

@@ -52,18 +52,18 @@ function mockHelius(opts: { failOn?: string[] } = {}): HeliusClient & { calls: s
       calls.push("tx");
       return null;
     },
-    async getEarlyBuyers(mint: string, n = 50): Promise<EarlyBuyersResult> {
+    async getEarlyBuyers(mint: string, n = 50, o: { maxPages?: number; maxTransactions?: number } = {}): Promise<EarlyBuyersResult> {
       if (failOn.has(mint)) throw new Error("Helius simulé en panne");
       credits += 61; // coût réaliste mesuré sur le token de référence
-      calls.push(`earlybuyers:${mint}`);
+      calls.push(`earlybuyers:${mint}:pages=${o.maxPages ?? "def"}`);
       const buyers = makeBuyers(mint, Math.min(n, 10));
-      return { mint, buyers, signaturesScanned: 10000, transactionsRead: buyers.length + 1, truncated: true, credits: 61 };
+      return { mint, buyers, signaturesScanned: 10000, transactionsRead: buyers.length + 1, truncated: true, skippedTx: 0, credits: 61 };
     },
     async getWalletTokenHistory(address: string, o: { limit?: number } = {}): Promise<WalletHistoryResult> {
       const limit = o.limit ?? 20;
       credits += 1 + Math.min(limit, 5);
       calls.push(`history:${address}`);
-      return { address, events: [], signaturesScanned: 5, transactionsRead: 5, credits: 1 + Math.min(limit, 5) };
+      return { address, events: [], signaturesScanned: 5, transactionsRead: 5, skippedTx: 0, credits: 1 + Math.min(limit, 5) };
     },
   };
   return client as unknown as HeliusClient & { calls: string[] };
@@ -174,5 +174,53 @@ describe("runEarlyBuyersJob", () => {
     expect(r.fetched).toBe(1);
     expect(existsSync(join(dataDir, "earlybuyers", "mintA.json"))).toBe(true);
     expect(existsSync(join(dataDir, "earlybuyers", "mintB.json"))).toBe(false);
+  });
+
+  it("maxPages est propagé à getEarlyBuyers (anti-troncature)", async () => {
+    writeScans(dataDir, [{ mint: "mintA", receivedAt: OLD_MIGRATE }]);
+    const helius = mockHelius();
+    await runEarlyBuyersJob({ dataDir, helius, maxTokens: 50, now, skipOverlap: true, withSells: false, maxPages: 60 });
+    expect(helius.calls).toContain("earlybuyers:mintA:pages=60");
+  });
+
+  it("maxPages vaut 10 par défaut", async () => {
+    writeScans(dataDir, [{ mint: "mintA", receivedAt: OLD_MIGRATE }]);
+    const helius = mockHelius();
+    await runEarlyBuyersJob({ dataDir, helius, maxTokens: 50, now, skipOverlap: true, withSells: false });
+    expect(helius.calls).toContain("earlybuyers:mintA:pages=10");
+  });
+
+  it("requireHistoryT0 : ignore les mints sans t0 valide avant tout appel payant", async () => {
+    writeScans(dataDir, [
+      { mint: "mintWithT0", receivedAt: OLD_MIGRATE },
+      { mint: "mintNoHistory", receivedAt: OLD_MIGRATE },
+      { mint: "mintNoT0", receivedAt: OLD_MIGRATE },
+    ]);
+    // Historique valide : premier snapshot priceUsd > 0 et liquidityUsd >= 20000.
+    mkdirSync(join(dataDir, "history"), { recursive: true });
+    writeFileSync(
+      join(dataDir, "history", "mintWithT0.jsonl"),
+      JSON.stringify({ fetchedAt: "2026-09-27T10:00:00.000Z", priceUsd: 0.001, liquidityUsd: 30000 }) + "\n",
+    );
+    // Série présente mais aucun snapshot valide (prix nul / liquidité insuffisante).
+    writeFileSync(
+      join(dataDir, "history", "mintNoT0.jsonl"),
+      JSON.stringify({ fetchedAt: "2026-09-27T10:00:00.000Z", priceUsd: 0, liquidityUsd: 100 }) + "\n",
+    );
+    const helius = mockHelius();
+    const r = await runEarlyBuyersJob({
+      dataDir,
+      helius,
+      maxTokens: 50,
+      now,
+      skipOverlap: true,
+      withSells: false,
+      requireHistoryT0: true,
+    });
+    expect(r.fetched).toBe(1);
+    expect(existsSync(join(dataDir, "earlybuyers", "mintWithT0.json"))).toBe(true);
+    expect(existsSync(join(dataDir, "earlybuyers", "mintNoHistory.json"))).toBe(false);
+    expect(existsSync(join(dataDir, "earlybuyers", "mintNoT0.json"))).toBe(false);
+    expect(helius.calls.filter((c) => c.startsWith("earlybuyers:"))).toHaveLength(1);
   });
 });

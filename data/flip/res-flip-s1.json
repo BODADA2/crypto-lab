@@ -1,0 +1,373 @@
+{
+ "manifest": {
+  "generatedAt": "2026-09-28T14:57:52.978Z",
+  "venue": "Binance SOLUSDT perp (data.vision) + Hyperliquid (funding, candles 5m)",
+  "period": "2026-03-28 → 2026-09-27",
+  "splits": {
+   "discovery": "< 2026-07-16T09:35:59.400Z (60% les plus anciens)",
+   "calibration": "20% suivants — non utilisés ce sprint",
+   "holdout": "≥ 2026-08-22T04:47:59.200Z — GELÉ, JAMAIS LU"
+  },
+  "warmup": "7j (percentiles causaux)",
+  "config5m": {
+   "pctWindow": 2016,
+   "cascadeRetP": 1,
+   "imbP": 10,
+   "volP": 90,
+   "debounceMin": 30,
+   "reversionTol": 0.003,
+   "reversionCapMin": 240,
+   "absorptionWindowMin": 15,
+   "fundAbsFloor": 0
+  },
+  "nMin": 30,
+  "costs": {
+   "feeBpPerLeg": 5,
+   "slippageBpPerLeg": 5,
+   "note": "slippage ESTIMÉ (pas de carnet historique)"
+  },
+  "leakageGuard": "assert MAX_FORWARD_T < HOLDOUT_START — vérifié à l'exécution"
+ },
+ "H-FLIP-01": {
+  "hypothesis": "Cascade long (E1) → reversal par absorption plutôt que continuation",
+  "n": {
+   "E1": 49,
+   "E2_mirror": 64,
+   "baselineAll": 10300,
+   "baselineBigDown": 484,
+   "hlProxy": 0
+  },
+  "reversal": {
+   "E1_rev4h": {
+    "n": 49,
+    "k": 40,
+    "p": 81.63,
+    "ci": [
+     68.64,
+     90.02
+    ]
+   },
+   "E1_rev1h": {
+    "n": 49,
+    "k": 36,
+    "p": 73.47,
+    "ci": [
+     59.74,
+     83.79
+    ]
+   },
+   "E1_cont4h": {
+    "n": 49,
+    "k": 33,
+    "p": 67.35,
+    "ci": [
+     53.38,
+     78.79
+    ]
+   },
+   "E2_rev4h_mirror": {
+    "n": 64,
+    "k": 49,
+    "p": 76.56,
+    "ci": [
+     64.87,
+     85.25
+    ]
+   }
+  },
+  "vsBaseline": {
+   "baselineAll_rev4h": {
+    "p": 94.88,
+    "ci": [
+     94.44,
+     95.29
+    ]
+   },
+   "baselineBigDown_rev4h": {
+    "p": 85.74,
+    "ci": [
+     82.35,
+     88.58
+    ]
+   },
+   "E1_vs_all": {
+    "diffPt": -13.25,
+    "pValue": 0,
+    "ciDiffPt": [
+     -24.1,
+     -2.4
+    ]
+   },
+   "E1_vs_bigDown": {
+    "diffPt": -4.11,
+    "pValue": 0.4378,
+    "ciDiffPt": [
+     -15.39,
+     7.17
+    ]
+   }
+  },
+  "yRev1h": {
+   "medianBp": -32.09,
+   "ciBp": [
+    -59.05,
+    -12.93
+   ],
+   "meanBp": -44.07,
+   "note": "positif = mean-revert ; falsifier yaml: médiane ≤ 0 → tester continuation"
+  },
+  "net1hHold": {
+   "cost20bp": {
+    "n": 49,
+    "medianGrossBp": -32.09,
+    "medianNetBp": -52.09,
+    "meanNetBp": -64.07,
+    "pNetPos": 0.2041,
+    "ciNetPos": [
+     0.1148,
+     0.3364
+    ],
+    "maxAbsGrossBp": 310.64
+   },
+   "cost10bp": {
+    "n": 49,
+    "medianGrossBp": -32.09,
+    "medianNetBp": -42.09,
+    "meanNetBp": -54.07,
+    "pNetPos": 0.2857,
+    "ciNetPos": [
+     0.1785,
+     0.4241
+    ],
+    "maxAbsGrossBp": 310.64
+   },
+   "cost40bp": {
+    "n": 49,
+    "medianGrossBp": -32.09,
+    "medianNetBp": -72.09,
+    "meanNetBp": -84.07,
+    "pNetPos": 0.102,
+    "ciNetPos": [
+     0.0444,
+     0.2176
+    ],
+    "maxAbsGrossBp": 310.64
+   },
+   "note": "trade hypothétique : entrée tEvent (clôture cascade), sortie +1h, notionnel 1x"
+  },
+  "adversarial": {
+   "discoveryHalves": {
+    "D1": {
+     "n": 26,
+     "k": 21,
+     "p": 80.77,
+     "ci": [
+      62.12,
+      91.49
+     ]
+    },
+    "D2": {
+     "n": 23,
+     "k": 19,
+     "p": 82.61,
+     "ci": [
+      62.86,
+      93.02
+     ]
+    },
+    "diffPt": -1.84,
+    "pValue": 0.8682
+   },
+   "otherVenue_HL_proxy": {
+    "n": 0,
+    "rev4h": null,
+    "ci": [
+     null,
+     null
+    ],
+    "caveat": "proxy HL sans taker imbalance (ret≤P1 + vol≥P90) — définition différente, comparaison indicative"
+   }
+  },
+  "leakageStatus": "PASS — features = percentiles causaux ≤ t ; tEvent = clôture barre ; labels = klines > tEvent uniquement ; baselines même convention ; holdout jamais lu (assert exécution)"
+ },
+ "H-FLIP-06": {
+  "hypothesis": "Cascade long + absorption rapide (E1→E12 ≤15min) → reversal plus fort que sans absorption",
+  "groups": {
+   "E1_absorbed_n": 7,
+   "E1_notAbsorbed_n": 42,
+   "nMinPerGroup": 30,
+   "absorbedSufficient": false
+  },
+  "reversal4h_byAbsorption": {
+   "absorbed": {
+    "n": 7,
+    "p": 85.71,
+    "ci": [
+     48.69,
+     97.43
+    ]
+   },
+   "notAbsorbed": {
+    "n": 42,
+    "p": 80.95,
+    "ci": [
+     66.7,
+     90.02
+    ]
+   },
+   "diffPt": 4.76,
+   "pValue": 0.7632,
+   "ciDiffPt": [
+    -23.75,
+    33.28
+   ],
+   "medianYRev_absorbedBp": -10.73,
+   "medianYRev_notAbsorbedBp": -23.82,
+   "ciMedian_absorbedBp": [
+    -77.5,
+    3.16
+   ],
+   "ciMedian_notAbsorbedBp": [
+    -73.17,
+    18.85
+   ]
+  },
+  "reversal1h_byAbsorption": {
+   "absorbed": {
+    "n": 7,
+    "p": 85.71,
+    "ci": [
+     48.69,
+     97.43
+    ]
+   },
+   "notAbsorbed": {
+    "n": 42,
+    "p": 71.43,
+    "ci": [
+     56.43,
+     82.83
+    ]
+   },
+   "diffPt": 14.29,
+   "pValue": 0.428,
+   "ciDiffPt": [
+    -15.02,
+    43.59
+   ],
+   "medianYRev_absorbedBp": -19.17,
+   "medianYRev_notAbsorbedBp": -33.66,
+   "ciMedian_absorbedBp": [
+    -93.41,
+    9.47
+   ],
+   "ciMedian_notAbsorbedBp": [
+    -59.45,
+    -3.63
+   ]
+  },
+  "net1hHold_cost20bp": {
+   "absorbed": {
+    "n": 7,
+    "medianGrossBp": -19.17,
+    "medianNetBp": -39.17,
+    "meanNetBp": -49.94,
+    "pNetPos": 0.1429,
+    "ciNetPos": [
+     0.0257,
+     0.5131
+    ],
+    "maxAbsGrossBp": 96.63
+   },
+   "notAbsorbed": {
+    "n": 42,
+    "medianGrossBp": -33.66,
+    "medianNetBp": -53.66,
+    "meanNetBp": -66.43,
+    "pNetPos": 0.2143,
+    "ciNetPos": [
+     0.1171,
+     0.3594
+    ],
+    "maxAbsGrossBp": 310.64
+   }
+  },
+  "E2_mirror_exploratory": {
+   "absorbed_n": 8,
+   "notAbsorbed_n": 56,
+   "diffPt": 12.5,
+   "pValue": 0.435
+  },
+  "leakageStatus": "PASS — groupe absorbé : tEvent = clôture barre E12 (post-événement connu alors) ; groupe non absorbé : tEvent = clôture cascade + 15 min (absence d'absorption connue à fermeture fenêtre) ; labels > tEvent uniquement"
+ },
+ "H-FLIP-10": {
+  "hypothesis": "Lead-lag inter-marches : la dislocation apparait d'abord sur un marche",
+  "venueHL": {
+   "status": "NON TESTABLE — DATA ISSUE",
+   "detail": "HL candleSnapshot 5m limite aux ~5000 dernieres bougies (~17j) ; startTime ancien ignore, endTime ancien -> []. Aucune couverture du discovery (60% les plus anciens). Teste le 2026-09-28."
+  },
+  "proxy": {
+   "ref": "Binance SOLUSDT PERP 1m (data.vision)",
+   "other": "Binance SOLUSDT SPOT 1m (data.vision)",
+   "resolution": "1m -> lag quantifie par pas de 60 s ; |lag| <= 60 s = indiscernable (tied)",
+   "window": "+/-30 min autour de la barre de cascade",
+   "note": "lag > 0 = le PERP creuse en premier ; lag < 0 = le SPOT creuse en premier"
+  },
+  "n": {
+   "cascadesDiscovery": 113,
+   "measured": 113,
+   "null": 0
+  },
+  "leadLag": {
+   "medianLagS": 0,
+   "iqrLagS": [
+    0,
+    0
+   ],
+   "perpLeads": 8,
+   "spotLeads": 3,
+   "tied": 102,
+   "leaderShare": 0.7273,
+   "decisiveN": 11,
+   "signTestDecisive": {
+    "n": 11,
+    "pValue": 0.1317
+   }
+  },
+  "byType": {
+   "E1": {
+    "n": 49,
+    "medianLagS": 0,
+    "perpLeads": 4,
+    "spotLeads": 1,
+    "tied": 44
+   },
+   "E2": {
+    "n": 64,
+    "medianLagS": 0,
+    "perpLeads": 4,
+    "spotLeads": 2,
+    "tied": 58
+   }
+  },
+  "trueCascadeVsSpot": {
+   "proxy": "vraie cascade ~= cascade + dOI 1h <= P10 causal (+/-1h) ; spot-like ~= sans collapse OI — PROXY, pas des prints de liquidation",
+   "trueCascade": {
+    "n": 36,
+    "medianLagS": 0,
+    "perpLeads": 3,
+    "spotLeads": 2,
+    "tied": 31
+   },
+   "spotLike": {
+    "n": 77,
+    "medianLagS": 0,
+    "perpLeads": 5,
+    "spotLeads": 1,
+    "tied": 71
+   }
+  },
+  "leakageStatus": "PASS — creux cherches sur klines 1m alignees autour de t_cascade (mesure, pas feature de decision) ; aucune donnee holdout",
+  "dataIssue": "prints de liquidation historiques : AUCUNE source publique -> E1/E2 restent des proxies (spec section 4)"
+ }
+}

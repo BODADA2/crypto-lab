@@ -1,0 +1,50 @@
+{
+  "generated_at": "2026-09-28T14:00:55.339Z",
+  "nScanFiles": 347,
+  "nTokenRecords": 35339,
+  "nWithCreator": 0,
+  "creatorFieldNames": [
+    "freezeAuthority",
+    "mintAuthority"
+  ],
+  "mintAuthorityValues": [
+    {
+      "value": "UNKNOWN",
+      "count": 2926
+    }
+  ],
+  "sampleKeys": [
+    "boostsActive",
+    "chain",
+    "createdAt",
+    "dexId",
+    "fdvUsd",
+    "fetchedAt",
+    "freezeAuthority",
+    "holders",
+    "liquidityUsd",
+    "marketCapUsd",
+    "mint",
+    "mintAuthority",
+    "name",
+    "pairAddress",
+    "pairCount",
+    "pairCreatedAt",
+    "priceChange",
+    "priceUsd",
+    "source",
+    "symbol",
+    "top10Pct",
+    "txns",
+    "url",
+    "volume",
+    "volume1h",
+    "volume24h",
+    "volume5m"
+  ],
+  "missing": {
+    "creator_field_absent_pct": 100
+  },
+  "verdict": "DATA ISSUE",
+  "detail": "Aucun champ creator/deployer exploitable dans data/scans ; mintAuthority=UNKNOWN dans data/history. CREATOR_HISTORY_AS_OF_T0 non reconstructible sans inventer de données. Interaction CREATOR × EARLY_FLOW bloquée."
+}

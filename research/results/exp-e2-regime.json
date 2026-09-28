@@ -1,0 +1,146 @@
+{
+  "experiment": "E2",
+  "hypothesis_id": "H-S1-E2",
+  "universe": "discovery",
+  "signal": "sellsM5@t0 (frénésie, H-PRED-FLOW-01) vs y1h",
+  "leakage_status": "PASS",
+  "leakage_detail": "Signal et labels : mêmes règles que Phase 1 (≤ t0ms vs post-t0, aberrantMask, SKHY exclu). CAVEAT : le régime du jour est calculé ex-post (journée complète connue). En production il faudrait un régime trailing (jours précédents) — le test mesure ici la modulation rétrospective, pas un signal temps réel. AUCUNE lecture du holdout.",
+  "data_bias": "data/history/ + data/scans/ biaisées vers les tokens chauds : borne OPTIMISTE.",
+  "regime_table": [
+    {
+      "day": "2026-09-24",
+      "launchesPerHour": 43.25,
+      "graduationsPerHour": 30.25,
+      "medianTurnoverH1": 1.6550918757444624,
+      "score": 0.6506065695389397,
+      "tercile": 3
+    },
+    {
+      "day": "2026-09-25",
+      "launchesPerHour": 26.125,
+      "graduationsPerHour": 18.25,
+      "medianTurnoverH1": 2.5015855416088213,
+      "score": -0.2729091890313244,
+      "tercile": 2
+    },
+    {
+      "day": "2026-09-26",
+      "launchesPerHour": 40.625,
+      "graduationsPerHour": 32.75,
+      "medianTurnoverH1": 1.2910638415437674,
+      "score": 0.5143682575265053,
+      "tercile": 3
+    },
+    {
+      "day": "2026-09-27",
+      "launchesPerHour": 32.791666666666664,
+      "graduationsPerHour": 25.208333333333332,
+      "medianTurnoverH1": 0.7656544509225519,
+      "score": -0.435080793687668,
+      "tercile": 1
+    },
+    {
+      "day": "2026-09-28",
+      "launchesPerHour": 20.692307692307693,
+      "graduationsPerHour": 17.076923076923077,
+      "medianTurnoverH1": 2.7013434068389506,
+      "score": -0.456984844346453,
+      "tercile": 1
+    }
+  ],
+  "regime_notes": [
+    "launches = mints uniques par jour de premier createdAt (fallback fetchedAt) ; graduations = mints du jour vus au moins une fois hors pumpfun (proxy, pas un événement migrate observé).",
+    "taux normalisés par heures de couverture scan du jour (le 2026-09-28 est partiel : 13h couvertes)."
+  ],
+  "terciles": {
+    "tercile_1": {
+      "n": 155,
+      "spearman": -0.23941220070252328,
+      "p": 0.0022880384166570344,
+      "ci95": [
+        -0.4006928555315652,
+        -0.08061293545164513
+      ]
+    },
+    "tercile_2": {
+      "n": 74,
+      "spearman": -0.1708552388004443,
+      "p": 0.14118578303831497,
+      "ci95": [
+        -0.4225842280636801,
+        0.08303591262495372
+      ]
+    },
+    "tercile_3": {
+      "n": 98,
+      "spearman": -0.3691129685238669,
+      "p": 0.00009973020567355384,
+      "ci95": [
+        -0.5512371771576484,
+        -0.1489776791691372
+      ]
+    }
+  },
+  "interactions": {
+    "t1_vs_t3": {
+      "z": 1.0952555149183971,
+      "p": 0.2734047963760107
+    },
+    "t1_vs_t2": {
+      "z": -0.49811511112424434,
+      "p": 0.6184029094341401
+    },
+    "t2_vs_t3": {
+      "z": 1.3695213490209945,
+      "p": 0.17083648624286818
+    }
+  },
+  "cohort_stability": {
+    "pumpswap": {
+      "n": 270,
+      "spearman": -0.2739202336261281,
+      "p": 0.000003125855190244664,
+      "ci95": [
+        -0.3931896642386498,
+        -0.1556092066496873
+      ]
+    },
+    "raydium": {
+      "n": 42,
+      "spearman": 0.16797666315533588,
+      "p": 0.2811719142964755,
+      "ci95": [
+        -0.18126569970018638,
+        0.4536909488696216
+      ]
+    },
+    "other": {
+      "n": 15,
+      "spearman": null,
+      "p": null,
+      "ci95": null
+    }
+  },
+  "time_stability": {
+    "first_half_before_2026-09-26": {
+      "n": 172,
+      "spearman": -0.3097237649844466,
+      "p": 0.000021665077565957702,
+      "ci95": [
+        -0.46575539534412047,
+        -0.1400372149623959
+      ]
+    },
+    "second_half_before_2026-09-26": {
+      "n": 155,
+      "spearman": -0.23941220070252328,
+      "p": 0.0022880384166570344,
+      "ci95": [
+        -0.4006928555315652,
+        -0.08061293545164513
+      ]
+    }
+  },
+  "dropped_no_regime": 0,
+  "cost_sensitivity": "non évaluée (aucune stratégie construite)"
+}

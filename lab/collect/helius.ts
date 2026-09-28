@@ -10,7 +10,19 @@
  * chronologique et retient les `n` premiers wallets DISTINCTS dont le solde du token augmente
  * et qui ont signé la transaction (exclut les PDA de bonding curve / pools, qui ne signent pas).
  *
- * Le compteur `credits` est indicatif : Helius facture 1 crédit par appel RPC standard.
+ * Tolérance des versions de transaction : Solana sert désormais des transactions versionnées
+ * (v1/v2) qu'Helius refuse avec le code -32015 si `maxSupportedTransactionVersion` est trop bas.
+ * `getTransaction` essaie 0 puis 1 puis 2 ; si -32015 persiste, la transaction est IGNORÉE et
+ * comptée dans `skippedTx` (jamais d'échec silencieux : le compteur est dans le résultat et le cache).
+ *
+ * Tolérance du rate limiting : `rpc` réessaie jusqu'à 3 fois sur HTTP 429 (backoff 1s → 2s → 4s)
+ * avant de propager l'erreur ; chaque tentative est comptée en crédits.
+ *
+ * Garde-fou anti-blocage : chaque appel porte `AbortSignal.timeout(30000)` — une connexion
+ * pendue ne bloque jamais le job plus de 30 s (l'erreur est propagée, le token est réessayé au run suivant).
+ *
+ * Le compteur `credits` est indicatif : Helius facture 1 crédit par appel RPC standard
+ * (chaque tentative de version compte comme un appel).
  */
 import type { EarlyBuyer, FetchLike, WalletTokenEvent } from "./types.ts";
 
@@ -73,6 +85,11 @@ export interface EarlyBuyersResult {
   transactionsRead: number;
   /** `true` si l'historique dépassait `maxPages` pages : les "premiers" acheteurs ne sont pas garantis. */
   truncated: boolean;
+  /**
+   * Transactions ignorées parce que leur version n'est pas lisible par le client
+   * (-32015 persistant après essais 0/1/2). Compteur jamais silencieux : écrit en cache.
+   */
+  skippedTx: number;
   credits: number;
 }
 
@@ -81,6 +98,11 @@ export interface WalletHistoryResult {
   events: WalletTokenEvent[];
   signaturesScanned: number;
   transactionsRead: number;
+  /**
+   * Transactions ignorées parce que leur version n'est pas lisible par le client
+   * (-32015 persistant après essais 0/1/2). Compteur jamais silencieux.
+   */
+  skippedTx: number;
   credits: number;
 }
 
@@ -88,6 +110,11 @@ export interface HeliusClient {
   rpc<T>(method: string, params: unknown[]): Promise<T>;
   getSignaturesForAddress(address: string, opts?: { limit?: number; before?: string; until?: string }): Promise<SignatureInfo[]>;
   getTransaction(signature: string): Promise<ParsedTransaction | null>;
+  /**
+   * Variante tolérante : essaie maxSupportedTransactionVersion 0 puis 1 puis 2.
+   * Si -32015 persiste, renvoie `{ tx: null, skipped: true }` (autres erreurs : propagées).
+   */
+  getTransactionLenient(signature: string): Promise<{ tx: ParsedTransaction | null; skipped: boolean }>;
   getEarlyBuyers(mint: string, n?: number, opts?: { maxPages?: number; pageSize?: number; maxTransactions?: number }): Promise<EarlyBuyersResult>;
   getWalletTokenHistory(address: string, opts?: { limit?: number }): Promise<WalletHistoryResult>;
   /** Crédits consommés depuis la création du client. */
@@ -105,6 +132,11 @@ export class HeliusError extends Error {
   }
 }
 
+/** Code JSON-RPC Helius : la version de transaction demandée n'est pas supportée par le client. */
+export const TX_VERSION_UNSUPPORTED_CODE = -32015;
+/** Versions de transaction essayées dans l'ordre par `getTransactionLenient` (0 = legacy, 1/2 = versionnées). */
+export const TX_VERSION_ATTEMPTS = [0, 1, 2] as const;
+
 export function createHeliusClient(opts: HeliusOptions): HeliusClient {
   const url = opts.rpcUrl ?? `https://mainnet.helius-rpc.com/?api-key=${opts.apiKey ?? ""}`;
   const table = opts.creditTable ?? {};
@@ -116,23 +148,35 @@ export function createHeliusClient(opts: HeliusOptions): HeliusClient {
   let lastAt = 0;
 
   async function rpc<T>(method: string, params: unknown[]): Promise<T> {
-    if (minInterval > 0) {
-      const wait = lastAt + minInterval - Date.now();
-      if (wait > 0) await sleep(wait);
+    // 429 (rate limit) : backoff borné 1s → 2s → 4s puis propagation. Chaque tentative est
+    // un appel réel : elle est comptée en crédits (compteur honnête).
+    const maxRetries429 = 3;
+    let attempt429 = 0;
+    for (;;) {
+      if (minInterval > 0) {
+        const wait = lastAt + minInterval - Date.now();
+        if (wait > 0) await sleep(wait);
+      }
+      lastAt = Date.now();
+      id += 1;
+      const res = await opts.fetch(url, {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ jsonrpc: "2.0", id, method, params }),
+        signal: AbortSignal.timeout(30000),
+      });
+      requestCount += 1;
+      credits += table[method] ?? 1;
+      if (res.status === 429 && attempt429 < maxRetries429) {
+        attempt429 += 1;
+        await sleep(1000 * 2 ** (attempt429 - 1));
+        continue;
+      }
+      if (!res.ok) throw new HeliusError(`Helius HTTP ${res.status} (${method})`, res.status);
+      const json = (await res.json()) as { result?: T; error?: { code: number; message: string } };
+      if (json.error) throw new HeliusError(`Helius RPC ${json.error.code}: ${json.error.message}`, json.error.code);
+      return json.result as T;
     }
-    lastAt = Date.now();
-    id += 1;
-    const res = await opts.fetch(url, {
-      method: "POST",
-      headers: { "content-type": "application/json" },
-      body: JSON.stringify({ jsonrpc: "2.0", id, method, params }),
-    });
-    requestCount += 1;
-    credits += table[method] ?? 1;
-    if (!res.ok) throw new HeliusError(`Helius HTTP ${res.status} (${method})`, res.status);
-    const json = (await res.json()) as { result?: T; error?: { code: number; message: string } };
-    if (json.error) throw new HeliusError(`Helius RPC ${json.error.code}: ${json.error.message}`, json.error.code);
-    return json.result as T;
   }
 
   const client: HeliusClient = {
@@ -150,10 +194,28 @@ export function createHeliusClient(opts: HeliusOptions): HeliusClient {
       return rpc<SignatureInfo[]>("getSignaturesForAddress", [address, params]);
     },
     getTransaction(signature) {
-      return rpc<ParsedTransaction | null>("getTransaction", [
-        signature,
-        { encoding: "jsonParsed", maxSupportedTransactionVersion: 0, commitment: "confirmed" },
-      ]);
+      return client.getTransactionLenient(signature).then((r) => r.tx);
+    },
+    async getTransactionLenient(signature) {
+      let unsupported = false;
+      for (const version of TX_VERSION_ATTEMPTS) {
+        try {
+          const tx = await rpc<ParsedTransaction | null>("getTransaction", [
+            signature,
+            { encoding: "jsonParsed", maxSupportedTransactionVersion: version, commitment: "confirmed" },
+          ]);
+          return { tx, skipped: false };
+        } catch (e) {
+          if (e instanceof HeliusError && e.code === TX_VERSION_UNSUPPORTED_CODE) {
+            unsupported = true;
+            continue; // essayer la version suivante
+          }
+          throw e; // toute autre erreur reste une erreur
+        }
+      }
+      // -32015 persistant : ignorer cette transaction, sans jamais la faire échouer silencieusement.
+      if (unsupported) return { tx: null, skipped: true };
+      return { tx: null, skipped: false }; // inatteignable : la boucle lève ou réussit
     },
     async getEarlyBuyers(mint, n = 50, o = {}) {
       const pageSize = o.pageSize ?? 1000;
@@ -188,10 +250,12 @@ export function createHeliusClient(opts: HeliusOptions): HeliusClient {
       const buyers: EarlyBuyer[] = [];
       const seen = new Set<string>();
       let read = 0;
+      let skippedTx = 0;
       for (const sig of candidates) {
         if (buyers.length >= n) break;
-        const tx = await client.getTransaction(sig.signature);
+        const { tx, skipped } = await client.getTransactionLenient(sig.signature);
         read += 1;
+        if (skipped) skippedTx += 1;
         if (!tx || !tx.meta || tx.meta.err) continue;
         for (const b of extractBuyers(tx, mint)) {
           if (seen.has(b.wallet)) continue;
@@ -207,7 +271,7 @@ export function createHeliusClient(opts: HeliusOptions): HeliusClient {
           if (buyers.length >= n) break;
         }
       }
-      return { mint, buyers, signaturesScanned: scanned, transactionsRead: read, truncated, credits: credits - before0 };
+      return { mint, buyers, signaturesScanned: scanned, transactionsRead: read, truncated, skippedTx, credits: credits - before0 };
     },
     async getWalletTokenHistory(address, o = {}) {
       const limit = Math.min(o.limit ?? 20, 100);
@@ -215,10 +279,12 @@ export function createHeliusClient(opts: HeliusOptions): HeliusClient {
       const sigs = await client.getSignaturesForAddress(address, { limit });
       const events: WalletTokenEvent[] = [];
       let read = 0;
+      let skippedTx = 0;
       for (const s of sigs) {
         if (s.err) continue;
-        const tx = await client.getTransaction(s.signature);
+        const { tx, skipped } = await client.getTransactionLenient(s.signature);
         read += 1;
+        if (skipped) skippedTx += 1;
         if (!tx || !tx.meta || tx.meta.err) continue;
         for (const d of tokenDeltas(tx)) {
           if (d.owner !== address || d.delta === 0n) continue;
@@ -231,7 +297,7 @@ export function createHeliusClient(opts: HeliusOptions): HeliusClient {
           });
         }
       }
-      return { address, events, signaturesScanned: sigs.length, transactionsRead: read, credits: credits - before0 };
+      return { address, events, signaturesScanned: sigs.length, transactionsRead: read, skippedTx, credits: credits - before0 };
     },
   };
   return client;

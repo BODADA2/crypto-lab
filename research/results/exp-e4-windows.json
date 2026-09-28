@@ -1,0 +1,69 @@
+{
+  "experiment": "E4",
+  "hypothesis_id": "H-S1-E4",
+  "universe": "n/a (data-quality, pas de split)",
+  "question": "Les 5 définitions de fenêtres early buyers sont-elles matériellement différentes ?",
+  "leakage_status": "PASS",
+  "leakage_detail": "Aucun label futur, aucun modèle. Fenêtres = filtres du set pré-t0 (blockTimeMs <= t0ms, même règle que snapshot.ts). first_block/first_5_slots retournent [] si aucun slot non-null (documenté dans windows.ts). Lecture seule : data/earlybuyers/ et data/history/ non modifiés ; aucun appel Helius (l'agent backfill écrit en parallèle — fichiers lus en l'état).",
+  "data_bias": "n/a (pas de mesure de performance)",
+  "n_mint_files": 70,
+  "n_mints_with_t0_and_history": 61,
+  "n_empty_pre_t0_set": 14,
+  "n_no_slot_info": 0,
+  "dropped_no_history_or_t0": 9,
+  "per_window": {
+    "pre_t0_set": {
+      "n": 47,
+      "mean_size": 41.87234042553192,
+      "median_size": 50,
+      "min_size": 2,
+      "max_size": 50
+    },
+    "first_block": {
+      "n": 47,
+      "mean_size": 3.276595744680851,
+      "median_size": 3,
+      "min_size": 1,
+      "max_size": 10
+    },
+    "first_5_slots": {
+      "n": 47,
+      "mean_size": 7.404255319148936,
+      "median_size": 6,
+      "min_size": 1,
+      "max_size": 32
+    },
+    "first_60s": {
+      "n": 47,
+      "mean_size": 38.148936170212764,
+      "median_size": 50,
+      "min_size": 2,
+      "max_size": 50
+    },
+    "first_300s": {
+      "n": 47,
+      "mean_size": 40.61702127659574,
+      "median_size": 50,
+      "min_size": 2,
+      "max_size": 50
+    }
+  },
+  "mean_jaccard_pairs": {
+    "pre_t0_set__first_block": 0.10095006849194266,
+    "pre_t0_set__first_5_slots": 0.24085902516074542,
+    "pre_t0_set__first_60s": 0.9235267569310122,
+    "pre_t0_set__first_300s": 0.9748936170212766,
+    "first_block__first_5_slots": 0.5461814827576306,
+    "first_block__first_60s": 0.11411736461111405,
+    "first_block__first_300s": 0.10346214578662863,
+    "first_5_slots__first_60s": 0.2558417259218385,
+    "first_5_slots__first_300s": 0.24337110245543145,
+    "first_60s__first_300s": 0.9380996832338184
+  },
+  "first_block_share_of_pre_t0": {
+    "n": 47,
+    "mean": 0.10095006849194266,
+    "median": 0.06
+  },
+  "cost_sensitivity": "non évaluée (data-quality, aucune stratégie)"
+}

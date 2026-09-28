@@ -1,0 +1,645 @@
+{
+  "generated_at": "2026-09-28T14:00:52.891Z",
+  "universe": "discovery",
+  "excluded": [
+    "SKHY (dataError)"
+  ],
+  "note": "tokens chauds uniquement — borne optimiste",
+  "n_mint_sets": 34,
+  "n_distinct_wallets": 886,
+  "n_recurrent_wallets_overall": 76,
+  "mints_with_any_recurrent_as_of_t0": 24,
+  "mean_recurrent_frac": 0.21387414056531706,
+  "e1_shared_outcome_corr": {
+    "nPairs": 258,
+    "nMintsInvolved": 27,
+    "nPairsY1h": 68,
+    "meanAbsDiffY1h": 2.2808785117610295,
+    "permP_Y1h": 0.7866066966516742,
+    "nPairsSurv": 107,
+    "fracSameSurv": 0.514018691588785,
+    "permP_surv": 0.5892053973013494,
+    "cohorts": [
+      {
+        "wallet": "27HFmP7ccLadGswvQfvea4o3juLw75cPF4V6jWpHM3MX",
+        "mints": [
+          "1HchZjXpgU2pceX24cmRsfjtbf6TwErspscg9hhpump",
+          "2rq5V6s3vL7L8D5BujT7N5d5dgWVRAGr8tEqRivepump",
+          "3JUdcZQuPJpFZgHp7FJqTgTnkGX2XHaAa1MWM7Zwpump",
+          "3Pjh1SpTHQ4TmEf9pA6X7MZmcBDynKoLFA9pA2uFpump",
+          "457d4dJsbDBowCphtVmKH7JiJWhsRaw9nG76GrBKpump",
+          "59ghWWYRg8wrWLkTPkt2G1CE3WUpxZZ1G5PPdZdwpump",
+          "5b9xTUBEPTWBHhKNRp7WWP5FDEtDyDBEv9P2yij7pump",
+          "8DNoP9vWPob5hXMxRa12sbgmmQ5pgvcHwbwF4wnGpump",
+          "9MWLaLr8e51RV9RACbq5R9VBGTuUaPhuvwxFcW6fpump",
+          "CBVxspGhpr97HGYr1CbNYKDnT36Dxw3mMz1FfsvApump",
+          "CkhPp8pkWz2XcymjodzDherKj2T6ZqmzQ2UocUkypump",
+          "Cq8qMTPkwfNMUFonqEWe6BLmL7E4TVtZKyHp9VNopump",
+          "CuLtK7Yd1pXkS4YroD5ffzrSvoiVhQrUFhUXBxVtpump",
+          "Dimo67L6c5qCe7nuXz925EzjbYNpxpL8HihGQPNmpump",
+          "GEXjq9Tb7perRs6fwBmuNZL5QAEsS2AWrGeZNBYBpump",
+          "HhPX98NjU6TV4tRZWu977VxQDnQfjGPUxqQXgpa8pump",
+          "TQxoSmrSPuBaGZn35q1jz4SVdjstJB5YazgSGXHpump",
+          "XLYAb5WSqPmPJdcVY9PtSB7fJ55C1ztri29u8D6pump",
+          "XU438yQcHEf5bGAZ3pHqXhbZPqotoapdanjnhj1pump",
+          "eATcxSiZrx3nmw46cUEjtB9HFEk17YafAJfzssBpump",
+          "rZPtVi9pBxupE6Z3AiziTw24ZTTASL51fbT6xCopump",
+          "z3tA19ndchhhJwCS78j19b338NCyaC9dQ3azrMtpump"
+        ],
+        "surv": [
+          false,
+          null,
+          true,
+          false,
+          false,
+          null,
+          false,
+          null,
+          null,
+          false,
+          false,
+          false,
+          false,
+          null,
+          false,
+          null,
+          true,
+          true,
+          true,
+          false,
+          null,
+          true
+        ]
+      },
+      {
+        "wallet": "GoU9mTtFwQyCSqUyqv7mtA7FSQoqftdavhztXExtvQgb",
+        "mints": [
+          "1HchZjXpgU2pceX24cmRsfjtbf6TwErspscg9hhpump",
+          "2rq5V6s3vL7L8D5BujT7N5d5dgWVRAGr8tEqRivepump",
+          "3Pjh1SpTHQ4TmEf9pA6X7MZmcBDynKoLFA9pA2uFpump",
+          "457d4dJsbDBowCphtVmKH7JiJWhsRaw9nG76GrBKpump",
+          "59ghWWYRg8wrWLkTPkt2G1CE3WUpxZZ1G5PPdZdwpump",
+          "5b9xTUBEPTWBHhKNRp7WWP5FDEtDyDBEv9P2yij7pump",
+          "8DNoP9vWPob5hXMxRa12sbgmmQ5pgvcHwbwF4wnGpump",
+          "9MWLaLr8e51RV9RACbq5R9VBGTuUaPhuvwxFcW6fpump",
+          "CkhPp8pkWz2XcymjodzDherKj2T6ZqmzQ2UocUkypump",
+          "Cq8qMTPkwfNMUFonqEWe6BLmL7E4TVtZKyHp9VNopump",
+          "CuLtK7Yd1pXkS4YroD5ffzrSvoiVhQrUFhUXBxVtpump",
+          "FxChPUbJp9BhcphBFG8s225A821pbdfFyjNyRbyMpump",
+          "GEXjq9Tb7perRs6fwBmuNZL5QAEsS2AWrGeZNBYBpump",
+          "HhPX98NjU6TV4tRZWu977VxQDnQfjGPUxqQXgpa8pump",
+          "TQxoSmrSPuBaGZn35q1jz4SVdjstJB5YazgSGXHpump",
+          "XLYAb5WSqPmPJdcVY9PtSB7fJ55C1ztri29u8D6pump",
+          "XU438yQcHEf5bGAZ3pHqXhbZPqotoapdanjnhj1pump",
+          "eATcxSiZrx3nmw46cUEjtB9HFEk17YafAJfzssBpump",
+          "rZPtVi9pBxupE6Z3AiziTw24ZTTASL51fbT6xCopump"
+        ],
+        "surv": [
+          false,
+          null,
+          false,
+          false,
+          null,
+          false,
+          null,
+          null,
+          false,
+          false,
+          false,
+          null,
+          false,
+          null,
+          true,
+          true,
+          true,
+          false,
+          null
+        ]
+      },
+      {
+        "wallet": "3KcPSJ8ouE7H1feoWHmhDwXhLnXhpxP6R6713uytFmBM",
+        "mints": [
+          "1HchZjXpgU2pceX24cmRsfjtbf6TwErspscg9hhpump",
+          "3JUdcZQuPJpFZgHp7FJqTgTnkGX2XHaAa1MWM7Zwpump",
+          "3Pjh1SpTHQ4TmEf9pA6X7MZmcBDynKoLFA9pA2uFpump",
+          "457d4dJsbDBowCphtVmKH7JiJWhsRaw9nG76GrBKpump",
+          "59ghWWYRg8wrWLkTPkt2G1CE3WUpxZZ1G5PPdZdwpump",
+          "5b9xTUBEPTWBHhKNRp7WWP5FDEtDyDBEv9P2yij7pump",
+          "8DNoP9vWPob5hXMxRa12sbgmmQ5pgvcHwbwF4wnGpump",
+          "CBVxspGhpr97HGYr1CbNYKDnT36Dxw3mMz1FfsvApump",
+          "CkhPp8pkWz2XcymjodzDherKj2T6ZqmzQ2UocUkypump",
+          "Cq8qMTPkwfNMUFonqEWe6BLmL7E4TVtZKyHp9VNopump",
+          "CuLtK7Yd1pXkS4YroD5ffzrSvoiVhQrUFhUXBxVtpump",
+          "GEXjq9Tb7perRs6fwBmuNZL5QAEsS2AWrGeZNBYBpump",
+          "HhPX98NjU6TV4tRZWu977VxQDnQfjGPUxqQXgpa8pump",
+          "TQxoSmrSPuBaGZn35q1jz4SVdjstJB5YazgSGXHpump",
+          "XLYAb5WSqPmPJdcVY9PtSB7fJ55C1ztri29u8D6pump",
+          "XU438yQcHEf5bGAZ3pHqXhbZPqotoapdanjnhj1pump",
+          "eATcxSiZrx3nmw46cUEjtB9HFEk17YafAJfzssBpump",
+          "z3tA19ndchhhJwCS78j19b338NCyaC9dQ3azrMtpump"
+        ],
+        "surv": [
+          false,
+          true,
+          false,
+          false,
+          null,
+          false,
+          null,
+          false,
+          false,
+          false,
+          false,
+          false,
+          null,
+          true,
+          true,
+          true,
+          false,
+          true
+        ]
+      },
+      {
+        "wallet": "5i8BTsQAtSTXu73cvW8SdGYxi4fWhmfhw3PGL7CXRhz9",
+        "mints": [
+          "1HchZjXpgU2pceX24cmRsfjtbf6TwErspscg9hhpump",
+          "2rq5V6s3vL7L8D5BujT7N5d5dgWVRAGr8tEqRivepump",
+          "3JUdcZQuPJpFZgHp7FJqTgTnkGX2XHaAa1MWM7Zwpump",
+          "3Pjh1SpTHQ4TmEf9pA6X7MZmcBDynKoLFA9pA2uFpump",
+          "457d4dJsbDBowCphtVmKH7JiJWhsRaw9nG76GrBKpump",
+          "59ghWWYRg8wrWLkTPkt2G1CE3WUpxZZ1G5PPdZdwpump",
+          "5b9xTUBEPTWBHhKNRp7WWP5FDEtDyDBEv9P2yij7pump",
+          "9MWLaLr8e51RV9RACbq5R9VBGTuUaPhuvwxFcW6fpump",
+          "CkhPp8pkWz2XcymjodzDherKj2T6ZqmzQ2UocUkypump",
+          "Cq8qMTPkwfNMUFonqEWe6BLmL7E4TVtZKyHp9VNopump",
+          "CuLtK7Yd1pXkS4YroD5ffzrSvoiVhQrUFhUXBxVtpump",
+          "FxChPUbJp9BhcphBFG8s225A821pbdfFyjNyRbyMpump",
+          "GEXjq9Tb7perRs6fwBmuNZL5QAEsS2AWrGeZNBYBpump",
+          "XLYAb5WSqPmPJdcVY9PtSB7fJ55C1ztri29u8D6pump",
+          "eATcxSiZrx3nmw46cUEjtB9HFEk17YafAJfzssBpump",
+          "rZPtVi9pBxupE6Z3AiziTw24ZTTASL51fbT6xCopump",
+          "z3tA19ndchhhJwCS78j19b338NCyaC9dQ3azrMtpump"
+        ],
+        "surv": [
+          false,
+          null,
+          true,
+          false,
+          false,
+          null,
+          false,
+          null,
+          false,
+          false,
+          false,
+          null,
+          false,
+          true,
+          false,
+          null,
+          true
+        ]
+      },
+      {
+        "wallet": "7s4woBusAnVVDhy2ny7nBu62DBvZncPXuaYUBZysVKSY",
+        "mints": [
+          "2rq5V6s3vL7L8D5BujT7N5d5dgWVRAGr8tEqRivepump",
+          "3JUdcZQuPJpFZgHp7FJqTgTnkGX2XHaAa1MWM7Zwpump",
+          "3Pjh1SpTHQ4TmEf9pA6X7MZmcBDynKoLFA9pA2uFpump",
+          "457d4dJsbDBowCphtVmKH7JiJWhsRaw9nG76GrBKpump",
+          "59ghWWYRg8wrWLkTPkt2G1CE3WUpxZZ1G5PPdZdwpump",
+          "9MWLaLr8e51RV9RACbq5R9VBGTuUaPhuvwxFcW6fpump",
+          "CBVxspGhpr97HGYr1CbNYKDnT36Dxw3mMz1FfsvApump",
+          "CkhPp8pkWz2XcymjodzDherKj2T6ZqmzQ2UocUkypump",
+          "CuLtK7Yd1pXkS4YroD5ffzrSvoiVhQrUFhUXBxVtpump",
+          "Dimo67L6c5qCe7nuXz925EzjbYNpxpL8HihGQPNmpump",
+          "FxChPUbJp9BhcphBFG8s225A821pbdfFyjNyRbyMpump",
+          "GEXjq9Tb7perRs6fwBmuNZL5QAEsS2AWrGeZNBYBpump",
+          "HhPX98NjU6TV4tRZWu977VxQDnQfjGPUxqQXgpa8pump",
+          "XLYAb5WSqPmPJdcVY9PtSB7fJ55C1ztri29u8D6pump",
+          "eATcxSiZrx3nmw46cUEjtB9HFEk17YafAJfzssBpump",
+          "rZPtVi9pBxupE6Z3AiziTw24ZTTASL51fbT6xCopump",
+          "z3tA19ndchhhJwCS78j19b338NCyaC9dQ3azrMtpump"
+        ],
+        "surv": [
+          null,
+          true,
+          false,
+          false,
+          null,
+          null,
+          false,
+          false,
+          false,
+          null,
+          null,
+          false,
+          null,
+          true,
+          false,
+          null,
+          true
+        ]
+      },
+      {
+        "wallet": "4Zxsnmyd9naMqipfvd1YKaHThVVwqSTahH21EaTBjrDK",
+        "mints": [
+          "2rq5V6s3vL7L8D5BujT7N5d5dgWVRAGr8tEqRivepump",
+          "3Pjh1SpTHQ4TmEf9pA6X7MZmcBDynKoLFA9pA2uFpump",
+          "457d4dJsbDBowCphtVmKH7JiJWhsRaw9nG76GrBKpump",
+          "59ghWWYRg8wrWLkTPkt2G1CE3WUpxZZ1G5PPdZdwpump",
+          "5b9xTUBEPTWBHhKNRp7WWP5FDEtDyDBEv9P2yij7pump",
+          "CBVxspGhpr97HGYr1CbNYKDnT36Dxw3mMz1FfsvApump",
+          "CkhPp8pkWz2XcymjodzDherKj2T6ZqmzQ2UocUkypump",
+          "Cq8qMTPkwfNMUFonqEWe6BLmL7E4TVtZKyHp9VNopump",
+          "CuLtK7Yd1pXkS4YroD5ffzrSvoiVhQrUFhUXBxVtpump",
+          "GEXjq9Tb7perRs6fwBmuNZL5QAEsS2AWrGeZNBYBpump",
+          "TQxoSmrSPuBaGZn35q1jz4SVdjstJB5YazgSGXHpump",
+          "XLYAb5WSqPmPJdcVY9PtSB7fJ55C1ztri29u8D6pump",
+          "XU438yQcHEf5bGAZ3pHqXhbZPqotoapdanjnhj1pump",
+          "eATcxSiZrx3nmw46cUEjtB9HFEk17YafAJfzssBpump",
+          "rZPtVi9pBxupE6Z3AiziTw24ZTTASL51fbT6xCopump",
+          "z3tA19ndchhhJwCS78j19b338NCyaC9dQ3azrMtpump"
+        ],
+        "surv": [
+          null,
+          false,
+          false,
+          null,
+          false,
+          false,
+          false,
+          false,
+          false,
+          false,
+          true,
+          true,
+          true,
+          false,
+          null,
+          true
+        ]
+      },
+      {
+        "wallet": "5zWxvqhrow6np1MWujaJ63V76DuDQ5pnKCh6UGnEUT3K",
+        "mints": [
+          "1HchZjXpgU2pceX24cmRsfjtbf6TwErspscg9hhpump",
+          "2rq5V6s3vL7L8D5BujT7N5d5dgWVRAGr8tEqRivepump",
+          "3Pjh1SpTHQ4TmEf9pA6X7MZmcBDynKoLFA9pA2uFpump",
+          "457d4dJsbDBowCphtVmKH7JiJWhsRaw9nG76GrBKpump",
+          "59ghWWYRg8wrWLkTPkt2G1CE3WUpxZZ1G5PPdZdwpump",
+          "CkhPp8pkWz2XcymjodzDherKj2T6ZqmzQ2UocUkypump",
+          "Cq8qMTPkwfNMUFonqEWe6BLmL7E4TVtZKyHp9VNopump",
+          "CuLtK7Yd1pXkS4YroD5ffzrSvoiVhQrUFhUXBxVtpump",
+          "GEXjq9Tb7perRs6fwBmuNZL5QAEsS2AWrGeZNBYBpump",
+          "XLYAb5WSqPmPJdcVY9PtSB7fJ55C1ztri29u8D6pump",
+          "XU438yQcHEf5bGAZ3pHqXhbZPqotoapdanjnhj1pump",
+          "eATcxSiZrx3nmw46cUEjtB9HFEk17YafAJfzssBpump",
+          "rZPtVi9pBxupE6Z3AiziTw24ZTTASL51fbT6xCopump"
+        ],
+        "surv": [
+          false,
+          null,
+          false,
+          false,
+          null,
+          false,
+          false,
+          false,
+          false,
+          true,
+          true,
+          false,
+          null
+        ]
+      },
+      {
+        "wallet": "EwujkMx5WPLT2ndQ851ewXATYAqVJ8YYtwP9WeaaLfM9",
+        "mints": [
+          "1HchZjXpgU2pceX24cmRsfjtbf6TwErspscg9hhpump",
+          "2rq5V6s3vL7L8D5BujT7N5d5dgWVRAGr8tEqRivepump",
+          "3Pjh1SpTHQ4TmEf9pA6X7MZmcBDynKoLFA9pA2uFpump",
+          "457d4dJsbDBowCphtVmKH7JiJWhsRaw9nG76GrBKpump",
+          "59ghWWYRg8wrWLkTPkt2G1CE3WUpxZZ1G5PPdZdwpump",
+          "5b9xTUBEPTWBHhKNRp7WWP5FDEtDyDBEv9P2yij7pump",
+          "CBVxspGhpr97HGYr1CbNYKDnT36Dxw3mMz1FfsvApump",
+          "CkhPp8pkWz2XcymjodzDherKj2T6ZqmzQ2UocUkypump",
+          "GEXjq9Tb7perRs6fwBmuNZL5QAEsS2AWrGeZNBYBpump",
+          "TQxoSmrSPuBaGZn35q1jz4SVdjstJB5YazgSGXHpump",
+          "XLYAb5WSqPmPJdcVY9PtSB7fJ55C1ztri29u8D6pump",
+          "eATcxSiZrx3nmw46cUEjtB9HFEk17YafAJfzssBpump",
+          "z3tA19ndchhhJwCS78j19b338NCyaC9dQ3azrMtpump"
+        ],
+        "surv": [
+          false,
+          null,
+          false,
+          false,
+          null,
+          false,
+          false,
+          false,
+          false,
+          true,
+          true,
+          false,
+          true
+        ]
+      },
+      {
+        "wallet": "5KdhDT61wug1nYrcDbpW2jx18zbwozyFuexZxGKopuG3",
+        "mints": [
+          "2rq5V6s3vL7L8D5BujT7N5d5dgWVRAGr8tEqRivepump",
+          "3Pjh1SpTHQ4TmEf9pA6X7MZmcBDynKoLFA9pA2uFpump",
+          "457d4dJsbDBowCphtVmKH7JiJWhsRaw9nG76GrBKpump",
+          "9MWLaLr8e51RV9RACbq5R9VBGTuUaPhuvwxFcW6fpump",
+          "CkhPp8pkWz2XcymjodzDherKj2T6ZqmzQ2UocUkypump",
+          "CuLtK7Yd1pXkS4YroD5ffzrSvoiVhQrUFhUXBxVtpump",
+          "Dimo67L6c5qCe7nuXz925EzjbYNpxpL8HihGQPNmpump",
+          "FxChPUbJp9BhcphBFG8s225A821pbdfFyjNyRbyMpump",
+          "GEXjq9Tb7perRs6fwBmuNZL5QAEsS2AWrGeZNBYBpump",
+          "HhPX98NjU6TV4tRZWu977VxQDnQfjGPUxqQXgpa8pump",
+          "eATcxSiZrx3nmw46cUEjtB9HFEk17YafAJfzssBpump",
+          "rZPtVi9pBxupE6Z3AiziTw24ZTTASL51fbT6xCopump",
+          "z3tA19ndchhhJwCS78j19b338NCyaC9dQ3azrMtpump"
+        ],
+        "surv": [
+          null,
+          false,
+          false,
+          null,
+          false,
+          false,
+          null,
+          null,
+          false,
+          null,
+          false,
+          null,
+          true
+        ]
+      },
+      {
+        "wallet": "Gui9qVSKtzCn1KxzqpEYaACY9iB8fymjhRY5wRb6tWJP",
+        "mints": [
+          "2rq5V6s3vL7L8D5BujT7N5d5dgWVRAGr8tEqRivepump",
+          "3Pjh1SpTHQ4TmEf9pA6X7MZmcBDynKoLFA9pA2uFpump",
+          "457d4dJsbDBowCphtVmKH7JiJWhsRaw9nG76GrBKpump",
+          "9MWLaLr8e51RV9RACbq5R9VBGTuUaPhuvwxFcW6fpump",
+          "CkhPp8pkWz2XcymjodzDherKj2T6ZqmzQ2UocUkypump",
+          "CuLtK7Yd1pXkS4YroD5ffzrSvoiVhQrUFhUXBxVtpump",
+          "Dimo67L6c5qCe7nuXz925EzjbYNpxpL8HihGQPNmpump",
+          "FxChPUbJp9BhcphBFG8s225A821pbdfFyjNyRbyMpump",
+          "GEXjq9Tb7perRs6fwBmuNZL5QAEsS2AWrGeZNBYBpump",
+          "HhPX98NjU6TV4tRZWu977VxQDnQfjGPUxqQXgpa8pump",
+          "eATcxSiZrx3nmw46cUEjtB9HFEk17YafAJfzssBpump",
+          "rZPtVi9pBxupE6Z3AiziTw24ZTTASL51fbT6xCopump",
+          "z3tA19ndchhhJwCS78j19b338NCyaC9dQ3azrMtpump"
+        ],
+        "surv": [
+          null,
+          false,
+          false,
+          null,
+          false,
+          false,
+          null,
+          null,
+          false,
+          null,
+          false,
+          null,
+          true
+        ]
+      },
+      {
+        "wallet": "Fn9n3ftUzjhcmoLwXbTqJdATzamCp3xPEu4LmLSS8ELr",
+        "mints": [
+          "3Pjh1SpTHQ4TmEf9pA6X7MZmcBDynKoLFA9pA2uFpump",
+          "59ghWWYRg8wrWLkTPkt2G1CE3WUpxZZ1G5PPdZdwpump",
+          "8DNoP9vWPob5hXMxRa12sbgmmQ5pgvcHwbwF4wnGpump",
+          "CBVxspGhpr97HGYr1CbNYKDnT36Dxw3mMz1FfsvApump",
+          "Cq8qMTPkwfNMUFonqEWe6BLmL7E4TVtZKyHp9VNopump",
+          "Dimo67L6c5qCe7nuXz925EzjbYNpxpL8HihGQPNmpump",
+          "GEXjq9Tb7perRs6fwBmuNZL5QAEsS2AWrGeZNBYBpump",
+          "HhPX98NjU6TV4tRZWu977VxQDnQfjGPUxqQXgpa8pump",
+          "TQxoSmrSPuBaGZn35q1jz4SVdjstJB5YazgSGXHpump",
+          "XU438yQcHEf5bGAZ3pHqXhbZPqotoapdanjnhj1pump",
+          "eATcxSiZrx3nmw46cUEjtB9HFEk17YafAJfzssBpump",
+          "rZPtVi9pBxupE6Z3AiziTw24ZTTASL51fbT6xCopump",
+          "z3tA19ndchhhJwCS78j19b338NCyaC9dQ3azrMtpump"
+        ],
+        "surv": [
+          false,
+          null,
+          null,
+          false,
+          false,
+          null,
+          false,
+          null,
+          true,
+          true,
+          false,
+          null,
+          true
+        ]
+      },
+      {
+        "wallet": "8DDA1enAgjGCDo3efdcGLwkPaWQ1MBvxSBQ7Py2tmmUv",
+        "mints": [
+          "1HchZjXpgU2pceX24cmRsfjtbf6TwErspscg9hhpump",
+          "3Pjh1SpTHQ4TmEf9pA6X7MZmcBDynKoLFA9pA2uFpump",
+          "59ghWWYRg8wrWLkTPkt2G1CE3WUpxZZ1G5PPdZdwpump",
+          "5b9xTUBEPTWBHhKNRp7WWP5FDEtDyDBEv9P2yij7pump",
+          "8DNoP9vWPob5hXMxRa12sbgmmQ5pgvcHwbwF4wnGpump",
+          "CBVxspGhpr97HGYr1CbNYKDnT36Dxw3mMz1FfsvApump",
+          "CkhPp8pkWz2XcymjodzDherKj2T6ZqmzQ2UocUkypump",
+          "Cq8qMTPkwfNMUFonqEWe6BLmL7E4TVtZKyHp9VNopump",
+          "HhPX98NjU6TV4tRZWu977VxQDnQfjGPUxqQXgpa8pump",
+          "TQxoSmrSPuBaGZn35q1jz4SVdjstJB5YazgSGXHpump",
+          "XLYAb5WSqPmPJdcVY9PtSB7fJ55C1ztri29u8D6pump",
+          "XU438yQcHEf5bGAZ3pHqXhbZPqotoapdanjnhj1pump"
+        ],
+        "surv": [
+          false,
+          false,
+          null,
+          false,
+          null,
+          false,
+          false,
+          false,
+          null,
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "wallet": "DFHkArJt4K7jZHUyRJqz3w6DeyzhszTuy8e5gikzzyMY",
+        "mints": [
+          "2rq5V6s3vL7L8D5BujT7N5d5dgWVRAGr8tEqRivepump",
+          "3Pjh1SpTHQ4TmEf9pA6X7MZmcBDynKoLFA9pA2uFpump",
+          "457d4dJsbDBowCphtVmKH7JiJWhsRaw9nG76GrBKpump",
+          "59ghWWYRg8wrWLkTPkt2G1CE3WUpxZZ1G5PPdZdwpump",
+          "CkhPp8pkWz2XcymjodzDherKj2T6ZqmzQ2UocUkypump",
+          "Cq8qMTPkwfNMUFonqEWe6BLmL7E4TVtZKyHp9VNopump",
+          "CuLtK7Yd1pXkS4YroD5ffzrSvoiVhQrUFhUXBxVtpump",
+          "GEXjq9Tb7perRs6fwBmuNZL5QAEsS2AWrGeZNBYBpump",
+          "XLYAb5WSqPmPJdcVY9PtSB7fJ55C1ztri29u8D6pump",
+          "XU438yQcHEf5bGAZ3pHqXhbZPqotoapdanjnhj1pump",
+          "eATcxSiZrx3nmw46cUEjtB9HFEk17YafAJfzssBpump",
+          "rZPtVi9pBxupE6Z3AiziTw24ZTTASL51fbT6xCopump"
+        ],
+        "surv": [
+          null,
+          false,
+          false,
+          null,
+          false,
+          false,
+          false,
+          false,
+          true,
+          true,
+          false,
+          null
+        ]
+      },
+      {
+        "wallet": "5W4TAAdV95H8s6JWZU1n3emGmutUt6U7F89sUZo3k1Bv",
+        "mints": [
+          "3Pjh1SpTHQ4TmEf9pA6X7MZmcBDynKoLFA9pA2uFpump",
+          "59ghWWYRg8wrWLkTPkt2G1CE3WUpxZZ1G5PPdZdwpump",
+          "5b9xTUBEPTWBHhKNRp7WWP5FDEtDyDBEv9P2yij7pump",
+          "8DNoP9vWPob5hXMxRa12sbgmmQ5pgvcHwbwF4wnGpump",
+          "CBVxspGhpr97HGYr1CbNYKDnT36Dxw3mMz1FfsvApump",
+          "CkhPp8pkWz2XcymjodzDherKj2T6ZqmzQ2UocUkypump",
+          "Cq8qMTPkwfNMUFonqEWe6BLmL7E4TVtZKyHp9VNopump",
+          "HhPX98NjU6TV4tRZWu977VxQDnQfjGPUxqQXgpa8pump",
+          "TQxoSmrSPuBaGZn35q1jz4SVdjstJB5YazgSGXHpump",
+          "XLYAb5WSqPmPJdcVY9PtSB7fJ55C1ztri29u8D6pump",
+          "XU438yQcHEf5bGAZ3pHqXhbZPqotoapdanjnhj1pump"
+        ],
+        "surv": [
+          false,
+          null,
+          false,
+          null,
+          false,
+          false,
+          false,
+          null,
+          true,
+          true,
+          true
+        ]
+      },
+      {
+        "wallet": "8N4QDR8m54PuV2KgHSu39QRHrNooNEK667hBeKVokZoc",
+        "mints": [
+          "1HchZjXpgU2pceX24cmRsfjtbf6TwErspscg9hhpump",
+          "2rq5V6s3vL7L8D5BujT7N5d5dgWVRAGr8tEqRivepump",
+          "3JUdcZQuPJpFZgHp7FJqTgTnkGX2XHaAa1MWM7Zwpump",
+          "457d4dJsbDBowCphtVmKH7JiJWhsRaw9nG76GrBKpump",
+          "5b9xTUBEPTWBHhKNRp7WWP5FDEtDyDBEv9P2yij7pump",
+          "9MWLaLr8e51RV9RACbq5R9VBGTuUaPhuvwxFcW6fpump",
+          "CkhPp8pkWz2XcymjodzDherKj2T6ZqmzQ2UocUkypump",
+          "CuLtK7Yd1pXkS4YroD5ffzrSvoiVhQrUFhUXBxVtpump",
+          "XLYAb5WSqPmPJdcVY9PtSB7fJ55C1ztri29u8D6pump"
+        ],
+        "surv": [
+          false,
+          null,
+          true,
+          false,
+          false,
+          null,
+          false,
+          false,
+          true
+        ]
+      }
+    ]
+  },
+  "e2_wallet_quality": {
+    "n_mints_with_quality_and_y1h": 12,
+    "n_mints_without_any_past_label": 11,
+    "spearman_quality_y1h": 0.21678321678321677,
+    "permutation_p_ge": 0.24237881059470265,
+    "median_meanWalletQuality": 0.3381373256373257,
+    "deciles": [
+      {
+        "decile": 0,
+        "n": 1,
+        "medianY1h": -0.24261275272161753
+      },
+      {
+        "decile": 1,
+        "n": 1,
+        "medianY1h": -0.046282619399310776
+      },
+      {
+        "decile": 2,
+        "n": 1,
+        "medianY1h": -0.9941362660944206
+      },
+      {
+        "decile": 3,
+        "n": 1,
+        "medianY1h": 2.747716894977169
+      },
+      {
+        "decile": 4,
+        "n": 2,
+        "medianY1h": 1.7489842807408618
+      },
+      {
+        "decile": 5,
+        "n": 1,
+        "medianY1h": 0.09786641929499051
+      },
+      {
+        "decile": 6,
+        "n": 1,
+        "medianY1h": 4.136070110701106
+      },
+      {
+        "decile": 7,
+        "n": 1,
+        "medianY1h": 3.1335636154289004
+      },
+      {
+        "decile": 8,
+        "n": 1,
+        "medianY1h": 0.12581453634085227
+      },
+      {
+        "decile": 9,
+        "n": 2,
+        "medianY1h": -0.4470073086159485
+      }
+    ],
+    "cohort_stability": [
+      {
+        "name": "early",
+        "n": 7,
+        "spearman": -0.07142857142857142
+      },
+      {
+        "name": "late",
+        "n": 5,
+        "spearman": 0.3
+      }
+    ],
+    "entity_level": {
+      "n": 12,
+      "spearman_entityQuality_y1h": 0
+    }
+  },
+  "leakage": {
+    "status": "PASS",
+    "detail": "Sets pré-t0 stricts (blockTime*1000<=t0ms). Récurrence as-of-t0 : seuls mints avec t0'<t0. Qualité wallet calculée uniquement sur mints passés labellisés (survival_50_24h). Clustering avec buildPairOverlap(t0ms, excludeMint). Aucune donnée post-t0, aucun label futur dans les features. Discovery uniquement."
+  }
+}

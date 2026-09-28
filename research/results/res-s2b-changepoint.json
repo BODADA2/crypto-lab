@@ -1,0 +1,604 @@
+{
+  "experiment": "S2B-N-CHANGEPOINT",
+  "hypothesis_id": "H-S2B-N1",
+  "universe": "discovery",
+  "generated_at": "2026-09-28T14:04:27.405Z",
+  "leakage_status": "PASS",
+  "leakage_detail": "Rupture d\u00e9termin\u00e9e \u00e0 D = t0+W (fin de la fen\u00eatre de d\u00e9tection). Tous les labels (Y@6h, ddMax24h, survie_50_24h) mesur\u00e9s DEPUIS D : aucun chevauchement d\u00e9tection/label. Ticks aberrants masqu\u00e9s (aberrantMask). AUCUNE lecture du holdout.",
+  "data_bias": "data/history/ biais\u00e9e vers les tokens chauds : toute mesure = borne OPTIMISTE.",
+  "verdict": "PROMISING",
+  "coverage_1h": {
+    "windowMs": 3600000,
+    "nTestable": 0
+  },
+  "primary": {
+    "windowMs": 7200000,
+    "threshold": 0.35
+  },
+  "grid": [
+    {
+      "stats": {
+        "windowMs": 7200000,
+        "threshold": 0.25,
+        "nTestable": 238,
+        "nEvent": 133,
+        "nNoEvent": 105,
+        "eventRate": 0.5588235294117647,
+        "y6h": {
+          "nEvent": 58,
+          "nNoEvent": 78,
+          "medianEvent": -0.40708037500490335,
+          "medianNoEvent": 0.018221188514654263,
+          "diffMedian": -0.4253015635195576,
+          "ciDiff": [
+            -0.5824217282495695,
+            -0.2678455725227352
+          ],
+          "pPerm": 0.0004997501249375312
+        },
+        "ddMax": {
+          "nEvent": 76,
+          "nNoEvent": 98,
+          "medianEvent": -0.6593824607818835,
+          "medianNoEvent": -0.28570797797485814,
+          "diffMedian": -0.3736744828070253,
+          "ciDiff": [
+            -0.6066526511826782,
+            0.20930403378679263
+          ],
+          "pPerm": 0.012993503248375811
+        },
+        "surv": {
+          "nEvent": 76,
+          "nNoEvent": 98,
+          "rateEvent": 0.6447368421052632,
+          "rateNoEvent": 0.4489795918367347,
+          "diff": 0.19575725026852847,
+          "pPerm": 0.021989005497251374
+        },
+        "absMagAbsY": {
+          "n": 136,
+          "rho": 0.4393111015695816
+        },
+        "y6hWinsor": {
+          "nEvent": 58,
+          "nNoEvent": 78,
+          "medianEvent": -0.40708037500490335,
+          "medianNoEvent": 0.018221188514654263,
+          "diffMedian": -0.4253015635195576,
+          "ciDiff": [
+            -0.5824217282495695,
+            -0.2678455725227352
+          ],
+          "pPerm": 0.0004997501249375312
+        }
+      },
+      "cohort": null,
+      "time": null
+    },
+    {
+      "stats": {
+        "windowMs": 7200000,
+        "threshold": 0.35,
+        "nTestable": 238,
+        "nEvent": 113,
+        "nNoEvent": 125,
+        "eventRate": 0.47478991596638653,
+        "y6h": {
+          "nEvent": 48,
+          "nNoEvent": 88,
+          "medianEvent": -0.40708037500490335,
+          "medianNoEvent": 0.014577291989611552,
+          "diffMedian": -0.4216576669945149,
+          "ciDiff": [
+            -0.5805617466453374,
+            -0.2757313586444511
+          ],
+          "pPerm": 0.0004997501249375312
+        },
+        "ddMax": {
+          "nEvent": 63,
+          "nNoEvent": 111,
+          "medianEvent": -0.6625547902316844,
+          "medianNoEvent": -0.35829596412556053,
+          "diffMedian": -0.30425882610612387,
+          "ciDiff": [
+            -0.5513528767080152,
+            0.1779684112586727
+          ],
+          "pPerm": 0.05997001499250375
+        },
+        "surv": {
+          "nEvent": 63,
+          "nNoEvent": 111,
+          "rateEvent": 0.6666666666666666,
+          "rateNoEvent": 0.4594594594594595,
+          "diff": 0.20720720720720714,
+          "pPerm": 0.01199400299850075
+        },
+        "absMagAbsY": {
+          "n": 136,
+          "rho": 0.4393111015695816
+        },
+        "y6hWinsor": {
+          "nEvent": 48,
+          "nNoEvent": 88,
+          "medianEvent": -0.40708037500490335,
+          "medianNoEvent": 0.014577291989611552,
+          "diffMedian": -0.4216576669945149,
+          "ciDiff": [
+            -0.5805617466453374,
+            -0.2757313586444511
+          ],
+          "pPerm": 0.0004997501249375312
+        }
+      },
+      "cohort": {
+        "pumpswap": {
+          "windowMs": 7200000,
+          "threshold": 0.35,
+          "nTestable": 187,
+          "nEvent": 98,
+          "nNoEvent": 89,
+          "eventRate": 0.5240641711229946,
+          "y6h": {
+            "nEvent": 41,
+            "nNoEvent": 57,
+            "medianEvent": -0.43133265513733465,
+            "medianNoEvent": 0.1249619018591892,
+            "diffMedian": -0.5562945569965239,
+            "ciDiff": [
+              -0.7465868600114527,
+              -0.3871189501089528
+            ],
+            "pPerm": 0.0014992503748125937
+          },
+          "ddMax": {
+            "nEvent": 54,
+            "nNoEvent": 79,
+            "medianEvent": -0.6971880279389264,
+            "medianNoEvent": -0.9684388714733543,
+            "diffMedian": 0.27125084353442785,
+            "ciDiff": [
+              -0.18052746404291764,
+              0.43569681981507413
+            ],
+            "pPerm": 0.0384807596201899
+          },
+          "surv": {
+            "nEvent": 54,
+            "nNoEvent": 79,
+            "rateEvent": 0.6851851851851852,
+            "rateNoEvent": 0.620253164556962,
+            "diff": 0.06493202062822323,
+            "pPerm": 0.4432783608195902
+          },
+          "absMagAbsY": {
+            "n": 98,
+            "rho": 0.16239185458625813
+          },
+          "y6hWinsor": {
+            "nEvent": 41,
+            "nNoEvent": 57,
+            "medianEvent": -0.43133265513733465,
+            "medianNoEvent": 0.1249619018591892,
+            "diffMedian": -0.5562945569965239,
+            "ciDiff": [
+              -0.7465868600114527,
+              -0.3871189501089528
+            ],
+            "pPerm": 0.0014992503748125937
+          }
+        },
+        "rest": {
+          "windowMs": 7200000,
+          "threshold": 0.35,
+          "nTestable": 51,
+          "nEvent": 15,
+          "nNoEvent": 36,
+          "eventRate": 0.29411764705882354,
+          "y6h": {
+            "nEvent": 7,
+            "nNoEvent": 31,
+            "medianEvent": -0.09734513274336276,
+            "medianNoEvent": -0.001961872610974247,
+            "diffMedian": -0.09538326013238851,
+            "ciDiff": null,
+            "pPerm": 0.09845077461269365
+          },
+          "ddMax": {
+            "nEvent": 9,
+            "nNoEvent": 32,
+            "medianEvent": -0.5634768579207421,
+            "medianNoEvent": -0.029531567793301794,
+            "diffMedian": -0.5339452901274403,
+            "ciDiff": null,
+            "pPerm": 0.0004997501249375312
+          },
+          "surv": {
+            "nEvent": 9,
+            "nNoEvent": 32,
+            "rateEvent": 0.5555555555555556,
+            "rateNoEvent": 0.0625,
+            "diff": 0.4930555555555556,
+            "pPerm": 0.0034982508745627187
+          },
+          "absMagAbsY": {
+            "n": 38,
+            "rho": 0.6863989495568443
+          },
+          "y6hWinsor": {
+            "nEvent": 7,
+            "nNoEvent": 31,
+            "medianEvent": -0.09734513274336276,
+            "medianNoEvent": -0.001961872610974247,
+            "diffMedian": -0.09538326013238851,
+            "ciDiff": null,
+            "pPerm": 0.09845077461269365
+          }
+        }
+      },
+      "time": {
+        "before20260926": {
+          "windowMs": 7200000,
+          "threshold": 0.35,
+          "nTestable": 64,
+          "nEvent": 27,
+          "nNoEvent": 37,
+          "eventRate": 0.421875,
+          "y6h": {
+            "nEvent": 17,
+            "nNoEvent": 30,
+            "medianEvent": -0.46283956945156335,
+            "medianNoEvent": 0.0006345785879255939,
+            "diffMedian": -0.46347414803948894,
+            "ciDiff": [
+              -0.6361036462603327,
+              -0.0986060603132064
+            ],
+            "pPerm": 0.0004997501249375312
+          },
+          "ddMax": {
+            "nEvent": 22,
+            "nNoEvent": 35,
+            "medianEvent": -0.6722119713765327,
+            "medianNoEvent": -0.024728588661037332,
+            "diffMedian": -0.6474833827154953,
+            "ciDiff": [
+              -0.846791419801134,
+              -0.31699870147621667
+            ],
+            "pPerm": 0.0004997501249375312
+          },
+          "surv": {
+            "nEvent": 22,
+            "nNoEvent": 35,
+            "rateEvent": 0.6363636363636364,
+            "rateNoEvent": 0.2,
+            "diff": 0.43636363636363634,
+            "pPerm": 0.00399800099950025
+          },
+          "absMagAbsY": {
+            "n": 47,
+            "rho": 0.6151711378353376
+          },
+          "y6hWinsor": {
+            "nEvent": 17,
+            "nNoEvent": 30,
+            "medianEvent": -0.46283956945156335,
+            "medianNoEvent": 0.0006345785879255939,
+            "diffMedian": -0.46347414803948894,
+            "ciDiff": [
+              -0.6361036462603327,
+              -0.0986060603132064
+            ],
+            "pPerm": 0.0004997501249375312
+          }
+        },
+        "from20260926": {
+          "windowMs": 7200000,
+          "threshold": 0.35,
+          "nTestable": 174,
+          "nEvent": 86,
+          "nNoEvent": 88,
+          "eventRate": 0.4942528735632184,
+          "y6h": {
+            "nEvent": 31,
+            "nNoEvent": 58,
+            "medianEvent": -0.33746630727762805,
+            "medianNoEvent": 0.10314691393798903,
+            "diffMedian": -0.4406132212156171,
+            "ciDiff": [
+              -0.64508240925926,
+              -0.2578051532864366
+            ],
+            "pPerm": 0.0004997501249375312
+          },
+          "ddMax": {
+            "nEvent": 41,
+            "nNoEvent": 76,
+            "medianEvent": -0.6625547902316844,
+            "medianNoEvent": -0.9016685021346437,
+            "diffMedian": 0.23911371190295927,
+            "ciDiff": [
+              -0.288141860617784,
+              0.43564711048696725
+            ],
+            "pPerm": 0.22938530734632684
+          },
+          "surv": {
+            "nEvent": 41,
+            "nNoEvent": 76,
+            "rateEvent": 0.6829268292682927,
+            "rateNoEvent": 0.5789473684210527,
+            "diff": 0.10397946084724008,
+            "pPerm": 0.33883058470764615
+          },
+          "absMagAbsY": {
+            "n": 89,
+            "rho": 0.3278515491998638
+          },
+          "y6hWinsor": {
+            "nEvent": 31,
+            "nNoEvent": 58,
+            "medianEvent": -0.33746630727762805,
+            "medianNoEvent": 0.10314691393798903,
+            "diffMedian": -0.4406132212156171,
+            "ciDiff": [
+              -0.64508240925926,
+              -0.2578051532864366
+            ],
+            "pPerm": 0.0004997501249375312
+          }
+        }
+      }
+    },
+    {
+      "stats": {
+        "windowMs": 7200000,
+        "threshold": 0.5,
+        "nTestable": 238,
+        "nEvent": 95,
+        "nNoEvent": 143,
+        "eventRate": 0.39915966386554624,
+        "y6h": {
+          "nEvent": 37,
+          "nNoEvent": 99,
+          "medianEvent": -0.39877613462519124,
+          "medianNoEvent": 0.0017140898183063413,
+          "diffMedian": -0.4004902244434976,
+          "ciDiff": [
+            -0.5259238422066547,
+            -0.22746901554089716
+          ],
+          "pPerm": 0.0009995002498750624
+        },
+        "ddMax": {
+          "nEvent": 49,
+          "nNoEvent": 125,
+          "medianEvent": -0.6625547902316844,
+          "medianNoEvent": -0.4459517657192076,
+          "diffMedian": -0.21660302451247682,
+          "ciDiff": [
+            -0.4343221132093765,
+            0.20205536557279813
+          ],
+          "pPerm": 0.21539230384807595
+        },
+        "surv": {
+          "nEvent": 49,
+          "nNoEvent": 125,
+          "rateEvent": 0.6326530612244898,
+          "rateNoEvent": 0.496,
+          "diff": 0.13665306122448984,
+          "pPerm": 0.127936031984008
+        },
+        "absMagAbsY": {
+          "n": 136,
+          "rho": 0.4393111015695816
+        },
+        "y6hWinsor": {
+          "nEvent": 37,
+          "nNoEvent": 99,
+          "medianEvent": -0.39877613462519124,
+          "medianNoEvent": 0.0017140898183063413,
+          "diffMedian": -0.4004902244434976,
+          "ciDiff": [
+            -0.5259238422066547,
+            -0.22746901554089716
+          ],
+          "pPerm": 0.0009995002498750624
+        }
+      },
+      "cohort": null,
+      "time": null
+    },
+    {
+      "stats": {
+        "windowMs": 10800000,
+        "threshold": 0.25,
+        "nTestable": 251,
+        "nEvent": 146,
+        "nNoEvent": 105,
+        "eventRate": 0.5816733067729084,
+        "y6h": {
+          "nEvent": 60,
+          "nNoEvent": 75,
+          "medianEvent": -0.32121316985178155,
+          "medianNoEvent": 0.056127012522361186,
+          "diffMedian": -0.37734018237414274,
+          "ciDiff": [
+            -0.5317123914297402,
+            -0.15894171680962743
+          ],
+          "pPerm": 0.0004997501249375312
+        },
+        "ddMax": {
+          "nEvent": 78,
+          "nNoEvent": 96,
+          "medianEvent": -0.49599943892621606,
+          "medianNoEvent": -0.18354448580377064,
+          "diffMedian": -0.3124549531224454,
+          "ciDiff": [
+            -0.5191107977557103,
+            -0.01584157209680659
+          ],
+          "pPerm": 0.009495252373813094
+        },
+        "surv": {
+          "nEvent": 81,
+          "nNoEvent": 97,
+          "rateEvent": 0.5185185185185185,
+          "rateNoEvent": 0.4020618556701031,
+          "diff": 0.11645666284841538,
+          "pPerm": 0.1294352823588206
+        },
+        "absMagAbsY": {
+          "n": 135,
+          "rho": 0.4159008877182714
+        },
+        "y6hWinsor": {
+          "nEvent": 60,
+          "nNoEvent": 75,
+          "medianEvent": -0.32121316985178155,
+          "medianNoEvent": 0.056127012522361186,
+          "diffMedian": -0.37734018237414274,
+          "ciDiff": [
+            -0.5317123914297402,
+            -0.15894171680962743
+          ],
+          "pPerm": 0.0004997501249375312
+        }
+      },
+      "cohort": null,
+      "time": null
+    },
+    {
+      "stats": {
+        "windowMs": 10800000,
+        "threshold": 0.35,
+        "nTestable": 251,
+        "nEvent": 131,
+        "nNoEvent": 120,
+        "eventRate": 0.5219123505976095,
+        "y6h": {
+          "nEvent": 56,
+          "nNoEvent": 79,
+          "medianEvent": -0.32121316985178155,
+          "medianNoEvent": 0.056127012522361186,
+          "diffMedian": -0.37734018237414274,
+          "ciDiff": [
+            -0.52630879858244,
+            -0.15932223348554986
+          ],
+          "pPerm": 0.0004997501249375312
+        },
+        "ddMax": {
+          "nEvent": 71,
+          "nNoEvent": 103,
+          "medianEvent": -0.48961716937354993,
+          "medianNoEvent": -0.2116575591985428,
+          "diffMedian": -0.27795961017500714,
+          "ciDiff": [
+            -0.4829452107125457,
+            0.024244798815436064
+          ],
+          "pPerm": 0.0239880059970015
+        },
+        "surv": {
+          "nEvent": 73,
+          "nNoEvent": 105,
+          "rateEvent": 0.5068493150684932,
+          "rateNoEvent": 0.41904761904761906,
+          "diff": 0.08780169602087412,
+          "pPerm": 0.28285857071464265
+        },
+        "absMagAbsY": {
+          "n": 135,
+          "rho": 0.4159008877182714
+        },
+        "y6hWinsor": {
+          "nEvent": 56,
+          "nNoEvent": 79,
+          "medianEvent": -0.32121316985178155,
+          "medianNoEvent": 0.056127012522361186,
+          "diffMedian": -0.37734018237414274,
+          "ciDiff": [
+            -0.52630879858244,
+            -0.15932223348554986
+          ],
+          "pPerm": 0.0004997501249375312
+        }
+      },
+      "cohort": null,
+      "time": null
+    },
+    {
+      "stats": {
+        "windowMs": 10800000,
+        "threshold": 0.5,
+        "nTestable": 251,
+        "nEvent": 113,
+        "nNoEvent": 138,
+        "eventRate": 0.450199203187251,
+        "y6h": {
+          "nEvent": 44,
+          "nNoEvent": 91,
+          "medianEvent": -0.32121316985178155,
+          "medianNoEvent": 0.038498556304138454,
+          "diffMedian": -0.35971172615592,
+          "ciDiff": [
+            -0.5193851626016261,
+            -0.10615322740916389
+          ],
+          "pPerm": 0.0004997501249375312
+        },
+        "ddMax": {
+          "nEvent": 56,
+          "nNoEvent": 118,
+          "medianEvent": -0.4848795066725906,
+          "medianNoEvent": -0.24731975301812364,
+          "diffMedian": -0.23755975365446697,
+          "ciDiff": [
+            -0.41054202606455775,
+            0.07020080940744816
+          ],
+          "pPerm": 0.06546726636681659
+        },
+        "surv": {
+          "nEvent": 57,
+          "nNoEvent": 121,
+          "rateEvent": 0.49122807017543857,
+          "rateNoEvent": 0.4380165289256198,
+          "diff": 0.05321154124981875,
+          "pPerm": 0.5427286356821589
+        },
+        "absMagAbsY": {
+          "n": 135,
+          "rho": 0.4159008877182714
+        },
+        "y6hWinsor": {
+          "nEvent": 44,
+          "nNoEvent": 91,
+          "medianEvent": -0.32121316985178155,
+          "medianNoEvent": 0.038498556304138454,
+          "diffMedian": -0.35971172615592,
+          "ciDiff": [
+            -0.5193851626016261,
+            -0.10615322740916389
+          ],
+          "pPerm": 0.0004997501249375312
+        }
+      },
+      "cohort": null,
+      "time": null
+    }
+  ],
+  "verdict_detail": "Echelle minutes (question litterale 'premieres minutes') : DATA_ISSUE - 0/1445 tokens testables a W=1h (m>=5 impossible a cadence ~14 min/tick). W=2h/3h : CHANGE_POINT_EVENT (rupture de moyenne, seuil 0.35 log) -> Y@6h median -0.41 (event) vs +0.01 (no-event), diff -0.42, IC95% [-0.58 ; -0.28], pPerm~=0.0005 - stable sur seuils {0.25,0.35,0.5}, fenetres {2h,3h}, dex (pump -0.56 p=0.0015, rest -0.10 meme direction n=51) et moities temporelles (-0.46/-0.44, p=0.0005). Nature : RISK FILTER (l'agitation precoce predit la derive negative), pas un edge long. Caveat adversarial : horse race - amplitude |log(p_D/p_t0)| seule (rho=-0.37) et volatilite realisee (rho=-0.47) expliquent l'essentiel ; le detecteur de rupture est un proxy de volatilite, pas un signal specifique. Effet survie instable (early +0.44 p=0.004, late +0.10 p=0.34) -> non retenu.",
+  "adversarial": {
+    "horse_race": "Amplitude precoce |log(p_D/p_t0)| ~ Y@6h : rho=-0.370 ; volatilite realisee fenetre ~ Y@6h : rho=-0.474 ; terciles d'amplitude : bottom medY=+0.002 vs top medY=-0.431. La rupture n'apporte pas d'information au-dela de l'amplitude.",
+    "signe_rupture": "Events up (n=12) medY6h=-0.415 ; events down (n=36) medY6h=-0.337 - la direction de la rupture ne discrimine pas, seule l'agitation compte.",
+    "survie_instable": "Diff de taux d'evenement : early +0.436 (p=0.004) vs late +0.104 (p=0.34) ; pump +0.065 (p=0.44) vs rest +0.493 (p=0.0035) - non replique.",
+    "permutation": "pPerm 2000 reps sur diffs de medianes ; winsorisation |Y|<=10 : diff inchangee (-0.4217, p=0.0005)."
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "family": "BONUS",
+  "name": "GLITCH_SCAN_M003",
+  "scope": "data/history complet (2926 séries) — diagnostic data-quality ; holdout scanné mais AUCUNE mesure prédictive dessus.",
+  "prevalence": {
+    "nFiles": 2926,
+    "nTicks": 35262,
+    "nMaskedTicks": 3,
+    "pctTicks": 0.00008507742045261188,
+    "nMintsAffected": 3,
+    "pctMints": 0.0010252904989747095,
+    "ratioP50": 4974.390595009596,
+    "ratioP90": 19949.17491749175,
+    "ratioMax": 19949.17491749175
+  },
+  "topMints": [
+    {
+      "mint": "4k3Dyjzvzp8eMZWUXbBCjEvwSkkk59S5iCNLY3QrkX6R",
+      "n": 1,
+      "maxRatio": 4974.390595009596
+    },
+    {
+      "mint": "6GmAFSYs4gk3FDao5FzzySQpPZaWsa4rUJHacpMpUNgx",
+      "n": 1,
+      "maxRatio": 4922.177283451298
+    },
+    {
+      "mint": "taoC6xyv2v8tDLcev4uaGUgV4vdQsWJrGft2kcBRrBY",
+      "n": 1,
+      "maxRatio": 19949.17491749175
+    }
+  ],
+  "labelImpactDiscovery": {
+    "nChecked": 2,
+    "nChanged": 0,
+    "meanAbsDeltaY1h": 0,
+    "signFlipsY1h": 0,
+    "dd50Flips": 0
+  },
+  "limitation": "aberrantMask ne détecte que les ticks intérieurs (voisins des deux côtés) ; premier/dernier tick non vérifiables."
+}

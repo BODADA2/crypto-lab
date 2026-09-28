@@ -1,0 +1,488 @@
+# Registre des features — Crypto Lab (spec §28)
+# Règle absolue : feature_timestamp ≤ t0. Toute feature dont la mesure nécessite
+# une observation postérieure à t0 est une FUITE → DEPRECATED, jamais réutilisée.
+# Fichier créé le 2026-09-28 (branche feat/deku-cupsey, aucun push).
+#
+# Sources :
+# - lab/predictive/earlybuyers/types.ts (FIXED_FEATURES, 22 features Phase 2)
+# - lab/predictive/flows/features.ts (14 features Phase 1)
+# - lab/predictive/liquidity/features.ts (10 features Phase 1)
+# - lab/predictive/temporal/features.ts (9 features Phase 1)
+# Statuts : ACTIVE · DEPRECATED
+
+features:
+  # ------------------------------------------------- Phase 2 early buyers (22)
+  - id: nBuyers
+    desc: "nombre de buyers dans le set pré-t0"
+    source_module: lab/predictive/earlybuyers/features.ts
+    source_data: "data/earlybuyers/<mint>.json (Helius getSignaturesForAddress + getTransaction)"
+    timestamp_field: "tsMs (blockTime) ≤ t0ms — audit FAIL THE RUN si violation"
+    version: "1.0"
+    status: ACTIVE
+
+  - id: giniAmt
+    desc: "Gini des montants du set (0 = égalité)"
+    source_module: lab/predictive/earlybuyers/features.ts
+    source_data: "data/earlybuyers/<mint>.json"
+    timestamp_field: "tsMs ≤ t0ms"
+    version: "1.0"
+    status: ACTIVE
+    note: "calculé sur adresses brutes — à remplacer par giniEntity quand clusters.ts existe (Liu 2025)"
+
+  - id: top1Share
+    desc: "part du top-1 par montant"
+    source_module: lab/predictive/earlybuyers/features.ts
+    source_data: "data/earlybuyers/<mint>.json"
+    timestamp_field: "tsMs ≤ t0ms"
+    version: "1.0"
+    status: ACTIVE
+
+  - id: top5Share
+    desc: "part du top-5 par montant"
+    source_module: lab/predictive/earlybuyers/features.ts
+    source_data: "data/earlybuyers/<mint>.json"
+    timestamp_field: "tsMs ≤ t0ms"
+    version: "1.0"
+    status: ACTIVE
+
+  - id: sameSlotMax
+    desc: "nombre max de buyers dans le même slot"
+    source_module: lab/predictive/earlybuyers/features.ts
+    source_data: "data/earlybuyers/<mint>.json"
+    timestamp_field: "slot ≤ slot(t0)"
+    version: "1.0"
+    status: ACTIVE
+
+  - id: arrivalSpanSec
+    desc: "dernier - premier blockTime du set (s)"
+    source_module: lab/predictive/earlybuyers/features.ts
+    source_data: "data/earlybuyers/<mint>.json"
+    timestamp_field: "tsMs ≤ t0ms"
+    version: "1.0"
+    status: ACTIVE
+
+  - id: medianInterArrivalSec
+    desc: "médiane des écarts inter-arrivées (s)"
+    source_module: lab/predictive/earlybuyers/features.ts
+    source_data: "data/earlybuyers/<mint>.json"
+    timestamp_field: "tsMs ≤ t0ms"
+    version: "1.0"
+    status: ACTIVE
+
+  - id: medianWalletAgeSec
+    desc: "médiane walletAgeSec du set"
+    source_module: lab/predictive/earlybuyers/features.ts
+    source_data: "data/earlybuyers/wallet-histories/<wallet>.json (cache brut, fetchedAt stocké)"
+    timestamp_field: "walletAgeSec calculé à t0ms ; historique filtré ≤ t0ms à chaque lecture"
+    version: "1.0"
+    status: ACTIVE
+    note: "cache = fenêtre des 1000 signatures les plus récentes AU MOMENT DU FETCH — wallets très actifs sous-échantillonnés (documenté, accepté)"
+
+  - id: medianTxCountPreT0
+    desc: "médiane txCountPreT0 du set"
+    source_module: lab/predictive/earlybuyers/features.ts
+    source_data: "data/earlybuyers/wallet-histories/<wallet>.json"
+    timestamp_field: "signatures ≤ t0ms uniquement"
+    version: "1.0"
+    status: ACTIVE
+
+  - id: newWalletFrac
+    desc: "fraction wallets avec walletAgeSec < 7j"
+    source_module: lab/predictive/earlybuyers/features.ts
+    source_data: "data/earlybuyers/wallet-histories/<wallet>.json"
+    timestamp_field: "walletAgeSec calculé à t0ms"
+    version: "1.0"
+    status: ACTIVE
+
+  - id: experiencedWalletFrac
+    desc: "fraction wallets avec walletAgeSec > 90j"
+    source_module: lab/predictive/earlybuyers/features.ts
+    source_data: "data/earlybuyers/wallet-histories/<wallet>.json"
+    timestamp_field: "walletAgeSec calculé à t0ms"
+    version: "1.0"
+    status: ACTIVE
+
+  - id: activeWalletFrac
+    desc: "fraction wallets avec recencySec < 24h"
+    source_module: lab/predictive/earlybuyers/features.ts
+    source_data: "data/earlybuyers/wallet-histories/<wallet>.json"
+    timestamp_field: "recencySec calculé à t0ms"
+    version: "1.0"
+    status: ACTIVE
+
+  - id: overlapFrac
+    desc: "fraction des wallets vus early buyer d'≥1 AUTRE token (obs. ≤ t0ms, univers discovery+calibration uniquement, JAMAIS holdout)"
+    source_module: lab/predictive/earlybuyers/features.ts
+    source_data: "data/earlybuyers/<mint>.json (multi-tokens)"
+    timestamp_field: "observations ≤ t0ms ; univers discovery+calibration uniquement"
+    version: "1.0"
+    status: ACTIVE
+    note: "le calcul sur tout l'univers (Phase 1) était une fuite — corrigé"
+
+  - id: medianTokensTouched
+    desc: "médiane tokensTouchedPreT0 (top-10 par montant)"
+    source_module: lab/predictive/earlybuyers/features.ts
+    source_data: "data/earlybuyers/wallet-histories/<wallet>.json"
+    timestamp_field: "tokens touchés avec blockTime ≤ t0ms"
+    version: "1.0"
+    status: ACTIVE
+
+  - id: medianBuySellRatio
+    desc: "médiane buySellCountRatio (top-10 par montant)"
+    source_module: lab/predictive/earlybuyers/features.ts
+    source_data: "data/earlybuyers/wallet-histories/<wallet>.json"
+    timestamp_field: "trades ≤ t0ms"
+    version: "1.0"
+    status: ACTIVE
+
+  - id: entityCount
+    desc: "nombre d'entités apparentes (clusters + singletons) — gelée le 2026-09-28"
+    source_module: lab/predictive/earlybuyers/features.ts
+    source_data: "data/earlybuyers/<mint>.json + clusters.ts (à construire)"
+    timestamp_field: "tsMs ≤ t0ms"
+    version: "1.1 (gelée 2026-09-28, spec §4)"
+    status: ACTIVE
+    note: "dépend du clustering wallet→entité traçable (clusters.ts) — non calculable avant"
+
+  - id: hhiWallet
+    desc: "HHI des parts de montant par wallet — gelée le 2026-09-28"
+    source_module: lab/predictive/earlybuyers/features.ts
+    source_data: "data/earlybuyers/<mint>.json"
+    timestamp_field: "tsMs ≤ t0ms"
+    version: "1.1 (gelée 2026-09-28, spec §4)"
+    status: ACTIVE
+
+  - id: hhiEntity
+    desc: "HHI des parts de montant par entité apparente — gelée le 2026-09-28"
+    source_module: lab/predictive/earlybuyers/features.ts
+    source_data: "data/earlybuyers/<mint>.json + clusters.ts (à construire)"
+    timestamp_field: "tsMs ≤ t0ms"
+    version: "1.1 (gelée 2026-09-28, spec §4)"
+    status: ACTIVE
+    note: "priorité littérature (Liu et al. 2025) : concentration par entité, pas par wallet"
+
+  - id: giniEntity
+    desc: "Gini des montants par entité apparente — gelée le 2026-09-28"
+    source_module: lab/predictive/earlybuyers/features.ts
+    source_data: "data/earlybuyers/<mint>.json + clusters.ts (à construire)"
+    timestamp_field: "tsMs ≤ t0ms"
+    version: "1.1 (gelée 2026-09-28, spec §4)"
+    status: ACTIVE
+
+  - id: top1EntityShare
+    desc: "part de la top-1 entité apparente par montant — gelée le 2026-09-28"
+    source_module: lab/predictive/earlybuyers/features.ts
+    source_data: "data/earlybuyers/<mint>.json + clusters.ts (à construire)"
+    timestamp_field: "tsMs ≤ t0ms"
+    version: "1.1 (gelée 2026-09-28, spec §4)"
+    status: ACTIVE
+
+  - id: coordinatedSetFrac
+    desc: "fraction des buyers membres d'un coordinated set (cluster ≥2 wallets) — gelée le 2026-09-28"
+    source_module: lab/predictive/earlybuyers/features.ts
+    source_data: "data/earlybuyers/<mint>.json + clusters.ts (à construire)"
+    timestamp_field: "tsMs ≤ t0ms"
+    version: "1.1 (gelée 2026-09-28, spec §4)"
+    status: ACTIVE
+
+  - id: sniperShare
+    desc: "fraction des buyers dans la fenêtre first_block — gelée le 2026-09-28"
+    source_module: lab/predictive/earlybuyers/features.ts
+    source_data: "data/earlybuyers/<mint>.json + windows.ts (à construire)"
+    timestamp_field: "first_block ≤ t0"
+    version: "1.1 (gelée 2026-09-28, spec §3)"
+    status: ACTIVE
+
+  # ------------------------------------------------- Phase 1 flows (14)
+  - id: buysM5
+    desc: "Nombre de buys (fenêtre m5) à t0"
+    source_module: lab/predictive/flows/features.ts
+    source_data: "data/history/ (snapshots DexScreener, agrégats txns m5/h1)"
+    timestamp_field: "fetchedAt ≤ t0 (t0 = premier snapshot liquidityUsd ≥ 20 000, priceUsd > 0)"
+    version: "1.0"
+    status: ACTIVE
+
+  - id: sellsM5
+    desc: "Nombre de sells (fenêtre m5) à t0"
+    source_module: lab/predictive/flows/features.ts
+    source_data: "data/history/"
+    timestamp_field: "fetchedAt ≤ t0"
+    version: "1.0"
+    status: ACTIVE
+
+  - id: netM5
+    desc: "Flux net : buys - sells (m5)"
+    source_module: lab/predictive/flows/features.ts
+    source_data: "data/history/"
+    timestamp_field: "fetchedAt ≤ t0"
+    version: "1.0"
+    status: ACTIVE
+
+  - id: ratioM5
+    desc: "Ratio buys/sells (m5), lissé +0.5 anti-division-par-zéro"
+    source_module: lab/predictive/flows/features.ts
+    source_data: "data/history/"
+    timestamp_field: "fetchedAt ≤ t0"
+    version: "1.0"
+    status: ACTIVE
+
+  - id: dominanceM5
+    desc: "Dominance acheteuse buys/(buys+sells) (m5) ; null si aucun trade"
+    source_module: lab/predictive/flows/features.ts
+    source_data: "data/history/"
+    timestamp_field: "fetchedAt ≤ t0"
+    version: "1.0"
+    status: ACTIVE
+
+  - id: ratioH1
+    desc: "Ratio buys/sells (h1), lissé"
+    source_module: lab/predictive/flows/features.ts
+    source_data: "data/history/"
+    timestamp_field: "fetchedAt ≤ t0"
+    version: "1.0"
+    status: ACTIVE
+
+  - id: accelBuys
+    desc: "Accélération des buys : 12 * buysM5 / buysH1 ; null si buysH1 == 0"
+    source_module: lab/predictive/flows/features.ts
+    source_data: "data/history/"
+    timestamp_field: "fetchedAt ≤ t0"
+    version: "1.0"
+    status: ACTIVE
+
+  - id: volM5
+    desc: "Volume USD (m5)"
+    source_module: lab/predictive/flows/features.ts
+    source_data: "data/history/"
+    timestamp_field: "fetchedAt ≤ t0"
+    version: "1.0"
+    status: ACTIVE
+
+  - id: avgSizeM5
+    desc: "Taille moyenne implicite d'un trade : volM5 / (buys+sells) ; null si aucun trade"
+    source_module: lab/predictive/flows/features.ts
+    source_data: "data/history/"
+    timestamp_field: "fetchedAt ≤ t0"
+    version: "1.0"
+    status: ACTIVE
+    note: "les tailles de transactions individuelles ne sont PAS disponibles — agrégat uniquement (limite déclarée)"
+
+  - id: structM5vsH1
+    desc: "Inflexion intra-snapshot : log(ratioM5) - log(ratioH1)"
+    source_module: lab/predictive/flows/features.ts
+    source_data: "data/history/"
+    timestamp_field: "fetchedAt ≤ t0"
+    version: "1.0"
+    status: ACTIVE
+
+  - id: structChgPre
+    desc: "Changement de structure pré-t0 : log(ratioM5_t0) - log(ratioM5_prev) ; null si t0 = 1er snapshot (~87 % des mints)"
+    source_module: lab/predictive/flows/features.ts
+    source_data: "data/history/"
+    timestamp_field: "fetchedAt ≤ t0"
+    version: "1.0"
+    status: ACTIVE
+
+  - id: divPriceDominance
+    desc: "Divergence prix/flux : -sign(priceChangeM5) * (dominanceM5 - 0.5) ; null si dominanceM5 null"
+    source_module: lab/predictive/flows/features.ts
+    source_data: "data/history/"
+    timestamp_field: "fetchedAt ≤ t0"
+    version: "1.0"
+    status: ACTIVE
+
+  - id: divPriceAccel
+    desc: "Divergence prix/accélération : -sign(priceChangeM5) * (accelBuys - 1) ; null si accelBuys null"
+    source_module: lab/predictive/flows/features.ts
+    source_data: "data/history/"
+    timestamp_field: "fetchedAt ≤ t0"
+    version: "1.0"
+    status: ACTIVE
+
+  - id: priceChgM5
+    desc: "priceChange.m5 à t0 (contrôle : le momentum prix est-il lui-même prédictif ?)"
+    source_module: lab/predictive/flows/features.ts
+    source_data: "data/history/"
+    timestamp_field: "fetchedAt ≤ t0"
+    version: "1.0"
+    status: ACTIVE
+
+  # ------------------------------------------------- Phase 1 liquidity (10)
+  - id: liqT0
+    desc: "Profondeur : liquidité USD à t0"
+    source_module: lab/predictive/liquidity/features.ts
+    source_data: "data/history/"
+    timestamp_field: "fetchedAt ≤ t0"
+    version: "1.0"
+    status: ACTIVE
+
+  - id: turnoverM5
+    desc: "Turnover : volume m5 / liquidité à t0"
+    source_module: lab/predictive/liquidity/features.ts
+    source_data: "data/history/"
+    timestamp_field: "fetchedAt ≤ t0"
+    version: "1.0"
+    status: ACTIVE
+
+  - id: turnoverH1
+    desc: "Turnover : volume h1 / liquidité à t0"
+    source_module: lab/predictive/liquidity/features.ts
+    source_data: "data/history/"
+    timestamp_field: "fetchedAt ≤ t0"
+    version: "1.0"
+    status: ACTIVE
+
+  - id: liqPerVolH1
+    desc: "Liquidité par unité de volume h1 (profondeur relative) = 1 / turnoverH1"
+    source_module: lab/predictive/liquidity/features.ts
+    source_data: "data/history/"
+    timestamp_field: "fetchedAt ≤ t0"
+    version: "1.0"
+    status: ACTIVE
+
+  - id: mcLiq
+    desc: "Ratio marketCap / liquidité à t0"
+    source_module: lab/predictive/liquidity/features.ts
+    source_data: "data/history/"
+    timestamp_field: "fetchedAt ≤ t0"
+    version: "1.0"
+    status: ACTIVE
+
+  - id: preGrowthRel
+    desc: "Croissance relative de la liquidité sur la fenêtre pré-t0 (nPre>=2)"
+    source_module: lab/predictive/liquidity/features.ts
+    source_data: "data/history/"
+    timestamp_field: "fetchedAt ≤ t0"
+    version: "1.0"
+    status: ACTIVE
+
+  - id: liqSlopePre
+    desc: "Pente de log(liquidité) vs temps (par heure) sur la fenêtre pré-t0 (nPre>=3)"
+    source_module: lab/predictive/liquidity/features.ts
+    source_data: "data/history/"
+    timestamp_field: "fetchedAt ≤ t0"
+    version: "1.0"
+    status: ACTIVE
+
+  - id: liqCVPre
+    desc: "Coefficient de variation de la liquidité pré-t0 (nPre>=2)"
+    source_module: lab/predictive/liquidity/features.ts
+    source_data: "data/history/"
+    timestamp_field: "fetchedAt ≤ t0"
+    version: "1.0"
+    status: ACTIVE
+
+  - id: addsPre
+    desc: "Nombre d'AJOUTS (saut >= +50 %) entre snapshots pré-t0 consécutifs (nPre>=2)"
+    source_module: lab/predictive/liquidity/features.ts
+    source_data: "data/history/"
+    timestamp_field: "fetchedAt ≤ t0"
+    version: "1.0"
+    status: ACTIVE
+
+  - id: removesPre
+    desc: "Nombre de RETRAITS (saut <= -50 %) entre snapshots pré-t0 consécutifs (nPre>=2)"
+    source_module: lab/predictive/liquidity/features.ts
+    source_data: "data/history/"
+    timestamp_field: "fetchedAt ≤ t0"
+    version: "1.0"
+    status: ACTIVE
+
+  # ------------------------------------------------- Phase 1 temporal (9)
+  - id: agePairMs
+    desc: "Âge de la paire à t0 (ms)"
+    source_module: lab/predictive/temporal/features.ts
+    source_data: "data/history/"
+    timestamp_field: "fetchedAt ≤ t0"
+    version: "1.0"
+    status: ACTIVE
+
+  - id: ageTokenMs
+    desc: "Âge du token à t0 (ms)"
+    source_module: lab/predictive/temporal/features.ts
+    source_data: "data/history/"
+    timestamp_field: "fetchedAt ≤ t0"
+    version: "1.0"
+    status: ACTIVE
+
+  - id: growthPreT0PerH
+    desc: "Croissance pré-t0 par heure"
+    source_module: lab/predictive/temporal/features.ts
+    source_data: "data/history/"
+    timestamp_field: "fetchedAt ≤ t0"
+    version: "1.0"
+    status: ACTIVE
+
+  - id: accelPerH2
+    desc: "Accélération pré-t0 (par heure²)"
+    source_module: lab/predictive/temporal/features.ts
+    source_data: "data/history/"
+    timestamp_field: "fetchedAt ≤ t0"
+    version: "1.0"
+    status: ACTIVE
+
+  - id: accelSign
+    desc: "Signe de l'accélération pré-t0 (-1/0/1)"
+    source_module: lab/predictive/temporal/features.ts
+    source_data: "data/history/"
+    timestamp_field: "fetchedAt ≤ t0"
+    version: "1.0"
+    status: ACTIVE
+
+  - id: interSnapMeanMs
+    desc: "Intervalle moyen entre snapshots pré-t0 (ms)"
+    source_module: lab/predictive/temporal/features.ts
+    source_data: "data/history/"
+    timestamp_field: "fetchedAt ≤ t0"
+    version: "1.0"
+    status: ACTIVE
+
+  - id: hourUTC
+    desc: "Heure UTC de t0"
+    source_module: lab/predictive/temporal/features.ts
+    source_data: "data/history/"
+    timestamp_field: "t0"
+    version: "1.0"
+    status: ACTIVE
+
+  - id: priceAtT0
+    desc: "Prix USD à t0"
+    source_module: lab/predictive/temporal/features.ts
+    source_data: "data/history/"
+    timestamp_field: "fetchedAt ≤ t0"
+    version: "1.0"
+    status: ACTIVE
+
+  - id: liqAtT0
+    desc: "Liquidité USD à t0"
+    source_module: lab/predictive/temporal/features.ts
+    source_data: "data/history/"
+    timestamp_field: "fetchedAt ≤ t0"
+    version: "1.0"
+    status: ACTIVE
+
+  # ------------------------------------------------- DÉPRÉCIÉES (fuite)
+  - id: sellersOver50
+    desc: "Nombre de wallets ayant vendu >50 % à +5 min post-migration (rétention)"
+    source_module: lab/predictive/wallets/features.ts
+    source_data: "data/earlybuyers/ (sells — backfill défaillant, walletsCovered=0)"
+    timestamp_field: "+5 min post-migration — POSTÉRIEUR à t0"
+    version: "DEPRECATED 2026-09-28"
+    status: DEPRECATED
+    deprecation_reason: >-
+      FUITE : mesurée à +5 min APRÈS la migration (donc après t0), non observable
+      au moment de la décision. Utilisée en Phase 1 (H-PRED-WAL-07) — interdite
+      en Phase 2 (audit anti-fuite). Données quasi absentes de toute façon
+      (échecs Helius −32015 côté backfill). Ne jamais ressusciter.
+
+  - id: medianSoldFrac
+    desc: "soldFrac médian des wallets couverts à +5 min post-migration (rétention)"
+    source_module: lab/predictive/wallets/features.ts
+    source_data: "data/earlybuyers/ (sells — backfill défaillant)"
+    timestamp_field: "+5 min post-migration — POSTÉRIEUR à t0"
+    version: "DEPRECATED 2026-09-28"
+    status: DEPRECATED
+    deprecation_reason: >-
+      FUITE : même raison que sellersOver50 — observation post-t0, non observable
+      à la décision. H-PRED-WAL-07 est en suspens jusqu'à une définition
+      point-in-time (≤ t0) ET un backfill sells fonctionnel.
