@@ -3,7 +3,7 @@
   "program": "token-2022",
   "mintAuthority": "WV9PJN7XTmTLVwbutCLFxp8TyePee6Xq5mRq6Fti5Wc",
   "freezeAuthority": "WV9PJN7XTmTLVwbutCLFxp8TyePee6Xq5mRq6Fti5Wc",
-  "supplyRaw": "7381704124963",
+  "supplyRaw": "7381703851235",
   "decimals": 9,
   "isInitialized": true,
   "extensions": [
@@ -18,7 +18,7 @@
     "Pausable",
     "TokenMetadata"
   ],
-  "top10Pct": 49.17,
+  "top10Pct": 49.3,
   "topAccounts": [
     {
       "address": "EL82xEGW7aNJnK7NhpCwXkD1kJB4B5KPoEVng88EnitM",
@@ -37,8 +37,8 @@
     {
       "address": "CnHiVJRJUMAtoJvo64gcHsb3rFydzb14uGD6kmxTvrka",
       "owner": "ECQbBHaizQtQU7AGtfttR2LbZ229KPibgUsyTG659yq",
-      "amountRaw": "361162971343",
-      "pct": 4.89,
+      "amountRaw": "371967686745",
+      "pct": 5.03,
       "excluded": false
     },
     {
@@ -65,8 +65,8 @@
     {
       "address": "AScgm5o5ZQUMcReJonRLQ1DYpxfsXBmXcqKQNs5fHHJ5",
       "owner": "HX72xZ1CHg7cWPhGGJyHbLp3sLrpznTYmWn5AY3FVwUj",
-      "amountRaw": "152661054534",
-      "pct": 2.06,
+      "amountRaw": "151697725134",
+      "pct": 2.05,
       "excluded": false
     },
     {
@@ -119,13 +119,6 @@
       "excluded": false
     },
     {
-      "address": "2yaFuqMGkXcpyShptCuJBCn4MheYAv468T1rB24LePxe",
-      "owner": "EZyszDEx1LZDt7TsSFV8xdPi49sDKC3mdfv2MVMEQLtU",
-      "amountRaw": "91739203898",
-      "pct": 1.24,
-      "excluded": true
-    },
-    {
       "address": "EdxKLY7t6n85iEwXyqZhrcYcouCBkZUNtkrJuL4ezFwu",
       "owner": "A2fGUCJg2HUZ5zPwiBebgVtrjmDchmMJxV2TdDz4hj1t",
       "amountRaw": "84110333891",
@@ -137,6 +130,13 @@
       "owner": "7Pae6J5wt2r2D4RfJkN8vduvTkzBmNCNqcodRAndMhLR",
       "amountRaw": "81793708527",
       "pct": 1.1,
+      "excluded": false
+    },
+    {
+      "address": "GT2XvgjDS9ShvxNhKCiY5yBWxYMDpWhKiE1w7CRMM4Mo",
+      "owner": "DPh4Cfctg8yycPZP6zVmhQJZ1tHSvByKAbBLjhLBVitW",
+      "amountRaw": "74582460415",
+      "pct": 1.01,
       "excluded": false
     },
     {
@@ -161,7 +161,7 @@
       "excluded": false
     }
   ],
-  "excludedCount": 1,
+  "excludedCount": 0,
   "holders": null,
   "riskyExtensions": [
     "PermanentDelegate",
@@ -170,6 +170,6 @@
     "TransferHook",
     "Pausable"
   ],
-  "fetchedAt": "2026-09-28T10:26:58.755Z",
+  "fetchedAt": "2026-09-28T11:40:25.210Z",
   "rpcCalls": 4
 }
