@@ -166,4 +166,20 @@ describe("brief", () => {
     expect(r.sections.MARKET).toEqual([]);
     expect(r.sections.TRADING[0]).toMatch(/2 lignes au total/);
   });
+
+  it("ajoute la ligne de régime de volume en FIN de ON-CHAIN (sans déplacer les lignes existantes)", () => {
+    const dir = root();
+    mkdirSync(join(dir, "data", "scans"), { recursive: true });
+    for (const [day, n] of [["2026-09-21", 40], ["2026-09-22", 50], ["2026-09-23", 60], ["2026-09-24", 70]] as const) {
+      const lines = Array.from({ length: n }, (_, i) => JSON.stringify({ kind: "create", mint: `M${day}${i}` })).join("\n");
+      writeFileSync(join(dir, "data", "scans", `pump-${day}.jsonl`), lines + "\n");
+    }
+    const r = generateBrief({ rootDir: dir, now: () => NOW });
+    const onchain = r.sections["ON-CHAIN"];
+    // La ligne historique reste en première position.
+    expect(onchain[0]).toMatch(/pump\.fun \(fenêtre/);
+    const regime = onchain[onchain.length - 1] ?? "";
+    expect(regime).toMatch(/Régime solana le 2026-09-24 :/);
+    expect(regime).toContain("(source : data/scans/)");
+  });
 });

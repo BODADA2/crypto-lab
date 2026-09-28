@@ -15,6 +15,11 @@ import type { TokenSnapshot } from "../types.ts";
 import type { VolumeSignal } from "../signals/volume.ts";
 import type { WalletProfile } from "../signals/earlybuyers.ts";
 import type { TermStat } from "../signals/narrative.ts";
+import {
+  loadDailyStatsFromScans,
+  computeChainRegimes,
+  formatRegimeBriefLines,
+} from "../collect/chainregime.ts";
 
 export interface BriefOptions {
   /** Racine du dépôt (contient data/, ledger/, journal/, briefs/). */
@@ -192,6 +197,12 @@ export function generateBrief(opts: BriefOptions): BriefResult {
       sections["ON-CHAIN"].push(`- ${w.address} : présent dans ${w.recurrence}/${w.universe} tokens migrés, rang moyen ${w.avgRank.toFixed(1)}, score ${w.score} (source : ${rel(p)}).`);
     }
   }
+
+  // Régime de volume par chaîne (contexte macro, jamais un ordre) : ajouté
+  // EN FIN de section pour ne pas déplacer les lignes existantes.
+  const regimes = computeChainRegimes(loadDailyStatsFromScans(join(root, "data", "scans")));
+  if (regimes.length > 0) sections["ON-CHAIN"].push(...formatRegimeBriefLines(regimes, "data/scans/"));
+
   if (!sections["ON-CHAIN"].length) unknown.push("Ni flux PumpPortal (data/scans/pump-*.jsonl) ni profils de wallets (data/wallets/) : ON-CHAIN vide.");
 
   // OPPORTUNITIES : signaux de volume

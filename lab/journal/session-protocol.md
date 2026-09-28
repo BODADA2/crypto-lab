@@ -44,6 +44,53 @@ Contenu minimal :
 | P&L net par heure de session | journal | > 0 sur 30 jours |
 | Respect de la fenêtre | journal | 100 % (2 h–8 h jamais) |
 
+## Extension H-NARR / H-EXIT / régime (28 sept. 2026)
+
+Les hypothèses issues de Cupsey/Cented s'intègrent à la session **sans changer
+la politique** : ce sont des champs de journal et des choix de régime de
+sortie, pas des paramètres du Risk Engine.
+
+### Avant — enrichir le brief (5 min de plus)
+1. Noter le **régime de volume Solana** du brief (section ON-CHAIN :
+   `famine / calme / normal / chaud / frénésie`, avec son historique de base).
+   - Régime `frénésie` ou `famine` → réduire le nombre max de trades de la
+     session (ex. 2 au lieu de 4) : contexte extrême = bruit extrême.
+   - Régime `inconnu` (historique < 3 jours) → aucune conclusion macro,
+     session normale.
+2. Noter les **termes narratifs en accélération** (section NARRATIVES du
+   brief) : ce sont les seuls « catalysts » que le labo mesure aujourd'hui
+   (chevauchement nom/symbole ↔ termes accélérés, walk-forward strict).
+
+### Pendant — catalyst à l'entrée, régime de sortie fixé d'avance
+- À chaque entrée paper, noter le **score catalyst** du token
+  (`lab/signals/catalyst.ts` : 0–100, 0 = neutre, pas un rejet).
+- Le **régime de sortie est choisi à l'entrée et ne change plus** :
+  - catalyst ≥ 40 → régime **runner** (paliers 25 % à +50/+150/+300 %,
+    solde au time-stop 48 obs., SL −25 %).
+  - sinon → régime **scalp** (sortie unique : TP +30 %, SL −20 %,
+    time-stop 6 obs.).
+- Sortie réelle vs sortie prévue : tout écart est un **trade hors-plan**
+  (compté dans la métrique, même si « ça a mieux marché »).
+- Résultats des backtests du 28 sept. 2026 à garder en tête (données réelles,
+  pas des ordres) : le catalyst mesuré **ne prédit ni la migration
+  (lift x1.03) ni les gros multiples (médiane MFE x1.20 vs x1.15)** ; la
+  comparaison scalp/runner est **non concluante** (moyennes dominées par des
+  ticks aberrants, médianes négatives). Donc : le régime de sortie est une
+  **discipline d'exécution**, pas une prédiction de gain.
+
+### Après — journal enrichi
+Ajouter par trade : régime de volume du jour, score catalyst à l'entrée,
+régime de sortie choisi (scalp/runner), sortie prévue vs réelle.
+En revue hebdo : le taux de hors-plan se calcule **par régime** (les runners
+sont-ils tenus moins bien que les scalps ?).
+
+### Garde-fous inchangés
+- Aucun changement de `lab/risk/policy.example.json`, de l'exécuteur, du Risk
+  Engine ni des poids de score dans ce protocole.
+- `NO ACTION` si données insuffisantes (règle n ≥ 30) — un score catalyst
+  élevé n'est jamais une autorisation d'augmenter la taille.
+- Le paper mesure la discipline ; il ne prouve pas la rentabilité live.
+
 ## Avertissements
 
 - La « série de jours verts » est un **outil de discipline en paper**, jamais un

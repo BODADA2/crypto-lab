@@ -1,0 +1,38 @@
+{
+  "computedAt": "2026-09-28T03:55:03.035Z",
+  "windowDays": [
+    "2026-09-24",
+    "2026-09-25",
+    "2026-09-26",
+    "2026-09-27",
+    "2026-09-28"
+  ],
+  "creates": 63267,
+  "migrates": 1475,
+  "baselineMigrationRate": 0.02331389191837767,
+  "buckets": [
+    {
+      "bucket": "fort",
+      "n": 13665,
+      "migrated": 329,
+      "migrationRate": 0.024076106842297842,
+      "conclusive": true
+    },
+    {
+      "bucket": "faible",
+      "n": 0,
+      "migrated": 0,
+      "migrationRate": null,
+      "conclusive": false
+    },
+    {
+      "bucket": "aucun",
+      "n": 49602,
+      "migrated": 1146,
+      "migrationRate": 0.02310390710052014,
+      "conclusive": true
+    }
+  ],
+  "liftStrongVsBaseline": 1.0326935942994289,
+  "verdict": "Bucket « fort » (n=13665) : taux de migration x1.03 vs base — signal catalyst à creuser en paper, pas une preuve."
+}
