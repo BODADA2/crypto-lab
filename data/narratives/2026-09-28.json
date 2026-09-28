@@ -1,5 +1,5 @@
 {
-  "computedAt": "2026-09-28T13:56:10.375Z",
+  "computedAt": "2026-09-28T14:08:14.261Z",
   "terms": [
     {
       "term": "spark",
@@ -13,6 +13,17 @@
       "docs24h": 8
     },
     {
+      "term": "accounting",
+      "count24h": 13,
+      "baselinePerDay": 0,
+      "count7d": 0,
+      "growth": 14,
+      "sources": {
+        "github": 13
+      },
+      "docs24h": 12
+    },
+    {
       "term": "bittensor",
       "count24h": 36,
       "baselinePerDay": 1.7142857142857142,
@@ -24,15 +35,16 @@
       "docs24h": 18
     },
     {
-      "term": "accounting",
+      "term": "ing",
       "count24h": 12,
       "baselinePerDay": 0,
       "count7d": 0,
       "growth": 13,
       "sources": {
-        "github": 12
+        "github": 11,
+        "token": 1
       },
-      "docs24h": 11
+      "docs24h": 12
     },
     {
       "term": "leverage",
@@ -47,14 +59,13 @@
       "docs24h": 10
     },
     {
-      "term": "ing",
+      "term": "earnings",
       "count24h": 11,
       "baselinePerDay": 0,
       "count7d": 0,
       "growth": 12,
       "sources": {
-        "github": 10,
-        "token": 1
+        "github": 11
       },
       "docs24h": 11
     },
@@ -70,15 +81,15 @@
       "docs24h": 14
     },
     {
-      "term": "earnings",
-      "count24h": 10,
-      "baselinePerDay": 0,
-      "count7d": 0,
-      "growth": 11,
+      "term": "nextjs",
+      "count24h": 16,
+      "baselinePerDay": 0.5714285714285714,
+      "count7d": 4,
+      "growth": 10.818181818181818,
       "sources": {
-        "github": 10
+        "github": 16
       },
-      "docs24h": 10
+      "docs24h": 16
     },
     {
       "term": "mpc",
@@ -101,17 +112,6 @@
         "token": 17
       },
       "docs24h": 15
-    },
-    {
-      "term": "gill",
-      "count24h": 12,
-      "baselinePerDay": 0.2857142857142857,
-      "count7d": 2,
-      "growth": 10.111111111111112,
-      "sources": {
-        "github": 12
-      },
-      "docs24h": 6
     }
   ]
 }
