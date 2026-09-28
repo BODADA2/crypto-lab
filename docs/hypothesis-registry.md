@@ -166,6 +166,37 @@ affiche +60 224 % entièrement porté par l'artefact SKHY (médiane −25,3 %) ;
 (froid −32,6 % vs chaud −20,6 %) ; (4) filtre anti-tick-aberrant (≥100× vs les
 deux voisins) à ajouter au pipeline. Doc : `docs/expectancy-decomposition-2026-09-28.md`.
 
+## 9. Programme prédictif — phase DÉCOUVERTE (28 sept. 2026)
+
+Question : existe-t-il une propriété observable AVANT le mouvement qui
+distingue les tokens à Y futur positif ? Protocole : `lab/predictive/universe.ts`
+(t0 = liq ≥ 20 k$, Y = 1h/6h/24h, anti-glitch ≥100×, univers disjoints
+discovery/calibration/holdout par hash). Verdict Phase 1 : **NO EVIDENCE OF
+PREDICTIVE SIGNAL pour une espérance positive** — les signaux survivants sont
+des filtres d'exclusion (prédisent les pertes, pas les gains).
+
+| ID | Hypothèse (prédiction) | Résultat | Falsificateur |
+|---|---|---|---|
+| H-PRED-FLOW-01 | Frénésie d'activité à t0 ⇒ Y@1h négatif | **SURVIT (DÉCOUVERTE)** : holdout ρ=−0,220, p=0,0029, IC [−0,37 ; −0,06], n=182. Reste à re-tester sur collecte propre 30 j | ρ ≥ 0 au holdout propre |
+| H-PRED-FLOW-02 | Divergence prix/dominance ⇒ Y@6h négatif | Observation non calibrée (ρ=−0,291) — à tester proprement | — |
+| H-PRED-LIQ-01 | Turnover élevé à t0 ⇒ Y futurs négatifs | **CONFIRMÉE directionnellement (DÉCOUVERTE)** : holdout 6h sp=−0,410 (n=97), top décile médiane −83,7 %. Filtre d'exclusion, pas edge long | sp ≥ 0 au holdout propre |
+| H-PRED-LIQ-02 | Profondeur élevée évite les catastrophes | **PARTIELLE** : 6h tient (+0,271), 1h infirmée (+0,008) | sp ≤ 0 @6h au holdout propre |
+| H-PRED-LIQ-03 | mcLiq élevé ⇒ meilleurs Y | **MIXTE** : direction 6h (+0,222), amplitude effondrée | — |
+| H-PRED-LIQ-04 | Croissance pré-t0 vs stagnation | **INTESTABLE** (n=34) — retester après 30 j | — |
+| H-PRED-LIQ-05 | 4 signaux liquidité indépendants | **FALSIFIÉE** : corrélations 0,37–0,79 → une seule dimension | — |
+| H-PRED-TEMP-LEVEL | Niveau prix/liq à t0 ⇒ Y@6h | **PROMU avec réserves (DÉCOUVERTE)** : ρ 0,39→0,31→0,28, n=97 ; p limite vs Bonferroni, biais de survie | ρ ≤ 0 au holdout propre |
+| H-PRED-TEMP-AGE | Jeunesse ⇒ Y | **FALSIFIÉE** directionnellement puis NO SIGNAL | — |
+| H-PRED-TEMP-GROWTH/ACCEL/ACTIVITY | Forme pré-t0 ⇒ Y | **NON CONCLUANTES** (n < 30 ; 87 % t0 au 1er snapshot) | — |
+| H-PRED-TEMP-SESSION | Heure de t0 ⇒ Y@1h | **PISTE FRAGILE** | — |
+| H-PRED-DIST-01/02/03 | Concentration/Δ top10, holders ⇒ Y | **INMESURABLES** (top10Pct=100 partout, holders null) — NO DATA | données holders à t0 |
+| H-PRED-DIST-04/05/06 | Métriques early buyers, clusters ⇒ Y | **BLOQUÉES** (n=10 < 30 ; contamination temporelle X après t0) | n≥30, X antérieur à t0 |
+| H-PRED-WAL-01 à 09 | Variables early buyers ⇒ Y/survie | **NON TESTABLES** (n=1 en discovery) — pipeline prêt, question ouverte n°1 | n≥30 en discovery |
+
+Convergence : FLOW-01 + LIQ-01 + TEMP-LEVEL = un seul phénomène — **la
+frénésie à t0 prédit des pertes, le calme relatif prédit des pertes
+moindres**. Aucune variable ne prédit Y positif OOS. Docs :
+`docs/predictive-program-2026-09-28.md` + `docs/predictive-{wallets,flows,liquidity,distribution,temporal}-2026-09-28.md`.
+
 ---
 *Registre tenu par Muse. Toute nouvelle hypothèse testée doit y être inscrite AVANT
 d'influencer une décision — y compris les falsifications.*
