@@ -11,12 +11,45 @@
  * Budget : ≈ (pages de signatures + transactions lues) crédits par token ; avec n=50 et
  * maxTransactions=200, au plus ~210 crédits/token → 20 tokens ≈ 4 200 crédits/jour ≈ 130 k/mois (< 1 M gratuit).
  */
+/**
+ * Job « early-buyer bundle » (quotidien, optionnel : exige HELIUS_API_KEY).
+ *   npx tsx lab/signals/run-earlybuyers.ts [--tokens 50] [--k 3] [--n 50]
+ *     [--max-credits 15000] [--monthly-cap 400000] [--no-sells]
+ *
+ * 1) Lit les migrations dans data/scans/pump-*.jsonl (les plus récentes d'abord, dédoublonnées).
+ * 2) Pour chaque token migré (max --tokens), récupère ses N premiers acheteurs via Helius
+ *    (cache dans data/earlybuyers/<mint>.json pour ne jamais repayer un token déjà lu).
+ * 3) Calcule les métriques de bundling H-BUNDLE (top5_share, gini, same_slot_max) et,
+ *    sauf --no-sells, les ventes coordonnées post-migration (coordinated_sells) pour les
+ *    tokens dont la fenêtre de 5 min post-migration est écoulée.
+ * 4) Calcule les wallets présents dans ≥ K tokens et écrit data/wallets/<address>.json.
+ * 5) Met à jour data/meta.json (crédits Helius cumulés du mois, estimation).
+ *
+ * Garde-fous : arrêt propre si --max-credits (ce run) ou --monthly-cap (mois calendaire,
+ * lu dans data/meta.json) est atteint. Aucune métrique n'est un signal d'achat :
+ * T-BUNDLE est pré-enregistré (docs/preregistered-addendum-2026-09-28.md).
+ *
+ * Budget : ≈ (pages de signatures + transactions lues) crédits par token ; avec n=50 et
+ * maxTransactions=200, au plus ~210 crédits/token pour les acheteurs, + ~410 pour les
+ * ventes (10 wallets × 41). 50 tokens/jour ≈ 31 k/jour au pire ≈ sous le plafond mensuel.
+ */
 import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from "node:fs";
 import { join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { createHeliusClient, type EarlyBuyersResult, type HeliusClient } from "../collect/helius.ts";
-import type { PumpEvent } from "../collect/types.ts";
-import { computeEarlyBuyerOverlap, writeWalletProfiles, type EarlyBuyerSet } from "./earlybuyers.ts";
+import type { PumpEvent, WalletTokenEvent } from "../collect/types.ts";
+import {
+  computeBundleMetrics,
+  computeCoordinatedSells,
+  computeEarlyBuyerOverlap,
+  writeWalletProfiles,
+  type BundleMetrics,
+  type CoordinatedSells,
+  type EarlyBuyerSet,
+} from "./earlybuyers.ts";
+
+/** Borne haute de crédits par token : ~210 (acheteurs) + ~410 (ventes : 10 wallets × 41). */
+export const EST_CREDITS_PER_TOKEN = 650;
 
 export interface EarlyBuyersJobOptions {
   dataDir: string;
@@ -25,6 +58,35 @@ export interface EarlyBuyersJobOptions {
   minRecurrence?: number;
   topN?: number;
   now?: () => number;
+  /** Plafond de crédits Helius pour ce run (arrêt propre si dépassé). Défaut 15000. */
+  maxCredits?: number;
+  /** Plafond mensuel calendaire (défaut 400000 < 1M gratuit). */
+  monthlyCap?: number;
+  /** Calculer coordinated_sells quand la fenêtre post-migration est écoulée. Défaut true. */
+  withSells?: boolean;
+  /** Top acheteurs analysés pour les ventes, par montant décroissant (défaut 10). */
+  sellsWallets?: number;
+  /** Transactions lues par wallet pour les ventes (défaut 40, max 100 côté Helius). */
+  sellsTxLimit?: number;
+  /** Sauter l'analyse overlap (défaut false). */
+  skipOverlap?: boolean;
+}
+
+export interface CachedEarlyBuyers extends EarlyBuyersResult {
+  fetchedAt?: string;
+  migratedAt?: string | null;
+  metrics?: BundleMetrics;
+  sells?: CoordinatedSells;
+}
+
+export interface EarlyBuyersJobReport {
+  tokens: number;
+  wallets: number;
+  credits: number;
+  fetched: number;
+  metricsComputed: number;
+  sellsComputed: number;
+  stoppedEarly: string | null;
 }
 
 /** Migrations connues, plus récentes d'abord, une par mint. */
@@ -50,52 +112,147 @@ export function readMigrations(scansDir: string): PumpEvent[] {
   return out;
 }
 
-export async function runEarlyBuyersJob(o: EarlyBuyersJobOptions): Promise<{ tokens: number; wallets: number; credits: number }> {
+function readMeta(dataDir: string): Record<string, unknown> {
+  const metaPath = join(dataDir, "meta.json");
+  return existsSync(metaPath) ? (JSON.parse(readFileSync(metaPath, "utf8")) as Record<string, unknown>) : {};
+}
+
+export async function runEarlyBuyersJob(o: EarlyBuyersJobOptions): Promise<EarlyBuyersJobReport> {
   const now = o.now ?? (() => Date.now());
+  const maxCredits = o.maxCredits ?? 15000;
+  const monthlyCap = o.monthlyCap ?? 400000;
+  const withSells = o.withSells ?? true;
+  const sellsWallets = o.sellsWallets ?? 10;
+  const sellsTxLimit = Math.min(o.sellsTxLimit ?? 40, 100);
   const scansDir = join(o.dataDir, "scans");
   const cacheDir = join(o.dataDir, "earlybuyers");
   mkdirSync(cacheDir, { recursive: true });
+
+  const meta = readMeta(o.dataDir);
+  const month = new Date(now()).toISOString().slice(0, 7);
+  let monthCredits = meta.heliusMonth === month ? Number(meta.heliusCreditsMonth ?? 0) : 0;
+  const report: EarlyBuyersJobReport = {
+    tokens: 0,
+    wallets: 0,
+    credits: 0,
+    fetched: 0,
+    metricsComputed: 0,
+    sellsComputed: 0,
+    stoppedEarly: null,
+  };
+  const stopCheck = (): string | null => {
+    if (report.credits >= maxCredits) return `plafond run ${maxCredits} crédits atteint`;
+    if (monthCredits + report.credits >= monthlyCap) return `plafond mensuel ${monthlyCap} crédits atteint`;
+    return null;
+  };
+  if (monthCredits >= monthlyCap) {
+    report.stoppedEarly = `plafond mensuel ${monthlyCap} crédits déjà atteint (${monthCredits}) : rien à faire`;
+    return report;
+  }
+
   const migrations = readMigrations(scansDir).slice(0, o.maxTokens ?? 20);
   const sets: EarlyBuyerSet[] = [];
   const before = o.helius.credits;
+
+  const saveCache = (mint: string, data: CachedEarlyBuyers) => {
+    writeFileSync(join(cacheDir, `${mint}.json`), JSON.stringify(data, null, 2) + "\n");
+  };
+
   for (const m of migrations) {
+    const reason = stopCheck();
+    if (reason) {
+      report.stoppedEarly = reason;
+      break;
+    }
     const cachePath = join(cacheDir, `${m.mint}.json`);
-    let res: EarlyBuyersResult;
+    let res: CachedEarlyBuyers;
     if (existsSync(cachePath)) {
-      res = JSON.parse(readFileSync(cachePath, "utf8")) as EarlyBuyersResult;
-    } else {
       try {
-        res = await o.helius.getEarlyBuyers(m.mint, o.topN ?? 50, { maxTransactions: 200 });
+        res = JSON.parse(readFileSync(cachePath, "utf8")) as CachedEarlyBuyers;
+      } catch {
+        continue;
+      }
+    } else {
+      // Garde-fou : ne pas engager un token si la borne haute dépasse le plafond.
+      if (report.credits + EST_CREDITS_PER_TOKEN > maxCredits || monthCredits + report.credits + EST_CREDITS_PER_TOKEN > monthlyCap) {
+        report.stoppedEarly = "plafond crédits : token suivant non engagé (borne haute)";
+        break;
+      }
+      try {
+        const fresh = await o.helius.getEarlyBuyers(m.mint, o.topN ?? 50, { maxTransactions: 200 });
+        report.fetched += 1;
+        res = { ...fresh, fetchedAt: new Date(now()).toISOString(), migratedAt: m.receivedAt ?? null };
       } catch (e) {
         console.error(`[earlybuyers] ${m.mint}: ${(e as Error).message}`);
         continue;
       }
-      writeFileSync(cachePath, JSON.stringify({ ...res, fetchedAt: new Date(now()).toISOString() }, null, 2) + "\n");
     }
-    sets.push({ mint: m.mint, buyers: res.buyers, migratedAt: m.receivedAt });
+    // Métriques de bundling : gratuites (calcul local), (re)calculées si absentes.
+    if (!res.metrics) {
+      res.metrics = computeBundleMetrics(res.buyers, { truncated: res.truncated, now });
+      report.metricsComputed += 1;
+    }
+    if (res.migratedAt == null && m.receivedAt) res.migratedAt = m.receivedAt;
+    // Ventes coordonnées : seulement si la fenêtre post-migration est écoulée.
+    if (withSells && !res.sells && res.migratedAt) {
+      const migratedAtMs = Date.parse(res.migratedAt);
+      const windowSec = 300;
+      if (!Number.isNaN(migratedAtMs) && now() > migratedAtMs + (windowSec + 600) * 1000) {
+        const reasonSells = stopCheck();
+        if (reasonSells) {
+          report.stoppedEarly = reasonSells;
+          saveCache(m.mint, res);
+          break;
+        }
+        try {
+          const top = [...res.buyers]
+            .sort((a, b) => {
+              const x = BigInt(a.amountRaw);
+              const y = BigInt(b.amountRaw);
+              return x < y ? 1 : x > y ? -1 : 0;
+            })
+            .slice(0, sellsWallets);
+          const histories = new Map<string, WalletTokenEvent[]>();
+          for (const b of top) {
+            const h = await o.helius.getWalletTokenHistory(b.wallet, { limit: sellsTxLimit });
+            histories.set(b.wallet, h.events);
+          }
+          res.sells = computeCoordinatedSells(top, histories, m.mint, migratedAtMs, { windowSec, now });
+          report.sellsComputed += 1;
+        } catch (e) {
+          console.error(`[earlybuyers:sells] ${m.mint}: ${(e as Error).message}`);
+        }
+      }
+    }
+    saveCache(m.mint, res);
+    sets.push({ mint: m.mint, buyers: res.buyers, migratedAt: res.migratedAt ?? m.receivedAt });
+    report.credits = o.helius.credits - before;
   }
   // Tous les tokens déjà en cache participent à l'univers (même s'ils ne sont plus dans les scans).
   for (const f of readdirSync(cacheDir)) {
     const mint = f.replace(/\.json$/, "");
     if (sets.some((s) => s.mint === mint)) continue;
     try {
-      const res = JSON.parse(readFileSync(join(cacheDir, f), "utf8")) as EarlyBuyersResult;
+      const res = JSON.parse(readFileSync(join(cacheDir, f), "utf8")) as CachedEarlyBuyers;
       sets.push({ mint, buyers: res.buyers });
     } catch {
       /* ignorée */
     }
   }
-  const profiles = computeEarlyBuyerOverlap(sets, { minRecurrence: o.minRecurrence ?? 3, topN: o.topN ?? 50, now });
-  writeWalletProfiles(profiles, join(o.dataDir, "wallets"));
-  const credits = o.helius.credits - before;
+  if (!o.skipOverlap) {
+    const profiles = computeEarlyBuyerOverlap(sets, { minRecurrence: o.minRecurrence ?? 3, topN: o.topN ?? 50, now });
+    writeWalletProfiles(profiles, join(o.dataDir, "wallets"));
+    report.wallets = profiles.length;
+  }
+  report.tokens = sets.length;
+  report.credits = o.helius.credits - before;
   const metaPath = join(o.dataDir, "meta.json");
-  const meta = existsSync(metaPath) ? (JSON.parse(readFileSync(metaPath, "utf8")) as Record<string, unknown>) : {};
-  const month = new Date(now()).toISOString().slice(0, 7);
-  meta.heliusCreditsMonth = (meta.heliusMonth === month ? Number(meta.heliusCreditsMonth ?? 0) : 0) + credits;
-  meta.heliusMonth = month;
-  meta.lastEarlyBuyersRun = new Date(now()).toISOString();
-  writeFileSync(metaPath, JSON.stringify(meta, null, 2) + "\n");
-  return { tokens: sets.length, wallets: profiles.length, credits };
+  const freshMeta = readMeta(o.dataDir);
+  freshMeta.heliusCreditsMonth = (freshMeta.heliusMonth === month ? Number(freshMeta.heliusCreditsMonth ?? 0) : 0) + report.credits;
+  freshMeta.heliusMonth = month;
+  freshMeta.lastEarlyBuyersRun = new Date(now()).toISOString();
+  writeFileSync(metaPath, JSON.stringify(freshMeta, null, 2) + "\n");
+  return report;
 }
 
 const isMain = process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url);
@@ -109,7 +266,24 @@ if (isMain) {
     const i = process.argv.indexOf(`--${name}`);
     return i >= 0 ? Number(process.argv[i + 1]) : def;
   };
+  const flag = (name: string) => process.argv.includes(`--${name}`);
   const helius = createHeliusClient({ fetch: globalThis.fetch, apiKey });
-  const res = await runEarlyBuyersJob({ dataDir: resolve(process.env.DATA_DIR ?? "data"), helius, maxTokens: arg("tokens", 20), minRecurrence: arg("k", 3), topN: arg("n", 50) });
-  console.log(`early-buyers : ${res.tokens} tokens, ${res.wallets} wallets récurrents, ${res.credits} crédits Helius.`);
+  const res = await runEarlyBuyersJob({
+    dataDir: resolve(process.env.DATA_DIR ?? "data"),
+    helius,
+    maxTokens: arg("tokens", 20),
+    minRecurrence: arg("k", 3),
+    topN: arg("n", 50),
+    maxCredits: arg("max-credits", 15000),
+    monthlyCap: arg("monthly-cap", 400000),
+    withSells: !flag("no-sells"),
+    sellsWallets: arg("sells-wallets", 10),
+    sellsTxLimit: arg("sells-tx", 40),
+    skipOverlap: flag("skip-overlap"),
+  });
+  console.log(
+    `early-buyers : ${res.tokens} tokens (${res.fetched} récupérés), ${res.wallets} wallets récurrents, ` +
+      `${res.metricsComputed} métriques calculées, ${res.sellsComputed} ventes analysées, ${res.credits} crédits Helius.` +
+      (res.stoppedEarly ? ` ARRÊT PRÉCOCE : ${res.stoppedEarly}.` : ""),
+  );
 }

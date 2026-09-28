@@ -237,10 +237,18 @@ describe("job early-buyers (Helius hors ligne)", () => {
     const res = await runEarlyBuyersJob({ dataDir, helius, minRecurrence: 1, now });
     expect(res.tokens).toBe(1);
     expect(res.wallets).toBe(4);
-    expect(res.credits).toBe(7);
+    // 7 (acheteurs) + 28 (ventes coordonnées : fenêtre post-migration écoulée)
+    expect(res.credits).toBe(35);
+    expect(res.sellsComputed).toBe(1);
     expect(readdirSync(join(dataDir, "wallets"))).toContain(`${addr.CREATOR}.json`);
+    const cached = JSON.parse(readFileSync(join(dataDir, "earlybuyers", `${addr.MINT}.json`), "utf8")) as {
+      metrics: { top5_share: number };
+      sells: { coordinated_sells: number | null };
+    };
+    expect(cached.metrics.top5_share).toBeGreaterThanOrEqual(0);
+    expect(cached.sells).toBeDefined();
     const meta = JSON.parse(readFileSync(join(dataDir, "meta.json"), "utf8")) as { heliusCreditsMonth: number };
-    expect(meta.heliusCreditsMonth).toBe(7);
+    expect(meta.heliusCreditsMonth).toBe(35);
     // Second passage : cache → aucun crédit supplémentaire.
     const calls = ff.calls.length;
     const again = await runEarlyBuyersJob({ dataDir, helius, minRecurrence: 1, now });
