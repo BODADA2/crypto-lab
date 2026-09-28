@@ -1,28 +1,28 @@
 {
-  "computedAt": "2026-09-28T22:23:33.084Z",
+  "computedAt": "2026-09-28T22:36:05.257Z",
   "terms": [
     {
       "term": "jev",
-      "count24h": 34,
+      "count24h": 37,
       "baselinePerDay": 0.2857142857142857,
       "count7d": 2,
-      "growth": 27.222222222222225,
+      "growth": 29.555555555555557,
       "sources": {
-        "github": 33,
+        "github": 36,
         "token": 1
       },
-      "docs24h": 12
+      "docs24h": 13
     },
     {
       "term": "typesafe",
-      "count24h": 22,
+      "count24h": 24,
       "baselinePerDay": 0,
       "count7d": 0,
-      "growth": 23,
+      "growth": 25,
       "sources": {
-        "github": 22
+        "github": 24
       },
-      "docs24h": 11
+      "docs24h": 12
     },
     {
       "term": "lib",
@@ -36,6 +36,28 @@
       "docs24h": 20
     },
     {
+      "term": "adapter",
+      "count24h": 16,
+      "baselinePerDay": 0,
+      "count7d": 0,
+      "growth": 17,
+      "sources": {
+        "github": 16
+      },
+      "docs24h": 16
+    },
+    {
+      "term": "binding",
+      "count24h": 16,
+      "baselinePerDay": 0,
+      "count7d": 0,
+      "growth": 17,
+      "sources": {
+        "github": 16
+      },
+      "docs24h": 16
+    },
+    {
       "term": "spark",
       "count24h": 16,
       "baselinePerDay": 0,
@@ -47,26 +69,15 @@
       "docs24h": 8
     },
     {
-      "term": "adapter",
-      "count24h": 15,
-      "baselinePerDay": 0,
-      "count7d": 0,
-      "growth": 16,
+      "term": "wasm",
+      "count24h": 50,
+      "baselinePerDay": 2.142857142857143,
+      "count7d": 15,
+      "growth": 16.227272727272727,
       "sources": {
-        "github": 15
+        "github": 50
       },
-      "docs24h": 15
-    },
-    {
-      "term": "binding",
-      "count24h": 15,
-      "baselinePerDay": 0,
-      "count7d": 0,
-      "growth": 16,
-      "sources": {
-        "github": 15
-      },
-      "docs24h": 15
+      "docs24h": 18
     },
     {
       "term": "package",
@@ -80,37 +91,26 @@
       "docs24h": 15
     },
     {
-      "term": "wasm",
-      "count24h": 47,
-      "baselinePerDay": 2.142857142857143,
-      "count7d": 15,
-      "growth": 15.272727272727273,
+      "term": "attestations",
+      "count24h": 17,
+      "baselinePerDay": 0.14285714285714285,
+      "count7d": 1,
+      "growth": 15.75,
       "sources": {
-        "github": 47
+        "github": 17
       },
       "docs24h": 17
     },
     {
-      "term": "attestations",
-      "count24h": 16,
-      "baselinePerDay": 0.14285714285714285,
-      "count7d": 1,
-      "growth": 14.875,
+      "term": "provider",
+      "count24h": 24,
+      "baselinePerDay": 0.7142857142857143,
+      "count7d": 5,
+      "growth": 14.583333333333332,
       "sources": {
-        "github": 16
+        "github": 24
       },
-      "docs24h": 16
-    },
-    {
-      "term": "npmjs",
-      "count24h": 13,
-      "baselinePerDay": 0,
-      "count7d": 0,
-      "growth": 14,
-      "sources": {
-        "github": 13
-      },
-      "docs24h": 13
+      "docs24h": 12
     }
   ]
 }
