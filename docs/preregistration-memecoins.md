@@ -120,3 +120,21 @@ ces règles) ; le sniping est l'inverse — arriver le premier. Aucune donnée d
   ≥ 1,3, espérance > 0, sur chaque période). **RETENUE seulement si H5a ET H5b passent sur A ET sur B.** Si même le
   sniper parfait perd, le sniping est abandonné.
 - **Verdict :** `lab/backtest/preregistered-snipe.ts`, le 17 octobre 2026, dans `reports/verdict-snipe-2026-10-17.md`.
+
+## Hypothèse 6 — les 4 questions sur 14 canaux Telegram (ajoutée le 28 septembre 2026, avant les calls jugés)
+
+Demande d'Hervé : juger les calls de façon intelligente, pas aveugle, et tester la règle du Journal du lab. Seuls les
+calls publiés **à partir du 29 septembre 2026 00:00 heure du Nouveau-Brunswick (03:00 UTC)** comptent : aucun d'eux
+n'existait au moment de cet ajout.
+
+- **Données :** `data-channels/` (14 canaux suivis toutes les 15 min, observations compactes). Un call compte s'il est
+  vu moins de 30 min après sa publication, sur Solana ou Robinhood Chain ; un seul trade par adresse (premier canal).
+- **Les 4 questions**, dans les 2 h après le call : (1) l'argent entre — volume 5 min ≥ 5 % de la liquidité et achats
+  5 min ≥ ventes ; (2) on en parle — vrai par construction ; (3) pas un piège — liquidité ≥ 20 000 $ et prix ≥ la
+  moitié du prix à la première observation après le call ; (4) humeur du marché — non mesurée dans ces données, case
+  grise. Règle du Journal : ≥ 3 vertes et 0 rouge, donc (1), (2) et (3) vertes. Achat à l'observation suivante.
+- **Sorties, coûts, périodes, critères :** ceux de S1 et de H4 (+50 % / −25 % / ~6 h, 1,3 % de frais, glissement
+  ≤ 3 %, disparu = −100 %) ; A avant le 6 octobre, B à partir du 6 octobre ; ≥ 30 trades, gains ÷ pertes ≥ 1,3,
+  espérance > 0 sur chaque période.
+- **Verdict :** `lab/backtest/preregistered-channels.ts`, le 17 octobre 2026, dans
+  `reports/verdict-channels-2026-10-17.md`.
