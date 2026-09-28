@@ -3,54 +3,58 @@
   "chain": "solana",
   "symbol": "PUMP",
   "name": "Pump",
-  "createdAt": "2025-07-14T16:50:24.000Z",
-  "pairCreatedAt": 1752511824000,
+  "createdAt": "2025-07-14T16:54:11.000Z",
+  "pairCreatedAt": 1752512051000,
   "pairAddress": "2uF4Xh61rDwxnG9woyxsVQP7zuA6kLFpb3NvnRQeoiSd",
   "dexId": "pumpswap",
   "url": "https://dexscreener.com/solana/2uf4xh61rdwxng9woyxsvqp7zua6klfpb3nvnrqeoisd",
-  "priceUsd": 0.005031,
-  "liquidityUsd": 25664769.25,
-  "fdvUsd": 4182390372,
-  "marketCapUsd": 2343419730,
+  "priceUsd": 0.005003,
+  "liquidityUsd": 25594356.61,
+  "fdvUsd": 4159238883,
+  "marketCapUsd": 2330447805,
   "volume": {
-    "m5": 222376.22999999998,
-    "h1": 4184665.359999999,
-    "h6": 16865352.490000002,
-    "h24": 59737355.379999995
+    "m5": 254012.51999999996,
+    "h1": 4510794.959999999,
+    "h6": 17119813.29,
+    "h24": 59388632.99000001
   },
-  "volume5m": 222376.22999999998,
-  "volume1h": 4184665.359999999,
-  "volume24h": 59737355.379999995,
+  "volume5m": 254012.51999999996,
+  "volume1h": 4510794.959999999,
+  "volume24h": 59388632.99000001,
   "priceChange": {
-    "m5": 0.51,
-    "h1": -4.4,
-    "h6": 2.7,
-    "h24": 5.5
+    "m5": -0.87,
+    "h1": -4.67,
+    "h6": 2.69,
+    "h24": 4.15
   },
   "txns": {
     "m5": {
-      "buys": 412,
-      "sells": 223
+      "buys": 345,
+      "sells": 396
     },
     "h1": {
-      "buys": 4109,
-      "sells": 5718
+      "buys": 4134,
+      "sells": 5972
     },
     "h6": {
-      "buys": 20189,
-      "sells": 20143
+      "buys": 19553,
+      "sells": 19609
     },
     "h24": {
-      "buys": 91759,
-      "sells": 89014
+      "buys": 88181,
+      "sells": 85366
     }
   },
   "holders": null,
-  "top10Pct": 100,
-  "mintAuthority": "UNKNOWN",
-  "freezeAuthority": "UNKNOWN",
+  "top10Pct": 59.77,
+  "mintAuthority": null,
+  "freezeAuthority": null,
   "boostsActive": 0,
-  "pairCount": 17,
+  "pairCount": 15,
   "source": "dexscreener",
-  "fetchedAt": "2026-09-28T14:59:01.762Z"
+  "fetchedAt": "2026-09-28T15:14:01.378Z",
+  "decimals": 6,
+  "riskyExtensions": [
+    "TransferHook"
+  ]
 }
