@@ -3,7 +3,7 @@
   "program": "token-2022",
   "mintAuthority": "7pt9tkctJPK7PPNQJ77GKg8ZffSF6QxoMiCFYHxrtaCj",
   "freezeAuthority": "JDq14BWvqCRFNu1krb12bcRpbGtJZ1FLEakMw6FdxJNs",
-  "supplyRaw": "8436028382452",
+  "supplyRaw": "8436028382451",
   "decimals": 8,
   "isInitialized": true,
   "extensions": [
@@ -16,7 +16,7 @@
     "TransferHook",
     "TokenMetadata"
   ],
-  "top10Pct": 85.8,
+  "top10Pct": 85.41,
   "topAccounts": [
     {
       "address": "FMQUsCaaq7vZ9BPipEyRqQcoLBp7q4giiV8PMsBETYBX",
@@ -77,9 +77,9 @@
     {
       "address": "4RWQkhLbmgQ4xeQyY2iqAqiEFkRNWB5gdChZkXaFUVxY",
       "owner": "GMjGLWzvK75LPetrgAmdeXnvxc4fUuQPwJxeQqTDU1aG",
-      "amountRaw": "99495875621",
-      "pct": 1.17,
-      "excluded": false
+      "amountRaw": "100251736238",
+      "pct": 1.18,
+      "excluded": true
     },
     {
       "address": "8d2NA8aKEahQJ3fDpLa3v4F4pMqsrmw1YwJnRAUkSsbW",
@@ -159,7 +159,7 @@
       "excluded": false
     }
   ],
-  "excludedCount": 0,
+  "excludedCount": 1,
   "holders": null,
   "riskyExtensions": [
     "PermanentDelegate",
@@ -167,6 +167,6 @@
     "Pausable",
     "TransferHook"
   ],
-  "fetchedAt": "2026-09-28T03:26:06.292Z",
+  "fetchedAt": "2026-09-28T04:26:28.764Z",
   "rpcCalls": 4
 }
