@@ -1,6 +1,17 @@
 {
-  "computedAt": "2026-09-28T14:44:52.680Z",
+  "computedAt": "2026-09-28T14:59:19.579Z",
   "terms": [
+    {
+      "term": "accounting",
+      "count24h": 16,
+      "baselinePerDay": 0,
+      "count7d": 0,
+      "growth": 17,
+      "sources": {
+        "github": 16
+      },
+      "docs24h": 15
+    },
     {
       "term": "spark",
       "count24h": 16,
@@ -13,38 +24,38 @@
       "docs24h": 8
     },
     {
-      "term": "accounting",
+      "term": "ing",
       "count24h": 15,
       "baselinePerDay": 0,
       "count7d": 0,
       "growth": 16,
       "sources": {
-        "github": 15
+        "github": 14,
+        "token": 1
       },
-      "docs24h": 14
+      "docs24h": 15
     },
     {
-      "term": "ing",
+      "term": "earnings",
       "count24h": 14,
       "baselinePerDay": 0,
       "count7d": 0,
       "growth": 15,
       "sources": {
-        "github": 13,
-        "token": 1
+        "github": 14
       },
       "docs24h": 14
     },
     {
-      "term": "earnings",
-      "count24h": 13,
-      "baselinePerDay": 0,
-      "count7d": 0,
-      "growth": 14,
+      "term": "nextjs",
+      "count24h": 20,
+      "baselinePerDay": 0.5714285714285714,
+      "count7d": 4,
+      "growth": 13.363636363636363,
       "sources": {
-        "github": 13
+        "github": 20
       },
-      "docs24h": 13
+      "docs24h": 20
     },
     {
       "term": "leverage",
@@ -59,17 +70,6 @@
       "docs24h": 10
     },
     {
-      "term": "nextjs",
-      "count24h": 18,
-      "baselinePerDay": 0.5714285714285714,
-      "count7d": 4,
-      "growth": 12.090909090909092,
-      "sources": {
-        "github": 18
-      },
-      "docs24h": 18
-    },
-    {
       "term": "multihedge",
       "count24h": 28,
       "baselinePerDay": 1.4285714285714286,
@@ -81,6 +81,29 @@
       "docs24h": 14
     },
     {
+      "term": "transparent",
+      "count24h": 14,
+      "baselinePerDay": 0.42857142857142855,
+      "count7d": 3,
+      "growth": 10.5,
+      "sources": {
+        "github": 14
+      },
+      "docs24h": 14
+    },
+    {
+      "term": "repo",
+      "count24h": 15,
+      "baselinePerDay": 0.5714285714285714,
+      "count7d": 4,
+      "growth": 10.181818181818182,
+      "sources": {
+        "github": 14,
+        "token": 1
+      },
+      "docs24h": 15
+    },
+    {
       "term": "gill",
       "count24h": 12,
       "baselinePerDay": 0.2857142857142857,
@@ -90,28 +113,6 @@
         "github": 12
       },
       "docs24h": 6
-    },
-    {
-      "term": "bittensor",
-      "count24h": 32,
-      "baselinePerDay": 2.2857142857142856,
-      "count7d": 16,
-      "growth": 10.043478260869566,
-      "sources": {
-        "github": 32
-      },
-      "docs24h": 16
-    },
-    {
-      "term": "transparent",
-      "count24h": 13,
-      "baselinePerDay": 0.42857142857142855,
-      "count7d": 3,
-      "growth": 9.799999999999999,
-      "sources": {
-        "github": 13
-      },
-      "docs24h": 13
     }
   ]
 }
