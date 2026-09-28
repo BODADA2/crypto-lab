@@ -290,4 +290,104 @@ describe("runFastlaneDetector", () => {
     const stats = await promise;
     expect(stats.reconnects).toBe(1);
   });
+
+  it("s'arrête à la durée programmée même sur connexion stable", async () => {
+    const fakes: FakeWs[] = [];
+    let stop = false;
+    const t0 = Date.now();
+    const promise = runFastlaneDetector({
+      wsUrl: "wss://fake",
+      createWs: () => {
+        const f = new FakeWs();
+        fakes.push(f);
+        return f;
+      },
+      now: () => Date.now(),
+      statsEveryMs: 1_000_000,
+      pingEveryMs: 50,
+      shouldStop: () => stop,
+    });
+    const ws = fakes[0];
+    if (!ws) throw new Error("WebSocket simulé non créé");
+    ws.onopen!({});
+    // Aucune déconnexion : la connexion reste stable, seul shouldStop arrête.
+    setTimeout(() => {
+      stop = true;
+    }, 120);
+    const stats = await promise;
+    expect(Date.now() - t0).toBeLessThan(5000);
+    expect(fakes.length).toBe(1); // aucune reconnexion nécessaire
+    expect(stats.reconnects).toBe(0);
+  });
+
+  it("rafraîchit l'URL WS à la reconnexion si refreshWsUrl est fourni", async () => {
+    const fakes: FakeWs[] = [];
+    const seenUrls: string[] = [];
+    let stop = false;
+    let n = 0;
+    const promise = runFastlaneDetector({
+      wsUrl: "wss://fake/v1",
+      refreshWsUrl: () => `wss://fake/v${++n + 1}`,
+      createWs: (url) => {
+        seenUrls.push(url);
+        const f = new FakeWs();
+        fakes.push(f);
+        return f;
+      },
+      now: () => Date.now(),
+      statsEveryMs: 1_000_000,
+      pingEveryMs: 1_000_000,
+      maxBackoffMs: 5,
+      shouldStop: () => stop,
+    });
+    const ws0 = fakes[0];
+    if (!ws0) throw new Error("WebSocket simulé non créé");
+    expect(seenUrls[0]).toBe("wss://fake/v1");
+    ws0.onopen!({});
+    ws0.emitClose(1006, "boom");
+    // Backoff initial 1000 ms → reconnexion ensuite.
+    await new Promise((r) => setTimeout(r, 1500));
+    expect(fakes.length).toBe(2);
+    expect(seenUrls[1]).toBe("wss://fake/v2");
+    stop = true;
+    const ws1 = fakes[1];
+    if (!ws1) throw new Error("WebSocket simulé non reconnecté");
+    ws1.emitClose(1000, "fin du test");
+    const stats = await promise;
+    expect(stats.reconnects).toBe(1);
+  });
+
+  it("conserve l'ancienne URL si refreshWsUrl lève", async () => {
+    const fakes: FakeWs[] = [];
+    const seenUrls: string[] = [];
+    let stop = false;
+    const promise = runFastlaneDetector({
+      wsUrl: "wss://fake/v1",
+      refreshWsUrl: () => {
+        throw new Error("CLI indisponible");
+      },
+      createWs: (url) => {
+        seenUrls.push(url);
+        const f = new FakeWs();
+        fakes.push(f);
+        return f;
+      },
+      now: () => Date.now(),
+      statsEveryMs: 1_000_000,
+      pingEveryMs: 1_000_000,
+      maxBackoffMs: 5,
+      shouldStop: () => stop,
+    });
+    const ws0 = fakes[0];
+    if (!ws0) throw new Error("WebSocket simulé non créé");
+    ws0.onopen!({});
+    ws0.emitClose(1006, "boom");
+    await new Promise((r) => setTimeout(r, 1500));
+    expect(fakes.length).toBe(2);
+    expect(seenUrls[1]).toBe("wss://fake/v1");
+    stop = true;
+    fakes[1]!.emitClose(1000, "fin du test");
+    const stats = await promise;
+    expect(stats.reconnects).toBe(1);
+  });
 });

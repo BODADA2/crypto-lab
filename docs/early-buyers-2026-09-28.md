@@ -76,5 +76,31 @@ quotidien existant avec `--tokens 50` (les nouveaux migrés sont détectés via
 ## Conformité
 Aucun push. Aucune transaction (réelle ou paper), aucun ordre — lectures chain uniquement.
 Risk Engine, exécuteur, seuils du moteur paper, `docs/paper-engine-cycle-*.md` intacts.
-Holdout `data/track-unbiased/` non touché. Clé Helius lue depuis `HELIUS_API_KEY`
-(jamais en clair dans le code ni les docs).
+Holdout `data/track-unbiased/` non touché. Clé Helius via le skill `~/workspace/skills/helius`
+(surrogate court-terme, jamais en clair dans le code, les docs ni les logs).
+
+## Addendum 2026-09-28 ~12h UTC — clé connectée, backfill live lancé
+
+La section « blocage environnemental » ci-dessus est **résolue** : la clé Helius est
+désormais connectée au coffre sécurisé et vérifiée fonctionnelle (getSlot → HTTP 200).
+
+**Intégration auth** (branche `feat/deku-cupsey`, aucun push) :
+- `lab/collect/helius-auth.ts` (nouveau) : `getHeliusRpcUrl()` obtient l'URL RPC via
+  `python3 ~/workspace/skills/helius/bin/helius_rpc_url.py` (surrogate `hsurr:*`) ;
+  `withHeliusAuthRefresh()` régénère l'URL une fois sur 401/403. L'URL complète
+  n'est jamais loggée ni mise dans un message d'erreur.
+- `lab/signals/run-earlybuyers.ts` : n'exige plus `HELIUS_API_KEY` ; construit le
+  client avec `rpcUrl` et réessaie une fois sur 401/403 (le job est idempotent
+  grâce au cache par token).
+- `tests/helius-auth.test.ts` : 8 tests verts.
+
+**Backfill live** : `npx tsx lab/signals/run-earlybuyers.ts --tokens 50 --max-credits 15000`
+lancé le 2026-09-28 ~12h15 UTC (avec ventes). Résultats ci-dessous après complétion.
+
+**Limite connue** : `getTransaction` utilise `maxSupportedTransactionVersion: 0` ;
+les transactions v1 échouent (`-32015`) et sont ignorées — les ventes coordonnées
+peuvent être sous-comptées sur les tokens concernés. À quantifier, pas de
+changement du client sans validation.
+
+**Rappel** : T-BUNDLE reste pré-enregistré (`docs/preregistered-addendum-2026-09-28.md`) —
+collecte et mesure uniquement, aucune conclusion de signal sur ces données.

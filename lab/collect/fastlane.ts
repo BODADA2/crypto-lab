@@ -219,6 +219,12 @@ export interface WsLike {
 
 export interface FastlaneOptions {
   wsUrl: string;
+  /**
+   * Appelé après chaque fermeture inattendue pour obtenir une URL WS fraîche
+   * (surrogate court-terme pouvant expirer). Si absent ou en échec, l'ancienne
+   * URL est réutilisée. Ne jamais logger la valeur renvoyée.
+   */
+  refreshWsUrl?: () => string;
   program?: string;
   commitment?: "processed" | "confirmed" | "finalized";
   createWs: (url: string) => WsLike;
@@ -261,13 +267,14 @@ export async function runFastlaneDetector(opts: FastlaneOptions): Promise<Fastla
   let backoffMs = 1000;
   const maxBackoff = opts.maxBackoffMs ?? 30000;
   let lastStatsAt = now();
+  let wsUrl = opts.wsUrl;
 
   // eslint-disable-next-line no-constant-condition
   while (true) {
     if (stopped || (opts.shouldStop && opts.shouldStop())) break;
     let ws: WsLike;
     try {
-      ws = opts.createWs(opts.wsUrl);
+      ws = opts.createWs(wsUrl);
     } catch {
       stats.wsErrors++;
       await sleep(backoffMs);
@@ -280,12 +287,31 @@ export async function runFastlaneDetector(opts: FastlaneOptions): Promise<Fastla
       let slotSub = -1;
       let pingTimer: ReturnType<typeof setInterval> | undefined;
 
+      const finish = () => {
+        if (pingTimer) clearInterval(pingTimer);
+        resolve();
+      };
+      // Arrêt programmé (ex. --duration-min) : vérifié à chaque ping, même si
+      // la connexion reste stable (sinon la boucle ne s'arrêterait jamais).
+      const requestStop = () => {
+        stopped = true;
+        try {
+          ws.close();
+        } catch { /* ignoré */ }
+        finish();
+      };
+
       ws.onopen = () => {
         backoffMs = 1000; // reset après connexion réussie
         ws.send(JSON.stringify({ jsonrpc: "2.0", id: 1, method: "logsSubscribe", params: [{ mentions: [program] }, { commitment }] }));
         ws.send(JSON.stringify({ jsonrpc: "2.0", id: 2, method: "slotSubscribe", params: [] }));
         pingTimer = setInterval(() => {
           try {
+            // Arrêt programmé même sur connexion stable (voir requestStop).
+            if (opts.shouldStop && opts.shouldStop()) {
+              requestStop();
+              return;
+            }
             if (ws.ping) ws.ping();
             else ws.send(JSON.stringify({ jsonrpc: "2.0", id: 0, method: "ping" }));
           } catch { /* ignoré */ }
@@ -345,10 +371,6 @@ export async function runFastlaneDetector(opts: FastlaneOptions): Promise<Fastla
         }
       };
 
-      const finish = () => {
-        if (pingTimer) clearInterval(pingTimer);
-        resolve();
-      };
       ws.onclose = () => finish();
       ws.onerror = () => {
         stats.wsErrors++;
@@ -359,6 +381,14 @@ export async function runFastlaneDetector(opts: FastlaneOptions): Promise<Fastla
     if (stopped || (opts.shouldStop && opts.shouldStop())) break;
     // Fermeture inattendue → reconnexion avec backoff (compte comme interruption mesurée).
     stats.reconnects++;
+    if (opts.refreshWsUrl) {
+      try {
+        wsUrl = opts.refreshWsUrl();
+      } catch {
+        // Conserve l'ancienne URL : la reconnexion échouera proprement et
+        // réessaiera au prochain cycle au lieu de planter la boucle.
+      }
+    }
     await sleep(backoffMs);
     backoffMs = Math.min(maxBackoff, backoffMs * 2);
   }

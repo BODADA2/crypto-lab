@@ -1,5 +1,5 @@
 /**
- * Job « early-buyer overlap » (quotidien, optionnel : exige HELIUS_API_KEY).
+ * Job « early-buyer overlap » (quotidien, optionnel : auth via le skill helius).
  *   npx tsx lab/signals/run-earlybuyers.ts [--tokens 20] [--k 3] [--n 50]
  *
  * 1) Lit les migrations dans data/scans/pump-*.jsonl (les plus récentes d'abord, dédoublonnées).
@@ -12,7 +12,7 @@
  * maxTransactions=200, au plus ~210 crédits/token → 20 tokens ≈ 4 200 crédits/jour ≈ 130 k/mois (< 1 M gratuit).
  */
 /**
- * Job « early-buyer bundle » (quotidien, optionnel : exige HELIUS_API_KEY).
+ * Job « early-buyer bundle » (quotidien, optionnel : auth via le skill helius).
  *   npx tsx lab/signals/run-earlybuyers.ts [--tokens 50] [--k 3] [--n 50]
  *     [--max-credits 15000] [--monthly-cap 400000] [--no-sells]
  *
@@ -37,6 +37,7 @@ import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 
 import { join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 import { createHeliusClient, type EarlyBuyersResult, type HeliusClient } from "../collect/helius.ts";
+import { getHeliusRpcUrl, withHeliusAuthRefresh, HeliusAuthError } from "../collect/helius-auth.ts";
 import type { PumpEvent, WalletTokenEvent } from "../collect/types.ts";
 import {
   computeBundleMetrics,
@@ -257,30 +258,37 @@ export async function runEarlyBuyersJob(o: EarlyBuyersJobOptions): Promise<Early
 
 const isMain = process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url);
 if (isMain) {
-  const apiKey = process.env.HELIUS_API_KEY;
-  if (!apiKey) {
-    console.log("HELIUS_API_KEY absent : job early-buyers ignoré.");
-    process.exit(0);
-  }
   const arg = (name: string, def: number) => {
     const i = process.argv.indexOf(`--${name}`);
     return i >= 0 ? Number(process.argv[i + 1]) : def;
   };
   const flag = (name: string) => process.argv.includes(`--${name}`);
-  const helius = createHeliusClient({ fetch: globalThis.fetch, apiKey });
-  const res = await runEarlyBuyersJob({
-    dataDir: resolve(process.env.DATA_DIR ?? "data"),
-    helius,
-    maxTokens: arg("tokens", 20),
-    minRecurrence: arg("k", 3),
-    topN: arg("n", 50),
-    maxCredits: arg("max-credits", 15000),
-    monthlyCap: arg("monthly-cap", 400000),
-    withSells: !flag("no-sells"),
-    sellsWallets: arg("sells-wallets", 10),
-    sellsTxLimit: arg("sells-tx", 40),
-    skipOverlap: flag("skip-overlap"),
-  });
+  // En cas de 401/403 (surrogate expiré), régénère l'URL une fois et réessaie.
+  // Le job est idempotent (cache par token) : une reprise ne repaie rien.
+  let res: EarlyBuyersJobReport;
+  try {
+    res = await withHeliusAuthRefresh("https://mainnet.helius-rpc.com/", async (url) => {
+      const helius = createHeliusClient({ fetch: globalThis.fetch, rpcUrl: url });
+      return runEarlyBuyersJob({
+        dataDir: resolve(process.env.DATA_DIR ?? "data"),
+        helius,
+        maxTokens: arg("tokens", 20),
+        minRecurrence: arg("k", 3),
+        topN: arg("n", 50),
+        maxCredits: arg("max-credits", 15000),
+        monthlyCap: arg("monthly-cap", 400000),
+        withSells: !flag("no-sells"),
+        sellsWallets: arg("sells-wallets", 10),
+        sellsTxLimit: arg("sells-tx", 40),
+        skipOverlap: flag("skip-overlap"),
+      });
+    });
+  } catch (e) {
+    console.log(
+      `Auth Helius indisponible (${e instanceof HeliusAuthError ? e.message : e}) : job early-buyers ignoré.`,
+    );
+    process.exit(0);
+  }
   console.log(
     `early-buyers : ${res.tokens} tokens (${res.fetched} récupérés), ${res.wallets} wallets récurrents, ` +
       `${res.metricsComputed} métriques calculées, ${res.sellsComputed} ventes analysées, ${res.credits} crédits Helius.` +

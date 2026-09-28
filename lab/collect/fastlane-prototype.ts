@@ -1,14 +1,18 @@
 /**
  * Prototype FAST LANE — observation uniquement.
  *
- *   HELIUS_API_KEY=... npx tsx lab/collect/fastlane-prototype.ts --duration-min 45
+ *   npx tsx lab/collect/fastlane-prototype.ts --duration-min 45
+ *
+ * Auth : via le skill ~/workspace/skills/helius (CLI helius_rpc_url.py) —
+ * plus aucune variable d'environnement à fournir. Le surrogate court-terme est
+ * régénéré à chaque reconnexion WebSocket si besoin.
  *
  * Écoute les logs du programme Pump.fun via le WebSocket Helius (standard),
  * détecte les créations de tokens en quasi-temps réel et mesure la latence
  * de détection. AUCUNE transaction, AUCUN ordre — écrit uniquement dans
  * data/fastlane/ (jamais dans data/scans, data/history ni data/track-unbiased/).
  *
- * Sans HELIUS_API_KEY : arrêt immédiat avec message explicite (aucune clé
+ * Sans authentification (skill helius) : arrêt immédiat avec message explicite (aucune clé
  * inventée, aucune donnée simulée présentée comme réelle).
  */
 import { mkdirSync, appendFileSync, writeFileSync } from "node:fs";
@@ -22,19 +26,25 @@ import {
   type DetectedCreate,
   type FastlaneStats,
 } from "./fastlane.ts";
+import { getHeliusRpcUrl, HeliusAuthError } from "./helius-auth.ts";
+import { createProxyWs } from "./proxy-ws.ts";
+
+const WSS_BASE = "wss://mainnet.helius-rpc.com/";
 
 function usage(): never {
-  console.error("Usage: HELIUS_API_KEY=... npx tsx lab/collect/fastlane-prototype.ts [--duration-min 45] [--program <addr>]");
+  console.error("Usage: npx tsx lab/collect/fastlane-prototype.ts [--duration-min 45] [--program <addr>]");
   process.exit(2);
 }
 
 async function main(): Promise<void> {
-  const apiKey = process.env.HELIUS_API_KEY;
-  if (!apiKey) {
+  let wsUrl: string;
+  try {
+    wsUrl = getHeliusRpcUrl(WSS_BASE);
+  } catch (e) {
     console.error(
-      "FAST LANE bloqué : variable d'environnement HELIUS_API_KEY absente.\n" +
-        "Aucune clé ne sera inventée et aucune mesure simulée ne sera produite.\n" +
-        "Pour lancer l'observation réelle : export HELIUS_API_KEY=<clé> (jamais en clair dans le chat).",
+      "FAST LANE bloqué : authentification Helius impossible.\n" +
+        (e instanceof HeliusAuthError ? e.message : String(e)) +
+        "\nAucune donnée simulée ne sera produite.",
     );
     process.exit(3);
   }
@@ -59,10 +69,16 @@ async function main(): Promise<void> {
   console.log(`[fastlane] programme=${program} durée=${durationMin} min → ${outPath}`);
   console.log("[fastlane] OBSERVATION UNIQUEMENT — aucune transaction, aucun ordre.");
 
+  let bytesIn = 0; // octets TLS reçus (mesure du coût WSS : crédits / 0,1 Mo)
   const createWs = (url: string): WsLike => {
-    // WebSocket global (Node ≥ 22). Pas de dépendance supplémentaire.
-    const ws = new WebSocket(url) as unknown as WsLike;
-    return ws;
+    // Le WebSocket natif de Node ignore le proxy d'egress (close 1006) :
+    // on tunnellise via CONNECT + TLS + upgrade 101 (aucune dépendance).
+    // L'URL complète (surrogate) n'est jamais loggée.
+    return createProxyWs(url, {
+      onBytesReceived: (n) => {
+        bytesIn += n;
+      },
+    });
   };
 
   const onCreate = (c: DetectedCreate) => {
@@ -72,15 +88,19 @@ async function main(): Promise<void> {
   const fmtStats = (s: FastlaneStats) => {
     const p = latencyPercentiles(s.latenciesMs);
     const elapsed = ((Date.now() - s.startedAt) / 60000).toFixed(1);
+    const mb = (bytesIn / 1048576).toFixed(1);
     return (
       `[fastlane] t+${elapsed}min notif=${s.notifications} creates=${s.createsDetected} ` +
       `parseFails=${s.parseFailures} reconnects=${s.reconnects} wsErrors=${s.wsErrors} ` +
+      `bytes=${mb}Mo ` +
       (p ? `lat(ms) p50=${p.p50.toFixed(0)} p95=${p.p95.toFixed(0)} p99=${p.p99.toFixed(0)} max=${p.max.toFixed(0)}` : "lat=—")
     );
   };
 
   const stats = await runFastlaneDetector({
-    wsUrl: `wss://mainnet.helius-rpc.com/?api-key=${encodeURIComponent(apiKey)}`,
+    wsUrl,
+    // En cas de fermeture inattendue, régénère le surrogate (court-terme).
+    refreshWsUrl: () => getHeliusRpcUrl(WSS_BASE),
     program,
     commitment: "processed",
     createWs,
@@ -102,6 +122,7 @@ async function main(): Promise<void> {
     reconnects: stats.reconnects,
     wsErrors: stats.wsErrors,
     latencyMs: p,
+    bytesReceived: bytesIn,
     note: "Observation uniquement. Aucune transaction.",
   };
   writeFileSync(statsPath, JSON.stringify(summary, null, 2) + "\n");
