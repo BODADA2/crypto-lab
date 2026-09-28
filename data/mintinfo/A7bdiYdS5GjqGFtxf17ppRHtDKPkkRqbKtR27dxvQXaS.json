@@ -3,11 +3,11 @@
   "program": "spl-token",
   "mintAuthority": "FvULawNPGBbuwYus74ECaQoV1oH9Tk6XPN7VPN51NYds",
   "freezeAuthority": null,
-  "supplyRaw": "9997447991262",
+  "supplyRaw": "9997405167612",
   "decimals": 8,
   "isInitialized": true,
   "extensions": [],
-  "top10Pct": 33.7,
+  "top10Pct": 33.67,
   "topAccounts": [
     {
       "address": "3pDpC7rRmrPRPvGRaGLJH8wzRUc4B1vHVZ574xPp82BB",
@@ -66,13 +66,6 @@
       "excluded": false
     },
     {
-      "address": "AbPTQH3jPZUfZYfyPmMhEPvD2tMuWjcFsgVjMbMvdTZ6",
-      "owner": "2TAgfogn8JRwwTnsGKUa6WUT5Xdv1iMEzfEDMor68X9C",
-      "amountRaw": "103533643996",
-      "pct": 1.03,
-      "excluded": false
-    },
-    {
       "address": "HXhLA4FNjVqdeGtk2YHKM6LxkSfp516fB2tStEGStiF1",
       "owner": "3XrqaGdaurstgTjbjoX4FpFUX3aSh3Abig99RkPGK1rG",
       "amountRaw": "102083695253",
@@ -94,6 +87,13 @@
       "excluded": false
     },
     {
+      "address": "AbPTQH3jPZUfZYfyPmMhEPvD2tMuWjcFsgVjMbMvdTZ6",
+      "owner": "2TAgfogn8JRwwTnsGKUa6WUT5Xdv1iMEzfEDMor68X9C",
+      "amountRaw": "92743393174",
+      "pct": 0.92,
+      "excluded": false
+    },
+    {
       "address": "36gnMKeQkxvJY4kdVMPoAXJ3bde5rKrm2AJN5VNEYX8N",
       "owner": "FvHqdX97tKNQP4Fk4UQnhDJutRjaL8R6h1SctJbq9Ti9",
       "amountRaw": "89221062869",
@@ -101,18 +101,18 @@
       "excluded": false
     },
     {
-      "address": "286rooUyx3xswATm7xKvjMLUkEH4KDyoBEvY2HvitjAX",
-      "owner": "GTHKH8s82ZR8GTSFZ1dUu6wfdxhy59wpMShxzG5zjiPm",
-      "amountRaw": "88201264105",
-      "pct": 0.88,
-      "excluded": true
-    },
-    {
       "address": "3roQCLK1BKoKnjvCf3DAY8T85dtur1dWxDXFLNF1e4ef",
       "owner": "nfBTjn4FTFoB4NHs5CidtZmwSoaTR3h1yCGPs6YmePt",
       "amountRaw": "87178746171",
       "pct": 0.87,
       "excluded": false
+    },
+    {
+      "address": "286rooUyx3xswATm7xKvjMLUkEH4KDyoBEvY2HvitjAX",
+      "owner": "GTHKH8s82ZR8GTSFZ1dUu6wfdxhy59wpMShxzG5zjiPm",
+      "amountRaw": "78744135162",
+      "pct": 0.78,
+      "excluded": true
     },
     {
       "address": "B47YF4AKMJExwS1Cdgou1MAD2KL9KxcYsm7m5xju4Wc4",
@@ -153,6 +153,6 @@
   "excludedCount": 1,
   "holders": null,
   "riskyExtensions": [],
-  "fetchedAt": "2026-09-28T11:04:33.789Z",
+  "fetchedAt": "2026-09-28T12:04:57.800Z",
   "rpcCalls": 4
 }

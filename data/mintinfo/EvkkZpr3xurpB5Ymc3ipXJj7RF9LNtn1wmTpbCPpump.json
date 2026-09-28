@@ -3,27 +3,41 @@
   "program": "token-2022",
   "mintAuthority": null,
   "freezeAuthority": null,
-  "supplyRaw": "998707232463854",
+  "supplyRaw": "998707228689166",
   "decimals": 6,
   "isInitialized": true,
   "extensions": [
     "MetadataPointer",
     "TokenMetadata"
   ],
-  "top10Pct": 0.34,
+  "top10Pct": 0.39,
   "topAccounts": [
     {
       "address": "8uJqr8oMGw1Rkgi9jJT2vbCJk5GVduYx6znMvWyjP4YK",
       "owner": "5Zbo4AzG2xUYojsW6bkKHzphVqNAZcKKkNFsAToZLJan",
-      "amountRaw": "34199126808980",
-      "pct": 3.42,
+      "amountRaw": "33432874966096",
+      "pct": 3.34,
       "excluded": true
+    },
+    {
+      "address": "4D4pZ751peY3Aa6y6GSucvqGNUXE1pWoU26UscCuutpi",
+      "owner": "2TQEQrWDSWF1uu96LCDZ9omCDQUXnRibCySmp5RTCbC7",
+      "amountRaw": "629327755996",
+      "pct": 0.06,
+      "excluded": false
     },
     {
       "address": "5KFWzvvvPuTRAozPpas4wNazb5nuTox6w5tCyMQHZNxo",
       "owner": "4rEawx1Pr94mRwYxN1ud32xNuJRkzLSm2CimUtryTjC3",
       "amountRaw": "533000000000",
       "pct": 0.05,
+      "excluded": false
+    },
+    {
+      "address": "7Ef89AxBp8fwLiB33eZWcxeypifc6NzfKd46NWqpzmse",
+      "owner": "7gvvDfnvQYrVd1d4mSKLFzfLzjq5WrYpiez9FrzEjzJu",
+      "amountRaw": "494641316048",
+      "pct": 0.04,
       "excluded": false
     },
     {
@@ -137,25 +151,11 @@
       "amountRaw": "322174000000",
       "pct": 0.03,
       "excluded": false
-    },
-    {
-      "address": "J7m1AeXVtTtHLavbZwBAT5jsRdrSPx7A5eM6A7aLg6ta",
-      "owner": "8svg5yDZ5i6uysezQVzMkcpkqjtKHiS1i38qtNkPH2h9",
-      "amountRaw": "322174000000",
-      "pct": 0.03,
-      "excluded": false
-    },
-    {
-      "address": "J7RCEAXNVCMdRmNy4jMdKox9TdrgZ1RhcJqz4Q8zbjtQ",
-      "owner": "H3NiD3uarihSRiUHfzp72EjntszPf8fULVySN5Kfp2fs",
-      "amountRaw": "322174000000",
-      "pct": 0.03,
-      "excluded": false
     }
   ],
   "excludedCount": 1,
   "holders": null,
   "riskyExtensions": [],
-  "fetchedAt": "2026-09-27T22:49:39.966Z",
+  "fetchedAt": "2026-09-28T12:05:03.263Z",
   "rpcCalls": 4
 }
