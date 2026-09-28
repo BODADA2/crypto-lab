@@ -16,21 +16,21 @@
     "m5": 0,
     "h1": 1811.1,
     "h6": 5503.33,
-    "h24": 69723.88
+    "h24": 69723.87
   },
   "volume5m": 0,
   "volume1h": 1811.1,
-  "volume24h": 69723.88,
+  "volume24h": 69723.87,
   "priceChange": {
     "m5": 0,
     "h1": -23.41,
     "h6": -42.07,
-    "h24": 27.91
+    "h24": 22.71
   },
   "txns": {
     "m5": {
       "buys": 0,
-      "sells": 1
+      "sells": 0
     },
     "h1": {
       "buys": 10,
@@ -42,19 +42,15 @@
     },
     "h24": {
       "buys": 286,
-      "sells": 348
+      "sells": 347
     }
   },
   "holders": null,
-  "top10Pct": 40.55,
-  "mintAuthority": null,
-  "freezeAuthority": null,
+  "top10Pct": 100,
+  "mintAuthority": "UNKNOWN",
+  "freezeAuthority": "UNKNOWN",
   "boostsActive": 50,
   "pairCount": 1,
   "source": "dexscreener",
-  "fetchedAt": "2026-09-28T07:54:13.573Z",
-  "decimals": 6,
-  "riskyExtensions": [
-    "TransferFeeConfig"
-  ]
+  "fetchedAt": "2026-09-28T08:05:58.427Z"
 }
