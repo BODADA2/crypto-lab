@@ -25,6 +25,7 @@ import { createGithubClient, type GithubClient } from "./github.ts";
 import { createHeliusClient } from "./helius.ts";
 import { fetchMintInfo, type JsonRpc, type MintInfo } from "./mintinfo.ts";
 import { createPumpPortalClient } from "./pumpportal.ts";
+import { createSnipeTracker } from "./snipe.ts";
 import { createRedditClient, type RedditClient } from "./reddit.ts";
 import type { FetchLike, ScanResult, TokenSnapshot } from "./types.ts";
 import { readHistoryFile } from "../backtest/harness.ts";
@@ -331,20 +332,46 @@ function dedupeDocs(docs: NarrativeDoc[]): NarrativeDoc[] {
 }
 
 /** Job PumpPortal borné dans le temps (job GitHub Actions séparé, 10 min max). */
-export async function runPump(opts: { dataDir: string; durationMs: number; apiKey?: string; now?: () => number }): Promise<{ events: number; file: string }> {
+export async function runPump(opts: { dataDir: string; durationMs: number; apiKey?: string; now?: () => number; snipeDir?: string }): Promise<{ events: number; file: string; snipes?: number }> {
   const now = opts.now ?? (() => Date.now());
   const outDir = join(opts.dataDir, "scans");
-  const client = createPumpPortalClient({ outDir, apiKey: opts.apiKey, now, onStatus: (s) => console.error(`[pumpportal] ${s}`) });
+  // Hypothèse 5 (sniping) : observation d'un échantillon de nouveaux tokens, sans rien acheter. Désactivée sans snipeDir.
+  const tracker = opts.snipeDir
+    ? createSnipeTracker({ dex: createDexScreenerClient({ fetch: globalThis.fetch as FetchLike, now }), dataDir: opts.snipeDir, windowEndMs: now() + opts.durationMs, now })
+    : null;
+  const client = createPumpPortalClient({
+    outDir,
+    apiKey: opts.apiKey,
+    now,
+    onStatus: (s) => console.error(`[pumpportal] ${s}`),
+    onEvent: (ev) => {
+      try {
+        tracker?.onCreate(ev);
+      } catch {
+        /* le suivi sniping ne doit jamais casser la collecte */
+      }
+    },
+  });
   client.start();
+  const ticker = tracker ? setInterval(() => void tracker.tick().catch(() => undefined), 20_000) : null;
   await new Promise<void>((r) => setTimeout(r, opts.durationMs));
+  if (ticker) clearInterval(ticker);
   client.stop();
+  let snipes: number | undefined;
+  if (tracker) {
+    try {
+      snipes = (await tracker.finish()).written;
+    } catch (e) {
+      console.error(`[snipe] ${(e as Error).message}`);
+    }
+  }
   const metaPath = join(opts.dataDir, "meta.json");
   const meta = existsSync(metaPath) ? (JSON.parse(readFileSync(metaPath, "utf8")) as Record<string, unknown>) : {};
   meta.lastPumpRun = new Date(now()).toISOString();
   meta.pumpEvents = client.stats.events;
   mkdirSync(opts.dataDir, { recursive: true });
   writeFileSync(metaPath, JSON.stringify(meta, null, 2) + "\n");
-  return { events: client.stats.events, file: join(outDir, `pump-${new Date(now()).toISOString().slice(0, 10)}.jsonl`) };
+  return { events: client.stats.events, file: join(outDir, `pump-${new Date(now()).toISOString().slice(0, 10)}.jsonl`), snipes };
 }
 
 const isMain = process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url);
@@ -354,8 +381,8 @@ if (isMain) {
   if (mode === "pump") {
     const seconds = Number(process.argv[3] ?? 300);
     // Plafond relevé à 600 s (amendement 1) : dépôt public = minutes Actions illimitées.
-    const res = await runPump({ dataDir, durationMs: Math.min(seconds, 600) * 1000, apiKey: process.env.PUMPPORTAL_API_KEY });
-    console.log(`PumpPortal : ${res.events} événements → ${res.file}`);
+    const res = await runPump({ dataDir, durationMs: Math.min(seconds, 600) * 1000, apiKey: process.env.PUMPPORTAL_API_KEY, snipeDir: process.env.SNIPE_DIR ? resolve(process.env.SNIPE_DIR) : undefined });
+    console.log(`PumpPortal : ${res.events} événements → ${res.file}${res.snipes !== undefined ? ` ; sniping : ${res.snipes} tokens suivis` : ""}`);
   } else {
     const chain = process.env.CHAIN === "robinhood" ? "robinhood" : "solana";
     const apiKey = process.env.HELIUS_API_KEY;
