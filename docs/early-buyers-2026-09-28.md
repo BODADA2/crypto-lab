@@ -95,12 +95,18 @@ désormais connectée au coffre sécurisé et vérifiée fonctionnelle (getSlot 
 - `tests/helius-auth.test.ts` : 8 tests verts.
 
 **Backfill live** : `npx tsx lab/signals/run-earlybuyers.ts --tokens 50 --max-credits 15000`
-lancé le 2026-09-28 ~12h15 UTC (avec ventes). Résultats ci-dessous après complétion.
+lancé le 2026-09-28 ~12h15 UTC (avec ventes). **Non terminé** : ~20 tokens
+traités, puis le run a été remplacé par l'approche Phase 2 du coordinateur
+(RUN 2/3 : `--tokens 100 --no-sells --max-credits 25000 --skip-overlap
+--max-pages 60 --require-history-t0`, client `helius.ts` rendu tolérant au
+`-32015` en essayant les versions 0/1/2). Les runs Phase 2 écrivent dans le
+même `data/earlybuyers/` ; ne pas relancer l'ancien backfill en parallèle
+(conflit de cache, gaspillage de crédits).
 
-**Limite connue** : `getTransaction` utilise `maxSupportedTransactionVersion: 0` ;
-les transactions v1 échouent (`-32015`) et sont ignorées — les ventes coordonnées
-peuvent être sous-comptées sur les tokens concernés. À quantifier, pas de
-changement du client sans validation.
+**Limite connue (confirmée en live)** : `getTransaction` avec
+`maxSupportedTransactionVersion: 0` échoue en `-32015` sur les transactions v1,
+ignorées silencieusement — les ventes coordonnées sont sous-comptées. Le
+client tolérant (versions 0/1/2, skip compté) de la Phase 2 répond à ce point.
 
 **Rappel** : T-BUNDLE reste pré-enregistré (`docs/preregistered-addendum-2026-09-28.md`) —
 collecte et mesure uniquement, aucune conclusion de signal sur ces données.
