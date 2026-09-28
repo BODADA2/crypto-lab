@@ -151,6 +151,21 @@ les 168 mints **communs** (sélection interne) — l'amélioration vient en part
 l'intersection des univers, pas seulement de la décorrélation. **Aucune seconde
 stratégie justifiée** ; la machinerie de mesure sera appliquée au holdout 30 j.
 
+## 8. Décomposition économique — phase DIAGNOSTIC (28 sept. 2026)
+
+| ID | Hypothèse (prédiction) | Résultat | Falsificateur |
+|---|---|---|---|
+| H-DECOMP | L'espérance négative de H-REF-MOM vient d'un edge brut détruit par les coûts (auquel cas : problème d'exécution) plutôt que d'une absence d'edge avant coûts | **FALSIFIÉE — NO EVIDENCE OF EDGE** : brutRéel −8,92 % (significativement négatif), brutIdéal +2,70 % IC [−4,52 ; +12,34] non significatif, médiane −14,21 %. Coûts : frais 1,18 pt + slippage 0,29 pt — bruit de fond devant le drift (−8,92 pts). Hiérarchie : drift ≫ frais > slippage. **Règle d'arrêt déclenchée : arrêter l'optimisation de la famille momentum/scalp** | brutIdéal significativement > 0 sur holdout 30 j (données propres) |
+| H-GLITCH | Le trade +4 939 704 % est un vrai moonshot capturable | **FALSIFIÉE** : mint `SKHYhSjuRWHgikq8eRKbtBbpABgJSkd7ytQV14i9EQ3`, prix 192 $ → 0,0038 $ → 192 $ (glitch décimal DexScreener), incapturable. 1/242 trades, +20 412 pts à la moyenne brute. Les 31 autres « outliers » (MAE ≤ −90 %) sont de vraies morts, pas des glitches | — (forensique close) |
+| H-STOPGAP | Le stop-loss −20 % protège à −20 % | **FALSIFIÉE** : réalisé médian −37,1 % (gap −17,1 pts) ; 12,9 % des trades meurent à ≥ −90 % en une barre. La sortie d'urgence n'existe pas à cette granularité | — |
+
+Constats structurants : (1) les moyennes brutes sont inutilisables (+20 672 %
+sur brutRéel — un seul tick aberrant) ; (2) l'univers validation disjoint
+affiche +60 224 % entièrement porté par l'artefact SKHY (médiane −25,3 %) ;
+(3) le biais hot-token rend les mesures optimistes d'~12 pts en médiane
+(froid −32,6 % vs chaud −20,6 %) ; (4) filtre anti-tick-aberrant (≥100× vs les
+deux voisins) à ajouter au pipeline. Doc : `docs/expectancy-decomposition-2026-09-28.md`.
+
 ---
 *Registre tenu par Muse. Toute nouvelle hypothèse testée doit y être inscrite AVANT
 d'influencer une décision — y compris les falsifications.*
