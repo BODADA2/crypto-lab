@@ -1,39 +1,38 @@
 {
-  "computedAt": "2026-09-28T05:05:25.147Z",
+  "computedAt": "2026-09-28T05:25:17.561Z",
   "terms": [
     {
       "term": "meteora",
-      "count24h": 68,
+      "count24h": 69,
       "baselinePerDay": 1.1428571428571428,
       "count7d": 8,
-      "growth": 32.2,
+      "growth": 32.666666666666664,
       "sources": {
-        "github": 68
+        "github": 69
       },
-      "docs24h": 39
-    },
-    {
-      "term": "relay",
-      "count24h": 45,
-      "baselinePerDay": 0.8571428571428571,
-      "count7d": 6,
-      "growth": 24.76923076923077,
-      "sources": {
-        "github": 42,
-        "token": 3
-      },
-      "docs24h": 24
+      "docs24h": 40
     },
     {
       "term": "bittensor",
-      "count24h": 27,
+      "count24h": 29,
       "baselinePerDay": 0.14285714285714285,
       "count7d": 1,
+      "growth": 26.25,
+      "sources": {
+        "github": 29
+      },
+      "docs24h": 17
+    },
+    {
+      "term": "polkadot",
+      "count24h": 34,
+      "baselinePerDay": 0.42857142857142855,
+      "count7d": 3,
       "growth": 24.5,
       "sources": {
-        "github": 27
+        "github": 34
       },
-      "docs24h": 16
+      "docs24h": 17
     },
     {
       "term": "dlmm",
@@ -47,15 +46,16 @@
       "docs24h": 25
     },
     {
-      "term": "polkadot",
-      "count24h": 32,
-      "baselinePerDay": 0.42857142857142855,
-      "count7d": 3,
-      "growth": 23.099999999999998,
+      "term": "relay",
+      "count24h": 43,
+      "baselinePerDay": 1.1428571428571428,
+      "count7d": 8,
+      "growth": 20.533333333333335,
       "sources": {
-        "github": 32
+        "github": 40,
+        "token": 3
       },
-      "docs24h": 16
+      "docs24h": 23
     },
     {
       "term": "spark",
@@ -80,37 +80,37 @@
       "docs24h": 13
     },
     {
-      "term": "ground",
-      "count24h": 21,
-      "baselinePerDay": 0.42857142857142855,
-      "count7d": 3,
-      "growth": 15.4,
-      "sources": {
-        "github": 21
-      },
-      "docs24h": 21
-    },
-    {
-      "term": "task",
-      "count24h": 21,
-      "baselinePerDay": 0.42857142857142855,
-      "count7d": 3,
-      "growth": 15.4,
-      "sources": {
-        "github": 21
-      },
-      "docs24h": 21
-    },
-    {
       "term": "beginners",
-      "count24h": 16,
+      "count24h": 17,
       "baselinePerDay": 0.14285714285714285,
       "count7d": 1,
-      "growth": 14.875,
+      "growth": 15.75,
       "sources": {
-        "github": 16
+        "github": 17
       },
-      "docs24h": 16
+      "docs24h": 17
+    },
+    {
+      "term": "pros",
+      "count24h": 17,
+      "baselinePerDay": 0.14285714285714285,
+      "count7d": 1,
+      "growth": 15.75,
+      "sources": {
+        "github": 17
+      },
+      "docs24h": 17
+    },
+    {
+      "term": "talisman",
+      "count24h": 17,
+      "baselinePerDay": 0.14285714285714285,
+      "count7d": 1,
+      "growth": 15.75,
+      "sources": {
+        "github": 17
+      },
+      "docs24h": 17
     }
   ]
 }
