@@ -1,5 +1,5 @@
 {
-  "computedAt": "2026-09-28T14:08:14.261Z",
+  "computedAt": "2026-09-28T14:29:06.369Z",
   "terms": [
     {
       "term": "spark",
@@ -14,35 +14,35 @@
     },
     {
       "term": "accounting",
+      "count24h": 14,
+      "baselinePerDay": 0,
+      "count7d": 0,
+      "growth": 15,
+      "sources": {
+        "github": 14
+      },
+      "docs24h": 13
+    },
+    {
+      "term": "ing",
       "count24h": 13,
       "baselinePerDay": 0,
       "count7d": 0,
       "growth": 14,
       "sources": {
-        "github": 13
+        "github": 12,
+        "token": 1
       },
-      "docs24h": 12
+      "docs24h": 13
     },
     {
-      "term": "bittensor",
-      "count24h": 36,
-      "baselinePerDay": 1.7142857142857142,
-      "count7d": 12,
-      "growth": 13.631578947368421,
-      "sources": {
-        "github": 36
-      },
-      "docs24h": 18
-    },
-    {
-      "term": "ing",
+      "term": "earnings",
       "count24h": 12,
       "baselinePerDay": 0,
       "count7d": 0,
       "growth": 13,
       "sources": {
-        "github": 11,
-        "token": 1
+        "github": 12
       },
       "docs24h": 12
     },
@@ -59,17 +59,6 @@
       "docs24h": 10
     },
     {
-      "term": "earnings",
-      "count24h": 11,
-      "baselinePerDay": 0,
-      "count7d": 0,
-      "growth": 12,
-      "sources": {
-        "github": 11
-      },
-      "docs24h": 11
-    },
-    {
       "term": "multihedge",
       "count24h": 28,
       "baselinePerDay": 1.4285714285714286,
@@ -82,14 +71,14 @@
     },
     {
       "term": "nextjs",
-      "count24h": 16,
+      "count24h": 17,
       "baselinePerDay": 0.5714285714285714,
       "count7d": 4,
-      "growth": 10.818181818181818,
+      "growth": 11.454545454545455,
       "sources": {
-        "github": 16
+        "github": 17
       },
-      "docs24h": 16
+      "docs24h": 17
     },
     {
       "term": "mpc",
@@ -103,15 +92,26 @@
       "docs24h": 15
     },
     {
-      "term": "gta6",
-      "count24h": 17,
-      "baselinePerDay": 0.7142857142857143,
-      "count7d": 5,
-      "growth": 10.5,
+      "term": "gill",
+      "count24h": 12,
+      "baselinePerDay": 0.2857142857142857,
+      "count7d": 2,
+      "growth": 10.111111111111112,
       "sources": {
-        "token": 17
+        "github": 12
       },
-      "docs24h": 15
+      "docs24h": 6
+    },
+    {
+      "term": "bittensor",
+      "count24h": 32,
+      "baselinePerDay": 2.2857142857142856,
+      "count7d": 16,
+      "growth": 10.043478260869566,
+      "sources": {
+        "github": 32
+      },
+      "docs24h": 16
     }
   ]
 }
