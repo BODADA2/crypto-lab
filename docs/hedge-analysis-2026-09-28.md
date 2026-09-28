@@ -248,3 +248,218 @@ une fois collectés, publier les résultats quels qu'ils soient.
 *Analyse réalisée le 2026-09-28. Le verdict « aucun hedge identifié » est un
 résultat, pas un échec : il a coûté 0 $ et quelques heures de calcul, et il
 empêche de payer pour apprendre la même chose en live.*
+
+---
+
+## 7. Extension — stratégie de référence, score composite et H-HEDGE-EXPOSURE
+
+**Code :** `lab/backtest/run-hedge-exposure.ts` (+ `tests/hedge-exposure.test.ts`,
+21 tests verts). Phase DÉCOUVERTE, mêmes données biaisées, holdout jamais touché.
+
+### 7.1 H-REF-MOM — stratégie de référence « regime-filtered momentum » (V10)
+
+**Construction.** Entrées momentum pures : première barre idx≥3 avec
+`chase ≥ 0,5` (entrées « verticales » — MFE médian x1,25 vs x1,20 d'après
+H-CHASE), filtrées par l'indicateur de régime de volume par chaîne
+(`lab/collect/chainregime.ts`) : exclusion **pré-hoc** (sémantique du module,
+pas fittée aux données) des régimes extrêmes `famine` (marché mort) et
+`frénésie` (bruit maximal). Sorties : scalp H-EXIT (comparabilité avec V1–V9).
+
+**Résultat.** Le filtre de régime n'exclut **rien** : 0 jour `famine`, 0 jour
+`frénésie` sur les 5 jours de scans (3 `inconnu`, 1 `calme`, 1 `chaud`).
+V10 = momentum vertical pur, n=238 (138 `inconnu`, 35 `calme`, 65 `chaud`).
+**La composante « regime » est donc intestable sur cette fenêtre** — constat
+enregistré, pas contourné.
+
+| Mesure | V10 (H-REF-MOM) | V3 (chase mixte, réf.) |
+|---|---|---|
+| n | 238 | 491 |
+| Esp. wins. IC 95 % | **−9,79 %** [−17,32 ; −2,11] | −6,15 % |
+| Médiane | −23,24 % | −1,17 % |
+| Win rate | 37,8 % | 46,4 % |
+| DD | 24,2 ×mise | 35,6 ×mise |
+
+**Verdict :** le momentum pur sous-performe nettement le chase mixte. Les
+verticales ont un meilleur MFE (x1,25) mais entrent plus haut — le net est pire
+(médiane −23 % vs −1 %). « Acheter la verticale » n'est pas le désastre annoncé
+par la vidéo TikTok, mais ce n'est pas non plus un edge : c'est une entrée plus
+tardive sur les mêmes tokens qui saignent. H-REF-MOM reste en DÉCOUVERTE comme
+**référence** (point de comparaison), pas comme candidate.
+
+### 7.2 Score composite — définition explicite et tableau V1–V10
+
+**Formule (documentée) :**
+```
+S = (E_w − λ_DD·DD − λ_σ·σ) × P_oos
+E_w   : espérance winsorisée au p99 (mise = 1)
+DD    : drawdown max additif sur rendements winsorisés, en unités de mise
+        (même définition que summarizeVariant)
+σ     : écart-type des rendements winsorisés par trade
+λ_DD = 0,001, λ_σ = 0,05 — choix d'échelle de la phase découverte
+P_oos = 1/(1+I), I = |S_is − S_oos| / (|S_is| + |S_oos| + 0,01)
+```
+Walk-forward : 60 % premiers trades (ordre chronologique d'entrée) = IS,
+40 % derniers = OOS. **Proxy faible** (même fenêtre biaisée de 5 jours) — le
+vrai OOS est le holdout 30 j.
+
+**Pourquoi une forme additive et pas un ratio** (ex. E_w/(DD·σ)) : avec
+E_w < 0, diviser par le risque **inverse la préférence** — plus de drawdown
+donnerait un score « meilleur » (moins négatif). Ici, le risque dégrade
+toujours le score, quel que soit le signe de E_w.
+
+**Règle de veto (sélection) :** un score n'est actionnable que si
+**PF_w ≥ 1 ET médiane ≥ 0**. Sinon → NO_TRADE, quel que soit le rang.
+Le score sert à **classer**, le veto sert à **décider**.
+
+| Rang | Variante | S | E_w | DD (×mise) | σ | PF_w | Méd. | I (WF) | Actionnable |
+|---|---|---|---|---|---|---|---|---|---|
+| 1 | V8 vert-half | −0,0796 | −4,56 % | 27,0 | 0,42 | 0,72 | −1,02 % | 0,18 | NON |
+| 2 | V6 urgence | −0,0910 | −4,22 % | 54,7 | 0,66 | 0,84 | −3,30 % | 0,43 | NON |
+| 3 | V7 stop court | −0,0919 | −4,56 % | 56,6 | 0,66 | 0,82 | −1,34 % | 0,47 | NON |
+| 4 | V1 scalp | −0,0986 | −4,89 % | 59,0 | 0,68 | 0,82 | −2,02 % | 0,44 | NON |
+| 5 | V3 chase-A | −0,1067 | −6,15 % | 35,6 | 0,51 | 0,71 | −1,17 % | 0,15 | NON |
+| 6 | V4 chase-B | −0,1099 | −7,65 % | 36,6 | 0,49 | 0,62 | −1,29 % | 0,25 | NON |
+| 7 | V5 retardée | −0,1218 | −5,26 % | 46,4 | 0,64 | 0,79 | −2,16 % | 0,07 | NON |
+| 8 | **V10 ref-mom** | −0,1483 | −9,79 % | 24,2 | 0,58 | 0,66 | −23,24 % | 0,02 | NON |
+| 9 | V2 runner | −0,4093 | −20,64 % | 185,4 | 0,78 | 0,50 | −35,76 % | 0,05 | NON |
+
+(V9 = V1 à l'identique, non reprise.) **Toutes les variantes sont vetées :
+aucune n'est actionnable.** Le ranking ne sert qu'à ordonner les « moins pires ».
+À noter : V6/V7/V1 ont une instabilité walk-forward élevée (I ≈ 0,43–0,47 —
+l'effet urgence/stop varie selon la moitié de fenêtre) ; V10 est stable
+(I = 0,02) mais **stablement mauvais**.
+
+### 7.3 H-HEDGE-EXPOSURE — le disjoncteur d'exposition
+
+**Hypothèse :** « Le meilleur hedge d'une stratégie memecoin n'est pas
+nécessairement une position opposée ; c'est un mécanisme qui détecte
+suffisamment tôt quand il faut réduire ou supprimer l'exposition. »
+
+**Mécanisme (paramètres PRÉ-ENGAGÉS avant tout résultat — nombres ronds,
+principe : ~1/2 journée de trades).** Séquence temporelle **tradable** : à
+chaque candidat, la fenêtre ne contient que les trades **complétés**
+(`exitAt ≤ entryAt` du candidat).
+- Fenêtre glissante K = 30 derniers trades complétés (min. 10 pour décider).
+- **Suspension** si `winRate(fenêtre) < 35 %` ET `médiane(fenêtre) < 0`.
+- **Reprise** si `médiane(fenêtre) > 0` (hystérèse anti-yoyo).
+- Modes : `halt` (exposition 0 — on saute l'entrée) et `halve` (exposition ×0,5).
+
+**Résultats — paramètres primaires :**
+
+| Base | Mode | E_w | DD (×mise) | PF_w | S | Skippés | Susp. |
+|---|---|---|---|---|---|---|---|
+| V1 | — (sans) | −4,89 % | 59,0 | 0,82 | −0,0986 | — | — |
+| V1 | halt | **−2,47 %** | **30,0** | 0,91 | −0,0508 | 364/818 | 4 |
+| V1 | halve | −3,03 % | 43,7 | 0,86 | −0,0750 | 0 | 4 |
+| V10 | — (sans) | −9,79 % | 24,2 | 0,66 | −0,1483 | — | — |
+| V10 | halt | **−16,02 %** (pire) | 13,9 | 0,54 | −0,1702 | 157/238 | 2 |
+| V10 | halve | −7,05 % | 17,7 | 0,65 | — | 0 | 2 |
+
+**Coût des faux positifs (inclus, pas caché).** V1+halt : 152 gagnants ratés
+pendant les suspensions (+7 025 % bruts manqués) contre 212 pertes évitées
+(+9 749 % bruts) — le bilan est favorable mais le coût est réel et mesuré.
+V10+halt : 60 gagnants ratés dont **le trade outlier à +4 939 704 %**
+(+4 942 502 % manqués !) — le disjoncteur a « correctement » coupé l'exposition
+pendant une phase dégradée et a raté le seul trade qui faisait les chiffres.
+**Leçon : sur une stratégie dont l'espérance dépend d'outliers rares, couper
+l'exposition coupe aussi les outliers.** Le mécanisme réduit le risque, il ne
+sait pas distinguer « dégradation » de « calme avant l'outlier ».
+
+**Délai de détection vs début des drawdowns** (mesure honnête : état de
+suspension enregistré à chaque index, « déjà suspendu » distingué des nouveaux
+déclenchements) :
+- V1 : 7 épisodes de DD, **3/7 détectés** (1 déjà suspendu, **4 non détectés**),
+  délai médian des nouveaux déclenchements : **38 trades — LENT**.
+- V10 : 3/3 détectés (2 déjà suspendus), délai du nouveau déclenchement : 13 trades.
+
+**Sensibilité (contrôle de robustesse — jamais pour sélectionner).**
+K ∈ {15, 30, 60} × seuil ∈ {30 %, 35 %, 40 %} : sur V1, les 9 combinaisons
+améliorent E_w (−1,54 % à −4,04 % vs −4,89 %) et réduisent le DD (25 à 39 vs 59)
+— direction cohérente, pas un point isolé. Sur V10, le DD chute toujours mais
+E_w reste négative (−9,55 % à −16,28 %) : le mécanisme coupe le risque sans
+créer d'espérance.
+
+**Verdict H-HEDGE-EXPOSURE : PISTE (phase DÉCOUVERTE).** C'est un **réducteur
+de risque**, pas un créateur d'edge : détection lente (38 trades, 4/7 épisodes
+manqués sur V1), expectancy toujours négative et vetée, effet destructeur sur
+les stratégies à outliers. Le seul apport démontré : diviser le drawdown par ~2
+sur V1 au prix de 44 % de trades skippés et de 152 gagnants ratés. À valider
+sur le holdout 30 j avec le protocole pré-enregistré.
+
+### 7.4 Seconde stratégie : décorrélation MESURÉE, jamais supposée
+
+**Méthode.** Paires candidates sur mints communs, ordre chronologique :
+Spearman **roulant** (fenêtre 50 trades, pas 10) des P&L par trade, des séries
+de drawdown, et **sous stress** (fenêtres où le DD de A dépasse sa médiane —
+c'est là que la diversification doit payer).
+
+| Paire | n | P&L roulant (moy/min/max) | DD roulant (moy) | Sous stress |
+|---|---|---|---|---|
+| V10×V4 | 168 | 0,06 / −0,12 / 0,17 | 0,31 | **0,06** |
+| V1×V4 | 421 | 0,16 / −0,13 / 0,51 | 0,20 | 0,19 |
+| V10×V1 | 238 | 0,20 / −0,04 / 0,48 | 0,07 | 0,18 |
+| V3×V4 | 421 | 0,72 / 0,50 / 0,94 | 0,63 | 0,74 |
+
+**Constats.** (1) V10×V4 est la paire la plus décorrélée **mesurée**
+(stress ρ = 0,06, max 0,17 sur 12 fenêtres). (2) Les corrélations roulantes des
+**drawdowns sont instables** (min −0,60 à max 0,99 selon les paires) : la
+corrélation des drawdowns n'est pas stationnaire — un chiffre « global » ne
+veut rien dire. (3) V3×V4 (ρ = 0,74) confirme : deux variantes de la même
+famille ne diversifient rien.
+
+**Portefeuille 50/50 — paire choisie sur la décorrélation mesurée
+(V10×V4, stress ρ = 0,06), jamais sur le résultat final :**
+n = 168 mints communs, **S = −0,0357** (vs −0,1483 / −0,1099 pour les
+composantes — meilleur que chacune), E_w = −1,23 %, DD = 4,54 ×mise,
+PF_w = 0,93, médiane −3,35 %, P_oos = 0,85. **NON actionnable** (vetos PF_w et
+médiane).
+
+**Caveat majeur (biais de sélection interne) :** le portefeuille est calculé
+sur les **168 mints communs** aux deux stratégies — un sous-univers sélectionné
+*par* les stratégies elles-mêmes. L'amélioration (E_w −1,23 % vs −7,65 %/−9,79 %)
+vient en partie de cette intersection (les pires trades idiosyncratiques de
+chacune sont exclus), pas seulement de la décorrélation. Sur données propres,
+les univers devront être définis **ex-ante**.
+
+**Verdict : aucune seconde stratégie justifiée.** Le portefeuille décorréleré
+améliore le score mais reste veté ; l'effet est en partie un artefact
+d'intersection. La **machinerie de mesure** (corrélations roulantes P&L/DD +
+stress) est en place et sera appliquée au holdout 30 j, où la granularité
+journalière deviendra enfin mesurable (5 jours = trop peu pour du roulant
+journalier).
+
+### 7.5 Tests d'invalidation de l'extension
+
+- **H-REF-MOM :** si sur le holdout 30 j l'espérance winsorisée devient ≥ 0
+  avec médiane ≥ 0 et n ≥ 30 → rouvrir comme candidate (sinon elle reste une
+  référence).
+- **Score composite :** si changer λ_DD/λ_σ dans un facteur 10 modifie le
+  ranking qualitatif (hors V2, toujours dernière), le ranking n'est pas robuste
+  → le documenter comme sensible, pas comme un ordre établi.
+- **H-HEDGE-EXPOSURE :** ΔE_w ≤ 0 sur le holdout, OU délai médian de détection
+  supérieur à la durée médiane des épisodes de DD, OU E_w protégée toujours
+  vetée → abandon du mécanisme sous sa forme actuelle. Variante à tester :
+  reprise plus rapide (seuil de reprise à challenger).
+- **Portefeuille décorrélé :** si sur le holdout la paire la plus décorrélée
+  (mesurée) ne bat plus ses composantes au score composite → l'effet
+  intersection de la découverte était du snooping → abandon.
+
+### 7.6 Ce qui pourrait invalider cette extension
+
+1. **5 jours de données :** walk-forward 60/40, corrélations roulantes et
+   sensibilité du disjoncteur sont des proxys faibles sur une seule semaine
+   biaisée.
+2. **Le filtre de régime n'a rien filtré** (0 jour famine/frénésie) : la
+   composante « regime » de H-REF-MOM est une coquille vide ici — il faudra des
+   semaines de régime mesuré pour la tester vraiment.
+3. **λ_DD, λ_σ** sont des choix d'échelle de la phase découverte, pas des
+   constantes.
+4. **Intersection des mints** dans le portefeuille = sélection interne
+   (cf. §7.4).
+5. **Tradabilité du disjoncteur :** `exitAt` vient des observations (≈ toutes
+   les 15 min ?) ; en live, un trade met 6 barres à se compléter — le délai
+   réel de détection serait plus long que les 38 trades mesurés.
+6. **Comparaisons multiples :** 18 familles sur la même fenêtre (attendre
+   ~0,9 faux positif à 5 %). Le signal « disjoncteur » (direction cohérente
+   sur 9 combinaisons) résiste mieux qu'un point isolé, mais n'est pas une
+   preuve.

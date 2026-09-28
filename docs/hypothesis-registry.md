@@ -128,6 +128,29 @@ perdent aussi (médianes −8 % à −46 %). **Aucune architecture de portfolio
 justifiée par les données :** aucune composante à espérance ≥ 0, aucune
 asymétrie, aucune décorrélation des pertes.
 
+## 7. Extension hedge — phase DÉCOUVERTE (28 sept. 2026)
+
+Issue de `docs/hedge-analysis-2026-09-28.md` §7 (`lab/backtest/run-hedge-exposure.ts`,
+`tests/hedge-exposure.test.ts`, 21 tests verts). Score composite documenté :
+`S = (E_w − λ_DD·DD − λ_σ·σ) × P_oos` (λ_DD=0,001, λ_σ=0,05), veto d'actionnabilité
+**PF_w ≥ 1 ET médiane ≥ 0** — toutes les variantes V1–V10 sont **vetées**, aucune
+actionnable. Le compteur de comparaisons multiples passe à 16 + 2 = **18 familles**
+sur la même fenêtre (attendre ~0,9 faux positif à 5 %).
+
+| ID | Hypothèse (prédiction) | Résultat découverte | Falsificateur |
+|---|---|---|---|
+| H-REF-MOM | Stratégie de référence « regime-filtered momentum » : entrées verticales (chase ≥ 0,5) + filtre de régime (exclusion pré-hoc famine/frénésie) → bat les variantes H-EXIT au score composite | **RÉFÉRENCE NON ACTIONNABLE** — esp. wins. −9,79 % IC [−17,32 ; −2,11], médiane −23,24 %, n=238. Le filtre de régime n'a RIEN exclu (0 jour famine/frénésie sur 5 j) : la composante « regime » est intestable ici ; le momentum pur sous-performe le chase mixte (V3 : −6,15 %) | esp. ≥ 0 ET médiane ≥ 0 sur holdout 30 j, n≥30 |
+| H-HEDGE-EXPOSURE | Le meilleur hedge est un disjoncteur d'exposition : fenêtre K=30 trades complétés, suspension si WR<35 % ET médiane<0, reprise si médiane>0 → améliore le score composite sans créer d'espérance | **PISTE** (réducteur de risque, pas edge) — V1+halt (paramètres primaires pré-engagés) : E_w −4,89→−2,47 %, DD 59→30 ×mise, S −0,0986→−0,0508, 152 gagnants ratés vs 212 pertes évitées ; délai de détection médian 38 trades, 4/7 épisodes DD non détectés ; sensibilité cohérente (9 combinaisons, toutes améliorent E_w et réduisent le DD). Sur V10, halt DÉTÉRIORE E_w (−9,79→−16,02 %) : le disjoncteur a coupé l'exposition du trade outlier (+4 939 704 %) | ΔE_w ≤ 0 sur holdout, OU délai médian > durée médiane des épisodes DD, OU E_w protégée toujours vetée → abandon |
+
+**Seconde stratégie (décorrélation mesurée, jamais supposée) :** corrélations
+roulantes de Spearman (fenêtre 50, pas 10) des P&L + des drawdowns + sous stress.
+Paire la plus décorrélée **mesurée** : V10×V4 (stress ρ = 0,06, n=168 communs).
+Portefeuille 50/50 : S = −0,0357 (meilleur que chaque composante), E_w −1,23 %,
+DD 4,54 ×mise, PF_w 0,93 — mais **NON actionnable** (vetos). Caveat : calculé sur
+les 168 mints **communs** (sélection interne) — l'amélioration vient en partie de
+l'intersection des univers, pas seulement de la décorrélation. **Aucune seconde
+stratégie justifiée** ; la machinerie de mesure sera appliquée au holdout 30 j.
+
 ---
 *Registre tenu par Muse. Toute nouvelle hypothèse testée doit y être inscrite AVANT
 d'influencer une décision — y compris les falsifications.*

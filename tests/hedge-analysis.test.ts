@@ -146,12 +146,13 @@ describe("bucketOf", () => {
 });
 
 describe("commonLossBuckets", () => {
-  it("détecte les buckets où toutes les variantes perdent", () => {
+  it("détecte les buckets où toutes les variantes perdent en médiane", () => {
     const cells = [
       { variant: "V1" as VariantId, bucket: "liq-Q2", n: 40, meanRet: -0.05, medianRet: -0.04, winRate: 0.4 },
       { variant: "V2" as VariantId, bucket: "liq-Q2", n: 40, meanRet: -0.1, medianRet: -0.08, winRate: 0.3 },
-      { variant: "V1" as VariantId, bucket: "liq-Q4", n: 40, meanRet: 0.05, medianRet: 0.03, winRate: 0.6 },
+      { variant: "V1" as VariantId, bucket: "liq-Q4", n: 40, meanRet: -0.05, medianRet: 0.03, winRate: 0.6 },
       { variant: "V2" as VariantId, bucket: "liq-Q4", n: 40, meanRet: -0.02, medianRet: -0.01, winRate: 0.45 },
+      // moyenne brute positive mais médiane négative : ne doit PAS exclure le bucket
       { variant: "V1" as VariantId, bucket: "petit", n: 5, meanRet: -0.5, medianRet: -0.4, winRate: 0.1 },
       { variant: "V2" as VariantId, bucket: "petit", n: 5, meanRet: -0.5, medianRet: -0.4, winRate: 0.1 },
     ];

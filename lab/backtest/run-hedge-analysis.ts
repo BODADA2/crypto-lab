@@ -17,6 +17,8 @@
  *   V7 short-stop   — V1 avec time-stop 3 barres au lieu de 6 : hedge d'horizon
  *   V8 vert-half    — V3 avec exposition ÷2 sur les entrées verticales (ret ×0,5, approx.)
  *   V9 no-frenzy    — V1 en sautant les entrées les jours de régime « frénésie »
+ *   V10 ref-mom     — H-REF-MOM : entrées verticales (chase ≥ 0,5) + filtre de régime
+ *                       (exclut famine/frénésie du module chainregime) + sorties scalp
  *
  * Candidats hedge évalués : H-HEDGE-1..5 (voir docs/hedge-analysis-2026-09-28.md).
  * Règle n ≥ 30 pour toute lecture ; IC 95 % par bootstrap (seed fixe).
@@ -36,21 +38,21 @@ import type { TokenSnapshot } from "../types.ts";
 // Statistiques
 // ---------------------------------------------------------------------------
 
-function mean(xs: number[]): number {
+export function mean(xs: number[]): number {
   return xs.reduce((a, b) => a + b, 0) / xs.length;
 }
-function quantile(xs: number[], q: number): number {
+export function quantile(xs: number[], q: number): number {
   if (!xs.length) return NaN;
   const s = [...xs].sort((a, b) => a - b);
   return s[Math.min(s.length - 1, Math.floor(q * s.length))] as number;
 }
-const median = (xs: number[]) => quantile(xs, 0.5);
-function std(xs: number[]): number {
+export const median = (xs: number[]) => quantile(xs, 0.5);
+export function std(xs: number[]): number {
   if (xs.length < 2) return 0;
   const m = mean(xs);
   return Math.sqrt(xs.reduce((a, b) => a + (b - m) ** 2, 0) / (xs.length - 1));
 }
-function pearson(xs: number[], ys: number[]): number {
+export function pearson(xs: number[], ys: number[]): number {
   const n = xs.length;
   if (n < 2) return NaN;
   const mx = mean(xs);
@@ -71,7 +73,7 @@ function rank(xs: number[]): number[] {
   for (let i = 0; i < idx.length; i++) r[idx[i] as number] = i + 1;
   return r;
 }
-const spearman = (xs: number[], ys: number[]) => pearson(rank(xs), rank(ys));
+export const spearman = (xs: number[], ys: number[]) => pearson(rank(xs), rank(ys));
 
 /** PRNG seedé (mulberry32) — bootstrap reproductible. */
 function mulberry32(seed: number): () => number {
@@ -188,6 +190,8 @@ const fmt2 = (v: number | null) => (v === null || !Number.isFinite(v) ? "n/a" : 
 export interface HTrade {
   mint: string;
   entryAt: string;
+  /** Timestamp de sortie (barre de sortie) — renseigné par enrich(), utilisé par le disjoncteur d'exposition. */
+  exitAt?: string;
   entryDay: string;
   /** Rendement net (frais + slippage déduits). */
   ret: number;
@@ -307,6 +311,20 @@ function findEntryChase(series: TokenSnapshot[], onlyCalm: boolean): EntrySpec |
   return null;
 }
 
+/**
+ * Entrée momentum pur (H-REF-MOM) : première barre idx≥3 avec chase ≥ 0.5
+ * (entrée « verticale » — MFE médian x1,25 vs x1,20 d'après H-CHASE).
+ */
+export function findEntryVertical(series: TokenSnapshot[]): EntrySpec | null {
+  for (let i = 3; i < series.length - 1; i++) {
+    const s = series[i] as TokenSnapshot;
+    if (!(s.priceUsd > 0 && s.liquidityUsd >= MIN_LIQ)) continue;
+    const c = chaseAt(series, i);
+    if (c !== null && c >= 0.5) return { signalIdx: i, entryIdx: i + 1, chase: c };
+  }
+  return null;
+}
+
 function enrich(
   mint: string,
   series: TokenSnapshot[],
@@ -321,6 +339,7 @@ function enrich(
   return {
     mint,
     entryAt: entry.fetchedAt,
+    exitAt: exit.exitAt,
     entryDay: day,
     ret: exit.ret,
     grossRet: exit.grossRet,
@@ -354,7 +373,7 @@ function canonicalTrade(
   }
 }
 
-export type VariantId = "V1" | "V2" | "V3" | "V4" | "V5" | "V6" | "V7" | "V8" | "V9";
+export type VariantId = "V1" | "V2" | "V3" | "V4" | "V5" | "V6" | "V7" | "V8" | "V9" | "V10";
 
 export const VARIANT_LABELS: Record<VariantId, string> = {
   V1: "scalp (H-EXIT)",
@@ -366,6 +385,7 @@ export const VARIANT_LABELS: Record<VariantId, string> = {
   V7: "scalp time-stop 3 barres",
   V8: "chase-A, verticales à demi-taille",
   V9: "scalp hors jours « frénésie »",
+  V10: "momentum vertical filtré par régime (H-REF-MOM)",
 };
 
 export function buildVariants(
@@ -373,7 +393,7 @@ export function buildVariants(
   regimeByDay: Map<string, ChainRegimeName>,
   costs: ExitCosts = COSTS,
 ): Record<VariantId, HTrade[]> {
-  const out: Record<VariantId, HTrade[]> = { V1: [], V2: [], V3: [], V4: [], V5: [], V6: [], V7: [], V8: [], V9: [] };
+  const out: Record<VariantId, HTrade[]> = { V1: [], V2: [], V3: [], V4: [], V5: [], V6: [], V7: [], V8: [], V9: [], V10: [] };
   for (const [mint, raw] of seriesByMint) {
     const series = sortedSeries(raw);
 
@@ -419,6 +439,17 @@ export function buildVariants(
     if (eB) {
       const t4 = canonicalTrade(mint, series, eB, "scalp", costs, regimeByDay);
       if (t4) out.V4.push(t4);
+    }
+
+    // --- V10 H-REF-MOM : momentum vertical + filtre de régime + sorties scalp ---
+    // Règle de filtre PRÉ-HOC (sémantique du module chainregime, pas fittée aux données) :
+    // on exclut les régimes extrêmes — "famine" (marché mort) et "frénésie"
+    // (bruit maximal, sélectivité requise d'après Cupsey). "inconnu" est tradé
+    // (données de régime trop minces pour l'exclure — documenté comme limite).
+    const eV = findEntryVertical(series);
+    if (eV) {
+      const t10 = canonicalTrade(mint, series, eV, "scalp", costs, regimeByDay);
+      if (t10 && t10.regime !== "famine" && t10.regime !== "frénésie") out.V10.push(t10);
     }
   }
   return out;
@@ -726,7 +757,9 @@ export function riskFactorMap(
   return { cells, liqQuartiles };
 }
 
-/** Buckets où TOUTES les variantes (n≥30) ont un rendement moyen < 0. */
+/** Buckets où TOUTES les variantes (n≥30) ont une MÉDIANE < 0.
+ * On utilise la médiane (robuste aux ticks aberrants), pas la moyenne brute :
+ * ne jamais conclure à partir des moyennes brutes. */
 export function commonLossBuckets(cells: BucketCell[], variantIds: VariantId[]): string[] {
   const byBucket = new Map<string, BucketCell[]>();
   for (const c of cells) {
@@ -737,7 +770,7 @@ export function commonLossBuckets(cells: BucketCell[], variantIds: VariantId[]):
   const out: string[] = [];
   for (const [bucket, arr] of byBucket) {
     const rel = variantIds.map((id) => arr.find((c) => c.variant === id)).filter((c) => c && c.n >= 30);
-    if (rel.length === variantIds.length && rel.every((c) => (c as BucketCell).meanRet !== null && ((c as BucketCell).meanRet as number) < 0)) {
+    if (rel.length === variantIds.length && rel.every((c) => (c as BucketCell).medianRet !== null && ((c as BucketCell).medianRet as number) < 0)) {
       out.push(bucket);
     }
   }
@@ -927,7 +960,7 @@ export function runHedgeAnalysis(rootDir: string): HedgeAnalysisResult {
   const variantStats = ids.map((id) => summarizeVariant(id, variants[id], winsorCap));
   const corrMatrix = correlationMatrix(variants);
   const dailyCorr = dailyCorrelation(variants);
-  const mainPain = (["V2", "V3", "V4", "V5", "V6", "V7", "V8", "V9"] as VariantId[]).map((id) =>
+  const mainPain = (["V2", "V3", "V4", "V5", "V6", "V7", "V8", "V9", "V10"] as VariantId[]).map((id) =>
     mainPainAnalysis(variants.V1, variants[id], id, winsorCap),
   );
 
