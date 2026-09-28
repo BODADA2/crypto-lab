@@ -101,3 +101,52 @@ sont-ils tenus moins bien que les scalps ?).
   proposition écrite + red team, pas par une édition silencieuse.
 - Le paper trading ne prouve pas la rentabilité live (slippage, latence,
   psychologie) : il prouve la **discipline** et permet de mesurer l'**espérance**.
+
+## Protocole deux comptes paper : Narratif (N) vs Systématique (S) (28 sept. 2026)
+
+Principe : **A/B test**. Deux portefeuilles paper séparés, mêmes garde-fous,
+comparaison chiffrée à 30 jours. C'est l'expérience qui tranche, pas les opinions.
+
+### Les deux comptes
+
+| | Compte N — Narratif | Compte S — Systématique |
+|---|---|---|
+| Méthode | Jugement narratif discrétionnaire (style Brez/Cented) | Signaux du labo (H-DEV, H-FRESH, H-BUNDLE, H-BLOCK, régime) |
+| Entrée | Thèse narrative écrite AVANT | Score / filtres du labo |
+| Sortie | Plan écrit à l'entrée (paliers ou invalidation) | Régime scalp/runner du protocole ci-dessus |
+
+### Enveloppe de risque partagée (non-négociable)
+- Exposition max **200 $ au total** sur les deux comptes (pas 200 $ chacun).
+- Perte max **70 $/jour au total**.
+- Position max 50 $, pas de moyennage — identique des deux côtés, sinon la
+  comparaison ne veut rien dire.
+
+### Le filtre « narratif à haute probabilité » (compte N)
+Écrit AVANT de trader. Un trade N n'est valide que si la thèse coche :
+1. **Catalyseur identifiable** : qui peut amplifier ? (nommer l'acteur : KOL,
+   figure, compte officiel) — pas « ça a l'air bien ».
+2. **Amplification précoce mesurable** : reprise visible par des KOL suivis
+   (radar : les 1 500 comptes J7 / smart followers), pas du feeling.
+3. **Fraîcheur du mécanisme** : nouveau launchpad / nouveau format (type PAID) —
+   les narratives recyclées sont déjà pricées.
+4. **Timing** : encore sous ~1M de market cap (comme Brez à 116K) — après,
+   c'est du momentum tardif.
+5. **Filtres d'exclusion intacts** : H-BLOCK et H-BUNDLE s'appliquent aussi au
+   compte N — un bon narratif sur un dev blacklisté = on passe.
+6. **Invalidation écrite** : « si X n'arrive pas sous 48 h, je sors » — une thèse
+   sans invalidation est un espoir, pas un trade.
+
+### Journal séparé, décision à 30 jours
+- Journaux séparés : `lab/journal/sessions/<AAAA-MM-JJ>-N.md` et `-S.md`.
+- Métriques par compte : P&L net, win rate, gain moyen, perte moyenne, R moyen,
+  taux de hors-plan.
+- À 30 jours : on compare et on décide (garder les deux, un seul, ajuster).
+  Pas de décision avant.
+- Règle d'honnêteté : un trade N sans thèse écrite avant l'entrée = hors-plan,
+  compté comme tel.
+
+### Avertissement spécifique au compte N
+Le style narratif demande 10–15 h/jour d'écran chez les pros. En version temps
+partiel, le risque n'est pas de rater des trades — c'est d'acheter des « vibes ».
+Le filtre ci-dessus existe contre ça. Si le taux de hors-plan du compte N dépasse
+30 % sur deux semaines, le compte N est mis en pause (pas le S).
