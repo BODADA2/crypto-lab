@@ -104,6 +104,30 @@ Tous les marqueurs d'un vrai edge étaient présents. C'était un **artefact de 
    (`data/track-unbiased/`, holdout). Tout test hors batterie = exploratoire, ne peut
    pas promouvoir un « signal » au statut de validé.
 
+## 6. Hypothèses hedge — phase DÉCOUVERTE (28 sept. 2026)
+
+Issues de l'analyse des modes d'échec (`docs/hedge-analysis-2026-09-28.md`).
+Toutes sont en **phase DÉCOUVERTE** : aucun test sur le holdout, aucun verdict
+promu sans réplication sur données propres. Le compteur de comparaisons
+multiples passe à 10 + 6 = 16 familles sur la même fenêtre (attendre ~0,8 faux
+positif à 5 %).
+
+| ID | Hypothèse (prédiction) | Résultat découverte | Falsificateur |
+|---|---|---|---|
+| H-HEDGE-1 | Sortie d'urgence −8 %/6b améliore le scalp H-EXIT | **NO ACTION** — Δ médiane −1,29 % IC [−3,68 ; −0,18] (dégradation significative), 3,5 % des gagnants coupés | Δ médiane ≥ 0 sur holdout |
+| H-HEDGE-2 | Time-stop 3 barres > 6 barres | **NON CONCLUANT** — Δ esp. +0,33 % IC [−0,58 ; +1,33] | Δ espérance ≤ 0 sur holdout |
+| H-HEDGE-3 | Entrées verticales à demi-taille > plein | **PISTE FAIBLE** — Δ esp. +1,59 % IC [+0,11 ; +3,10], mais espérance reste négative (−4,56 %) ; 1 signal marginal sur 4 tests = bruit possible | Δ espérance ≤ 0 sur holdout |
+| H-HEDGE-4 | Portfolio 50/50 scalp+runner > scalp seul | **FALSIFIÉ** (découverte) — esp. −11,98 %, DD 116 ×mise, pire que V1 seule | paire à espérances positives ET corrélation de pertes < 0,3 (inexistante ici) |
+| H-HEDGE-5 | Sauter les entrées les jours de « frénésie » | **INTESTABLE** — 0 jour de frénésie sur 5 jours de scans | médiane frénésie ≥ autres régimes quand n≥30 |
+| H-HEDGE-6 | Entrées liq ≥ Q3 → médiane > 0 | **PISTE** — médianes +9,27 % / +3,10 % en liq-Q3/Q4 (V1), win 56–61 % ; quartiles calculés sur ces mêmes données (snooping) → seuil à re-dériver sur données propres avant test | médiane ≤ 0 sur holdout 30 j, n≥30 |
+
+**Constat central enregistré :** corrélations de Spearman V1×V6 = 0,973 et
+V1×V7 = 0,963 — changer la sortie ne change pas l'exposition (« une stratégie
+déguisée en cinq »). Quand V1 perd sur un token, toutes les autres variantes
+perdent aussi (médianes −8 % à −46 %). **Aucune architecture de portfolio
+justifiée par les données :** aucune composante à espérance ≥ 0, aucune
+asymétrie, aucune décorrélation des pertes.
+
 ---
 *Registre tenu par Muse. Toute nouvelle hypothèse testée doit y être inscrite AVANT
 d'influencer une décision — y compris les falsifications.*
