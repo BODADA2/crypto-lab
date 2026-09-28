@@ -55,13 +55,13 @@ Réf. : `docs/preregistration-memecoins.md` (figé le 25 sept. 2026, amendements
 
 | ID | État | Ce qui manque |
 |---|---|---|
-| H-BUNDLE | NON TESTÉE | Ventes groupées des early wallets = filtre d'exclusion (Cupsey). Aucune donnée wallet → risque le plus sous-estimé du red-team |
+| H-BUNDLE | NON TESTÉE — SPEC RÉDIGÉE | Ventes groupées des early wallets = filtre d'exclusion (Cupsey). Données : 1 seul token avec early buyers. Spec de collecte rédigée (docs/insider-economics-2026-09-28.md §2, Helius ~210 crédits/token, marge OK) ; test T-BUNDLE gated dans l'addendum pré-enregistré |
 | H-BLOCK | IMPLÉMENTÉE, NON VALIDÉE | Blocklist de devs (TikTok @hellojrus). Tranchage bannissement dur vs pénalité : mesurer rugs évités vs runners filtrés par erreur, n≥30 |
 | H-FRESH | MESURÉE, CONFONDUE | Vitesse d'entrée via timestamp de 1re observation — mesure notre latence de scan, pas la naissance du token |
-| H-FEEFLOW | NON TESTÉE | Mapping bénéficiaires de creator fees (pump.fun/PAID) — non collecté. Ne pas approximer (deep-edges E13) |
+| H-FEEFLOW | NON TESTÉE — SPEC RÉDIGÉE | Mapping bénéficiaires de creator fees — aucune donnée (mécanisme inobservable). Proxy « relance post-graduation » testé et CONFOUNDU (2 wallets = 71 % des paires). Spec de collecte rédigée (docs/insider-economics-2026-09-28.md §3) ; test T-FEEFLOW gated dans l'addendum. Ne pas approximer (deep-edges E13) |
 | H-EXTRACT | NON TESTÉE | Trades par wallet + estimation fees — partiellement payant via PumpPortal |
 | H-SNIPER | NON TESTÉE | earlybuyers systématique (1 seul fichier aujourd'hui) |
-| H-DEV (face +) | NON TESTÉE | Registre des devs dont les launches graduent (Deku) — collecteur prioritaire, pas de test |
+| H-DEV (face +) | NON CONCLUANTE (signal exploratoire) | Registre testé 2026-09-28 : 65 941 creates genuine, 21 660 wallets, base 1,41 %. Répétition seule FALSIFIÉE (≥3 creates → 1,11 % < 1,38 %). Taux passé persiste faiblement (ρ≈0,29 p<10⁻⁶ ; hot-devs ×1,9 sur H2). Limite n°1 : wallets≠humains (rotation). Test T-SERIAL-HOT dans l'addendum pré-enregistré |
 | H-CONC / H-TIME / H-LIQMIRAGE / H-HALFLIFE / H-SERIAL / H-MAGNET / H-COPYCAT | PROPOSÉES (deep-edges E6–E12), NON TESTÉES | Testables sur données existantes ou propres — candidates à la batterie pré-enregistrée |
 | H-MULTI | SURVEILLANCE | Launchpad PAID (fees versées sur X Money) — catalyst semi-prévisible, pas de modélisation sans données |
 | H-CONV | PISTE | Conviction/tenue avec thèse écrite (Brez) — pas d'opérationnalisation |
