@@ -2391,11 +2391,15 @@ hypotheses:
   - block0_wallet_count
   label: Y acheteurs suivants / espérance
   expected_direction: négatif
-  discovery_result: non testé
+  discovery_result: 'DATA_ISSUE (2026-09-28) : wallet dev non identifiable dans le backfill
+    local — aucune clé dev/creator/feePayer dans data/earlybuyers/*.json (vérifié sur
+    tout le set). block0_dev_linked_share incalculable sans le set des wallets liés
+    au dev. Voir research/results/devsupply-blockzero-2026-09-28.md'
   calibration_result: n/a
   holdout_result: n/a
   status: OPEN
-  next_action: analyser les premiers blocs on-chain (wallets liés au dev), n≥30
+  next_action: identifier le dev via la tx de création (feePayer, pré-t0) puis clusteriser
+    les wallets liés (liens de funding pré-t0 uniquement) ; mesurer block0_dev_linked_share, n≥30
   falsifier: part block-0 élevée sans sous-performance des acheteurs suivants à n≥30
 - id: H-DEVSUPPLY
   title: Taux d'extraction du dev (SOL extrait / liquidité) quantifie le drift structurel
@@ -2411,12 +2415,15 @@ hypotheses:
   - liquidity_reinjected
   label: drift / espérance
   expected_direction: extraction élevée → drift négatif
-  discovery_result: non testé
+  discovery_result: 'DATA_ISSUE (2026-09-28) : wallet dev non identifiable dans le backfill
+    local (aucune clé dev/creator/feePayer dans data/earlybuyers/*.json) ET aucune donnée
+    de vente — backfill lancé avec --no-sells par design. dev_sol_extracted et
+    dev_extraction_rate incalculables. Voir research/results/devsupply-blockzero-2026-09-28.md'
   calibration_result: n/a
   holdout_result: n/a
   status: OPEN
-  next_action: quantifier extraction dev on-chain (deltas SOL wallets dev) ; corréler
-    au drift mesuré
+  next_action: identifier le dev (tx de création, pré-t0) ; mesurer ses sorties nettes
+    de SOL sur fenêtre fixe post-t0 (t0→t0+24h) via historique wallet ; corréler au drift, n≥30
   falsifier: aucune relation extraction-drift à n≥30
   data_required:
   - 'deltas SOL wallets dev (à capturer — cf. leçon clusters : non capturés dans le
