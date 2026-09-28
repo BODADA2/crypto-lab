@@ -1,16 +1,27 @@
 {
-  "computedAt": "2026-09-28T19:52:00.717Z",
+  "computedAt": "2026-09-28T20:03:51.439Z",
   "terms": [
     {
       "term": "jev",
-      "count24h": 21,
+      "count24h": 24,
       "baselinePerDay": 0.2857142857142857,
       "count7d": 2,
-      "growth": 17.111111111111114,
+      "growth": 19.444444444444446,
       "sources": {
-        "github": 21
+        "github": 24
       },
-      "docs24h": 7
+      "docs24h": 8
+    },
+    {
+      "term": "lib",
+      "count24h": 16,
+      "baselinePerDay": 0,
+      "count7d": 0,
+      "growth": 17,
+      "sources": {
+        "github": 16
+      },
+      "docs24h": 16
     },
     {
       "term": "spark",
@@ -24,26 +35,15 @@
       "docs24h": 8
     },
     {
-      "term": "lib",
-      "count24h": 15,
-      "baselinePerDay": 0,
-      "count7d": 0,
-      "growth": 16,
-      "sources": {
-        "github": 15
-      },
-      "docs24h": 15
-    },
-    {
       "term": "typesafe",
-      "count24h": 14,
+      "count24h": 16,
       "baselinePerDay": 0,
       "count7d": 0,
-      "growth": 15,
+      "growth": 17,
       "sources": {
-        "github": 14
+        "github": 16
       },
-      "docs24h": 7
+      "docs24h": 8
     },
     {
       "term": "prediction",
@@ -68,6 +68,40 @@
       "docs24h": 9
     },
     {
+      "term": "leverage",
+      "count24h": 15,
+      "baselinePerDay": 0.14285714285714285,
+      "count7d": 1,
+      "growth": 14,
+      "sources": {
+        "github": 5,
+        "token": 10
+      },
+      "docs24h": 12
+    },
+    {
+      "term": "package",
+      "count24h": 13,
+      "baselinePerDay": 0,
+      "count7d": 0,
+      "growth": 14,
+      "sources": {
+        "github": 13
+      },
+      "docs24h": 13
+    },
+    {
+      "term": "multihedge",
+      "count24h": 32,
+      "baselinePerDay": 1.4285714285714286,
+      "count7d": 10,
+      "growth": 13.588235294117645,
+      "sources": {
+        "github": 32
+      },
+      "docs24h": 16
+    },
+    {
       "term": "accounting",
       "count24h": 16,
       "baselinePerDay": 0.2857142857142857,
@@ -75,40 +109,6 @@
       "growth": 13.222222222222223,
       "sources": {
         "github": 16
-      },
-      "docs24h": 15
-    },
-    {
-      "term": "leverage",
-      "count24h": 14,
-      "baselinePerDay": 0.14285714285714285,
-      "count7d": 1,
-      "growth": 13.125,
-      "sources": {
-        "github": 4,
-        "token": 10
-      },
-      "docs24h": 11
-    },
-    {
-      "term": "package",
-      "count24h": 12,
-      "baselinePerDay": 0,
-      "count7d": 0,
-      "growth": 13,
-      "sources": {
-        "github": 12
-      },
-      "docs24h": 12
-    },
-    {
-      "term": "multihedge",
-      "count24h": 30,
-      "baselinePerDay": 1.4285714285714286,
-      "count7d": 10,
-      "growth": 12.76470588235294,
-      "sources": {
-        "github": 30
       },
       "docs24h": 15
     }
