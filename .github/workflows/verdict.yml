@@ -50,6 +50,9 @@ jobs:
       - name: Calcul du verdict sniping (hypothèse 5)
         if: steps.gate.outputs.run == 'true'
         run: npx tsx lab/backtest/preregistered-snipe.ts data-snipe
+      - name: Calcul du verdict 4 questions sur 14 canaux (hypothèse 6)
+        if: steps.gate.outputs.run == 'true'
+        run: npx tsx lab/backtest/preregistered-channels.ts data-channels
       - name: Commit reports/
         if: steps.gate.outputs.run == 'true'
         run: |
