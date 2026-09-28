@@ -101,3 +101,22 @@ Aucun prix de ces calls n'avait été regardé au moment de cet ajout.
 - **Tableau descriptif (hors verdict) :** part des calls ayant touché ×2 dans les 24 h et part valant moins de la
   moitié 24 h après — pour comparer aux « ×13 » affichés par le canal.
 - **Verdict :** `lab/backtest/preregistered-calls.ts`, le 17 octobre 2026, dans `reports/verdict-calls-2026-10-17.md`.
+
+## Hypothèse 5 — sniping pump.fun (ajoutée le 28 septembre 2026, avant toute donnée)
+
+Demande d'Hervé : tester le « sniping » (acheter un nouveau token dans les premières secondes). Constat qui motive le
+test : copier un call en retard perd de l'argent (premières observations des hypothèses 3–4, non utilisées pour fixer
+ces règles) ; le sniping est l'inverse — arriver le premier. Aucune donnée de sniping n'existait au moment de cet ajout.
+
+- **Collecte :** pendant l'écoute PumpPortal (10 min toutes les 15 min), un échantillon fixe d'environ 1 nouveau token
+  sur 4 (choisi par l'adresse, au plus 40 par fenêtre, créés assez tôt pour être suivis 5 min) est observé dans
+  `data-snipe/` : prix juste après la création (courbe pump.fun après l'achat du créateur, en SOL), puis prix
+  DexScreener (paire pump.fun cotée en SOL) à +1 min et +5 min. Rien n'est acheté ; aucune souscription payante.
+- **H5a — sniper parfait :** achat au prix juste après la création, revente à +5 min. C'est le meilleur cas possible.
+- **H5b — sniper réaliste :** achat au prix à +1 min, revente à +5 min.
+- **Coûts :** 5 % aller-retour (frais pump.fun, frais de priorité, impact de notre propre achat). Prix absent de
+  DexScreener = prix inchangé. Plus de 30 % de tokens sans prix à +5 min = données peu fiables = NON CONCLUANT.
+- **Périodes, critères :** identiques (A avant le 6 octobre, B à partir du 6 octobre ; ≥ 30 snipes, gains ÷ pertes
+  ≥ 1,3, espérance > 0, sur chaque période). **RETENUE seulement si H5a ET H5b passent sur A ET sur B.** Si même le
+  sniper parfait perd, le sniping est abandonné.
+- **Verdict :** `lab/backtest/preregistered-snipe.ts`, le 17 octobre 2026, dans `reports/verdict-snipe-2026-10-17.md`.
