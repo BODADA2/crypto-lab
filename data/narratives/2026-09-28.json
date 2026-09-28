@@ -1,5 +1,5 @@
 {
-  "computedAt": "2026-09-28T04:41:29.810Z",
+  "computedAt": "2026-09-28T04:54:15.501Z",
   "terms": [
     {
       "term": "meteora",
@@ -58,6 +58,17 @@
       "docs24h": 16
     },
     {
+      "term": "mpc",
+      "count24h": 27,
+      "baselinePerDay": 0.7142857142857143,
+      "count7d": 5,
+      "growth": 16.333333333333332,
+      "sources": {
+        "github": 27
+      },
+      "docs24h": 13
+    },
+    {
       "term": "ground",
       "count24h": 21,
       "baselinePerDay": 0.42857142857142855,
@@ -80,29 +91,18 @@
       "docs24h": 21
     },
     {
-      "term": "mpc",
-      "count24h": 25,
-      "baselinePerDay": 0.7142857142857143,
-      "count7d": 5,
-      "growth": 15.166666666666666,
+      "term": "spark",
+      "count24h": 14,
+      "baselinePerDay": 0,
+      "count7d": 0,
+      "growth": 15,
       "sources": {
-        "github": 25
+        "token": 14
       },
-      "docs24h": 12
+      "docs24h": 7
     },
     {
       "term": "beginners",
-      "count24h": 16,
-      "baselinePerDay": 0.14285714285714285,
-      "count7d": 1,
-      "growth": 14.875,
-      "sources": {
-        "github": 16
-      },
-      "docs24h": 16
-    },
-    {
-      "term": "pros",
       "count24h": 16,
       "baselinePerDay": 0.14285714285714285,
       "count7d": 1,
