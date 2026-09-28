@@ -3,7 +3,7 @@
   "program": "token-2022",
   "mintAuthority": "7pt9tkctJPK7PPNQJ77GKg8ZffSF6QxoMiCFYHxrtaCj",
   "freezeAuthority": "JDq14BWvqCRFNu1krb12bcRpbGtJZ1FLEakMw6FdxJNs",
-  "supplyRaw": "55998581039353",
+  "supplyRaw": "55998566784752",
   "decimals": 8,
   "isInitialized": true,
   "extensions": [
@@ -35,7 +35,7 @@
     {
       "address": "46T2tBKaUVNUYAJubBJ7iLsynCKkXW3UEQqES7QZnxa9",
       "owner": "AC5RDfQFmDS1deWZos921JfqscXdByf8BKHs5ACWjtW2",
-      "amountRaw": "3386153140832",
+      "amountRaw": "3383856493215",
       "pct": 6.04,
       "excluded": false
     },
@@ -63,8 +63,8 @@
     {
       "address": "2wmq9LoqAjyKr5YkenAkGozA7xZvbfrCqJXFUuyQHYoa",
       "owner": "AHNN6JmvaGG6XUoSg7sEr38gRYDB2jTbUvqXVuqaRHpq",
-      "amountRaw": "1110683195304",
-      "pct": 1.98,
+      "amountRaw": "1114435550094",
+      "pct": 1.99,
       "excluded": true
     },
     {
@@ -126,7 +126,7 @@
     {
       "address": "MWJdA2cwRg5dvnEanF2v7FnXGrduAWJwWAA2vMeXWsx",
       "owner": "FPXq2NmXuSA1G2dGd8znUjT5G14zvmjoGFFfo7GKUm7k",
-      "amountRaw": "186760245833",
+      "amountRaw": "189056893450",
       "pct": 0.33,
       "excluded": false
     },
@@ -140,8 +140,15 @@
     {
       "address": "2UbS3CBQpxYxq9FnCoC9RMu5MHZ4c4BNfF9ymBbMsVfy",
       "owner": "LVcDubF4BFsEw8qmxupmw74bbZfiya99kor5c3Hh24r",
-      "amountRaw": "117711700301",
-      "pct": 0.21,
+      "amountRaw": "117254628523",
+      "pct": 0.2,
+      "excluded": false
+    },
+    {
+      "address": "FvPtCgQGGnMMzMWacJqrcmSPKe14uHBk3gJg9QmRPMhh",
+      "owner": "FkaLnX17cXZGyeu3kZGdHCNdFMJJzBrPPYVvd18B3MZp",
+      "amountRaw": "103464815111",
+      "pct": 0.18,
       "excluded": false
     },
     {
@@ -149,13 +156,6 @@
       "owner": "2e8Tdop2kSLdZKRjYWgaSef51owWKZXkqznqhdwjt5AB",
       "amountRaw": "100913805630",
       "pct": 0.18,
-      "excluded": false
-    },
-    {
-      "address": "FvPtCgQGGnMMzMWacJqrcmSPKe14uHBk3gJg9QmRPMhh",
-      "owner": "FkaLnX17cXZGyeu3kZGdHCNdFMJJzBrPPYVvd18B3MZp",
-      "amountRaw": "97800782163",
-      "pct": 0.17,
       "excluded": false
     }
   ],
@@ -167,6 +167,6 @@
     "Pausable",
     "TransferHook"
   ],
-  "fetchedAt": "2026-09-28T22:23:27.435Z",
+  "fetchedAt": "2026-09-28T23:23:34.470Z",
   "rpcCalls": 4
 }
