@@ -74,7 +74,7 @@ jobs:
   pumpportal:
     name: PumpPortal (créations + migrations, 10 min max)
     runs-on: ubuntu-latest
-    timeout-minutes: 13
+    timeout-minutes: 14
     needs: collect
     steps:
       - uses: actions/checkout@v4
@@ -86,16 +86,18 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
-      - name: Écoute WebSocket (bornée à 600 s)
+      - name: Écoute WebSocket (bornée à 600 s) + suivi sniping (hypothèse 5, data-snipe/)
         env:
           PUMPPORTAL_API_KEY: ${{ secrets.PUMPPORTAL_API_KEY }}
-        run: timeout 630 npx tsx lab/collect/run.ts pump 600
+          SNIPE_DIR: data-snipe
+        run: timeout 660 npx tsx lab/collect/run.ts pump 600
       - name: Commit data/ si changement
         run: |
           git config user.name "crypto-lab-bot"
           git config user.email "crypto-lab-bot@users.noreply.github.com"
           git pull --rebase --autostash origin "${GITHUB_REF_NAME}"
           git add data/
+          if [ -d data-snipe ]; then git add data-snipe/; fi
           if git diff --cached --quiet; then
             echo "Aucun changement dans data/"
           else

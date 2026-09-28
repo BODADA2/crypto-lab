@@ -47,6 +47,9 @@ jobs:
       - name: Calcul du verdict calls Telegram (hypothèses 3–4)
         if: steps.gate.outputs.run == 'true'
         run: npx tsx lab/backtest/preregistered-calls.ts data-calls
+      - name: Calcul du verdict sniping (hypothèse 5)
+        if: steps.gate.outputs.run == 'true'
+        run: npx tsx lab/backtest/preregistered-snipe.ts data-snipe
       - name: Commit reports/
         if: steps.gate.outputs.run == 'true'
         run: |
