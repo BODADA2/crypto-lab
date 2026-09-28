@@ -3,34 +3,27 @@
   "program": "token-2022",
   "mintAuthority": null,
   "freezeAuthority": null,
-  "supplyRaw": "929814532098459",
+  "supplyRaw": "929814521975300",
   "decimals": 6,
   "isInitialized": true,
   "extensions": [
     "MetadataPointer",
     "TokenMetadata"
   ],
-  "top10Pct": 18.63,
+  "top10Pct": 18.07,
   "topAccounts": [
     {
       "address": "B24uFWuMCUBCQ429fci399eDwkcWPz1xSzBGkSUu8pE4",
       "owner": "8N2XJYyVBMrd4B5LUTd5pFe3uWwp5h4cWib9AxTxbHxv",
-      "amountRaw": "193326619999851",
-      "pct": 20.79,
+      "amountRaw": "187140902924721",
+      "pct": 20.12,
       "excluded": true
     },
     {
       "address": "Hiyn5PZkNBL7mhBrVDVMaYo23HVzus1yKobAQVUWVRLK",
       "owner": "Ekrx2w9q19gWmwSddqtgUEswrMjV7gEBMvQ85zVDk1vy",
-      "amountRaw": "45111116354071",
-      "pct": 4.85,
-      "excluded": false
-    },
-    {
-      "address": "D1UfxC6ssaj27117qwtwzKPstkboQQD5gXad1bWng9Fs",
-      "owner": "46UH53ypbbFoGUAi2geM337MaBfPKpkd9LzMo5qB4BR8",
-      "amountRaw": "20117093736610",
-      "pct": 2.16,
+      "amountRaw": "44259101140181",
+      "pct": 4.75,
       "excluded": false
     },
     {
@@ -38,6 +31,13 @@
       "owner": "GM1BEtu1AwzbQkupJo9HacJoJ7GFc5BKEaPsZySV6NQ2",
       "amountRaw": "16254395562125",
       "pct": 1.74,
+      "excluded": false
+    },
+    {
+      "address": "9FwdUsqCLxoWYQNjr6TtxtvWr621i1aSWxrMrWiwBmCY",
+      "owner": "9Qdo7PmW8pfZ5tAoGeDGrkcGrskgsBVwfsUUcED3s6z2",
+      "amountRaw": "15546872506834",
+      "pct": 1.67,
       "excluded": false
     },
     {
@@ -50,8 +50,8 @@
     {
       "address": "CF9csZvEzvMnzcN8QbxJVKJcL2iULjeLm5oTNof1QXG8",
       "owner": "EYvwg12vXcUN7pF1fASQZZgQ9RbVUMLjKqqCfi961ptw",
-      "amountRaw": "15325372542365",
-      "pct": 1.64,
+      "amountRaw": "14544360150527",
+      "pct": 1.56,
       "excluded": false
     },
     {
@@ -80,6 +80,20 @@
       "owner": "HgL4KGqjwQnELrXuqXEjGckKRUjzMWEgdKGDJ1fjQ2qg",
       "amountRaw": "11739108426390",
       "pct": 1.26,
+      "excluded": false
+    },
+    {
+      "address": "AifkQyqFyipEMp8zCWxNGjPUdUug2UtNuztGYCDpB7ia",
+      "owner": "BixZzjYNyYGi1ywdHHekRCkxcQwNvtCKxxGppNCecYbT",
+      "amountRaw": "11402801624175",
+      "pct": 1.22,
+      "excluded": false
+    },
+    {
+      "address": "4ezgHnFebm4gF9TJxMSwNXtfnHjmvJwWsXRbFkvh1tk9",
+      "owner": "95Yqh4aPgvuN7jWZFBas5kwy1enNwR7g4KxLsXbgive1",
+      "amountRaw": "11355740175648",
+      "pct": 1.22,
       "excluded": false
     },
     {
@@ -118,17 +132,17 @@
       "excluded": false
     },
     {
-      "address": "9FwdUsqCLxoWYQNjr6TtxtvWr621i1aSWxrMrWiwBmCY",
-      "owner": "9Qdo7PmW8pfZ5tAoGeDGrkcGrskgsBVwfsUUcED3s6z2",
-      "amountRaw": "8979857067210",
-      "pct": 0.96,
-      "excluded": false
-    },
-    {
       "address": "Amag27Q2VX7ZUWbRnSfwnWheeq7JzoruGr2a3Dgr95Qt",
       "owner": "6c1M6YcnrwJsEU5oduQcXPDvitn44ogKdKdW5MsqWpsz",
       "amountRaw": "7645829016701",
       "pct": 0.82,
+      "excluded": false
+    },
+    {
+      "address": "7NAbiJ6Nj8Rxs3ENEBKMsZ3xNufstGkmsyhtcht7wwsz",
+      "owner": "EhfeBatY1rC3cdL8ZuvLy2TXMvXrEVzxgk2hCCKKbwKJ",
+      "amountRaw": "7230725694687",
+      "pct": 0.77,
       "excluded": false
     },
     {
@@ -137,25 +151,11 @@
       "amountRaw": "6963418559155",
       "pct": 0.74,
       "excluded": false
-    },
-    {
-      "address": "8a1w3VjHQyc1V5AJ7fSwNKi9nok32M6Nw7a5c4ttBTmG",
-      "owner": "EEf4Ztk3uNm3LoHaGoyGkP9UswHf8ypb7hpGuvwRyVfV",
-      "amountRaw": "6958073181248",
-      "pct": 0.74,
-      "excluded": false
-    },
-    {
-      "address": "FVepHk3KJhkBanw4GPW42GLJFhAQJKr7m6ENcfMnYiyR",
-      "owner": "8VVN9qk54ghwxRfGvRYguUeaYaYMW35GXj6MdZVZDKG",
-      "amountRaw": "6696238933284",
-      "pct": 0.72,
-      "excluded": false
     }
   ],
   "excludedCount": 1,
   "holders": null,
   "riskyExtensions": [],
-  "fetchedAt": "2026-09-28T06:04:49.883Z",
+  "fetchedAt": "2026-09-28T07:27:42.074Z",
   "rpcCalls": 4
 }

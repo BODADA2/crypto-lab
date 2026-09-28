@@ -1,5 +1,5 @@
 {
-  "computedAt": "2026-09-28T07:10:07.117Z",
+  "computedAt": "2026-09-28T07:27:43.500Z",
   "terms": [
     {
       "term": "bittensor",
@@ -13,17 +13,6 @@
       "docs24h": 17
     },
     {
-      "term": "meteora",
-      "count24h": 67,
-      "baselinePerDay": 1.7142857142857142,
-      "count7d": 12,
-      "growth": 25.052631578947366,
-      "sources": {
-        "github": 67
-      },
-      "docs24h": 39
-    },
-    {
       "term": "polkadot",
       "count24h": 34,
       "baselinePerDay": 0.42857142857142855,
@@ -35,6 +24,17 @@
       "docs24h": 17
     },
     {
+      "term": "meteora",
+      "count24h": 65,
+      "baselinePerDay": 2,
+      "count7d": 14,
+      "growth": 22,
+      "sources": {
+        "github": 65
+      },
+      "docs24h": 38
+    },
+    {
       "term": "mpc",
       "count24h": 33,
       "baselinePerDay": 0.7142857142857143,
@@ -44,29 +44,6 @@
         "github": 33
       },
       "docs24h": 16
-    },
-    {
-      "term": "dlmm",
-      "count24h": 41,
-      "baselinePerDay": 1.4285714285714286,
-      "count7d": 10,
-      "growth": 17.294117647058822,
-      "sources": {
-        "github": 41
-      },
-      "docs24h": 24
-    },
-    {
-      "term": "relay",
-      "count24h": 41,
-      "baselinePerDay": 1.4285714285714286,
-      "count7d": 10,
-      "growth": 17.294117647058822,
-      "sources": {
-        "github": 38,
-        "token": 3
-      },
-      "docs24h": 22
     },
     {
       "term": "spark",
@@ -111,6 +88,29 @@
         "github": 17
       },
       "docs24h": 17
+    },
+    {
+      "term": "ultra",
+      "count24h": 19,
+      "baselinePerDay": 0.2857142857142857,
+      "count7d": 2,
+      "growth": 15.555555555555557,
+      "sources": {
+        "github": 17,
+        "token": 2
+      },
+      "docs24h": 19
+    },
+    {
+      "term": "parser",
+      "count24h": 14,
+      "baselinePerDay": 0,
+      "count7d": 0,
+      "growth": 15,
+      "sources": {
+        "github": 14
+      },
+      "docs24h": 5
     }
   ]
 }
