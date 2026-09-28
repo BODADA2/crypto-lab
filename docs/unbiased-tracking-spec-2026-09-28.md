@@ -28,7 +28,9 @@ réutilisation de ses chiffres. Effort estimé : ~30 lignes + re-run des scripts
 - À chaque `create` genuine (flag ci-dessus appliqué) : tirage aléatoire **sans remise par
   fenêtre**, probabilité d'inclusion `p = 5 %` (seed journalier fixé, ex. `seed = YYYYMMDD`,
   pour rejouabilité exacte).
-- Cap : max 200 tokens suivis simultanément ; file FIFO si dépassement.
+- Cap : max 800 tokens suivis simultanément (recalibré §6/F8 : ~525 concurrents
+  attendus à 21 000 creates/jour) ; si dépassement : nouveaux refusés avec motif
+  `dropped[]`, jamais de troncature des courbes en cours.
 - **Strates conservées** : `late_discovery` / genuine, outil (domaine), heure — pour audits,
   pas pour le filtrage.
 
@@ -78,3 +80,71 @@ réutilisation de ses chiffres. Effort estimé : ~30 lignes + re-run des scripts
 
 ---
 *Spécification rédigée le 2026-09-28. Aucune ligne de production modifiée.*
+
+## 6. Relecture critique (2026-09-28, nuit) — verdict : VALIDÉE AVEC AJUSTEMENTS
+
+Aucun risque bloquant trouvé. La règle de détection a été validée empiriquement sur 5 jours
+(68 466 creates) : `vSolInBondingCurve >= 85` à la première observation donne **0 faux positif**
+sur 67 845 creates genuine (max genuine observé : vSol = 84,32, devBuy max = 54,32 SOL) et
+capture 14 late-discoveries supplémentaires que le tuple exact ne voyait pas. Le test du
+tuple est subsumé par `vSol >= 85` (tuple ⇒ vSol = 115) et est abandonné par simplification.
+Aucune implémentation n'a été refusée ; les ajustements ci-dessous sont appliqués.
+
+### Failles cherchées → décisions
+
+- **F1 — Contradiction spec** (§1 titre « flag seulement » vs corps « devBuy := INCONNU ») :
+  **flag-only**. Le `solAmount` brut est conservé (c'est une donnée réelle reçue ; la détruire
+  serait irréversible). Les consommateurs filtrent avec `WHERE NOT late_discovery`.
+- **F2 — Source des snapshots non nommée** : **DexScreener `getSnapshots`** (batch de 30,
+  client existant, limiteur 60 req/min intégré ; besoin estimé < 10 req/min).
+- **F3 — Règle « une seule connexion » PumpPortal ignorée** (bannissement 1 h sinon) :
+  le tracker **n'ouvre aucun websocket**. Il consomme les scan files via un git worktree
+  détaché en sparse-checkout (`data/scans` uniquement) + `git fetch` périodique (lecture
+  seule). Zéro risque pour le collecteur prod.
+- **F4 — Supervision du process 24/7 non adressée** : le tracker tourne en **mode borné
+  `--duration-min`** (boucle interne à 30 s, façon `runPump`), relancé par cron ; reprise
+  idempotente via manifests ; verrou PID (`.lock`) contre les chevauchements.
+- **F5 — Sémantique d'échantillonnage floue** (« sans remise par fenêtre » + p = 5 %) :
+  **inclusion déterministe** `sha256("track-unbiased:"+dateUTC+":"+mint) < 5 %`.
+  Reproductible, idempotente au redémarrage, sans état. Date UTC pinnée (les scans sont UTC).
+- **F6 — Détection de migration non spécifiée** : double mécanisme — (a) événements
+  `migrate` du flux (lag ~10-15 min, backfill/vérification), (b) **snapshot** : le `dexId`
+  de la paire la plus liquide n'est plus `pumpfun` (cf. `snipe.ts:pickSolPair`). Le snapshot
+  de détection (≤ 5 min après migration) devient le premier point post-migration.
+- **F7 — Reprise au redémarrage** : manifests du jour J et J-1 rechargés ; `nextDue`
+  dérivé du dernier snapshot ; `receivedAt` (flux) ET `discoveredAt` (tracker) enregistrés.
+- **F8 — Biais du cap 200 + FIFO** : à l'état stable ~106 tokens concurrents < 200, le cap
+  ne déclenchera quasiment jamais. En cas de dépassement : **nouveaux refusés**
+  (courbes en cours gardées complètes), `dropped[]` avec motif au manifest. Le biais
+  (sous-échantillonnage des périodes chargées) est documenté pour l'analyse.
+  **Recalibrage empirique (bootstrap 2026-09-28)** : ~21 000 creates/jour observés
+  (vs ~13 700/jour sur la fenêtre d'audit) → 5 % ≈ 1 050 tokens/jour → ~525 concurrents
+  en fenêtre pré-migration (12 h) + ~30 en post-migration. Le cap de 200 était déjà
+  insuffisant avec les hypothèses de la spec (325 concurrents) — l'estimation « ~106 »
+  de la relecture initiale était fausse. **Cap porté à 800** (~50 % de marge ;
+  coût API < 6 req/min pour un limiteur à 60/min). En cas de dépassement persistant :
+  nouveaux refusés, `dropped[]` avec motif, sans troncature des en-cours.
+- **F9 — `chainregime.ts` contaminé** (somme des `solAmount` incluant les 85.005) :
+  **hors scope** — le corriger changerait les entrées du paper engine, ça exige sa propre
+  validation. Suivi à part.
+- **F10 — Lignes historiques sans le flag** : helper `lateDiscoveryOf(ev)` =
+  `ev.lateDiscovery ?? detectLateDiscovery(ev)` ; détecteur pur exporté et partagé.
+- **F11 — Frontière minuit UTC** : le seed est la date UTC **du create**, pas du jour
+  courant ; les tokens en cours restent rattachés à leur manifest d'origine.
+- **F12 — Rétention disque** : ~360 Mo / 30 j estimés — accepté, pas de purge (c'est le
+  but de la collecte).
+- **F13 — Lag ~10-15 min sur les creates** (cadence des commits data) : le manifest
+  l'enregistre honnêtement ; le P&L mesuré sera celui **exécutable avec la latence du
+  lab** (entrée ≥ discoveredAt) — c'est d'ailleurs la bonne question pour le paper engine.
+- **F14 — Zone grise 80–85 SOL** : un token découvert à vSol = 84 reste compté genuine
+  (un vrai whale à 54 SOL de devBuy existe : max observé 54,32). Conservateur par design ;
+  noté comme limite.
+- **F15 — Interférence avec le cron 08h23** : le tracker n'écrit QUE dans
+  `data/track-unbiased/` et lit le worktree ; le `git fetch` ne touche pas à la branche
+  de travail. Aucun fichier partagé.
+- **F16 — Tokens `pool: "bonk"`** : jamais de `vSol` → la règle ne peut pas se déclencher
+  (ni faux positif, ni détection — limite documentée) ; inclus dans l'échantillonnage
+  au prorata, snapshots DexScreener identiques.
+- **F17 — Doublons de creates** : dédupliqué par mint (premier create gagne, comme l'audit).
+- **F18 — Cadence effective** : tick interne 30 s ; snapshots dus par batch ; erreurs
+  réseau/API non fatales (réessayées au tick suivant), jamais de crash sur un token.

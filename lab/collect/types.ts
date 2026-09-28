@@ -169,6 +169,13 @@ export interface PumpEvent {
   pool: string | null;
   receivedAt: string;
   raw: unknown;
+  /**
+   * Découverte tardive avérée (audit 2026-09-28) : `create` observé avec
+   * `vSolInBondingCurve >= 85` — le `solAmount` n'est alors PAS une mise initiale
+   * du dev. Flag-only : la valeur brute est conservée, les consommateurs filtrent
+   * avec `WHERE NOT lateDiscovery`. Voir `lab/collect/lateDiscovery.ts`.
+   */
+  lateDiscovery: boolean;
 }
 
 /** Acheteur précoce détecté via Helius. */

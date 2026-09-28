@@ -12,6 +12,7 @@
  */
 import { appendFileSync, mkdirSync } from "node:fs";
 import { join } from "node:path";
+import { detectLateDiscovery } from "./lateDiscovery.ts";
 import type { PumpEvent } from "./types.ts";
 
 export const PUMPPORTAL_URL = "wss://pumpportal.fun/api/data";
@@ -92,6 +93,7 @@ export function parsePumpMessage(raw: unknown, receivedAtMs: number): PumpEvent 
   if (!kind) return null;
   const numOrNull = (v: unknown) => (typeof v === "number" && Number.isFinite(v) ? v : null);
   const strOrNull = (v: unknown) => (typeof v === "string" ? v : null);
+  const lateDiscovery = kind === "create" ? detectLateDiscovery({ kind, raw: obj }) : false;
   return {
     kind,
     mint,
@@ -104,6 +106,7 @@ export function parsePumpMessage(raw: unknown, receivedAtMs: number): PumpEvent 
     pool: strOrNull(obj.pool),
     receivedAt: new Date(receivedAtMs).toISOString(),
     raw: obj,
+    lateDiscovery,
   };
 }
 

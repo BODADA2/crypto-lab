@@ -18,6 +18,7 @@ function ev(kind: "create" | "migrate", mint: string, deployer: string | null, a
     pool: null,
     receivedAt: iso(atMs),
     raw: {},
+    lateDiscovery: false,
   };
 }
 

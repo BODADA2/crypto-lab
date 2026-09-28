@@ -8,7 +8,7 @@ import type { PumpEvent } from "../lab/collect/types.ts";
 
 const T0 = Date.parse("2026-09-28T12:00:00Z");
 const sampled = (() => { const out: string[] = []; for (let i = 0; out.length < 3; i++) { const m = `Mint${i}xxxxxxxxxxxxxxxxxxxxxxxxxxxxpump`; if (inSample(m)) out.push(m); } return out; })();
-const create = (mint: string, atMs: number): PumpEvent => ({ kind: "create", mint, signature: null, name: "X", symbol: "X", traderPublicKey: null, solAmount: 1, marketCapSol: 30, pool: "pump", receivedAt: new Date(atMs).toISOString(), raw: { vSolInBondingCurve: 30, vTokensInBondingCurve: 1e9 } });
+const create = (mint: string, atMs: number): PumpEvent => ({ kind: "create", mint, signature: null, name: "X", symbol: "X", traderPublicKey: null, solAmount: 1, marketCapSol: 30, pool: "pump", receivedAt: new Date(atMs).toISOString(), raw: { vSolInBondingCurve: 30, vTokensInBondingCurve: 1e9 }, lateDiscovery: false });
 const pair = (mint: string, price: string) => ({ chainId: "solana", dexId: "pumpfun", url: "", pairAddress: "P" + mint, baseToken: { address: mint, name: "X", symbol: "X" }, quoteToken: { address: "So1", name: "Wrapped SOL", symbol: "SOL" }, priceNative: price, liquidity: { usd: 5000 }, txns: { m5: { buys: 3, sells: 1 } } });
 
 describe("hypothèse 5 — suivi des snipes", () => {
