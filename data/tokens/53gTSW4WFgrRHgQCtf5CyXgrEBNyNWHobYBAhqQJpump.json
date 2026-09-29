@@ -14,17 +14,17 @@
   "marketCapUsd": 248401,
   "volume": {
     "m5": 0,
-    "h1": 1.66,
-    "h6": 397.29,
+    "h1": 0.09,
+    "h6": 213.78,
     "h24": 18354.69
   },
   "volume5m": 0,
-  "volume1h": 1.66,
+  "volume1h": 0.09,
   "volume24h": 18354.69,
   "priceChange": {
     "m5": 0,
-    "h1": 1.14,
-    "h6": 2.42,
+    "h1": 1.4,
+    "h6": 2.62,
     "h24": 383
   },
   "txns": {
@@ -34,11 +34,11 @@
     },
     "h1": {
       "buys": 1,
-      "sells": 1
+      "sells": 0
     },
     "h6": {
-      "buys": 16,
-      "sells": 11
+      "buys": 11,
+      "sells": 6
     },
     "h24": {
       "buys": 126,
@@ -46,11 +46,13 @@
     }
   },
   "holders": null,
-  "top10Pct": 100,
-  "mintAuthority": "UNKNOWN",
-  "freezeAuthority": "UNKNOWN",
+  "top10Pct": 22.53,
+  "mintAuthority": null,
+  "freezeAuthority": null,
   "boostsActive": 0,
   "pairCount": 1,
   "source": "dexscreener",
-  "fetchedAt": "2026-09-29T07:07:31.741Z"
+  "fetchedAt": "2026-09-29T07:27:13.965Z",
+  "decimals": 6,
+  "riskyExtensions": []
 }
