@@ -3,7 +3,7 @@
   "program": "token-2022",
   "mintAuthority": null,
   "freezeAuthority": null,
-  "supplyRaw": "908476838255945",
+  "supplyRaw": "908476838093544",
   "decimals": 6,
   "isInitialized": true,
   "extensions": [
@@ -11,13 +11,13 @@
     "TransferFeeConfig",
     "TokenMetadata"
   ],
-  "top10Pct": 52.71,
+  "top10Pct": 57.67,
   "topAccounts": [
     {
       "address": "7pUTMUCFQV6w9vxiWNbNLwaCDM8pFJehh468Seyra3cR",
       "owner": "GpMZbSM2GgvTKHJirzeGfMFoaZ8UR2X7F4v8vHTvxFbL",
-      "amountRaw": "336266252699235",
-      "pct": 37.01,
+      "amountRaw": "381299513365684",
+      "pct": 41.97,
       "excluded": false
     },
     {
@@ -91,24 +91,17 @@
       "excluded": false
     },
     {
-      "address": "5WQ1UtwuVDFEMJ9KBRxg3NGLMSRK6sGPc2Xaa8nV3dZJ",
-      "owner": "5YRgrP3mjGzrzirYYN5HAQH19cTYREYwGxW6XRJQUzij",
-      "amountRaw": "10000000000000",
-      "pct": 1.1,
-      "excluded": false
-    },
-    {
-      "address": "ETzsjHqKtqpNqnX77xYQpm7bAHSKv2gthhvSksRzMtMx",
-      "owner": "GT3C8nySMZzF9nsmiMLG76DAH3icubcPgvnAYqpADppv",
-      "amountRaw": "9951107088774",
-      "pct": 1.09,
-      "excluded": false
-    },
-    {
       "address": "CCQeeRnk1tMJesngJm7R44vDVWmG1QUkQbcDEhvMU69C",
       "owner": "8ib5tHda45oUZZMJJBwKFK6oW5sTyKedY1LFaa8hRbrV",
       "amountRaw": "9382433973168",
       "pct": 1.03,
+      "excluded": false
+    },
+    {
+      "address": "EnbuF1GyHoGa5hCGxPceHQnpZFPYAFnbeUrXnUQZZKbi",
+      "owner": "AeDBXhxZAK8mkz6wWKZmxmpaR29iAYgqU11LFqJpcie8",
+      "amountRaw": "9148357728150",
+      "pct": 1,
       "excluded": false
     },
     {
@@ -152,6 +145,13 @@
       "amountRaw": "7048079296911",
       "pct": 0.77,
       "excluded": false
+    },
+    {
+      "address": "HLJb84qDbbkvbJ45igD4SV36nKKYkDfZztTseaz28uav",
+      "owner": "Hp4HVV26rqUR4geRRnsVKTEMroWxPXJwPayrWjZiTVyt",
+      "amountRaw": "6543891574752",
+      "pct": 0.72,
+      "excluded": false
     }
   ],
   "excludedCount": 0,
@@ -159,6 +159,6 @@
   "riskyExtensions": [
     "TransferFeeConfig"
   ],
-  "fetchedAt": "2026-09-29T15:57:42.230Z",
+  "fetchedAt": "2026-09-29T17:08:40.383Z",
   "rpcCalls": 4
 }
