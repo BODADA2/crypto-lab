@@ -3,7 +3,7 @@
   "program": "spl-token",
   "mintAuthority": "BCD75RNBHrJJpW4dXVagL5mPjzRLnVZq4YirJdjEYMV7",
   "freezeAuthority": null,
-  "supplyRaw": "245827384180",
+  "supplyRaw": "245827381890",
   "decimals": 8,
   "isInitialized": true,
   "extensions": [],
@@ -12,7 +12,7 @@
     {
       "address": "FgpXg2J3TzSs7w3WGYYE7aWePdrxBVLCXSxmAKnCZNtZ",
       "owner": "AVzP2GeRmqGphJsMxWoqjpUifPpCret7LqWhD8NWQK49",
-      "amountRaw": "147401472784",
+      "amountRaw": "147400631052",
       "pct": 59.96,
       "excluded": false
     },
@@ -80,6 +80,13 @@
       "excluded": false
     },
     {
+      "address": "5xXtGXq5JHB3grdgTGQ4yt7YmJBqBxdffhnkZ8vc6xLB",
+      "owner": "B5EwJVDuAauzUEEdwvbuXzbFFgEYnUqqS37TUM1c4PQA",
+      "amountRaw": "1022408504",
+      "pct": 0.41,
+      "excluded": true
+    },
+    {
       "address": "HheGyxEdnsFtP4xMFSqyQQPQoXHi88RbR5Db21KyAT4B",
       "owner": "6Q75N29VTCATxHrMiDkUfi9ChfCQXTcmwRq4MvwiqZpR",
       "amountRaw": "1009124991",
@@ -92,13 +99,6 @@
       "amountRaw": "1009060755",
       "pct": 0.41,
       "excluded": false
-    },
-    {
-      "address": "5xXtGXq5JHB3grdgTGQ4yt7YmJBqBxdffhnkZ8vc6xLB",
-      "owner": "B5EwJVDuAauzUEEdwvbuXzbFFgEYnUqqS37TUM1c4PQA",
-      "amountRaw": "1003234873",
-      "pct": 0.4,
-      "excluded": true
     },
     {
       "address": "94AyVPnSYQNYXNMTB6kAnbFubwuBJLTQ1engVQ8mSrcZ",
@@ -122,17 +122,17 @@
       "excluded": false
     },
     {
+      "address": "G76nJJakELHFr7oArkoD3VogPR4Y4HmLgnqd2eGpcn8n",
+      "owner": "MfDuWeqSHEqTFVYZ7LoexgAK9dxk7cy4DFJWjWMGVWa",
+      "amountRaw": "895567907",
+      "pct": 0.36,
+      "excluded": false
+    },
+    {
       "address": "Hv1aXiW9iQzPbbZuGqm3cr4Qsr5NeKvgJ3eotFqhR5ic",
       "owner": "CEmDeWzHaumSP4W2TAFS69amuuQASSJSecKGjcANJMyQ",
       "amountRaw": "845201045",
       "pct": 0.34,
-      "excluded": false
-    },
-    {
-      "address": "4WBthDFFdS8mqJ3o9hoxtaEewcn7nuXpqUnQiHhJfHVQ",
-      "owner": "4v8ufj8Hj7UvFgtofQJAtzUud5xomwZfEqfCTHZ4wM72",
-      "amountRaw": "695991077",
-      "pct": 0.28,
       "excluded": false
     },
     {
@@ -153,6 +153,6 @@
   "excludedCount": 1,
   "holders": null,
   "riskyExtensions": [],
-  "fetchedAt": "2026-09-29T07:07:36.794Z",
+  "fetchedAt": "2026-09-29T08:28:06.688Z",
   "rpcCalls": 4
 }
