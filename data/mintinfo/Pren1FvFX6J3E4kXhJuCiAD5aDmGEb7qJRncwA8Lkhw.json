@@ -3,7 +3,7 @@
   "program": "token-2022",
   "mintAuthority": "WV9PJN7XTmTLVwbutCLFxp8TyePee6Xq5mRq6Fti5Wc",
   "freezeAuthority": "WV9PJN7XTmTLVwbutCLFxp8TyePee6Xq5mRq6Fti5Wc",
-  "supplyRaw": "7381674445598",
+  "supplyRaw": "7381674288609",
   "decimals": 9,
   "isInitialized": true,
   "extensions": [
@@ -18,7 +18,7 @@
     "Pausable",
     "TokenMetadata"
   ],
-  "top10Pct": 47.96,
+  "top10Pct": 47.86,
   "topAccounts": [
     {
       "address": "EL82xEGW7aNJnK7NhpCwXkD1kJB4B5KPoEVng88EnitM",
@@ -44,8 +44,8 @@
     {
       "address": "CnHiVJRJUMAtoJvo64gcHsb3rFydzb14uGD6kmxTvrka",
       "owner": "ECQbBHaizQtQU7AGtfttR2LbZ229KPibgUsyTG659yq",
-      "amountRaw": "274884905804",
-      "pct": 3.72,
+      "amountRaw": "266907979041",
+      "pct": 3.61,
       "excluded": false
     },
     {
@@ -65,8 +65,8 @@
     {
       "address": "AScgm5o5ZQUMcReJonRLQ1DYpxfsXBmXcqKQNs5fHHJ5",
       "owner": "HX72xZ1CHg7cWPhGGJyHbLp3sLrpznTYmWn5AY3FVwUj",
-      "amountRaw": "149835491412",
-      "pct": 2.02,
+      "amountRaw": "150386076536",
+      "pct": 2.03,
       "excluded": false
     },
     {
@@ -140,13 +140,6 @@
       "excluded": false
     },
     {
-      "address": "2yaFuqMGkXcpyShptCuJBCn4MheYAv468T1rB24LePxe",
-      "owner": "EZyszDEx1LZDt7TsSFV8xdPi49sDKC3mdfv2MVMEQLtU",
-      "amountRaw": "68097284072",
-      "pct": 0.92,
-      "excluded": true
-    },
-    {
       "address": "3A4o2wFDmBP7UMkMakUu3KqzdmwFcJvG3VvF3YsLh8G6",
       "owner": "C4F72hxGfqfMrF4Z3TcJUwAqyvqctQBSKvgJni5PN9Xy",
       "amountRaw": "67518089652",
@@ -159,9 +152,16 @@
       "amountRaw": "66523384568",
       "pct": 0.9,
       "excluded": false
+    },
+    {
+      "address": "GT2XvgjDS9ShvxNhKCiY5yBWxYMDpWhKiE1w7CRMM4Mo",
+      "owner": "DPh4Cfctg8yycPZP6zVmhQJZ1tHSvByKAbBLjhLBVitW",
+      "amountRaw": "65550394245",
+      "pct": 0.88,
+      "excluded": false
     }
   ],
-  "excludedCount": 1,
+  "excludedCount": 0,
   "holders": null,
   "riskyExtensions": [
     "PermanentDelegate",
@@ -170,6 +170,6 @@
     "TransferHook",
     "Pausable"
   ],
-  "fetchedAt": "2026-09-29T06:56:03.981Z",
+  "fetchedAt": "2026-09-29T08:06:18.797Z",
   "rpcCalls": 4
 }
