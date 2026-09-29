@@ -1,15 +1,26 @@
 {
-  "computedAt": "2026-09-29T02:36:57.785Z",
+  "computedAt": "2026-09-29T02:51:25.047Z",
   "terms": [
     {
       "term": "jev",
-      "count24h": 49,
+      "count24h": 52,
       "baselinePerDay": 0.7142857142857143,
       "count7d": 5,
-      "growth": 29.166666666666664,
+      "growth": 30.916666666666664,
       "sources": {
-        "github": 48,
+        "github": 51,
         "token": 1
+      },
+      "docs24h": 18
+    },
+    {
+      "term": "typesafe",
+      "count24h": 34,
+      "baselinePerDay": 0.2857142857142857,
+      "count7d": 2,
+      "growth": 27.222222222222225,
+      "sources": {
+        "github": 34
       },
       "docs24h": 17
     },
@@ -36,17 +47,6 @@
       "docs24h": 25
     },
     {
-      "term": "typesafe",
-      "count24h": 32,
-      "baselinePerDay": 0.2857142857142857,
-      "count7d": 2,
-      "growth": 25.666666666666668,
-      "sources": {
-        "github": 32
-      },
-      "docs24h": 16
-    },
-    {
       "term": "wasm",
       "count24h": 77,
       "baselinePerDay": 2.142857142857143,
@@ -69,6 +69,17 @@
       "docs24h": 20
     },
     {
+      "term": "x402check",
+      "count24h": 18,
+      "baselinePerDay": 0,
+      "count7d": 0,
+      "growth": 19,
+      "sources": {
+        "github": 18
+      },
+      "docs24h": 6
+    },
+    {
       "term": "using",
       "count24h": 26,
       "baselinePerDay": 0.42857142857142855,
@@ -81,14 +92,14 @@
     },
     {
       "term": "attestations",
-      "count24h": 22,
+      "count24h": 23,
       "baselinePerDay": 0.2857142857142857,
       "count7d": 2,
-      "growth": 17.88888888888889,
+      "growth": 18.666666666666668,
       "sources": {
-        "github": 22
+        "github": 23
       },
-      "docs24h": 22
+      "docs24h": 23
     },
     {
       "term": "spark",
@@ -100,17 +111,6 @@
         "token": 16
       },
       "docs24h": 8
-    },
-    {
-      "term": "package",
-      "count24h": 15,
-      "baselinePerDay": 0,
-      "count7d": 0,
-      "growth": 16,
-      "sources": {
-        "github": 15
-      },
-      "docs24h": 15
     }
   ]
 }
