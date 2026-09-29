@@ -1,49 +1,16 @@
 {
-  "computedAt": "2026-09-29T23:04:26.077Z",
+  "computedAt": "2026-09-29T23:23:13.849Z",
   "terms": [
     {
       "term": "x402check",
-      "count24h": 54,
-      "baselinePerDay": 0,
-      "count7d": 0,
-      "growth": 55,
+      "count24h": 52,
+      "baselinePerDay": 0.42857142857142855,
+      "count7d": 3,
+      "growth": 37.1,
       "sources": {
-        "github": 54
+        "github": 52
       },
       "docs24h": 18
-    },
-    {
-      "term": "cloudflare",
-      "count24h": 18,
-      "baselinePerDay": 0,
-      "count7d": 0,
-      "growth": 19,
-      "sources": {
-        "github": 18
-      },
-      "docs24h": 18
-    },
-    {
-      "term": "safety",
-      "count24h": 18,
-      "baselinePerDay": 0,
-      "count7d": 0,
-      "growth": 19,
-      "sources": {
-        "github": 18
-      },
-      "docs24h": 18
-    },
-    {
-      "term": "intent",
-      "count24h": 17,
-      "baselinePerDay": 0,
-      "count7d": 0,
-      "growth": 18,
-      "sources": {
-        "github": 17
-      },
-      "docs24h": 17
     },
     {
       "term": "parasite",
@@ -57,51 +24,62 @@
       "docs24h": 12
     },
     {
-      "term": "payer",
-      "count24h": 17,
-      "baselinePerDay": 0,
-      "count7d": 0,
-      "growth": 18,
+      "term": "cloudflare",
+      "count24h": 18,
+      "baselinePerDay": 0.14285714285714285,
+      "count7d": 1,
+      "growth": 16.625,
       "sources": {
-        "github": 17
+        "github": 18
       },
-      "docs24h": 17
+      "docs24h": 18
+    },
+    {
+      "term": "safety",
+      "count24h": 18,
+      "baselinePerDay": 0.14285714285714285,
+      "count7d": 1,
+      "growth": 16.625,
+      "sources": {
+        "github": 18
+      },
+      "docs24h": 18
+    },
+    {
+      "term": "intent",
+      "count24h": 16,
+      "baselinePerDay": 0.14285714285714285,
+      "count7d": 1,
+      "growth": 14.875,
+      "sources": {
+        "github": 16
+      },
+      "docs24h": 16
+    },
+    {
+      "term": "payer",
+      "count24h": 16,
+      "baselinePerDay": 0.14285714285714285,
+      "count7d": 1,
+      "growth": 14.875,
+      "sources": {
+        "github": 16
+      },
+      "docs24h": 16
     },
     {
       "term": "settlement",
-      "count24h": 17,
-      "baselinePerDay": 0,
-      "count7d": 0,
-      "growth": 18,
+      "count24h": 16,
+      "baselinePerDay": 0.14285714285714285,
+      "count7d": 1,
+      "growth": 14.875,
       "sources": {
-        "github": 17
+        "github": 16
       },
-      "docs24h": 17
+      "docs24h": 16
     },
     {
       "term": "checks",
-      "count24h": 18,
-      "baselinePerDay": 0.14285714285714285,
-      "count7d": 1,
-      "growth": 16.625,
-      "sources": {
-        "github": 18
-      },
-      "docs24h": 18
-    },
-    {
-      "term": "did",
-      "count24h": 18,
-      "baselinePerDay": 0.14285714285714285,
-      "count7d": 1,
-      "growth": 16.625,
-      "sources": {
-        "github": 18
-      },
-      "docs24h": 18
-    },
-    {
-      "term": "commerce",
       "count24h": 17,
       "baselinePerDay": 0.2857142857142857,
       "count7d": 2,
@@ -110,6 +88,28 @@
         "github": 17
       },
       "docs24h": 17
+    },
+    {
+      "term": "did",
+      "count24h": 17,
+      "baselinePerDay": 0.2857142857142857,
+      "count7d": 2,
+      "growth": 14.000000000000002,
+      "sources": {
+        "github": 17
+      },
+      "docs24h": 17
+    },
+    {
+      "term": "surfpool",
+      "count24h": 20,
+      "baselinePerDay": 0.5714285714285714,
+      "count7d": 4,
+      "growth": 13.363636363636363,
+      "sources": {
+        "github": 20
+      },
+      "docs24h": 10
     }
   ]
 }
