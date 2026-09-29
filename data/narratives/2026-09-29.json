@@ -1,5 +1,5 @@
 {
-  "computedAt": "2026-09-29T23:35:09.202Z",
+  "computedAt": "2026-09-29T23:49:44.113Z",
   "terms": [
     {
       "term": "x402check",
@@ -57,17 +57,6 @@
       "docs24h": 10
     },
     {
-      "term": "accounting",
-      "count24h": 48,
-      "baselinePerDay": 2.857142857142857,
-      "count7d": 20,
-      "growth": 12.703703703703704,
-      "sources": {
-        "github": 48
-      },
-      "docs24h": 45
-    },
-    {
       "term": "intent",
       "count24h": 15,
       "baselinePerDay": 0.2857142857142857,
@@ -101,15 +90,26 @@
       "docs24h": 15
     },
     {
-      "term": "earnings",
-      "count24h": 42,
-      "baselinePerDay": 2.5714285714285716,
-      "count7d": 18,
-      "growth": 12.04,
+      "term": "accounting",
+      "count24h": 47,
+      "baselinePerDay": 3,
+      "count7d": 21,
+      "growth": 12,
       "sources": {
-        "github": 42
+        "github": 47
       },
-      "docs24h": 42
+      "docs24h": 44
+    },
+    {
+      "term": "checks",
+      "count24h": 16,
+      "baselinePerDay": 0.42857142857142855,
+      "count7d": 3,
+      "growth": 11.9,
+      "sources": {
+        "github": 16
+      },
+      "docs24h": 16
     }
   ]
 }
