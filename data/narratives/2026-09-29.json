@@ -1,18 +1,6 @@
 {
-  "computedAt": "2026-09-29T13:30:46.744Z",
+  "computedAt": "2026-09-29T13:54:50.256Z",
   "terms": [
-    {
-      "term": "jev",
-      "count24h": 70,
-      "baselinePerDay": 0.7142857142857143,
-      "count7d": 5,
-      "growth": 41.416666666666664,
-      "sources": {
-        "github": 69,
-        "token": 1
-      },
-      "docs24h": 24
-    },
     {
       "term": "x402check",
       "count24h": 36,
@@ -23,17 +11,6 @@
         "github": 36
       },
       "docs24h": 12
-    },
-    {
-      "term": "typesafe",
-      "count24h": 46,
-      "baselinePerDay": 0.2857142857142857,
-      "count7d": 2,
-      "growth": 36.55555555555556,
-      "sources": {
-        "github": 46
-      },
-      "docs24h": 23
     },
     {
       "term": "adapter",
@@ -58,11 +35,34 @@
       "docs24h": 31
     },
     {
+      "term": "jev",
+      "count24h": 67,
+      "baselinePerDay": 1.1428571428571428,
+      "count7d": 8,
+      "growth": 31.733333333333334,
+      "sources": {
+        "github": 66,
+        "token": 1
+      },
+      "docs24h": 23
+    },
+    {
+      "term": "typesafe",
+      "count24h": 44,
+      "baselinePerDay": 0.5714285714285714,
+      "count7d": 4,
+      "growth": 28.636363636363637,
+      "sources": {
+        "github": 44
+      },
+      "docs24h": 22
+    },
+    {
       "term": "wasm",
       "count24h": 94,
-      "baselinePerDay": 2.4285714285714284,
-      "count7d": 17,
-      "growth": 27.708333333333336,
+      "baselinePerDay": 2.5714285714285716,
+      "count7d": 18,
+      "growth": 26.599999999999998,
       "sources": {
         "github": 94
       },
@@ -80,17 +80,6 @@
       "docs24h": 24
     },
     {
-      "term": "attestations",
-      "count24h": 31,
-      "baselinePerDay": 0.2857142857142857,
-      "count7d": 2,
-      "growth": 24.888888888888893,
-      "sources": {
-        "github": 31
-      },
-      "docs24h": 31
-    },
-    {
       "term": "using",
       "count24h": 32,
       "baselinePerDay": 0.42857142857142855,
@@ -102,15 +91,26 @@
       "docs24h": 32
     },
     {
-      "term": "decisions",
-      "count24h": 23,
-      "baselinePerDay": 0.14285714285714285,
-      "count7d": 1,
-      "growth": 21,
+      "term": "attestations",
+      "count24h": 30,
+      "baselinePerDay": 0.42857142857142855,
+      "count7d": 3,
+      "growth": 21.7,
       "sources": {
-        "github": 23
+        "github": 30
       },
-      "docs24h": 23
+      "docs24h": 30
+    },
+    {
+      "term": "froink",
+      "count24h": 17,
+      "baselinePerDay": 0,
+      "count7d": 0,
+      "growth": 18,
+      "sources": {
+        "token": 17
+      },
+      "docs24h": 11
     }
   ]
 }
