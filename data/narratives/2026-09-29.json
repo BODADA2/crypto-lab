@@ -1,28 +1,39 @@
 {
-  "computedAt": "2026-09-29T04:25:34.099Z",
+  "computedAt": "2026-09-29T04:39:00.546Z",
   "terms": [
     {
       "term": "jev",
-      "count24h": 58,
+      "count24h": 61,
       "baselinePerDay": 0.7142857142857143,
       "count7d": 5,
-      "growth": 34.416666666666664,
+      "growth": 36.166666666666664,
       "sources": {
-        "github": 57,
+        "github": 60,
         "token": 1
+      },
+      "docs24h": 21
+    },
+    {
+      "term": "typesafe",
+      "count24h": 40,
+      "baselinePerDay": 0.2857142857142857,
+      "count7d": 2,
+      "growth": 31.888888888888893,
+      "sources": {
+        "github": 40
       },
       "docs24h": 20
     },
     {
-      "term": "typesafe",
-      "count24h": 38,
-      "baselinePerDay": 0.2857142857142857,
-      "count7d": 2,
-      "growth": 30.333333333333336,
+      "term": "x402check",
+      "count24h": 27,
+      "baselinePerDay": 0,
+      "count7d": 0,
+      "growth": 28,
       "sources": {
-        "github": 38
+        "github": 27
       },
-      "docs24h": 19
+      "docs24h": 9
     },
     {
       "term": "adapter",
@@ -58,15 +69,15 @@
       "docs24h": 28
     },
     {
-      "term": "x402check",
-      "count24h": 24,
-      "baselinePerDay": 0,
-      "count7d": 0,
-      "growth": 25,
+      "term": "attestations",
+      "count24h": 26,
+      "baselinePerDay": 0.2857142857142857,
+      "count7d": 2,
+      "growth": 21.000000000000004,
       "sources": {
-        "github": 24
+        "github": 26
       },
-      "docs24h": 8
+      "docs24h": 26
     },
     {
       "term": "lib",
@@ -78,17 +89,6 @@
         "github": 20
       },
       "docs24h": 20
-    },
-    {
-      "term": "attestations",
-      "count24h": 25,
-      "baselinePerDay": 0.2857142857142857,
-      "count7d": 2,
-      "growth": 20.222222222222225,
-      "sources": {
-        "github": 25
-      },
-      "docs24h": 25
     },
     {
       "term": "using",
@@ -103,14 +103,14 @@
     },
     {
       "term": "decisions",
-      "count24h": 19,
+      "count24h": 20,
       "baselinePerDay": 0.14285714285714285,
       "count7d": 1,
-      "growth": 17.5,
+      "growth": 18.375,
       "sources": {
-        "github": 19
+        "github": 20
       },
-      "docs24h": 19
+      "docs24h": 20
     }
   ]
 }
