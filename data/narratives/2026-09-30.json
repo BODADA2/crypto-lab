@@ -1,28 +1,16 @@
 {
-  "computedAt": "2026-09-30T11:24:45.472Z",
+  "computedAt": "2026-09-30T11:37:53.475Z",
   "terms": [
     {
       "term": "surfpool",
-      "count24h": 30,
-      "baselinePerDay": 0.5714285714285714,
-      "count7d": 4,
-      "growth": 19.727272727272727,
+      "count24h": 28,
+      "baselinePerDay": 0.8571428571428571,
+      "count7d": 6,
+      "growth": 15.615384615384615,
       "sources": {
-        "github": 30
+        "github": 28
       },
-      "docs24h": 15
-    },
-    {
-      "term": "developers",
-      "count24h": 24,
-      "baselinePerDay": 0.7142857142857143,
-      "count7d": 5,
-      "growth": 14.583333333333332,
-      "sources": {
-        "github": 23,
-        "token": 1
-      },
-      "docs24h": 24
+      "docs24h": 14
     },
     {
       "term": "super",
@@ -36,15 +24,16 @@
       "docs24h": 59
     },
     {
-      "term": "start",
-      "count24h": 16,
-      "baselinePerDay": 0.42857142857142855,
-      "count7d": 3,
-      "growth": 11.9,
+      "term": "developers",
+      "count24h": 23,
+      "baselinePerDay": 0.8571428571428571,
+      "count7d": 6,
+      "growth": 12.923076923076923,
       "sources": {
-        "github": 16
+        "github": 22,
+        "token": 1
       },
-      "docs24h": 16
+      "docs24h": 23
     },
     {
       "term": "detection",
@@ -89,6 +78,17 @@
         "token": 10
       },
       "docs24h": 8
+    },
+    {
+      "term": "start",
+      "count24h": 15,
+      "baselinePerDay": 0.5714285714285714,
+      "count7d": 4,
+      "growth": 10.181818181818182,
+      "sources": {
+        "github": 15
+      },
+      "docs24h": 15
     },
     {
       "term": "cockroach",
