@@ -3,7 +3,7 @@
   "program": "token-2022",
   "mintAuthority": "WV9PJN7XTmTLVwbutCLFxp8TyePee6Xq5mRq6Fti5Wc",
   "freezeAuthority": "WV9PJN7XTmTLVwbutCLFxp8TyePee6Xq5mRq6Fti5Wc",
-  "supplyRaw": "7381621749298",
+  "supplyRaw": "7381617195152",
   "decimals": 9,
   "isInitialized": true,
   "extensions": [
@@ -58,7 +58,7 @@
     {
       "address": "CnHiVJRJUMAtoJvo64gcHsb3rFydzb14uGD6kmxTvrka",
       "owner": "ECQbBHaizQtQU7AGtfttR2LbZ229KPibgUsyTG659yq",
-      "amountRaw": "148424993880",
+      "amountRaw": "148889425444",
       "pct": 2.01,
       "excluded": false
     },
@@ -72,16 +72,9 @@
     {
       "address": "AScgm5o5ZQUMcReJonRLQ1DYpxfsXBmXcqKQNs5fHHJ5",
       "owner": "HX72xZ1CHg7cWPhGGJyHbLp3sLrpznTYmWn5AY3FVwUj",
-      "amountRaw": "141614569043",
+      "amountRaw": "141058689823",
       "pct": 1.91,
       "excluded": false
-    },
-    {
-      "address": "2yaFuqMGkXcpyShptCuJBCn4MheYAv468T1rB24LePxe",
-      "owner": "EZyszDEx1LZDt7TsSFV8xdPi49sDKC3mdfv2MVMEQLtU",
-      "amountRaw": "104634935297",
-      "pct": 1.41,
-      "excluded": true
     },
     {
       "address": "B5aYaWBmyVDBu1cZuU2f3mbdixuEKg6huNBjkZfo9HQY",
@@ -89,6 +82,13 @@
       "amountRaw": "104305150479",
       "pct": 1.41,
       "excluded": false
+    },
+    {
+      "address": "2yaFuqMGkXcpyShptCuJBCn4MheYAv468T1rB24LePxe",
+      "owner": "EZyszDEx1LZDt7TsSFV8xdPi49sDKC3mdfv2MVMEQLtU",
+      "amountRaw": "104063960671",
+      "pct": 1.4,
+      "excluded": true
     },
     {
       "address": "GM8AJf3z2taiqpZQNicH3dwtVrR7pa2miyL8RaL5y2YU",
@@ -100,7 +100,7 @@
     {
       "address": "GnyLgMUALDTHfF25qNrVGTqDto2bhrxQPCDCiAJgHtBm",
       "owner": "F68Xsqqh4R5tGZaLMvgkkCyXF4oRs39DqRn2d7uiZogr",
-      "amountRaw": "100928125559",
+      "amountRaw": "100691023559",
       "pct": 1.36,
       "excluded": false
     },
@@ -170,6 +170,6 @@
     "TransferHook",
     "Pausable"
   ],
-  "fetchedAt": "2026-09-30T07:56:55.537Z",
+  "fetchedAt": "2026-09-30T08:57:31.120Z",
   "rpcCalls": 4
 }
