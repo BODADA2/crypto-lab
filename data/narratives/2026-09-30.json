@@ -1,16 +1,16 @@
 {
-  "computedAt": "2026-09-30T00:05:24.235Z",
+  "computedAt": "2026-09-30T00:33:54.186Z",
   "terms": [
     {
       "term": "x402check",
-      "count24h": 49,
-      "baselinePerDay": 0.8571428571428571,
-      "count7d": 6,
-      "growth": 26.923076923076923,
+      "count24h": 46,
+      "baselinePerDay": 1.2857142857142858,
+      "count7d": 9,
+      "growth": 20.5625,
       "sources": {
-        "github": 49
+        "github": 46
       },
-      "docs24h": 17
+      "docs24h": 16
     },
     {
       "term": "parasite",
@@ -24,84 +24,18 @@
       "docs24h": 12
     },
     {
-      "term": "cloudflare",
-      "count24h": 17,
-      "baselinePerDay": 0.2857142857142857,
-      "count7d": 2,
-      "growth": 14.000000000000002,
-      "sources": {
-        "github": 17
-      },
-      "docs24h": 17
-    },
-    {
-      "term": "safety",
-      "count24h": 17,
-      "baselinePerDay": 0.2857142857142857,
-      "count7d": 2,
-      "growth": 14.000000000000002,
-      "sources": {
-        "github": 17
-      },
-      "docs24h": 17
-    },
-    {
       "term": "surfpool",
-      "count24h": 20,
+      "count24h": 22,
       "baselinePerDay": 0.5714285714285714,
       "count7d": 4,
-      "growth": 13.363636363636363,
+      "growth": 14.636363636363637,
       "sources": {
-        "github": 20
+        "github": 22
       },
-      "docs24h": 10
+      "docs24h": 11
     },
     {
-      "term": "intent",
-      "count24h": 15,
-      "baselinePerDay": 0.2857142857142857,
-      "count7d": 2,
-      "growth": 12.444444444444446,
-      "sources": {
-        "github": 15
-      },
-      "docs24h": 15
-    },
-    {
-      "term": "payer",
-      "count24h": 15,
-      "baselinePerDay": 0.2857142857142857,
-      "count7d": 2,
-      "growth": 12.444444444444446,
-      "sources": {
-        "github": 15
-      },
-      "docs24h": 15
-    },
-    {
-      "term": "settlement",
-      "count24h": 15,
-      "baselinePerDay": 0.2857142857142857,
-      "count7d": 2,
-      "growth": 12.444444444444446,
-      "sources": {
-        "github": 15
-      },
-      "docs24h": 15
-    },
-    {
-      "term": "accounting",
-      "count24h": 47,
-      "baselinePerDay": 3,
-      "count7d": 21,
-      "growth": 12,
-      "sources": {
-        "github": 47
-      },
-      "docs24h": 44
-    },
-    {
-      "term": "checks",
+      "term": "cloudflare",
       "count24h": 16,
       "baselinePerDay": 0.42857142857142855,
       "count7d": 3,
@@ -110,6 +44,73 @@
         "github": 16
       },
       "docs24h": 16
+    },
+    {
+      "term": "safety",
+      "count24h": 16,
+      "baselinePerDay": 0.42857142857142855,
+      "count7d": 3,
+      "growth": 11.9,
+      "sources": {
+        "github": 16
+      },
+      "docs24h": 16
+    },
+    {
+      "term": "curve",
+      "count24h": 14,
+      "baselinePerDay": 0.2857142857142857,
+      "count7d": 2,
+      "growth": 11.666666666666668,
+      "sources": {
+        "github": 1,
+        "token": 13
+      },
+      "docs24h": 9
+    },
+    {
+      "term": "trench",
+      "count24h": 19,
+      "baselinePerDay": 0.7142857142857143,
+      "count7d": 5,
+      "growth": 11.666666666666666,
+      "sources": {
+        "token": 19
+      },
+      "docs24h": 11
+    },
+    {
+      "term": "accounting",
+      "count24h": 47,
+      "baselinePerDay": 3.142857142857143,
+      "count7d": 22,
+      "growth": 11.586206896551726,
+      "sources": {
+        "github": 47
+      },
+      "docs24h": 44
+    },
+    {
+      "term": "tsuki",
+      "count24h": 10,
+      "baselinePerDay": 0,
+      "count7d": 0,
+      "growth": 11,
+      "sources": {
+        "token": 10
+      },
+      "docs24h": 8
+    },
+    {
+      "term": "earnings",
+      "count24h": 41,
+      "baselinePerDay": 2.857142857142857,
+      "count7d": 20,
+      "growth": 10.88888888888889,
+      "sources": {
+        "github": 41
+      },
+      "docs24h": 41
     }
   ]
 }
