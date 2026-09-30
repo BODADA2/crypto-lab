@@ -1,5 +1,5 @@
 {
-  "computedAt": "2026-09-30T15:47:05.944Z",
+  "computedAt": "2026-09-30T16:07:10.752Z",
   "terms": [
     {
       "term": "detection",
@@ -47,14 +47,25 @@
     },
     {
       "term": "super",
-      "count24h": 65,
+      "count24h": 66,
       "baselinePerDay": 3.857142857142857,
       "count7d": 27,
-      "growth": 13.588235294117645,
+      "growth": 13.794117647058822,
       "sources": {
-        "token": 65
+        "token": 66
       },
-      "docs24h": 65
+      "docs24h": 66
+    },
+    {
+      "term": "intelligence",
+      "count24h": 23,
+      "baselinePerDay": 1.1428571428571428,
+      "count7d": 8,
+      "growth": 11.200000000000001,
+      "sources": {
+        "token": 23
+      },
+      "docs24h": 23
     },
     {
       "term": "simulation",
@@ -68,39 +79,6 @@
       "docs24h": 9
     },
     {
-      "term": "tsuki",
-      "count24h": 10,
-      "baselinePerDay": 0,
-      "count7d": 0,
-      "growth": 11,
-      "sources": {
-        "token": 10
-      },
-      "docs24h": 8
-    },
-    {
-      "term": "intelligence",
-      "count24h": 22,
-      "baselinePerDay": 1.1428571428571428,
-      "count7d": 8,
-      "growth": 10.733333333333334,
-      "sources": {
-        "token": 22
-      },
-      "docs24h": 22
-    },
-    {
-      "term": "surfpool",
-      "count24h": 24,
-      "baselinePerDay": 1.4285714285714286,
-      "count7d": 10,
-      "growth": 10.294117647058822,
-      "sources": {
-        "github": 24
-      },
-      "docs24h": 12
-    },
-    {
       "term": "prompt",
       "count24h": 9,
       "baselinePerDay": 0,
@@ -111,6 +89,28 @@
         "token": 1
       },
       "docs24h": 9
+    },
+    {
+      "term": "sanctions",
+      "count24h": 9,
+      "baselinePerDay": 0,
+      "count7d": 0,
+      "growth": 10,
+      "sources": {
+        "github": 9
+      },
+      "docs24h": 9
+    },
+    {
+      "term": "inu",
+      "count24h": 84,
+      "baselinePerDay": 8.142857142857142,
+      "count7d": 57,
+      "growth": 9.296875,
+      "sources": {
+        "token": 84
+      },
+      "docs24h": 78
     }
   ]
 }
