@@ -1,5 +1,5 @@
 {
-  "computedAt": "2026-09-30T11:07:22.526Z",
+  "computedAt": "2026-09-30T11:24:45.472Z",
   "terms": [
     {
       "term": "surfpool",
@@ -26,14 +26,14 @@
     },
     {
       "term": "super",
-      "count24h": 58,
+      "count24h": 59,
       "baselinePerDay": 3.4285714285714284,
       "count7d": 24,
-      "growth": 13.32258064516129,
+      "growth": 13.548387096774192,
       "sources": {
-        "token": 58
+        "token": 59
       },
-      "docs24h": 58
+      "docs24h": 59
     },
     {
       "term": "start",
@@ -45,6 +45,39 @@
         "github": 16
       },
       "docs24h": 16
+    },
+    {
+      "term": "detection",
+      "count24h": 10,
+      "baselinePerDay": 0,
+      "count7d": 0,
+      "growth": 11,
+      "sources": {
+        "github": 10
+      },
+      "docs24h": 5
+    },
+    {
+      "term": "ofac",
+      "count24h": 10,
+      "baselinePerDay": 0,
+      "count7d": 0,
+      "growth": 11,
+      "sources": {
+        "github": 10
+      },
+      "docs24h": 5
+    },
+    {
+      "term": "phishing",
+      "count24h": 10,
+      "baselinePerDay": 0,
+      "count7d": 0,
+      "growth": 11,
+      "sources": {
+        "github": 10
+      },
+      "docs24h": 5
     },
     {
       "term": "tsuki",
@@ -79,40 +112,6 @@
         "token": 1
       },
       "docs24h": 9
-    },
-    {
-      "term": "router",
-      "count24h": 14,
-      "baselinePerDay": 0.5714285714285714,
-      "count7d": 4,
-      "growth": 9.545454545454545,
-      "sources": {
-        "github": 12,
-        "token": 2
-      },
-      "docs24h": 7
-    },
-    {
-      "term": "inu",
-      "count24h": 77,
-      "baselinePerDay": 7.285714285714286,
-      "count7d": 51,
-      "growth": 9.413793103448278,
-      "sources": {
-        "token": 77
-      },
-      "docs24h": 74
-    },
-    {
-      "term": "stupid",
-      "count24h": 12,
-      "baselinePerDay": 0.42857142857142855,
-      "count7d": 3,
-      "growth": 9.1,
-      "sources": {
-        "token": 12
-      },
-      "docs24h": 11
     }
   ]
 }

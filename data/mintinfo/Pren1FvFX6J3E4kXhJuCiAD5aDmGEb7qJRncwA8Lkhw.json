@@ -3,7 +3,7 @@
   "program": "token-2022",
   "mintAuthority": "WV9PJN7XTmTLVwbutCLFxp8TyePee6Xq5mRq6Fti5Wc",
   "freezeAuthority": "WV9PJN7XTmTLVwbutCLFxp8TyePee6Xq5mRq6Fti5Wc",
-  "supplyRaw": "7381616089403",
+  "supplyRaw": "7381615257617",
   "decimals": 9,
   "isInitialized": true,
   "extensions": [
@@ -18,7 +18,7 @@
     "Pausable",
     "TokenMetadata"
   ],
-  "top10Pct": 46.14,
+  "top10Pct": 46.13,
   "topAccounts": [
     {
       "address": "EL82xEGW7aNJnK7NhpCwXkD1kJB4B5KPoEVng88EnitM",
@@ -72,9 +72,16 @@
     {
       "address": "AScgm5o5ZQUMcReJonRLQ1DYpxfsXBmXcqKQNs5fHHJ5",
       "owner": "HX72xZ1CHg7cWPhGGJyHbLp3sLrpznTYmWn5AY3FVwUj",
-      "amountRaw": "141058689823",
-      "pct": 1.91,
+      "amountRaw": "140430868437",
+      "pct": 1.9,
       "excluded": false
+    },
+    {
+      "address": "2yaFuqMGkXcpyShptCuJBCn4MheYAv468T1rB24LePxe",
+      "owner": "EZyszDEx1LZDt7TsSFV8xdPi49sDKC3mdfv2MVMEQLtU",
+      "amountRaw": "105153821255",
+      "pct": 1.42,
+      "excluded": true
     },
     {
       "address": "B5aYaWBmyVDBu1cZuU2f3mbdixuEKg6huNBjkZfo9HQY",
@@ -82,13 +89,6 @@
       "amountRaw": "104305150479",
       "pct": 1.41,
       "excluded": false
-    },
-    {
-      "address": "2yaFuqMGkXcpyShptCuJBCn4MheYAv468T1rB24LePxe",
-      "owner": "EZyszDEx1LZDt7TsSFV8xdPi49sDKC3mdfv2MVMEQLtU",
-      "amountRaw": "104118879376",
-      "pct": 1.41,
-      "excluded": true
     },
     {
       "address": "GM8AJf3z2taiqpZQNicH3dwtVrR7pa2miyL8RaL5y2YU",
@@ -170,6 +170,6 @@
     "TransferHook",
     "Pausable"
   ],
-  "fetchedAt": "2026-09-30T10:08:09.871Z",
+  "fetchedAt": "2026-09-30T11:24:41.658Z",
   "rpcCalls": 4
 }
