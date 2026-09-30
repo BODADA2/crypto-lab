@@ -1,60 +1,60 @@
 {
-  "computedAt": "2026-09-30T14:48:15.464Z",
+  "computedAt": "2026-09-30T15:09:00.519Z",
   "terms": [
     {
       "term": "detection",
-      "count24h": 16,
+      "count24h": 18,
       "baselinePerDay": 0,
       "count7d": 0,
-      "growth": 17,
+      "growth": 19,
       "sources": {
-        "github": 16
+        "github": 18
       },
-      "docs24h": 8
+      "docs24h": 9
     },
     {
       "term": "ofac",
-      "count24h": 16,
+      "count24h": 18,
       "baselinePerDay": 0,
       "count7d": 0,
-      "growth": 17,
+      "growth": 19,
       "sources": {
-        "github": 16
+        "github": 18
       },
-      "docs24h": 8
+      "docs24h": 9
     },
     {
       "term": "phishing",
-      "count24h": 16,
+      "count24h": 18,
       "baselinePerDay": 0,
       "count7d": 0,
-      "growth": 17,
+      "growth": 19,
       "sources": {
-        "github": 16
+        "github": 18
       },
-      "docs24h": 8
+      "docs24h": 9
+    },
+    {
+      "term": "drainer",
+      "count24h": 19,
+      "baselinePerDay": 0.2857142857142857,
+      "count7d": 2,
+      "growth": 15.555555555555557,
+      "sources": {
+        "github": 19
+      },
+      "docs24h": 9
     },
     {
       "term": "super",
       "count24h": 67,
-      "baselinePerDay": 3.5714285714285716,
-      "count7d": 25,
-      "growth": 14.875,
+      "baselinePerDay": 3.4285714285714284,
+      "count7d": 24,
+      "growth": 15.354838709677418,
       "sources": {
         "token": 67
       },
       "docs24h": 67
-    },
-    {
-      "term": "drainer",
-      "count24h": 17,
-      "baselinePerDay": 0.2857142857142857,
-      "count7d": 2,
-      "growth": 14.000000000000002,
-      "sources": {
-        "github": 17
-      },
-      "docs24h": 8
     },
     {
       "term": "surfpool",
@@ -66,6 +66,17 @@
         "github": 26
       },
       "docs24h": 13
+    },
+    {
+      "term": "simulation",
+      "count24h": 18,
+      "baselinePerDay": 0.7142857142857143,
+      "count7d": 5,
+      "growth": 11.083333333333332,
+      "sources": {
+        "github": 18
+      },
+      "docs24h": 9
     },
     {
       "term": "tsuki",
@@ -93,25 +104,13 @@
     {
       "term": "intelligence",
       "count24h": 22,
-      "baselinePerDay": 1.2857142857142858,
-      "count7d": 9,
-      "growth": 10.0625,
+      "baselinePerDay": 1.1428571428571428,
+      "count7d": 8,
+      "growth": 10.733333333333334,
       "sources": {
         "token": 22
       },
       "docs24h": 22
-    },
-    {
-      "term": "prompt",
-      "count24h": 9,
-      "baselinePerDay": 0,
-      "count7d": 0,
-      "growth": 10,
-      "sources": {
-        "github": 8,
-        "token": 1
-      },
-      "docs24h": 9
     }
   ]
 }
