@@ -1,49 +1,60 @@
 {
-  "computedAt": "2026-09-30T14:30:04.113Z",
+  "computedAt": "2026-09-30T14:48:15.464Z",
   "terms": [
     {
       "term": "detection",
-      "count24h": 14,
+      "count24h": 16,
       "baselinePerDay": 0,
       "count7d": 0,
-      "growth": 15,
+      "growth": 17,
       "sources": {
-        "github": 14
+        "github": 16
       },
-      "docs24h": 7
+      "docs24h": 8
     },
     {
       "term": "ofac",
-      "count24h": 14,
+      "count24h": 16,
       "baselinePerDay": 0,
       "count7d": 0,
-      "growth": 15,
+      "growth": 17,
       "sources": {
-        "github": 14
+        "github": 16
       },
-      "docs24h": 7
+      "docs24h": 8
     },
     {
       "term": "phishing",
-      "count24h": 14,
+      "count24h": 16,
       "baselinePerDay": 0,
       "count7d": 0,
-      "growth": 15,
+      "growth": 17,
       "sources": {
-        "github": 14
+        "github": 16
       },
-      "docs24h": 7
+      "docs24h": 8
     },
     {
       "term": "super",
-      "count24h": 65,
+      "count24h": 67,
       "baselinePerDay": 3.5714285714285716,
       "count7d": 25,
-      "growth": 14.4375,
+      "growth": 14.875,
       "sources": {
-        "token": 65
+        "token": 67
       },
-      "docs24h": 65
+      "docs24h": 67
+    },
+    {
+      "term": "drainer",
+      "count24h": 17,
+      "baselinePerDay": 0.2857142857142857,
+      "count7d": 2,
+      "growth": 14.000000000000002,
+      "sources": {
+        "github": 17
+      },
+      "docs24h": 8
     },
     {
       "term": "surfpool",
@@ -55,17 +66,6 @@
         "github": 26
       },
       "docs24h": 13
-    },
-    {
-      "term": "drainer",
-      "count24h": 15,
-      "baselinePerDay": 0.2857142857142857,
-      "count7d": 2,
-      "growth": 12.444444444444446,
-      "sources": {
-        "github": 15
-      },
-      "docs24h": 7
     },
     {
       "term": "tsuki",
@@ -102,15 +102,16 @@
       "docs24h": 22
     },
     {
-      "term": "cockroach",
+      "term": "prompt",
       "count24h": 9,
       "baselinePerDay": 0,
       "count7d": 0,
       "growth": 10,
       "sources": {
-        "token": 9
+        "github": 8,
+        "token": 1
       },
-      "docs24h": 6
+      "docs24h": 9
     }
   ]
 }
