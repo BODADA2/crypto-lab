@@ -3,7 +3,7 @@
   "program": "token-2022",
   "mintAuthority": null,
   "freezeAuthority": null,
-  "supplyRaw": "997513678312067",
+  "supplyRaw": "997509977131226",
   "decimals": 6,
   "isInitialized": true,
   "extensions": [
@@ -11,7 +11,7 @@
     "TransferFeeConfig",
     "TokenMetadata"
   ],
-  "top10Pct": 12.53,
+  "top10Pct": 12.49,
   "topAccounts": [
     {
       "address": "EsFxk8qFsqrTAMwvt2dob11B9uFqCGqumBtdJZVwe9fa",
@@ -49,17 +49,17 @@
       "excluded": false
     },
     {
-      "address": "DcpYAKLzwFV8G1Q9V5sTn5m4MLqdaB3yJ4Qm87QgXNd8",
-      "owner": "GpMZbSM2GgvTKHJirzeGfMFoaZ8UR2X7F4v8vHTvxFbL",
-      "amountRaw": "11029884153997",
-      "pct": 1.1,
-      "excluded": false
-    },
-    {
       "address": "EgdT5PjQpYrUpuwhV7M3yjZoxVg1jF2GjfiCDisQTgY",
       "owner": "BgQPupJ8U7TnZtZTQ1FzAD7LqsJNjtZZXGPqfnrtZVQJ",
       "amountRaw": "10810399401067",
       "pct": 1.08,
+      "excluded": false
+    },
+    {
+      "address": "DcpYAKLzwFV8G1Q9V5sTn5m4MLqdaB3yJ4Qm87QgXNd8",
+      "owner": "GpMZbSM2GgvTKHJirzeGfMFoaZ8UR2X7F4v8vHTvxFbL",
+      "amountRaw": "10590791094244",
+      "pct": 1.06,
       "excluded": false
     },
     {
@@ -93,7 +93,7 @@
     {
       "address": "DKuxXGXRrmToLDBQt94Rw4Adkog1CSvseen3CsY3mzQ4",
       "owner": "8deJ9xeUvXSJwicYptA9mHsU2rN2pDx37KWzkDkEXhU6",
-      "amountRaw": "8191190248523",
+      "amountRaw": "8191215426694",
       "pct": 0.82,
       "excluded": false
     },
@@ -121,7 +121,7 @@
     {
       "address": "CAMMc7yYi5fvpz5Ruyo9xEJuqcfZWLTt9v7vubtKwZNR",
       "owner": "CPK7JrooiYRyuDJdaipR9uBVt1zC9jLSfgkH1qJEmWRi",
-      "amountRaw": "7428723479048",
+      "amountRaw": "7428729319898",
       "pct": 0.74,
       "excluded": false
     },
@@ -149,7 +149,7 @@
     {
       "address": "FPvLVUhnj5u2J6AaoU3rYktb9Z2uwSAKzE96krDGSiZx",
       "owner": "GZetT3iRmhuzuT1gkSk69MXMe8hRJZJGz1PPdKW1J2vq",
-      "amountRaw": "6969443974782",
+      "amountRaw": "6969523561536",
       "pct": 0.69,
       "excluded": false
     }
@@ -159,6 +159,6 @@
   "riskyExtensions": [
     "TransferFeeConfig"
   ],
-  "fetchedAt": "2026-09-30T05:39:38.224Z",
+  "fetchedAt": "2026-09-30T06:56:24.898Z",
   "rpcCalls": 4
 }

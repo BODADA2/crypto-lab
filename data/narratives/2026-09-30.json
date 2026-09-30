@@ -1,5 +1,5 @@
 {
-  "computedAt": "2026-09-30T06:31:20.087Z",
+  "computedAt": "2026-09-30T06:56:28.310Z",
   "terms": [
     {
       "term": "surfpool",
@@ -36,14 +36,14 @@
     },
     {
       "term": "super",
-      "count24h": 48,
+      "count24h": 50,
       "baselinePerDay": 3.4285714285714284,
       "count7d": 24,
-      "growth": 11.064516129032258,
+      "growth": 11.516129032258064,
       "sources": {
-        "token": 48
+        "token": 50
       },
-      "docs24h": 48
+      "docs24h": 50
     },
     {
       "term": "tsuki",
@@ -55,6 +55,17 @@
         "token": 10
       },
       "docs24h": 8
+    },
+    {
+      "term": "cockroach",
+      "count24h": 9,
+      "baselinePerDay": 0,
+      "count7d": 0,
+      "growth": 10,
+      "sources": {
+        "token": 9
+      },
+      "docs24h": 6
     },
     {
       "term": "router",
@@ -98,17 +109,6 @@
       "growth": 9,
       "sources": {
         "token": 8
-      },
-      "docs24h": 4
-    },
-    {
-      "term": "ofac",
-      "count24h": 8,
-      "baselinePerDay": 0,
-      "count7d": 0,
-      "growth": 9,
-      "sources": {
-        "github": 8
       },
       "docs24h": 4
     }
