@@ -3,7 +3,7 @@
   "program": "token-2022",
   "mintAuthority": "WV9PJN7XTmTLVwbutCLFxp8TyePee6Xq5mRq6Fti5Wc",
   "freezeAuthority": "WV9PJN7XTmTLVwbutCLFxp8TyePee6Xq5mRq6Fti5Wc",
-  "supplyRaw": "7381600097758",
+  "supplyRaw": "7381596500358",
   "decimals": 9,
   "isInitialized": true,
   "extensions": [
@@ -18,7 +18,7 @@
     "Pausable",
     "TokenMetadata"
   ],
-  "top10Pct": 45.89,
+  "top10Pct": 45.85,
   "topAccounts": [
     {
       "address": "EL82xEGW7aNJnK7NhpCwXkD1kJB4B5KPoEVng88EnitM",
@@ -65,14 +65,14 @@
     {
       "address": "AScgm5o5ZQUMcReJonRLQ1DYpxfsXBmXcqKQNs5fHHJ5",
       "owner": "HX72xZ1CHg7cWPhGGJyHbLp3sLrpznTYmWn5AY3FVwUj",
-      "amountRaw": "138050602169",
-      "pct": 1.87,
+      "amountRaw": "135056983929",
+      "pct": 1.82,
       "excluded": false
     },
     {
       "address": "CnHiVJRJUMAtoJvo64gcHsb3rFydzb14uGD6kmxTvrka",
       "owner": "ECQbBHaizQtQU7AGtfttR2LbZ229KPibgUsyTG659yq",
-      "amountRaw": "133429436020",
+      "amountRaw": "133429436027",
       "pct": 1.8,
       "excluded": false
     },
@@ -89,13 +89,6 @@
       "amountRaw": "102940471184",
       "pct": 1.39,
       "excluded": false
-    },
-    {
-      "address": "2yaFuqMGkXcpyShptCuJBCn4MheYAv468T1rB24LePxe",
-      "owner": "EZyszDEx1LZDt7TsSFV8xdPi49sDKC3mdfv2MVMEQLtU",
-      "amountRaw": "100832200372",
-      "pct": 1.36,
-      "excluded": true
     },
     {
       "address": "GnyLgMUALDTHfF25qNrVGTqDto2bhrxQPCDCiAJgHtBm",
@@ -117,6 +110,13 @@
       "amountRaw": "97509580295",
       "pct": 1.32,
       "excluded": false
+    },
+    {
+      "address": "2yaFuqMGkXcpyShptCuJBCn4MheYAv468T1rB24LePxe",
+      "owner": "EZyszDEx1LZDt7TsSFV8xdPi49sDKC3mdfv2MVMEQLtU",
+      "amountRaw": "97227724049",
+      "pct": 1.31,
+      "excluded": true
     },
     {
       "address": "GpcwrswhaRPtB5NsyvWraMPQpgwPBmEEkj8QuBmonFks",
@@ -170,6 +170,6 @@
     "TransferHook",
     "Pausable"
   ],
-  "fetchedAt": "2026-09-30T17:07:53.219Z",
+  "fetchedAt": "2026-09-30T18:28:26.728Z",
   "rpcCalls": 4
 }
