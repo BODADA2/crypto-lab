@@ -1,5 +1,5 @@
 {
-  "computedAt": "2026-09-30T12:06:30.519Z",
+  "computedAt": "2026-09-30T12:35:04.262Z",
   "terms": [
     {
       "term": "surfpool",
@@ -13,6 +13,39 @@
       "docs24h": 14
     },
     {
+      "term": "detection",
+      "count24h": 14,
+      "baselinePerDay": 0,
+      "count7d": 0,
+      "growth": 15,
+      "sources": {
+        "github": 14
+      },
+      "docs24h": 7
+    },
+    {
+      "term": "ofac",
+      "count24h": 14,
+      "baselinePerDay": 0,
+      "count7d": 0,
+      "growth": 15,
+      "sources": {
+        "github": 14
+      },
+      "docs24h": 7
+    },
+    {
+      "term": "phishing",
+      "count24h": 14,
+      "baselinePerDay": 0,
+      "count7d": 0,
+      "growth": 15,
+      "sources": {
+        "github": 14
+      },
+      "docs24h": 7
+    },
+    {
       "term": "super",
       "count24h": 59,
       "baselinePerDay": 3.4285714285714284,
@@ -24,49 +57,27 @@
       "docs24h": 59
     },
     {
-      "term": "developers",
-      "count24h": 24,
-      "baselinePerDay": 0.8571428571428571,
-      "count7d": 6,
-      "growth": 13.461538461538462,
+      "term": "drainer",
+      "count24h": 15,
+      "baselinePerDay": 0.2857142857142857,
+      "count7d": 2,
+      "growth": 12.444444444444446,
       "sources": {
-        "github": 23,
+        "github": 15
+      },
+      "docs24h": 7
+    },
+    {
+      "term": "developers",
+      "count24h": 23,
+      "baselinePerDay": 1,
+      "count7d": 7,
+      "growth": 12,
+      "sources": {
+        "github": 22,
         "token": 1
       },
-      "docs24h": 24
-    },
-    {
-      "term": "detection",
-      "count24h": 12,
-      "baselinePerDay": 0,
-      "count7d": 0,
-      "growth": 13,
-      "sources": {
-        "github": 12
-      },
-      "docs24h": 6
-    },
-    {
-      "term": "ofac",
-      "count24h": 12,
-      "baselinePerDay": 0,
-      "count7d": 0,
-      "growth": 13,
-      "sources": {
-        "github": 12
-      },
-      "docs24h": 6
-    },
-    {
-      "term": "phishing",
-      "count24h": 12,
-      "baselinePerDay": 0,
-      "count7d": 0,
-      "growth": 13,
-      "sources": {
-        "github": 12
-      },
-      "docs24h": 6
+      "docs24h": 23
     },
     {
       "term": "tsuki",
@@ -78,17 +89,6 @@
         "token": 10
       },
       "docs24h": 8
-    },
-    {
-      "term": "drainer",
-      "count24h": 13,
-      "baselinePerDay": 0.2857142857142857,
-      "count7d": 2,
-      "growth": 10.88888888888889,
-      "sources": {
-        "github": 13
-      },
-      "docs24h": 6
     },
     {
       "term": "start",
