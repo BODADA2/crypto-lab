@@ -11,13 +11,20 @@
     "TransferFeeConfig",
     "TokenMetadata"
   ],
-  "top10Pct": 42.92,
+  "top10Pct": 45.31,
   "topAccounts": [
     {
       "address": "7PJuKs8HmVdKiRS2QHtRKPraYiUkSCAHCtqotWCbGHKA",
       "owner": "GpMZbSM2GgvTKHJirzeGfMFoaZ8UR2X7F4v8vHTvxFbL",
-      "amountRaw": "188374708780940",
-      "pct": 18.83,
+      "amountRaw": "208194397450439",
+      "pct": 20.81,
+      "excluded": false
+    },
+    {
+      "address": "38UrZCJ41kk43CngP8YzqKQvkxv2rYJ8FCEBhHZzq1CS",
+      "owner": "Esi9ziJTCwApufLeGnAyoEg3nQ6ExSVVVp7bMJhXVUnv",
+      "amountRaw": "36209590825863",
+      "pct": 3.62,
       "excluded": false
     },
     {
@@ -25,13 +32,6 @@
       "owner": "EBjPNCDYbJa2LsxzMB3FbFrtxGNhZDCDxPSEzTtBkHSk",
       "amountRaw": "36014946492647",
       "pct": 3.6,
-      "excluded": false
-    },
-    {
-      "address": "38UrZCJ41kk43CngP8YzqKQvkxv2rYJ8FCEBhHZzq1CS",
-      "owner": "Esi9ziJTCwApufLeGnAyoEg3nQ6ExSVVVp7bMJhXVUnv",
-      "amountRaw": "33284369024187",
-      "pct": 3.32,
       "excluded": false
     },
     {
@@ -51,8 +51,8 @@
     {
       "address": "8Fs3sXumyFY6pw2CJjSk9DA99wTwNEXNVrgsa1E9WMJ5",
       "owner": "49UQVYy3sXWZM8VgwqpkeAzTcwjk5RydJfpXhxxWxZ4x",
-      "amountRaw": "24408440931011",
-      "pct": 2.44,
+      "amountRaw": "25364773634817",
+      "pct": 2.53,
       "excluded": false
     },
     {
@@ -74,6 +74,13 @@
       "owner": "Fc719KgEtGsfq2gRG6RJd43qiyXrkuJzNPZPsYLUt4mZ",
       "amountRaw": "21939268644873",
       "pct": 2.19,
+      "excluded": false
+    },
+    {
+      "address": "9AWTcCqYJSRURddxa8D6NRpxKXMpHYFvCRUAxipnjkZc",
+      "owner": "w8bkGWgRWEhWZUnumXWr9KNeHLzBgzRic9dzPkykcTu",
+      "amountRaw": "21702224126779",
+      "pct": 2.17,
       "excluded": false
     },
     {
@@ -102,13 +109,6 @@
       "owner": "G1yiaHkAcaWKCgqiDzwpk523AMPcePN3noNhonsufCqu",
       "amountRaw": "20143926971381",
       "pct": 2.01,
-      "excluded": false
-    },
-    {
-      "address": "UNG5DdpToiqXd9ei4pCRQtMDjCYjDD6UEqp6pkPq17x",
-      "owner": "76hWzLzsgH2HxE5YDoaitmjkfaTuqA4iE6EDQbuogV3N",
-      "amountRaw": "18423285203506",
-      "pct": 1.84,
       "excluded": false
     },
     {
@@ -159,6 +159,6 @@
   "riskyExtensions": [
     "TransferFeeConfig"
   ],
-  "fetchedAt": "2026-09-30T05:26:05.073Z",
+  "fetchedAt": "2026-09-30T06:31:11.678Z",
   "rpcCalls": 4
 }
