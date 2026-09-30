@@ -13,14 +13,14 @@
   "fdvUsd": null,
   "marketCapUsd": null,
   "volume": {
-    "m5": 127.67,
-    "h1": 26665.579999999998,
-    "h6": 693155.5700000001,
-    "h24": 3685638.9300000006
+    "m5": 83.24000000000001,
+    "h1": 19272.34,
+    "h6": 670877.11,
+    "h24": 3686168.4299999997
   },
-  "volume5m": 127.67,
-  "volume1h": 26665.579999999998,
-  "volume24h": 3685638.9300000006,
+  "volume5m": 83.24000000000001,
+  "volume1h": 19272.34,
+  "volume24h": 3686168.4299999997,
   "priceChange": {
     "m5": 0,
     "h1": 0,
@@ -29,28 +29,35 @@
   },
   "txns": {
     "m5": {
-      "buys": 7,
-      "sells": 4
+      "buys": 1,
+      "sells": 5
     },
     "h1": {
-      "buys": 175,
-      "sells": 130
+      "buys": 110,
+      "sells": 82
     },
     "h6": {
-      "buys": 3830,
-      "sells": 4147
+      "buys": 3762,
+      "sells": 4071
     },
     "h24": {
-      "buys": 12226,
-      "sells": 14019
+      "buys": 12237,
+      "sells": 14018
     }
   },
   "holders": null,
-  "top10Pct": 100,
-  "mintAuthority": "UNKNOWN",
-  "freezeAuthority": "UNKNOWN",
+  "top10Pct": 30.46,
+  "mintAuthority": "HK6jF79duLLLfCMRQFBSgo6CgQ5mF4tFMFU7CmKcXctZ",
+  "freezeAuthority": "2cVYpagTt7ZGc3mmTXBa7fAznUtx5DUu6aCq8uVDaf4a",
   "boostsActive": 0,
   "pairCount": 9,
   "source": "dexscreener",
-  "fetchedAt": "2026-09-30T04:26:50.200Z"
+  "fetchedAt": "2026-09-30T04:41:01.073Z",
+  "decimals": 6,
+  "riskyExtensions": [
+    "PermanentDelegate",
+    "DefaultAccountState",
+    "Pausable",
+    "TransferHook"
+  ]
 }
