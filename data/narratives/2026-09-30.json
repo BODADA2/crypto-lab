@@ -1,71 +1,49 @@
 {
-  "computedAt": "2026-09-30T19:51:54.069Z",
+  "computedAt": "2026-09-30T20:04:48.100Z",
   "terms": [
     {
       "term": "detection",
-      "count24h": 30,
-      "baselinePerDay": 0,
-      "count7d": 0,
-      "growth": 31,
+      "count24h": 28,
+      "baselinePerDay": 0.2857142857142857,
+      "count7d": 2,
+      "growth": 22.555555555555557,
       "sources": {
-        "github": 30
+        "github": 28
       },
-      "docs24h": 15
+      "docs24h": 14
     },
     {
       "term": "ofac",
-      "count24h": 30,
-      "baselinePerDay": 0,
-      "count7d": 0,
-      "growth": 31,
+      "count24h": 28,
+      "baselinePerDay": 0.2857142857142857,
+      "count7d": 2,
+      "growth": 22.555555555555557,
       "sources": {
-        "github": 30
+        "github": 28
       },
-      "docs24h": 15
+      "docs24h": 14
     },
     {
       "term": "phishing",
-      "count24h": 30,
-      "baselinePerDay": 0,
-      "count7d": 0,
-      "growth": 31,
+      "count24h": 28,
+      "baselinePerDay": 0.2857142857142857,
+      "count7d": 2,
+      "growth": 22.555555555555557,
       "sources": {
-        "github": 30
+        "github": 28
       },
-      "docs24h": 15
+      "docs24h": 14
     },
     {
       "term": "drainer",
-      "count24h": 31,
-      "baselinePerDay": 0.2857142857142857,
-      "count7d": 2,
-      "growth": 24.888888888888893,
-      "sources": {
-        "github": 31
-      },
-      "docs24h": 15
-    },
-    {
-      "term": "simulation",
-      "count24h": 30,
+      "count24h": 28,
       "baselinePerDay": 0.7142857142857143,
       "count7d": 5,
-      "growth": 18.083333333333332,
+      "growth": 16.916666666666664,
       "sources": {
-        "github": 30
+        "github": 28
       },
-      "docs24h": 15
-    },
-    {
-      "term": "sanctions",
-      "count24h": 15,
-      "baselinePerDay": 0,
-      "count7d": 0,
-      "growth": 16,
-      "sources": {
-        "github": 15
-      },
-      "docs24h": 15
+      "docs24h": 14
     },
     {
       "term": "eip",
@@ -101,6 +79,17 @@
       "docs24h": 14
     },
     {
+      "term": "simulation",
+      "count24h": 28,
+      "baselinePerDay": 1,
+      "count7d": 7,
+      "growth": 14.5,
+      "sources": {
+        "github": 28
+      },
+      "docs24h": 14
+    },
+    {
       "term": "intelligence",
       "count24h": 30,
       "baselinePerDay": 1.2857142857142858,
@@ -110,6 +99,17 @@
         "token": 30
       },
       "docs24h": 30
+    },
+    {
+      "term": "sanctions",
+      "count24h": 14,
+      "baselinePerDay": 0.14285714285714285,
+      "count7d": 1,
+      "growth": 13.125,
+      "sources": {
+        "github": 14
+      },
+      "docs24h": 14
     }
   ]
 }
