@@ -1,5 +1,5 @@
 {
-  "computedAt": "2026-09-30T04:05:19.999Z",
+  "computedAt": "2026-09-30T04:27:03.666Z",
   "terms": [
     {
       "term": "surfpool",
@@ -57,6 +57,17 @@
       "docs24h": 11
     },
     {
+      "term": "super",
+      "count24h": 43,
+      "baselinePerDay": 3.4285714285714284,
+      "count7d": 24,
+      "growth": 9.935483870967742,
+      "sources": {
+        "token": 43
+      },
+      "docs24h": 43
+    },
+    {
       "term": "curve",
       "count24h": 13,
       "baselinePerDay": 0.42857142857142855,
@@ -91,26 +102,15 @@
       "docs24h": 7
     },
     {
-      "term": "super",
-      "count24h": 41,
-      "baselinePerDay": 3.4285714285714284,
-      "count7d": 24,
-      "growth": 9.483870967741934,
+      "term": "earnings",
+      "count24h": 43,
+      "baselinePerDay": 3.857142857142857,
+      "count7d": 27,
+      "growth": 9.058823529411764,
       "sources": {
-        "token": 41
+        "github": 43
       },
-      "docs24h": 41
-    },
-    {
-      "term": "x402check",
-      "count24h": 36,
-      "baselinePerDay": 3,
-      "count7d": 21,
-      "growth": 9.25,
-      "sources": {
-        "github": 36
-      },
-      "docs24h": 14
+      "docs24h": 43
     }
   ]
 }
