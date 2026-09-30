@@ -1,17 +1,6 @@
 {
-  "computedAt": "2026-09-30T14:08:05.833Z",
+  "computedAt": "2026-09-30T14:30:04.113Z",
   "terms": [
-    {
-      "term": "surfpool",
-      "count24h": 28,
-      "baselinePerDay": 0.8571428571428571,
-      "count7d": 6,
-      "growth": 15.615384615384615,
-      "sources": {
-        "github": 28
-      },
-      "docs24h": 14
-    },
     {
       "term": "detection",
       "count24h": 14,
@@ -48,13 +37,24 @@
     {
       "term": "super",
       "count24h": 65,
-      "baselinePerDay": 3.4285714285714284,
-      "count7d": 24,
-      "growth": 14.903225806451612,
+      "baselinePerDay": 3.5714285714285716,
+      "count7d": 25,
+      "growth": 14.4375,
       "sources": {
         "token": 65
       },
       "docs24h": 65
+    },
+    {
+      "term": "surfpool",
+      "count24h": 26,
+      "baselinePerDay": 1.1428571428571428,
+      "count7d": 8,
+      "growth": 12.6,
+      "sources": {
+        "github": 26
+      },
+      "docs24h": 13
     },
     {
       "term": "drainer",
@@ -68,18 +68,6 @@
       "docs24h": 7
     },
     {
-      "term": "developers",
-      "count24h": 23,
-      "baselinePerDay": 1,
-      "count7d": 7,
-      "growth": 12,
-      "sources": {
-        "github": 22,
-        "token": 1
-      },
-      "docs24h": 23
-    },
-    {
       "term": "tsuki",
       "count24h": 10,
       "baselinePerDay": 0,
@@ -89,6 +77,18 @@
         "token": 10
       },
       "docs24h": 8
+    },
+    {
+      "term": "developers",
+      "count24h": 22,
+      "baselinePerDay": 1.1428571428571428,
+      "count7d": 8,
+      "growth": 10.733333333333334,
+      "sources": {
+        "github": 21,
+        "token": 1
+      },
+      "docs24h": 22
     },
     {
       "term": "intelligence",
