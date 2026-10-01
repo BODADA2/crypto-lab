@@ -1,5 +1,5 @@
 {
-  "computedAt": "2026-10-01T14:46:22.343Z",
+  "computedAt": "2026-10-01T15:05:46.527Z",
   "terms": [
     {
       "term": "jane",
@@ -13,28 +13,6 @@
       "docs24h": 7
     },
     {
-      "term": "prepaid",
-      "count24h": 16,
-      "baselinePerDay": 0.14285714285714285,
-      "count7d": 1,
-      "growth": 14.875,
-      "sources": {
-        "github": 16
-      },
-      "docs24h": 16
-    },
-    {
-      "term": "credits",
-      "count24h": 16,
-      "baselinePerDay": 0.2857142857142857,
-      "count7d": 2,
-      "growth": 13.222222222222223,
-      "sources": {
-        "github": 16
-      },
-      "docs24h": 16
-    },
-    {
       "term": "hall",
       "count24h": 11,
       "baselinePerDay": 0,
@@ -44,39 +22,6 @@
         "token": 11
       },
       "docs24h": 6
-    },
-    {
-      "term": "detection",
-      "count24h": 32,
-      "baselinePerDay": 2,
-      "count7d": 14,
-      "growth": 11,
-      "sources": {
-        "github": 32
-      },
-      "docs24h": 16
-    },
-    {
-      "term": "ofac",
-      "count24h": 32,
-      "baselinePerDay": 2,
-      "count7d": 14,
-      "growth": 11,
-      "sources": {
-        "github": 32
-      },
-      "docs24h": 16
-    },
-    {
-      "term": "phishing",
-      "count24h": 32,
-      "baselinePerDay": 2,
-      "count7d": 14,
-      "growth": 11,
-      "sources": {
-        "github": 32
-      },
-      "docs24h": 16
     },
     {
       "term": "ajax",
@@ -90,6 +35,17 @@
       "docs24h": 5
     },
     {
+      "term": "prepaid",
+      "count24h": 14,
+      "baselinePerDay": 0.42857142857142855,
+      "count7d": 3,
+      "growth": 10.5,
+      "sources": {
+        "github": 14
+      },
+      "docs24h": 14
+    },
+    {
       "term": "bandit",
       "count24h": 9,
       "baselinePerDay": 0,
@@ -101,15 +57,59 @@
       "docs24h": 7
     },
     {
-      "term": "drainer",
-      "count24h": 32,
-      "baselinePerDay": 2.4285714285714284,
-      "count7d": 17,
-      "growth": 9.625,
+      "term": "credits",
+      "count24h": 14,
+      "baselinePerDay": 0.5714285714285714,
+      "count7d": 4,
+      "growth": 9.545454545454545,
       "sources": {
-        "github": 32
+        "github": 14
       },
-      "docs24h": 16
+      "docs24h": 14
+    },
+    {
+      "term": "bryce",
+      "count24h": 8,
+      "baselinePerDay": 0,
+      "count7d": 0,
+      "growth": 9,
+      "sources": {
+        "token": 8
+      },
+      "docs24h": 8
+    },
+    {
+      "term": "detection",
+      "count24h": 28,
+      "baselinePerDay": 2.5714285714285716,
+      "count7d": 18,
+      "growth": 8.12,
+      "sources": {
+        "github": 28
+      },
+      "docs24h": 14
+    },
+    {
+      "term": "ofac",
+      "count24h": 28,
+      "baselinePerDay": 2.5714285714285716,
+      "count7d": 18,
+      "growth": 8.12,
+      "sources": {
+        "github": 28
+      },
+      "docs24h": 14
+    },
+    {
+      "term": "phishing",
+      "count24h": 28,
+      "baselinePerDay": 2.5714285714285716,
+      "count7d": 18,
+      "growth": 8.12,
+      "sources": {
+        "github": 28
+      },
+      "docs24h": 14
     }
   ]
 }
