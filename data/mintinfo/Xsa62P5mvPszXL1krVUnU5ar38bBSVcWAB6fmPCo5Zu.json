@@ -3,7 +3,7 @@
   "program": "token-2022",
   "mintAuthority": "7pt9tkctJPK7PPNQJ77GKg8ZffSF6QxoMiCFYHxrtaCj",
   "freezeAuthority": "JDq14BWvqCRFNu1krb12bcRpbGtJZ1FLEakMw6FdxJNs",
-  "supplyRaw": "7237700794034",
+  "supplyRaw": "7237700672766",
   "decimals": 8,
   "isInitialized": true,
   "extensions": [
@@ -54,13 +54,6 @@
       "excluded": false
     },
     {
-      "address": "BMS7RrFtXNByMZoAAyViq4LhhUDDZBLfyY3Ni1W9iptc",
-      "owner": "3L7KbPVaAQA4UTecaGQYsm6UCq5F3sZM9zAYkxqYt63j",
-      "amountRaw": "88970713060",
-      "pct": 1.22,
-      "excluded": true
-    },
-    {
       "address": "2yC2a767xceVzmHJdRzNPctFwE4sZvaR2KDGTNqA7EZ9",
       "owner": "6LY1JzAFVZsP2a2xKrtU6znQMQ5h4i7tocWdgrkZzkzF",
       "amountRaw": "86591607292",
@@ -68,9 +61,16 @@
       "excluded": false
     },
     {
+      "address": "BMS7RrFtXNByMZoAAyViq4LhhUDDZBLfyY3Ni1W9iptc",
+      "owner": "3L7KbPVaAQA4UTecaGQYsm6UCq5F3sZM9zAYkxqYt63j",
+      "amountRaw": "84825580366",
+      "pct": 1.17,
+      "excluded": true
+    },
+    {
       "address": "ErYGDUQ9GrTixi3jGMfDUAohTMHk7Qajhaf4bL2JN6kF",
       "owner": "AC5RDfQFmDS1deWZos921JfqscXdByf8BKHs5ACWjtW2",
-      "amountRaw": "73594229378",
+      "amountRaw": "73602675377",
       "pct": 1.01,
       "excluded": false
     },
@@ -110,9 +110,16 @@
       "excluded": false
     },
     {
+      "address": "6zqwRmBPFf7XymuYtEwwbbtoTW1YiqVLm4XMi9TDyGJG",
+      "owner": "44P5Ct5JkPz76Rs2K6juC65zXMpFRDrHatxcASJ4Dyra",
+      "amountRaw": "18434967610",
+      "pct": 0.25,
+      "excluded": false
+    },
+    {
       "address": "HtHvpYBXuqDqqmcw3BpBWJE1mNTfKoqvVdCdoBnPaAKU",
       "owner": "8wM44Ryv9DFCSfkgUnPEPgnsc53arT4cnmXL6LnnC4UW",
-      "amountRaw": "16875017176",
+      "amountRaw": "16697523308",
       "pct": 0.23,
       "excluded": false
     },
@@ -150,13 +157,6 @@
       "amountRaw": "12261199193",
       "pct": 0.16,
       "excluded": false
-    },
-    {
-      "address": "7QNT292qo14d9SB6xWVtLKg8PZKJdUyWDtG7g1yXzenr",
-      "owner": "3FSBv2xKuLHqN9ttaoZ2K9mN1XPb8Z7SPc6MZPmWLi7S",
-      "amountRaw": "11936598060",
-      "pct": 0.16,
-      "excluded": false
     }
   ],
   "excludedCount": 1,
@@ -167,6 +167,6 @@
     "Pausable",
     "TransferHook"
   ],
-  "fetchedAt": "2026-10-01T02:05:14.107Z",
+  "fetchedAt": "2026-10-01T03:05:20.652Z",
   "rpcCalls": 4
 }
