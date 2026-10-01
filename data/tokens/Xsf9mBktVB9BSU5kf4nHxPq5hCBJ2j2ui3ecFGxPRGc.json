@@ -3,61 +3,54 @@
   "chain": "solana",
   "symbol": "GMEx",
   "name": "Gamestop xStock",
-  "createdAt": "2026-08-09T13:02:25.000Z",
-  "pairCreatedAt": 1786280545000,
+  "createdAt": "2025-07-11T03:56:00.000Z",
+  "pairCreatedAt": 1752206160000,
   "pairAddress": "hSQxf9L7Tpwf1PKjWWSbnew2vyTPpGrfWwNa4gq2n2x",
   "dexId": "orca",
   "url": "https://dexscreener.com/solana/hsqxf9l7tpwf1pkjwwsbnew2vytppgrfwwna4gq2n2x",
-  "priceUsd": 24.99,
-  "liquidityUsd": 313480.2,
-  "fdvUsd": 149948,
-  "marketCapUsd": 149948,
+  "priceUsd": 24.66,
+  "liquidityUsd": 312220.66,
+  "fdvUsd": 148005,
+  "marketCapUsd": 148005,
   "volume": {
-    "m5": 81.1,
-    "h1": 419.5,
-    "h6": 5412.75,
-    "h24": 584681.99
+    "m5": 0,
+    "h1": 735.67,
+    "h6": 5972.38,
+    "h24": 591421.81
   },
-  "volume5m": 81.1,
-  "volume1h": 419.5,
-  "volume24h": 584681.99,
+  "volume5m": 0,
+  "volume1h": 735.67,
+  "volume24h": 591421.81,
   "priceChange": {
-    "m5": 1.31,
-    "h1": 1.31,
-    "h6": 1.16,
-    "h24": 3.67
+    "m5": 0,
+    "h1": -0.01,
+    "h6": -0.15,
+    "h24": 1
   },
   "txns": {
     "m5": {
-      "buys": 1,
+      "buys": 0,
       "sells": 0
     },
     "h1": {
-      "buys": 1,
-      "sells": 2
+      "buys": 3,
+      "sells": 6
     },
     "h6": {
-      "buys": 4,
-      "sells": 44
+      "buys": 9,
+      "sells": 85
     },
     "h24": {
-      "buys": 3485,
-      "sells": 3621
+      "buys": 3686,
+      "sells": 3765
     }
   },
   "holders": null,
-  "top10Pct": 96.36,
-  "mintAuthority": "7pt9tkctJPK7PPNQJ77GKg8ZffSF6QxoMiCFYHxrtaCj",
-  "freezeAuthority": "JDq14BWvqCRFNu1krb12bcRpbGtJZ1FLEakMw6FdxJNs",
+  "top10Pct": 100,
+  "mintAuthority": "UNKNOWN",
+  "freezeAuthority": "UNKNOWN",
   "boostsActive": 0,
-  "pairCount": 1,
+  "pairCount": 4,
   "source": "dexscreener",
-  "fetchedAt": "2026-10-01T08:58:38.335Z",
-  "decimals": 8,
-  "riskyExtensions": [
-    "PermanentDelegate",
-    "DefaultAccountState",
-    "Pausable",
-    "TransferHook"
-  ]
+  "fetchedAt": "2026-10-01T09:12:53.424Z"
 }
