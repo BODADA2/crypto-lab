@@ -1,5 +1,5 @@
 {
-  "computedAt": "2026-10-01T16:26:47.600Z",
+  "computedAt": "2026-10-01T16:40:00.601Z",
   "terms": [
     {
       "term": "jane",
@@ -35,6 +35,17 @@
       "docs24h": 5
     },
     {
+      "term": "bandit",
+      "count24h": 10,
+      "baselinePerDay": 0,
+      "count7d": 0,
+      "growth": 11,
+      "sources": {
+        "token": 10
+      },
+      "docs24h": 8
+    },
+    {
       "term": "prepaid",
       "count24h": 14,
       "baselinePerDay": 0.42857142857142855,
@@ -44,17 +55,6 @@
         "github": 14
       },
       "docs24h": 14
-    },
-    {
-      "term": "bandit",
-      "count24h": 9,
-      "baselinePerDay": 0,
-      "count7d": 0,
-      "growth": 10,
-      "sources": {
-        "token": 9
-      },
-      "docs24h": 7
     },
     {
       "term": "doe",
