@@ -3,21 +3,28 @@
   "program": "token-2022",
   "mintAuthority": null,
   "freezeAuthority": null,
-  "supplyRaw": "974391295467036",
+  "supplyRaw": "974391292832419",
   "decimals": 6,
   "isInitialized": true,
   "extensions": [
     "MetadataPointer",
     "TokenMetadata"
   ],
-  "top10Pct": 17.37,
+  "top10Pct": 17.96,
   "topAccounts": [
     {
       "address": "H3fEtRTSmVxtyMv4kqExppDL4mVHqFzDayrSGgXDdrfF",
       "owner": "ECN4kZK2V53YfvCk9mgbozRmRUcxrLfMbDVv2hmJ3FL5",
-      "amountRaw": "69942420700137",
-      "pct": 7.17,
+      "amountRaw": "101775500658371",
+      "pct": 10.44,
       "excluded": true
+    },
+    {
+      "address": "9hSvVZSHxv5AMJCBsoFUKyQ7vU4XY6oae9X2BwD4bZcy",
+      "owner": "8HXr81zikfL4W3zu9i6bvvkUK4n2jcj9qN4t59DSPQ7d",
+      "amountRaw": "26460575178793",
+      "pct": 2.71,
+      "excluded": false
     },
     {
       "address": "Gx8PHXphSmUUwn3QPRQPXp2SoTH6aKNqGYAXHZN1SdWy",
@@ -27,17 +34,17 @@
       "excluded": false
     },
     {
-      "address": "5L8nzGhgziP6S4Wss3LWUBKdpDx9vRo8AWrciC61t5nT",
-      "owner": "6t3EBNhKeei1zFc8yqrGvG94yxxyNo6msQDs3CjUAKQw",
-      "amountRaw": "23401972580881",
-      "pct": 2.4,
+      "address": "GPXiXxdmmMxhehKHMAfyk8GxgFdDGrx8kwjPQdx7SYfV",
+      "owner": "HoXBZLGucy9GTD2t311vLhzAaCaTkHwgjYpXiSDMXbX6",
+      "amountRaw": "21725507805167",
+      "pct": 2.22,
       "excluded": false
     },
     {
-      "address": "GQCvJcW24LtRAGNdyjqVKrCH13puTtPfsseedbK9uKCb",
-      "owner": "5YRgrP3mjGzrzirYYN5HAQH19cTYREYwGxW6XRJQUzij",
-      "amountRaw": "21933494886318",
-      "pct": 2.25,
+      "address": "3qLyunXE8zeUQD7N3vnnpSkx7gv2D89awUsY1m3Dor2w",
+      "owner": "Qkr7hayQNfvFos2cLQ9ftqySogK6RrSmhYRQ1yMz34c",
+      "amountRaw": "20175657254737",
+      "pct": 2.07,
       "excluded": false
     },
     {
@@ -45,13 +52,6 @@
       "owner": "AAcnkt8u8NgZBAPY5eUTSSc4oeHZNfB6dXsV1yWf8YSC",
       "amountRaw": "20035552590571",
       "pct": 2.05,
-      "excluded": false
-    },
-    {
-      "address": "DC8k5FYdtiJf32wp8MyMLSihiY5E1YgM5rGaeWgxKEpc",
-      "owner": "DqT2YoA2LvtY7M5xWYUGuDYG6Kv2KsWMSnhxEKKZj1zu",
-      "amountRaw": "15264363419067",
-      "pct": 1.56,
       "excluded": false
     },
     {
@@ -71,22 +71,15 @@
     {
       "address": "7qp9FukZHPxC593ayyfD2FFNSDGoGiPuMq4bXkf928vV",
       "owner": "7MchqDi5qqqiifZEQbjCEytcdmtRm9pXzSipDsezcjbK",
-      "amountRaw": "12488815268012",
-      "pct": 1.28,
+      "amountRaw": "11550874857851",
+      "pct": 1.18,
       "excluded": false
     },
     {
-      "address": "3qLyunXE8zeUQD7N3vnnpSkx7gv2D89awUsY1m3Dor2w",
-      "owner": "Qkr7hayQNfvFos2cLQ9ftqySogK6RrSmhYRQ1yMz34c",
-      "amountRaw": "11755352364710",
-      "pct": 1.2,
-      "excluded": false
-    },
-    {
-      "address": "GPXiXxdmmMxhehKHMAfyk8GxgFdDGrx8kwjPQdx7SYfV",
-      "owner": "HoXBZLGucy9GTD2t311vLhzAaCaTkHwgjYpXiSDMXbX6",
-      "amountRaw": "11676994555009",
-      "pct": 1.19,
+      "address": "DC8k5FYdtiJf32wp8MyMLSihiY5E1YgM5rGaeWgxKEpc",
+      "owner": "DqT2YoA2LvtY7M5xWYUGuDYG6Kv2KsWMSnhxEKKZj1zu",
+      "amountRaw": "11433959807912",
+      "pct": 1.17,
       "excluded": false
     },
     {
@@ -97,6 +90,27 @@
       "excluded": false
     },
     {
+      "address": "2pP76FEtELzXUjQGcwb2qirfRynTgTGvUwWEetqDipwd",
+      "owner": "g9jqcc9N7veTASNaWRdCKKKEgQ58eLJFLuu85cgz5oD",
+      "amountRaw": "10809453729437",
+      "pct": 1.1,
+      "excluded": false
+    },
+    {
+      "address": "GzkRSG5rc2yNEh3KTRw92x8Rca1vMYqLJHkhoJDxjqBz",
+      "owner": "Aee28TScrFJphjgUPhUa6Zz25vZaCteGbkAkNu7YztK5",
+      "amountRaw": "10568858928776",
+      "pct": 1.08,
+      "excluded": false
+    },
+    {
+      "address": "GLfT7X1Lv4LaK9tSAvvgyq5J3jLoPPQxvrANY5XxWq8X",
+      "owner": "4QGH3Fs8KBpfwqXerrTV84MAMfN5Mg7dEWGy43oe7ocj",
+      "amountRaw": "10164631396872",
+      "pct": 1.04,
+      "excluded": false
+    },
+    {
       "address": "Dhqoqk9jDZnsq3xkxkLnQNVEYs55m91ib8Enw6BWXtEn",
       "owner": "8aWQsdo292DDHRzEr5JfdsrvJNMZkM2TPx3G44869hjb",
       "amountRaw": "10118595590811",
@@ -104,58 +118,44 @@
       "excluded": false
     },
     {
-      "address": "C3sVMshPdwmTX8f7JmstVV4EF7B7rwW2emWWvJRaAudo",
-      "owner": "8vg99sPfXZyU31dVDgVVinCrN51vJ5GX1Xa9cBNdCWkn",
-      "amountRaw": "9990543172666",
-      "pct": 1.02,
+      "address": "AiY4FCfNhLdhNZ8wapBSu5nySuazBEVotJgKtKFWXvdq",
+      "owner": "frxhsw5aP81cGu19gKbecAzEyf1ib5yL8Y5zaSng3QF",
+      "amountRaw": "9849055678667",
+      "pct": 1.01,
       "excluded": false
     },
     {
-      "address": "7VZWPToDGE26uLeTPwnRHcSZur8rU2yCrVkeBbNjS1N3",
-      "owner": "45oN2tCsfzG325wEPnJPvMYpuY2tgASYHmgRPdnMZB5a",
-      "amountRaw": "9387941368327",
-      "pct": 0.96,
+      "address": "GKk8STCovKYHzibchtJ58oemEn6DPQ15GkP6gcmjY9RB",
+      "owner": "AJwxajiQiffiB612bxq1HTxZHQdo33AqBGujjCQepJR9",
+      "amountRaw": "9327138245012",
+      "pct": 0.95,
       "excluded": false
     },
     {
-      "address": "BBu6Vy6CuK9nhvFfWekTXSmoHpuLTDrecY2havgX8rKc",
-      "owner": "97Z6Uj8MP4AJQAek27gkTFm8JRKk3CYeyJzHWEPuqnpy",
-      "amountRaw": "8764098706318",
-      "pct": 0.89,
+      "address": "EDHGzF3G4SCaSiGxcPXUjsyALjFfZbqceHNK8staJHZh",
+      "owner": "268YjSXg4dYF6FoXvXswUDDj3VoKRouNdzWMX7wc4Y2p",
+      "amountRaw": "8623389627813",
+      "pct": 0.88,
       "excluded": false
     },
     {
-      "address": "HSnedXA59PKmAaQu9LdpzvawQBAoeFMwEMFUEgaeRq1U",
-      "owner": "4cqXVaYdAWX5Vhh9ddjsh2Lf8xF1PxwQSAfcHX2ZXpJu",
-      "amountRaw": "8345706005609",
-      "pct": 0.85,
-      "excluded": false
-    },
-    {
-      "address": "9hSvVZSHxv5AMJCBsoFUKyQ7vU4XY6oae9X2BwD4bZcy",
-      "owner": "8HXr81zikfL4W3zu9i6bvvkUK4n2jcj9qN4t59DSPQ7d",
-      "amountRaw": "8324403187088",
-      "pct": 0.85,
-      "excluded": false
-    },
-    {
-      "address": "6ZJCWr5x8TLC88wnWoK29dNQ26LszD4CgCRwn2HqsU5K",
-      "owner": "95ddWCEqs7bX1vAPFXgAxNKmYkCvpQFiurCk4KWg2AST",
-      "amountRaw": "8256736908993",
+      "address": "BTHy4FKwjvF5ns38teHxXC3Z8zDS6UJABuDUExguBcpa",
+      "owner": "GmtGkXY7Cscg8VSUFm1q1PTKozW1fxkfCCXsyrpamHYT",
+      "amountRaw": "8247136578313",
       "pct": 0.84,
       "excluded": false
     },
     {
-      "address": "GLfT7X1Lv4LaK9tSAvvgyq5J3jLoPPQxvrANY5XxWq8X",
-      "owner": "4QGH3Fs8KBpfwqXerrTV84MAMfN5Mg7dEWGy43oe7ocj",
-      "amountRaw": "7411555178023",
-      "pct": 0.76,
+      "address": "EtHbwMK6yk1pZHsh9k4SbCLtZwNtVeE5sFJ4yfAZQNwG",
+      "owner": "H7tb2ERnqkUnBqBu5cf7PqRcKWDHWi1ipdTM1X1vAUsY",
+      "amountRaw": "8172279725861",
+      "pct": 0.83,
       "excluded": false
     }
   ],
   "excludedCount": 1,
   "holders": null,
   "riskyExtensions": [],
-  "fetchedAt": "2026-10-01T17:40:40.504Z",
+  "fetchedAt": "2026-10-01T18:55:07.691Z",
   "rpcCalls": 4
 }
