@@ -3,7 +3,7 @@
   "program": "token-2022",
   "mintAuthority": "WV9PJN7XTmTLVwbutCLFxp8TyePee6Xq5mRq6Fti5Wc",
   "freezeAuthority": "WV9PJN7XTmTLVwbutCLFxp8TyePee6Xq5mRq6Fti5Wc",
-  "supplyRaw": "1901715862630",
+  "supplyRaw": "1901715470911",
   "decimals": 9,
   "isInitialized": true,
   "extensions": [
@@ -18,7 +18,7 @@
     "Pausable",
     "TokenMetadata"
   ],
-  "top10Pct": 59.62,
+  "top10Pct": 59.26,
   "topAccounts": [
     {
       "address": "5x3CsvSYkZSEJwsHc8sckK4QnVXVbEbQpQxPByS3uscS",
@@ -65,8 +65,8 @@
     {
       "address": "F3L4drnkirxAnqeFVpJiRgTUeNMdBFZnV4bwZKuyrSpy",
       "owner": "6GJbPKBtovsrMEEMcic5KMi5tswh9qSyT5ZYLMqEwNgt",
-      "amountRaw": "34842144489",
-      "pct": 1.83,
+      "amountRaw": "28113279333",
+      "pct": 1.47,
       "excluded": false
     },
     {
@@ -98,6 +98,13 @@
       "excluded": false
     },
     {
+      "address": "CiGhjdnp4ARJt79ZRzCW72AQuQRMteKymCR4D6wsTFdB",
+      "owner": "4HTy7aTjPm5PTSEws2yWRDPX6gjWM6sC2dV5mv9u8JsH",
+      "amountRaw": "15364428908",
+      "pct": 0.8,
+      "excluded": true
+    },
+    {
       "address": "DXUPoRr3sqDyADQAiS7cHtwWdoNuSAqNrbfWBX1NsHie",
       "owner": "mP4tnNkwAtRLpSZG5CqcH3CVPJHgVw7XH3j6YRyayQP",
       "amountRaw": "14459106488",
@@ -107,7 +114,7 @@
     {
       "address": "3gbzgS6FJBfFqdg86LoXTNX2XXeNXq28Co7mUa8Ljgvg",
       "owner": "2k5hrzuykwyTbUe8L7UriYAQhr5hijNLgBvEB4B9pP5y",
-      "amountRaw": "13686659735",
+      "amountRaw": "13686659554",
       "pct": 0.71,
       "excluded": false
     },
@@ -152,13 +159,6 @@
       "amountRaw": "10886831700",
       "pct": 0.57,
       "excluded": false
-    },
-    {
-      "address": "CiGhjdnp4ARJt79ZRzCW72AQuQRMteKymCR4D6wsTFdB",
-      "owner": "4HTy7aTjPm5PTSEws2yWRDPX6gjWM6sC2dV5mv9u8JsH",
-      "amountRaw": "10513795758",
-      "pct": 0.55,
-      "excluded": true
     }
   ],
   "excludedCount": 1,
@@ -170,6 +170,6 @@
     "TransferHook",
     "Pausable"
   ],
-  "fetchedAt": "2026-10-01T03:42:12.341Z",
+  "fetchedAt": "2026-10-01T04:43:12.679Z",
   "rpcCalls": 4
 }
