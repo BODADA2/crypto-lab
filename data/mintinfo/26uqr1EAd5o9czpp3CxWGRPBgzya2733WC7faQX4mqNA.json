@@ -11,20 +11,41 @@
     "TransferFeeConfig",
     "TokenMetadata"
   ],
-  "top10Pct": 95.19,
+  "top10Pct": 94.81,
   "topAccounts": [
     {
       "address": "2jpfRqyDjGyPyva7sJKoG243jSH6ZJuY4fA5iJ7EYegx",
       "owner": "4Dzbn321ifN1ms3rdNRZZy5dR1EAZwrQeqQcBJkFnCiy",
-      "amountRaw": "744462963434588",
-      "pct": 74.44,
+      "amountRaw": "356462963434588",
+      "pct": 35.64,
+      "excluded": false
+    },
+    {
+      "address": "CQxPCz8U1WF9w7AEnWukiqK3yB6MwzUdouQcXJpPFcgN",
+      "owner": "HkQ4iP3NDnVNh1TuXtXZjVBCDoXLR3gEyhLACPRLEUmN",
+      "amountRaw": "174240000000000",
+      "pct": 17.42,
       "excluded": false
     },
     {
       "address": "EcHXgnHmd65zhJMbytzdqFLNUKDKBwkE1oXrUGTGmxci",
       "owner": "GpMZbSM2GgvTKHJirzeGfMFoaZ8UR2X7F4v8vHTvxFbL",
-      "amountRaw": "159566181097612",
-      "pct": 15.95,
+      "amountRaw": "166115153038017",
+      "pct": 16.61,
+      "excluded": false
+    },
+    {
+      "address": "8tJZYL9VmfvUQp3Mzh3mfqMxikdLbRtecojA1UFPEbB3",
+      "owner": "F2rvGh5FYpXNvancXzJhFNPNvqSfbj3sFscjEBHvHWjC",
+      "amountRaw": "110065707470414",
+      "pct": 11,
+      "excluded": false
+    },
+    {
+      "address": "4JNZrC7AurSjrwR43exkZV8UEUBakb1v31bejgRTDyEV",
+      "owner": "G5zeqh2sxTyfdqHc8DWrzqzvbukX9dKKvBHQ4gDdG9MZ",
+      "amountRaw": "104940000000000",
+      "pct": 10.49,
       "excluded": false
     },
     {
@@ -131,27 +152,6 @@
       "amountRaw": "2768999945619",
       "pct": 0.27,
       "excluded": false
-    },
-    {
-      "address": "2u7VrVMNED6M7M91B5EyLTq8uWoJEAcUsE4MYj9tDprQ",
-      "owner": "GspR4jQpJ2g9zxD7U4dhuNUfbZJavmPXovm5kiEGBwr1",
-      "amountRaw": "2744404550655",
-      "pct": 0.27,
-      "excluded": false
-    },
-    {
-      "address": "8iFJLKuVkoAbe7ktydmyu6t5WXV5QtYP2p8P7B7c4Mxm",
-      "owner": "DQLokvkVCSmCA4EPvBtFgSHyy2abkRPwggdtZfEjC7Nm",
-      "amountRaw": "2664795984262",
-      "pct": 0.26,
-      "excluded": false
-    },
-    {
-      "address": "8tJZYL9VmfvUQp3Mzh3mfqMxikdLbRtecojA1UFPEbB3",
-      "owner": "F2rvGh5FYpXNvancXzJhFNPNvqSfbj3sFscjEBHvHWjC",
-      "amountRaw": "2623007356387",
-      "pct": 0.26,
-      "excluded": false
     }
   ],
   "excludedCount": 0,
@@ -159,6 +159,6 @@
   "riskyExtensions": [
     "TransferFeeConfig"
   ],
-  "fetchedAt": "2026-10-01T05:08:15.557Z",
+  "fetchedAt": "2026-10-01T07:30:21.753Z",
   "rpcCalls": 4
 }
