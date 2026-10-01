@@ -9,48 +9,55 @@
   "dexId": "orca",
   "url": "https://dexscreener.com/solana/hsqxf9l7tpwf1pkjwwsbnew2vytppgrfwwna4gq2n2x",
   "priceUsd": 24.66,
-  "liquidityUsd": 312220.66,
-  "fdvUsd": 148005,
-  "marketCapUsd": 148005,
+  "liquidityUsd": 312227.48,
+  "fdvUsd": 148009,
+  "marketCapUsd": 148009,
   "volume": {
-    "m5": 0,
-    "h1": 735.67,
-    "h6": 5972.38,
-    "h24": 591421.81
+    "m5": 174.1,
+    "h1": 1313.54,
+    "h6": 6536.76,
+    "h24": 591999.4
   },
-  "volume5m": 0,
-  "volume1h": 735.67,
-  "volume24h": 591421.81,
+  "volume5m": 174.1,
+  "volume1h": 1313.54,
+  "volume24h": 591999.4,
   "priceChange": {
     "m5": 0,
-    "h1": -0.01,
+    "h1": 0,
     "h6": -0.15,
     "h24": 1
   },
   "txns": {
     "m5": {
       "buys": 0,
-      "sells": 0
+      "sells": 2
     },
     "h1": {
-      "buys": 3,
-      "sells": 6
+      "buys": 4,
+      "sells": 10
     },
     "h6": {
-      "buys": 9,
-      "sells": 85
+      "buys": 11,
+      "sells": 86
     },
     "h24": {
-      "buys": 3686,
-      "sells": 3765
+      "buys": 3687,
+      "sells": 3769
     }
   },
   "holders": null,
-  "top10Pct": 100,
-  "mintAuthority": "UNKNOWN",
-  "freezeAuthority": "UNKNOWN",
+  "top10Pct": 96.36,
+  "mintAuthority": "7pt9tkctJPK7PPNQJ77GKg8ZffSF6QxoMiCFYHxrtaCj",
+  "freezeAuthority": "JDq14BWvqCRFNu1krb12bcRpbGtJZ1FLEakMw6FdxJNs",
   "boostsActive": 0,
   "pairCount": 4,
   "source": "dexscreener",
-  "fetchedAt": "2026-10-01T09:12:53.424Z"
+  "fetchedAt": "2026-10-01T09:30:14.317Z",
+  "decimals": 8,
+  "riskyExtensions": [
+    "PermanentDelegate",
+    "DefaultAccountState",
+    "Pausable",
+    "TransferHook"
+  ]
 }
