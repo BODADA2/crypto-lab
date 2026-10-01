@@ -1,0 +1,4380 @@
+{
+  "computedAt": "2026-10-01T05:25:56.234Z",
+  "signals": [
+    {
+      "mint": "0x6572EADe9Fb17F4027baF92FEAC222B9AA746bd0",
+      "score": 56,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 90 $ vs moyenne 9 $ (z=3.25)",
+        "volume/liquidité 0.1 %",
+        "achats/ventes 5 min 3/0"
+      ],
+      "components": {
+        "zScore": 3.2488215452326052,
+        "volumeM5": 89.69,
+        "baselineMean": 9.021666666666667,
+        "baselineStd": 24.830029045980652,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.0008416118259926965,
+        "ageMin": 6349.162683333333,
+        "liquidityUsd": 106569.32,
+        "buySellRatio": 3
+      },
+      "computedAt": "2026-10-01T05:25:56.231Z"
+    },
+    {
+      "mint": "0x0acF18882f50C87b9A2d314Ed29b77c8DF962e1c",
+      "score": 50,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 159 $ vs moyenne 0 $ (z=159.14)",
+        "volume/liquidité 0.7 %",
+        "achats/ventes 5 min 1/0"
+      ],
+      "components": {
+        "zScore": 159.14416666666665,
+        "volumeM5": 159.16,
+        "baselineMean": 0.015833333333333335,
+        "baselineStd": 0.054848275573014436,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.00704094195381273,
+        "ageMin": 956.02935,
+        "liquidityUsd": 22604.93,
+        "buySellRatio": 1
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0xA81551F7839411fACac53976A4F88dB57C6004A6",
+      "score": 50,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 24 $ vs moyenne 0 $ (z=24.47)",
+        "volume/liquidité 0.1 %",
+        "achats/ventes 5 min 1/1"
+      ],
+      "components": {
+        "zScore": 24.47,
+        "volumeM5": 24.47,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.0010302472509197281,
+        "ageMin": 5399.462683333333,
+        "liquidityUsd": 23751.58,
+        "buySellRatio": 1
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0xA241395aDCdF456F6Dc04d1Bc02B18e6f4c4052c",
+      "score": 48,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 16427 $ vs moyenne 8166 $ (z=3.04)",
+        "volume/liquidité 30.8 %",
+        "achats/ventes 5 min 157/146"
+      ],
+      "components": {
+        "zScore": 3.04135889076664,
+        "volumeM5": 16427.34,
+        "baselineMean": 8165.649999999999,
+        "baselineStd": 2716.446922815303,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.30826667527376,
+        "ageMin": 7971.946016666667,
+        "liquidityUsd": 53289.38,
+        "buySellRatio": 1.0753424657534247
+      },
+      "computedAt": "2026-10-01T05:25:56.231Z"
+    },
+    {
+      "mint": "0xFE936755185353b63a81dD72b47533Eb6021018E",
+      "score": 47,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 109 $ vs moyenne 11 $ (z=3.71)",
+        "volume/liquidité 0.5 %",
+        "achats/ventes 5 min 0/1"
+      ],
+      "components": {
+        "zScore": 3.71331732113432,
+        "volumeM5": 109.35,
+        "baselineMean": 11.060833333333333,
+        "baselineStd": 26.469369075261774,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.005351733966699343,
+        "ageMin": 6759.97935,
+        "liquidityUsd": 20432.63,
+        "buySellRatio": 0
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0xCc53Be3f8713ce9ade2a387BAa4e5E1c48F8B64d",
+      "score": 41,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 97778 $ vs moyenne 64175 $ (z=1.77)",
+        "volume/liquidité 107.2 %",
+        "achats/ventes 5 min 127/87"
+      ],
+      "components": {
+        "zScore": 1.7704342027414381,
+        "volumeM5": 97778.33,
+        "baselineMean": 64174.82272727273,
+        "baselineStd": 18980.37623804022,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 1.071512694267046,
+        "ageMin": 205.87935,
+        "liquidityUsd": 91252.61,
+        "buySellRatio": 1.4597701149425288
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0x1f8831066C9B39077bafd0b92045e6AFC6eb1De9",
+      "score": 34,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 495 $ vs moyenne 81 $ (z=2.70)",
+        "volume/liquidité 1.6 %",
+        "achats/ventes 5 min 1/1"
+      ],
+      "components": {
+        "zScore": 2.703804907292314,
+        "volumeM5": 494.88,
+        "baselineMean": 80.85666666666668,
+        "baselineStd": 153.12618607085486,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.01560241338009097,
+        "ageMin": 14502.112683333333,
+        "liquidityUsd": 31718.17,
+        "buySellRatio": 1
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0x60042749755E2aC8cc5d9D8faf9c8Ab20C3980D1",
+      "score": 30,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 1124 $ vs moyenne 567 $ (z=1.04)",
+        "volume/liquidité 5.6 %",
+        "achats/ventes 5 min 5/1"
+      ],
+      "components": {
+        "zScore": 1.0387050850335255,
+        "volumeM5": 1124.28,
+        "baselineMean": 566.5583333333333,
+        "baselineStd": 536.9393822199931,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.05615683234467312,
+        "ageMin": 388.5460166666667,
+        "liquidityUsd": 20020.36,
+        "buySellRatio": 5
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0xb6039AC45d5d355dd98f318dFA622d699E9556e8",
+      "score": 29,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 62803 $ vs moyenne 42928 $ (z=1.43)",
+        "volume/liquidité 31.5 %",
+        "achats/ventes 5 min 72/60"
+      ],
+      "components": {
+        "zScore": 1.4279516128577041,
+        "volumeM5": 62803.14,
+        "baselineMean": 42928.35083333333,
+        "baselineStd": 13918.391202970824,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.3154526023764549,
+        "ageMin": 594.5960166666666,
+        "liquidityUsd": 199088.99,
+        "buySellRatio": 1.2
+      },
+      "computedAt": "2026-10-01T05:25:56.231Z"
+    },
+    {
+      "mint": "0x9920144345a85168526Bc89665Ee85b8A2cAfCDB",
+      "score": 28,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 23 $ vs moyenne 6 $ (z=2.20)",
+        "volume/liquidité 0.1 %",
+        "achats/ventes 5 min 0/1"
+      ],
+      "components": {
+        "zScore": 2.203748633587095,
+        "volumeM5": 22.56,
+        "baselineMean": 5.9558333333333335,
+        "baselineStd": 7.534510249310813,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.000903710380051074,
+        "ageMin": 924.37935,
+        "liquidityUsd": 24963.75,
+        "buySellRatio": 0
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0x8F23191a2A697Df832aCB9fE9FcB7a23E75Ca184",
+      "score": 22,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 4175 $ vs moyenne 2301 $ (z=1.46)",
+        "volume/liquidité 14.2 %",
+        "achats/ventes 5 min 54/66"
+      ],
+      "components": {
+        "zScore": 1.4580648345858036,
+        "volumeM5": 4175.28,
+        "baselineMean": 2301.169166666666,
+        "baselineStd": 1285.3412200052937,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.1417177551783759,
+        "ageMin": 4971.012683333333,
+        "liquidityUsd": 29461.94,
+        "buySellRatio": 0.8181818181818182
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0xAf06CeaaA2688E676c206Ce2449c22723400e96E",
+      "score": 21,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 51 $ vs moyenne 30 $ (z=0.49)",
+        "volume/liquidité 0.1 %",
+        "achats/ventes 5 min 4/0"
+      ],
+      "components": {
+        "zScore": 0.4869612778444019,
+        "volumeM5": 50.74,
+        "baselineMean": 29.56833333333334,
+        "baselineStd": 43.47710512093657,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.0014171608854658057,
+        "ageMin": 6275.77935,
+        "liquidityUsd": 35803.98,
+        "buySellRatio": 4
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0x3458e003F6ED93df0F537b8AcaC6FbE08E41247f",
+      "score": 20,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 1690 $ vs moyenne 944 $ (z=1.24)",
+        "volume/liquidité 7.8 %",
+        "achats/ventes 5 min 15/12"
+      ],
+      "components": {
+        "zScore": 1.2361963276195187,
+        "volumeM5": 1690,
+        "baselineMean": 944.4508333333333,
+        "baselineStd": 603.0993216929655,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.07823947297150279,
+        "ageMin": 11605.262683333332,
+        "liquidityUsd": 21600.35,
+        "buySellRatio": 1.25
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0xBe71cD8B74F4b988e36c08C41347Ad6C827F986F",
+      "score": 17,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 988 $ vs moyenne 943 $ (z=0.06)",
+        "volume/liquidité 2.9 %",
+        "achats/ventes 5 min 5/1"
+      ],
+      "components": {
+        "zScore": 0.06316667335176686,
+        "volumeM5": 988.17,
+        "baselineMean": 943.2741666666666,
+        "baselineStd": 710.7519036710135,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.029137739117614535,
+        "ageMin": 1493.2626833333334,
+        "liquidityUsd": 33913.75,
+        "buySellRatio": 5
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0x3627d6c7fb5d9F278931D9268CCf30f955e07961",
+      "score": 15,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 84483 $ vs moyenne 99629 $ (z=-0.60)",
+        "volume/liquidité 73.1 %",
+        "achats/ventes 5 min 72/71"
+      ],
+      "components": {
+        "zScore": -0.6017444280190414,
+        "volumeM5": 84482.69,
+        "baselineMean": 99629.49916666669,
+        "baselineStd": 25171.498831373287,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.7307256277505673,
+        "ageMin": 1003.1126833333333,
+        "liquidityUsd": 115614.79,
+        "buySellRatio": 1.0140845070422535
+      },
+      "computedAt": "2026-10-01T05:25:56.230Z"
+    },
+    {
+      "mint": "0xFd1a35778D9798F13c6fb97d29c07a5ce3F7fb5E",
+      "score": 15,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 781 $ vs moyenne 2138 $ (z=-0.77)",
+        "volume/liquidité 1.4 %",
+        "achats/ventes 5 min 12/4"
+      ],
+      "components": {
+        "zScore": -0.7734090998462892,
+        "volumeM5": 780.5200000000001,
+        "baselineMean": 2138.155,
+        "baselineStd": 1755.3905174762265,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.013950073421439063,
+        "ageMin": 2117.4126833333335,
+        "liquidityUsd": 55950.96,
+        "buySellRatio": 3
+      },
+      "computedAt": "2026-10-01T05:25:56.231Z"
+    },
+    {
+      "mint": "0x77E187005D6b5eb6AaC43bf1d0BFAbbcd87A2aFd",
+      "score": 14,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 16766 $ vs moyenne 43493 $ (z=-1.43)",
+        "volume/liquidité 37.5 %",
+        "achats/ventes 5 min 36/26"
+      ],
+      "components": {
+        "zScore": -1.4291798635114477,
+        "volumeM5": 16765.65,
+        "baselineMean": 43492.520000000004,
+        "baselineStd": 18700.84422707508,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.3752208939243652,
+        "ageMin": 201.74601666666666,
+        "liquidityUsd": 44682.08,
+        "buySellRatio": 1.3846153846153846
+      },
+      "computedAt": "2026-10-01T05:25:56.231Z"
+    },
+    {
+      "mint": "0x60042b65A0c0a90ba75D17879850b6F99d9422eB",
+      "score": 10,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 58412 $ vs moyenne 66925 $ (z=-0.43)",
+        "volume/liquidité 33.5 %",
+        "achats/ventes 5 min 73/95"
+      ],
+      "components": {
+        "zScore": -0.42556696277079054,
+        "volumeM5": 58411.57,
+        "baselineMean": 66924.87583333334,
+        "baselineStd": 20004.621077502645,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.3352575832268499,
+        "ageMin": 307.12935,
+        "liquidityUsd": 174228.93,
+        "buySellRatio": 0.7684210526315789
+      },
+      "computedAt": "2026-10-01T05:25:56.231Z"
+    },
+    {
+      "mint": "0xFAd17D7cc41D9C9CA4A459Da798a4446dD217974",
+      "score": 10,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 403 $ vs moyenne 1351 $ (z=-1.06)",
+        "volume/liquidité 0.6 %",
+        "achats/ventes 5 min 7/3"
+      ],
+      "components": {
+        "zScore": -1.0560476240280003,
+        "volumeM5": 403.36,
+        "baselineMean": 1351.0333333333335,
+        "baselineStd": 897.3774589054013,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.0055901924386604716,
+        "ageMin": 5616.22935,
+        "liquidityUsd": 72154.94,
+        "buySellRatio": 2.3333333333333335
+      },
+      "computedAt": "2026-10-01T05:25:56.231Z"
+    },
+    {
+      "mint": "0x25db3541FCB9c41B1CA05b665a260D9d094B4B9C",
+      "score": 10,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 5 $ vs moyenne 1 $ (z=0.77)",
+        "volume/liquidité 0.0 %",
+        "achats/ventes 5 min 1/0"
+      ],
+      "components": {
+        "zScore": 0.774864834965024,
+        "volumeM5": 4.9,
+        "baselineMean": 1.33,
+        "baselineStd": 4.6072551481332145,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.00003178750687404837,
+        "ageMin": 3338.6960166666668,
+        "liquidityUsd": 154148.61,
+        "buySellRatio": 1
+      },
+      "computedAt": "2026-10-01T05:25:56.231Z"
+    },
+    {
+      "mint": "0x945626601703d126877C33a3d0Def244c833550d",
+      "score": 8,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 185 $ vs moyenne 221 $ (z=-0.15)",
+        "volume/liquidité 0.6 %",
+        "achats/ventes 5 min 4/2"
+      ],
+      "components": {
+        "zScore": -0.1464122728099807,
+        "volumeM5": 184.73,
+        "baselineMean": 221.39583333333334,
+        "baselineStd": 250.42868763412773,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.005707841213684853,
+        "ageMin": 1931.82935,
+        "liquidityUsd": 32364.25,
+        "buySellRatio": 2
+      },
+      "computedAt": "2026-10-01T05:25:56.231Z"
+    },
+    {
+      "mint": "0x0441A16767215fe33056a0fB9cE2E4DeE842FA8f",
+      "score": 8,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 89 $ vs moyenne 328 $ (z=-0.43)",
+        "volume/liquidité 0.4 %",
+        "achats/ventes 5 min 2/0"
+      ],
+      "components": {
+        "zScore": -0.4335870999313587,
+        "volumeM5": 88.5,
+        "baselineMean": 328.07,
+        "baselineStd": 552.5302760112706,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.0038926936120238045,
+        "ageMin": 2278.2460166666665,
+        "liquidityUsd": 22734.9,
+        "buySellRatio": 2
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0x9b40671d11FD1e85976618FB468C1C03CaA7C2B4",
+      "score": 4,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 116 $ vs moyenne 242 $ (z=-0.29)",
+        "volume/liquidité 0.2 %",
+        "achats/ventes 5 min 3/2"
+      ],
+      "components": {
+        "zScore": -0.2929651130659487,
+        "volumeM5": 115.65,
+        "baselineMean": 242.08916666666667,
+        "baselineStd": 431.5843799401611,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.0017044163320960534,
+        "ageMin": 5740.57935,
+        "liquidityUsd": 67853.14,
+        "buySellRatio": 1.5
+      },
+      "computedAt": "2026-10-01T05:25:56.231Z"
+    },
+    {
+      "mint": "0x5f62C57e5C537887117EeF828b7E3Ad41C009FEb",
+      "score": 3,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 178 $ vs moyenne 279 $ (z=-0.23)",
+        "volume/liquidité 0.0 %",
+        "achats/ventes 5 min 4/3"
+      ],
+      "components": {
+        "zScore": -0.23376306375062716,
+        "volumeM5": 177.87,
+        "baselineMean": 279.32749999999993,
+        "baselineStd": 434.01852445017727,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.0004994607216978576,
+        "ageMin": 80828.36268333334,
+        "liquidityUsd": 356124.1,
+        "buySellRatio": 1.3333333333333333
+      },
+      "computedAt": "2026-10-01T05:25:56.231Z"
+    },
+    {
+      "mint": "0x448168B7C3736FB55C552dCe72D5f1F5B30d77Cb",
+      "score": 3,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 311 $ vs moyenne 2419 $ (z=-1.31)",
+        "volume/liquidité 0.4 %",
+        "achats/ventes 5 min 4/3"
+      ],
+      "components": {
+        "zScore": -1.3107332219748407,
+        "volumeM5": 310.94,
+        "baselineMean": 2418.996666666666,
+        "baselineStd": 1608.3033765563086,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.004443865788793323,
+        "ageMin": 1836.37935,
+        "liquidityUsd": 69970.61,
+        "buySellRatio": 1.3333333333333333
+      },
+      "computedAt": "2026-10-01T05:25:56.231Z"
+    },
+    {
+      "mint": "0xa4dDF89A40A35264E9D7F896a1ef01C59b1e977a",
+      "score": 3,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 652 $ vs moyenne 1408 $ (z=-0.47)",
+        "volume/liquidité 1.4 %",
+        "achats/ventes 5 min 4/3"
+      ],
+      "components": {
+        "zScore": -0.4684032306342314,
+        "volumeM5": 651.8,
+        "baselineMean": 1408.2975,
+        "baselineStd": 1615.0561108976142,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.014183677976978396,
+        "ageMin": 2986.6626833333335,
+        "liquidityUsd": 45954.23,
+        "buySellRatio": 1.3333333333333333
+      },
+      "computedAt": "2026-10-01T05:25:56.231Z"
+    },
+    {
+      "mint": "0xc6080EA62997B33C8e46360850cB4473913b61f0",
+      "score": 2,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 546 $ vs moyenne 491 $ (z=0.10)",
+        "volume/liquidité 1.4 %",
+        "achats/ventes 5 min 2/2"
+      ],
+      "components": {
+        "zScore": 0.0974692114999066,
+        "volumeM5": 546.46,
+        "baselineMean": 491.1933333333333,
+        "baselineStd": 567.0166590679731,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.014216730869942905,
+        "ageMin": 1795.3960166666666,
+        "liquidityUsd": 38437.81,
+        "buySellRatio": 1
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0xc32Ab2e562adE6fBa6D3d1E3960d49b0957Ef645",
+      "score": 2,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 1711 $ vs moyenne 3657 $ (z=-0.45)",
+        "volume/liquidité 6.6 %",
+        "achats/ventes 5 min 4/5"
+      ],
+      "components": {
+        "zScore": -0.45485764465552614,
+        "volumeM5": 1710.5,
+        "baselineMean": 3656.86625,
+        "baselineStd": 4279.066808856267,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.065704158049518,
+        "ageMin": 133.09601666666666,
+        "liquidityUsd": 26033.36,
+        "buySellRatio": 0.8
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0x94641b97010608C3827fB058074889f19868FF33",
+      "score": 1,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 5751 $ vs moyenne 14162 $ (z=-0.49)",
+        "volume/liquidité 1.8 %",
+        "achats/ventes 5 min 12/30"
+      ],
+      "components": {
+        "zScore": -0.4870474997314193,
+        "volumeM5": 5751.299999999999,
+        "baselineMean": 14161.693333333335,
+        "baselineStd": 17268.117253391545,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.01818921125149762,
+        "ageMin": 1796.5460166666667,
+        "liquidityUsd": 316192.93,
+        "buySellRatio": 0.4
+      },
+      "computedAt": "2026-10-01T05:25:56.230Z"
+    },
+    {
+      "mint": "0x80AE70cFcB6725ea7F5Ace439EB3E56518131299",
+      "score": 1,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 5832 $ vs moyenne 12909 $ (z=-0.26)",
+        "volume/liquidité 4.4 %",
+        "achats/ventes 5 min 7/28"
+      ],
+      "components": {
+        "zScore": -0.2644576180626541,
+        "volumeM5": 5832.17,
+        "baselineMean": 12908.982499999998,
+        "baselineStd": 26759.72260448701,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.04380029809169346,
+        "ageMin": 588.2460166666667,
+        "liquidityUsd": 133153.66,
+        "buySellRatio": 0.25
+      },
+      "computedAt": "2026-10-01T05:25:56.231Z"
+    },
+    {
+      "mint": "0xC4bcDaDF30E264De7b94099bb535669aD618e39e",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 5797 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 651.02935,
+        "liquidityUsd": 5797.19,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.231Z"
+    },
+    {
+      "mint": "0xB9d3824149aD8ac984153CeEc91D5a2405d1FB95",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 94507.62935,
+        "liquidityUsd": 57174.71,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.231Z"
+    },
+    {
+      "mint": "0xfE1F33Eb8D9556ABa5228e3256b26C1b4A35216e",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 123 $ vs moyenne 383 $ (z=-0.57)",
+        "volume/liquidité 0.4 %",
+        "achats/ventes 5 min 1/2"
+      ],
+      "components": {
+        "zScore": -0.5729400612421617,
+        "volumeM5": 122.95,
+        "baselineMean": 382.5941666666667,
+        "baselineStd": 453.178585738525,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.004084831603273978,
+        "ageMin": 1626.2126833333334,
+        "liquidityUsd": 30099.16,
+        "buySellRatio": 0.5
+      },
+      "computedAt": "2026-10-01T05:25:56.231Z"
+    },
+    {
+      "mint": "0xbc9E7b1c5C0081f4aE85e71eC95703d3dEC9ffaD",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 97 $ vs moyenne 335 $ (z=-0.44)",
+        "volume/liquidité 0.0 %",
+        "achats/ventes 5 min 0/1"
+      ],
+      "components": {
+        "zScore": -0.4360458093401409,
+        "volumeM5": 96.53,
+        "baselineMean": 335.2758333333333,
+        "baselineStd": 547.524659610013,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.0004890676434306253,
+        "ageMin": 78284.39601666667,
+        "liquidityUsd": 197375.56,
+        "buySellRatio": 0
+      },
+      "computedAt": "2026-10-01T05:25:56.231Z"
+    },
+    {
+      "mint": "0xd9A024ff5946067B70B616BCD67eF2B70F987F3c",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "historique insuffisant (0 fenêtres, min 6)",
+        "volume/liquidité 8.2 %",
+        "achats/ventes 5 min 53/11",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": null,
+        "volumeM5": 4709.23,
+        "baselineMean": null,
+        "baselineStd": null,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.08197090270812786,
+        "ageMin": 11.912683333333334,
+        "liquidityUsd": 57450.02,
+        "buySellRatio": 4.818181818181818
+      },
+      "computedAt": "2026-10-01T05:25:56.231Z"
+    },
+    {
+      "mint": "0xC1A0f01DfA14d8c87Ff975d4005fBD7Cd4688420",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 14 $ (z=-0.35)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": -0.3545837784759584,
+        "volumeM5": 0,
+        "baselineMean": 13.621666666666664,
+        "baselineStd": 38.41593297136757,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 3337.4960166666665,
+        "liquidityUsd": 124925.08,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.231Z"
+    },
+    {
+      "mint": "0x739958e366a0509D4c51c1c164C509ffF154ADEe",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 1038 $ (z=-0.54)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": -0.5380162743998994,
+        "volumeM5": 0,
+        "baselineMean": 1038.0216666666668,
+        "baselineStd": 1929.349939877694,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 3822.0626833333336,
+        "liquidityUsd": 238576.66,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.231Z"
+    },
+    {
+      "mint": "0x1bB3F098C0aeb29D0430554881d4e908aC390ba3",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 36 $ vs moyenne 1000 $ (z=-0.77)",
+        "volume/liquidité 0.0 %",
+        "achats/ventes 5 min 3/5"
+      ],
+      "components": {
+        "zScore": -0.7728194571137925,
+        "volumeM5": 35.92,
+        "baselineMean": 999.9191666666666,
+        "baselineStd": 1247.3795241476744,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.00039688265907845884,
+        "ageMin": 466.69601666666665,
+        "liquidityUsd": 90505.34,
+        "buySellRatio": 0.6
+      },
+      "computedAt": "2026-10-01T05:25:56.231Z"
+    },
+    {
+      "mint": "0xe1Fa763637268FF1dF43C6826701D92CF1EAa1f1",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 551.97935,
+        "liquidityUsd": 77248.34,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.231Z"
+    },
+    {
+      "mint": "0xaf0339D66E6B707A79cCDC35E2B57F4701F93536",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 370 $ (z=-0.59)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": -0.5890132105817627,
+        "volumeM5": 0,
+        "baselineMean": 369.7149999999999,
+        "baselineStd": 627.6854124117793,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 2039.6626833333332,
+        "liquidityUsd": 115836,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.231Z"
+    },
+    {
+      "mint": "0xe8729Dc9dCA85167e06b7E9c66a58b22457c5F30",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 56 $ (z=-0.41)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": -0.41206285079970795,
+        "volumeM5": 0,
+        "baselineMean": 56.27166666666667,
+        "baselineStd": 136.56088278149278,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 8009.812683333334,
+        "liquidityUsd": 74075.61,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.231Z"
+    },
+    {
+      "mint": "0x2a13008CC2F5A853F6Fb21cbD90841806C64b247",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 12 $ (z=-0.40)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": -0.4017313986065626,
+        "volumeM5": 0,
+        "baselineMean": 12.159999999999998,
+        "baselineStd": 30.26898082195698,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 4266.062683333334,
+        "liquidityUsd": 101390.64,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.231Z"
+    },
+    {
+      "mint": "0xdaB0E8CE3b999D16898709A6DfC44c953bFc43b1",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 22 $ vs moyenne 182 $ (z=-0.25)",
+        "volume/liquidité 0.0 %",
+        "achats/ventes 5 min 0/2"
+      ],
+      "components": {
+        "zScore": -0.25406663330486734,
+        "volumeM5": 21.82,
+        "baselineMean": 182.0041666666667,
+        "baselineStd": 630.480927711801,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.0002642014963830307,
+        "ageMin": 94878.51268333333,
+        "liquidityUsd": 82588.48,
+        "buySellRatio": 0
+      },
+      "computedAt": "2026-10-01T05:25:56.231Z"
+    },
+    {
+      "mint": "0x45593D952D9A83bA7f100Ec4f874f5905d854EEA",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 998 $ (z=-1.17)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": -1.1702581097396154,
+        "volumeM5": 0,
+        "baselineMean": 998.2633333333333,
+        "baselineStd": 853.0283405217749,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 7892.92935,
+        "liquidityUsd": 105538.75,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.231Z"
+    },
+    {
+      "mint": "0x368580343A637B8b91d27C8A8bE124f534329A30",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 17 $ (z=-0.29)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": -0.28867513459481287,
+        "volumeM5": 0,
+        "baselineMean": 17.258333333333333,
+        "baselineStd": 59.78462037458575,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 10866.67935,
+        "liquidityUsd": 103206.81,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.231Z"
+    },
+    {
+      "mint": "0x3E17c94Ba8112380eF81A43fc33b08Ca6284fB33",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 9 $ (z=-0.29)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": -0.2886751345948129,
+        "volumeM5": 0,
+        "baselineMean": 8.638333333333334,
+        "baselineStd": 29.9240644520983,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 5187.012683333333,
+        "liquidityUsd": 86842.33,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.231Z"
+    },
+    {
+      "mint": "0x6457dA6FCA3C807b7f430770DbBe8aB5a767234A",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 35 $ (z=-0.31)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": -0.3061059084057557,
+        "volumeM5": 0,
+        "baselineMean": 35.11666666666667,
+        "baselineStd": 114.72064309231861,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 8303.062683333334,
+        "liquidityUsd": 119129.97,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.231Z"
+    },
+    {
+      "mint": "0x28b0Ed2365C8C25B4542D06725AcB7662BEf6edf",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 70 $ (z=-0.33)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": -0.3264808369571082,
+        "volumeM5": 0,
+        "baselineMean": 70.34166666666667,
+        "baselineStd": 215.4541973191152,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 6451.946016666667,
+        "liquidityUsd": 80799.28,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.231Z"
+    },
+    {
+      "mint": "0x9ac0EFE775ef5EAdF1Fd106A6efE19D0E1421e18",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 15 $ (z=-0.44)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": -0.4389547513771934,
+        "volumeM5": 0,
+        "baselineMean": 14.795833333333334,
+        "baselineStd": 33.70696703227912,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 6371.77935,
+        "liquidityUsd": 76962.51,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.231Z"
+    },
+    {
+      "mint": "0xf703ee7C1A9dd263Ce46990e119c69D8fFb98D2A",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 4 $ (z=-0.29)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": -0.2886751345948129,
+        "volumeM5": 0,
+        "baselineMean": 4.138333333333333,
+        "baselineStd": 14.335607183978404,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 7662.496016666667,
+        "liquidityUsd": 68069.85,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.231Z"
+    },
+    {
+      "mint": "0x93cfF6Dc0cf59680b8d85b9F3312a24bF1a7c1D8",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 396 $ vs moyenne 1191 $ (z=-0.39)",
+        "volume/liquidité 1.0 %",
+        "achats/ventes 5 min 11/15"
+      ],
+      "components": {
+        "zScore": -0.39305685038890237,
+        "volumeM5": 396.27,
+        "baselineMean": 1191.3541666666667,
+        "baselineStd": 2022.8223115307273,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.009754100761606056,
+        "ageMin": 483.19601666666665,
+        "liquidityUsd": 40625.99,
+        "buySellRatio": 0.7333333333333333
+      },
+      "computedAt": "2026-10-01T05:25:56.231Z"
+    },
+    {
+      "mint": "0xfB4038D79ca3d2B3CB5dd2Fe66A192b77Ee36E4d",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 992.0626833333333,
+        "liquidityUsd": 52467.48,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.231Z"
+    },
+    {
+      "mint": "0x6d1f3BAefB22D725b8068E60105b45C8a97Da1fA",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 51 $ (z=-0.35)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": -0.3538506635412367,
+        "volumeM5": 0,
+        "baselineMean": 50.54,
+        "baselineStd": 142.8286144618469,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 4052.02935,
+        "liquidityUsd": 63991.26,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.231Z"
+    },
+    {
+      "mint": "0x8E68D48cB5671Dbfe3ca9fbbF240fF09fE571E90",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 52 $ (z=-0.99)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": -0.9876844210525366,
+        "volumeM5": 0,
+        "baselineMean": 51.79416666666666,
+        "baselineStd": 52.439995572139985,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 1936.3960166666666,
+        "liquidityUsd": 53466.85,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.231Z"
+    },
+    {
+      "mint": "0x68DaE2aab5E80dcFb379B332D9161cF0328FffaB",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 19 $ (z=-0.30)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": -0.3040446906237035,
+        "volumeM5": 0,
+        "baselineMean": 18.647499999999997,
+        "baselineStd": 61.331444274680024,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 3179.5460166666667,
+        "liquidityUsd": 55827.85,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.231Z"
+    },
+    {
+      "mint": "0xBf818eFe65aac127AC8f9Fec6fEC203ee222C851",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 0 $ (z=-0.18)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": -0.18000000000000002,
+        "volumeM5": 0,
+        "baselineMean": 0.18000000000000002,
+        "baselineStd": 0.5550593743834159,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 3594.9960166666665,
+        "liquidityUsd": 60066.41,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.231Z"
+    },
+    {
+      "mint": "0x47569d49471bDBaBFaf5531c0F74d9f2dE82A11A",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 21 $ (z=-0.42)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": -0.4199674840184923,
+        "volumeM5": 0,
+        "baselineMean": 21.376666666666665,
+        "baselineStd": 50.90076608341752,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 11959.512683333332,
+        "liquidityUsd": 55435.81,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.231Z"
+    },
+    {
+      "mint": "0x015E148989b3ead9cFADc11e33cADFfe1924FdcF",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 101 $ (z=-0.29)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": -0.2886751345948129,
+        "volumeM5": 0,
+        "baselineMean": 101.08416666666666,
+        "baselineStd": 350.1658250148539,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 7764.662683333333,
+        "liquidityUsd": 55494.24,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.231Z"
+    },
+    {
+      "mint": "0xA4ABB0B9309176Bc3032B08A3D9597309a484F36",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 5817.37935,
+        "liquidityUsd": 44432.53,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0x250f720fafeCEeDAedf0578Ac84Aa2D1c2381E18",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 0 $ (z=-0.01)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": -0.014166666666666668,
+        "volumeM5": 0,
+        "baselineMean": 0.014166666666666668,
+        "baselineStd": 0.049074772881118195,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 7883.77935,
+        "liquidityUsd": 42614.82,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0x72a28368b211d3E5cAB66c253A179a09eEd8b101",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 659.17935,
+        "liquidityUsd": 28773.91,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0xe36Dc5d02BDbF9601c9aBa190411BbC8A6ff425f",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 20 $ vs moyenne 145 $ (z=-0.43)",
+        "volume/liquidité 0.0 %",
+        "achats/ventes 5 min 1/0"
+      ],
+      "components": {
+        "zScore": -0.4342616699656174,
+        "volumeM5": 19.82,
+        "baselineMean": 145.47833333333332,
+        "baselineStd": 289.3608670166131,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.0004803702583432219,
+        "ageMin": 82695.62935,
+        "liquidityUsd": 41259.84,
+        "buySellRatio": 1
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0x4d0873E333b48262B4F8bA523e0783CfCf53a553",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 88 $ vs moyenne 237 $ (z=-0.25)",
+        "volume/liquidité 0.2 %",
+        "achats/ventes 5 min 1/1"
+      ],
+      "components": {
+        "zScore": -0.24810513603336692,
+        "volumeM5": 88.47,
+        "baselineMean": 236.69333333333336,
+        "baselineStd": 597.4214629454476,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.002351314631252631,
+        "ageMin": 2366.096016666667,
+        "liquidityUsd": 37625.76,
+        "buySellRatio": 1
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0xA905d663A8cEb43Bf9FB1b866bbA7604a0b4791C",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 10 $ (z=-1.06)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": -1.0572116137658891,
+        "volumeM5": 0,
+        "baselineMean": 9.614166666666666,
+        "baselineStd": 9.093890514898982,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 1986.4626833333334,
+        "liquidityUsd": 35107.4,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0xD17C81cB01d44cC6e822936e8F098960001b47D2",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 63 $ (z=-0.98)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": -0.9823938502839386,
+        "volumeM5": 0,
+        "baselineMean": 63.13750000000001,
+        "baselineStd": 64.26903016723034,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 17402.062683333334,
+        "liquidityUsd": 28224.11,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0x577B7a9DEbd3C7D2373CE50b3E6EBE633E121245",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 4 $ (z=-0.29)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": -0.2886751345948129,
+        "volumeM5": 0,
+        "baselineMean": 4.260833333333333,
+        "baselineStd": 14.75995963183278,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 2126.962683333333,
+        "liquidityUsd": 39967.51,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0x0A15263332fd28b63cf1210A91c7F7221dcA1E18",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 9 $ (z=-0.43)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": -0.4271695338186607,
+        "volumeM5": 0,
+        "baselineMean": 8.885,
+        "baselineStd": 20.799704324821544,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 2445.37935,
+        "liquidityUsd": 37439.98,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0xf2AD0505968862195Ee3bFd3E8A2C430578C1aAd",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 7 $ (z=-0.29)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": -0.2886751345948129,
+        "volumeM5": 0,
+        "baselineMean": 7.3133333333333335,
+        "baselineStd": 25.334129812040775,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 2619.9460166666668,
+        "liquidityUsd": 30878.21,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0xf1740D428A469BD270C5DE0710A2f7d887A650fb",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 7655.712683333333,
+        "liquidityUsd": 31020.7,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0xbA4df12D2d823663c8d6a343545EE75baBa5CfEA",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 34 $ (z=-0.58)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": -0.5840354062326738,
+        "volumeM5": 0,
+        "baselineMean": 34.434999999999995,
+        "baselineStd": 58.96046649315887,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 3563.82935,
+        "liquidityUsd": 31862.14,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0x45e57a964CBc1280F7C9222148e6DffcC46F2B26",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 7911.47935,
+        "liquidityUsd": 37879.84,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0x360462B4D2B48335f86003167A249247EDc7061E",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 3234.0460166666667,
+        "liquidityUsd": 31410.36,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0x6573737871551a9a94D599659939DC4C98801e18",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 6304.746016666667,
+        "liquidityUsd": 32952.06,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0x9D6967E7f5ed93ba3fbBcB03eC2E13b617591E18",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 7492.346016666666,
+        "liquidityUsd": 32565.96,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0x63AeF08172ABa01aCD9Bd6d01512E499A35DB8Be",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 3374.6960166666668,
+        "liquidityUsd": 28949.92,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0xbd9Fceaf34CE6FCCf225cC17A17Bf868924b2480",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 177 $ (z=-0.76)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": -0.7644450727271421,
+        "volumeM5": 0,
+        "baselineMean": 177.45833333333334,
+        "baselineStd": 232.14007083629224,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 895.7960166666667,
+        "liquidityUsd": 25538.62,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0xe52C003F1A3abe8839447B1674d7BDA62047a8B4",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 134 $ vs moyenne 324 $ (z=-0.52)",
+        "volume/liquidité 0.5 %",
+        "achats/ventes 5 min 1/0"
+      ],
+      "components": {
+        "zScore": -0.5153178543116024,
+        "volumeM5": 134.22,
+        "baselineMean": 323.67833333333334,
+        "baselineStd": 367.6533458877047,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.004975159416755041,
+        "ageMin": 2160.12935,
+        "liquidityUsd": 26978.03,
+        "buySellRatio": 1
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0xa856a5edAF82E4E310499D73bAD2cC67dd672372",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 138 $ (z=-0.42)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": -0.4200659140730057,
+        "volumeM5": 0,
+        "baselineMean": 137.61749999999998,
+        "baselineStd": 327.60929984926753,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 1463.62935,
+        "liquidityUsd": 23582.67,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0xE1Da0b289f47483b1a5dd6f2dA00E358A6611e18",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 735.5460166666667,
+        "liquidityUsd": 28184.82,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0x390bF2df4d8b023BfD59c3483701Fdb117c91e18",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 1310.9126833333332,
+        "liquidityUsd": 21412.19,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0x84Ea3d5c60c793E41557E98Cb40d2A674Cc899F2",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 1071.0960166666666,
+        "liquidityUsd": 25516.45,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0x1dE7043CEc8C0776FECd455409d5b9148a5d2BA3",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 111 $ vs moyenne 134 $ (z=-0.14)",
+        "volume/liquidité 0.4 %",
+        "achats/ventes 5 min 4/7"
+      ],
+      "components": {
+        "zScore": -0.13952645208139916,
+        "volumeM5": 111.16,
+        "baselineMean": 133.63166666666663,
+        "baselineStd": 161.05667657597112,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.00412990244795918,
+        "ageMin": 10475.162683333334,
+        "liquidityUsd": 26915.89,
+        "buySellRatio": 0.5714285714285714
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0xDf8DcfDd62eBf82F480f1f9A60D0Eb31b0DC0285",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 2363.7460166666665,
+        "liquidityUsd": 26953.59,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0x623eDe6B702721E2014d9A420C759ABfe0F1e3F3",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 4 $ (z=-0.29)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": -0.2886751345948129,
+        "volumeM5": 0,
+        "baselineMean": 4.070833333333334,
+        "baselineStd": 14.101780324956609,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 18018.12935,
+        "liquidityUsd": 24301.88,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0xFd789e802b4fD63462C0F85babaddC3A9f9bB136",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 2 $ vs moyenne 24 $ (z=-0.29)",
+        "volume/liquidité 0.0 %",
+        "achats/ventes 5 min 0/1"
+      ],
+      "components": {
+        "zScore": -0.28659943809627936,
+        "volumeM5": 2.03,
+        "baselineMean": 23.98,
+        "baselineStd": 76.58772866339739,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.00008251103432662257,
+        "ageMin": 4351.02935,
+        "liquidityUsd": 24602.77,
+        "buySellRatio": 0
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0xbA36ecAf7932873e286aFDeaFcBBa1304279DD20",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 7656.212683333333,
+        "liquidityUsd": 24459.47,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0xfaAd5390371067e83AF6Bdd838c8ABe57fb81e18",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 10125.746016666666,
+        "liquidityUsd": 27407.34,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0xcA009777dF6b4a8d6b45fA1A541b27DD58bD1e18",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 86 $ (z=-0.29)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": -0.2895828283497462,
+        "volumeM5": 0,
+        "baselineMean": 85.73583333333333,
+        "baselineStd": 296.0667033398304,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 5052.362683333334,
+        "liquidityUsd": 24742.94,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0x8843538A500A11C23FD3c4a3254CC6BB74171E18",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 3121.22935,
+        "liquidityUsd": 24233.93,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0x166AD75664E9D8e079c4770ADD539c8470131E18",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 4076.596016666667,
+        "liquidityUsd": 22592.19,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0x76491DE3F353E38EB33089414b0ACCDBbb911E18",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 6595.57935,
+        "liquidityUsd": 22839.68,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0xE926E89c9eeDBBDDE24F318F996E44df110a1e18",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 8005.12935,
+        "liquidityUsd": 21438.78,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0x6C0deE035E2F6B4f4a5BF8e51b4F0c5251Bc1e18",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 5087.912683333333,
+        "liquidityUsd": 21397.26,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0x605EE79cFC155B4bd733C1aa43d1e56389871e18",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 43000.512683333334,
+        "liquidityUsd": 21137.14,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0x30b8CFBf2eBbe3a172a78bb18aB88eDEAdA0153e",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 3 $ (z=-0.29)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": -0.2886751345948129,
+        "volumeM5": 0,
+        "baselineMean": 2.5941666666666667,
+        "baselineStd": 8.986456939936524,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 8948.312683333334,
+        "liquidityUsd": 22588.27,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0x257723230C9ccCF6A2Df1E7CF67CFFcFCF01EEb8",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 15855 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 13 $ (z=-0.44)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": -0.4428133604241597,
+        "volumeM5": 0,
+        "baselineMean": 12.948333333333332,
+        "baselineStd": 29.241062918540788,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 1679.4960166666667,
+        "liquidityUsd": 15855.04,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0xE80e5864550d0f1B69b8063bD03571BBe722Ff9e",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 113 $ (z=-1.04)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": -1.035968056498453,
+        "volumeM5": 0,
+        "baselineMean": 113.16500000000002,
+        "baselineStd": 109.23599361016495,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 1436.1126833333333,
+        "liquidityUsd": 20089.78,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0xF95edD7D5b1616315B4bf49cB222573d4a618888",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 17786 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 19 $ (z=-0.54)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": -0.5391231938516643,
+        "volumeM5": 0,
+        "baselineMean": 19.03833333333333,
+        "baselineStd": 35.313511921677005,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 638.2960166666667,
+        "liquidityUsd": 17786.37,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0x27A0d77264B4Bb4Bc46F435C63b1f8068Cc833d3",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 18392 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 197 $ (z=-0.48)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": -0.4810003909382965,
+        "volumeM5": 0,
+        "baselineMean": 196.66916666666668,
+        "baselineStd": 408.8752740575126,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 2305.6626833333335,
+        "liquidityUsd": 18392.12,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0x8Ab7d886f6dD4e0F9521Aa9F29187f51694Ab509",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 17437 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 823.5126833333334,
+        "liquidityUsd": 17436.63,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0x25e7356968F1A40113694aF475c2b10469F66b5c",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 18836 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 202 $ (z=-0.42)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": -0.41887696004117236,
+        "volumeM5": 0,
+        "baselineMean": 202.39583333333334,
+        "baselineStd": 483.18683680630085,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 966.52935,
+        "liquidityUsd": 18836.31,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0x500D15e7c0d0e99ac4Aae2A40D8738ba1b3167c9",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 15161 $ < 20000 $",
+        "volume 5 min 97 $ vs moyenne 93 $ (z=0.02)",
+        "volume/liquidité 0.6 %",
+        "achats/ventes 5 min 0/1",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": 0.016972088947830644,
+        "volumeM5": 97.44,
+        "baselineMean": 92.73333333333333,
+        "baselineStd": 277.31805325403184,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.0064271989773471575,
+        "ageMin": 1184.2626833333334,
+        "liquidityUsd": 15160.57,
+        "buySellRatio": 0
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0x148ff42c18a5A1E965E4F338B0e110C076Da0A96",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 19479 $ < 20000 $",
+        "volume 5 min 3106 $ vs moyenne 522 $ (z=3.45)",
+        "volume/liquidité 15.9 %",
+        "achats/ventes 5 min 15/10",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": 3.44547697034949,
+        "volumeM5": 3106.24,
+        "baselineMean": 522.2458333333333,
+        "baselineStd": 749.9670405298226,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.1594700213363233,
+        "ageMin": 581.27935,
+        "liquidityUsd": 19478.52,
+        "buySellRatio": 1.5
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0x4542E828Be3B2F6F9bbe9423F71c8B876cBffa15",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 17042 $ < 20000 $",
+        "volume 5 min 40 $ vs moyenne 79 $ (z=-0.38)",
+        "volume/liquidité 0.2 %",
+        "achats/ventes 5 min 2/0",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": -0.38286483458575016,
+        "volumeM5": 39.75,
+        "baselineMean": 79.36666666666667,
+        "baselineStd": 103.47428932597292,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.0023324056519909942,
+        "ageMin": 2060.962683333333,
+        "liquidityUsd": 17042.49,
+        "buySellRatio": 2
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0xb50Ee44726d569e2A51964650bac333Bed5c0d17",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 18275 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 113 $ (z=-0.46)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": -0.4590439300519935,
+        "volumeM5": 0,
+        "baselineMean": 112.50833333333333,
+        "baselineStd": 245.09273724758782,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 13780.762683333332,
+        "liquidityUsd": 18274.68,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0xA67b2080B0b9B8f458Bef979EE56b706986f31Aa",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 17394 $ < 20000 $",
+        "volume 5 min 896 $ vs moyenne 81 $ (z=4.56)",
+        "volume/liquidité 5.2 %",
+        "achats/ventes 5 min 7/2",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": 4.563805323053548,
+        "volumeM5": 896.35,
+        "baselineMean": 80.87083333333334,
+        "baselineStd": 178.68403863490096,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.051532196771526706,
+        "ageMin": 4447.462683333333,
+        "liquidityUsd": 17393.98,
+        "buySellRatio": 3.5
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0x89a5504f77971579Ea0d7A1729f2dbF942Eb1e18",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 19800 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 5 $ (z=-0.29)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": -0.2886751345948128,
+        "volumeM5": 0,
+        "baselineMean": 5.215,
+        "baselineStd": 18.065289922943393,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 2181.7460166666665,
+        "liquidityUsd": 19800.46,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0xa32CDb8e84c68Eb995c8dC270B528d7C5D6A0F20",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 16363 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 31 $ (z=-0.59)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": -0.5868991361315692,
+        "volumeM5": 0,
+        "baselineMean": 30.683333333333334,
+        "baselineStd": 52.28041999784924,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 5148.512683333333,
+        "liquidityUsd": 16363.44,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0x1c1C1531126754114F1B4eb461088b1BDB3Dc7e8",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 14335 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 1626.62935,
+        "liquidityUsd": 14334.93,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0x93E7a34dB439a3371D4149eB9e6794343312D4F2",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 16465 $ < 20000 $",
+        "volume 5 min 7 $ vs moyenne 10 $ (z=-0.13)",
+        "volume/liquidité 0.0 %",
+        "achats/ventes 5 min 0/1",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": -0.1277759542362224,
+        "volumeM5": 7.37,
+        "baselineMean": 9.548333333333334,
+        "baselineStd": 17.048069383275337,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.0004476281176053292,
+        "ageMin": 3582.92935,
+        "liquidityUsd": 16464.56,
+        "buySellRatio": 0
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0x6F48538fc1b79af9e7F56890E0da0582D763A272",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 17094 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 6 $ (z=-0.45)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": -0.45025902908460813,
+        "volumeM5": 0,
+        "baselineMean": 6.278333333333333,
+        "baselineStd": 13.943825504393322,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 4676.746016666667,
+        "liquidityUsd": 17093.92,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0xEa2105A508493641b8fDacC8610C606c34A91105",
+      "score": 0,
+      "eligible": true,
+      "reasons": [
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 1826.57935,
+        "liquidityUsd": 21132.32,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.232Z"
+    },
+    {
+      "mint": "0x40E1A49553Ce67058fb33C2fE1446C7e0ee0038f",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 17229 $ < 20000 $",
+        "volume 5 min 68 $ vs moyenne 23 $ (z=0.70)",
+        "volume/liquidité 0.4 %",
+        "achats/ventes 5 min 2/1",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": 0.702322933354466,
+        "volumeM5": 67.62,
+        "baselineMean": 22.976666666666663,
+        "baselineStd": 63.56525070327103,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.003924860000557212,
+        "ageMin": 8874.646016666667,
+        "liquidityUsd": 17228.64,
+        "buySellRatio": 2
+      },
+      "computedAt": "2026-10-01T05:25:56.233Z"
+    },
+    {
+      "mint": "0x8b9E0d0fba6ac05c402E1b4FCde10345Bc8DdF2e",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 18083 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 3409.4126833333335,
+        "liquidityUsd": 18082.82,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.233Z"
+    },
+    {
+      "mint": "0x5d2b2fef7dD1c2D0E13A842a2cc112Db3f517D6f",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 15199 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 6113.62935,
+        "liquidityUsd": 15198.68,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.233Z"
+    },
+    {
+      "mint": "0xa701fd340e36e00bA613A62DF750e3700d03de8f",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 13886 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 53 $ (z=-0.42)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": -0.4218021650660366,
+        "volumeM5": 0,
+        "baselineMean": 53.340833333333336,
+        "baselineStd": 126.45936353831277,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 4766.046016666666,
+        "liquidityUsd": 13885.6,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.233Z"
+    },
+    {
+      "mint": "0x27D50412398db5f405e5738545f6493E345ac2FE",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 15927 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 2231.5126833333334,
+        "liquidityUsd": 15927.41,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.233Z"
+    },
+    {
+      "mint": "0xb73B18267d23087e3aF1390edFeB8c4308921D59",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 14442 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 38 $ (z=-0.48)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": -0.4789811702337858,
+        "volumeM5": 0,
+        "baselineMean": 38.27583333333333,
+        "baselineStd": 79.91093536025913,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 10282.196016666667,
+        "liquidityUsd": 14441.76,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.233Z"
+    },
+    {
+      "mint": "0x290f2DbDC155E85bd8ed75A2D56aBeEE154F18e3",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 15716 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 1 $ (z=-0.29)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": -0.2886751345948129,
+        "volumeM5": 0,
+        "baselineMean": 0.6441666666666667,
+        "baselineStd": 2.231458790417903,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 7897.27935,
+        "liquidityUsd": 15716.15,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.233Z"
+    },
+    {
+      "mint": "0xeC7140E14ab2790E7aC0546A2AeF23D59045762B",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 13517 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 1232.6460166666666,
+        "liquidityUsd": 13517.13,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.233Z"
+    },
+    {
+      "mint": "0x0D8D80Ab88CC80e1Ed025D1f7Cc1f7e08D6Eacfe",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 12948 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 112 $ (z=-0.34)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": -0.33977133820487615,
+        "volumeM5": 0,
+        "baselineMean": 112.17999999999999,
+        "baselineStd": 330.1632226917193,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 1798.7460166666667,
+        "liquidityUsd": 12947.56,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.233Z"
+    },
+    {
+      "mint": "0x8E4045F025FDedE0aed0be625da920b75C177b3D",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 13419 $ < 20000 $",
+        "volume 5 min 15 $ vs moyenne 119 $ (z=-0.44)",
+        "volume/liquidité 0.1 %",
+        "achats/ventes 5 min 0/2",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": -0.4367928185348626,
+        "volumeM5": 14.69,
+        "baselineMean": 118.93333333333334,
+        "baselineStd": 238.65624366947588,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.001094683815967927,
+        "ageMin": 7216.47935,
+        "liquidityUsd": 13419.4,
+        "buySellRatio": 0
+      },
+      "computedAt": "2026-10-01T05:25:56.233Z"
+    },
+    {
+      "mint": "0xd5D26bac627E8d9b67517BE63dD418ACB3a2D8e2",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 13234 $ < 20000 $",
+        "volume 5 min 17 $ vs moyenne 157 $ (z=-0.47)",
+        "volume/liquidité 0.1 %",
+        "achats/ventes 5 min 0/2",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": -0.47158406771853867,
+        "volumeM5": 17.19,
+        "baselineMean": 157.4325,
+        "baselineStd": 297.3860009276282,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.0012989652861161846,
+        "ageMin": 8088.42935,
+        "liquidityUsd": 13233.61,
+        "buySellRatio": 0
+      },
+      "computedAt": "2026-10-01T05:25:56.233Z"
+    },
+    {
+      "mint": "0x2a00Fc638Ac8fbC7C7BA914A2018C07a3268D301",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 13262 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 37 $ (z=-0.78)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": -0.7750069320546119,
+        "volumeM5": 0,
+        "baselineMean": 36.62916666666667,
+        "baselineStd": 47.26301811205676,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 3169.4126833333335,
+        "liquidityUsd": 13261.61,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.233Z"
+    },
+    {
+      "mint": "0x327A1184edfb3b0d7d137fCE4318B85af77E91e2",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 12693 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 21 $ (z=-0.29)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": -0.2932110627965299,
+        "volumeM5": 0,
+        "baselineMean": 20.66583333333333,
+        "baselineStd": 70.48108327233929,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 4570.312683333334,
+        "liquidityUsd": 12693.44,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.233Z"
+    },
+    {
+      "mint": "0x09B3A79CD6ceb1264eC6279d860737736099c84c",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 12789 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 9 $ (z=-0.29)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": -0.28867513459481287,
+        "volumeM5": 0,
+        "baselineMean": 8.921666666666667,
+        "baselineStd": 30.90555990972067,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 7987.012683333333,
+        "liquidityUsd": 12789.27,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.233Z"
+    },
+    {
+      "mint": "0x04E00AA5232dfad9d42500588B0A226AD5b77857",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 12599 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 1954.02935,
+        "liquidityUsd": 12599.35,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.233Z"
+    },
+    {
+      "mint": "0x5d08c35BcF268f4031BF3898e42b895Ff0779a24",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 12610 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 5 $ (z=-0.29)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": -0.2886751345948128,
+        "volumeM5": 0,
+        "baselineMean": 4.54,
+        "baselineStd": 15.727021332725409,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 13642.162683333334,
+        "liquidityUsd": 12609.52,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.233Z"
+    },
+    {
+      "mint": "0x05dC184414aF81436D069cf78A6bd821667363ee",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 13543 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 2496.7960166666667,
+        "liquidityUsd": 13542.76,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.233Z"
+    },
+    {
+      "mint": "0x86542faEE4265bdb36243Ef687BccFCCabfbeDB8",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 13453 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 5376.396016666667,
+        "liquidityUsd": 13453.45,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.233Z"
+    },
+    {
+      "mint": "0xf013879d37d283102c36ee6734C678CC9fC567F4",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 12374 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 0 $ (z=-0.00)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": -0.0008333333333333334,
+        "volumeM5": 0,
+        "baselineMean": 0.0008333333333333334,
+        "baselineStd": 0.002886751345948128,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 4071.346016666667,
+        "liquidityUsd": 12374.1,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.233Z"
+    },
+    {
+      "mint": "0xEC33009928DA9CCd9f670A368d1Bd72b1fC9330c",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 10038 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 154 $ (z=-0.63)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": -0.6308261444767399,
+        "volumeM5": 0,
+        "baselineMean": 153.58833333333334,
+        "baselineStd": 243.4717309643727,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 1298.8626833333333,
+        "liquidityUsd": 10038.07,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.233Z"
+    },
+    {
+      "mint": "0xBe3F794BFB99399A4eA9cd5aCf08529eeA6E718A",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 10196 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 35 $ (z=-0.65)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": -0.649846128425518,
+        "volumeM5": 0,
+        "baselineMean": 35.086666666666666,
+        "baselineStd": 53.99226852620715,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 560.37935,
+        "liquidityUsd": 10195.9,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.233Z"
+    },
+    {
+      "mint": "0x35C1cc29c44071f4985ce9266c91008d17ff7F9C",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 12305 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 5 $ (z=-0.53)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": -0.5306042044384481,
+        "volumeM5": 0,
+        "baselineMean": 4.911666666666666,
+        "baselineStd": 9.256742833134552,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 824.3960166666667,
+        "liquidityUsd": 12305.33,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.233Z"
+    },
+    {
+      "mint": "0x9b994589e78c9A76371845eb5268B9382f160c78",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 9841 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 10 $ (z=-0.31)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": -0.3136389982544733,
+        "volumeM5": 0,
+        "baselineMean": 10.331666666666665,
+        "baselineStd": 32.94126917942772,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 39733.012683333334,
+        "liquidityUsd": 9840.87,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.233Z"
+    },
+    {
+      "mint": "0x024A0Ffb5FaC743b9B507Fd3f8F3f914013c123B",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 10795 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 21 $ (z=-0.43)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": -0.42816591034575935,
+        "volumeM5": 0,
+        "baselineMean": 21.429999999999996,
+        "baselineStd": 50.05069175800217,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 1980.7126833333334,
+        "liquidityUsd": 10794.59,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.233Z"
+    },
+    {
+      "mint": "0xbA082576cE7191aD3EEb487B8daa58A88e95ECb3",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 13293 $ < 20000 $",
+        "volume 5 min 382 $ vs moyenne 10 $ (z=11.17)",
+        "volume/liquidité 2.9 %",
+        "achats/ventes 5 min 6/0",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": 11.166765012800802,
+        "volumeM5": 382.41,
+        "baselineMean": 9.636666666666667,
+        "baselineStd": 33.38239256454416,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.028767447896096865,
+        "ageMin": 5169.796016666666,
+        "liquidityUsd": 13293.15,
+        "buySellRatio": 6
+      },
+      "computedAt": "2026-10-01T05:25:56.233Z"
+    },
+    {
+      "mint": "0x61f650264A8BA2ed1ddc7ac4CafFa4E807dF111c",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 10414 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 43474.04601666667,
+        "liquidityUsd": 10414.12,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.233Z"
+    },
+    {
+      "mint": "0xD797A7dBEBBA1E1056C9De1aA49379c728fECbf8",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 11168 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 6636.312683333334,
+        "liquidityUsd": 11168.47,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.233Z"
+    },
+    {
+      "mint": "0x41CA1a94f5262c4a84FAfDAa23B9499aa5B9fcD0",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 10719 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 6652.862683333334,
+        "liquidityUsd": 10718.51,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.233Z"
+    },
+    {
+      "mint": "0x520541D03DEC790ce51746DA2a495dAfa62e87f8",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 11938 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 5 $ (z=-0.29)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": -0.28867513459481287,
+        "volumeM5": 0,
+        "baselineMean": 4.579166666666667,
+        "baselineStd": 15.862698645984969,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 7689.22935,
+        "liquidityUsd": 11938.14,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.233Z"
+    },
+    {
+      "mint": "0x32cfc58806291Ebf99159f3d116432C8953Dc471",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 11688 $ < 20000 $",
+        "volume 5 min 5 $ vs moyenne 0 $ (z=4.83)",
+        "volume/liquidité 0.0 %",
+        "achats/ventes 5 min 0/1",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": 4.83,
+        "volumeM5": 4.83,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.0004132616784926815,
+        "ageMin": 1961.07935,
+        "liquidityUsd": 11687.51,
+        "buySellRatio": 0
+      },
+      "computedAt": "2026-10-01T05:25:56.233Z"
+    },
+    {
+      "mint": "0x0e09F521A15D0F71BA0FbAc10F9878E7B410ecAB",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 11690 $ < 20000 $",
+        "volume 5 min 102 $ vs moyenne 0 $ (z=102.09)",
+        "volume/liquidité 0.9 %",
+        "achats/ventes 5 min 0/1",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": 102.09,
+        "volumeM5": 102.09,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.008733075335926994,
+        "ageMin": 8681.662683333334,
+        "liquidityUsd": 11690.04,
+        "buySellRatio": 0
+      },
+      "computedAt": "2026-10-01T05:25:56.233Z"
+    },
+    {
+      "mint": "0xa554B1A8F352639FA1726A9f6f99D371576B13ED",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 10483 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 4929.796016666666,
+        "liquidityUsd": 10483.49,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.233Z"
+    },
+    {
+      "mint": "0xBf2EE40CD7E103437029fc032D9B4485be5bFe3A",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 10659 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 0 $ (z=-0.08)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": -0.08083333333333333,
+        "volumeM5": 0,
+        "baselineMean": 0.08083333333333333,
+        "baselineStd": 0.2800148805569685,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 4955.712683333333,
+        "liquidityUsd": 10658.87,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.233Z"
+    },
+    {
+      "mint": "0xe0c026778b70507B9e94523E50AD139EF958e20D",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 10339 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 2131.0126833333334,
+        "liquidityUsd": 10339.45,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.233Z"
+    },
+    {
+      "mint": "0xAF687c5D9f5eF4BAd10e6afd11aaa9fb126b086C",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 9884 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 9 $ (z=-0.32)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": -0.3206648009731982,
+        "volumeM5": 0,
+        "baselineMean": 9.163333333333334,
+        "baselineStd": 28.57604983622516,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 2194.62935,
+        "liquidityUsd": 9883.54,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.233Z"
+    },
+    {
+      "mint": "0xA901F8E924eB9e2d30d4B8B92f92E71f7eBD1120",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 10338 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 7921.07935,
+        "liquidityUsd": 10337.5,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.233Z"
+    },
+    {
+      "mint": "0x74f0Ab93D8dE739F474Db6465a84416e2681e0FC",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 9107 $ < 20000 $",
+        "volume 5 min 424 $ vs moyenne 3 $ (z=45.30)",
+        "volume/liquidité 4.7 %",
+        "achats/ventes 5 min 3/0",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": 45.29545953516202,
+        "volumeM5": 423.72,
+        "baselineMean": 2.6833333333333336,
+        "baselineStd": 9.295339333952972,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.04652541702901415,
+        "ageMin": 1211.8460166666666,
+        "liquidityUsd": 9107.28,
+        "buySellRatio": 3
+      },
+      "computedAt": "2026-10-01T05:25:56.233Z"
+    },
+    {
+      "mint": "0x00A6075b0487877EB83687c90D7643c3524A8601",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 8908 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 27 $ (z=-0.79)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": -0.792863177304467,
+        "volumeM5": 0,
+        "baselineMean": 26.795833333333334,
+        "baselineStd": 33.796289322493635,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 1711.5460166666667,
+        "liquidityUsd": 8907.78,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.233Z"
+    },
+    {
+      "mint": "0x118530dDcd4CD5A3fd9Cdd4fE4a18E019B7d0eeB",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 7847 $ < 20000 $",
+        "volume 5 min 12 $ vs moyenne 219 $ (z=-0.54)",
+        "volume/liquidité 0.2 %",
+        "achats/ventes 5 min 1/1",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": -0.5364957837161156,
+        "volumeM5": 12.39,
+        "baselineMean": 219.09416666666667,
+        "baselineStd": 385.28572440010686,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.0015789513927651148,
+        "ageMin": 390.86268333333334,
+        "liquidityUsd": 7846.98,
+        "buySellRatio": 1
+      },
+      "computedAt": "2026-10-01T05:25:56.233Z"
+    },
+    {
+      "mint": "0x122537b488592Ac53a7ad9F65aa6E8311B5221A6",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 9062 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 4 $ (z=-0.31)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": -0.3066314449558098,
+        "volumeM5": 0,
+        "baselineMean": 3.535833333333334,
+        "baselineStd": 11.531215703734823,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 1454.4626833333334,
+        "liquidityUsd": 9061.8,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.233Z"
+    },
+    {
+      "mint": "0x6b8b8658044A8c7EDD57FD57A5AE9d82bd1B92D9",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 9063 $ < 20000 $",
+        "volume 5 min 22 $ vs moyenne 21 $ (z=0.02)",
+        "volume/liquidité 0.2 %",
+        "achats/ventes 5 min 0/2",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": 0.015342173321085223,
+        "volumeM5": 21.830000000000002,
+        "baselineMean": 21.325,
+        "baselineStd": 32.91580595729325,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.0024087106391524164,
+        "ageMin": 3934.3960166666666,
+        "liquidityUsd": 9062.94,
+        "buySellRatio": 0
+      },
+      "computedAt": "2026-10-01T05:25:56.233Z"
+    },
+    {
+      "mint": "0x59B85970630DD8B808Aad4257B0CDf02a8B22f90",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 9336 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 0 $ (z=-0.17)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": -0.17250000000000001,
+        "volumeM5": 0,
+        "baselineMean": 0.17250000000000001,
+        "baselineStd": 0.4028788448607889,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 3525.17935,
+        "liquidityUsd": 9336.1,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.233Z"
+    },
+    {
+      "mint": "0xdc3861B1b2Ca83421b4632e292485BDB571CaC34",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 8806 $ < 20000 $",
+        "volume 5 min 17 $ vs moyenne 11 $ (z=0.23)",
+        "volume/liquidité 0.2 %",
+        "achats/ventes 5 min 1/0",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": 0.22928408539435208,
+        "volumeM5": 17.44,
+        "baselineMean": 10.945,
+        "baselineStd": 28.32730404654588,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.0019804476220433814,
+        "ageMin": 3742.57935,
+        "liquidityUsd": 8806.09,
+        "buySellRatio": 1
+      },
+      "computedAt": "2026-10-01T05:25:56.233Z"
+    },
+    {
+      "mint": "0xdDDF7AB756C35b4d0537825497e6932780710241",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 9109 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 0 $ (z=-0.03)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": -0.03333333333333333,
+        "volumeM5": 0,
+        "baselineMean": 0.03333333333333333,
+        "baselineStd": 0.11547005383792516,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 4866.346016666666,
+        "liquidityUsd": 9108.83,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.233Z"
+    },
+    {
+      "mint": "0x7079cb550c13D3dB49672a2d9F9F5C5876ee56E8",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 8741 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 1 $ (z=-0.29)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": -0.28867513459481287,
+        "volumeM5": 0,
+        "baselineMean": 1.3541666666666667,
+        "baselineStd": 4.69097093716571,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 2952.62935,
+        "liquidityUsd": 8740.94,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.233Z"
+    },
+    {
+      "mint": "0xb01356A005403C38c0fb01bd0aAfe51e81Ab9B07",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 8425 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 1 $ (z=-0.29)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": -0.2886751345948129,
+        "volumeM5": 0,
+        "baselineMean": 0.5533333333333333,
+        "baselineStd": 1.9168028937095574,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 7301.112683333334,
+        "liquidityUsd": 8424.56,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.233Z"
+    },
+    {
+      "mint": "0x39F59262A6f82BB1e0ae30a2Ae2FaB2a66acCD44",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 9031 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 1 $ (z=-0.40)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": -0.4024075264874851,
+        "volumeM5": 0,
+        "baselineMean": 0.7583333333333333,
+        "baselineStd": 1.8844909287672518,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 3579.92935,
+        "liquidityUsd": 9030.73,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.234Z"
+    },
+    {
+      "mint": "0xc3db200f0a56cFe4911b29E3580A964C582da0C4",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 7790 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 2109.27935,
+        "liquidityUsd": 7790.18,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.234Z"
+    },
+    {
+      "mint": "0x5C7315710D5bffF95c3d681ca30c327F33DeDa99",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 7368 $ < 20000 $",
+        "volume 5 min 580 $ vs moyenne 5 $ (z=37.54)",
+        "volume/liquidité 7.9 %",
+        "achats/ventes 5 min 2/5",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": 37.54347841666407,
+        "volumeM5": 579.98,
+        "baselineMean": 4.566666666666666,
+        "baselineStd": 15.326585537634413,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.07871393284655682,
+        "ageMin": 2934.0126833333334,
+        "liquidityUsd": 7368.2,
+        "buySellRatio": 0.4
+      },
+      "computedAt": "2026-10-01T05:25:56.234Z"
+    },
+    {
+      "mint": "0xD53f94918372462E8f28EBa5073cDFf2E6E2CD23",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 8058 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 3364.346016666667,
+        "liquidityUsd": 8058.09,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.234Z"
+    },
+    {
+      "mint": "0x7e84eEe12F356b568E6B847fAa05E19cFE4A5f4E",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 8902 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 9234.07935,
+        "liquidityUsd": 8902.07,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.234Z"
+    },
+    {
+      "mint": "0x18B98fBD9000ef5dA84d21Bd801C5f2504bf20Ca",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 9250 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 4 $ (z=-0.37)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": -0.37281734356316054,
+        "volumeM5": 0,
+        "baselineMean": 3.8191666666666664,
+        "baselineStd": 10.244069200658434,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 3490.72935,
+        "liquidityUsd": 9250.12,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.234Z"
+    },
+    {
+      "mint": "0xb076ee43599aC0885503b130c51d2309E322f1a6",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 9151 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 5832.996016666667,
+        "liquidityUsd": 9150.98,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.234Z"
+    },
+    {
+      "mint": "0x7B221f794604689C76ff0a4EF60D57Dab361f860",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 7884 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 2163.22935,
+        "liquidityUsd": 7884.27,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.234Z"
+    },
+    {
+      "mint": "0xD12b985aD4409881B534Ffb5a055b16bae9828B1",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 7816 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 3472.17935,
+        "liquidityUsd": 7815.76,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.234Z"
+    },
+    {
+      "mint": "0x0F710E84759491e87C522728E8c5c04Aa02B8A21",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 6902 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 2 $ (z=-0.32)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": -0.3224978885537781,
+        "volumeM5": 0,
+        "baselineMean": 1.5783333333333331,
+        "baselineStd": 4.894088889732803,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 736.52935,
+        "liquidityUsd": 6902.12,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.234Z"
+    },
+    {
+      "mint": "0x0D099Caf7E87626C8327F01471A142d244900F7f",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 7092 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 847.1626833333333,
+        "liquidityUsd": 7092.3,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.234Z"
+    },
+    {
+      "mint": "0x9eb756df80f0B0D04852722edCDB375f0EEa3E2a",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 6863 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 542 $ (z=-0.48)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": -0.48498467083411534,
+        "volumeM5": 0,
+        "baselineMean": 542.1616666666666,
+        "baselineStd": 1117.8944392906558,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 254.62935,
+        "liquidityUsd": 6862.97,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.234Z"
+    },
+    {
+      "mint": "0x4Fc67242410Af76da4A5890660DD565aA1f331c1",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 7618 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 3 $ (z=-0.29)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": -0.28867513459481287,
+        "volumeM5": 0,
+        "baselineMean": 3.2358333333333333,
+        "baselineStd": 11.209255476316585,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 1790.9126833333332,
+        "liquidityUsd": 7618.21,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.234Z"
+    },
+    {
+      "mint": "0x280f96bE1AB107e95692c31171ceaaE53433E5D8",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 7129 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 2002.3126833333333,
+        "liquidityUsd": 7128.98,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.234Z"
+    },
+    {
+      "mint": "0xd5520D9D777a42D85f94834fbea162B17A197CfB",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 7526 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 5077.562683333334,
+        "liquidityUsd": 7526.02,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.234Z"
+    },
+    {
+      "mint": "0xE3bF3dd942D5D339abEe85c9CD98811dc285f8f6",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 7301 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 1 $ (z=-0.34)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": -0.3377087344304845,
+        "volumeM5": 0,
+        "baselineMean": 1.2075,
+        "baselineStd": 3.575566388699838,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 3452.962683333333,
+        "liquidityUsd": 7300.66,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.234Z"
+    },
+    {
+      "mint": "0x944D51407E60f7f3E13786B386D36c2926a9Ba2E",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 6985 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 0 $ (z=-0.31)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": -0.3133333333333333,
+        "volumeM5": 0,
+        "baselineMean": 0.3133333333333333,
+        "baselineStd": 0.7514027286389506,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 2518.9960166666665,
+        "liquidityUsd": 6985.33,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.234Z"
+    },
+    {
+      "mint": "0x24dc2B49d94Bc90784F73CcEc5f7FB2087418449",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 7746 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 1 $ (z=-0.29)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": -0.2886751345948129,
+        "volumeM5": 0,
+        "baselineMean": 0.635,
+        "baselineStd": 2.199704525612474,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 7736.362683333334,
+        "liquidityUsd": 7746.13,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.234Z"
+    },
+    {
+      "mint": "0x56b893F217bA78a9Ec0C01D1a74811Fc410A4D0C",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 7312 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 3703.9126833333335,
+        "liquidityUsd": 7312,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.234Z"
+    },
+    {
+      "mint": "0xB154a72B46c7BcF12064459e4B6b05DD003E7C86",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 7211 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 1 $ (z=-0.29)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": -0.28867513459481287,
+        "volumeM5": 0,
+        "baselineMean": 0.9591666666666666,
+        "baselineStd": 3.322650799186296,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 1833.42935,
+        "liquidityUsd": 7211.35,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.234Z"
+    },
+    {
+      "mint": "0xfA39D5aB5e934470FB3efbE3a6BAA54E957C8A50",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 6344 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 7725.112683333334,
+        "liquidityUsd": 6344.08,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.234Z"
+    },
+    {
+      "mint": "0x6B0f47B67E79C373B8dA0B5447D00DdAbc1656d9",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 6601 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 3 $ (z=-0.29)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": -0.28867513459481287,
+        "volumeM5": 0,
+        "baselineMean": 2.533333333333333,
+        "baselineStd": 8.775724091682312,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 6361.212683333333,
+        "liquidityUsd": 6600.86,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.234Z"
+    },
+    {
+      "mint": "0xc7C377D63F3783F65598B8044f2614DbEcB7fB46",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 7618 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 3395.3626833333333,
+        "liquidityUsd": 7618.47,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.234Z"
+    },
+    {
+      "mint": "0x2919C789720e77C587FABC1158e43cc5a60414ae",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 6710 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 4179.496016666667,
+        "liquidityUsd": 6710.42,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.234Z"
+    },
+    {
+      "mint": "0x006D2D9e65f847e8B5f5053C9eb3a7824ec7dFa3",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 7172 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 7226.662683333333,
+        "liquidityUsd": 7171.63,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.234Z"
+    },
+    {
+      "mint": "0xe8593571f1b0d3ee9f317D935f5ABE2D646d2e4E",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 6334 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 6665.52935,
+        "liquidityUsd": 6333.92,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.234Z"
+    },
+    {
+      "mint": "0x68353dEa233cF2ED0F4AB795430962cc50E5d325",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 6659 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 0 $ (z=-0.01)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": -0.014166666666666668,
+        "volumeM5": 0,
+        "baselineMean": 0.014166666666666668,
+        "baselineStd": 0.049074772881118195,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 4799.612683333334,
+        "liquidityUsd": 6659.48,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.234Z"
+    },
+    {
+      "mint": "0xf8C68c1c554cfb1d7D5cc21A8260413ca6F27065",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 6568 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 1 $ (z=-0.29)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": -0.28867513459481287,
+        "volumeM5": 0,
+        "baselineMean": 1.0833333333333333,
+        "baselineStd": 3.7527767497325675,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 3454.3126833333336,
+        "liquidityUsd": 6567.53,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.234Z"
+    },
+    {
+      "mint": "0x2BfB3507226080a3a5d740870e7E212fF519DF6D",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 6772 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 6 $ (z=-0.34)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": -0.3365333597152597,
+        "volumeM5": 0,
+        "baselineMean": 5.77,
+        "baselineStd": 17.145402776360676,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 6741.296016666666,
+        "liquidityUsd": 6772.18,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.234Z"
+    },
+    {
+      "mint": "0xF53914048905a15CE9A74868b9Acc61eA5fcDfBD",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 6546 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.38)",
+        "volume/liquidité 0.0 %",
+        "achats/ventes 5 min 0/1",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": 0.38,
+        "volumeM5": 0.38,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0.000058051870874307005,
+        "ageMin": 7639.512683333333,
+        "liquidityUsd": 6545.87,
+        "buySellRatio": 0
+      },
+      "computedAt": "2026-10-01T05:25:56.234Z"
+    },
+    {
+      "mint": "0x54dFCA823a37Df628B573E7CAEdb2c02E24C13a3",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 6866 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 7150.246016666667,
+        "liquidityUsd": 6866.38,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.234Z"
+    },
+    {
+      "mint": "0xdB91B64b0236a9Fdd56560955a49d1dF7c6a622e",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 6228 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 3061.4960166666665,
+        "liquidityUsd": 6228.37,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.234Z"
+    },
+    {
+      "mint": "0x8bFad9837F46E4A867F414996CC465Bf345538e3",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 6588 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 7492.146016666667,
+        "liquidityUsd": 6587.81,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.234Z"
+    },
+    {
+      "mint": "0x34ae566AdC70FD40a40E3648fB5bEcB53E362E68",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 6300 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 0 $ (z=-0.09)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": -0.09416666666666666,
+        "volumeM5": 0,
+        "baselineMean": 0.09416666666666666,
+        "baselineStd": 0.3262029020921386,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 6766.146016666667,
+        "liquidityUsd": 6299.83,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.234Z"
+    },
+    {
+      "mint": "0x56289daf2D290F47549e5Ab550BA8826BA966f2B",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 6750 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 6465.496016666667,
+        "liquidityUsd": 6750.25,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.234Z"
+    },
+    {
+      "mint": "0xC20676E8727913e0Cf512A94e16c05edA0015cc5",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 6266 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 6421.712683333333,
+        "liquidityUsd": 6266.26,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.234Z"
+    },
+    {
+      "mint": "0x631381aACe6376f4670d0257759F202475A45Cd1",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 6222 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 0 $ (z=0.00)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": 0,
+        "volumeM5": 0,
+        "baselineMean": 0,
+        "baselineStd": 0,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 6965.27935,
+        "liquidityUsd": 6221.76,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.234Z"
+    },
+    {
+      "mint": "0xF40cC477520e29ce21932efBe9bc2dC75E73c716",
+      "score": 0,
+      "eligible": false,
+      "reasons": [
+        "liquidité 6324 $ < 20000 $",
+        "volume 5 min 0 $ vs moyenne 0 $ (z=-0.29)",
+        "volume/liquidité 0.0 %",
+        "inéligible → score 0"
+      ],
+      "components": {
+        "zScore": -0.2886751345948129,
+        "volumeM5": 0,
+        "baselineMean": 0.39999999999999997,
+        "baselineStd": 1.3856406460551016,
+        "holderAcceleration": null,
+        "volumeToLiquidity": 0,
+        "ageMin": 5423.07935,
+        "liquidityUsd": 6324.06,
+        "buySellRatio": null
+      },
+      "computedAt": "2026-10-01T05:25:56.234Z"
+    }
+  ]
+}
