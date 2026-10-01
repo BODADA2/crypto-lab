@@ -1,49 +1,38 @@
 {
-  "computedAt": "2026-10-01T01:52:28.886Z",
+  "computedAt": "2026-10-01T02:05:18.196Z",
   "terms": [
     {
       "term": "detection",
-      "count24h": 38,
-      "baselinePerDay": 0.8571428571428571,
-      "count7d": 6,
-      "growth": 21,
+      "count24h": 36,
+      "baselinePerDay": 1.1428571428571428,
+      "count7d": 8,
+      "growth": 17.266666666666666,
       "sources": {
-        "github": 38
+        "github": 36
       },
-      "docs24h": 19
+      "docs24h": 18
     },
     {
       "term": "ofac",
-      "count24h": 38,
-      "baselinePerDay": 0.8571428571428571,
-      "count7d": 6,
-      "growth": 21,
+      "count24h": 36,
+      "baselinePerDay": 1.1428571428571428,
+      "count7d": 8,
+      "growth": 17.266666666666666,
       "sources": {
-        "github": 38
+        "github": 36
       },
-      "docs24h": 19
+      "docs24h": 18
     },
     {
       "term": "phishing",
-      "count24h": 38,
-      "baselinePerDay": 0.8571428571428571,
-      "count7d": 6,
-      "growth": 21,
+      "count24h": 36,
+      "baselinePerDay": 1.1428571428571428,
+      "count7d": 8,
+      "growth": 17.266666666666666,
       "sources": {
-        "github": 38
+        "github": 36
       },
-      "docs24h": 19
-    },
-    {
-      "term": "drainer",
-      "count24h": 38,
-      "baselinePerDay": 1.2857142857142858,
-      "count7d": 9,
-      "growth": 17.0625,
-      "sources": {
-        "github": 38
-      },
-      "docs24h": 19
+      "docs24h": 18
     },
     {
       "term": "prepaid",
@@ -57,50 +46,6 @@
       "docs24h": 16
     },
     {
-      "term": "eip",
-      "count24h": 19,
-      "baselinePerDay": 0.2857142857142857,
-      "count7d": 2,
-      "growth": 15.555555555555557,
-      "sources": {
-        "github": 19
-      },
-      "docs24h": 19
-    },
-    {
-      "term": "poisoners",
-      "count24h": 19,
-      "baselinePerDay": 0.2857142857142857,
-      "count7d": 2,
-      "growth": 15.555555555555557,
-      "sources": {
-        "github": 19
-      },
-      "docs24h": 19
-    },
-    {
-      "term": "sweepers",
-      "count24h": 19,
-      "baselinePerDay": 0.2857142857142857,
-      "count7d": 2,
-      "growth": 15.555555555555557,
-      "sources": {
-        "github": 19
-      },
-      "docs24h": 19
-    },
-    {
-      "term": "simulation",
-      "count24h": 38,
-      "baselinePerDay": 1.5714285714285714,
-      "count7d": 11,
-      "growth": 15.166666666666668,
-      "sources": {
-        "github": 38
-      },
-      "docs24h": 19
-    },
-    {
       "term": "credits",
       "count24h": 16,
       "baselinePerDay": 0.14285714285714285,
@@ -110,6 +55,61 @@
         "github": 16
       },
       "docs24h": 16
+    },
+    {
+      "term": "drainer",
+      "count24h": 36,
+      "baselinePerDay": 1.5714285714285714,
+      "count7d": 11,
+      "growth": 14.388888888888891,
+      "sources": {
+        "github": 36
+      },
+      "docs24h": 18
+    },
+    {
+      "term": "eip",
+      "count24h": 18,
+      "baselinePerDay": 0.42857142857142855,
+      "count7d": 3,
+      "growth": 13.299999999999999,
+      "sources": {
+        "github": 18
+      },
+      "docs24h": 18
+    },
+    {
+      "term": "poisoners",
+      "count24h": 18,
+      "baselinePerDay": 0.42857142857142855,
+      "count7d": 3,
+      "growth": 13.299999999999999,
+      "sources": {
+        "github": 18
+      },
+      "docs24h": 18
+    },
+    {
+      "term": "sweepers",
+      "count24h": 18,
+      "baselinePerDay": 0.42857142857142855,
+      "count7d": 3,
+      "growth": 13.299999999999999,
+      "sources": {
+        "github": 18
+      },
+      "docs24h": 18
+    },
+    {
+      "term": "simulation",
+      "count24h": 36,
+      "baselinePerDay": 1.8571428571428572,
+      "count7d": 13,
+      "growth": 12.95,
+      "sources": {
+        "github": 36
+      },
+      "docs24h": 18
     }
   ]
 }
