@@ -3,7 +3,7 @@
   "program": "token-2022",
   "mintAuthority": "WV9PJN7XTmTLVwbutCLFxp8TyePee6Xq5mRq6Fti5Wc",
   "freezeAuthority": "WV9PJN7XTmTLVwbutCLFxp8TyePee6Xq5mRq6Fti5Wc",
-  "supplyRaw": "1901712787973",
+  "supplyRaw": "1901710277104",
   "decimals": 9,
   "isInitialized": true,
   "extensions": [
@@ -18,20 +18,20 @@
     "Pausable",
     "TokenMetadata"
   ],
-  "top10Pct": 58.91,
+  "top10Pct": 60.42,
   "topAccounts": [
+    {
+      "address": "BGoxoC3bR5KNVXJBYtAsz1WpXvNHnd8k525WGpHa8iQe",
+      "owner": "WV9PJN7XTmTLVwbutCLFxp8TyePee6Xq5mRq6Fti5Wc",
+      "amountRaw": "264483810405",
+      "pct": 13.9,
+      "excluded": false
+    },
     {
       "address": "5x3CsvSYkZSEJwsHc8sckK4QnVXVbEbQpQxPByS3uscS",
       "owner": "D8J5wMyQSfnPohtMdYSz7VEYsH8Uk4DXY5Me8jVc1BsW",
       "amountRaw": "247170277082",
       "pct": 12.99,
-      "excluded": false
-    },
-    {
-      "address": "BGoxoC3bR5KNVXJBYtAsz1WpXvNHnd8k525WGpHa8iQe",
-      "owner": "WV9PJN7XTmTLVwbutCLFxp8TyePee6Xq5mRq6Fti5Wc",
-      "amountRaw": "235700190620",
-      "pct": 12.39,
       "excluded": false
     },
     {
@@ -79,8 +79,8 @@
     {
       "address": "CiGhjdnp4ARJt79ZRzCW72AQuQRMteKymCR4D6wsTFdB",
       "owner": "4HTy7aTjPm5PTSEws2yWRDPX6gjWM6sC2dV5mv9u8JsH",
-      "amountRaw": "23778307017",
-      "pct": 1.25,
+      "amountRaw": "22160501574",
+      "pct": 1.16,
       "excluded": true
     },
     {
@@ -114,7 +114,7 @@
     {
       "address": "3gbzgS6FJBfFqdg86LoXTNX2XXeNXq28Co7mUa8Ljgvg",
       "owner": "2k5hrzuykwyTbUe8L7UriYAQhr5hijNLgBvEB4B9pP5y",
-      "amountRaw": "13657932088",
+      "amountRaw": "13658098879",
       "pct": 0.71,
       "excluded": false
     },
@@ -135,7 +135,7 @@
     {
       "address": "79xEVAZDy2VQYTtAvVpxRgmuG2TbmsEdunqePSbqqmU8",
       "owner": "Ht33KipRJnAKv9Bj5dFXCrMWyfQFeqMLoC7oaDARCe84",
-      "amountRaw": "12997296172",
+      "amountRaw": "12997296649",
       "pct": 0.68,
       "excluded": false
     },
@@ -170,6 +170,6 @@
     "TransferHook",
     "Pausable"
   ],
-  "fetchedAt": "2026-10-01T13:33:15.348Z",
+  "fetchedAt": "2026-10-01T14:46:20.447Z",
   "rpcCalls": 4
 }
