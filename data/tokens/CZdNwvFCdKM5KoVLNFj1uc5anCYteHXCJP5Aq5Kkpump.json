@@ -3,54 +3,56 @@
   "chain": "solana",
   "symbol": "GDEX",
   "name": "CryptoGDEX",
-  "createdAt": "2026-09-30T20:37:44.000Z",
-  "pairCreatedAt": 1790800664000,
-  "pairAddress": "BcQVCf4w9r7dLtN7oeNaZvPaCtDGhHcJTVyGRT1MRANt",
-  "dexId": "pumpfun",
-  "url": "https://dexscreener.com/solana/bcqvcf4w9r7dltn7oenazvpactdghhcjtvygrt1mrant",
-  "priceUsd": 0.00003319,
-  "liquidityUsd": 0,
-  "fdvUsd": 33195.38,
-  "marketCapUsd": 33195.38,
+  "createdAt": "2026-10-02T02:19:21.000Z",
+  "pairCreatedAt": 1790907561000,
+  "pairAddress": "2xMj4Nhu3NnUkfRebZ9dV5oppERBdzwsnYcBcG91FghG",
+  "dexId": "pumpswap",
+  "url": "https://dexscreener.com/solana/2xmj4nhu3nnukfrebz9dv5opperbdzwsnycbcg91fghg",
+  "priceUsd": 0.00007121,
+  "liquidityUsd": 22601.42,
+  "fdvUsd": 69290,
+  "marketCapUsd": 69290,
   "volume": {
-    "m5": 0,
-    "h1": 1060.28,
-    "h6": 1432.56,
-    "h24": 6543.66
+    "m5": 0.7,
+    "h1": 233.49,
+    "h6": 18523.61,
+    "h24": 18523.61
   },
-  "volume5m": 0,
-  "volume1h": 1060.28,
-  "volume24h": 6543.66,
+  "volume5m": 0.7,
+  "volume1h": 233.49,
+  "volume24h": 18523.61,
   "priceChange": {
-    "m5": 0,
-    "h1": 0.57,
-    "h6": 6.1,
-    "h24": 78.59
+    "m5": 1.41,
+    "h1": 2.5,
+    "h6": 43.88,
+    "h24": 43.88
   },
   "txns": {
     "m5": {
-      "buys": 0,
-      "sells": 0
+      "buys": 1,
+      "sells": 1
     },
     "h1": {
-      "buys": 11,
-      "sells": 8
+      "buys": 12,
+      "sells": 11
     },
     "h6": {
-      "buys": 29,
-      "sells": 21
+      "buys": 199,
+      "sells": 115
     },
     "h24": {
-      "buys": 184,
-      "sells": 75
+      "buys": 199,
+      "sells": 115
     }
   },
   "holders": null,
-  "top10Pct": 100,
-  "mintAuthority": "UNKNOWN",
-  "freezeAuthority": "UNKNOWN",
+  "top10Pct": 64.41,
+  "mintAuthority": null,
+  "freezeAuthority": null,
   "boostsActive": 50,
   "pairCount": 1,
   "source": "dexscreener",
-  "fetchedAt": "2026-10-01T21:25:15.404Z"
+  "fetchedAt": "2026-10-02T06:05:31.359Z",
+  "decimals": 6,
+  "riskyExtensions": []
 }
