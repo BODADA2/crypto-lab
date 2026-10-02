@@ -3,7 +3,7 @@
   "program": "token-2022",
   "mintAuthority": "7pt9tkctJPK7PPNQJ77GKg8ZffSF6QxoMiCFYHxrtaCj",
   "freezeAuthority": "JDq14BWvqCRFNu1krb12bcRpbGtJZ1FLEakMw6FdxJNs",
-  "supplyRaw": "10496991039524",
+  "supplyRaw": "10496990845138",
   "decimals": 8,
   "isInitialized": true,
   "extensions": [
@@ -16,13 +16,13 @@
     "TransferHook",
     "TokenMetadata"
   ],
-  "top10Pct": 96.55,
+  "top10Pct": 96.57,
   "topAccounts": [
     {
       "address": "HuHg8nxsGTFYTWhaQkfdtH6hm6tMbjGd7fqjHrZ3dBPg",
       "owner": "S7vYFFWH6BjJyEsdrPQpqpYTqLTrPRK6KW3VwsJuRaS",
-      "amountRaw": "8884060944848",
-      "pct": 84.63,
+      "amountRaw": "8886474676848",
+      "pct": 84.65,
       "excluded": false
     },
     {
@@ -91,15 +91,8 @@
     {
       "address": "Djw4PRPBZ9BzYjCBokJRkiVH7QoMujjYvLqgx2CACTX",
       "owner": "D6bRhQUcR9B7bPbbqgxpE17MjyUjBtr8hHQCcJoHrrv1",
-      "amountRaw": "32513128070",
+      "amountRaw": "32076665891",
       "pct": 0.3,
-      "excluded": false
-    },
-    {
-      "address": "Y8xSVPD19yuJZiDG4KFpk1sjNov1zhheHenZKWhcZTL",
-      "owner": "8wM44Ryv9DFCSfkgUnPEPgnsc53arT4cnmXL6LnnC4UW",
-      "amountRaw": "28054772125",
-      "pct": 0.26,
       "excluded": false
     },
     {
@@ -110,17 +103,24 @@
       "excluded": false
     },
     {
+      "address": "Y8xSVPD19yuJZiDG4KFpk1sjNov1zhheHenZKWhcZTL",
+      "owner": "8wM44Ryv9DFCSfkgUnPEPgnsc53arT4cnmXL6LnnC4UW",
+      "amountRaw": "22357405903",
+      "pct": 0.21,
+      "excluded": false
+    },
+    {
       "address": "AtP8LYj8MBdHWXAdFVWmc3QC91wgBs1F4d2mxFGptepC",
       "owner": "CLu4kFM4nb67xrdN7vJnMxXXir8Z5hA4HJUzPFccXjsL",
-      "amountRaw": "22134348822",
+      "amountRaw": "22181910439",
       "pct": 0.21,
       "excluded": true
     },
     {
       "address": "CkF63YaaJCFznxVPkH9kFmufftKFipbfm6UWGerdVwPL",
       "owner": "GQEwLMrpyr9x99CnHFAnQhHrwm7a36Qc1FYEw9Cdp6kG",
-      "amountRaw": "18686604169",
-      "pct": 0.17,
+      "amountRaw": "21970238391",
+      "pct": 0.2,
       "excluded": false
     },
     {
@@ -133,28 +133,28 @@
     {
       "address": "6p2rcBuo3G52YzBgadrAgWRk8j1QH8Cx25wt58RJZtAg",
       "owner": "Em6JaFdurNtinmzt8HtCdTe3db1NXnKokP7Wm1CBw4NR",
-      "amountRaw": "9102068453",
+      "amountRaw": "9080665281",
       "pct": 0.08,
       "excluded": false
     },
     {
       "address": "8iAMWXWnNxgxa42PA1MGPY578M1q6cy4P5kCPNsi5MtT",
       "owner": "HrkeM8zFLiLp7ShhZKkM3b6Tvt8Aq2AKFcCvxRnfwKaq",
-      "amountRaw": "8266433747",
+      "amountRaw": "8093585042",
       "pct": 0.07,
+      "excluded": false
+    },
+    {
+      "address": "842CWmPNtreNi5iDs4hJDgtBb9xPRCCwwsN4gCBitEbt",
+      "owner": "MfDuWeqSHEqTFVYZ7LoexgAK9dxk7cy4DFJWjWMGVWa",
+      "amountRaw": "7261020584",
+      "pct": 0.06,
       "excluded": false
     },
     {
       "address": "EMi8Fw7W1bCWzumYwZbJ6KA1dTG3XM6SoNBLm3ve1Umj",
       "owner": "4HzNaqxJZSwcTgMqcJWNZVQPnMmEeLjizSyqpBsm8ne9",
       "amountRaw": "7229020667",
-      "pct": 0.06,
-      "excluded": false
-    },
-    {
-      "address": "842CWmPNtreNi5iDs4hJDgtBb9xPRCCwwsN4gCBitEbt",
-      "owner": "MfDuWeqSHEqTFVYZ7LoexgAK9dxk7cy4DFJWjWMGVWa",
-      "amountRaw": "6749957106",
       "pct": 0.06,
       "excluded": false
     }
@@ -167,6 +167,6 @@
     "Pausable",
     "TransferHook"
   ],
-  "fetchedAt": "2026-10-02T06:57:06.964Z",
+  "fetchedAt": "2026-10-02T08:07:24.719Z",
   "rpcCalls": 4
 }
