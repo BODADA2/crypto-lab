@@ -1,5 +1,5 @@
 {
-  "computedAt": "2026-10-02T12:32:05.067Z",
+  "computedAt": "2026-10-02T12:56:48.777Z",
   "terms": [
     {
       "term": "jane",
@@ -14,14 +14,14 @@
     },
     {
       "term": "aws",
-      "count24h": 20,
+      "count24h": 22,
       "baselinePerDay": 0,
       "count7d": 0,
-      "growth": 21,
+      "growth": 23,
       "sources": {
-        "github": 20
+        "github": 22
       },
-      "docs24h": 10
+      "docs24h": 11
     },
     {
       "term": "lucy",
@@ -35,6 +35,17 @@
       "docs24h": 8
     },
     {
+      "term": "cloud",
+      "count24h": 11,
+      "baselinePerDay": 0,
+      "count7d": 0,
+      "growth": 12,
+      "sources": {
+        "github": 11
+      },
+      "docs24h": 11
+    },
+    {
       "term": "doe",
       "count24h": 11,
       "baselinePerDay": 0,
@@ -46,15 +57,15 @@
       "docs24h": 11
     },
     {
-      "term": "cloud",
-      "count24h": 10,
+      "term": "runners",
+      "count24h": 11,
       "baselinePerDay": 0,
       "count7d": 0,
-      "growth": 11,
+      "growth": 12,
       "sources": {
-        "github": 10
+        "github": 11
       },
-      "docs24h": 10
+      "docs24h": 11
     },
     {
       "term": "fix6900",
@@ -68,15 +79,15 @@
       "docs24h": 10
     },
     {
-      "term": "runners",
-      "count24h": 10,
-      "baselinePerDay": 0,
-      "count7d": 0,
-      "growth": 11,
+      "term": "nodes",
+      "count24h": 11,
+      "baselinePerDay": 0.2857142857142857,
+      "count7d": 2,
+      "growth": 9.333333333333334,
       "sources": {
-        "github": 10
+        "github": 11
       },
-      "docs24h": 10
+      "docs24h": 11
     },
     {
       "term": "papu",
@@ -99,17 +110,6 @@
         "token": 8
       },
       "docs24h": 4
-    },
-    {
-      "term": "wide",
-      "count24h": 8,
-      "baselinePerDay": 0,
-      "count7d": 0,
-      "growth": 9,
-      "sources": {
-        "token": 8
-      },
-      "docs24h": 8
     }
   ]
 }
