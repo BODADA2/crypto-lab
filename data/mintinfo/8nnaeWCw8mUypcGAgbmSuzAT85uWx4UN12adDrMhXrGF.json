@@ -3,41 +3,48 @@
   "program": "token-2022",
   "mintAuthority": null,
   "freezeAuthority": null,
-  "supplyRaw": "970239248306712",
+  "supplyRaw": "966724724464040",
   "decimals": 6,
   "isInitialized": true,
   "extensions": [
     "MetadataPointer",
     "TokenMetadata"
   ],
-  "top10Pct": 20.21,
+  "top10Pct": 20.73,
   "topAccounts": [
     {
       "address": "FhPnTvitQFA8HwcD8eQwAYwTBVov642Bp2vJxXJftmks",
       "owner": "GLL3CzybpSCLZdoACf8QUM5YrKVwyA65kQ2RcTsJxxzV",
-      "amountRaw": "83034866108809",
-      "pct": 8.55,
+      "amountRaw": "72373998200404",
+      "pct": 7.48,
       "excluded": true
     },
     {
       "address": "FKGit5HphR6NYaYm1QFSWWQXRqJW1ifPAYZ5dgbVNL8X",
       "owner": "BvApEL9H3nnn2mezyUQQsSxvnwwBpkVFF3Yh61MZSruZ",
       "amountRaw": "35016169497379",
-      "pct": 3.6,
+      "pct": 3.62,
       "excluded": false
     },
     {
       "address": "4vAKX1BLFdAPrg3dPA1LjUoYsRcGrVLVEDtk8vJnmvdD",
       "owner": "663Ny72yvZaPrtQsjMYxeNYAUmQMwG5s12KPmUmFguu3",
-      "amountRaw": "30771551945764",
-      "pct": 3.17,
+      "amountRaw": "30308793626065",
+      "pct": 3.13,
       "excluded": false
     },
     {
       "address": "7NgZB117xGrjpS4oM8xSCWfTrG43mQCUAtRGWaBSodFJ",
       "owner": "zhYnXqK3MNSmwS3yxSvPmY5kUa1n2WUaCJgYUDrAHkL",
       "amountRaw": "26079490574728",
-      "pct": 2.68,
+      "pct": 2.69,
+      "excluded": false
+    },
+    {
+      "address": "HZHQoJ6hGJUhuf2Z26P7EtFykJPm97isw8EaZNxm6MXR",
+      "owner": "DyBKpVqM5GTXzd9w4V2xgHan5uurKbHzbUGduz2cxAha",
+      "amountRaw": "22565935290433",
+      "pct": 2.33,
       "excluded": false
     },
     {
@@ -45,13 +52,6 @@
       "owner": "YW6bofTJXBLxQuyLdZ654M9Ji2zPvZRP4zYT8ojKjPR",
       "amountRaw": "19989486206508",
       "pct": 2.06,
-      "excluded": false
-    },
-    {
-      "address": "GZ4wWbyaeR3xsn54SgjRfNMLETJUWzgaDHxYi7EfovqN",
-      "owner": "6D4EWF22HfQamimKhX47tqiu9DVCkcxDMrmhnSvewKAo",
-      "amountRaw": "17735515784295",
-      "pct": 1.82,
       "excluded": false
     },
     {
@@ -72,7 +72,7 @@
       "address": "B9zwtfobwkvGAcwtrTsoP2p8TfEhCk8qoq8wH5zgyz3f",
       "owner": "Hn3bTAcaN26nu6SEqBZRLh8CmkMgGhVJ1SQW7M3UPaL5",
       "amountRaw": "13341042518909",
-      "pct": 1.37,
+      "pct": 1.38,
       "excluded": false
     },
     {
@@ -93,7 +93,7 @@
       "address": "HWDrYbMay9NUhDfsiAuMh23BpWmSjXVhPTJR1myNgAiM",
       "owner": "HubvxnTj4Q2n5E7UsqRjjdmCPeTnkdVGyvUC9dRte8Vn",
       "amountRaw": "11416692770364",
-      "pct": 1.17,
+      "pct": 1.18,
       "excluded": false
     },
     {
@@ -114,21 +114,28 @@
       "address": "4fd9uBFqPfUPjqt15qXFEhhmMnT7z8CnAfRCkqkU9xYx",
       "owner": "3uCU9ejze2AYryokqjJ327bKsyMUK1LAWa3v7SPL5MMN",
       "amountRaw": "10061825745442",
-      "pct": 1.03,
+      "pct": 1.04,
       "excluded": false
     },
     {
       "address": "6gUqtqLbMQZWEH6yiMhzFzxCdgcVZBKVrzyXv7Jnsfuv",
       "owner": "HYZv2JeSHn5NDe5Ev2Nnc2rTNEaC6F9QVrcMLH5v6GYt",
       "amountRaw": "9669038685559",
-      "pct": 0.99,
+      "pct": 1,
       "excluded": false
     },
     {
       "address": "3HRnfSr5rZMQiCnjWrFfn67aVyq3YMFxBm3kNMzSPRjL",
       "owner": "CufDmPiPSXsbRb8d5LBfMx6o1cdZJCY81mCMki3UZpSY",
       "amountRaw": "9581115990537",
-      "pct": 0.98,
+      "pct": 0.99,
+      "excluded": false
+    },
+    {
+      "address": "GZ4wWbyaeR3xsn54SgjRfNMLETJUWzgaDHxYi7EfovqN",
+      "owner": "6D4EWF22HfQamimKhX47tqiu9DVCkcxDMrmhnSvewKAo",
+      "amountRaw": "9397038952483",
+      "pct": 0.97,
       "excluded": false
     },
     {
@@ -144,18 +151,11 @@
       "amountRaw": "8665242999438",
       "pct": 0.89,
       "excluded": false
-    },
-    {
-      "address": "DdhhHccEqCMy35GR9ggfhHSEX6ohxef9tNXpKiwnd1af",
-      "owner": "7XLDMb4YbrYMbbK5TpDPPEUMVxSHx8h7Uh8GZadcumLW",
-      "amountRaw": "8297791152070",
-      "pct": 0.85,
-      "excluded": false
     }
   ],
   "excludedCount": 1,
   "holders": null,
   "riskyExtensions": [],
-  "fetchedAt": "2026-10-02T08:28:16.470Z",
+  "fetchedAt": "2026-10-02T09:42:27.204Z",
   "rpcCalls": 4
 }
