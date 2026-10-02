@@ -1,38 +1,38 @@
 {
-  "computedAt": "2026-10-02T21:05:54.288Z",
+  "computedAt": "2026-10-02T21:25:41.103Z",
   "terms": [
     {
       "term": "aws",
-      "count24h": 22,
+      "count24h": 24,
       "baselinePerDay": 0,
       "count7d": 0,
-      "growth": 23,
+      "growth": 25,
       "sources": {
-        "github": 22
+        "github": 24
       },
-      "docs24h": 11
+      "docs24h": 12
     },
     {
       "term": "cloud",
-      "count24h": 11,
+      "count24h": 12,
       "baselinePerDay": 0,
       "count7d": 0,
-      "growth": 12,
+      "growth": 13,
       "sources": {
-        "github": 11
+        "github": 12
       },
-      "docs24h": 11
+      "docs24h": 12
     },
     {
       "term": "runners",
-      "count24h": 11,
+      "count24h": 12,
       "baselinePerDay": 0,
       "count7d": 0,
-      "growth": 12,
+      "growth": 13,
       "sources": {
-        "github": 11
+        "github": 12
       },
-      "docs24h": 11
+      "docs24h": 12
     },
     {
       "term": "wide",
@@ -44,6 +44,17 @@
         "token": 11
       },
       "docs24h": 11
+    },
+    {
+      "term": "nodes",
+      "count24h": 12,
+      "baselinePerDay": 0.2857142857142857,
+      "count7d": 2,
+      "growth": 10.111111111111112,
+      "sources": {
+        "github": 12
+      },
+      "docs24h": 12
     },
     {
       "term": "agency",
@@ -68,17 +79,6 @@
       "docs24h": 10
     },
     {
-      "term": "nodes",
-      "count24h": 11,
-      "baselinePerDay": 0.2857142857142857,
-      "count7d": 2,
-      "growth": 9.333333333333334,
-      "sources": {
-        "github": 11
-      },
-      "docs24h": 11
-    },
-    {
       "term": "consent",
       "count24h": 8,
       "baselinePerDay": 0,
@@ -86,6 +86,17 @@
       "growth": 9,
       "sources": {
         "github": 8
+      },
+      "docs24h": 4
+    },
+    {
+      "term": "nest",
+      "count24h": 8,
+      "baselinePerDay": 0,
+      "count7d": 0,
+      "growth": 9,
+      "sources": {
+        "token": 8
       },
       "docs24h": 4
     },
@@ -99,17 +110,6 @@
         "token": 15
       },
       "docs24h": 15
-    },
-    {
-      "term": "catgpt",
-      "count24h": 8,
-      "baselinePerDay": 0.2857142857142857,
-      "count7d": 2,
-      "growth": 7.000000000000001,
-      "sources": {
-        "token": 8
-      },
-      "docs24h": 4
     }
   ]
 }
