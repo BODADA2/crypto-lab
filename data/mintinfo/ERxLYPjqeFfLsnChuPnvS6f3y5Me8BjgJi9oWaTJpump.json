@@ -10,14 +10,21 @@
     "MetadataPointer",
     "TokenMetadata"
   ],
-  "top10Pct": 3.18,
+  "top10Pct": 3.24,
   "topAccounts": [
     {
       "address": "3RYa7EEhwymG4BEHwJ9MNrKGJ92ZT6ZHdCxv5MUnP5Yu",
       "owner": "ADd8YiSXcRn6kL6t8LsSyiCQTWyWJtLFy5R7gzANZoqK",
-      "amountRaw": "53673342729572",
-      "pct": 5.46,
+      "amountRaw": "57423699288512",
+      "pct": 5.84,
       "excluded": true
+    },
+    {
+      "address": "CSp39rJyz8A27ANpzn191rpor4deJgbLLh1eC5kiQKVY",
+      "owner": "EGq6vYERLoGev8A7hFo91eYxecJEvEG3xqwS7PUmE14s",
+      "amountRaw": "3763427158990",
+      "pct": 0.38,
+      "excluded": false
     },
     {
       "address": "7UCC9ZEmYZfoVoqGDZ9ZzyUwF2zJUVzazuuPU1Mqq2rB",
@@ -37,13 +44,6 @@
       "address": "C397Q4fv1X4nRU7GXtwnA4vZeh24Tma6onPiZMm2Honf",
       "owner": "4FVYLX7UCFGbJgbanVUGmMu7s61sEAjogqMW5XvC3J9A",
       "amountRaw": "3201357064911",
-      "pct": 0.32,
-      "excluded": false
-    },
-    {
-      "address": "3msRsdZxbBsEWorrKXvWEAHcTeDamibHyvh12LZy11uZ",
-      "owner": "39MKBPcrHyfHgBvcrsKRxAnc8KT6ath4ZCzdpCRix31X",
-      "amountRaw": "3193515556635",
       "pct": 0.32,
       "excluded": false
     },
@@ -97,13 +97,6 @@
       "excluded": false
     },
     {
-      "address": "CSp39rJyz8A27ANpzn191rpor4deJgbLLh1eC5kiQKVY",
-      "owner": "EGq6vYERLoGev8A7hFo91eYxecJEvEG3xqwS7PUmE14s",
-      "amountRaw": "2992997934343",
-      "pct": 0.3,
-      "excluded": false
-    },
-    {
       "address": "DyeZaWmJEAMs1DkMXRg4xsbKHAU3k6ZN51RhtACUrEBX",
       "owner": "EzD1aycgtawbHzfSwXfq3kUfoXGkPUr7hkupksNdP8Zi",
       "amountRaw": "2956313992481",
@@ -121,6 +114,13 @@
       "address": "7r9yoednyihs4QLVgFpSofvBbMUuCNKGQjG1JQk8SBmc",
       "owner": "8kuo9xnkfnmSi2GmjqPspGgPiETDa9sQx2wSMhYWat5u",
       "amountRaw": "2949882841909",
+      "pct": 0.3,
+      "excluded": false
+    },
+    {
+      "address": "4W4inj1QJPyYqWwXKdvkxFfY9C4EUc5cHhyropZqUmA6",
+      "owner": "8G6GojTL9m9qXW9ydFLbYyx4JToiszi7vmVqztywYHtg",
+      "amountRaw": "2948906412634",
       "pct": 0.3,
       "excluded": false
     },
@@ -156,6 +156,6 @@
   "excludedCount": 1,
   "holders": null,
   "riskyExtensions": [],
-  "fetchedAt": "2026-10-02T13:08:59.993Z",
+  "fetchedAt": "2026-10-02T14:10:52.309Z",
   "rpcCalls": 4
 }
