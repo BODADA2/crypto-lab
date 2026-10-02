@@ -13,28 +13,28 @@
   "fdvUsd": 2373,
   "marketCapUsd": 2373,
   "volume": {
-    "m5": 0.05,
-    "h1": 110639.44,
+    "m5": 0,
+    "h1": 66454.8,
     "h6": 1291038.16,
     "h24": 1291038.16
   },
-  "volume5m": 0.05,
-  "volume1h": 110639.44,
+  "volume5m": 0,
+  "volume1h": 66454.8,
   "volume24h": 1291038.16,
   "priceChange": {
-    "m5": 0.33,
-    "h1": -99.01,
+    "m5": 0,
+    "h1": -98.69,
     "h6": -96.97,
     "h24": -96.97
   },
   "txns": {
     "m5": {
       "buys": 0,
-      "sells": 1
+      "sells": 0
     },
     "h1": {
-      "buys": 2771,
-      "sells": 6540
+      "buys": 917,
+      "sells": 5880
     },
     "h6": {
       "buys": 27136,
@@ -46,13 +46,11 @@
     }
   },
   "holders": null,
-  "top10Pct": 1.04,
-  "mintAuthority": null,
-  "freezeAuthority": null,
+  "top10Pct": 100,
+  "mintAuthority": "UNKNOWN",
+  "freezeAuthority": "UNKNOWN",
   "boostsActive": 50,
   "pairCount": 1,
   "source": "dexscreener",
-  "fetchedAt": "2026-10-02T00:56:27.179Z",
-  "decimals": 6,
-  "riskyExtensions": []
+  "fetchedAt": "2026-10-02T01:08:15.020Z"
 }
