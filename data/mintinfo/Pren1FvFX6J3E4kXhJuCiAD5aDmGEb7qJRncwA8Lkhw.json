@@ -3,7 +3,7 @@
   "program": "token-2022",
   "mintAuthority": "WV9PJN7XTmTLVwbutCLFxp8TyePee6Xq5mRq6Fti5Wc",
   "freezeAuthority": "WV9PJN7XTmTLVwbutCLFxp8TyePee6Xq5mRq6Fti5Wc",
-  "supplyRaw": "7381523788813",
+  "supplyRaw": "7381520704507",
   "decimals": 9,
   "isInitialized": true,
   "extensions": [
@@ -18,7 +18,7 @@
     "Pausable",
     "TokenMetadata"
   ],
-  "top10Pct": 47.58,
+  "top10Pct": 47.31,
   "topAccounts": [
     {
       "address": "EL82xEGW7aNJnK7NhpCwXkD1kJB4B5KPoEVng88EnitM",
@@ -44,8 +44,8 @@
     {
       "address": "6RjcqBjrY2EiAPcoRRHRfz98Pdiz3fpmPEPmnkKY1jCB",
       "owner": "6GJbPKBtovsrMEEMcic5KMi5tswh9qSyT5ZYLMqEwNgt",
-      "amountRaw": "265597839230",
-      "pct": 3.59,
+      "amountRaw": "245597839230",
+      "pct": 3.32,
       "excluded": false
     },
     {
@@ -65,15 +65,15 @@
     {
       "address": "AScgm5o5ZQUMcReJonRLQ1DYpxfsXBmXcqKQNs5fHHJ5",
       "owner": "HX72xZ1CHg7cWPhGGJyHbLp3sLrpznTYmWn5AY3FVwUj",
-      "amountRaw": "139869320047",
-      "pct": 1.89,
+      "amountRaw": "138327174641",
+      "pct": 1.87,
       "excluded": false
     },
     {
       "address": "GM8AJf3z2taiqpZQNicH3dwtVrR7pa2miyL8RaL5y2YU",
       "owner": "34YcosnBuCDvBKRNGXsxWiobivi2Vg1FDwJKpZaTGTvJ",
-      "amountRaw": "106834498826",
-      "pct": 1.44,
+      "amountRaw": "108392992166",
+      "pct": 1.46,
       "excluded": false
     },
     {
@@ -154,14 +154,14 @@
       "excluded": false
     },
     {
-      "address": "FEivvskzmqGwCjFpTVQBW4j1QFv9UeF39T3HyMr2VJtj",
-      "owner": "B5xhe51anfnRFutTu453pM9RGTKLfTgJV1CUmDP7pskn",
-      "amountRaw": "55742187500",
-      "pct": 0.75,
-      "excluded": false
+      "address": "2yaFuqMGkXcpyShptCuJBCn4MheYAv468T1rB24LePxe",
+      "owner": "EZyszDEx1LZDt7TsSFV8xdPi49sDKC3mdfv2MVMEQLtU",
+      "amountRaw": "60484980775",
+      "pct": 0.81,
+      "excluded": true
     }
   ],
-  "excludedCount": 0,
+  "excludedCount": 1,
   "holders": null,
   "riskyExtensions": [
     "PermanentDelegate",
@@ -170,6 +170,6 @@
     "TransferHook",
     "Pausable"
   ],
-  "fetchedAt": "2026-10-02T08:28:26.161Z",
+  "fetchedAt": "2026-10-02T09:55:49.340Z",
   "rpcCalls": 4
 }
