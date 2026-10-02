@@ -1,5 +1,5 @@
 {
-  "computedAt": "2026-10-02T01:26:29.234Z",
+  "computedAt": "2026-10-02T01:39:40.362Z",
   "terms": [
     {
       "term": "jane",
@@ -80,6 +80,17 @@
       "docs24h": 6
     },
     {
+      "term": "aws",
+      "count24h": 6,
+      "baselinePerDay": 0,
+      "count7d": 0,
+      "growth": 7,
+      "sources": {
+        "github": 6
+      },
+      "docs24h": 3
+    },
+    {
       "term": "nip",
       "count24h": 6,
       "baselinePerDay": 0,
@@ -100,17 +111,6 @@
         "token": 6
       },
       "docs24h": 3
-    },
-    {
-      "term": "index",
-      "count24h": 11,
-      "baselinePerDay": 0.7142857142857143,
-      "count7d": 5,
-      "growth": 6.999999999999999,
-      "sources": {
-        "token": 11
-      },
-      "docs24h": 11
     }
   ]
 }
