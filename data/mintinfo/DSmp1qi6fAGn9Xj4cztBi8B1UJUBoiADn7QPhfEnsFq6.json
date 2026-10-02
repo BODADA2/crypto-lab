@@ -3,28 +3,21 @@
   "program": "token-2022",
   "mintAuthority": null,
   "freezeAuthority": null,
-  "supplyRaw": "976143162712791",
+  "supplyRaw": "976141843474741",
   "decimals": 6,
   "isInitialized": true,
   "extensions": [
     "MetadataPointer",
     "TokenMetadata"
   ],
-  "top10Pct": 23.35,
+  "top10Pct": 21.29,
   "topAccounts": [
     {
       "address": "AXZ7HuzZ1yXmcqnadLgEq4a56daoxtvoYeCqUrdPDXwn",
       "owner": "891v3RKdbE5yj5XDbtvxW71PSm6gFfC2aa8fbGb4XPLa",
-      "amountRaw": "97297800311765",
-      "pct": 9.96,
+      "amountRaw": "113206596374047",
+      "pct": 11.59,
       "excluded": true
-    },
-    {
-      "address": "EPDfuRQ7qquEoyiAuzUzETK5dznhY2L1VbbSpJh32VTJ",
-      "owner": "33cP8bGozJhkeMW3QW3dHmhR8UJquLuXhRiiugkzjvmL",
-      "amountRaw": "36798013686231",
-      "pct": 3.76,
-      "excluded": false
     },
     {
       "address": "ExmZSnuDDEBKjx3Y3mCKF24iqHkdH5fothrt5KUfmdMs",
@@ -59,6 +52,13 @@
       "owner": "8rtyuY3XQKXFaZbs2a35yQBbdLWbkhR5Aed4GaJHe2v5",
       "amountRaw": "22059630092736",
       "pct": 2.25,
+      "excluded": false
+    },
+    {
+      "address": "3sEfXgGW4uFtpMXLqKMGKNkwnLr5PgCuPnQNU8Ls8E8g",
+      "owner": "14k3kdU8TrhjwV5QYLLdgtBT2xXhTJeXzMJAmxQRqZaq",
+      "amountRaw": "16722692790874",
+      "pct": 1.71,
       "excluded": false
     },
     {
@@ -97,6 +97,13 @@
       "excluded": false
     },
     {
+      "address": "CfXF1vacsSzbNwdbdsjdvP9otmxcpdqkhqSNSP1ryZWU",
+      "owner": "eiqusQrG1889P587HKjRdEXyoUspcvRgoBCfSBUY7kc",
+      "amountRaw": "12310454110273",
+      "pct": 1.26,
+      "excluded": false
+    },
+    {
       "address": "3ZGbqa9QB1PDC4b3htuCgS3Ry4wmyACfyNj7Yc4tPw96",
       "owner": "66xALX4WMAEPSZHPbhx9qeHQS8zmEt3xNRgBhDze1YUm",
       "amountRaw": "12308749798311",
@@ -115,13 +122,6 @@
       "owner": "5YRgrP3mjGzrzirYYN5HAQH19cTYREYwGxW6XRJQUzij",
       "amountRaw": "11761835794173",
       "pct": 1.2,
-      "excluded": false
-    },
-    {
-      "address": "3sEfXgGW4uFtpMXLqKMGKNkwnLr5PgCuPnQNU8Ls8E8g",
-      "owner": "14k3kdU8TrhjwV5QYLLdgtBT2xXhTJeXzMJAmxQRqZaq",
-      "amountRaw": "11678428773186",
-      "pct": 1.19,
       "excluded": false
     },
     {
@@ -156,6 +156,6 @@
   "excludedCount": 1,
   "holders": null,
   "riskyExtensions": [],
-  "fetchedAt": "2026-10-02T09:55:43.553Z",
+  "fetchedAt": "2026-10-02T11:05:24.367Z",
   "rpcCalls": 4
 }
