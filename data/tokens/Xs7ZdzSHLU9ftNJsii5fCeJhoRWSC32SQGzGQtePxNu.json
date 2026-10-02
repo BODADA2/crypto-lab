@@ -13,44 +13,51 @@
   "fdvUsd": 195399,
   "marketCapUsd": 195399,
   "volume": {
-    "m5": 171.61,
-    "h1": 57001.399999999994,
-    "h6": 87233.27999999998,
-    "h24": 860569.58
+    "m5": 67.16,
+    "h1": 56120.03,
+    "h6": 80556.64,
+    "h24": 843833.0900000001
   },
-  "volume5m": 171.61,
-  "volume1h": 57001.399999999994,
-  "volume24h": 860569.58,
+  "volume5m": 67.16,
+  "volume1h": 56120.03,
+  "volume24h": 843833.0900000001,
   "priceChange": {
     "m5": 0,
     "h1": 0.94,
-    "h6": 1.18,
-    "h24": 4.45
+    "h6": 1.23,
+    "h24": 4.49
   },
   "txns": {
     "m5": {
-      "buys": 0,
-      "sells": 5
+      "buys": 2,
+      "sells": 1
     },
     "h1": {
-      "buys": 146,
-      "sells": 98
+      "buys": 134,
+      "sells": 97
     },
     "h6": {
-      "buys": 308,
-      "sells": 232
+      "buys": 297,
+      "sells": 228
     },
     "h24": {
-      "buys": 4182,
-      "sells": 3962
+      "buys": 4088,
+      "sells": 3869
     }
   },
   "holders": null,
-  "top10Pct": 100,
-  "mintAuthority": "UNKNOWN",
-  "freezeAuthority": "UNKNOWN",
+  "top10Pct": 83.8,
+  "mintAuthority": "7pt9tkctJPK7PPNQJ77GKg8ZffSF6QxoMiCFYHxrtaCj",
+  "freezeAuthority": "JDq14BWvqCRFNu1krb12bcRpbGtJZ1FLEakMw6FdxJNs",
   "boostsActive": 0,
-  "pairCount": 6,
+  "pairCount": 7,
   "source": "dexscreener",
-  "fetchedAt": "2026-10-02T12:56:33.865Z"
+  "fetchedAt": "2026-10-02T13:08:49.110Z",
+  "decimals": 8,
+  "riskyExtensions": [
+    "PermanentDelegate",
+    "DefaultAccountState",
+    "Pausable",
+    "TransferHook"
+  ]
 }

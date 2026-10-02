@@ -3,7 +3,7 @@
   "program": "token-2022",
   "mintAuthority": "7pt9tkctJPK7PPNQJ77GKg8ZffSF6QxoMiCFYHxrtaCj",
   "freezeAuthority": "JDq14BWvqCRFNu1krb12bcRpbGtJZ1FLEakMw6FdxJNs",
-  "supplyRaw": "13617774866623",
+  "supplyRaw": "13617774832828",
   "decimals": 8,
   "isInitialized": true,
   "extensions": [
@@ -49,8 +49,8 @@
     {
       "address": "FLzinoNVc4eQRyfn91n6FhCkFLUUXnGJdkPbG46okf5E",
       "owner": "6LY1JzAFVZsP2a2xKrtU6znQMQ5h4i7tocWdgrkZzkzF",
-      "amountRaw": "531745813808",
-      "pct": 3.9,
+      "amountRaw": "530990419778",
+      "pct": 3.89,
       "excluded": false
     },
     {
@@ -70,14 +70,14 @@
     {
       "address": "8iYt6azJsp6z6zz3scVomSgiJ25MogcFLTLperGnobFB",
       "owner": "w7SGmPeXoMCsjvXqgsAmUn56uypyDsjAtsxeVkaiqxa",
-      "amountRaw": "322322832633",
-      "pct": 2.36,
+      "amountRaw": "301026291971",
+      "pct": 2.21,
       "excluded": true
     },
     {
       "address": "Ar2n4fMWeJ2p7CpaXgsS1LqoHdzCpYP1WsxzJiTSQ1LJ",
       "owner": "41Mjig92SfveWPKkqis78hF3a75cpe96n1uuVuMAdkJF",
-      "amountRaw": "290296248069",
+      "amountRaw": "291051642099",
       "pct": 2.13,
       "excluded": false
     },
@@ -133,8 +133,15 @@
     {
       "address": "CETZjBSujdHZtWKbP1QyAjSVi9SWKXfRh5ErMfT7EJVr",
       "owner": "9NJ7rtJzEnfwvoM6HyB2v6YHcsfS6ZY9DFGprphVX6W",
-      "amountRaw": "54688598993",
-      "pct": 0.4,
+      "amountRaw": "54055367546",
+      "pct": 0.39,
+      "excluded": false
+    },
+    {
+      "address": "3882jroT5Fmwwm7yN5dCS13UQ8BQVCsoTxLRsBUXNWLh",
+      "owner": "MfDuWeqSHEqTFVYZ7LoexgAK9dxk7cy4DFJWjWMGVWa",
+      "amountRaw": "49343881316",
+      "pct": 0.36,
       "excluded": false
     },
     {
@@ -150,13 +157,6 @@
       "amountRaw": "43425526028",
       "pct": 0.31,
       "excluded": false
-    },
-    {
-      "address": "FxBiJMoSw55veogzr2p2wCGntSQvmvuQJUwTYTHrpeRG",
-      "owner": "CVqYpbBPsCKUB7ACGY7iwVeYptSfMjo65ot5auimGQUc",
-      "amountRaw": "41407896494",
-      "pct": 0.3,
-      "excluded": false
     }
   ],
   "excludedCount": 1,
@@ -167,6 +167,6 @@
     "Pausable",
     "TransferHook"
   ],
-  "fetchedAt": "2026-10-02T11:53:42.803Z",
+  "fetchedAt": "2026-10-02T13:08:54.952Z",
   "rpcCalls": 4
 }
