@@ -1,5 +1,5 @@
 {
-  "computedAt": "2026-10-02T07:42:58.841Z",
+  "computedAt": "2026-10-02T07:55:37.325Z",
   "terms": [
     {
       "term": "jane",
@@ -14,14 +14,14 @@
     },
     {
       "term": "aws",
-      "count24h": 18,
+      "count24h": 20,
       "baselinePerDay": 0,
       "count7d": 0,
-      "growth": 19,
+      "growth": 21,
       "sources": {
-        "github": 18
+        "github": 20
       },
-      "docs24h": 9
+      "docs24h": 10
     },
     {
       "term": "doe",
@@ -46,6 +46,17 @@
       "docs24h": 7
     },
     {
+      "term": "cloud",
+      "count24h": 10,
+      "baselinePerDay": 0,
+      "count7d": 0,
+      "growth": 11,
+      "sources": {
+        "github": 10
+      },
+      "docs24h": 10
+    },
+    {
       "term": "fix6900",
       "count24h": 10,
       "baselinePerDay": 0,
@@ -57,26 +68,15 @@
       "docs24h": 10
     },
     {
-      "term": "cloud",
-      "count24h": 9,
-      "baselinePerDay": 0,
-      "count7d": 0,
-      "growth": 10,
-      "sources": {
-        "github": 9
-      },
-      "docs24h": 9
-    },
-    {
       "term": "runners",
-      "count24h": 9,
+      "count24h": 10,
       "baselinePerDay": 0,
       "count7d": 0,
-      "growth": 10,
+      "growth": 11,
       "sources": {
-        "github": 9
+        "github": 10
       },
-      "docs24h": 9
+      "docs24h": 10
     },
     {
       "term": "papu",
@@ -90,6 +90,17 @@
       "docs24h": 4
     },
     {
+      "term": "nodes",
+      "count24h": 10,
+      "baselinePerDay": 0.2857142857142857,
+      "count7d": 2,
+      "growth": 8.555555555555557,
+      "sources": {
+        "github": 10
+      },
+      "docs24h": 10
+    },
+    {
       "term": "index",
       "count24h": 13,
       "baselinePerDay": 0.7142857142857143,
@@ -99,17 +110,6 @@
         "token": 13
       },
       "docs24h": 13
-    },
-    {
-      "term": "nodes",
-      "count24h": 9,
-      "baselinePerDay": 0.2857142857142857,
-      "count7d": 2,
-      "growth": 7.777777777777779,
-      "sources": {
-        "github": 9
-      },
-      "docs24h": 9
     }
   ]
 }
