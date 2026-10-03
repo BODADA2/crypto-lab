@@ -1,5 +1,5 @@
 {
-  "computedAt": "2026-10-03T02:03:45.640Z",
+  "computedAt": "2026-10-03T02:26:45.733Z",
   "terms": [
     {
       "term": "wide",
@@ -90,6 +90,17 @@
       "docs24h": 10
     },
     {
+      "term": "commands",
+      "count24h": 44,
+      "baselinePerDay": 5.285714285714286,
+      "count7d": 37,
+      "growth": 7.159090909090909,
+      "sources": {
+        "github": 44
+      },
+      "docs24h": 22
+    },
+    {
       "term": "catgpt",
       "count24h": 8,
       "baselinePerDay": 0.2857142857142857,
@@ -99,17 +110,6 @@
         "token": 8
       },
       "docs24h": 4
-    },
-    {
-      "term": "artcoin",
-      "count24h": 6,
-      "baselinePerDay": 0,
-      "count7d": 0,
-      "growth": 7,
-      "sources": {
-        "token": 6
-      },
-      "docs24h": 3
     }
   ]
 }
