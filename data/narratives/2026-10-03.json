@@ -1,5 +1,5 @@
 {
-  "computedAt": "2026-10-03T05:04:53.366Z",
+  "computedAt": "2026-10-03T05:34:01.382Z",
   "terms": [
     {
       "term": "barron",
@@ -13,40 +13,6 @@
       "docs24h": 7
     },
     {
-      "term": "aws",
-      "count24h": 20,
-      "baselinePerDay": 0.8571428571428571,
-      "count7d": 6,
-      "growth": 11.307692307692307,
-      "sources": {
-        "github": 20
-      },
-      "docs24h": 10
-    },
-    {
-      "term": "consent",
-      "count24h": 10,
-      "baselinePerDay": 0,
-      "count7d": 0,
-      "growth": 11,
-      "sources": {
-        "github": 10
-      },
-      "docs24h": 5
-    },
-    {
-      "term": "hour",
-      "count24h": 11,
-      "baselinePerDay": 0.2857142857142857,
-      "count7d": 2,
-      "growth": 9.333333333333334,
-      "sources": {
-        "github": 10,
-        "token": 1
-      },
-      "docs24h": 6
-    },
-    {
       "term": "nest",
       "count24h": 8,
       "baselinePerDay": 0,
@@ -58,15 +24,15 @@
       "docs24h": 4
     },
     {
-      "term": "wide",
-      "count24h": 10,
-      "baselinePerDay": 0.2857142857142857,
-      "count7d": 2,
-      "growth": 8.555555555555557,
+      "term": "aws",
+      "count24h": 18,
+      "baselinePerDay": 1.1428571428571428,
+      "count7d": 8,
+      "growth": 8.866666666666667,
       "sources": {
-        "token": 10
+        "github": 18
       },
-      "docs24h": 10
+      "docs24h": 9
     },
     {
       "term": "commands",
@@ -80,26 +46,15 @@
       "docs24h": 24
     },
     {
-      "term": "cloud",
-      "count24h": 10,
-      "baselinePerDay": 0.42857142857142855,
-      "count7d": 3,
-      "growth": 7.7,
+      "term": "consent",
+      "count24h": 8,
+      "baselinePerDay": 0.2857142857142857,
+      "count7d": 2,
+      "growth": 7.000000000000001,
       "sources": {
-        "github": 10
+        "github": 8
       },
-      "docs24h": 10
-    },
-    {
-      "term": "runners",
-      "count24h": 10,
-      "baselinePerDay": 0.42857142857142855,
-      "count7d": 3,
-      "growth": 7.7,
-      "sources": {
-        "github": 10
-      },
-      "docs24h": 10
+      "docs24h": 4
     },
     {
       "term": "configs",
@@ -111,6 +66,50 @@
         "github": 24
       },
       "docs24h": 24
+    },
+    {
+      "term": "expert",
+      "count24h": 24,
+      "baselinePerDay": 2.5714285714285716,
+      "count7d": 18,
+      "growth": 7,
+      "sources": {
+        "github": 24
+      },
+      "docs24h": 24
+    },
+    {
+      "term": "pinnochio",
+      "count24h": 24,
+      "baselinePerDay": 2.5714285714285716,
+      "count7d": 18,
+      "growth": 7,
+      "sources": {
+        "github": 24
+      },
+      "docs24h": 24
+    },
+    {
+      "term": "artcoin",
+      "count24h": 6,
+      "baselinePerDay": 0,
+      "count7d": 0,
+      "growth": 7,
+      "sources": {
+        "token": 6
+      },
+      "docs24h": 3
+    },
+    {
+      "term": "onionweb",
+      "count24h": 6,
+      "baselinePerDay": 0,
+      "count7d": 0,
+      "growth": 7,
+      "sources": {
+        "token": 6
+      },
+      "docs24h": 3
     }
   ]
 }
