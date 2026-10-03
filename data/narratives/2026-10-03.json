@@ -1,16 +1,16 @@
 {
-  "computedAt": "2026-10-03T01:07:39.260Z",
+  "computedAt": "2026-10-03T01:24:36.641Z",
   "terms": [
     {
       "term": "aws",
-      "count24h": 22,
-      "baselinePerDay": 0.2857142857142857,
-      "count7d": 2,
-      "growth": 17.88888888888889,
+      "count24h": 20,
+      "baselinePerDay": 0.5714285714285714,
+      "count7d": 4,
+      "growth": 13.363636363636363,
       "sources": {
-        "github": 22
+        "github": 20
       },
-      "docs24h": 11
+      "docs24h": 10
     },
     {
       "term": "wide",
@@ -46,28 +46,6 @@
       "docs24h": 5
     },
     {
-      "term": "cloud",
-      "count24h": 11,
-      "baselinePerDay": 0.14285714285714285,
-      "count7d": 1,
-      "growth": 10.5,
-      "sources": {
-        "github": 11
-      },
-      "docs24h": 11
-    },
-    {
-      "term": "runners",
-      "count24h": 11,
-      "baselinePerDay": 0.14285714285714285,
-      "count7d": 1,
-      "growth": 10.5,
-      "sources": {
-        "github": 11
-      },
-      "docs24h": 11
-    },
-    {
       "term": "nest",
       "count24h": 8,
       "baselinePerDay": 0,
@@ -77,6 +55,17 @@
         "token": 8
       },
       "docs24h": 4
+    },
+    {
+      "term": "cloud",
+      "count24h": 10,
+      "baselinePerDay": 0.2857142857142857,
+      "count7d": 2,
+      "growth": 8.555555555555557,
+      "sources": {
+        "github": 10
+      },
+      "docs24h": 10
     },
     {
       "term": "hour",
@@ -90,15 +79,15 @@
       "docs24h": 5
     },
     {
-      "term": "nodes",
-      "count24h": 11,
-      "baselinePerDay": 0.42857142857142855,
-      "count7d": 3,
-      "growth": 8.4,
+      "term": "runners",
+      "count24h": 10,
+      "baselinePerDay": 0.2857142857142857,
+      "count7d": 2,
+      "growth": 8.555555555555557,
       "sources": {
-        "github": 11
+        "github": 10
       },
-      "docs24h": 11
+      "docs24h": 10
     },
     {
       "term": "catgpt",
@@ -110,6 +99,17 @@
         "token": 8
       },
       "docs24h": 4
+    },
+    {
+      "term": "nodes",
+      "count24h": 10,
+      "baselinePerDay": 0.5714285714285714,
+      "count7d": 4,
+      "growth": 7,
+      "sources": {
+        "github": 10
+      },
+      "docs24h": 10
     }
   ]
 }
